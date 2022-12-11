@@ -1,0 +1,64 @@
+# Site Structure Tree
+
+│
+├──
+└──
+
+./src
+├── elements
+│   ├── header.js
+│   ├── footer.js
+│   └── tiles
+├── components
+
+
+elements
+	header.js
+	footer.js
+	tiles
+		text.js
+		photo-text.js
+		drop-text.js
+		instant-gram
+			intro.js
+			photo-drop.js
+	map
+		...
+	weather
+		...
+	navigation
+		search-std.js
+		button-std.js
+		select-std.js
+		...
+	
+compounds
+	...
+	map
+		options.js
+	weather
+		...
+pages
+	home.js
+	...
+data
+	sport.js
+	sport-schema.js
+	events.js
+	events-schema.js
+	...
+navigation
+	urls.js
+documents
+	writings
+		...
+	coursework
+		...
+	miscellaneous
+		...
+media
+	photos
+		images.js
+	music
+		...
+fonts
