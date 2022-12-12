@@ -1,9 +1,5 @@
 # Site Structure Tree
 
-│
-├──
-└──
-
 ./src
 ├── elements
 │   ├── header.js
@@ -22,7 +18,7 @@ elements
 		instant-gram
 			intro.js
 			photo-drop.js
-	map
+	conquest
 		...
 	weather
 		...
@@ -40,12 +36,22 @@ compounds
 		...
 pages
 	home.js
-	...
+	academia.js
+	employment.js
+	library.js
+	utilities
+		conquest.js
+		weather.js
+	
+	blog
+		...
 data
 	sport.js
 	sport-schema.js
 	events.js
 	events-schema.js
+	hills.js
+	hill-schema.js
 	...
 navigation
 	urls.js
