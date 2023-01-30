@@ -1,10 +1,27 @@
 # Site Structure Tree
 
 ./src
+├── App.js
+├── App.css
 ├── elements
 │   ├── header.js
 │   ├── footer.js
-│   └── tiles
+│   ├── tiles
+│   │   ├── text.js
+│   │   ├── image-text.js
+│   │   ├── drop-text.js
+│   │   ├── instant-gram
+│   │   ├── intro.js
+│   │   ├── photo-drop.js
+│   ├── conquest   
+│   │   ├── ...
+│   ├── weather   
+│   │   ├── ...
+│   ├── navigation
+│   │   ├── search-std.js
+│   │   ├── button-std.js
+│   │   ├── select-std.js
+│   │   └── ...
 ├── components
 
 
@@ -26,8 +43,7 @@ elements
 		search-std.js
 		button-std.js
 		select-std.js
-		...
-	
+		...	
 compounds
 	...
 	map
@@ -42,9 +58,18 @@ pages
 	utilities
 		conquest.js
 		weather.js
-	
 	blog
-		...
+		instant-gram.js
+		sport.js
+		brittonsfoodrc.js
+		allroad.js
+		miami-vice.js
+		media.js
+		communications.js
+		gentlemen-who-cafe.js
+		thinkflow.js
+		founding-fathers.js
+		graphic-design.js
 data
 	sport.js
 	sport-schema.js
@@ -57,14 +82,218 @@ navigation
 	urls.js
 documents
 	writings
-		...
+		symbol-list.<extension>
+		template-latex.<extension>
+		template-markdown.<extension>
+		life-checklist.md
 	coursework
-		...
+		masters
+			dissertation
+				images
+					<file-name>.<extension>
+				cs958-assignment.<extension>
+			cs808
+				assignment
+					cs808-assignment.<extension>
+				exam
+					cs808-exam.<extension>
+				code
+					<file-name>.<extension>
+				images
+					<file-name>.<extension>
+			cs978
+				assignment
+					cs978-assignment.<extension>
+			cs990
+				assignment1
+					cs990-assignment1.<extension>
+				assignment2
+					cs990-assignment2.<extension>
+				lectures
+					<file-name>.<extension>
+				images
+					<file-name>.<extension>
+			cs991
+				assignment1
+					cs990-assignment1.<extension>
+				assignment2
+					cs990-assignment2.<extension>
+				code1
+					fonts
+						<file-name>.<extension>
+					<file-name>.<extension>
+				code2
+					fonts
+						<file-name>.<extension>
+					images
+						<file-name>.<extension>
+					scripts
+						<file-name>.<extension>
+					<file-name>.<extension>
+				images
+			cs992
+				assignment
+					cs992-assignment.<extension>
+				labs
+					<file-name>.<extension>
+			cs993
+				assignment1
+					cs993-assignment1.<extension>
+				assignment2
+					cs993-assignment2.<extension>
+				presentation
+					cs993-presentation.<extension>
+				code
+					fonts
+						<file-name>.<extension>
+					<file-name>.<extension>
+				images
+					<file-name>.<extension>
+			cs994
+				code
+					javadocs
+						<file-name>.<extension>
+					<file-name>.<extension>
+			cs995
+				code
+					__pycache__
+						<file-name>.<extension>
+					<file-name>.<extension>
+				data
+					<file-name>.<extension>
+		bachelors
+			dissertation
+				figures
+					<file-name>.<extension>
+				<file-name>.<extension>
+			finance
+				ag215
+					assignment
+						ag215-assignment.<extension>
+					summary
+						ag215-summary.<extension>
+					images
+						<file-name>.<extension>
+				ag217
+					assignment
+						ag217-assignment.<extension>
+					summary
+						ag217-summary.<extension>
+					images
+						<file-name>.<extension>
+				ag312
+					assignment
+						ag312-assignment.<extension>
+					summary
+						ag312-summary.<extension>
+					images
+						<file-name>.<extension>
+				ag313
+					exam
+						ag313-exam.<extension>
+					summary
+						ag313-summary.<extension>
+					images
+						<file-name>.<extension>
+				ag428
+					assignment
+						ag428-assignment.<extension>
+					exam
+						ag428-exam.<extension>
+				ag430
+					exam
+						ag430-exam.<extension>
+				ag431
+					assignment
+						ag431-assignment.<extension>
+					exam
+						ag431-exam.<extension>
+				ag432
+					assignment
+						ag432-assignment.<extension>
+					test
+						ag432-test.<extension>
+					images
+						<file-name>.<extension>
+			economics
+				ec216
+					summary
+						ec216-summary.<extension>
+					images
+						<file-name>.<extension>
+				ec315
+					assignment
+						ec315-assignment.<extension>
+					summary
+						ec315-summary.<extension>
+					images
+						<file-name>.<extension>
+			mdp
+				images
+					bf201
+						<file-name>.png
+					bf303
+						<file-name>.png
+				bf201-assignment.<extension>
+				bf303-assignment.<extension>
+		maths
+			calculus
+				<file-name>.pdf
+			calculus2
+				exam
+					<file-name>.pdf
+				exercises
+					<file-name>.pdf
+				notes
+					<file-name>.pdf
+			geometry
+				<file-name>.pdf
+			linear-algebra
+				<file-name>.pdf
+			statistics
+				<file-name>.pdf
+
+	professional
+		cv.<extension>
+		cover-letter.<extension>
+		notice.<extension>
+		cv-luke.pdf
 	miscellaneous
-		...
+		<file-name>.<extension>
 media
-	photos
-		images.js
+	images
+		utilities
+			...
+		blog
+			instant-gram
+				...
+			sport
+				...
+			brittonsfoodrc
+				...
+			allroad
+				...
+			miami-vice
+				...
+			media
+				...
+			communications
+				...
+			gentlemen-who-cafe
+				...
+			thinkflow
+				...
+			founding-fathers
+				...
+			graphic-design
+				...
+		<file-name>.<extension>
 	music
-		...
+		finale-jan-hammer.mp3
+		god-save-the-queen.mp3
 fonts
+	audi
+		<file-name>.<extension>
+	garamond
+		<file-name>.<extension>
+	<file-name>.<extension>
