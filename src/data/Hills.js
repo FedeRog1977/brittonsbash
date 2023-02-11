@@ -1,5 +1,4 @@
-export const hillData =
-{
+export const hillData = {
 	"munros": [
 		{
 			"name": "Ben Cruachan",

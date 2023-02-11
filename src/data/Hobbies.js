@@ -1,4 +1,2 @@
-export const hobbiesData =
-{
-
+export const hobbiesData = {
 };

@@ -1,5 +1,4 @@
-export const commsData =
-{
+export const commsData = {
 	"languages": {
 		"system": [
 			"Bash (Shell)",
