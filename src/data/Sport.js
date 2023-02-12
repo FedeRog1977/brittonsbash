@@ -20,10 +20,10 @@ export const sportData = {
 				"islands": [],
 				"munros": [
 					"Sg&ograve;rr Dhearg (Beinn a&rsquo; Bheithir)",
-					"Sg&ograve;rr Dh&ograve;nuill (Beinn a&rsquo; Bheithir)"
+					"Sg&ograve;rr Dh&ograve;nuill (Beinn a&rsquo; Bheithir)",
 				],
 				"munroTops": [
-					"Sg&ograve;rr Bhan"
+					"Sg&ograve;rr Bhan",
 				],
 				"corbetts": [],
 				"corbettTops": [],
@@ -42,7 +42,7 @@ export const sportData = {
 				"munros": [],
 				"munroTops": [],
 				"corbetts": [
-					"Garbh Bheinn (Loch Leven)"
+					"Garbh Bheinn (Loch Leven)",
 				],
 				"corbettTops": [],
 				"grahams": [],
@@ -59,7 +59,7 @@ export const sportData = {
 				"companionship": 2,
 				"islands": [],
 				"munros": [
-					"Sr&ograve;n a&rsquo; Choire Ghairbh"
+					"Sr&ograve;n a&rsquo; Choire Ghairbh",
 				],
 				"munroTops": [],
 				"corbetts": [],
@@ -78,7 +78,7 @@ export const sportData = {
 				"companionship": 1,
 				"islands": [],
 				"munros": [
-					"Ben Wyvis"
+					"Ben Wyvis",
 				],
 				"munroTops": [],
 				"corbetts": [],
