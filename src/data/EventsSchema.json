@@ -8,7 +8,6 @@
 			"startDate": "",
 			"endDate": "",
 			"description": "",
-			"companionship": 0,
 			"images": [
 				{
 					"url": "",
@@ -19,8 +18,9 @@
 			],
 			"sport": {
 				"isProject": true,
-				"routeName": ""
-			}
+				"routeNames": []
+			},
+			"youthHostels": []
 		},
 		{}
 	],
