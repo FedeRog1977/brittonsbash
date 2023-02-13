@@ -80,6 +80,9 @@ export const commsData = {
 			"ls",
 			"lsd",
 		],
+		"dataModifiers": [
+			"shred",
+		],
 		"applicationLaunchers": [
 			"dmenu",
 		],

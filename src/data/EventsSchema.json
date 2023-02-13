@@ -16,10 +16,7 @@
 				},
 				{}
 			],
-			"sport": {
-				"isProject": true,
-				"routeNames": []
-			},
+			"routeNames": [],
 			"youthHostels": []
 		},
 		{}
