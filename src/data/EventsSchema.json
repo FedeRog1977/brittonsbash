@@ -1,0 +1,36 @@
+{
+	"2023": [
+		{
+			"id": "E2023001",
+			"routeName": "",
+			"namePrefix": "",
+			"nameSuffix": "",
+			"startDate": "",
+			"endDate": "",
+			"description": "",
+			"images": [
+				{
+					"url": "",
+					"alt": "",
+					"description": ""
+				},
+				{}
+			],
+			"routeNames": [],
+			"youthHostels": []
+		},
+		{}
+	],
+	"2022": [
+		{},
+		{}
+	],
+	"2021": [
+		{},
+		{}
+	],
+	"2020": [
+		{},
+		{}
+	]
+}
