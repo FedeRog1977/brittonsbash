@@ -1,6 +1,6 @@
 import { hillData } from "../../../data/Hills";
 
-function SearchList({ id, func }) {
+function SearchList({ id, func }: any) {
     const hills = hillData.munros.map(
         ({ lat, name }) =>
             <option key={lat} value={name}>{name}</option>

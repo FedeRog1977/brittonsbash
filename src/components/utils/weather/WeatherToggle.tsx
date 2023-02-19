@@ -8,7 +8,7 @@ import Button from "../../../elements/page/Button";
 import WeatherHourly from "./WeatherHourly";
 import React from "react";
 
-const WeatherToggle = ({ lat, lon }) => {
+const WeatherToggle = ({ lat, lon }: any) => {
     const [showWeather, setShowWeather] = useState(false);
     const [weatherLabel, setWeatherLabel] = useState(<FontAwesomeIcon icon={faChevronDown} />);
 

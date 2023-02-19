@@ -16,7 +16,7 @@ const WeatherColumnHourly = ({
     dp,
     vb,
     uvi
-}) => {
+}: any) => {
     return (
         <div className={"weatherCol"} key={dt}>
             <WeatherIntroHourly

@@ -22,7 +22,7 @@ const WeatherColumn = ({
     uvi,
     sr,
     ss
-}) => {
+}: any) => {
     return (
         <div className={"weatherCol"} key={dt}>
             <WeatherIntro

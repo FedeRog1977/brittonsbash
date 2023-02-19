@@ -4,7 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import WeatherHourlyCall from "./WeatherHourlyCall";
 
-const WeatherHourly = ({ latIn, lonIn }) => {
+const WeatherHourly = ({ latIn, lonIn }: any) => {
     return (
         <div className={"hourly"}>
             <Carousel>

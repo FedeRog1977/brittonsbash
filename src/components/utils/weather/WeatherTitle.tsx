@@ -1,4 +1,4 @@
-const WeatherTitle = ({ contTitle, contSubTitle }) => {
+const WeatherTitle = ({ contTitle, contSubTitle }: any) => {
     return (
         <button className={"weatherTitleCont"}>
             <h1 className={"weatherTitle"}>{contTitle}</h1>
