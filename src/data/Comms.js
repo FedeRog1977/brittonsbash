@@ -95,6 +95,9 @@ export const commsData = {
 			"NeoMutt",
 			"Thunderbird",
 		],
+		"addressBookClients": [
+			"ppl",
+		],
 		"calendarClients": [
 			"Calcurse",
 		],

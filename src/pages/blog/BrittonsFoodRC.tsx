@@ -1,7 +1,7 @@
 import '../../App.css';
 import Background from '../../elements/page/Background';
 
-function Sport() {
+function BrittonsFoodRC() {
     return (
         <div>
             <Background text={"Sport"} />
@@ -16,4 +16,4 @@ function Sport() {
     );
 }
 
-export default Sport;
+export default BrittonsFoodRC;

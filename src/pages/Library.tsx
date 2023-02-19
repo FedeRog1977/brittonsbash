@@ -1,7 +1,7 @@
 import '../App.css';
 import Background from '../elements/page/Background';
 
-function Weather() {
+function Library() {
     return (
         <div>
             <Background text={"Burning Roots"} />
@@ -24,4 +24,4 @@ function Weather() {
     );
 }
 
-export default Weather;
+export default Library;
