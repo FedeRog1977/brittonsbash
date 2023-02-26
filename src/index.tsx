@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter,
+  // BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 
 import Header from './elements/page/Header';
@@ -27,6 +32,7 @@ import GraphicDesign from './pages/blog/GraphicDesign';
 
 import Weather from './pages/utils/Weather';
 import Conquest from './pages/utils/Conquest';
+import BashBlocks from './pages/utils/BashBlocks';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -57,6 +63,7 @@ root.render(
         <Route path="/utils">
           <Route path="weather" element={<Weather />} />
           <Route path="conquest" element={<Conquest />} />
+          <Route path="bash-blocks" element={<BashBlocks />} />
         </Route>
         <Route path="*" element={<ErrorPage />} />
       </Routes>
