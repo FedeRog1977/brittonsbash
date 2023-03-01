@@ -1,4 +1,4 @@
-{
+export const equipmentData = {
 	"elementshill": [
 		{
 			"name": "Elevation",
@@ -778,4 +778,4 @@
 			"image": ".Photos/Conditioning/.jpg"
 		}
 	]
-}
+};
