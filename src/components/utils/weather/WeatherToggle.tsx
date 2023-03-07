@@ -4,7 +4,7 @@ import {
     faChevronDown
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import Button from "../../../elements/page/Button";
+import Button from "../../../bashBlocks/elements/Button";
 import WeatherHourly from "./WeatherHourly";
 import React from "react";
 

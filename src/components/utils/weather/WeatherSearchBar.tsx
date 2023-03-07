@@ -1,4 +1,4 @@
-import Button from "../../../elements/page/Button";
+import Button from "../../../bashBlocks/elements/Button";
 import Search from "../../../elements/utils/weather/Search";
 import SearchList from "../../../elements/utils/weather/SearchList";
 
