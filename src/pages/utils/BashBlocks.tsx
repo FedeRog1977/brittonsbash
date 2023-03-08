@@ -29,6 +29,10 @@ function BashBlocks() {
             <Typography type='body' fontFamily='sans-serif' content='Typography body bold-faced and italicized' textAlign='justify' boldFace italicize inline />
             <Typography type='caption' fontFamily='sans-serif' content='Typography caption' textAlign='left' />
             <Typography type='footnote' fontFamily='sans-serif' content='Typography footnote' textAlign='left' />
+            <hr />
+            <Typography type='h2' fontFamily='sans-serif' content='Typography overline' textAlign='left' inline textDecoration='overline' />{' '}
+            <Typography type='h2' fontFamily='sans-serif' content='Typography strike-through' textAlign='left' inline textDecoration='line-through' />{' '}
+            <Typography type='h2' fontFamily='sans-serif' content='Typography underline' textAlign='left' inline textDecoration='underline' />
         </div>
     );
 }

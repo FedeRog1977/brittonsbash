@@ -24,9 +24,9 @@ interface TypographyProps {
     boldFace?: boolean;
     italicize?: boolean;
     textDecoration?:
+    | 'overline'
     | 'underline'
-    | 'strike-through'
-    | 'overline';
+    | 'line-through';
     // link: {
     //     ...
     // }
