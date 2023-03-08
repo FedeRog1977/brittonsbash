@@ -1,0 +1,172 @@
+/* Initialize Fonts */
+
+@font-face {
+    font-family: CMU-Serif;
+    src: url(../../../fonts/CMUSerif.ttf);
+}
+
+@font-face {
+    font-family: CMU-Bold;
+    src: url(../../../fonts/CMUBold.ttf);
+}
+
+@font-face {
+    font-family: CMU-Italic;
+    src: url(../../../fonts/CMUItalic.ttf);
+}
+
+@font-face {
+    font-family: Audi-Regular;
+    src: url(../../../fonts/audi/Normal.ttf);
+}
+
+@font-face {
+    font-family: Audi-Bold;
+    src: url(../../../fonts/audi/Bold.ttf);
+}
+
+@font-face {
+    font-family: Audi-Italic;
+    src: url(../../../fonts/audi/Italic.ttf);
+}
+
+@font-face {
+    font-family: Audi-Extended;
+    src: url(../../../fonts/audi/Extended-Bold.ttf);
+}
+
+/* Serif Classes */
+
+.title-serif {
+    font-family: CMU-Bold;
+    font-size: 64px;
+    margin: 20px 0 30px 0;
+    padding: 0px;
+}
+
+.title2-serif {
+    font-family: CMU-Serif;
+    font-size: 64px;
+    margin: 20px 0 30px 0;
+    padding: 0px;
+}
+
+.h1-serif {
+    font-family: CMU-Bold;
+    font-size: 52px;
+    margin: 20px 0 30px 0;
+    padding: 0px;
+}
+
+.h2-serif {
+    font-family: CMU-Bold;
+    font-size: 40px;
+    margin: 20px 0 30px 0;
+    padding: 0px;
+}
+
+.h3-serif {
+    font-family: CMU-Bold;
+    font-size: 28px;
+    margin: 20px 0 30px 0;
+    padding: 0px;
+}
+
+.body-serif {
+    font-family: CMU-Serif;
+    font-size: 16px;
+    margin: 20px 0 30px 0;
+    padding: 0px;
+}
+
+.caption-serif {
+    font-family: CMU-Serif;
+    font-size: 14px;
+    margin: 20px 0 30px 0;
+    padding: 0px;
+}
+
+.footnote-serif {
+    font-family: CMU-Serif;
+    font-size: 10px;
+    margin: 20px 0 30px 0;
+    padding: 0px;
+}
+
+/* Sans-Serif Classes */
+
+.title {
+    font-family: Audi-Extended;
+    font-size: 64px;
+    margin: 20px 0 30px 0;
+    padding: 0px;
+}
+
+.title2 {
+    font-family: Audi-Bold;
+    font-size: 64px;
+    margin: 20px 0 30px 0;
+    padding: 0px;
+}
+
+.h1 {
+    font-family: Audi-Bold;
+    font-size: 52px;
+    margin: 20px 0 30px 0;
+    padding: 0px;
+}
+
+.h2 {
+    font-family: Audi-Bold;
+    font-size: 40px;
+    margin: 20px 0 30px 0;
+    padding: 0px;
+}
+
+.h3 {
+    font-family: Audi-Bold;
+    font-size: 28px;
+    margin: 20px 0 30px 0;
+    padding: 0px;
+}
+
+.body {
+    font-family: Audi-Regular;
+    font-size: 16px;
+    margin: 20px 0 30px 0;
+    padding: 0px;
+}
+
+.caption {
+    font-family: Audi-Regular;
+    font-size: 14px;
+    margin: 20px 0 30px 0;
+    padding: 0px;
+}
+
+.footnote {
+    font-family: Audi-Regular;
+    font-size: 10px;
+    margin: 20px 0 30px 0;
+    padding: 0px;
+}
+
+/* Bold Classes */
+
+.bold-serif {
+    font-family: CMU-Bold;
+}
+
+.bold-sans-serif {
+    font-family: Audi-Bold;
+}
+
+/* Italic Classes */
+
+.italic-serif {
+    font-family: CMU-Italic;
+}
+
+.italic-sans-serif {
+    font-family: Audi-Italic;
+}

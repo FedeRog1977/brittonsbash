@@ -1,8 +1,10 @@
-import { FC, useState } from "react";
+import { FC } from "react";
+import './styles/Typography.css';
 
 interface TypographyProps {
     type:
     | 'title'
+    | 'title2'
     | 'h1'
     | 'h2'
     | 'h3'
@@ -10,81 +12,90 @@ interface TypographyProps {
     | 'caption'
     | 'footnote';
     content: string;
+    fontFamily?:
+    | 'serif'
+    | 'sans-serif'
     textAlign:
     | 'left'
     | 'center'
     | 'justify'
     | 'right';
-    bold?: string;
-    italic?: string;
+    inline?: boolean;
+    boldFace?: boolean;
+    italicize?: boolean;
     textDecoration?:
     | 'underline'
     | 'strike-through'
     | 'overline';
-    pT?: string;
-    pB?: string;
+    // link: {
+    //     ...
+    // }
+    mT?: string;
+    mB?: string;
 }
 
 const Typography: FC<TypographyProps> = (
-    { type, content, textAlign, pT, pB }: any
+    {
+        type,
+        content,
+        fontFamily,
+        textAlign,
+        inline,
+        boldFace,
+        italicize,
+        textDecoration,
+        mT,
+        mB,
+    }: any
 ) => {
-    const [ftSize, setFtSize] = useState('0px');
-    const [mT, setMT] = useState('0px');
-    const [mB, setMB] = useState('0px');
-
-    if (type === 'title') {
-        setFtSize('64px');
-        setMT('20px');
-        setMB('30px');
-    } else if (type === 'h1') {
-        setFtSize('52px');
-        setMT('5px');
-        setMB('10px');
-    } else if (type === 'h2') {
-        setFtSize('40px');
-        setMT('5px');
-        setMB('10px');
-    } else if (type === 'h3') {
-        setFtSize('28px');
-        setMT('5px');
-        setMB('10px');
-    } else if (type === 'body') {
-        setFtSize('16px');
-        setMT('20px');
-        setMB('30px');
-    } else if (type === 'caption') {
-        setFtSize('14px');
-        setMT('5px');
-        setMB('10px');
-    } else if (type === 'footnote') {
-        setFtSize('10px');
-        setMT('5px');
-        setMB('10px');
-    } else {
-        return null
-    }
-
     return (
-        <div style={{
-            margin: 0,
-            paddingTop: pT,
-            paddingBottom: pB,
-            paddingLeft: 0,
-            paddingRight: 0,
-        }}>
-            {/* <p style={bold ? { fontWeight: 'bold' } : { fontWeight: 'normal' }}> */}
-            <p style={{
-                fontSize: ftSize,
-                textAlign: textAlign,
+        <div
+            className={
+                fontFamily === 'serif' ? `${type}-serif` : type
+            }
+            style={{
+                display: inline && 'inline',
                 marginTop: mT,
                 marginBottom: mB,
                 marginLeft: 0,
                 marginRight: 0,
                 padding: 0,
-            }}>
-                {content}
-            </p>
-        </div>
+            }}
+        >
+            <span
+                style={{
+                    textAlign: textAlign,
+                    fontWeight: (boldFace ? 'bold' : 'normal'),
+                    textDecoration: textDecoration,
+                }}
+            >
+                {boldFace ?
+                    <>
+                        {italicize ?
+                            <i className={fontFamily === 'serif' ? 'italic-serif' : 'italic-sans-serif'}>
+                                <b className={fontFamily === 'serif' ? 'bold-serif' : 'bold-sans-serif'}>
+                                    {content}
+                                </b>
+                            </i>
+                            :
+                            <b className={fontFamily === 'serif' ? 'bold-serif' : 'bold-sans-serif'}>
+                                {content}
+                            </b>
+                        }
+                    </>
+                    :
+                    <>
+                        {italicize ?
+                            <i className={fontFamily === 'serif' ? 'italic-serif' : 'italic-sans-serif'}>
+                                {content}
+                            </i>
+                            :
+                            <>{content}</>
+                        }
+                    </>
+                }
+            </span>
+        </div >
     )
 }
 
