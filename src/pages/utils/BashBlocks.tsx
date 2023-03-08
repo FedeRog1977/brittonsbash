@@ -28,7 +28,7 @@ function BashBlocks() {
             <Typography type='body' fontFamily='sans-serif' content='Typography body italicized' textAlign='justify' italicize inline />{' '}
             <Typography type='body' fontFamily='sans-serif' content='Typography body bold-faced and italicized' textAlign='justify' boldFace italicize inline />
             <Typography type='caption' fontFamily='sans-serif' content='Typography caption' textAlign='left' />
-            <Typography type='footnote' fontFamily='sans-serif' content=' footnote' textAlign='left' />
+            <Typography type='footnote' fontFamily='sans-serif' content='Typography footnote' textAlign='left' />
         </div>
     );
 }
