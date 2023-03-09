@@ -37,14 +37,14 @@
 
 /* Serif Classes */
 
-.title-serif {
+.t1-serif {
     font-family: CMU-Bold;
     font-size: 64px;
     margin: 20px 0 30px 0;
     padding: 0px;
 }
 
-.title2-serif {
+.t2-serif {
     font-family: CMU-Serif;
     font-size: 64px;
     margin: 20px 0 30px 0;
@@ -95,14 +95,14 @@
 
 /* Sans-Serif Classes */
 
-.title {
+.t1 {
     font-family: Audi-Extended;
     font-size: 64px;
     margin: 20px 0 30px 0;
     padding: 0px;
 }
 
-.title2 {
+.t2 {
     font-family: Audi-Bold;
     font-size: 64px;
     margin: 20px 0 30px 0;

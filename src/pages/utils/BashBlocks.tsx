@@ -6,8 +6,8 @@ function BashBlocks() {
     return (
         <div>
             <Background />
-            <Typography type='title' fontFamily='serif' content='Typography title' textAlign='left' />
-            <Typography type='title2' fontFamily='serif' content='Typography title2' textAlign='left' />
+            <Typography type='t1' fontFamily='serif' content='Typography t1' textAlign='left' />
+            <Typography type='t2' fontFamily='serif' content='Typography t2' textAlign='left' />
             <Typography type='h1' fontFamily='serif' content='Typography h1' textAlign='left' />
             <Typography type='h2' fontFamily='serif' content='Typography h2' textAlign='left' />
             <Typography type='h3' fontFamily='serif' content='Typography h3' textAlign='left' />
@@ -18,8 +18,8 @@ function BashBlocks() {
             <Typography type='caption' fontFamily='serif' content='Typography caption' textAlign='left' />
             <Typography type='footnote' fontFamily='serif' content='Typography footnote' textAlign='left' />
             <hr />
-            <Typography type='title' fontFamily='sans-serif' content='Typography title' textAlign='left' />
-            <Typography type='title2' fontFamily='sans-serif' content='Typography title2' textAlign='left' />
+            <Typography type='t1' fontFamily='sans-serif' content='Typography t1' textAlign='left' />
+            <Typography type='t2' fontFamily='sans-serif' content='Typography t2' textAlign='left' />
             <Typography type='h1' fontFamily='sans-serif' content='Typography h1' textAlign='left' />
             <Typography type='h2' fontFamily='sans-serif' content='Typography h2' textAlign='left' />
             <Typography type='h3' fontFamily='sans-serif' content='Typography h3' textAlign='left' />

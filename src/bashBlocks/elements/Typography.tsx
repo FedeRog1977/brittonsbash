@@ -3,8 +3,8 @@ import './styles/Typography.css';
 
 interface TypographyProps {
     type:
-    | 'title'
-    | 'title2'
+    | 't1'
+    | 't2'
     | 'h1'
     | 'h2'
     | 'h3'
@@ -15,6 +15,9 @@ interface TypographyProps {
     fontFamily?:
     | 'serif'
     | 'sans-serif'
+    color?: string;
+    // | ''
+    // | ''
     textAlign:
     | 'left'
     | 'center'
@@ -23,6 +26,7 @@ interface TypographyProps {
     inline?: boolean;
     boldFace?: boolean;
     italicize?: boolean;
+    smallCaps?: boolean;
     textDecoration?:
     | 'overline'
     | 'underline'
@@ -39,10 +43,12 @@ const Typography: FC<TypographyProps> = (
         type,
         content,
         fontFamily,
+        color,
         textAlign,
         inline,
         boldFace,
         italicize,
+        smallCaps,
         textDecoration,
         mT,
         mB,
@@ -51,10 +57,10 @@ const Typography: FC<TypographyProps> = (
     return (
         <div
             className={
-                fontFamily === 'serif' ? `${type}-serif` : type
+                (fontFamily === 'serif' ? `${type}-serif` : type)
             }
             style={{
-                display: inline && 'inline',
+                display: (inline && 'inline'),
                 marginTop: mT,
                 marginBottom: mB,
                 marginLeft: 0,
@@ -64,8 +70,9 @@ const Typography: FC<TypographyProps> = (
         >
             <span
                 style={{
+                    color: color,
                     textAlign: textAlign,
-                    fontWeight: (boldFace ? 'bold' : 'normal'),
+                    fontVariant: (smallCaps && 'small-caps'),
                     textDecoration: textDecoration,
                 }}
             >
