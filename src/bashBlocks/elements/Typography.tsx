@@ -57,7 +57,7 @@ const Typography: FC<TypographyProps> = (
     return (
         <div
             className={
-                (fontFamily === 'serif' ? `${type}-serif` : type)
+                (fontFamily === 'serif' ? `${type}-serif` : `${type}-sans-serif`)
             }
             style={{
                 display: (inline && 'inline'),

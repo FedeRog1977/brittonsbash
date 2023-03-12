@@ -95,56 +95,56 @@
 
 /* Sans-Serif Classes */
 
-.t1 {
+.t1-sans-serif {
     font-family: Audi-Extended;
     font-size: 64px;
     margin: 20px 0 30px 0;
     padding: 0px;
 }
 
-.t2 {
+.t2-sans-serif {
     font-family: Audi-Bold;
     font-size: 64px;
     margin: 20px 0 30px 0;
     padding: 0px;
 }
 
-.h1 {
+.h1-sans-serif {
     font-family: Audi-Bold;
     font-size: 52px;
     margin: 20px 0 30px 0;
     padding: 0px;
 }
 
-.h2 {
+.h2-sans-serif {
     font-family: Audi-Bold;
     font-size: 40px;
     margin: 20px 0 30px 0;
     padding: 0px;
 }
 
-.h3 {
+.h3-sans-serif {
     font-family: Audi-Bold;
     font-size: 28px;
     margin: 20px 0 30px 0;
     padding: 0px;
 }
 
-.body {
+.body-sans-serif {
     font-family: Audi-Regular;
     font-size: 16px;
     margin: 20px 0 30px 0;
     padding: 0px;
 }
 
-.caption {
+.caption-sans-serif {
     font-family: Audi-Regular;
     font-size: 14px;
     margin: 20px 0 30px 0;
     padding: 0px;
 }
 
-.footnote {
+.footnote-sans-serif {
     font-family: Audi-Regular;
     font-size: 10px;
     margin: 20px 0 30px 0;
