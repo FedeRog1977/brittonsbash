@@ -38,6 +38,23 @@ interface TypographyProps {
     mB?: string;
 }
 
+// sections: [
+//     {
+//         header: "...",
+//         subheader: "...",
+//         paragraph: "...",
+//         subheader: "",
+//         paragraph: "...",
+//     },
+//     {
+//         header: "...",
+//         subheader: "...",
+//         paragraph: "...",
+//         subheader: "",
+//         paragraph: "...",
+//     },
+// ]
+
 const Typography: FC<TypographyProps> = (
     {
         type,
