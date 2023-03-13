@@ -1,83 +1,49 @@
 import { FC } from "react";
-import './styles/Typography.css';
+import Typography from "../elements/Typography";
 
-interface TypographyProps {
-    type:
-    | 't1'
-    | 't2'
-    | 'h1'
-    | 'h2'
-    | 'h3'
-    | 'body'
-    | 'caption'
-    | 'footnote';
-    content: string;
+interface ArticleProps {
+    sections: Array<{
+        type: string;
+        // | 't1'
+        // | 't2'
+        // | 'h1'
+        // | 'h2'
+        // | 'h3'
+        // | 'body'
+        // | 'caption'
+        // | 'footnote';
+        content: string;
+    }>;
     fontFamily?:
     | 'serif'
-    | 'sans-serif'
-    color?: string;
-    // | ''
-    // | ''
+    | 'sans-serif';
     textAlign:
     | 'left'
     | 'center'
     | 'justify'
     | 'right';
-    inline?: boolean;
-    boldFace?: boolean;
-    italicize?: boolean;
-    smallCaps?: boolean;
-    textDecoration?:
-    | 'overline'
-    | 'underline'
-    | 'line-through';
-    // link: {
-    //     ...
-    // }
     mT?: string;
     mB?: string;
 }
 
-// sections: [
-//     {
-//         header: "...",
-//         subheader: "...",
-//         paragraph: "...",
-//         subheader: "",
-//         paragraph: "...",
-//     },
-//     {
-//         header: "...",
-//         subheader: "...",
-//         paragraph: "...",
-//         subheader: "",
-//         paragraph: "...",
-//     },
-// ]
-
-const Typography: FC<TypographyProps> = (
+const Article: FC<ArticleProps> = (
     {
-        type,
-        content,
+        sections,
         fontFamily,
-        color,
         textAlign,
-        inline,
-        boldFace,
-        italicize,
-        smallCaps,
-        textDecoration,
         mT,
         mB,
     }: any
 ) => {
+
+    console.log(sections);
+
     return (
         <div
-            className={
-                (fontFamily === 'serif' ? `${type}-serif` : `${type}-sans-serif`)
-            }
+            // className={
+            //     (fontFamily === 'serif' ? `${type}-serif` : `${type}-sans-serif`)
+            // }
             style={{
-                display: (inline && 'inline'),
                 marginTop: mT,
                 marginBottom: mB,
                 marginLeft: 0,
@@ -85,42 +51,13 @@ const Typography: FC<TypographyProps> = (
                 padding: 0,
             }}
         >
-            <span
-                style={{
-                    color: color,
-                    textAlign: textAlign,
-                    fontVariant: (smallCaps && 'small-caps'),
-                    textDecoration: textDecoration,
-                }}
-            >
-                {boldFace ?
-                    <>
-                        {italicize ?
-                            <i className={fontFamily === 'serif' ? 'italic-serif' : 'italic-sans-serif'}>
-                                <b className={fontFamily === 'serif' ? 'bold-serif' : 'bold-sans-serif'}>
-                                    {content}
-                                </b>
-                            </i>
-                            :
-                            <b className={fontFamily === 'serif' ? 'bold-serif' : 'bold-sans-serif'}>
-                                {content}
-                            </b>
-                        }
-                    </>
-                    :
-                    <>
-                        {italicize ?
-                            <i className={fontFamily === 'serif' ? 'italic-serif' : 'italic-sans-serif'}>
-                                {content}
-                            </i>
-                            :
-                            <>{content}</>
-                        }
-                    </>
-                }
-            </span>
-        </div >
+            {sections.map(
+                ({ type, content }: any) => (
+                    <Typography type={type} content={content} fontFamily={fontFamily} textAlign={textAlign} />
+                )
+            )}
+        </div>
     )
 }
 
-export default Typography;
+export default Article;

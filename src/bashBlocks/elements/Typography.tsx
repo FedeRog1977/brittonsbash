@@ -14,7 +14,7 @@ interface TypographyProps {
     content: string;
     fontFamily?:
     | 'serif'
-    | 'sans-serif'
+    | 'sans-serif';
     color?: string;
     // | ''
     // | ''
@@ -102,7 +102,7 @@ const Typography: FC<TypographyProps> = (
                     </>
                 }
             </span>
-        </div >
+        </div>
     )
 }
 
