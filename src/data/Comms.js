@@ -1,4 +1,14 @@
 export const commsData = {
+	"operatingSystems": [
+		"Manjaro Linux",
+		"Arch Linux (Limited)",
+		"macOS X Versions",
+		"macOS 11 Versions",
+		"macOS 12 Versions",
+		"Windows XP",
+		"Windows 7",
+		"Windows 11",
+	],
 	"languages": {
 		"system": [
 			"Bash (Shell)",
@@ -35,16 +45,6 @@ export const commsData = {
 		],
 	},
 	"programs": {
-		"operatingSystems": [
-			"Manjaro Linux",
-			"Arch Linux (Limited)",
-			"macOS X Versions",
-			"macOS 11 Versions",
-			"macOS 12 Versions",
-			"Windows XP",
-			"Windows 7",
-			"Windows 11",
-		],
 		"windowTiling": [
 			"i3-gaps",
 			"dwm",
