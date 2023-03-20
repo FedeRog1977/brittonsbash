@@ -80,7 +80,7 @@ export const hobbiesData = {
     },
     "other": {
         "vintageGoods": [
-            "Marlboro Cogarettes",
+            "Marlboro Cigarettes",
             "..."
         ],
         "1980s": [
