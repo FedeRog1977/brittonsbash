@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import SubHeaderBlog from "./SubHeaderBlog";
-import SubHeaderUtils from "./SubHeaderUtils";
+import './styles/HeaderFooter.css';
+import SubHeaderBlog from "../../elements/page/SubHeaderBlog";
+import SubHeaderUtils from "../../elements/page/SubHeaderUtils";
 
 const Header = () => {
     const [showSubHeaderBlog, setShowSubHeaderBlog] = useState(false);

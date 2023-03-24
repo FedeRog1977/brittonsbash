@@ -8,8 +8,8 @@ import {
 } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 
-import Header from './elements/page/Header';
-import Footer from './elements/page/Footer';
+import Header from './bashBlocks/elements/Header';
+import Footer from './bashBlocks/elements/Footer';
 
 import ErrorPage from './pages/ErrorPage';
 

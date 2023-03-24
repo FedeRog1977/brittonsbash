@@ -3,8 +3,6 @@
 :root {
   --bg: #F5F5F5;
   --fg: #FFFFFF;
-  --header-footer: linear-gradient(90deg, #303030 0%, #808080 200%);
-  --header-footer-inv: linear-gradient(90deg, #ffffff -200%, #a2a2a2 100%);
   --drop: #E8E8E8;
   --font: #303030;
   --font2: #96B9EE;
@@ -105,80 +103,6 @@ body {
 
 /* Body Elements */
 
-.header {
-  background-image: var(--header-footer);
-  /* -webkit-filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.25)); */
-  height: 75px;
-  margin: 0;
-  padding: 0 7.5% 0 7.5%;
-}
-
-.headerLogo {
-  float: left;
-  margin: 16px 0 0 0;
-}
-
-.headerNavigation {
-  font-family: Audi-Regular;
-  color: #A2A2A2;
-  float: right;
-  margin: 11px 0 0 0;
-}
-
-.headerNavigation li,
-.subHeaderNavigation li,
-.subHeaderConquestNavigation li {
-  display: inline-block;
-  margin: 0 7.5px 0 7.5px;
-}
-
-.headerNavigation a,
-.subHeaderNavigation a,
-.subHeaderConquestNavigation a {
-  text-decoration: none;
-  color: #A2A2A2;
-  transition: color 0.5s;
-}
-
-.headerNavigation a:hover,
-.subHeaderNavigation a:hover,
-.subHeaderConquestNavigation a:hover {
-  color: var(--font-hover);
-  font-weight: bold;
-  transition: color 0.5s font-weight 0.5s;
-  cursor: pointer;
-}
-
-.subHeader,
-.subHeaderConquest {
-  background-color: #303030;
-  /* -webkit-filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.25)); */
-  height: 55px;
-  margin: 0;
-  padding: 0 7.5% 0 7.5%;
-}
-
-.subHeaderNavigation,
-.subHeaderConquestNavigation {
-  font-family: Audi-Regular;
-  color: #A2A2A2;
-  float: right;
-  height: 50px;
-  margin: 1px 0 0 0;
-  padding: 0;
-}
-
-
-.footer {
-  font-family: Audi-Regular;
-  font-size: 16px;
-  color: #A2A2A2;
-  text-align: center;
-  background-image: var(--header-footer);
-  -webkit-filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.25));
-  margin: 0;
-  padding: 1.25em 7.5% 1.25em 7.5%;
-}
 
 .background {
   background-image: url("./media/images/background.jpeg");
