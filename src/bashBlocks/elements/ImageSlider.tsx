@@ -23,7 +23,6 @@ const ImageSlider = ({ slides }: any) => {
     }
 
     return (
-        // <div style={{ margin: '250px' }}>
         <div className='image-slider'>
             <FontAwesomeIcon icon={faArrowCircleLeft} className='left-arrow' onClick={prevSlide} />
             <FontAwesomeIcon icon={faArrowCircleRight} className='right-arrow' onClick={nextSlide} />
@@ -40,7 +39,6 @@ const ImageSlider = ({ slides }: any) => {
                 );
             })}
         </div>
-        // </div>
     );
 };
 
