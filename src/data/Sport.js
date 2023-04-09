@@ -174,6 +174,13 @@ export const sportData = {
 		],
 		"miles": [
 			{
+				"id": "M2023022",
+				"routeName": "other",
+				"dist": 5.08,
+				"elev": 30,
+				"time": "1:19:51",
+			},
+			{
 				"id": "M2023021",
 				"routeName": "waterfoot",
 				"dist": 10.04,

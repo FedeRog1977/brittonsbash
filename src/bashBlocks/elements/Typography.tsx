@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, ReactElement } from "react";
 import './styles/Typography.css';
 
 interface TypographyProps {
@@ -11,7 +11,9 @@ interface TypographyProps {
     | 'body'
     | 'caption'
     | 'footnote';
-    content: string;
+    content:
+    | string
+    | ReactElement;
     fontFamily?:
     | 'serif'
     | 'sans-serif';
