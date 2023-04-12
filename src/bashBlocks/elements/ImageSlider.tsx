@@ -5,6 +5,7 @@ import {
     faArrowCircleRight,
     faArrowCircleLeft
 } from "@fortawesome/free-solid-svg-icons";
+import Typography from './Typography';
 
 const ImageSlider = ({ slides }: any) => {
     const [current, setCurrent] = useState(0);
@@ -33,7 +34,10 @@ const ImageSlider = ({ slides }: any) => {
                         key={index}
                     >
                         {index === current && (
-                            <img src={slide.image} className='slider-image' />
+                            <>
+                                <img src={slide.url} alt={slide.alt} className='slider-image' />
+                                <Typography type='h3' fontFamily='sans-serif' content={slide.description} textAlign='center' />
+                            </>
                         )}
                     </div>
                 );

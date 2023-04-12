@@ -63,6 +63,7 @@ const Typography: FC<TypographyProps> = (
             }
             style={{
                 display: (inline && 'inline'),
+                textAlign: textAlign,
                 marginTop: mT,
                 marginBottom: mB,
                 marginLeft: 0,
@@ -73,7 +74,6 @@ const Typography: FC<TypographyProps> = (
             <span
                 style={{
                     color: color,
-                    textAlign: textAlign,
                     fontVariant: (smallCaps && 'small-caps'),
                     textDecoration: textDecoration,
                 }}

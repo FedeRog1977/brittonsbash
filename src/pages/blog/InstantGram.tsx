@@ -1,13 +1,14 @@
 import '../../App.css';
-import ImageSlider from '../../bashBlocks/elements/ImageSlider';
-import { ImageSliderTestData } from '../../data/test/ImageSliderTestData';
+import InstantGramTile from '../../bashBlocks/components/InstantGramTile';
 import Background from '../../elements/page/Background';
+import { eventData } from '../../data/Events';
 
 function InstantGram() {
     return (
         <div>
             <Background text={"Instant Gram"} />
-            <ImageSlider slides={ImageSliderTestData} />
+            {/* Testing */}
+            <InstantGramTile event={eventData[2022][42]} />
         </div>
     );
 }

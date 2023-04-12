@@ -174,13 +174,6 @@ export const sportData = {
 		],
 		"miles": [
 			{
-				"id": "M2023023",
-				"routeName": "waterfoot",
-				"dist": 10.21,
-				"elev": 568,
-				"time": "2:31:56",
-			},
-			{
 				"id": "M2023022",
 				"routeName": "other",
 				"dist": 5.08,
@@ -736,7 +729,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2022027",
-				"routeName": "ahJeezILostMyGroinAndItsGitHubsFault***C",
+				"routeName": "ahJeezILostMyGroinAndItsGitHubsFault",
 				"dist": 11.66,
 				"elev": 4281,
 				"time": "5:05:11",
@@ -755,7 +748,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2022026",
-				"routeName": "outOfCommission***B",
+				"routeName": "outOfCommission",
 				"dist": 11.03,
 				"elev": 2418,
 				"time": "3:56:13",
@@ -773,7 +766,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2022025",
-				"routeName": "aNewHope***A",
+				"routeName": "aNewHope",
 				"dist": 4.96,
 				"elev": 3018,
 				"time": "2:22:42",
@@ -853,7 +846,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2022021",
-				"routeName": "beinnOneHundred***B",
+				"routeName": "beinnOneHundred",
 				"dist": 13.18,
 				"elev": 3127,
 				"time": "4:20:06",
@@ -872,7 +865,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2022020",
-				"routeName": "lhotelDAll***A",
+				"routeName": "lhotelDAll",
 				"dist": 10.53,
 				"elev": 2848,
 				"time": "3:30:39",
@@ -1077,7 +1070,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2022010",
-				"routeName": "glencoeWage***B",
+				"routeName": "glencoeWage",
 				"dist": 4.18,
 				"elev": 371,
 				"time": "1:19:09",
@@ -1093,7 +1086,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2022009",
-				"routeName": "beinnUrar2022Edition***A",
+				"routeName": "beinnUrar2022Edition",
 				"dist": 9.88,
 				"elev": 4426,
 				"time": "3:47:44",
@@ -2505,7 +2498,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021034",
-				"routeName": "pappedOut***B",
+				"routeName": "pappedOut",
 				"dist": 4.72,
 				"elev": 2526,
 				"time": "2:19:16",
@@ -2523,7 +2516,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021033",
-				"routeName": "farewellMyLove***A",
+				"routeName": "farewellMyLove",
 				"dist": 7.3,
 				"elev": 2323,
 				"time": "3:14:13",
@@ -2598,7 +2591,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021029",
-				"routeName": "beinnUrar***B",
+				"routeName": "beinnUrar",
 				"dist": 9.02,
 				"elev": 3655,
 				"time": "4:08:34",
@@ -2618,7 +2611,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021028",
-				"routeName": "giveMeMor***A",
+				"routeName": "giveMeMor",
 				"dist": 8.23,
 				"elev": 3859,
 				"time": "3:29:13",
@@ -3058,7 +3051,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021006",
-				"routeName": "etiveBeag***B",
+				"routeName": "etiveBeag",
 				"dist": 5.73,
 				"elev": 2550,
 				"time": "2:20:46",
@@ -3077,7 +3070,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021005",
-				"routeName": "bideanBail***A",
+				"routeName": "bideanBail",
 				"dist": 8.57,
 				"elev": 3979,
 				"time": "4:26:47",
