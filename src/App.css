@@ -36,6 +36,7 @@
   src: url(./fonts/audi/Italic.ttf);
 }
 
+
 /* Text */
 
 h1,
@@ -45,16 +46,6 @@ h4 {
   font-family: Audi-Regular;
   color: #303030;
   margin: 0.5em 0 0.5em 0;
-}
-
-h1.backgroundText {
-  font-family: Audi-Extended;
-  font-size: 64px;
-  background: -webkit-linear-gradient(0deg, #ffffff -100%, #a2a2a2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin: 0;
-  padding: 0;
 }
 
 h1.weatherIcon {
@@ -128,16 +119,6 @@ body {
 
 /* Body Elements */
 
-
-.background {
-  background-image: url("./media/images/background.jpeg");
-  background-attachment: fixed;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: center;
-  padding: 10% 0 2.5% 0;
-}
 
 /* .body {
   text-align: center;

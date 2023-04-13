@@ -1,7 +1,13 @@
-const Background = ({ text }: any) => {
+import './styles/background.css';
+
+const Background = ({ content, className }: any) => {
     return (
         <div className={"background"}>
-            <h1 className={"backgroundText"}>{text}</h1>
+            <span
+                className={className}
+            >
+                {content}
+            </span>
         </div>
     )
 }

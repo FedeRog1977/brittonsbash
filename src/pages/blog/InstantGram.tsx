@@ -6,7 +6,7 @@ import { eventData } from '../../data/Events';
 function InstantGram() {
     return (
         <div>
-            <Background text={"Instant Gram"} />
+            <Background content={"Instant Gram"} className='background-text-instant-gram' />
             {/* Testing */}
             <InstantGramTile event={eventData[2022][42]} />
         </div>

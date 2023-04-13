@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import './styles/ImageSlider.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faArrowCircleRight,
-    faArrowCircleLeft
+    faChevronCircleRight,
+    faChevronCircleLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import Typography from './Typography';
 
@@ -25,8 +25,8 @@ const ImageSlider = ({ slides }: any) => {
 
     return (
         <div className='image-slider'>
-            <FontAwesomeIcon icon={faArrowCircleLeft} className='left-arrow' onClick={prevSlide} />
-            <FontAwesomeIcon icon={faArrowCircleRight} className='right-arrow' onClick={nextSlide} />
+            <FontAwesomeIcon icon={faChevronCircleLeft} className='left-arrow' onClick={prevSlide} />
+            <FontAwesomeIcon icon={faChevronCircleRight} className='right-arrow' onClick={nextSlide} />
             {slides.map((slide, index) => {
                 return (
                     <div
