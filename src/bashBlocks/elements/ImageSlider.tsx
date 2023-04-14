@@ -35,8 +35,10 @@ const ImageSlider = ({ slides }: any) => {
                     >
                         {index === current && (
                             <>
-                                <img src={slide.url} alt={slide.alt} className='slider-image' />
-                                <Typography type='h3' fontFamily='sans-serif' content={slide.description} textAlign='center' />
+                                <a href={slide.url}>
+                                    <img src={slide.url} alt={slide.alt} className='slider-image' />
+                                </a>
+                                <Typography type='h3' fontFamily='sans-serif' content={slide.description} textAlign='center' paragraphMargins />
                             </>
                         )}
                     </div>
@@ -44,6 +46,7 @@ const ImageSlider = ({ slides }: any) => {
             })}
         </div>
     );
+    
 };
 
 export default ImageSlider;

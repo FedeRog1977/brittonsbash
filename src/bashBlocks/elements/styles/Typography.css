@@ -40,56 +40,56 @@
 .t1-serif {
     font-family: CMU-Bold;
     font-size: 64px;
-    margin: 20px 0 30px 0;
+    color: #282828;
     padding: 0px;
 }
 
 .t2-serif {
     font-family: CMU-Serif;
     font-size: 64px;
-    margin: 20px 0 30px 0;
+    color: #282828;
     padding: 0px;
 }
 
 .h1-serif {
     font-family: CMU-Bold;
     font-size: 52px;
-    margin: 20px 0 30px 0;
+    color: #282828;
     padding: 0px;
 }
 
 .h2-serif {
     font-family: CMU-Bold;
     font-size: 40px;
-    margin: 20px 0 30px 0;
+    color: #282828;
     padding: 0px;
 }
 
 .h3-serif {
     font-family: CMU-Bold;
     font-size: 28px;
-    margin: 20px 0 30px 0;
+    color: #282828;
     padding: 0px;
 }
 
 .body-serif {
     font-family: CMU-Serif;
     font-size: 16px;
-    margin: 20px 0 30px 0;
+    color: #282828;
     padding: 0px;
 }
 
 .caption-serif {
     font-family: CMU-Serif;
     font-size: 14px;
-    margin: 20px 0 30px 0;
+    color: #282828;
     padding: 0px;
 }
 
 .footnote-serif {
     font-family: CMU-Serif;
     font-size: 10px;
-    margin: 20px 0 30px 0;
+    color: #282828;
     padding: 0px;
 }
 
@@ -98,56 +98,56 @@
 .t1-sans-serif {
     font-family: Audi-Extended;
     font-size: 64px;
-    margin: 20px 0 30px 0;
+    color: #282828;
     padding: 0px;
 }
 
 .t2-sans-serif {
     font-family: Audi-Bold;
     font-size: 64px;
-    margin: 20px 0 30px 0;
+    color: #282828;
     padding: 0px;
 }
 
 .h1-sans-serif {
     font-family: Audi-Bold;
     font-size: 52px;
-    margin: 20px 0 30px 0;
+    color: #282828;
     padding: 0px;
 }
 
 .h2-sans-serif {
     font-family: Audi-Bold;
     font-size: 40px;
-    margin: 20px 0 30px 0;
+    color: #282828;
     padding: 0px;
 }
 
 .h3-sans-serif {
     font-family: Audi-Bold;
     font-size: 28px;
-    margin: 20px 0 30px 0;
+    color: #282828;
     padding: 0px;
 }
 
 .body-sans-serif {
     font-family: Audi-Regular;
     font-size: 16px;
-    margin: 20px 0 30px 0;
+    color: #282828;
     padding: 0px;
 }
 
 .caption-sans-serif {
     font-family: Audi-Regular;
     font-size: 14px;
-    margin: 20px 0 30px 0;
+    color: #282828;
     padding: 0px;
 }
 
 .footnote-sans-serif {
     font-family: Audi-Regular;
     font-size: 10px;
-    margin: 20px 0 30px 0;
+    color: #282828;
     padding: 0px;
 }
 

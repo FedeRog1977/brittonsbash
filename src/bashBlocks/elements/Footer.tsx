@@ -6,17 +6,19 @@ import Typography from './Typography';
 const Footer = () => {
     return (
         <footer className={"footer"}>
-            <Typography type='h3' content='A Lewis Britton Production' textAlign='center' />
+            <Typography type='h3' content='A Lewis Britton Production' color='#A2A2A2' textAlign='center' paragraphMargins />
             <Typography
                 type='body'
                 content={
                     <img src={xmr} style={{ height: "15px" }} />
                 }
+                color='#A2A2A2'
                 textAlign='center'
                 inline
+                paragraphMargins
             />
             {' '}
-            <Typography type='body' content='Monero Donations' textAlign='center' inline />
+            <Typography type='body' content='Monero Donations' color='#A2A2A2' textAlign='center' inline />
             <Typography
                 type='body'
                 content={
@@ -24,21 +26,27 @@ const Footer = () => {
                         4ALBFTLBcv68zhmy8vvdTdjLZ2bisn5RPcM8KF6hDWGhj7<br />f37dfqwzGCqq1Vug13vmBkxoQARfNnrbNEcqsj<br />ZMTJSSkB46V
                     </code>
                 }
+                color='#A2A2A2'
                 textAlign='center'
+                paragraphMargins
             />
             <Typography
                 type='body'
                 content={
                     <img src={monero} style={{ height: "100px" }} />
                 }
+                color='#A2A2A2'
                 textAlign='center'
+                paragraphMargins
             />
             <Typography
                 type='body'
                 content={
                     <>&#169; Lewis Britton 2020&mdash;2023</>
                 }
+                color='#A2A2A2'
                 textAlign='center'
+                paragraphMargins
             />
         </footer>
     )

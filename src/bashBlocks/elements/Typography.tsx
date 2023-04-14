@@ -36,6 +36,7 @@ interface TypographyProps {
     // link: {
     //     ...
     // }
+    paragraphMargins?: boolean;
     mT?: string;
     mB?: string;
 }
@@ -52,6 +53,7 @@ const Typography: FC<TypographyProps> = (
         italicize,
         smallCaps,
         textDecoration,
+        paragraphMargins,
         mT,
         mB,
     }: any
@@ -64,8 +66,8 @@ const Typography: FC<TypographyProps> = (
             style={{
                 display: (inline && 'inline'),
                 textAlign: textAlign,
-                marginTop: mT,
-                marginBottom: mB,
+                marginTop: (paragraphMargins ? '20px' : (mT ? mT : '0px')),
+                marginBottom: (paragraphMargins ? '30px' : (mB ? mB : '0px')),
                 marginLeft: 0,
                 marginRight: 0,
                 padding: 0,
