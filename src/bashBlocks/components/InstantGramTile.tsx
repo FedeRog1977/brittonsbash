@@ -1,7 +1,9 @@
 import { FC } from "react";
 import ImageSlider from "../elements/ImageSlider";
 import Typography from "../elements/Typography";
+import InstantGramTileSport from "./InstantGramTileSport";
 import "./styles/InstantGramTile.css";
+// import InstantGramTitleSportProps from './InstantGramTileSport'
 
 interface InstantGramTileProps {
     event: {
@@ -19,10 +21,11 @@ interface InstantGramTileProps {
         routeNames?: string[];
         youthHostels?: string[];
     };
+    sportEvent?: {};
 }
 
 const InstantGramTile: FC<InstantGramTileProps> = (
-    { event }: any
+    { event, sportEvent }: any
 ) => {
 
     return (
@@ -45,6 +48,9 @@ const InstantGramTile: FC<InstantGramTileProps> = (
                     </>
                 }
             </div>
+            {sportEvent &&
+                <InstantGramTileSport sportEvent={sportEvent} />
+            }
             <div className='instant-gram-tile-body'>
                 {/* Incomplete */}
                 {event.youthHostels.length > 0 &&
@@ -61,7 +67,9 @@ const InstantGramTile: FC<InstantGramTileProps> = (
                 }
                 <Typography type='body' content={event.description} textAlign='justify' />
             </div>
-            <ImageSlider slides={event.images} />
+            <div className='instant-gram-tile-slider'>
+                <ImageSlider slides={event.images} />
+            </div>
         </div>
     )
 }

@@ -7,7 +7,9 @@
 }
 
 .slider-image {
-    max-height: 600px;    
+    max-height: 600px;
+    border-radius: 0.25em;
+    box-shadow: 0px 0px 10px #A8A8A8;
 }
 
 .right-arrow {

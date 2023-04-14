@@ -1,12 +1,25 @@
 .instant-gram-tile {
     background-color: #FFFFFF;
+    border-radius: 0.75em;
+    box-shadow: 0px 0px 10px #D8D8D8;
     margin: 20px 150px 20px 150px;
     padding: 50px 30px 50px 30px;
 }
 
-.instant-gram-tile-body {
+.instant-gram-tile-sport {
     background-color: #F5F5F5;
-    border-radius: 0.5em;
     margin: 15px 70px 25px 70px;
+    padding: 20px;
+}
+
+.instant-gram-tile-body {
+    /* background-color: #F5F5F5; */
+    /* border-radius: 0.5em; */
+    margin: 15px 70px 25px 70px;
+    padding: 20px;
+}
+
+.instant-gram-tile-slider {
+    margin: 15px 50px 25px 50px;
     padding: 20px;
 }
