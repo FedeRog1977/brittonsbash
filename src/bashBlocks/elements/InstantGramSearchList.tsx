@@ -5,8 +5,9 @@ function WeatherSearchList({ className, func, items, year }: any) {
             {items.map(
                 ({ id, namePrefix, nameSuffix }: any) =>
                     <option key={id} value={nameSuffix}>
-                        {namePrefix && namePrefix}
-                        {' '}
+                        {namePrefix &&
+                            <>{namePrefix}{' '}</>
+                        }
                         {nameSuffix}
                     </option>
             )}
