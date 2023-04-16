@@ -18,6 +18,25 @@ export const sportData = {
 		],
 		"projects": [
 			{
+				"id": "P2023009",
+				"routeName": "bromineEakingBariumD",
+				"dist": 19.16,
+				"elev": 5325,
+				"time": "6:54:59",
+				"companionship": 1,
+				"islands": [],
+				"munros": [
+					"Monadh Mòr",
+					"Beinn Bhrotain",
+				],
+				"munroTops": [],
+				"corbetts": [],
+				"corbettTops": [],
+				"grahams": [],
+				"subTwos": [],
+				"donalds": [],
+			},
+			{
 				"id": "P2023008",
 				"routeName": "dementia",
 				"dist": 10.74,
@@ -173,6 +192,20 @@ export const sportData = {
 			},
 		],
 		"miles": [
+			{
+				"id": "M2023024",
+				"routeName": "other",
+				"dist": 5.15,
+				"elev": 154,
+				"time": "1:38:24",
+			},
+			{
+				"id": "M2023023",
+				"routeName": "waterfoot",
+				"dist": 10.21,
+				"elev": 568,
+				"time": "2:31:56",
+			},
 			{
 				"id": "M2023022",
 				"routeName": "other",

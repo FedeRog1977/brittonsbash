@@ -307,51 +307,8 @@ input:checked+.slider:before {
 
 
 
-
-
-
-/* Tables */
-
-
 /* Inputs */
 
-select,
-input[type="text"],
-button {
-  font-family: Audi-Regular;
-  color: #FFFFFF;
-  background-image: var(--header-footer);
-  border: none;
-  border-radius: 0.125em;
-  padding: 0.125em;
-}
-
-input#searchLocation,
-select#searchLocation,
-input#latIn,
-input#lonIn,
-button#searchLocation {
-  font-size: 20px;
-  color: #303030;
-  background-image: var(--header-footer-inv);
-  height: 300;
-  opacity: 90%;
-}
-
-input#searchLocation {
-  width: 40%;
-  margin: 0.25em;
-}
-
-select#searchLocation {
-  width: 40%;
-  margin: 0.25em;
-}
-
-button#searchLocation {
-  width: 7.5%;
-  margin: 0.25em;
-}
 
 button#expandWeather {
   width: calc(100% - 0.125em);
@@ -362,13 +319,3 @@ input#latIn,
 input#lonIn {
   width: 96.5%;
 }
-
-button:hover {
-  cursor: pointer;
-}
-
-button:active {
-  transform: scale(0.95);
-}
-
-/* Lists */

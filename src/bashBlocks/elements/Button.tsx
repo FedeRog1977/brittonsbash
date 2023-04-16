@@ -1,19 +1,12 @@
-const Button = ({ text, id, func }: any) => {
-    if (typeof id !== "undefined") {
-        return (
-            <button
-                id={id}
-                onClick={func}
-            >
-                {text}
-            </button>
-        )
-    }
+import './styles/Button.css'
+
+const Button = ({ className, func, content }: any) => {
     return (
         <button
+            className={className}
             onClick={func}
         >
-            {text}
+            {content}
         </button>
     )
 }

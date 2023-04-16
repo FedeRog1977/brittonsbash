@@ -4,6 +4,7 @@ import Background from '../../elements/page/Background';
 import { eventData } from '../../data/Events';
 import { sportData } from '../../data/Sport';
 import { useState } from 'react';
+import InstantGramSearchBar from '../../bashBlocks/components/InstantGramSearchBar';
 
 function InstantGram() {
     const [event, setEvent] = useState(eventData[2022][42])
@@ -23,6 +24,7 @@ function InstantGram() {
     return (
         <div>
             <Background content={"Instant Gram"} className='background-text-instant-gram' />
+            <InstantGramSearchBar />
             <InstantGramTile event={event} sportEvent={sport} />
         </div>
     );
