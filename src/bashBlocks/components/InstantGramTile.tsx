@@ -20,20 +20,20 @@ interface InstantGramTileProps {
         youthHostels?: string[];
     };
     sportEvent?: {
-        id: string | undefined;
-        routeName: string | undefined;
-        dist: number | undefined;
-        elev: number | undefined;
-        time: string | undefined;
-        companionship: number | undefined;
-        islands?: string[] | undefined;
-        munros?: string[] | undefined;
-        munroTops?: string[] | undefined;
-        corbetts?: string[] | undefined;
-        corbettTops?: string[] | undefined;
-        grahams?: string[] | undefined;
-        subTwos?: string[] | undefined;
-        donalds?: string[] | undefined;
+        id: string;
+        routeName: string;
+        dist: number;
+        elev: number;
+        time: string;
+        companionship: number;
+        islands?: string[];
+        munros?: string[];
+        munroTops?: string[];
+        corbetts?: string[];
+        corbettTops?: string[];
+        grahams?: string[];
+        subTwos?: string[];
+        donalds?: string[];
     };
     showSportEvent?: boolean;
 }
