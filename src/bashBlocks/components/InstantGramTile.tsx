@@ -1,9 +1,7 @@
 import { FC } from "react";
 import ImageSlider from "../elements/ImageSlider";
 import Typography from "../elements/Typography";
-import InstantGramTileSport from "./InstantGramTileSport";
 import "./styles/InstantGramTile.css";
-// import InstantGramTitleSportProps from './InstantGramTileSport'
 
 interface InstantGramTileProps {
     event: {
@@ -21,11 +19,27 @@ interface InstantGramTileProps {
         routeNames?: string[];
         youthHostels?: string[];
     };
-    sportEvent?: {};
+    sportEvent?: {
+        id: string | undefined;
+        routeName: string | undefined;
+        dist: number | undefined;
+        elev: number | undefined;
+        time: string | undefined;
+        companionship: number | undefined;
+        islands?: string[] | undefined;
+        munros?: string[] | undefined;
+        munroTops?: string[] | undefined;
+        corbetts?: string[] | undefined;
+        corbettTops?: string[] | undefined;
+        grahams?: string[] | undefined;
+        subTwos?: string[] | undefined;
+        donalds?: string[] | undefined;
+    };
+    showSportEvent?: boolean;
 }
 
 const InstantGramTile: FC<InstantGramTileProps> = (
-    { event, sportEvent }: any
+    { event, sportEvent, showSportEvent }: any
 ) => {
 
     return (
@@ -48,8 +62,10 @@ const InstantGramTile: FC<InstantGramTileProps> = (
                     </>
                 }
             </div>
-            {sportEvent &&
-                <InstantGramTileSport sportEvent={sportEvent} />
+            {showSportEvent &&
+                <div className='instant-gram-tile-sport'>
+                    <p>{sportEvent.dist}, {sportEvent.elev}, {sportEvent.time}</p>
+                </div>
             }
             <div className='instant-gram-tile-body'>
                 {/* Incomplete */}

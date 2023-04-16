@@ -537,7 +537,7 @@ export const eventData = {
 			"nameSuffix": "KarKars Warm-Up",
 			"startDate": "17th of September",
 			"endDate": "",
-			"description": "First Lady Jooma Loor’s (J. Herman Vitra Miller’) first Friday functional proj. It was into the ‘stallion for an 800er and drive-in to Atholl. Quickie in Tesco Perth for some so little calorie and Kate Moss Marshmello edition. Then, an attempt at the Atholl Arms but a phat rejection. Alright us because where there’s a business problem, we provide and install the business solution. Tents up and a Tootie Brookie each before bed. Good proj the next day before finally hitting up Ka Ka Lok for one of the fist meals.",
+			"description": "First Lady Jooma ‘J. Herman Vitra Miller’ Loor’s first Friday functional proj. It was into the ‘stallion for an 800er and drive-in to Atholl. Quickie in Tesco Perth for some so little calorie and Kate Moss Marshmello edition. Then, an attempt at the Atholl Arms but a phat rejection. Alright us because where there’s a business problem, we provide and install the business solution. Tents up and a Tootie Brookie each before bed. Good proj the next day before finally hitting up Ka Ka Lok for one of the fist meals.",
 			"images": [
 				{
 					"url": "",

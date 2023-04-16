@@ -6,13 +6,12 @@ import { eventData } from "../../../data/Events";
 import { sportData } from "../../../data/Sport";
 
 const InstantGramSearch = () => {
-    const nullSport = {};
-
     const [event, setEvent] = useState(eventData[2022][42])
-    const [sport, setSport] = useState(sportData[2022].projects[0])
+    const [sportEvent, setSportEvent] = useState(sportData[2022].projects[0])
+    const [showSportEvent, setShowSportEvent] = useState(true);
 
     const [searchField, setSearchField] = useState('');
-    const [name, setName] = useState('');
+    // const [name, setName] = useState('');
 
 
 
@@ -43,18 +42,21 @@ const InstantGramSearch = () => {
                     `${eventData[2022][i].nameSuffix}\n---`
                 );
                 setEvent(eventData[2022][i]);
+                setShowSportEvent(false);
                 for (var k in eventData[2022][i].routeNames) {
                     for (var j in sportData[2022].projects) {
                         if (
-                            eventData[2022][i].routeNames === null &&
-                            eventData[2022][i].routeNames.includes(sportData[2022].projects[j].routeName)
+                            eventData[2022][i].routeNames
+                                .includes(sportData[2022].projects[j].routeName)
                         ) {
-                            setSport(sportData[2022].projects[j]);
-                            console.log(sportData[2022].projects[j].routeName)
+                            setSportEvent(sportData[2022].projects[j]);
+                            setShowSportEvent(true);
+                            console.log(
+                                eventData[2022][i],
+                                sportData[2022].projects[j],
+                                showSportEvent
+                            );
                         }
-                        // } else {
-                        //     setSport(nullSport);
-                        // }
                     }
                 }
             }
@@ -122,6 +124,9 @@ const InstantGramSearch = () => {
     };
 
     const executeInput = () => {
+        // THIS: 
+        // <InstantGramTile event={event} sport={sport && sport} />
+
         // console.log(
         //     // searchField will only work for the input search bar
         //     "Results:\n",
@@ -174,7 +179,7 @@ const InstantGramSearch = () => {
     return (
         <div>
             <InstantGramSearchBar funcSelect={handleSelect} funcInput={handleInput} funcButton={executeInput} />
-            <InstantGramTile event={event} sportEvent={sport} />
+            <InstantGramTile event={event} sportEvent={sportEvent} showSportEvent={showSportEvent} />
 
 
 
