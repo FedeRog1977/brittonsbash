@@ -43,90 +43,76 @@ const InstantGramSearch = () => {
                 );
                 setEvent(eventData[2022][i]);
                 setShowSportEvent(false);
-                for (var k in eventData[2022][i].routeNames) {
-                    for (var j in sportData[2022].projects) {
-                        if (
-                            eventData[2022][i].routeNames
-                                .includes(sportData[2022].projects[j].routeName)
-                        ) {
-                            setSportEvent(sportData[2022].projects[j]);
-                            setShowSportEvent(true);
-                            console.log(
-                                eventData[2022][i],
-                                sportData[2022].projects[j],
-                                showSportEvent
-                            );
-                        }
+                for (var j in sportData[2022].projects) {
+                    if (
+                        eventData[2022][i].routeNames
+                            .includes(sportData[2022].projects[j].routeName)
+                    ) {
+                        setSportEvent(sportData[2022].projects[j]);
+                        setShowSportEvent(true);
+                        console.log(
+                            eventData[2022][i],
+                            sportData[2022].projects[j],
+                            showSportEvent
+                        );
                     }
                 }
             }
         }
-
-        // for (var i in hillData.munros) {
-        //     if (
-        //         hillData.munros[i].name.toLowerCase()
-        //             .includes((e.target.value).toLowerCase())
-        //     ) {
-        //         console.log(
-        //             "Match Selected Munro To JSON:\n",
-        //             `${hillData.munros[i].name}\n`,
-        //             `${hillData.munros[i].lat}`,
-        //             `${hillData.munros[i].lon}\n---`
-        //         );
-        //         setName(hillData.munros[i].name.toLowerCase());
-        //         setLat(hillData.munros[i].lat);
-        //         setLon(hillData.munros[i].lon);
-        //         setWeatherTitleLocation(`${hillData.munros[i].name}`);
-        //         setWeatherElevation(hillData.munros[i].elevation);
-        //         setWeatherMark(hillData.munros[i].summit);
-        //     }
-        // }
     };
+
+    const allEvents = [];
+
+    for (var a in eventData[2023]) {
+        allEvents.push(eventData[2023][a]);
+    }
+
+    for (var b in eventData[2022]) {
+        allEvents.push(eventData[2022][b]);
+    }
+
+    for (var c in eventData[2021]) {
+        allEvents.push(eventData[2021][c]);
+    }
+
+    for (var d in eventData[2020]) {
+        allEvents.push(eventData[2020][d]);
+    }
+
+    console.log(allEvents);
 
     const handleInput = (e: any) => {
         console.log(
-            "---\nInput New Munro:\n",
+            "---\nInput New Event:\n",
             e.target.value
         );
 
         setSearchField(e.target.value);
 
-        // for (var i in hillData.munros) {
+        // for (var i in allEvents) {
         //     if (searchField === "") {
-        //         setLat(lat);
-        //         setLon(lon);
-        //         setWeatherTitleLocation("Your Location");
-        //         setWeatherSubTitle(
-        //             <WeatherSubTitle
-        //                 type={"current"}
-        //                 lat={lat}
-        //                 lon={lon}
-        //             />
-        //         );
+        //         setEvent(event);
+        //         setSportEvent(sportEvent);
+        //         setShowSportEvent(showSportEvent);
         //     } else if (
-        //         hillData.munros[i].name.toLowerCase()
+        //         allEvents[i].nameSuffix.toLowerCase()
         //             .includes(searchField.toLowerCase())
         //     ) {
         //         console.log(
-        //             "Match Inputted Munro To JSON:\n",
-        //             `${hillData.munros[i].name}\n`,
-        //             `${hillData.munros[i].lat}`,
-        //             `${hillData.munros[i].lon}\n---`
+        //             "Match Inputted Event To JSON:\n",
+        //             `${allEvents[i].nameSuffix}\n---`
         //         );
-        //         setName(hillData.munros[i].name.toLowerCase());
-        //         setLat(hillData.munros[i].lat);
-        //         setLon(hillData.munros[i].lon);
-        //         setWeatherTitleLocation(`${hillData.munros[i].name}`);
-        //         setWeatherElevation(hillData.munros[i].elevation);
-        //         setWeatherMark(hillData.munros[i].summit);
+        //         // setName(hillData.munros[i].name.toLowerCase());
+        //         // setLat(hillData.munros[i].lat);
+        //         // setLon(hillData.munros[i].lon);
+        //         // setWeatherTitleLocation(`${hillData.munros[i].name}`);
+        //         // setWeatherElevation(hillData.munros[i].elevation);
+        //         // setWeatherMark(hillData.munros[i].summit);
         //     }
         // }
     };
 
     const executeInput = () => {
-        // THIS: 
-        // <InstantGramTile event={event} sport={sport && sport} />
-
         // console.log(
         //     // searchField will only work for the input search bar
         //     "Results:\n",
@@ -178,7 +164,11 @@ const InstantGramSearch = () => {
 
     return (
         <div>
-            <InstantGramSearchBar funcSelect={handleSelect} funcInput={handleInput} funcButton={executeInput} />
+            <InstantGramSearchBar
+                funcSelect={handleSelect}
+                funcInput={handleInput}
+                funcButton={executeInput}
+            />
             <InstantGramTile event={event} sportEvent={sportEvent} showSportEvent={showSportEvent} />
 
 
