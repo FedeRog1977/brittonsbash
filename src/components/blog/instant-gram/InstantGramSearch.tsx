@@ -1,67 +1,11 @@
 import { useState } from "react";
-import toSentenceCase from "../../../misc/toSentenceCase";
 import InstantGramSearchBar from "../../../bashBlocks/components/InstantGramSearchBar";
 import InstantGramTile from "../../../bashBlocks/components/InstantGramTile";
 import { eventData } from "../../../data/Events";
 import { sportData } from "../../../data/Sport";
 
 const InstantGramSearch = () => {
-    const [event, setEvent] = useState(eventData[2022][42])
-    const [sportEvent, setSportEvent] = useState(sportData[2022].projects[0])
-    const [showSportEvent, setShowSportEvent] = useState(true);
-
-    const [searchField, setSearchField] = useState('');
-    // const [name, setName] = useState('');
-
-
-
-
-
-
-    // const [weatherTitleLocation, setWeatherTitleLocation] = useState("Your Location");
-    // const [weatherTitle, setWeatherTitle] = useState(`Forecast for ${weatherTitleLocation}`);
-    // const [weatherSubTitle, setWeatherSubTitle] = useState(<WeatherSubTitle type={"curr"} lat={lat} lon={lon} />)
-    // const [weatherElevation, setWeatherElevation] = useState(0);
-    // const [weatherMark, setWeatherMark] = useState("");
-
-    // const [showWeatherContent, setShowWeatherContent] = useState(<WeatherDaily latIn={lat} lonIn={lon} />);
-
-    const handleSelect = (e: any) => {
-        console.log(
-            "---\nSelect New Event:\n",
-            e.target.value,
-        );
-
-        for (var i in eventData[2022]) {
-            if (
-                eventData[2022][i].nameSuffix.toLowerCase()
-                    .includes((e.target.value).toLowerCase())
-            ) {
-                console.log(
-                    "Match Selected Event To JSON:\n",
-                    `${eventData[2022][i].nameSuffix}\n---`
-                );
-                setEvent(eventData[2022][i]);
-                setShowSportEvent(false);
-                for (var j in sportData[2022].projects) {
-                    if (
-                        eventData[2022][i].routeNames
-                            .includes(sportData[2022].projects[j].routeName)
-                    ) {
-                        setSportEvent(sportData[2022].projects[j]);
-                        setShowSportEvent(true);
-                        console.log(
-                            eventData[2022][i],
-                            sportData[2022].projects[j],
-                            showSportEvent
-                        );
-                    }
-                }
-            }
-        }
-    };
-
-    const allEvents = [];
+    const allEvents: any[] = [];
 
     for (var a in eventData[2023]) {
         allEvents.push(eventData[2023][a]);
@@ -79,7 +23,73 @@ const InstantGramSearch = () => {
         allEvents.push(eventData[2020][d]);
     }
 
+    const allSport: any[] = [];
+
+    for (var z in sportData[2023].projects) {
+        allSport.push(sportData[2023].projects[z]);
+    }
+
+    for (var y in sportData[2022].projects) {
+        allSport.push(sportData[2022].projects[y]);
+    }
+
+    for (var x in sportData[2021].projects) {
+        allSport.push(sportData[2021].projects[x]);
+    }
+
+    for (var w in sportData[2020].projects) {
+        allSport.push(sportData[2020].projects[w]);
+    }
+
     console.log(allEvents);
+    console.log(allSport);
+
+    const initialEventHaveSport = allEvents[0].routeNames.includes(allSport[0].routeName);
+
+    const [event, setEvent] = useState(allEvents[0])
+    const [sportEvent, setSportEvent] = useState(allSport[0])
+    const [showSportEvent, setShowSportEvent] = useState(initialEventHaveSport);
+
+    const [eventPlaceholder, setEventPlaceholder] = useState(event);
+    const [sportEventPlaceholder, setSportEventPlaceholder] = useState(sportEvent);
+    const [showSportEventPlaceholder, setShowSportEventPlaceholder] = useState(showSportEvent);
+
+    const [searchField, setSearchField] = useState('');
+
+    const handleSelect = (e: any) => {
+        console.log(
+            "---\nSelect New Event:\n",
+            e.target.value,
+        );
+
+        for (var i in allEvents) {
+            if (
+                allEvents[i].nameSuffix.toLowerCase()
+                    .includes((e.target.value).toLowerCase())
+            ) {
+                console.log(
+                    "Match Selected Event To JSON:\n",
+                    `${allEvents[i].nameSuffix}\n---`
+                );
+                setEvent(allEvents[i]);
+                setShowSportEvent(false);
+                for (var j in allSport) {
+                    if (
+                        allEvents[i].routeNames
+                            .includes(allSport[j].routeName)
+                    ) {
+                        setSportEvent(allSport[j]);
+                        setShowSportEvent(true);
+                        console.log(
+                            event,
+                            sportEvent,
+                            showSportEvent
+                        );
+                    }
+                }
+            }
+        }
+    };
 
     const handleInput = (e: any) => {
         console.log(
@@ -89,77 +99,43 @@ const InstantGramSearch = () => {
 
         setSearchField(e.target.value);
 
-        // for (var i in allEvents) {
-        //     if (searchField === "") {
-        //         setEvent(event);
-        //         setSportEvent(sportEvent);
-        //         setShowSportEvent(showSportEvent);
-        //     } else if (
-        //         allEvents[i].nameSuffix.toLowerCase()
-        //             .includes(searchField.toLowerCase())
-        //     ) {
-        //         console.log(
-        //             "Match Inputted Event To JSON:\n",
-        //             `${allEvents[i].nameSuffix}\n---`
-        //         );
-        //         // setName(hillData.munros[i].name.toLowerCase());
-        //         // setLat(hillData.munros[i].lat);
-        //         // setLon(hillData.munros[i].lon);
-        //         // setWeatherTitleLocation(`${hillData.munros[i].name}`);
-        //         // setWeatherElevation(hillData.munros[i].elevation);
-        //         // setWeatherMark(hillData.munros[i].summit);
-        //     }
-        // }
+        for (var i in allEvents) {
+            if (searchField === "") {
+                setEventPlaceholder(event);
+                setSportEventPlaceholder(sportEvent);
+                setShowSportEventPlaceholder(showSportEvent);
+            } else if (
+                allEvents[i].nameSuffix.toLowerCase()
+                    .includes(searchField.toLowerCase())
+            ) {
+                console.log(
+                    "Match Inputted Event To JSON:\n",
+                    `${allEvents[i].nameSuffix}\n---`
+                );
+                setEventPlaceholder(allEvents[i]);
+                setShowSportEventPlaceholder(false);
+                for (var j in allSport) {
+                    if (
+                        allEvents[i].routeNames
+                            .includes(allSport[j].routeName)
+                    ) {
+                        setSportEventPlaceholder(allSport[j]);
+                        setShowSportEventPlaceholder(true);
+                        console.log(
+                            event,
+                            sportEvent,
+                            showSportEvent
+                        );
+                    }
+                }
+            }
+        }
     };
 
     const executeInput = () => {
-        // console.log(
-        //     // searchField will only work for the input search bar
-        //     "Results:\n",
-        //     `Search Field: ${searchField}\n`,
-        //     `JSON Matched Name: ${toSentenceCase(name)}\n`,
-        //     `JSON Matched Elevation: ${weatherElevation.toLocaleString()}\n`,
-        //     `JSON Matched Latitude: ${lat}\n`,
-        //     `JSON Matched Longitude: ${lon}\n`,
-        //     `JSON Matched Summit Mark: ${weatherMark}`
-        // );
-
-        // setWeatherTitle(`Forecast for ${weatherTitleLocation}`)
-
-        // // If the input search bar is not empty
-        // // Display munro result title
-        // if (searchField !== "") {
-        //     setWeatherSubTitle(
-        //         <WeatherSubTitle
-        //             type={"munro"}
-        //             elev={weatherElevation.toLocaleString()}
-        //             lat={lat}
-        //             lon={lon}
-        //             mark={weatherMark}
-        //         />
-        //     );
-        //     // If the text inputted into the input search bar is pulled from the suggested list (non-functional)
-        //     // Keep displaying the current location title
-        // } else if (!searchField.toLowerCase().includes(name)) {
-        //     setWeatherSubTitle(<WeatherSubTitle type={"current"} lat={lat} lon={lon} />);
-        //     // If there has been no change to the select drop-down or input search bar
-        //     // Keep displaying the current location title
-        // } else {
-        //     setWeatherSubTitle(
-        //         <WeatherSubTitle
-        //             type={"current"}
-        //             lat={lat}
-        //             lon={lon}
-        //         />
-        //     );
-        // }
-
-        // setShowWeatherContent(
-        //     <WeatherDaily
-        //         latIn={lat}
-        //         lonIn={lon}
-        //     />
-        // );
+        setEvent(eventPlaceholder);
+        setSportEvent(sportEventPlaceholder);
+        setShowSportEvent(showSportEventPlaceholder);
     };
 
     return (
@@ -169,11 +145,11 @@ const InstantGramSearch = () => {
                 funcInput={handleInput}
                 funcButton={executeInput}
             />
-            <InstantGramTile event={event} sportEvent={sportEvent} showSportEvent={showSportEvent} />
-
-
-
-            {/* {showWeatherContent} */}
+            <InstantGramTile
+                event={event}
+                sportEvent={sportEvent}
+                showSportEvent={showSportEvent}
+            />
         </div>
     );
 };

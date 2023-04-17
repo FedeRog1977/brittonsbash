@@ -41,6 +41,17 @@ interface InstantGramTileProps {
 const InstantGramTile: FC<InstantGramTileProps> = (
     { event, sportEvent, showSportEvent }: any
 ) => {
+    var sportDist = `${sportEvent.dist.toLocaleString("en-UK")}mi`;
+    var sportElev = `${sportEvent.elev.toLocaleString("en-UK")}ft`;
+    var sportTime = `${sportEvent.time}`;
+    var sportIslands = `${sportEvent.islands.join(', ')}`;
+    var sportMunros = `${sportEvent.munros.join(', ')}`;
+    var sportMunroTops = `${sportEvent.munroTops.join(', ')}`;
+    var sportCorbetts = `${sportEvent.corbetts.join(', ')}`;
+    var sportCorbettTops = `${sportEvent.corbettTops.join(', ')}`;
+    var sportGrahams = `${sportEvent.grahams.join(', ')}`;
+    var sportSubTwos = `${sportEvent.subTwos.join(', ')}`;
+    var sportDonalds = `${sportEvent.donalds.join(', ')}`;
 
     return (
         <div className='instant-gram-tile'>
@@ -64,7 +75,62 @@ const InstantGramTile: FC<InstantGramTileProps> = (
             </div>
             {showSportEvent &&
                 <div className='instant-gram-tile-sport'>
-                    <p>{sportEvent.dist}, {sportEvent.elev}, {sportEvent.time}</p>
+                    <div>
+                        <Typography type='body' fontFamily='sans-serif' content='Distance: ' textAlign='center' boldFace inline />{' '}
+                        <Typography type='body' fontFamily='sans-serif' content={sportDist} textAlign='center' inline />{' '}
+                        <Typography type='body' fontFamily='sans-serif' content='Elevation: ' textAlign='center' boldFace inline />{' '}
+                        <Typography type='body' fontFamily='sans-serif' content={sportElev} textAlign='center' inline />{' '}
+                        <Typography type='body' fontFamily='sans-serif' content='Time: ' textAlign='center' boldFace inline />{' '}
+                        <Typography type='body' fontFamily='sans-serif' content={sportTime} textAlign='center' inline />
+                    </div>
+                    {sportIslands &&
+                        <div>
+                            <Typography type='body' fontFamily='sans-serif' content='Islands: ' textAlign='center' boldFace inline />
+                            <Typography type='body' fontFamily='sans-serif' content={sportIslands} textAlign='center' inline />
+                        </div>
+                    }
+                    {sportMunros &&
+                        <div>
+                            <Typography type='body' fontFamily='sans-serif' content='Munros: ' textAlign='center' boldFace inline />
+                            <Typography type='body' fontFamily='sans-serif' content={sportMunros} textAlign='center' inline />
+                        </div>
+                    }
+                    {sportMunroTops &&
+                        <div>
+                            <Typography type='body' fontFamily='sans-serif' content='Munro Tops: ' textAlign='center' boldFace inline />
+                            <Typography type='body' fontFamily='sans-serif' content={sportMunroTops} textAlign='center' inline />
+                        </div>
+                    }
+                    {sportCorbetts &&
+                        <div>
+                            <Typography type='body' fontFamily='sans-serif' content='Munro Tops: ' textAlign='center' boldFace inline />
+                            <Typography type='body' fontFamily='sans-serif' content={sportCorbetts} textAlign='center' inline />
+                        </div>
+                    }
+                    {sportCorbettTops &&
+                        <div>
+                            <Typography type='body' fontFamily='sans-serif' content='Munro Tops: ' textAlign='center' boldFace inline />
+                            <Typography type='body' fontFamily='sans-serif' content={sportCorbettTops} textAlign='center' inline />
+                        </div>
+                    }
+                    {sportGrahams &&
+                        <div>
+                            <Typography type='body' fontFamily='sans-serif' content='Munro Tops: ' textAlign='center' boldFace inline />
+                            <Typography type='body' fontFamily='sans-serif' content={sportGrahams} textAlign='center' inline />
+                        </div>
+                    }
+                    {sportSubTwos &&
+                        <div>
+                            <Typography type='body' fontFamily='sans-serif' content='Munro Tops: ' textAlign='center' boldFace inline />
+                            <Typography type='body' fontFamily='sans-serif' content={sportSubTwos} textAlign='center' inline />
+                        </div>
+                    }
+                    {sportDonalds &&
+                        <div>
+                            <Typography type='body' fontFamily='sans-serif' content='Munro Tops: ' textAlign='center' boldFace inline />
+                            <Typography type='body' fontFamily='sans-serif' content={sportDonalds} textAlign='center' inline />
+                        </div>
+                    }
                 </div>
             }
             <div className='instant-gram-tile-body'>

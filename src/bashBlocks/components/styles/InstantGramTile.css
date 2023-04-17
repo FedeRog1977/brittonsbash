@@ -8,15 +8,14 @@
 
 .instant-gram-tile-sport {
     background-color: #F5F5F5;
+    text-align: center;
     margin: 15px 70px 25px 70px;
-    padding: 20px;
+    padding: 10px;
 }
 
 .instant-gram-tile-body {
-    /* background-color: #F5F5F5; */
-    /* border-radius: 0.5em; */
     margin: 15px 70px 25px 70px;
-    padding: 20px;
+    padding: 0px;
 }
 
 .instant-gram-tile-slider {

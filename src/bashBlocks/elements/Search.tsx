@@ -1,5 +1,4 @@
 const Search = ({ className, func, content }: any) => {
-
     return (
         <input
             type="text"
