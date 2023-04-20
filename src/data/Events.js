@@ -793,41 +793,40 @@ export const eventData = {
 			"nameSuffix": "Four Different Kind Hol-e-day",
 			"startDate": "7th of June",
 			"endDate": "14th of June",
-			"description": "",
-			// "description": [
-			// 	{
-			// 		type: "h3",
-			// 		content: "Wilmslow",
-			// 	},
-			// 	{
-			// 		type: "body",
-			// 		content: "After the train-in to Manchester Airport us, we were greeted with round two of cancelled sleazyJet flights. After some debate we settled on a gentlemen’s retreat to the Premier Inn, in Wilmers us. On easyJet of course. A few hay fever seizures later, we were in the Coach & Four you and me and you, running a fine two-courser. Also on easyJet. In fact, just let it be known that from this point until Munich, everything was on seazyJet. Finally bagged the cycle cafeé, then the god-awful pub next to the optician’s for a game of pool. We retired to slumber over some yellow labels and La Guy D’Familia and Papa D’Americano. In traditionalé Wilmers fashion, the next day begun with some Giada then a Juniper all-you-can-eat. The day’s activities formed a very soy trip into Manchester to browse Soylfridges and experience the glorious three different kind seafood with rice stick (rice pasta). I did pick up a good Crockett piece from Uni Qlo which made some appearances in Italy. Let’s not forget the £15 of mocha ice cream afterwards. Once again, the night was capped with some La Guy D’Familia and Papa D’Americano. The third day under the dome started with much hope but a drone of Doomer depression. All the transport was successful though and we made it to Munich.",
-			// 	},
-			// 	{
-			// 		type: "h3",
-			// 		content: "Munich",
-			// 	},
-			// 	{
-			// 		type: "body",
-			// 		content: "Sadly we didn’t have anywhere near as much time here as we’d hoped. With our Munich leg cut two days short, we tried to make the most of it with the classic poached sausage and schnitzel dinner. After a quickie at the local gelateria to get us warmed up for L’Italy, it was onto the Hofbräuhaus to sink a few steins, then a night cap bar for a couple’ more beer, large and a final pint to sober us up. An excellent night ended in a very rogue manner, with me running the run-out back to the accommodation to no ones’s knowledge. Apparently worrying your friends trumps prime autismé. Anyway, a quick run for the bus the next morning and we were off to Verona; an amazing seven-hour journey through the Scottish Highlands Mk.II. I have a copy, you have a copy.",
-			// 	},
-			// 	{
-			// 		type: "h3",
-			// 		content: "Verona",
-			// 	},
-			// 	{
-			// 		type: "body",
-			// 		content: "Herhona, my personal favourite of the locations. And J.PELLEGRINO’s too, I’m led to believe. Once again, a shame we only got to spend one night in this place because the accommodation and everything surrounding it was stunning. After d’loading, it was straight off to the first bareria of the evening to sink some H’Aperols and three different kind bar snack. We decided to tun the free-for-all dinner beta and end up in the place that looked best. This paid off big-time. Don’t even remember the name but, first place we ended up served possibly the finest meal I’ve ever blessed my (goddamn) palate with. Some magnificent tagliatelle followed by wild boar ragù, served alongside a house red and some homebrews. The best of the night was still to come however. Romeo five-star beereria, Verona. The greatest drinking establishment on earth. Negronis with branded ice cubes, herheyhas, and Japanese ginseng freakin’ zen garden something cocktails. A stunning arena. Big shout-out to Edoardo Bullio dood. The next morning capped her off well, with a glorious pistachio pasteria. We weren’ leaving ‘til just after midday though so there was of course time for a bellini, negroni and herheyha pre-train. And yeah, the train was a bit depressing coz they still believed in masks and it was 30°.",
-			// 	},
-			// 	{
-			// 		type: "h3",
-			// 		content: "Venice",
-			// 	},
-			// 	{
-			// 		type: "body",
-			// 		content: "To give a fair idea of the heat, I shall say that it took three legs with two breaks to make the two-mile journey from the staioné de centralé to the accommodation. The herheyhas helped, and the pizza lunch. There wasn’t much more to day one, just dinner at a very average restaurant (still better than any UK restaurant). The squid ink, wait for it..., squid was pretty okay actually. Obviously off to some bar afterwards, one which I don’t remember because they all blend into one. It was a 4am finish though, I can tell you that. A midday rise the next day saw us in desperate need of some frizzante and a coffeeria. We had a stroll and not long later came across a fine Farineria (Farini). Only the greatest pizzeria, drafteria, mojiteria and goddamn everything elseria in Venice (and Milano). We went a few [slices and pintés] down in there before the Trip Advisor special and another night of beereria, followed by that famous gelateria. Whatever it’s called. Ahh this was also the night of Brando, and friends. And James’ wannabe figure, the Celiaeria, who definitely shops at Celinerias. ‘nuff said. The final day kicked off with more frizzante and another trip to Farini, via the (non-existent) Casino Royaleria bank, for more sliceria. We bagged an excellent restaurant on the final day, definitely the finest we’d been to in Venice. It was basically a wine shop but their, whatever the name is for, Italian tapas was amazing. Anyway 5:30am rise the next day for departure from Four Different Kind Hol-e-day.",
-			// 	},
-			// ],
+			"description": [
+				{
+					type: "h3",
+					content: "Wilmslow",
+				},
+				{
+					type: "body",
+					content: "After the train-in to Manchester Airport us, we were greeted with round two of cancelled sleazyJet flights. After some debate we settled on a gentlemen’s retreat to the Premier Inn, in Wilmers us. On easyJet of course. A few hay fever seizures later, we were in the Coach & Four you and me and you, running a fine two-courser. Also on easyJet. In fact, just let it be known that from this point until Munich, everything was on seazyJet. Finally bagged the cycle cafeé, then the god-awful pub next to the optician’s for a game of pool. We retired to slumber over some yellow labels and La Guy D’Familia and Papa D’Americano. In traditionalé Wilmers fashion, the next day begun with some Giada then a Juniper all-you-can-eat. The day’s activities formed a very soy trip into Manchester to browse Soylfridges and experience the glorious three different kind seafood with rice stick (rice pasta). I did pick up a good Crockett piece from Uni Qlo which made some appearances in Italy. Let’s not forget the £15 of mocha ice cream afterwards. Once again, the night was capped with some La Guy D’Familia and Papa D’Americano. The third day under the dome started with much hope but a drone of Doomer depression. All the transport was successful though and we made it to Munich.",
+				},
+				{
+					type: "h3",
+					content: "Munich",
+				},
+				{
+					type: "body",
+					content: "Sadly we didn’t have anywhere near as much time here as we’d hoped. With our Munich leg cut two days short, we tried to make the most of it with the classic poached sausage and schnitzel dinner. After a quickie at the local gelateria to get us warmed up for L’Italy, it was onto the Hofbräuhaus to sink a few steins, then a night cap bar for a couple’ more beer, large and a final pint to sober us up. An excellent night ended in a very rogue manner, with me running the run-out back to the accommodation to no ones’s knowledge. Apparently worrying your friends trumps prime autismé. Anyway, a quick run for the bus the next morning and we were off to Verona; an amazing seven-hour journey through the Scottish Highlands Mk.II. I have a copy, you have a copy.",
+				},
+				{
+					type: "h3",
+					content: "Verona",
+				},
+				{
+					type: "body",
+					content: "Herhona, my personal favourite of the locations. And J.PELLEGRINO’s too, I’m led to believe. Once again, a shame we only got to spend one night in this place because the accommodation and everything surrounding it was stunning. After d’loading, it was straight off to the first bareria of the evening to sink some H’Aperols and three different kind bar snack. We decided to tun the free-for-all dinner beta and end up in the place that looked best. This paid off big-time. Don’t even remember the name but, first place we ended up served possibly the finest meal I’ve ever blessed my (goddamn) palate with. Some magnificent tagliatelle followed by wild boar ragù, served alongside a house red and some homebrews. The best of the night was still to come however. Romeo five-star beereria, Verona. The greatest drinking establishment on earth. Negronis with branded ice cubes, herheyhas, and Japanese ginseng freakin’ zen garden something cocktails. A stunning arena. Big shout-out to Edoardo Bullio dood. The next morning capped her off well, with a glorious pistachio pasteria. We weren’ leaving ‘til just after midday though so there was of course time for a bellini, negroni and herheyha pre-train. And yeah, the train was a bit depressing coz they still believed in masks and it was 30°.",
+				},
+				{
+					type: "h3",
+					content: "Venice",
+				},
+				{
+					type: "body",
+					content: "To give a fair idea of the heat, I shall say that it took three legs with two breaks to make the two-mile journey from the staioné de centralé to the accommodation. The herheyhas helped, and the pizza lunch. There wasn’t much more to day one, just dinner at a very average restaurant (still better than any UK restaurant). The squid ink, wait for it..., squid was pretty okay actually. Obviously off to some bar afterwards, one which I don’t remember because they all blend into one. It was a 4am finish though, I can tell you that. A midday rise the next day saw us in desperate need of some frizzante and a coffeeria. We had a stroll and not long later came across a fine Farineria (Farini). Only the greatest pizzeria, drafteria, mojiteria and goddamn everything elseria in Venice (and Milano). We went a few [slices and pintés] down in there before the Trip Advisor special and another night of beereria, followed by that famous gelateria. Whatever it’s called. Ahh this was also the night of Brando, and friends. And James’ wannabe figure, the Celiaeria, who definitely shops at Celinerias. ‘nuff said. The final day kicked off with more frizzante and another trip to Farini, via the (non-existent) Casino Royaleria bank, for more sliceria. We bagged an excellent restaurant on the final day, definitely the finest we’d been to in Venice. It was basically a wine shop but their, whatever the name is for, Italian tapas was amazing. Anyway 5:30am rise the next day for departure from Four Different Kind Hol-e-day.",
+				},
+			],
 			"images": [
 				{
 					"url": "",

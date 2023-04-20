@@ -41,13 +41,16 @@ const InstantGramSearch = () => {
         allSport.push(sportData[2020].projects[w]);
     }
 
-    console.log(allEvents);
-    console.log(allSport);
+    const eventSport: any[] = [];
+
+    // console.log(allEvents);
+    // console.log(allSport);
 
     const initialEventHaveSport = allEvents[0].routeNames.includes(allSport[0].routeName);
+    eventSport.push(allSport[0])
 
-    const [event, setEvent] = useState(allEvents[0])
-    const [sportEvent, setSportEvent] = useState(allSport[0])
+    const [event, setEvent] = useState(allEvents[0]);
+    const [sportEvent, setSportEvent] = useState(eventSport);
     const [showSportEvent, setShowSportEvent] = useState(initialEventHaveSport);
 
     const [eventPlaceholder, setEventPlaceholder] = useState(event);
@@ -61,6 +64,8 @@ const InstantGramSearch = () => {
             "---\nSelect New Event:\n",
             e.target.value,
         );
+
+        eventSport.pop();
 
         for (var i in allEvents) {
             if (
@@ -78,12 +83,13 @@ const InstantGramSearch = () => {
                         allEvents[i].routeNames
                             .includes(allSport[j].routeName)
                     ) {
-                        setSportEvent(allSport[j]);
+                        eventSport.push(allSport[j])
+                        setSportEvent(eventSport);
                         setShowSportEvent(true);
                         console.log(
-                            event,
-                            sportEvent,
-                            showSportEvent
+                            allEvents[i],
+                            allSport[j],
+                            eventSport
                         );
                     }
                 }

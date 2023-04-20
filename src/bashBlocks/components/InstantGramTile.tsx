@@ -10,7 +10,12 @@ interface InstantGramTileProps {
         nameSuffix: string;
         startDate: string;
         endDate?: string;
-        description: string;
+        description:
+        | string
+        | {
+            type: string;
+            content: string;
+        }[];
         images: {
             url: string;
             alt: string;
@@ -19,7 +24,7 @@ interface InstantGramTileProps {
         routeNames?: string[];
         youthHostels?: string[];
     };
-    sportEvent?: {
+    sportEvent?: Array<{
         id: string;
         routeName: string;
         dist: number;
@@ -34,24 +39,77 @@ interface InstantGramTileProps {
         grahams?: string[];
         subTwos?: string[];
         donalds?: string[];
-    };
+    }>;
     showSportEvent?: boolean;
 }
 
 const InstantGramTile: FC<InstantGramTileProps> = (
     { event, sportEvent, showSportEvent }: any
 ) => {
-    var sportDist = `${sportEvent.dist.toLocaleString("en-UK")}mi`;
-    var sportElev = `${sportEvent.elev.toLocaleString("en-UK")}ft`;
-    var sportTime = `${sportEvent.time}`;
-    var sportIslands = `${sportEvent.islands.join(', ')}`;
-    var sportMunros = `${sportEvent.munros.join(', ')}`;
-    var sportMunroTops = `${sportEvent.munroTops.join(', ')}`;
-    var sportCorbetts = `${sportEvent.corbetts.join(', ')}`;
-    var sportCorbettTops = `${sportEvent.corbettTops.join(', ')}`;
-    var sportGrahams = `${sportEvent.grahams.join(', ')}`;
-    var sportSubTwos = `${sportEvent.subTwos.join(', ')}`;
-    var sportDonalds = `${sportEvent.donalds.join(', ')}`;
+    console.log(
+        "---\nEvent:",
+        event,
+        "Sport Event(s):\n",
+        sportEvent,
+        "\n(Is In Array?:",
+        Array.isArray(sportEvent),
+        ")\n",
+        showSportEvent,
+        "\n---",
+    );
+
+    const distances: any[] = [];
+    const elevs: any[] = [];
+    const times: any[] = [];
+    const islandsS: any[] = [];
+    const munrosS: any[] = [];
+    const munroTopsS: any[] = [];
+    const corbettsS: any[] = [];
+    const corbettTopsS: any[] = [];
+    const grahamsS: any[] = [];
+    const subTwosS: any[] = [];
+    const donaldsS: any[] = [];
+
+    distances.pop();
+    elevs.pop();
+    times.pop();
+    islandsS.pop();
+    munrosS.pop();
+    munroTopsS.pop();
+    corbettsS.pop();
+    corbettTopsS.pop();
+    grahamsS.pop();
+    subTwosS.pop();
+    donaldsS.pop();
+
+    // INCOMPLETE
+    for (var i in sportEvent) {
+        distances.push(`${sportEvent[i].dist.toLocaleString("en-UK")}mi`);
+        elevs.push(`${sportEvent[i].elev.toLocaleString("en-UK")}ft`);
+        times.push(`${sportEvent[i].time}`);
+        islandsS.push(`${sportEvent[i].islands.join(', ')}`);
+        munrosS.push(`${sportEvent[i].munros.join(', ')}`);
+        munroTopsS.push(`${sportEvent[i].munroTops.join(', ')}`);
+        corbettsS.push(`${sportEvent[i].corbetts.join(', ')}`);
+        corbettTopsS.push(`${sportEvent[i].corbettTops.join(', ')}`);
+        grahamsS.push(`${sportEvent[i].grahams.join(', ')}`);
+        subTwosS.push(`${sportEvent[i].subTwos.join(', ')}`);
+        donaldsS.push(`${sportEvent[i].donalds.join(', ')}`);
+    }
+
+    var sportDist = distances.join(', ');
+    var sportElev = elevs.join(', ');
+    var sportTime = times.join(', ');
+    var sportIslands = islandsS.length > 1 ? islandsS.join('; ') : `${sportEvent[0].islands.join(', ')}`;
+    var sportMunros = munrosS.length > 1 ? munrosS.join('; ') : `${sportEvent[0].munros.join(', ')}`;
+    var sportMunroTops = munroTopsS.join('; ');
+    var sportCorbetts = corbettsS.join('; ');
+    var sportCorbettTops = corbettTopsS.join('; ');
+    var sportGrahams = grahamsS.join('; ');
+    var sportSubTwos = subTwosS.join('; ');
+    var sportDonalds = donaldsS.join('; ');
+
+    var youthHostels = `${event.youthHostels.join(', ')}`;
 
     return (
         <div className='instant-gram-tile'>
@@ -85,69 +143,80 @@ const InstantGramTile: FC<InstantGramTileProps> = (
                     </div>
                     {sportIslands &&
                         <div>
-                            <Typography type='body' fontFamily='sans-serif' content='Islands: ' textAlign='center' boldFace inline />
+                            <Typography type='body' fontFamily='sans-serif' content='Island(s): ' textAlign='center' boldFace inline />
                             <Typography type='body' fontFamily='sans-serif' content={sportIslands} textAlign='center' inline />
                         </div>
                     }
                     {sportMunros &&
                         <div>
-                            <Typography type='body' fontFamily='sans-serif' content='Munros: ' textAlign='center' boldFace inline />
+                            <Typography type='body' fontFamily='sans-serif' content='Munro(s): ' textAlign='center' boldFace inline />
                             <Typography type='body' fontFamily='sans-serif' content={sportMunros} textAlign='center' inline />
                         </div>
                     }
                     {sportMunroTops &&
                         <div>
-                            <Typography type='body' fontFamily='sans-serif' content='Munro Tops: ' textAlign='center' boldFace inline />
+                            <Typography type='body' fontFamily='sans-serif' content='Munro Top(s): ' textAlign='center' boldFace inline />
                             <Typography type='body' fontFamily='sans-serif' content={sportMunroTops} textAlign='center' inline />
                         </div>
                     }
                     {sportCorbetts &&
                         <div>
-                            <Typography type='body' fontFamily='sans-serif' content='Munro Tops: ' textAlign='center' boldFace inline />
+                            <Typography type='body' fontFamily='sans-serif' content='Corbett(s): ' textAlign='center' boldFace inline />
                             <Typography type='body' fontFamily='sans-serif' content={sportCorbetts} textAlign='center' inline />
                         </div>
                     }
                     {sportCorbettTops &&
                         <div>
-                            <Typography type='body' fontFamily='sans-serif' content='Munro Tops: ' textAlign='center' boldFace inline />
+                            <Typography type='body' fontFamily='sans-serif' content='Corbett Top(s): ' textAlign='center' boldFace inline />
                             <Typography type='body' fontFamily='sans-serif' content={sportCorbettTops} textAlign='center' inline />
                         </div>
                     }
                     {sportGrahams &&
                         <div>
-                            <Typography type='body' fontFamily='sans-serif' content='Munro Tops: ' textAlign='center' boldFace inline />
+                            <Typography type='body' fontFamily='sans-serif' content='Graham(s): ' textAlign='center' boldFace inline />
                             <Typography type='body' fontFamily='sans-serif' content={sportGrahams} textAlign='center' inline />
                         </div>
                     }
                     {sportSubTwos &&
                         <div>
-                            <Typography type='body' fontFamily='sans-serif' content='Munro Tops: ' textAlign='center' boldFace inline />
+                            <Typography type='body' fontFamily='sans-serif' content='Sub 2000(s): ' textAlign='center' boldFace inline />
                             <Typography type='body' fontFamily='sans-serif' content={sportSubTwos} textAlign='center' inline />
                         </div>
                     }
                     {sportDonalds &&
                         <div>
-                            <Typography type='body' fontFamily='sans-serif' content='Munro Tops: ' textAlign='center' boldFace inline />
+                            <Typography type='body' fontFamily='sans-serif' content='Donald(s): ' textAlign='center' boldFace inline />
                             <Typography type='body' fontFamily='sans-serif' content={sportDonalds} textAlign='center' inline />
                         </div>
                     }
                 </div>
             }
             <div className='instant-gram-tile-body'>
-                {/* Incomplete */}
-                {event.youthHostels.length > 0 &&
+                {youthHostels &&
+                    <Typography
+                        type='body'
+                        content={
+                            <>
+                                <Typography type='body' content='Youth Hostel(s): ' textAlign='left' boldFace inline />
+                                <Typography type='body' content={youthHostels} textAlign='left' inline />
+                            </>
+                        }
+                        textAlign='center'
+                    />
+                }
+                {Array.isArray(event.description) ?
                     <>
-                        <Typography type='body' content='Youth Hostels: ' textAlign='left' boldFace inline />
-                        {event.youthHostels.map(({ hostel, idx }: any) => {
-                            return (
-                                <div key={idx}>
-                                    <Typography type='body' content={hostel} textAlign='left' boldFace inline />
-                                </div>
+                        {event.description.map(
+                            ({ type, content }: any) => (
+                                <Typography type={type} content={content} textAlign='justify' paragraphMargins />
                             )
-                        })}
+                        )}
+                    </>
+                    :
+                    <>
+                        <Typography type='body' content={event.description} textAlign='justify' paragraphMargins />
                     </>
                 }
-                <Typography type='body' content={event.description} textAlign='justify' />
             </div>
             <div className='instant-gram-tile-slider'>
                 <ImageSlider slides={event.images} />
