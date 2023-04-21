@@ -16,7 +16,7 @@
 .background-text-instant-gram {
     font-family: Instagram;
     font-size: 64px;
-    background: -webkit-linear-gradient(0deg, #ffffff -100%, #a2a2a2 100%);
+    background: -webkit-linear-gradient(0deg, #FFFFFF -100%, #A2A2A2 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

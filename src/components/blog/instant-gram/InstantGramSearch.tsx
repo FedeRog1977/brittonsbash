@@ -43,9 +43,6 @@ const InstantGramSearch = () => {
 
     const eventSport: any[] = [];
 
-    // console.log(allEvents);
-    // console.log(allSport);
-
     const initialEventHaveSport = allEvents[0].routeNames.includes(allSport[0].routeName);
     eventSport.push(allSport[0])
 
@@ -104,6 +101,7 @@ const InstantGramSearch = () => {
         );
 
         setSearchField(e.target.value);
+        eventSport.pop();
 
         for (var i in allEvents) {
             if (searchField === "") {
@@ -125,7 +123,8 @@ const InstantGramSearch = () => {
                         allEvents[i].routeNames
                             .includes(allSport[j].routeName)
                     ) {
-                        setSportEventPlaceholder(allSport[j]);
+                        eventSport.push(allSport[j]);
+                        setSportEventPlaceholder(eventSport);
                         setShowSportEventPlaceholder(true);
                         console.log(
                             event,

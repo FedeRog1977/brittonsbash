@@ -6,16 +6,23 @@
     padding: 50px 30px 50px 30px;
 }
 
+.instant-gram-tile-title {
+    text-align: center;
+}
+
 .instant-gram-tile-sport {
     background-color: #F5F5F5;
     text-align: center;
-    margin: 15px 70px 25px 70px;
+    margin: 15px 70px 5px 70px;
     padding: 10px;
 }
 
+.instant-gram-tile-sport-element {
+    margin: 15px 0px 0px 0px;
+}
+
 .instant-gram-tile-body {
-    margin: 15px 70px 25px 70px;
-    padding: 0px;
+    margin: 15px 70px 15px 70px;
 }
 
 .instant-gram-tile-slider {

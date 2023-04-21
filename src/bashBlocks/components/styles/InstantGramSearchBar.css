@@ -9,29 +9,38 @@
 
 input[type='text'].instant-gram-search,
 select.instant-gram-search,
-button.instant-gram-search {
+button.instant-gram-search,
+button.instant-gram-expand {
     font-family: Audi-Regular;
     font-size: 20px;
-    color: #FFFFFF;
-    background-color: #303030;
     border: none;
     border-radius: 0.125em;
-    height: 300;
-    opacity: 90%;
     padding: 5px;
 }
 
-input.instant-gram-search {
-    width: 50%;
+input[type='text'].instant-gram-search {
+    color: #282828;
+    background: -webkit-linear-gradient(0deg, #FFFFFF -50%, #A2A2A2 100%);
+    width: 68%;
     margin: 0.25em;
 }
 
 select.instant-gram-search {
-    width: 49%;
+    color: #282828;
+    background: -webkit-linear-gradient(0deg, #FFFFFF -50%, #A2A2A2 100%);
+    width: 97.5%;
     margin: 0.25em;
 }
 
 button.instant-gram-search {
-    width: 7.5%;
+    color: #FFFFFF;
+    background: -webkit-linear-gradient(0deg, #A2A2A2 -0%, #282828 100%);
+    width: 28%;
     margin: 0.25em;
+}
+
+button.instant-gram-expand {
+    color: #282828;
+    background: #FFFFFF00;
+    width: 100%;
 }

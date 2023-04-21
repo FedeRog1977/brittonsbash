@@ -2,7 +2,7 @@ export const eventData = {
 	"2023": [
 		{
 			"id": "E2023017",
-			"namePrefix": "Cairngorms X:",
+			"namePrefix": "Cairngorms X",
 			"nameSuffix": "Bromine-eaking Barium-d / On The Edge",
 			"startDate": "14th of April",
 			"endDate": "16th of April",
@@ -112,7 +112,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2023011",
-			"namePrefix": "Glencoe XII:",
+			"namePrefix": "Glencoe XII",
 			"nameSuffix": "Two Tones, Two Bones",
 			"startDate": "24th of February",
 			"endDate": "25th of February",
@@ -131,7 +131,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2023010",
-			"namePrefix": "Cairngorms IX:",
+			"namePrefix": "Cairngorms IX",
 			"nameSuffix": "Version Control",
 			"startDate": "17th of February",
 			"endDate": "18th of February",
@@ -150,7 +150,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2023009",
-			"namePrefix": "Glencoe XI:",
+			"namePrefix": "Glencoe XI",
 			"nameSuffix": "Back To Schoolish",
 			"startDate": "10th of February",
 			"endDate": "11th of February",
@@ -402,7 +402,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2022052",
-			"namePrefix": "Cairngorms VIII:",
+			"namePrefix": "Cairngorms VIII",
 			"nameSuffix": "The Vault",
 			"startDate": "28th of October",
 			"endDate": "30th of October",
@@ -423,7 +423,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2022051",
-			"namePrefix": "Glencoe X:",
+			"namePrefix": "Glencoe X",
 			"nameSuffix": "Recess",
 			"startDate": "21st of October",
 			"endDate": "22nd of October",
@@ -459,7 +459,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2022049",
-			"namePrefix": "Cairngorms VII:",
+			"namePrefix": "Cairngorms VII",
 			"nameSuffix": "Sons And Lovers",
 			"startDate": "14th of October",
 			"endDate": "16th of October",
@@ -514,7 +514,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2022046",
-			"namePrefix": "Beinn England II:",
+			"namePrefix": "Beinn England II",
 			"nameSuffix": "In Honour Of H.M. Queen Elizabeth II",
 			"startDate": "19th of September",
 			"endDate": "",
@@ -643,7 +643,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2022039",
-			"namePrefix": "Cairngorms VI:",
+			"namePrefix": "Cairngorms VI",
 			"nameSuffix": "Quest for Dissertation",
 			"startDate": "12th of August",
 			"endDate": "14th of August",
@@ -677,7 +677,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2022037",
-			"namePrefix": "Fifth Different Kind Hol-e-day – Baptism Of Fire:",
+			"namePrefix": "Fifth Different Kind Hol-e-day – Baptism Of Fire",
 			"nameSuffix": "A New Hope / Out Of Commission / ALL Don’t Rally / Ah Jeez, I Lost My Groin And It’s GitHub’s Fault",
 			"startDate": "29th of July",
 			"endDate": "3rd of August",
@@ -753,7 +753,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2022033",
-			"namePrefix": "Lui Five:",
+			"namePrefix": "Lui Five",
 			"nameSuffix": "Resurrection",
 			"startDate": "20th of June",
 			"endDate": "",
@@ -839,7 +839,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2022030",
-			"namePrefix": "Cairngorms V:",
+			"namePrefix": "Cairngorms V",
 			"nameSuffix": "L’Hotel D’ALL / Beinn One Hundred",
 			"startDate": "3rd of June",
 			"endDate": "5th of June",
@@ -1137,7 +1137,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2022018",
-			"namePrefix": "Fort William & Mallaig II:",
+			"namePrefix": "Fort William & Mallaig II",
 			"nameSuffix": "Fort William & Mallaig Reloaded (Exclusive Glenfinnan DLC)",
 			"startDate": "15th of April",
 			"endDate": "17th of April",
@@ -1175,7 +1175,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2022016",
-			"namePrefix": "Glencoe IX:",
+			"namePrefix": "Glencoe IX",
 			"nameSuffix": "Ùrar – 2022 Edition / Glencoe Wage",
 			"startDate": "1st of April",
 			"endDate": "3rd of April",
@@ -1299,7 +1299,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2022011",
-			"namePrefix": "Dùran Dùran III:",
+			"namePrefix": "Dùran Dùran III",
 			"nameSuffix": "The Bipass - Ride Across the River",
 			"startDate": "11th of March",
 			"endDate": "12th of March",
@@ -1318,7 +1318,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2022010",
-			"namePrefix": "Monday Miles:",
+			"namePrefix": "Monday Miles",
 			"nameSuffix": "The Fantastic Four",
 			"startDate": "7th of March",
 			"endDate": "",
@@ -1354,7 +1354,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2022008",
-			"namePrefix": "The Big Four-O II:",
+			"namePrefix": "The Big Four-O II",
 			"nameSuffix": "A Monumental Day in the ‘foot",
 			"startDate": "25th of February",
 			"endDate": "",
@@ -1426,7 +1426,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2022004",
-			"namePrefix": "Beinn Shariq Malik:",
+			"namePrefix": "Beinn Shariq Malik",
 			"nameSuffix": "Riders on the Storm",
 			"startDate": "5th of February",
 			"endDate": "",
@@ -1500,7 +1500,7 @@ export const eventData = {
 	"2021": [
 		{
 			"id": "E2021051",
-			"namePrefix": "Cairngorms IV:",
+			"namePrefix": "Cairngorms IV",
 			"nameSuffix": "New Year, Same Chads",
 			"startDate": "31st of December",
 			"endDate": "2nd of January (2022)",
@@ -1572,7 +1572,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2021047",
-			"namePrefix": "Glencoe VIII:",
+			"namePrefix": "Glencoe VIII",
 			"nameSuffix": "Farewell, My Love... / Papped Out.",
 			"startDate": "10th of December",
 			"endDate": "12th of December",
@@ -1594,7 +1594,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2021046",
-			"namePrefix": "Turning 30 II:",
+			"namePrefix": "Turning 30 II",
 			"nameSuffix": "300 Miles of Waterfoot",
 			"startDate": "4th of December",
 			"endDate": "",
@@ -1649,7 +1649,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2021043",
-			"namePrefix": "Cairngorms III:",
+			"namePrefix": "Cairngorms III",
 			"nameSuffix": "Four Chads, Three Bottles of Whisky",
 			"startDate": "12th of November",
 			"endDate": "14th of November",
@@ -1770,7 +1770,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2021036",
-			"namePrefix": "Glencoe VII:",
+			"namePrefix": "Glencoe VII",
 			"nameSuffix": "Give Me Mòr / Ùrar",
 			"startDate": "15th of October",
 			"endDate": "17th of October",
@@ -1843,7 +1843,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2021032",
-			"namePrefix": "Glencoe VI:",
+			"namePrefix": "Glencoe VI",
 			"nameSuffix": "The Mountain Goat",
 			"startDate": "24th of September",
 			"endDate": "25th of September",
@@ -1900,7 +1900,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2021029",
-			"namePrefix": "Cairngorms II:",
+			"namePrefix": "Cairngorms II",
 			"nameSuffix": "A Weekend on Dave",
 			"startDate": "3rd of September",
 			"endDate": "5th of September",
@@ -1974,7 +1974,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2021025",
-			"namePrefix": "Dùran Dùran II:",
+			"namePrefix": "Dùran Dùran II",
 			"nameSuffix": "I’m McLovin It",
 			"startDate": "20th of August",
 			"endDate": "21st of August",
@@ -1993,7 +1993,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2021024",
-			"namePrefix": "Dùran Dùran:",
+			"namePrefix": "Dùran Dùran",
 			"nameSuffix": "Race Against the Thunderstorm",
 			"startDate": "12th of August",
 			"endDate": "",
@@ -2012,7 +2012,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2021023",
-			"namePrefix": "Glencoe V:",
+			"namePrefix": "Glencoe V",
 			"nameSuffix": "The Rereturn - Unpause",
 			"startDate": "6th of August",
 			"endDate": "7th of August",
@@ -2031,7 +2031,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2021022",
-			"namePrefix": "The Big Four-O:",
+			"namePrefix": "The Big Four-O",
 			"nameSuffix": "Lindt Master Chocolatier",
 			"startDate": "3rd of August",
 			"endDate": "",
@@ -2050,7 +2050,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2021021",
-			"namePrefix": "Glencoe IV:",
+			"namePrefix": "Glencoe IV",
 			"nameSuffix": "Skyfall - Pause",
 			"startDate": "23rd of July",
 			"endDate": "24th of July",
@@ -2107,7 +2107,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2021018",
-			"namePrefix": "Glencoe III:",
+			"namePrefix": "Glencoe III",
 			"nameSuffix": "Get Creased & Do Creise",
 			"startDate": "25th of June",
 			"endDate": "27th of June",
@@ -2143,7 +2143,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2021016",
-			"namePrefix": "Turning 30:",
+			"namePrefix": "Turning 30",
 			"nameSuffix": "Drams at the Readee",
 			"startDate": "20th of June",
 			"endDate": "",
@@ -2181,7 +2181,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2021014",
-			"namePrefix": "Glencoe II:",
+			"namePrefix": "Glencoe II",
 			"nameSuffix": "Path To The Clachaig",
 			"startDate": "11th of June",
 			"endDate": "12th of June",
@@ -2274,7 +2274,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2021009",
-			"namePrefix": "Lui Four:",
+			"namePrefix": "Lui Four",
 			"nameSuffix": "Redemption in Blood",
 			"startDate": "27th of May",
 			"endDate": "",
@@ -2293,7 +2293,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2021008",
-			"namePrefix": "Glencoe:",
+			"namePrefix": "Glencoe",
 			"nameSuffix": "A Gentlemen’s Retreat",
 			"startDate": "20th of May",
 			"endDate": "22nd of May",
@@ -2478,7 +2478,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2020009",
-			"namePrefix": "Ben Oolium:",
+			"namePrefix": "Ben Oolium",
 			"nameSuffix": "Ultimate Supreme Depression",
 			"startDate": "14th of November",
 			"endDate": "",
@@ -2497,7 +2497,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2020008",
-			"namePrefix": "Cairngorms:",
+			"namePrefix": "Cairngorms",
 			"nameSuffix": "An Aviemore Virgin",
 			"startDate": "11th of September",
 			"endDate": "13th of September",
@@ -2537,7 +2537,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2020006",
-			"namePrefix": "Fort William & Mallaig:",
+			"namePrefix": "Fort William & Mallaig",
 			"nameSuffix": "Actually Arisaig",
 			"startDate": "14th of August",
 			"endDate": "15th of August",
@@ -2590,7 +2590,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2020003",
-			"namePrefix": "Gentlemen Who Café Present:",
+			"namePrefix": "Gentlemen Who Café Present",
 			"nameSuffix": "Glasgow Adventures",
 			"startDate": "13th of February",
 			"endDate": "",
@@ -2607,7 +2607,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2020002",
-			"namePrefix": "Gentlemen Who Café Present:",
+			"namePrefix": "Gentlemen Who Café Present",
 			"nameSuffix": "Cheshire 2020 – The Golden Triangle",
 			"startDate": "24th of January",
 			"endDate": "26th of January",

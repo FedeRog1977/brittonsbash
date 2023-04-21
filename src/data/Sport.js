@@ -52,7 +52,7 @@ export const sportData = {
 				"companionship": 1,
 				"islands": [],
 				"munros": [
-					"Stob a&rsquo; Choire Odhair",
+					"Stob a’ Choire Odhair",
 					"Stob Ghabhar",
 				],
 				"munroTops": [],
@@ -71,7 +71,7 @@ export const sportData = {
 				"companionship": 1,
 				"islands": [],
 				"munros": [
-					"Stob B&agrave;n (Grey Corries)",
+					"Stob Bàn (Grey Corries)",
 				],
 				"munroTops": [],
 				"corbetts": [],
@@ -89,7 +89,7 @@ export const sportData = {
 				"companionship": 1,
 				"islands": [],
 				"munros": [
-					"Meall a&rsquo; Bh&ugrave;iridh",
+					"Meall a’ Bhùiridh",
 					"Creise",
 				],
 				"munroTops": [],
@@ -110,7 +110,7 @@ export const sportData = {
 				"munros": [],
 				"munroTops": [],
 				"corbetts": [
-					"Meall a&rsquo; Bhuachaille",
+					"Meall a’ Bhuachaille",
 				],
 				"corbettTops": [
 					"Creagan Gorm",
@@ -128,11 +128,11 @@ export const sportData = {
 				"companionship": 1,
 				"islands": [],
 				"munros": [
-					"Sg&ograve;rr Dhearg (Beinn a&rsquo; Bheithir)",
-					"Sg&ograve;rr Dh&ograve;nuill (Beinn a&rsquo; Bheithir)",
+					"Sgòrr Dhearg (Beinn a’ Bheithir)",
+					"Sgòrr Dhònuill (Beinn a’ Bheithir)",
 				],
 				"munroTops": [
-					"Sg&ograve;rr Bhan",
+					"Sgòrr Bhan",
 				],
 				"corbetts": [],
 				"corbettTops": [],
@@ -168,7 +168,7 @@ export const sportData = {
 				"companionship": 2,
 				"islands": [],
 				"munros": [
-					"Sr&ograve;n a&rsquo; Choire Ghairbh",
+					"Sròn a’ Choire Ghairbh",
 				],
 				"munroTops": [],
 				"corbetts": [],
@@ -620,7 +620,7 @@ export const sportData = {
 				"companionship": 1,
 				"islands": [],
 				"munros": [
-					"Binnein M&ograve;r",
+					"Binnein Mòr",
 					"Na Gruagaichean",
 				],
 				"munroTops": [],
@@ -640,7 +640,7 @@ export const sportData = {
 				"islands": [],
 				"munros": [
 					"Beinn Teallach",
-					"Beinn a&rsquo; Chaorainn (Glen Spean)",
+					"Beinn a’ Chaorainn (Glen Spean)",
 				],
 				"munroTops": [],
 				"corbetts": [],
@@ -710,7 +710,7 @@ export const sportData = {
 				"companionship": 2,
 				"islands": [],
 				"munros": [
-					"C&agrave;rn Liath (Beinn a&rsquo; Ghl&ograve;)",
+					"Càrn Liath (Beinn a’ Ghlò)",
 				],
 				"munroTops": [],
 				"corbetts": [],
@@ -747,7 +747,7 @@ export const sportData = {
 				"islands": [],
 				"munros": [
 					"Ben Vorlich (Loch Earn)",
-					"St&ugrave;c a&rsquo; Chr&ograve;in",
+					"Stùc a’ Chròin",
 				],
 				"munroTops": [],
 				"corbetts": [],
@@ -838,8 +838,8 @@ export const sportData = {
 				"companionship": 1,
 				"islands": [],
 				"munros": [
-					"C&agrave;rn Liath (Creag Meagaidh)",
-					"Stob Poite Coire &Agrave;rdair",
+					"Càrn Liath (Creag Meagaidh)",
+					"Stob Poite Coire àrdair",
 					"Creag Meagaidh",
 				],
 				"munroTops": [],
@@ -858,8 +858,8 @@ export const sportData = {
 				"companionship": 1,
 				"islands": [],
 				"munros": [
-					"Geal-ch&agrave;rn (Drumochter)",
-					"A&rsquo; Mharconaich",
+					"Geal-chàrn (Drumochter)",
+					"A’ Mharconaich",
 				],
 				"munroTops": [],
 				"corbetts": [],
@@ -878,7 +878,7 @@ export const sportData = {
 				"islands": [],
 				"munros": [
 					"Ben Lui",
-					"Beinn a&rsquo; Chleibh",
+					"Beinn a’ Chleibh",
 					"Ben Oss",
 					"Beinn Dubhchraig",
 				],
@@ -900,8 +900,8 @@ export const sportData = {
 				"companionship": 2,
 				"islands": [],
 				"munros": [
-					"C&agrave;rn na Caim",
-					"A&rsquo; Bhuidheanach Bheag",
+					"Càrn na Caim",
+					"A’ Bhuidheanach Bheag",
 				],
 				"munroTops": [],
 				"corbetts": [],
@@ -919,7 +919,7 @@ export const sportData = {
 				"companionship": 3,
 				"islands": [],
 				"munros": [
-					"Sg&agrave;irneach Mh&ograve;r",
+					"Sgàirneach Mhòr",
 					"Beinn Udlamain",
 				],
 				"munroTops": [],
@@ -938,7 +938,7 @@ export const sportData = {
 				"companionship": 1,
 				"islands": [],
 				"munros": [
-					"C&agrave;rn a&rsquo; Chlamain",
+					"Càrn a’ Chlamain",
 				],
 				"munroTops": [],
 				"corbetts": [],
@@ -974,13 +974,13 @@ export const sportData = {
 				"companionship": 6,
 				"islands": [],
 				"munros": [
-					"Creag a&rsquo; Mh&agrave;im",
+					"Creag a’ Mhàim",
 					"Druim Shionnach",
 					"Aonach Air Chrith",
 					"Maol chinn-dearg",
-					"Sg&ugrave;rr an Doire Leathain",
-					"Sg&ugrave;rr an Lochain",
-					"Creag nan D&agrave;mh",
+					"Sgùrr an Doire Leathain",
+					"Sgùrr an Lochain",
+					"Creag nan Dàmh",
 				],
 				"munroTops": [],
 				"corbetts": [],
@@ -1016,8 +1016,8 @@ export const sportData = {
 				"companionship": 0,
 				"islands": [],
 				"munros": [
-					"C&agrave;rn Dearg (Corrour)",
-					"Sg&ograve;r Gaibhre",
+					"Càrn Dearg (Corrour)",
+					"Sgòr Gaibhre",
 				],
 				"munroTops": [
 					"Sgor Choinnich",
@@ -1060,9 +1060,9 @@ export const sportData = {
 					"Cairn of Claise",
 					"Tom Buidhe",
 					"Tollmount",
-					"C&agrave;rn an Tuirc",
-					"C&agrave;rn Aosda",
-					"C&agrave;rn a&rsquo; Gh&egrave;oidh",
+					"Càrn an Tuirc",
+					"Càrn Aosda",
+					"Càrn a’ Ghèoidh",
 					"The Cairnwell",
 				],
 				"munroTops": [],
@@ -1081,14 +1081,14 @@ export const sportData = {
 				"companionship": 4,
 				"islands": [],
 				"munros": [
-					"Sg&ugrave;rr nan Coireachan (Glenfinnan)",
-					"Sg&ugrave;rr Thuilm",
+					"Sgùrr nan Coireachan (Glenfinnan)",
+					"Sgùrr Thuilm",
 				],
 				"munroTops": [],
 				"corbetts": [],
 				"corbettTops": [
-					"Sg&ugrave;rr a&rsquo; Choire Riabhaich",
-					"Meall an T&agrave;rmachain",
+					"Sgùrr a’ Choire Riabhaich",
+					"Meall an Tàrmachain",
 					"Beinn Gharbh",
 				],
 				"grahams": [],
@@ -1140,7 +1140,7 @@ export const sportData = {
 				"companionship": 3,
 				"islands": [],
 				"munros": [
-					"Sg&ograve;r na h-Ulaidh",
+					"Sgòr na h-Ulaidh",
 				],
 				"munroTops": [
 					"Stob an Fhuarain",
@@ -1163,8 +1163,8 @@ export const sportData = {
 				"islands": [],
 				"munros": [
 					"Lochnagar",
-					"C&agrave;rn a&rsquo; Choire Bh&ograve;idheach",
-					"C&agrave;rn an t-Sagairt M&ograve;r",
+					"Càrn a’ Choire Bhòidheach",
+					"Càrn an t-Sagairt Mòr",
 					"Cairn Bannoch",
 					"Broad Cairn",
 				],
@@ -1222,7 +1222,7 @@ export const sportData = {
 				"companionship": 1,
 				"islands": [],
 				"munros": [
-					"Creag Mh&ograve;r (Glen Lochay)",
+					"Creag Mhòr (Glen Lochay)",
 					"Beinn Heasgarnich",
 				],
 				"munroTops": [],
@@ -2556,7 +2556,7 @@ export const sportData = {
 				"corbetts": [],
 				"corbettTops": [],
 				"grahams": [
-					"Sg&ograve;rr na C&igrave;che (Pap of Glencoe)",
+					"Sgòrr na Cìche (Pap of Glencoe)",
 				],
 				"subTwos": [],
 				"donalds": [],
@@ -2572,7 +2572,7 @@ export const sportData = {
 				"munros": [],
 				"munroTops": [],
 				"corbetts": [
-					"Beinn a&rsquo; Chr&ugrave;laiste",
+					"Beinn a’ Chrùlaiste",
 				],
 				"corbettTops": [],
 				"grahams": [],
@@ -2607,7 +2607,7 @@ export const sportData = {
 				"islands": [],
 				"munros": [
 					"Meall Buidhe (Glen Lyon)",
-					"St&ugrave;cd an Lochain",
+					"Stùcd an Lochain",
 				],
 				"munroTops": [],
 				"corbetts": [],
@@ -2625,9 +2625,9 @@ export const sportData = {
 				"companionship": 1,
 				"islands": [],
 				"munros": [
-					"C&agrave;rn Liath (Beinn a&rsquo; Ghl&ograve;)",
-					"Br&agrave;igh Coire Chruinn-bhalgain",
-					"C&agrave;rn nan Gabhar",
+					"Càrn Liath (Beinn a’ Ghlò)",
+					"Bràigh Coire Chruinn-bhalgain",
+					"Càrn nan Gabhar",
 				],
 				"munroTops": [],
 				"corbetts": [],
@@ -2645,7 +2645,7 @@ export const sportData = {
 				"companionship": 2,
 				"islands": [],
 				"munros": [
-					"Sg&ograve;r na h-Ulaidh"
+					"Sgòr na h-Ulaidh"
 				],
 				"munroTops": [
 					"Stob an Fhuarain"
@@ -2665,11 +2665,11 @@ export const sportData = {
 				"companionship": 4,
 				"islands": [],
 				"munros": [
-					"Stob Dearg (Buachaille Etive M&ograve;r)",
-					"Stob na Br&ograve;ige (Buachaille Etive M&ograve;r)",
+					"Stob Dearg (Buachaille Etive Mòr)",
+					"Stob na Bròige (Buachaille Etive Mòr)",
 				],
 				"munroTops": [
-					"Stob Coire Altruim (Buachaille Etive M&ograve;r)",
+					"Stob Coire Altruim (Buachaille Etive Mòr)",
 				],
 				"corbetts": [],
 				"corbettTops": [],
@@ -2744,7 +2744,7 @@ export const sportData = {
 				"islands": [],
 				"munros": [
 					"Beinn Narnain",
-					"Beinn &Igrave;me",
+					"Beinn ìme",
 				],
 				"munroTops": [],
 				"corbetts": [
@@ -2764,9 +2764,9 @@ export const sportData = {
 				"companionship": 2,
 				"islands": [],
 				"munros": [
-					"C&agrave;rn Dearg (Monadhliath)",
-					"A&rsquo; Chailleach (Monadhliath)",
-					"C&agrave;rn Sgulain",
+					"Càrn Dearg (Monadhliath)",
+					"A’ Chailleach (Monadhliath)",
+					"Càrn Sgulain",
 				],
 				"munroTops": [],
 				"corbetts": [],
@@ -2802,10 +2802,10 @@ export const sportData = {
 				"companionship": 1,
 				"islands": [],
 				"munros": [
-					"Beinn D&ograve;rain",
-					"Beinn an D&ograve;thaidh",
+					"Beinn Dòrain",
+					"Beinn an Dòthaidh",
 					"Beinn Achaladair",
-					"Beinn a&rsquo; Chreachain",
+					"Beinn a’ Chreachain",
 				],
 				"munroTops": [],
 				"corbetts": [],
@@ -2823,8 +2823,8 @@ export const sportData = {
 				"companionship": 0,
 				"islands": [],
 				"munros": [
-					"Beinn D&ograve;rain",
-					"Beinn an D&ograve;thaidh",
+					"Beinn Dòrain",
+					"Beinn an Dòthaidh",
 				],
 				"munroTops": [],
 				"corbetts": [],
@@ -2842,7 +2842,7 @@ export const sportData = {
 				"companionship": 1,
 				"islands": [],
 				"munros": [
-					"Stob Coir&rsquo;an Albannaich",
+					"Stob Coir’an Albannaich",
 					"Meall nan Eun",
 				],
 				"munroTops": [],
@@ -2864,7 +2864,7 @@ export const sportData = {
 				"islands": [],
 				"munros": [
 					"Beinn Eunaich",
-					"Beinn a&rsquo; Chochuill",
+					"Beinn a’ Chochuill",
 				],
 				"munroTops": [],
 				"corbetts": [],
@@ -2884,7 +2884,7 @@ export const sportData = {
 				"munros": [
 					"Ben Starav",
 					"Beinn nan Aighenan",
-					"Glas Bheinn Mh&ograve;r",
+					"Glas Bheinn Mhòr",
 				],
 				"munroTops": [],
 				"corbetts": [],
@@ -2903,7 +2903,7 @@ export const sportData = {
 				"islands": [],
 				"munros": [
 					"Beinn Narnain",
-					"Beinn &Igrave;me",
+					"Beinn ìme",
 					"Ben Vane",
 					"Ben Vorlich (Loch Lomond)",
 				],
@@ -2946,10 +2946,10 @@ export const sportData = {
 				"companionship": 1,
 				"islands": [],
 				"munros": [
-					"Meall a&rsquo; Bh&ugrave;iridh",
+					"Meall a’ Bhùiridh",
 					"Creise",
 					"Stob Ghabhar",
-					"Stob a&rsquo; Choire Odhair",
+					"Stob a’ Choire Odhair",
 				],
 				"munroTops": [],
 				"corbetts": [],
@@ -2967,7 +2967,7 @@ export const sportData = {
 				"companionship": 1,
 				"islands": [],
 				"munros": [
-					"Meall a&rsquo; Choire Leith",
+					"Meall a’ Choire Leith",
 					"Meall Corranaich",
 					"Beinn Ghlas",
 					"Meall nan Tarmachan",
@@ -2988,9 +2988,9 @@ export const sportData = {
 				"companionship": 0,
 				"islands": [],
 				"munros": [
-					"Cruach &Agrave;rdrain",
+					"Cruach àrdrain",
 					"Beinn Tulaichean",
-					"Beinn a&rsquo; Chroin",
+					"Beinn a’ Chroin",
 					"An Caisteal",
 				],
 				"munroTops": [],
@@ -3065,7 +3065,7 @@ export const sportData = {
 				"islands": [],
 				"munros": [
 					"Beinn Narnain",
-					"Beinn &Igrave;me",
+					"Beinn ìme",
 					"Ben Vane",
 				],
 				"munroTops": [],
@@ -3085,7 +3085,7 @@ export const sportData = {
 				"islands": [],
 				"munros": [
 					"Ben Lui",
-					"Beinn a&rsquo; Chleibh",
+					"Beinn a’ Chleibh",
 					"Ben Oss",
 					"Beinn Dubhchraig",
 				],
@@ -3684,10 +3684,10 @@ export const sportData = {
 				"companionship": 1,
 				"islands": [],
 				"munros": [
-					"C&agrave;rn Gorm",
-					"Meall Garbh (C&agrave;rn Mairg)",
-					"C&agrave;rn Mairg",
-					"Creag Mh&ograve;r (Meall na Aighean)"
+					"Càrn Gorm",
+					"Meall Garbh (Càrn Mairg)",
+					"Càrn Mairg",
+					"Creag Mhòr (Meall na Aighean)"
 				],
 				"munroTops": [],
 				"corbetts": [],

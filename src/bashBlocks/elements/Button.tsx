@@ -1,6 +1,7 @@
+import { ReactElement } from 'react';
 import './styles/Button.css'
 
-const Button = ({ className, func, content }: any) => {
+const Button = ({ className, func, content }: any | ReactElement) => {
     return (
         <button
             className={className}
