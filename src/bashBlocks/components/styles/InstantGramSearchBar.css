@@ -20,21 +20,21 @@ button.instant-gram-expand {
 
 input[type='text'].instant-gram-search {
     color: #282828;
-    background: -webkit-linear-gradient(0deg, #FFFFFF -50%, #A2A2A2 100%);
+    background-color: #F5F5F5;
     width: 68%;
     margin: 0.25em;
 }
 
 select.instant-gram-search {
     color: #282828;
-    background: -webkit-linear-gradient(0deg, #FFFFFF -50%, #A2A2A2 100%);
+    background-color: #F5F5F5;
     width: 97.5%;
     margin: 0.25em;
 }
 
 button.instant-gram-search {
     color: #FFFFFF;
-    background: -webkit-linear-gradient(0deg, #A2A2A2 -0%, #282828 100%);
+    background-color: #282828;
     width: 28%;
     margin: 0.25em;
 }

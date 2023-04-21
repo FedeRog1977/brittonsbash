@@ -28,11 +28,11 @@ const Header = () => {
 
     return (
         <>
-            <header className={"header"}>
-                {/* <div className={"headerLogo"}>
-                    <img src={placeholder} alt={"logo"} style={{ width: 175 }}></img>
+            <header className='header'>
+                {/* <div className='headerLogo'>
+                    <img src={placeholder} alt='logo' style={{ width: 175 }}></img>
                 </div> */}
-                <div className={"headerNavigation"}>
+                <div className='headerNavigation'>
                     <nav>
                         <ul>
                             <li><Link to={"/"}>Home</Link></li>
