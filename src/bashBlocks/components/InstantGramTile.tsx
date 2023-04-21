@@ -281,7 +281,7 @@ const InstantGramTile: FC<InstantGramTileProps> = (
                     }
                 </div>
             }
-            <div className='instant-gram-tile-slider'>
+            <div className='instant-gram-tile-body'>
                 <ImageSlider slides={event.images} />
             </div>
         </div>
