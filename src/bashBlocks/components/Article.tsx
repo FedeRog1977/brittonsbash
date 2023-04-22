@@ -3,15 +3,16 @@ import Typography from "../elements/Typography";
 
 interface ArticleProps {
     sections: Array<{
-        type: string;
-        // | 't1'
-        // | 't2'
-        // | 'h1'
-        // | 'h2'
-        // | 'h3'
-        // | 'body'
-        // | 'caption'
-        // | 'footnote';
+        type:
+        | string
+        | 't1'
+        | 't2'
+        | 'h1'
+        | 'h2'
+        | 'h3'
+        | 'body'
+        | 'caption'
+        | 'footnote';
         content: string;
     }>;
     fontFamily?:
@@ -53,7 +54,7 @@ const Article: FC<ArticleProps> = (
         >
             {sections.map(
                 ({ type, content }: any) => (
-                    <Typography type={type} content={content} fontFamily={fontFamily} textAlign={textAlign} />
+                    <Typography type={type} content={content} fontFamily={fontFamily} textAlign={textAlign} paragraphMargins />
                 )
             )}
         </div>

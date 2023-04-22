@@ -5,7 +5,7 @@ import {
     faChevronCircleRight,
     faChevronCircleLeft,
 } from "@fortawesome/free-solid-svg-icons";
-import Typography from './Typography';
+import Typography from '../elements/Typography';
 
 const ImageSlider = ({ slides }: any) => {
     const [current, setCurrent] = useState(0);

@@ -5,12 +5,11 @@ import Background from '../../elements/page/Background';
 
 function BashBlocks() {
     return (
-        <div>
+        <>
             <Background />
             <TypographyStories />
-            <hr />
             <ArticleStories />
-        </div>
+        </>
     );
 }
 

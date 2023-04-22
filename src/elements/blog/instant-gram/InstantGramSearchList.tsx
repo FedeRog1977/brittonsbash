@@ -10,8 +10,7 @@ function InstantGramSearchList({ className, func, items, year }: any) {
                         }
                         {nameSuffix}
                     </option>
-            )
-            }
+            )}
         </select >
     )
 }

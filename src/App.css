@@ -1,3 +1,21 @@
+body {
+  margin: 0;
+  background-color: #F5F5F5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Variables */
 
 :root {
@@ -13,39 +31,7 @@
   --dark-trans: 0.5s;
 }
 
-/* Fonts */
 
-@font-face {
-  font-family: Audi-Extended;
-  src: url(./fonts/audi/Extended-Bold.ttf);
-}
-
-@font-face {
-  font-family: Audi-Regular;
-  src: url(./fonts/audi/Normal.ttf);
-}
-
-@font-face {
-  font-family: Audi-Bold;
-  src: url(./fonts/audi/Bold.ttf);
-}
-
-@font-face {
-  font-family: Audi-Italic;
-  src: url(./fonts/audi/Italic.ttf);
-}
-
-
-/* Text */
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: Audi-Regular;
-  color: #303030;
-  margin: 0.5em 0 0.5em 0;
-}
 
 h1.weatherIcon {
   font-size: 50px;
@@ -67,16 +53,6 @@ h4.weatherTitleCoords {
   padding: 0;
 }
 
-p {
-  font-family: Audi-Regular;
-  font-size: 14px;
-  color: #303030;
-}
-
-b {
-  font-family: Audi-Bold;
-}
-
 label {
   font-family: Audi-Regular;
   padding: 0.25em;
@@ -86,10 +62,6 @@ code {
   font-family: 'Courier New', Courier, monospace
 }
 
-body {
-  margin: 0;
-  background-color: #F5F5F5;
-}
 
 
 
@@ -114,20 +86,6 @@ body {
 
 
 
-
-
-/* Body Elements */
-
-
-/* .body {
-  text-align: center;
-  background-color: var(--bg);
-  margin: 0 7.5% 0% 7.5%;
-  padding: 2.5% 0 2.5% 0;
-} */
-
-
-/* Unique Body Elements */
 
 .weatherTitleCont {
   color: var(--fg);
@@ -239,74 +197,12 @@ body {
 }
 
 #searchRoute {
-  /* font-size: 9px; */
   height: 100%;
   float: right;
 }
 
-/* .switch {
-  position: relative;
-  display: inline-block;
-  width: 30px;
-  height: 10px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 20px;
-  width: 20px;
-  left: 1px;
-  bottom: 1px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked+.slider {
-  background-color: #2196F3;
-}
-
-input:focus+.slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked+.slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}*/
 
 
-
-
-/* Inputs */
 
 
 button#expandWeather {

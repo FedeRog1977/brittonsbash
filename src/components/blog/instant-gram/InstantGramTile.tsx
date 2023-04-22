@@ -1,12 +1,13 @@
 import { FC, useState } from "react";
 import Button from "../../../bashBlocks/elements/Button";
-import ImageSlider from "../../../bashBlocks/elements/ImageSlider";
+import ImageSlider from "../../../bashBlocks/components/ImageSlider";
 import Typography from "../../../bashBlocks/elements/Typography";
 import "./styles/InstantGramTile.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faChevronDown,
 } from "@fortawesome/free-solid-svg-icons";
+import Article from "../../../bashBlocks/components/Article";
 
 interface InstantGramTileProps {
     event: {
@@ -267,17 +268,9 @@ const InstantGramTile: FC<InstantGramTileProps> = (
             {showDescription &&
                 <div className='instant-gram-tile-body'>
                     {Array.isArray(event.description) ?
-                        <>
-                            {event.description.map(
-                                ({ type, content }: any) => (
-                                    <Typography type={type} content={content} textAlign='justify' paragraphMargins />
-                                )
-                            )}
-                        </>
+                        <Article sections={event.description} fontFamily='sans-serif' textAlign='justify' />
                         :
-                        <>
-                            <Typography type='body' content={event.description} textAlign='justify' />
-                        </>
+                        <Typography type='body' content={event.description} textAlign='justify' />
                     }
                 </div>
             }
