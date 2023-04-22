@@ -129,9 +129,9 @@ const InstantGramSearch = () => {
 
     const executeInput = () => {
         if (searchField === "") {
-            setEventPlaceholder(event);
-            setSportEventPlaceholder(sportEvent);
-            setShowSportEventPlaceholder(showSportEvent);
+            setEvent(event);
+            setSportEvent(sportEvent);
+            setShowSportEvent(showSportEvent);
         } else {
             setEvent(eventPlaceholder);
             setSportEvent(sportEventPlaceholder);
