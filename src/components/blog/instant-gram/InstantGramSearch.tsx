@@ -83,11 +83,6 @@ const InstantGramSearch = () => {
                         eventSport.push(allSport[j])
                         setSportEvent(eventSport);
                         setShowSportEvent(true);
-                        console.log(
-                            allEvents[i],
-                            allSport[j],
-                            eventSport
-                        );
                     }
                 }
             }
@@ -122,14 +117,10 @@ const InstantGramSearch = () => {
                         allEvents[i].routeNames
                             .includes(allSport[j].routeName)
                     ) {
+                        eventSport.pop();
                         eventSport.push(allSport[j]);
                         setSportEventPlaceholder(eventSport);
                         setShowSportEventPlaceholder(true);
-                        console.log(
-                            event,
-                            sportEvent,
-                            showSportEvent
-                        );
                     }
                 }
             }
@@ -137,14 +128,19 @@ const InstantGramSearch = () => {
     };
 
     const executeInput = () => {
-        eventSport.pop();
-        setEvent(eventPlaceholder);
-        setSportEvent(sportEventPlaceholder);
-        setShowSportEvent(showSportEventPlaceholder);
+        if (searchField === "") {
+            setEventPlaceholder(event);
+            setSportEventPlaceholder(sportEvent);
+            setShowSportEventPlaceholder(showSportEvent);
+        } else {
+            setEvent(eventPlaceholder);
+            setSportEvent(sportEventPlaceholder);
+            setShowSportEvent(showSportEventPlaceholder);
+        }
     };
 
     return (
-        <div>
+        <>
             <InstantGramSearchBar
                 funcSelect={handleSelect}
                 funcInput={handleInput}
@@ -155,7 +151,7 @@ const InstantGramSearch = () => {
                 sportEvent={sportEvent}
                 showSportEvent={showSportEvent}
             />
-        </div>
+        </>
     );
 };
 
