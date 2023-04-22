@@ -1,4 +1,4 @@
-import './styles/background.css';
+import './styles/Background.css';
 
 const Background = ({ content, className }: any) => {
     return (

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import InstantGramSearchBar from "../../../bashBlocks/components/InstantGramSearchBar";
-import InstantGramTile from "../../../bashBlocks/components/InstantGramTile";
+import InstantGramSearchBar from "./InstantGramSearchBar";
+import InstantGramTile from "./InstantGramTile";
 import { eventData } from "../../../data/Events";
 import { sportData } from "../../../data/Sport";
 
@@ -101,7 +101,6 @@ const InstantGramSearch = () => {
         );
 
         setSearchField(e.target.value);
-        eventSport.pop();
 
         for (var i in allEvents) {
             if (searchField === "") {
@@ -138,6 +137,7 @@ const InstantGramSearch = () => {
     };
 
     const executeInput = () => {
+        eventSport.pop();
         setEvent(eventPlaceholder);
         setSportEvent(sportEventPlaceholder);
         setShowSportEvent(showSportEventPlaceholder);

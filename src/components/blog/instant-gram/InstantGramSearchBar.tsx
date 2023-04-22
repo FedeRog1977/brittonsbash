@@ -1,7 +1,7 @@
-import Button from "../elements/Button";
-import Search from "../elements/Search";
-import InstantGramSearchList from '../elements/InstantGramSearchList'
-import { eventData } from "../../data/Events";
+import Button from "../../../bashBlocks/elements/Button";
+import Search from "../../../bashBlocks/elements/Search";
+import InstantGramSearchList from '../../../elements/blog/instant-gram/InstantGramSearchList'
+import { eventData } from "../../../data/Events";
 import './styles/InstantGramSearchBar.css'
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

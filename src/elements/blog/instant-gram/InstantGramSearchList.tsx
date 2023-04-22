@@ -1,4 +1,4 @@
-function WeatherSearchList({ className, func, items, year }: any) {
+function InstantGramSearchList({ className, func, items, year }: any) {
     return (
         <select className={className} onChange={func}>
             <option value='' disabled selected>{year}</option>
@@ -6,13 +6,14 @@ function WeatherSearchList({ className, func, items, year }: any) {
                 ({ id, namePrefix, nameSuffix }: any) =>
                     <option key={id} value={nameSuffix}>
                         {namePrefix &&
-                            <>{namePrefix}{' '}</>
+                            <>{namePrefix}{': '}</>
                         }
                         {nameSuffix}
                     </option>
-            )}
-        </select>
+            )
+            }
+        </select >
     )
 }
 
-export default WeatherSearchList;
+export default InstantGramSearchList;

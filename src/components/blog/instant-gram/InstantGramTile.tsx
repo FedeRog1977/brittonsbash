@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
-import Button from "../elements/Button";
-import ImageSlider from "../elements/ImageSlider";
-import Typography from "../elements/Typography";
+import Button from "../../../bashBlocks/elements/Button";
+import ImageSlider from "../../../bashBlocks/elements/ImageSlider";
+import Typography from "../../../bashBlocks/elements/Typography";
 import "./styles/InstantGramTile.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
