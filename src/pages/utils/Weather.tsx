@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../App.css';
 import WeatherSearch from '../../components/utils/weather/WeatherSearch';
-import Background from '../../elements/page/Background';
+import Background from '../../elements/Background';
 
 function Weather() {
     return (

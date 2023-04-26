@@ -1,4 +1,4 @@
-import { hillData } from "../../../data/Hills";
+import { hillData } from "../../../data/general/Hills";
 
 function WeatherSearchList({ className, func }: any) {
     return (

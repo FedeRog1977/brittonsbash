@@ -1,10 +1,10 @@
 @font-face {
     font-family: Instagram;
-    src: url(../../../fonts/Grandista.ttf);
+    src: url(../../fonts/Grandista.ttf);
 }
 
 .background {
-    background-image: url("../../../media/images/background.jpeg");
+    background-image: url("../../media/images/background.jpeg");
     background-attachment: fixed;
     background-position: top;
     background-repeat: no-repeat;

@@ -1,16 +1,16 @@
 import './styles/HeaderFooter.css';
-import xmr from '../../media/images/monero/xmr.svg';
-import monero from '../../media/images/monero/monero.png';
-import Typography from './Typography';
+import xmr from '../media/images/monero/xmr.svg';
+import monero from '../media/images/monero/monero.png';
+import Typography from '../bashBlocks/elements/Typography';
 
 const Footer = () => {
     return (
-        <footer className={"footer"}>
+        <footer className='footer'>
             <Typography type='h3' content='A Lewis Britton Production' color='#A2A2A2' textAlign='center' paragraphMargins />
             <Typography
                 type='body'
                 content={
-                    <img src={xmr} style={{ height: "15px" }} />
+                    <img src={xmr} alt='xmr' style={{ height: "15px" }} />
                 }
                 color='#A2A2A2'
                 textAlign='center'
@@ -22,7 +22,7 @@ const Footer = () => {
             <Typography
                 type='body'
                 content={
-                    <code style={{ fontSize: "12px" }}>
+                    <code style={{ fontSize: '12px' }}>
                         4ALBFTLBcv68zhmy8vvdTdjLZ2bisn5RPcM8KF6hDWGhj7<br />f37dfqwzGCqq1Vug13vmBkxoQARfNnrbNEcqsj<br />ZMTJSSkB46V
                     </code>
                 }
@@ -33,7 +33,7 @@ const Footer = () => {
             <Typography
                 type='body'
                 content={
-                    <img src={monero} style={{ height: "100px" }} />
+                    <img src={monero} alt='monero' style={{ height: '100px' }} />
                 }
                 color='#A2A2A2'
                 textAlign='center'

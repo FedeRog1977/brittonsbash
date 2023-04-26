@@ -1,5 +1,5 @@
 import { Marker, Popup } from "react-leaflet";
-import { hillData } from "../../../data/Hills";
+import { hillData } from "../../../data/general/Hills";
 
 export default function HillMarker({ type }: any) {
     var markers = {};

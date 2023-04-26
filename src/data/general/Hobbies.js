@@ -35,7 +35,8 @@ export const hobbiesData = {
         "film": [
             "...",
             "1980s",
-            "...",],
+            "...",
+        ],
         "television": [
             "...",
             "1980s",
@@ -72,11 +73,33 @@ export const hobbiesData = {
             "1980s",
             "...",
         ],
-        "fragrances": [
-            "Calvin Klein CK One",
-            "Kapitel 12",
-            "..."
-        ],
+        "fragrances": {
+            "preservatives": [
+                "Terre d’Hermes Hermès",
+                "Eau d’Hermes Hermès",
+                "Eau de Narcisse Bleu Hermès",
+                "Boss Bottled",
+                "Czech & Speake No. 88",
+                "Serpentine Comme des Garçons",
+                "Fleur de Portofino Tom Ford",
+                "Moncler pour Homme Moncler",
+            ],
+            "dailys": [
+                "CK One",
+                "CK2",
+                "CK Be",
+                "CK All",
+                "Kapitel 4",
+                "Kapitel 12",
+            ],
+            "rinsers": [
+                "Calvin Klein Eternity Aqua",
+                "Oxygene Lanvin",
+                "Boss Orange Man",
+                "Mont Blanc Explorer",
+                "Forbidden Rose Avril Lavigne",
+            ],
+        },
     },
     "other": {
         "vintageGoods": [

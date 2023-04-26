@@ -2,7 +2,7 @@ import './styles/Background.css';
 
 const Background = ({ content, className }: any) => {
     return (
-        <div className={"background"}>
+        <div className='background'>
             <span
                 className={className}
             >

@@ -1,4 +1,4 @@
-import { hillData } from "../../../data/Hills";
+import { hillData } from "../../../data/general/Hills";
 
 function LandmassList({ id, func }: any) {
     const routes = hillData.landmasses.map(

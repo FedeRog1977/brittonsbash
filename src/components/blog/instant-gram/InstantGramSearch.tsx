@@ -1,8 +1,8 @@
 import { useState } from "react";
-import InstantGramSearchBar from "./InstantGramSearchBar";
-import InstantGramTile from "./InstantGramTile";
-import { eventData } from "../../../data/Events";
-import { sportData } from "../../../data/Sport";
+import InstantGramSearchBar from "./InstantGramSearchTile";
+import InstantGramResultTile from "./InstantGramResultTile";
+import { eventData } from "../../../data/general/Events";
+import { sportData } from "../../../data/general/Sport";
 
 const InstantGramSearch = () => {
     const allEvents: any[] = [];
@@ -146,7 +146,7 @@ const InstantGramSearch = () => {
                 funcInput={handleInput}
                 funcButton={executeInput}
             />
-            <InstantGramTile
+            <InstantGramResultTile
                 event={event}
                 sportEvent={sportEvent}
                 showSportEvent={showSportEvent}

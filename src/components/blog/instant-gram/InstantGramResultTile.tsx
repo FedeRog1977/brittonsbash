@@ -50,7 +50,7 @@ interface InstantGramTileProps {
     showSportEvent?: boolean;
 }
 
-const InstantGramTile: FC<InstantGramTileProps> = (
+const InstantGramResultTile: FC<InstantGramTileProps> = (
     { event, sportEvent, showSportEvent }: any
 ) => {
     const distances: any[] = [];
@@ -286,4 +286,4 @@ const InstantGramTile: FC<InstantGramTileProps> = (
     )
 }
 
-export default InstantGramTile;
+export default InstantGramResultTile;

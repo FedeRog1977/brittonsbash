@@ -2,22 +2,22 @@
 
 @font-face {
     font-family: Audi-Extended;
-    src: url(../../../fonts/audi/Extended-Bold.ttf);
+    src: url(../../fonts/audi/Extended-Bold.ttf);
 }
 
 @font-face {
     font-family: Audi-Regular;
-    src: url(../../../fonts/audi/Normal.ttf);
+    src: url(../../fonts/audi/Normal.ttf);
 }
 
 @font-face {
     font-family: Audi-Bold;
-    src: url(../../../fonts/audi/Bold.ttf);
+    src: url(../../fonts/audi/Bold.ttf);
 }
 
 @font-face {
     font-family: Audi-Italic;
-    src: url(../../../fonts/audi/Italic.ttf);
+    src: url(../../fonts/audi/Italic.ttf);
 }
 
 /* Variables */
@@ -43,30 +43,30 @@
     margin: 16px 0 0 0;
 }
 
-.headerNavigation {
+.header-navigation {
     font-family: Audi-Regular;
     color: #A2A2A2;
     float: right;
     margin: 11px 0 0 0;
 }
 
-.headerNavigation li,
-.subHeaderNavigation li,
+.header-navigation li,
+.sub-header-navigation li,
 .subHeaderConquestNavigation li {
     display: inline-block;
     margin: 0 7.5px 0 7.5px;
 }
 
-.headerNavigation a,
-.subHeaderNavigation a,
+.header-navigation a,
+.sub-header-navigation a,
 .subHeaderConquestNavigation a {
     text-decoration: none;
     color: #A2A2A2;
     transition: color 0.5s;
 }
 
-.headerNavigation a:hover,
-.subHeaderNavigation a:hover,
+.header-navigation a:hover,
+.sub-header-navigation a:hover,
 .subHeaderConquestNavigation a:hover {
     color: var(--font-hover);
     font-weight: bold;
@@ -74,7 +74,7 @@
     cursor: pointer;
 }
 
-.subHeader,
+.sub-header,
 .subHeaderConquest {
     background-color: #303030;
     height: 55px;
@@ -82,7 +82,7 @@
     padding: 0 7.5% 0 7.5%;
 }
 
-.subHeaderNavigation,
+.sub-header-navigation,
 .subHeaderConquestNavigation {
     font-family: Audi-Regular;
     color: #A2A2A2;

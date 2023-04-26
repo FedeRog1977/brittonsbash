@@ -1,5 +1,5 @@
 import '../../App.css';
-import Background from '../../elements/page/Background';
+import Background from '../../elements/Background';
 
 function BrittonsFoodRC() {
     return (

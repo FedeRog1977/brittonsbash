@@ -11,7 +11,7 @@ import CurrentLocation from './CurrentLocation';
 import HillMarker from './HillMarker';
 import LandmassList from './LandmassList';
 import RouteList from './RouteList';
-import { hillData } from '../../../data/Hills';
+import { hillData } from '../../../data/general/Hills';
 import RouteMarker from './RouteMarker';
 
 const OSCall = () => {
