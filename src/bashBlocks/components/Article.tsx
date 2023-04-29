@@ -3,7 +3,16 @@ import Typography from "../elements/Typography";
 
 interface ArticleProps {
     sections: Array<{
-        type: string;
+        type: string
+        | 't1'
+        | 't2'
+        | 'h1'
+        | 'h2'
+        | 'h3'
+        | 'h4'
+        | 'body'
+        | 'caption'
+        | 'footnote';
         content: string;
         color?: string;
         inline?: boolean;

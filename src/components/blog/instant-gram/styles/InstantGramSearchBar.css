@@ -13,27 +13,23 @@ button.instant-gram-expand-dense {
 }
 
 input[type='text'].instant-gram-search {
-    color: #282828;
     background-color: #F5F5F5;
     width: 78.5%;
     margin: 0.25em;
 }
 
 button.instant-gram-search {
-    color: #FFFFFF;
     background-color: #282828;
     width: 18.5%;
     margin: 0.25em;
 }
 
 button.instant-gram-expand {
-    color: #282828;
     background: #FFFFFF00;
     width: 100%;
 }
 
 button.instant-gram-expand-dense {
-    color: #282828;
     background: #FFFFFF00;
     width: 25%;
 }

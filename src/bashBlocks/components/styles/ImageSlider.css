@@ -12,31 +12,36 @@
     box-shadow: 0px 0px 10px #A8A8A8;
 }
 
+.left-arrow,
 .right-arrow {
-    position: absolute;
-    top: 40%;
-    right: 0px;
-    font-size: 48px;
+    font-size: 32px;
     color: #282828;
+    position: absolute;
+    top: 91%;
     z-index: 10;
     cursor: pointer;
     user-select: none;
+    transition: color 0.5s;
 }
 
 .left-arrow {
-    position: absolute;
-    top: 40%;
     left: 0px;
-    font-size: 48px;
-    color: #282828;
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
+}
+
+.right-arrow {
+    right: 0px;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+    color: #A8A8A8;
+    transition: color 0.5s;
 }
 
 .left-arrow:active,
 .right-arrow:active {
-    transform: scale(0.95);
+    transform: scale(0.85);
+    transition: transform 0.25s;
 }
 
 .slide {

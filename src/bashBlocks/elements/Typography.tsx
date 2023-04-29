@@ -3,6 +3,7 @@ import './styles/Typography.css';
 
 interface TypographyProps {
     type:
+    | string
     | 't1'
     | 't2'
     | 'h1'

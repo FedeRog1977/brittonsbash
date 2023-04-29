@@ -1,2 +1,2 @@
-export const homeContent = {
-};
+export const homeContent = [
+];

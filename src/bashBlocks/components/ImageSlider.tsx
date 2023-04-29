@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import './styles/ImageSlider.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faChevronCircleRight,
-    faChevronCircleLeft,
+    // faChevronCircleRight,
+    // faChevronCircleLeft,
+    faChevronLeft,
+    faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import Typography from '../elements/Typography';
 
@@ -25,8 +27,8 @@ const ImageSlider = ({ slides }: any) => {
 
     return (
         <div className='image-slider'>
-            <FontAwesomeIcon icon={faChevronCircleLeft} className='left-arrow' onClick={prevSlide} />
-            <FontAwesomeIcon icon={faChevronCircleRight} className='right-arrow' onClick={nextSlide} />
+            <FontAwesomeIcon icon={faChevronLeft} className='left-arrow' onClick={prevSlide} />
+            <FontAwesomeIcon icon={faChevronRight} className='right-arrow' onClick={nextSlide} />
             {slides.map((slide, index) => {
                 return (
                     <div
@@ -38,7 +40,9 @@ const ImageSlider = ({ slides }: any) => {
                                 <a href={slide.url}>
                                     <img src={slide.url} alt={slide.alt} className='slider-image' />
                                 </a>
-                                <Typography type='h3' fontFamily='sans-serif' content={slide.description} textAlign='center' paragraphMargins />
+                                {slide.description &&
+                                    <Typography type='h3' fontFamily='sans-serif' content={slide.description} textAlign='center' paragraphMargins />
+                                }
                             </>
                         )}
                     </div>

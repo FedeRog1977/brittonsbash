@@ -187,61 +187,61 @@ const InstantGramResultTile: FC<InstantGramTileProps> = (
                     {showSportEvent &&
                         <div className='instant-gram-tile-sport'>
                             <div>
-                                <Typography type='body' fontFamily='sans-serif' content='Distance: ' textAlign='center' boldFace inline />{' '}
-                                <Typography type='body' fontFamily='sans-serif' content={sportDist} textAlign='center' inline />
-                                <Typography type='body' fontFamily='sans-serif' content={<>&nbsp;&#124;&nbsp;</>} textAlign='center' inline />
-                                <Typography type='body' fontFamily='sans-serif' content='Elevation: ' textAlign='center' boldFace inline />{' '}
-                                <Typography type='body' fontFamily='sans-serif' content={sportElev} textAlign='center' inline />
-                                <Typography type='body' fontFamily='sans-serif' content={<>&nbsp;&#124;&nbsp;</>} textAlign='center' inline />
-                                <Typography type='body' fontFamily='sans-serif' content='Time: ' textAlign='center' boldFace inline />{' '}
-                                <Typography type='body' fontFamily='sans-serif' content={sportTime} textAlign='center' inline />
+                                <Typography type='body' content='Distance: ' textAlign='center' boldFace inline />{' '}
+                                <Typography type='body' content={sportDist} textAlign='center' inline />
+                                <Typography type='body' content={<>&nbsp;&#124;&nbsp;</>} textAlign='center' inline />
+                                <Typography type='body' content='Elevation: ' textAlign='center' boldFace inline />{' '}
+                                <Typography type='body' content={sportElev} textAlign='center' inline />
+                                <Typography type='body' content={<>&nbsp;&#124;&nbsp;</>} textAlign='center' inline />
+                                <Typography type='body' content='Time: ' textAlign='center' boldFace inline />{' '}
+                                <Typography type='body' content={sportTime} textAlign='center' inline />
                             </div>
                             {sportIslands &&
                                 <div className='instant-gram-tile-sport-element'>
-                                    <Typography type='body' fontFamily='sans-serif' content='Island(s): ' textAlign='center' boldFace inline />
-                                    <Typography type='body' fontFamily='sans-serif' content={sportIslands} textAlign='center' inline />
+                                    <Typography type='body' content='Island(s): ' textAlign='center' boldFace inline />
+                                    <Typography type='body' content={sportIslands} textAlign='center' inline />
                                 </div>
                             }
                             {sportMunros &&
                                 <div className='instant-gram-tile-sport-element'>
-                                    <Typography type='body' fontFamily='sans-serif' content='Munro(s): ' textAlign='center' boldFace inline />
-                                    <Typography type='body' fontFamily='sans-serif' content={sportMunros} textAlign='center' inline />
+                                    <Typography type='body' content='Munro(s): ' textAlign='center' boldFace inline />
+                                    <Typography type='body' content={sportMunros} textAlign='center' inline />
                                 </div>
                             }
                             {sportMunroTops &&
                                 <div className='instant-gram-tile-sport-element'>
-                                    <Typography type='body' fontFamily='sans-serif' content='Munro Top(s): ' textAlign='center' boldFace inline />
-                                    <Typography type='body' fontFamily='sans-serif' content={sportMunroTops} textAlign='center' inline />
+                                    <Typography type='body' content='Munro Top(s): ' textAlign='center' boldFace inline />
+                                    <Typography type='body' content={sportMunroTops} textAlign='center' inline />
                                 </div>
                             }
                             {sportCorbetts &&
                                 <div className='instant-gram-tile-sport-element'>
-                                    <Typography type='body' fontFamily='sans-serif' content='Corbett(s): ' textAlign='center' boldFace inline />
-                                    <Typography type='body' fontFamily='sans-serif' content={sportCorbetts} textAlign='center' inline />
+                                    <Typography type='body' content='Corbett(s): ' textAlign='center' boldFace inline />
+                                    <Typography type='body' content={sportCorbetts} textAlign='center' inline />
                                 </div>
                             }
                             {sportCorbettTops &&
                                 <div className='instant-gram-tile-sport-element'>
-                                    <Typography type='body' fontFamily='sans-serif' content='Corbett Top(s): ' textAlign='center' boldFace inline />
-                                    <Typography type='body' fontFamily='sans-serif' content={sportCorbettTops} textAlign='center' inline />
+                                    <Typography type='body' content='Corbett Top(s): ' textAlign='center' boldFace inline />
+                                    <Typography type='body' content={sportCorbettTops} textAlign='center' inline />
                                 </div>
                             }
                             {sportGrahams &&
                                 <div className='instant-gram-tile-sport-element'>
-                                    <Typography type='body' fontFamily='sans-serif' content='Graham(s): ' textAlign='center' boldFace inline />
-                                    <Typography type='body' fontFamily='sans-serif' content={sportGrahams} textAlign='center' inline />
+                                    <Typography type='body' content='Graham(s): ' textAlign='center' boldFace inline />
+                                    <Typography type='body' content={sportGrahams} textAlign='center' inline />
                                 </div>
                             }
                             {sportSubTwos &&
                                 <div className='instant-gram-tile-sport-element'>
-                                    <Typography type='body' fontFamily='sans-serif' content='Sub 2000(s): ' textAlign='center' boldFace inline />
-                                    <Typography type='body' fontFamily='sans-serif' content={sportSubTwos} textAlign='center' inline />
+                                    <Typography type='body' content='Sub 2000(s): ' textAlign='center' boldFace inline />
+                                    <Typography type='body' content={sportSubTwos} textAlign='center' inline />
                                 </div>
                             }
                             {sportDonalds &&
                                 <div className='instant-gram-tile-sport-element'>
-                                    <Typography type='body' fontFamily='sans-serif' content='Donald(s): ' textAlign='center' boldFace inline />
-                                    <Typography type='body' fontFamily='sans-serif' content={sportDonalds} textAlign='center' inline />
+                                    <Typography type='body' content='Donald(s): ' textAlign='center' boldFace inline />
+                                    <Typography type='body' content={sportDonalds} textAlign='center' inline />
                                 </div>
                             }
                         </div>
@@ -277,7 +277,7 @@ const InstantGramResultTile: FC<InstantGramTileProps> = (
                     {showDescription &&
                         <div className='instant-gram-tile-body'>
                             {Array.isArray(event.description) ?
-                                <Article sections={event.description} fontFamily='sans-serif' textAlign='justify' />
+                                <Article sections={event.description} textAlign='justify' />
                                 :
                                 <Typography type='body' content={event.description} textAlign='justify' />
                             }

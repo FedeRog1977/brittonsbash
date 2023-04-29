@@ -11,7 +11,7 @@ import {
 import Tile from "../../../bashBlocks/components/Tile";
 import Typography from "../../../bashBlocks/elements/Typography";
 
-const InstantGramSearchBar = ({ funcSelect, funcInput, funcButton }: any) => {
+const InstantGramSearchTile = ({ funcSelect, funcInput, funcButton }: any) => {
     const [showDropDown, setShowDropDown] = useState(false);
 
     const handleClick = () => {
@@ -67,4 +67,4 @@ const InstantGramSearchBar = ({ funcSelect, funcInput, funcButton }: any) => {
     )
 };
 
-export default InstantGramSearchBar;
+export default InstantGramSearchTile;

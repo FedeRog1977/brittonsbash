@@ -81,13 +81,13 @@
 
 .body-serif {
     font-family: CMU-Serif;
-    font-size: 18px;
+    font-size: 16px;
     color: #282828;
     padding: 0px;
 }
 
 .caption-serif {
-    font-family: CMU-Serif;
+    font-family: CMU-Bold;
     font-size: 16px;
     color: #282828;
     padding: 0px;
@@ -146,13 +146,13 @@
 
 .body-sans-serif {
     font-family: Audi-Regular;
-    font-size: 18px;
+    font-size: 16px;
     color: #282828;
     padding: 0px;
 }
 
 .caption-sans-serif {
-    font-family: Audi-Regular;
+    font-family: Audi-Bold;
     font-size: 16px;
     color: #282828;
     padding: 0px;

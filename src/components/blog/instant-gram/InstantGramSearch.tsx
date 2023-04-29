@@ -1,5 +1,5 @@
 import { useState } from "react";
-import InstantGramSearchBar from "./InstantGramSearchTile";
+import InstantGramSearchTile from "./InstantGramSearchTile";
 import InstantGramResultTile from "./InstantGramResultTile";
 import { eventData } from "../../../data/general/Events";
 import { sportData } from "../../../data/general/Sport";
@@ -141,7 +141,7 @@ const InstantGramSearch = () => {
 
     return (
         <>
-            <InstantGramSearchBar
+            <InstantGramSearchTile
                 funcSelect={handleSelect}
                 funcInput={handleInput}
                 funcButton={executeInput}
