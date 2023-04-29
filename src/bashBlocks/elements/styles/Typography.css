@@ -81,21 +81,21 @@
 
 .body-serif {
     font-family: CMU-Serif;
-    font-size: 16px;
+    font-size: 18px;
     color: #282828;
     padding: 0px;
 }
 
 .caption-serif {
     font-family: CMU-Serif;
-    font-size: 14px;
+    font-size: 16px;
     color: #282828;
     padding: 0px;
 }
 
 .footnote-serif {
     font-family: CMU-Serif;
-    font-size: 10px;
+    font-size: 14px;
     color: #282828;
     padding: 0px;
 }
@@ -146,21 +146,21 @@
 
 .body-sans-serif {
     font-family: Audi-Regular;
-    font-size: 16px;
+    font-size: 18px;
     color: #282828;
     padding: 0px;
 }
 
 .caption-sans-serif {
     font-family: Audi-Regular;
-    font-size: 14px;
+    font-size: 16px;
     color: #282828;
     padding: 0px;
 }
 
 .footnote-sans-serif {
     font-family: Audi-Regular;
-    font-size: 10px;
+    font-size: 14px;
     color: #282828;
     padding: 0px;
 }
@@ -183,6 +183,20 @@
 
 .italic-sans-serif {
     font-family: Audi-Italic;
+}
+
+/* Links */
+
+a {
+    color: #282828;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+a:hover {
+    color: #87CEEB;
+    transition: color 0.5s;
+    cursor: pointer;
 }
 
 /* Scaling */

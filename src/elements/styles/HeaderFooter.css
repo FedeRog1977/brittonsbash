@@ -23,7 +23,6 @@
 /* Variables */
 
 :root {
-    --font-hover: #87CEEB;
     --header-footer: linear-gradient(90deg, #303030 0%, #808080 200%);
     --header-footer-inv: linear-gradient(90deg, #ffffff -200%, #a2a2a2 100%);
 }
@@ -68,7 +67,7 @@
 .header-navigation a:hover,
 .sub-header-navigation a:hover,
 .subHeaderConquestNavigation a:hover {
-    color: var(--font-hover);
+    color: #87CEEB;
     font-weight: bold;
     transition: color 0.5s font-weight 0.5s;
     cursor: pointer;

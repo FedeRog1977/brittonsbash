@@ -19,8 +19,6 @@ interface TypographyProps {
     | 'serif'
     | 'sans-serif';
     color?: string;
-    // | ''
-    // | ''
     textAlign?:
     | 'left'
     | 'center'
@@ -34,9 +32,7 @@ interface TypographyProps {
     | 'overline'
     | 'underline'
     | 'line-through';
-    // link: {
-    //     ...
-    // }
+    link?: string;
     paragraphMargins?: boolean;
     mT?: string;
     mB?: string;
@@ -55,6 +51,7 @@ const Typography: FC<TypographyProps> = (
         smallCaps,
         textDecoration,
         paragraphMargins,
+        link,
         mT,
         mB,
     }: any
@@ -86,12 +83,22 @@ const Typography: FC<TypographyProps> = (
                         {italicize ?
                             <i className={fontFamily === 'serif' ? 'italic-serif' : 'italic-sans-serif'}>
                                 <b className={fontFamily === 'serif' ? 'bold-serif' : 'bold-sans-serif'}>
-                                    {content}
+                                    <>
+                                        {link ?
+                                            <a href={link}>{content}</a>
+                                            :
+                                            <>{content}</>
+                                        }
+                                    </>
                                 </b>
                             </i>
                             :
                             <b className={fontFamily === 'serif' ? 'bold-serif' : 'bold-sans-serif'}>
-                                {content}
+                                {link ?
+                                    <a href={link}>{content}</a>
+                                    :
+                                    <>{content}</>
+                                }
                             </b>
                         }
                     </>
@@ -99,10 +106,20 @@ const Typography: FC<TypographyProps> = (
                     <>
                         {italicize ?
                             <i className={fontFamily === 'serif' ? 'italic-serif' : 'italic-sans-serif'}>
-                                {content}
+                                {link ?
+                                    <a href={link}>{content}</a>
+                                    :
+                                    <>{content}</>
+                                }
                             </i>
                             :
-                            <>{content}</>
+                            <>
+                                {link ?
+                                    <a href={link}>{content}</a>
+                                    :
+                                    <>{content}</>
+                                }
+                            </>
                         }
                     </>
                 }

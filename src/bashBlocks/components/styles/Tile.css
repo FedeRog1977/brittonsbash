@@ -19,8 +19,12 @@
 }
 
 @media (max-width: 768px) {
-    .tile {
+
+    .tile-clear,
+    .tile-clear-condensed,
+    .tile-solid {
         margin: 20px;
         padding: 20px;
     }
+
 }

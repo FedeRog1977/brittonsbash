@@ -23,10 +23,18 @@ function TypographyStories() {
                         <Typography type='h2' fontFamily='serif' content='Typography h2' textAlign='left' />
                         <Typography type='h3' fontFamily='serif' content='Typography h3' textAlign='left' />
                         <Typography type='h4' fontFamily='serif' content='Typography h4' textAlign='left' />
-                        <Typography type='body' fontFamily='serif' content='Typography body' textAlign='justify' inline />{' '}
-                        <Typography type='body' fontFamily='serif' content='Typography body bold-faced ' textAlign='justify' boldFace inline />{' '}
-                        <Typography type='body' fontFamily='serif' content='Typography body italicized' textAlign='justify' italicize inline />{' '}
-                        <Typography type='body' fontFamily='serif' content='Typography body bold-faced and italicized (bold-oblique)' textAlign='justify' boldFace italicize inline />
+                        <div>
+                            <Typography type='body' fontFamily='serif' content='Typography body' textAlign='justify' inline />{' '}
+                            <Typography type='body' fontFamily='serif' content='Typography body bold-faced ' textAlign='justify' boldFace inline />{' '}
+                            <Typography type='body' fontFamily='serif' content='Typography body italicized' textAlign='justify' italicize inline />{' '}
+                            <Typography type='body' fontFamily='serif' content='Typography body bold-faced and italicized (bold-oblique)' textAlign='justify' boldFace italicize inline />
+                        </div>
+                        <div>
+                            <Typography type='body' fontFamily='serif' content='Typography body link' textAlign='justify' inline link='http://lewisbritton.com' />{' '}
+                            <Typography type='body' fontFamily='serif' content='Typography body bold-faced link' textAlign='justify' boldFace inline link='http://lewisbritton.com' />{' '}
+                            <Typography type='body' fontFamily='serif' content='Typography body italicized link' textAlign='justify' italicize inline link='http://lewisbritton.com' />{' '}
+                            <Typography type='body' fontFamily='serif' content='Typography body bold-faced and italicized link' textAlign='justify' boldFace italicize inline link='http://lewisbritton.com' />
+                        </div>
                         <Typography type='caption' fontFamily='serif' content='Typography caption' textAlign='left' />
                         <Typography type='footnote' fontFamily='serif' content='Typography footnote' textAlign='left' />
                     </>
@@ -48,10 +56,18 @@ function TypographyStories() {
                         <Typography type='h2' fontFamily='sans-serif' content='Typography h2' textAlign='left' />
                         <Typography type='h3' fontFamily='sans-serif' content='Typography h3' textAlign='left' />
                         <Typography type='h4' fontFamily='sans-serif' content='Typography h4' textAlign='left' />
-                        <Typography type='body' fontFamily='sans-serif' content='Typography body' textAlign='justify' inline />{' '}
-                        <Typography type='body' fontFamily='sans-serif' content='Typography body bold-faced ' textAlign='justify' boldFace inline />{' '}
-                        <Typography type='body' fontFamily='sans-serif' content='Typography body italicized' textAlign='justify' italicize inline />{' '}
-                        <Typography type='body' fontFamily='sans-serif' content='Typography body bold-faced and italicized' textAlign='justify' boldFace italicize inline />
+                        <div>
+                            <Typography type='body' fontFamily='sans-serif' content='Typography body' textAlign='justify' inline />{' '}
+                            <Typography type='body' fontFamily='sans-serif' content='Typography body bold-faced' textAlign='justify' boldFace inline />{' '}
+                            <Typography type='body' fontFamily='sans-serif' content='Typography body italicized' textAlign='justify' italicize inline />{' '}
+                            <Typography type='body' fontFamily='sans-serif' content='Typography body bold-faced and italicized' textAlign='justify' boldFace italicize inline />
+                        </div>
+                        <div>
+                            <Typography type='body' fontFamily='sans-serif' content='Typography body link' textAlign='justify' inline link='http://lewisbritton.com' />{' '}
+                            <Typography type='body' fontFamily='sans-serif' content='Typography body bold-faced link' textAlign='justify' boldFace inline link='http://lewisbritton.com' />{' '}
+                            <Typography type='body' fontFamily='sans-serif' content='Typography body italicized link' textAlign='justify' italicize inline link='http://lewisbritton.com' />{' '}
+                            <Typography type='body' fontFamily='sans-serif' content='Typography body bold-faced and italicized link' textAlign='justify' boldFace italicize inline link='http://lewisbritton.com' />
+                        </div>
                         <Typography type='caption' fontFamily='sans-serif' content='Typography caption' textAlign='left' />
                         <Typography type='footnote' fontFamily='sans-serif' content='Typography footnote' textAlign='left' />
                     </>
@@ -100,6 +116,18 @@ function TypographyStories() {
                         <Typography type='body' fontFamily='serif' content='kebab-case (Lower)' textAlign='left' />
                         <Typography type='body' fontFamily='serif' content='l33t (Leet)' textAlign='left' />
                     </>
+                }
+            />
+            <Tile
+                type='clear-condensed'
+                content={
+                    <Typography type='h1' fontFamily='sans-serif' content='Page Footnote' textAlign='center' paragraphMargins />
+                }
+            />
+            <Tile
+                type='clear-condensed'
+                content={
+                    <Typography type='footnote' content='*Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' />
                 }
             />
         </>
