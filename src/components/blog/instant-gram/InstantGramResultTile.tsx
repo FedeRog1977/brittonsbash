@@ -13,8 +13,8 @@ import Tile from "../../../bashBlocks/components/Tile";
 interface InstantGramTileProps {
     event: {
         id: string;
-        namePrefix?: string;
-        nameSuffix: string;
+        prefix?: string;
+        names: string[];
         startDate: string;
         endDate?: string;
         description:
@@ -28,12 +28,11 @@ interface InstantGramTileProps {
             alt: string;
             description: string;
         }[];
-        routeNames?: string[];
         youthHostels?: string[];
     };
     sportEvent?: Array<{
         id: string;
-        routeName: string;
+        name: string;
         dist: number;
         elev: number;
         time: string;
@@ -168,13 +167,13 @@ const InstantGramResultTile: FC<InstantGramTileProps> = (
             content={
                 <>
                     <div className='instant-gram-tile-title'>
-                        {event.namePrefix &&
+                        {event.prefix &&
                             <>
-                                <Typography type='h1' content={event.namePrefix} textAlign='left' inline />
+                                <Typography type='h1' content={event.prefix} textAlign='left' inline />
                                 <Typography type='h1' content=': ' textAlign='left' inline />
                             </>
                         }
-                        <Typography type='h1' content={event.nameSuffix} textAlign='left' inline />
+                        <Typography type='h1' content={event.names.join(' / ')} textAlign='left' inline />
                     </div>
                     <div className='instant-gram-tile-title'>
                         <Typography type='h3' content={event.startDate} textAlign='left' inline />

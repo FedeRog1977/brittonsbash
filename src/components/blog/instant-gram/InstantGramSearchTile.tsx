@@ -11,13 +11,13 @@ import {
 import Tile from "../../../bashBlocks/components/Tile";
 
 const InstantGramSearchBar = ({ funcSelect, funcInput, funcButton }: any) => {
-    const [showDropDowns, setShowDropDowns] = useState(false);
+    const [showDropDown, setShowDropDown] = useState(false);
 
     const handleClick = () => {
-        if (showDropDowns === false) {
-            setShowDropDowns(true);
+        if (showDropDown === false) {
+            setShowDropDown(true);
         } else {
-            setShowDropDowns(false);
+            setShowDropDown(false);
         }
     }
 
@@ -31,7 +31,7 @@ const InstantGramSearchBar = ({ funcSelect, funcInput, funcButton }: any) => {
                         <Button className='instant-gram-search' func={funcButton} content='Search' />
                         <Button className='instant-gram-expand' func={handleClick} content={<FontAwesomeIcon icon={faChevronDown} />} />
                     </div>
-                    {showDropDowns &&
+                    {showDropDown &&
                         <div>
                             <InstantGramSearchList className='instant-gram-search' func={funcSelect} items={eventData[2023]} year='2023' />
                             <InstantGramSearchList className='instant-gram-search' func={funcSelect} items={eventData[2022]} year='2022' />

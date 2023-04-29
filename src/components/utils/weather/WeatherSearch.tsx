@@ -4,7 +4,7 @@ import WeatherDaily from "./WeatherDaily";
 import WeatherSearchBar from "./WeatherSearchBar";
 import WeatherTitle from "./WeatherTitle";
 import WeatherSubTitle from "../../../elements/utils/weather/WeatherSubTitle";
-import toSentenceCase from "../../../scripts/toSentenceCase";
+import toSentenceCase from "../../../scripts/general/toSentenceCase";
 import React from "react";
 
 const WeatherSearch = () => {

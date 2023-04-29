@@ -43,7 +43,7 @@ const InstantGramSearch = () => {
 
     const eventSport: any[] = [];
 
-    const initialEventHaveSport = allEvents[0].routeNames.includes(allSport[0].routeName);
+    const initialEventHaveSport = allEvents[0].names.includes(allSport[0].name);
     eventSport.push(allSport[0])
 
     const [event, setEvent] = useState(allEvents[0]);
@@ -66,19 +66,19 @@ const InstantGramSearch = () => {
 
         for (var i in allEvents) {
             if (
-                allEvents[i].nameSuffix.toLowerCase()
-                    .includes((e.target.value).toLowerCase())
+                allEvents[i].names.join(' / ')
+                    .includes((e.target.value))
             ) {
                 console.log(
                     "Match Selected Event To JSON:\n",
-                    `${allEvents[i].nameSuffix}\n---`
+                    `${allEvents[i].names.join(' / ')}\n---`
                 );
                 setEvent(allEvents[i]);
                 setShowSportEvent(false);
                 for (var j in allSport) {
                     if (
-                        allEvents[i].routeNames
-                            .includes(allSport[j].routeName)
+                        allEvents[i].names
+                            .includes(allSport[j].name)
                     ) {
                         eventSport.push(allSport[j])
                         setSportEvent(eventSport);
@@ -103,19 +103,19 @@ const InstantGramSearch = () => {
                 setSportEventPlaceholder(sportEvent);
                 setShowSportEventPlaceholder(showSportEvent);
             } else if (
-                allEvents[i].nameSuffix.toLowerCase()
+                allEvents[i].names.join(' / ').toLowerCase()
                     .includes(searchField.toLowerCase())
             ) {
                 console.log(
                     "Match Inputted Event To JSON:\n",
-                    `${allEvents[i].nameSuffix}\n---`
+                    `${allEvents[i].names.join(' / ')}\n---`
                 );
                 setEventPlaceholder(allEvents[i]);
                 setShowSportEventPlaceholder(false);
                 for (var j in allSport) {
                     if (
-                        allEvents[i].routeNames
-                            .includes(allSport[j].routeName)
+                        allEvents[i].names
+                            .includes(allSport[j].name)
                     ) {
                         eventSport.pop();
                         eventSport.push(allSport[j]);

@@ -3,12 +3,12 @@ function InstantGramSearchList({ className, func, items, year }: any) {
         <select className={className} onChange={func}>
             <option value='' disabled selected>{year}</option>
             {items.map(
-                ({ id, namePrefix, nameSuffix }: any) =>
-                    <option key={id} value={nameSuffix}>
-                        {namePrefix &&
-                            <>{namePrefix}{': '}</>
+                ({ id, prefix, names }: any) =>
+                    <option key={id} value={names.join(' / ')}>
+                        {prefix &&
+                            <>{prefix}{': '}</>
                         }
-                        {nameSuffix}
+                        {names.join(' / ')}
                     </option>
             )}
         </select >
