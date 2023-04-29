@@ -264,7 +264,14 @@ const InstantGramResultTile: FC<InstantGramTileProps> = (
                         <Button
                             className='instant-gram-expand'
                             func={handleClick}
-                            content={<FontAwesomeIcon icon={faChevronDown} />}
+                            content={
+                                <Typography
+                                    type='h4'
+                                    content={
+                                        <FontAwesomeIcon icon={faChevronDown} />
+                                    }
+                                />
+                            }
                         />
                     </div>
                     {showDescription &&

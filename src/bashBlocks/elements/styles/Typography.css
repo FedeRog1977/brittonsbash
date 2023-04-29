@@ -72,6 +72,13 @@
     padding: 0px;
 }
 
+.h4-serif {
+    font-family: CMU-Serif;
+    font-size: 20px;
+    color: #282828;
+    padding: 0px;
+}
+
 .body-serif {
     font-family: CMU-Serif;
     font-size: 16px;
@@ -126,6 +133,13 @@
 .h3-sans-serif {
     font-family: Audi-Bold;
     font-size: 28px;
+    color: #282828;
+    padding: 0px;
+}
+
+.h4-sans-serif {
+    font-family: Audi-Regular;
+    font-size: 20px;
     color: #282828;
     padding: 0px;
 }

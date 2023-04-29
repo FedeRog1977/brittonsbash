@@ -8,6 +8,7 @@ interface TypographyProps {
     | 'h1'
     | 'h2'
     | 'h3'
+    | 'h4'
     | 'body'
     | 'caption'
     | 'footnote';
@@ -20,7 +21,7 @@ interface TypographyProps {
     color?: string;
     // | ''
     // | ''
-    textAlign:
+    textAlign?:
     | 'left'
     | 'center'
     | 'justify'

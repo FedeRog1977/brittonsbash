@@ -1,9 +1,12 @@
-input[type='text'].instant-gram-search,
-select.instant-gram-search,
-button.instant-gram-search,
-button.instant-gram-expand {
-    font-family: Audi-Regular;
+input[type='text'].instant-gram-search {
     font-size: 20px;
+}
+
+input[type='text'].instant-gram-search,
+button.instant-gram-search,
+button.instant-gram-expand,
+button.instant-gram-expand-dense {
+    font-family: Audi-Regular;
     border: none;
     border-radius: 0.125em;
     padding: 5px;
@@ -13,13 +16,6 @@ input[type='text'].instant-gram-search {
     color: #282828;
     background-color: #F5F5F5;
     width: 78.5%;
-    margin: 0.25em;
-}
-
-select.instant-gram-search {
-    color: #282828;
-    background-color: #F5F5F5;
-    width: 98.5%;
     margin: 0.25em;
 }
 
@@ -34,4 +30,10 @@ button.instant-gram-expand {
     color: #282828;
     background: #FFFFFF00;
     width: 100%;
+}
+
+button.instant-gram-expand-dense {
+    color: #282828;
+    background: #FFFFFF00;
+    width: 25%;
 }

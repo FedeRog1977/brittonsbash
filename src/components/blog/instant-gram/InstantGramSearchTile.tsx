@@ -9,6 +9,7 @@ import {
     faChevronDown,
 } from "@fortawesome/free-solid-svg-icons";
 import Tile from "../../../bashBlocks/components/Tile";
+import Typography from "../../../bashBlocks/elements/Typography";
 
 const InstantGramSearchBar = ({ funcSelect, funcInput, funcButton }: any) => {
     const [showDropDown, setShowDropDown] = useState(false);
@@ -28,15 +29,36 @@ const InstantGramSearchBar = ({ funcSelect, funcInput, funcButton }: any) => {
                 <>
                     <div>
                         <Search className='instant-gram-search' func={funcInput} content='Search All Events' />
-                        <Button className='instant-gram-search' func={funcButton} content='Search' />
-                        <Button className='instant-gram-expand' func={handleClick} content={<FontAwesomeIcon icon={faChevronDown} />} />
+                        <Button
+                            className='instant-gram-search'
+                            func={funcButton}
+                            content={
+                                <Typography
+                                    type='h4'
+                                    content='Search'
+                                    color='#FFFFFF'
+                                />
+                            }
+                        />
+                        <Button
+                            className='instant-gram-expand'
+                            func={handleClick}
+                            content={
+                                <Typography
+                                    type='h4'
+                                    content={
+                                        <FontAwesomeIcon icon={faChevronDown} />
+                                    }
+                                />
+                            }
+                        />
                     </div>
                     {showDropDown &&
-                        <div>
-                            <InstantGramSearchList className='instant-gram-search' func={funcSelect} items={eventData[2023]} year='2023' />
-                            <InstantGramSearchList className='instant-gram-search' func={funcSelect} items={eventData[2022]} year='2022' />
-                            <InstantGramSearchList className='instant-gram-search' func={funcSelect} items={eventData[2021]} year='2021' />
-                            <InstantGramSearchList className='instant-gram-search' func={funcSelect} items={eventData[2020]} year='2020' />
+                        <div style={{ textAlign: 'center' }}>
+                            <InstantGramSearchList func={funcSelect} items={eventData[2023]} year='2023' />
+                            <InstantGramSearchList func={funcSelect} items={eventData[2022]} year='2022' />
+                            <InstantGramSearchList func={funcSelect} items={eventData[2021]} year='2021' />
+                            <InstantGramSearchList func={funcSelect} items={eventData[2020]} year='2020' />
                         </div>
                     }
                 </>

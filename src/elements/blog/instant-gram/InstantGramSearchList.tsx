@@ -1,17 +1,65 @@
-function InstantGramSearchList({ className, func, items, year }: any) {
+import { useState } from "react";
+import Button from "../../../bashBlocks/elements/Button";
+import Typography from "../../../bashBlocks/elements/Typography";
+
+function InstantGramSearchList({ func, items, year }: any) {
+    const [showDropDown, setShowDropDown] = useState(false);
+
+    const handleClick = () => {
+        if (showDropDown === false) {
+            setShowDropDown(true);
+        } else {
+            setShowDropDown(false);
+        }
+    }
+
     return (
-        <select className={className} onChange={func}>
-            <option value='' disabled selected>{year}</option>
-            {items.map(
-                ({ id, prefix, names }: any) =>
-                    <option key={id} value={names.join(' / ')}>
-                        {prefix &&
-                            <>{prefix}{': '}</>
+        <>
+            <Button
+                className='instant-gram-expand-dense'
+                func={handleClick}
+                content={
+                    <>
+                        {showDropDown === false &&
+                            <Typography
+                                type='h3'
+                                content={year}
+                                paragraphMargins
+                            />
                         }
-                        {names.join(' / ')}
-                    </option>
+                        {showDropDown === true &&
+                            <Typography
+                                type='h3'
+                                content={year}
+                                color='#87CEEB'
+                                paragraphMargins
+                            />
+                        }
+                    </>
+                }
+            />
+            {showDropDown && items.map(
+                ({ id, prefix, names }: any) => (
+                    <Button
+                        className='instant-gram-expand'
+                        func={func}
+                        content={
+                            <Typography
+                                type='h4'
+                                content={
+                                    <option key={id} value={names.join(' / ')}>
+                                        {prefix &&
+                                            <>{prefix}{': '}</>
+                                        }
+                                        {names.join(' / ')}
+                                    </option>
+                                }
+                            />
+                        }
+                    />
+                )
             )}
-        </select >
+        </>
     )
 }
 

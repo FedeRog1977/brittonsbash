@@ -22,6 +22,7 @@ function TypographyStories() {
                         <Typography type='h1' fontFamily='serif' content='Typography h1' textAlign='left' />
                         <Typography type='h2' fontFamily='serif' content='Typography h2' textAlign='left' />
                         <Typography type='h3' fontFamily='serif' content='Typography h3' textAlign='left' />
+                        <Typography type='h4' fontFamily='serif' content='Typography h4' textAlign='left' />
                         <Typography type='body' fontFamily='serif' content='Typography body' textAlign='justify' inline />{' '}
                         <Typography type='body' fontFamily='serif' content='Typography body bold-faced ' textAlign='justify' boldFace inline />{' '}
                         <Typography type='body' fontFamily='serif' content='Typography body italicized' textAlign='justify' italicize inline />{' '}
@@ -46,6 +47,7 @@ function TypographyStories() {
                         <Typography type='h1' fontFamily='sans-serif' content='Typography h1' textAlign='left' />
                         <Typography type='h2' fontFamily='sans-serif' content='Typography h2' textAlign='left' />
                         <Typography type='h3' fontFamily='sans-serif' content='Typography h3' textAlign='left' />
+                        <Typography type='h4' fontFamily='sans-serif' content='Typography h4' textAlign='left' />
                         <Typography type='body' fontFamily='sans-serif' content='Typography body' textAlign='justify' inline />{' '}
                         <Typography type='body' fontFamily='sans-serif' content='Typography body bold-faced ' textAlign='justify' boldFace inline />{' '}
                         <Typography type='body' fontFamily='sans-serif' content='Typography body italicized' textAlign='justify' italicize inline />{' '}
