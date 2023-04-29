@@ -2540,7 +2540,7 @@ export const sportData = {
 		"projects": [
 			{
 				"id": "P2021035",
-				"name": "toLiveAndBreatheBenMore",
+				"name": "To Live and Breathe Ben More",
 				"dist": 11.06,
 				"elev": 4380,
 				"time": "4:20:06",
@@ -2559,7 +2559,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021034",
-				"name": "pappedOut",
+				"name": "Papped Out.",
 				"dist": 4.72,
 				"elev": 2526,
 				"time": "2:19:16",
@@ -2577,7 +2577,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021033",
-				"name": "farewellMyLove",
+				"name": "Farewell, My Love...",
 				"dist": 7.3,
 				"elev": 2323,
 				"time": "3:14:13",
@@ -2595,7 +2595,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021032",
-				"name": "meikleBin",
+				"name": "David Meikle Bin",
 				"dist": 6.68,
 				"elev": 1444,
 				"time": "2:04:20",
@@ -2613,7 +2613,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021031",
-				"name": "backOnTheHorse",
+				"name": "Back on the Horse",
 				"dist": 11.25,
 				"elev": 5003,
 				"time": "4:46:21",
@@ -2632,7 +2632,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021030",
-				"name": "beinnAGhlo",
+				"name": "Beinn a’ Ghlò",
 				"dist": 14.09,
 				"elev": 4544,
 				"time": "5:24:51",
@@ -2652,7 +2652,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021029",
-				"name": "beinnUrar",
+				"name": "Ùrar",
 				"dist": 9.02,
 				"elev": 3655,
 				"time": "4:08:34",
@@ -2672,7 +2672,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021028",
-				"name": "giveMeMor",
+				"name": "Give Me Mòr",
 				"dist": 8.23,
 				"elev": 3859,
 				"time": "3:29:13",
@@ -2693,7 +2693,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021027",
-				"name": "sumcCobble",
+				"name": "SUMC Cobble",
 				"dist": 8.25,
 				"elev": 2949,
 				"time": "3:06:07",
@@ -2711,7 +2711,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021026",
-				"name": "theMountainGoat",
+				"name": "The Mountain Goat",
 				"dist": 7.8,
 				"elev": 4436,
 				"time": "4:23:48",
@@ -2732,7 +2732,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021025",
-				"name": "1v1ingMark",
+				"name": "1v1’ing Mark",
 				"dist": 6.27,
 				"elev": 2940,
 				"time": "2:22:41",
@@ -2750,7 +2750,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021024",
-				"name": "lastDayOfSummer",
+				"name": "Last Day of Summer?",
 				"dist": 15.38,
 				"elev": 5384,
 				"time": "5:56:02",
@@ -2771,7 +2771,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021023",
-				"name": "aWeekendOnDave",
+				"name": "A Weekend on Dave",
 				"dist": 17.15,
 				"elev": 4016,
 				"time": "6:08:39",
@@ -2791,7 +2791,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021022",
-				"name": "beinnAnLochain",
+				"name": "Beinn an Lochain",
 				"dist": 3.6,
 				"elev": 2277,
 				"time": "1:55:02",
@@ -2809,7 +2809,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021021",
-				"name": "imMclovinIt",
+				"name": "I’m McLovin It",
 				"dist": 21.74,
 				"elev": 6555,
 				"time": "9:00:46",
@@ -2830,7 +2830,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021020",
-				"name": "raceAgainstTheThunderstorm",
+				"name": "Race Against the Thunderstorm",
 				"dist": 9.02,
 				"elev": 3811,
 				"time": "3:34:01",
@@ -2849,7 +2849,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021019",
-				"name": "theRereturnUnpause",
+				"name": "The Rereturn – Unpause",
 				"dist": 14.25,
 				"elev": 4534,
 				"time": "5:50:16",
@@ -2870,7 +2870,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021018",
-				"name": "theBigFourO",
+				"name": "Lindt Master Chocolatier",
 				"dist": 11.57,
 				"elev": 4134,
 				"time": "4:14:56",
@@ -2889,7 +2889,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021017",
-				"name": "skyfallPause",
+				"name": "Skyfall – Pause",
 				"dist": 16.54,
 				"elev": 6105,
 				"time": "7:58:08",
@@ -2909,7 +2909,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021016",
-				"name": "thePlayground",
+				"name": "The Playground",
 				"dist": 23.94,
 				"elev": 9162,
 				"time": "10:10:19",
@@ -2932,7 +2932,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021015",
-				"name": "cruachanRidgeWalk",
+				"name": "Cruachan Ridge Walk",
 				"dist": 15.22,
 				"elev": 4196,
 				"time": "5:23:21",
@@ -2953,7 +2953,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021014",
-				"name": "getCreasedDoCreise",
+				"name": "Get Creased & Do Creise",
 				"dist": 18.17,
 				"elev": 6106,
 				"time": "7:48:22",
@@ -2974,7 +2974,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021013",
-				"name": "turningThirty",
+				"name": "Turning 30",
 				"dist": 14.5,
 				"elev": 5894,
 				"time": "5:56:46",
@@ -2995,7 +2995,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021012",
-				"name": "larichFive",
+				"name": "‘Larich Five... Minus One Coz Done It",
 				"dist": 16.1,
 				"elev": 5613,
 				"time": "6:02:49",
@@ -3016,7 +3016,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021011",
-				"name": "benVorlich",
+				"name": "Path To The Clachaig",
 				"dist": 8.67,
 				"elev": 3096,
 				"time": "3:24:31",
@@ -3034,7 +3034,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021010",
-				"name": "beinnWhore",
+				"name": "Beinn Whore",
 				"dist": 9.78,
 				"elev": 2917,
 				"time": "3:52:45",
@@ -3052,7 +3052,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021009",
-				"name": "sgiathChuilMeallGlas",
+				"name": "Sgiath Chuil & Meall Glas",
 				"dist": 11.84,
 				"elev": 3918,
 				"time": "5:12:45",
@@ -3071,7 +3071,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021008",
-				"name": "arrocharFour",
+				"name": "Arrochar Four... Minus One Coz Train",
 				"dist": 19.23,
 				"elev": 5698,
 				"time": "7:37:39",
@@ -3091,7 +3091,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021007",
-				"name": "luiFour",
+				"name": "Redemption in Blood",
 				"dist": 18.89,
 				"elev": 6492,
 				"time": "7:08:59",
@@ -3112,7 +3112,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021006",
-				"name": "etiveBeag",
+				"name": "Bukkake Etive Beag",
 				"dist": 5.73,
 				"elev": 2550,
 				"time": "2:20:46",
@@ -3131,7 +3131,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021005",
-				"name": "bideanBail",
+				"name": "Bidean nam Bail",
 				"dist": 8.57,
 				"elev": 3979,
 				"time": "4:26:47",
@@ -3167,7 +3167,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021003",
-				"name": "beinnDonich",
+				"name": "Ben Donich",
 				"dist": 5.01,
 				"elev": 1810,
 				"time": "2:01:44",
@@ -3185,7 +3185,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021002",
-				"name": "benMoreStobBinnein",
+				"name": "Ben More & Stob Binnein",
 				"dist": 8.95,
 				"elev": 4202,
 				"time": "3:56:12",
@@ -3204,7 +3204,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021001",
-				"name": "theBrackCnochCoinnich",
+				"name": "The Brack & Cnoc Coinnich",
 				"dist": 10.86,
 				"elev": 3458,
 				"time": "4:17:31",
@@ -3637,7 +3637,7 @@ export const sportData = {
 		"projects": [
 			{
 				"id": "P2020005",
-				"name": "cairnsmore",
+				"name": "Cairnsmore of Carsphairn",
 				"dist": 9.02,
 				"elev": 2021,
 				"time": "3:19:00",
@@ -3655,7 +3655,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2020004",
-				"name": "chullum",
+				"name": "Ultimate Supreme Depression",
 				"dist": 8.79,
 				"elev": 2799,
 				"time": "4:25:16",
@@ -3673,7 +3673,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2020003",
-				"name": "anAviemoreVirgin",
+				"name": "An Aviemore Virgin",
 				"dist": 10.63,
 				"elev": 2569,
 				"time": "3:38:23",
@@ -3691,7 +3691,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2020002",
-				"name": "bagOneGetThreeFree",
+				"name": "Bag One Get Three Free",
 				"dist": 14.30,
 				"elev": 4305,
 				"time": "5:53:20",
@@ -3712,7 +3712,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2020001",
-				"name": "benLomond",
+				"name": "Ben Lomond",
 				"dist": 8.09,
 				"elev": 3136,
 				"time": "3:08:43",
