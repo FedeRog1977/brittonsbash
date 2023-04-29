@@ -18,12 +18,12 @@ interface TypographyProps {
     fontFamily?:
     | 'serif'
     | 'sans-serif';
-    color?: string;
     textAlign?:
     | 'left'
     | 'center'
     | 'justify'
     | 'right';
+    color?: string;
     inline?: boolean;
     boldFace?: boolean;
     italicize?: boolean;
@@ -43,8 +43,8 @@ const Typography: FC<TypographyProps> = (
         type,
         content,
         fontFamily,
-        color,
         textAlign,
+        color,
         inline,
         boldFace,
         italicize,

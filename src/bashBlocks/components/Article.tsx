@@ -10,19 +10,30 @@ interface ArticleProps {
         | 'h1'
         | 'h2'
         | 'h3'
+        | 'h4'
         | 'body'
         | 'caption'
         | 'footnote';
         content: string;
+        textAlign?:
+        | 'left'
+        | 'center'
+        | 'justify'
+        | 'right';
+        color?: string;
+        inline?: boolean;
+        boldFace?: boolean;
+        italicize?: boolean;
+        smallCaps?: boolean;
+        textDecoration?:
+        | 'overline'
+        | 'underline'
+        | 'line-through';
+        link?: string;
     }>;
     fontFamily?:
     | 'serif'
     | 'sans-serif';
-    textAlign:
-    | 'left'
-    | 'center'
-    | 'justify'
-    | 'right';
     mT?: string;
     mB?: string;
 }
@@ -31,7 +42,6 @@ const Article: FC<ArticleProps> = (
     {
         sections,
         fontFamily,
-        textAlign,
         mT,
         mB,
     }: any
@@ -41,9 +51,6 @@ const Article: FC<ArticleProps> = (
 
     return (
         <div
-            // className={
-            //     (fontFamily === 'serif' ? `${type}-serif` : `${type}-sans-serif`)
-            // }
             style={{
                 marginTop: mT,
                 marginBottom: mB,
@@ -53,8 +60,32 @@ const Article: FC<ArticleProps> = (
             }}
         >
             {sections.map(
-                ({ type, content }: any) => (
-                    <Typography type={type} content={content} fontFamily={fontFamily} textAlign={textAlign} paragraphMargins />
+                ({
+                    type,
+                    content,
+                    color,
+                    textAlign,
+                    inline,
+                    boldFace,
+                    italicize,
+                    smallCaps,
+                    textDecoration,
+                    link
+                }: any) => (
+                    <Typography
+                        type={type}
+                        content={content}
+                        fontFamily={fontFamily}
+                        color={color}
+                        textAlign={textAlign}
+                        inline={inline}
+                        boldFace={boldFace}
+                        italicize={italicize}
+                        smallCaps={smallCaps}
+                        textDecoration={textDecoration}
+                        link={link}
+                        paragraphMargins
+                    />
                 )
             )}
         </div>
