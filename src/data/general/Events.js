@@ -2388,13 +2388,12 @@ export const eventData = {
 			"id": "E2021008",
 			"prefix": "Glencoe",
 			"names": [
-				"A Gentlemen’s Retreat – ",
 				"Bidean nam Bail",
 				"Bukkake Etive Beag",
 			],
 			"startDate": "20th of May",
 			"endDate": "22nd of May",
-			"description": "My real introduction to the beauty of my country. This was an excellent weekend with the gentlemen, starting with loading the Saab full of creates and barbeque food for the Thursday camp in the yard of the.. yuck.. Kingshouse Hotel. A freezing cold pitch with the tepid embrace of a Lost Layger drew us promptly to the bar at the Kingshouse, only to be let down by their lack of hospitality. Putting them in the middle finger club. Anyway, great day on Bidean next, even though I babied out of the summit. Followed by the classic Co-op dinner on the Glencoe Independent rage stove. Of course, also a lorne fry-up the next morning to fuly open her up. Saturday was excellent too. A successful Buachaille Etive Bagged. Clachaig for the second night, bit of Choi Dai for fingers ofc.",
+			"description": "My real introduction to the beauty of my country, on the first gentlemen’s retreat of 2021. This was an excellent weekend with the gentlemen, starting with loading the Saab full of creates and barbeque food for the Thursday camp in the yard of the.. yuck.. Kingshouse Hotel. A freezing cold pitch with the tepid embrace of a Lost Layger drew us promptly to the bar at the Kingshouse, only to be let down by their lack of hospitality. Putting them in the middle finger club. Anyway, great day on Bidean next, even though I babied out of the summit. Followed by the classic Co-op dinner on the Glencoe Independent rage stove. Of course, also a lorne fry-up the next morning to fuly open her up. Saturday was excellent too. A successful Buachaille Etive Bagged. Clachaig for the second night, bit of Choi Dai for fingers ofc.",
 			"images": [
 				{
 					"url": "",
