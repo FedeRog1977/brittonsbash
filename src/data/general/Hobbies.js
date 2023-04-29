@@ -65,9 +65,23 @@ export const hobbiesData = {
             "Office Interiors",
             "Herman Miller",
             "Orangebox",
-            "Stationery",
             "..."
         ],
+        "stationery": {
+            "writingInstruments": [
+                "rOtring Rapid Pro 0.5mm",
+                "rOtring Rapid Pro 2.0mm",
+                "Pentel 120 A3 0.5mm",
+                "Pentel P200 0.7mm",
+                "Pentel P200 0.9mm",
+                "Pentel Superb Ballpoint 0.7mm BK77",
+                "Lamy Logo Custom Vitra Black",
+                "Staedler Lumocolor 60 F",
+            ],
+            "pencilCases": [],
+            "writingPads": [],
+            "...": [],
+        },
         "fashion": [
             "...",
             "1980s",
@@ -131,6 +145,7 @@ export const hobbiesData = {
             "Mark Knopfler Buys 1983 Les Paul from Rudy Pensa for Brothers In Arms",
             "John Suhr Designs Pensa Suhr Custom Caramel for Mark Knopfler",
             "Lenovo Founded",
+            "Avril Lavigne Born",
         ],
         "2000s": [
             "Need for Speed: Underground 2",
