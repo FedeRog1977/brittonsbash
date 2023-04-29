@@ -3,23 +3,8 @@ import Typography from "../elements/Typography";
 
 interface ArticleProps {
     sections: Array<{
-        type:
-        | string
-        | 't1'
-        | 't2'
-        | 'h1'
-        | 'h2'
-        | 'h3'
-        | 'h4'
-        | 'body'
-        | 'caption'
-        | 'footnote';
+        type: string;
         content: string;
-        textAlign?:
-        | 'left'
-        | 'center'
-        | 'justify'
-        | 'right';
         color?: string;
         inline?: boolean;
         boldFace?: boolean;
@@ -34,6 +19,11 @@ interface ArticleProps {
     fontFamily?:
     | 'serif'
     | 'sans-serif';
+    textAlign?:
+    | 'left'
+    | 'center'
+    | 'justify'
+    | 'right';
     mT?: string;
     mB?: string;
 }
@@ -42,6 +32,7 @@ const Article: FC<ArticleProps> = (
     {
         sections,
         fontFamily,
+        textAlign,
         mT,
         mB,
     }: any
@@ -64,7 +55,6 @@ const Article: FC<ArticleProps> = (
                     type,
                     content,
                     color,
-                    textAlign,
                     inline,
                     boldFace,
                     italicize,
