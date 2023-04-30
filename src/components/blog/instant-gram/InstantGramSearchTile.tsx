@@ -40,12 +40,12 @@ const InstantGramSearchTile = ({ funcSelect, funcInput, funcButton }: any) => {
                         <DropDown className='regular' func={handleClick} funcResp={showDropDown} />
                     </div>
                     {showDropDown &&
-                        <div style={{ textAlign: 'center' }}>
+                        <>
                             <InstantGramSearchList func={funcSelect} items={eventData[2023]} year='2023' />
                             <InstantGramSearchList func={funcSelect} items={eventData[2022]} year='2022' />
                             <InstantGramSearchList func={funcSelect} items={eventData[2021]} year='2021' />
                             <InstantGramSearchList func={funcSelect} items={eventData[2020]} year='2020' />
-                        </div>
+                        </>
                     }
                 </>
             }

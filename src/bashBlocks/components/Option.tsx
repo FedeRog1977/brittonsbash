@@ -1,4 +1,4 @@
-import { FC, ReactElement } from "react";
+import { FC } from "react";
 import Button from "../elements/Button";
 import Typography from "../elements/Typography";
 import './styles/DropDown.css'
