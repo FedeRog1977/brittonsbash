@@ -86,7 +86,6 @@ const refactorEvent = (
             eventDescription,
             eventImages,
             eventYouthHostels,
-            showSportEvent,
             sportDist,
             sportElev,
             sportTime,
@@ -98,6 +97,7 @@ const refactorEvent = (
             sportGrahams,
             sportSubTwos,
             sportDonalds,
+            showSportEvent,
         }
     );
 

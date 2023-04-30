@@ -127,7 +127,9 @@ export const eventData = {
 					"description": "",
 				},
 			],
-			"youthHostels": [],
+			"youthHostels": [
+				"Glencoe Independent (Bunkhouse)",
+			],
 		},
 		{
 			"id": "E2023010",
@@ -136,7 +138,7 @@ export const eventData = {
 				"Version Control",
 			],
 			"startDate": "17th of February",
-			"endDate": "18th of February",
+			"endDate": "19th of February",
 			"description": "",
 			"images": [
 				{
@@ -145,7 +147,9 @@ export const eventData = {
 					"description": "",
 				},
 			],
-			"youthHostels": [],
+			"youthHostels": [
+				"Aviemore",
+			],
 		},
 		{
 			"id": "E2023009",

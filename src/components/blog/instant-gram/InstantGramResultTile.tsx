@@ -110,14 +110,14 @@ const InstantGramResultTile = (
                             }
                         </div>
                     }
-                    {refactoredEvent[0].eventYoutHostels &&
+                    {refactoredEvent[0].eventYouthHostels &&
                         <div className='instant-gram-tile-body'>
                             <Typography
                                 type='body'
                                 content={
                                     <>
                                         <Typography type='body' content='Youth Hostel(s): ' textAlign='left' boldFace inline />
-                                        <Typography type='body' content={refactoredEvent[0].eventYoutHostels} textAlign='left' inline />
+                                        <Typography type='body' content={refactoredEvent[0].eventYouthHostels} textAlign='left' inline />
                                     </>
                                 }
                                 textAlign='center'
