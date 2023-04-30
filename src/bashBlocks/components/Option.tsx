@@ -18,7 +18,7 @@ interface OptionProps {
     className:
     | 'regular'
     | 'dense';
-    func: () => void;
+    func?: () => void;
     id: string;
     prefix?: string;
     content: string;
