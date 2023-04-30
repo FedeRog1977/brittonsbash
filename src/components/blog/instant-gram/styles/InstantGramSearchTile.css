@@ -3,9 +3,7 @@ input[type='text'].instant-gram-search {
 }
 
 input[type='text'].instant-gram-search,
-button.instant-gram-search,
-button.instant-gram-expand,
-button.instant-gram-expand-dense {
+button.instant-gram-search {
     font-family: Audi-Regular;
     border: none;
     border-radius: 0.125em;
@@ -22,14 +20,4 @@ button.instant-gram-search {
     background-color: #282828;
     width: 18.5%;
     margin: 0.25em;
-}
-
-button.instant-gram-expand {
-    background: #FFFFFF00;
-    width: 100%;
-}
-
-button.instant-gram-expand-dense {
-    background: #FFFFFF00;
-    width: 25%;
 }

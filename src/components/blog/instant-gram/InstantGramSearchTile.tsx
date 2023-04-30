@@ -4,12 +4,9 @@ import InstantGramSearchList from '../../../elements/blog/instant-gram/InstantGr
 import { eventData } from "../../../data/general/Events";
 import './styles/InstantGramSearchTile.css'
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faChevronDown,
-} from "@fortawesome/free-solid-svg-icons";
 import Tile from "../../../bashBlocks/components/Tile";
 import Typography from "../../../bashBlocks/elements/Typography";
+import DropDown from "../../../bashBlocks/components/DropDown";
 
 const InstantGramSearchTile = ({ funcSelect, funcInput, funcButton }: any) => {
     const [showDropDown, setShowDropDown] = useState(false);
@@ -40,31 +37,7 @@ const InstantGramSearchTile = ({ funcSelect, funcInput, funcButton }: any) => {
                                 />
                             }
                         />
-                        <Button
-                            className='instant-gram-expand'
-                            func={handleClick}
-                            content={
-                                <>
-                                    {showDropDown === false &&
-                                        <Typography
-                                            type='h4'
-                                            content={
-                                                <FontAwesomeIcon icon={faChevronDown} />
-                                            }
-                                        />
-                                    }
-                                    {showDropDown === true &&
-                                        <Typography
-                                            type='h4'
-                                            content={
-                                                <FontAwesomeIcon icon={faChevronDown} />
-                                            }
-                                            color='#87CEEB'
-                                        />
-                                    }
-                                </>
-                            }
-                        />
+                        <DropDown className='regular' func={handleClick} funcResp={showDropDown} />
                     </div>
                     {showDropDown &&
                         <div style={{ textAlign: 'center' }}>

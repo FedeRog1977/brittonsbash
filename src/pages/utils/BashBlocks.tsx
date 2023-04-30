@@ -1,5 +1,6 @@
 import '../../App.css';
 import ArticleStories from '../../bashBlocks/components/stories/ArticleStories';
+import DropDownStories from '../../bashBlocks/components/stories/DropDownStories';
 import FootnoteStories from '../../bashBlocks/components/stories/FootnoteStories';
 import ImageSliderStories from '../../bashBlocks/components/stories/ImageSliderStories';
 import TypographyStories from '../../bashBlocks/elements/stories/TypographyStories';
@@ -13,6 +14,7 @@ function BashBlocks() {
             <FootnoteStories />
             <ArticleStories />
             <ImageSliderStories />
+            <DropDownStories />
         </>
     );
 }

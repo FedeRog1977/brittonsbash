@@ -1,4 +1,6 @@
 import { useState } from "react";
+import DropDown from "../../../bashBlocks/components/DropDown";
+import Option from "../../../bashBlocks/components/Option";
 import Button from "../../../bashBlocks/elements/Button";
 import Typography from "../../../bashBlocks/elements/Typography";
 
@@ -15,47 +17,16 @@ function InstantGramSearchList({ func, items, year }: any) {
 
     return (
         <>
-            <Button
-                className='instant-gram-expand-dense'
-                func={handleClick}
-                content={
-                    <>
-                        {showDropDown === false &&
-                            <Typography
-                                type='h3'
-                                content={year}
-                                paragraphMargins
-                            />
-                        }
-                        {showDropDown === true &&
-                            <Typography
-                                type='h3'
-                                content={year}
-                                color='#87CEEB'
-                                paragraphMargins
-                            />
-                        }
-                    </>
-                }
-            />
+            <DropDown type='h3' className='dense' func={handleClick} funcResp={showDropDown} content={year} />
             {showDropDown && items.map(
                 ({ id, prefix, names }: any) => (
-                    <Button
-                        className='instant-gram-expand'
+                    <Option
+                        type='h4'
+                        className='regular'
                         func={func}
-                        content={
-                            <Typography
-                                type='h4'
-                                content={
-                                    <option key={id} value={names.join(' / ')}>
-                                        {prefix &&
-                                            <>{prefix}{': '}</>
-                                        }
-                                        {names.join(' / ')}
-                                    </option>
-                                }
-                            />
-                        }
+                        id={id}
+                        prefix={prefix}
+                        content={names.join(' / ')}
                     />
                 )
             )}

@@ -1,15 +1,11 @@
 import { useState } from "react";
-import Button from "../../../bashBlocks/elements/Button";
 import ImageSlider from "../../../bashBlocks/components/ImageSlider";
 import Typography from "../../../bashBlocks/elements/Typography";
 import "./styles/InstantGramTile.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faChevronDown,
-} from "@fortawesome/free-solid-svg-icons";
 import Article from "../../../bashBlocks/components/Article";
 import Tile from "../../../bashBlocks/components/Tile";
 import refactorEvent from "../../../scripts/blog/instant-gram/refactorEvent";
+import DropDown from "../../../bashBlocks/components/DropDown";
 
 const InstantGramResultTile = (
     { event, sportEvent, showSportEvent }: any
@@ -125,31 +121,7 @@ const InstantGramResultTile = (
                         </div>
                     }
                     <div className='instant-gram-tile-body'>
-                        <Button
-                            className='instant-gram-expand'
-                            func={handleClick}
-                            content={
-                                <>
-                                    {showDropDown === false &&
-                                        <Typography
-                                            type='h4'
-                                            content={
-                                                <FontAwesomeIcon icon={faChevronDown} />
-                                            }
-                                        />
-                                    }
-                                    {showDropDown === true &&
-                                        <Typography
-                                            type='h4'
-                                            content={
-                                                <FontAwesomeIcon icon={faChevronDown} />
-                                            }
-                                            color='#87CEEB'
-                                        />
-                                    }
-                                </>
-                            }
-                        />
+                        <DropDown className='regular' func={handleClick} funcResp={showDropDown} />
                     </div>
                     {showDropDown &&
                         <div className='instant-gram-tile-body'>

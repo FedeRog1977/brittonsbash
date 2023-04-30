@@ -1,0 +1,16 @@
+button.expand-regular,
+button.expand-dense {
+    font-family: Audi-Regular;
+    background: #FFFFFF00;
+    border: none;
+    border-radius: 0.125em;
+    padding: 5px;
+}
+
+button.expand-regular {
+    width: 100%;
+}
+
+button.expand-dense {
+    width: 25%;
+}
