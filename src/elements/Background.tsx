@@ -5,6 +5,7 @@ const Background = ({ content, className }: any) => {
         <div className='background'>
             <span
                 className={className}
+                style={{ padding: '0px 25px 0px 25px' }}
             >
                 {content}
             </span>

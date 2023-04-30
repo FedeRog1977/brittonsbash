@@ -3,8 +3,13 @@
     src: url(../../fonts/Grandista.ttf);
 }
 
+@font-face {
+    font-family: NFS;
+    src: url(../../fonts/NFS.ttf);
+}
+
 .background {
-    background-image: url("../../media/images/background.jpeg");
+    background-image: url("../../media/images/bg.jpg");
     background-attachment: fixed;
     background-position: top;
     background-repeat: no-repeat;
@@ -13,13 +18,22 @@
     padding: 10% 0 2.5% 0;
 }
 
-.background-text-instant-gram {
-    font-family: Instagram;
-    font-size: 64px;
-    background: -webkit-linear-gradient(0deg, #FFFFFF -100%, #A2A2A2 100%);
+.background-text-instant-gram,
+.background-text-sport {
+    background: -webkit-linear-gradient(0deg, #282828 0%, #A2A2A2 200%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0;
     padding: 0;
+}
+
+.background-text-instant-gram {
+    font-family: Instagram;
+    font-size: 64px;
+}
+
+.background-text-sport {
+    font-family: NFS;
+    font-size: 64px;
 }
