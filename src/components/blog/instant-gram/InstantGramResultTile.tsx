@@ -16,13 +16,13 @@ const InstantGramResultTile = (
 ) => {
     const refactoredEvent = refactorEvent({ event, sportEvent, showSportEvent });
 
-    const [showDescription, setShowDescription] = useState(false);
+    const [showDropDown, setShowDropDown] = useState(false);
 
     const handleClick = () => {
-        if (showDescription === false) {
-            setShowDescription(true);
+        if (showDropDown === false) {
+            setShowDropDown(true);
         } else {
-            setShowDescription(false);
+            setShowDropDown(false);
         }
     }
 
@@ -129,16 +129,29 @@ const InstantGramResultTile = (
                             className='instant-gram-expand'
                             func={handleClick}
                             content={
-                                <Typography
-                                    type='h4'
-                                    content={
-                                        <FontAwesomeIcon icon={faChevronDown} />
+                                <>
+                                    {showDropDown === false &&
+                                        <Typography
+                                            type='h4'
+                                            content={
+                                                <FontAwesomeIcon icon={faChevronDown} />
+                                            }
+                                        />
                                     }
-                                />
+                                    {showDropDown === true &&
+                                        <Typography
+                                            type='h4'
+                                            content={
+                                                <FontAwesomeIcon icon={faChevronDown} />
+                                            }
+                                            color='#87CEEB'
+                                        />
+                                    }
+                                </>
                             }
                         />
                     </div>
-                    {showDescription &&
+                    {showDropDown &&
                         <div className='instant-gram-tile-body'>
                             {Array.isArray(refactoredEvent[0].eventDescription) ?
                                 <Article sections={refactoredEvent[0].eventDescription} textAlign='justify' />
