@@ -1,45 +1,12 @@
 import { useState } from "react";
 import InstantGramSearchTile from "./InstantGramSearchTile";
 import InstantGramResultTile from "./InstantGramResultTile";
-import { eventData } from "../../../data/general/Events";
-import { sportData } from "../../../data/general/Sport";
+import compileEvents from "../../../scripts/blog/instant-gram/compileEvents";
+import compileSports from "../../../scripts/blog/instant-gram/compileSports";
 
 const InstantGramSearch = () => {
-    const allEvents: any[] = [];
-
-    for (var a in eventData[2023]) {
-        allEvents.push(eventData[2023][a]);
-    }
-
-    for (var b in eventData[2022]) {
-        allEvents.push(eventData[2022][b]);
-    }
-
-    for (var c in eventData[2021]) {
-        allEvents.push(eventData[2021][c]);
-    }
-
-    for (var d in eventData[2020]) {
-        allEvents.push(eventData[2020][d]);
-    }
-
-    const allSport: any[] = [];
-
-    for (var z in sportData[2023].projects) {
-        allSport.push(sportData[2023].projects[z]);
-    }
-
-    for (var y in sportData[2022].projects) {
-        allSport.push(sportData[2022].projects[y]);
-    }
-
-    for (var x in sportData[2021].projects) {
-        allSport.push(sportData[2021].projects[x]);
-    }
-
-    for (var w in sportData[2020].projects) {
-        allSport.push(sportData[2020].projects[w]);
-    }
+    const allEvents = compileEvents();
+    const allSport = compileSports();
 
     const eventSport: any[] = [];
 
@@ -73,16 +40,16 @@ const InstantGramSearch = () => {
                     "Match Selected Event To JSON:\n",
                     `${allEvents[i].names.join(' / ')}\n---`
                 );
-                setEvent(allEvents[i]);
-                setShowSportEvent(false);
+                setEvent(allEvents[i]); // Set event data
+                setShowSportEvent(false); // Set show sport data (sport !exist)
                 for (var j in allSport) {
                     if (
                         allEvents[i].names
                             .includes(allSport[j].name)
                     ) {
                         eventSport.push(allSport[j])
-                        setSportEvent(eventSport);
-                        setShowSportEvent(true);
+                        setSportEvent(eventSport); // Set sport data
+                        setShowSportEvent(true); // Set show sport data (sport exists)
                     }
                 }
             }
@@ -110,8 +77,8 @@ const InstantGramSearch = () => {
                     "Match Inputted Event To JSON:\n",
                     `${allEvents[i].names.join(' / ')}\n---`
                 );
-                setEventPlaceholder(allEvents[i]);
-                setShowSportEventPlaceholder(false);
+                setEventPlaceholder(allEvents[i]); // Set event data (placeholder)
+                setShowSportEventPlaceholder(false); // Set show sport data (sport !exist) (placeholder)
                 for (var j in allSport) {
                     if (
                         allEvents[i].names
@@ -119,8 +86,8 @@ const InstantGramSearch = () => {
                     ) {
                         eventSport.pop();
                         eventSport.push(allSport[j]);
-                        setSportEventPlaceholder(eventSport);
-                        setShowSportEventPlaceholder(true);
+                        setSportEventPlaceholder(eventSport); // Set sport data (placeholder)
+                        setShowSportEventPlaceholder(true); // Set show sport data (sport exists)
                     }
                 }
             }
@@ -133,9 +100,9 @@ const InstantGramSearch = () => {
             setSportEvent(sportEvent);
             setShowSportEvent(showSportEvent);
         } else {
-            setEvent(eventPlaceholder);
-            setSportEvent(sportEventPlaceholder);
-            setShowSportEvent(showSportEventPlaceholder);
+            setEvent(eventPlaceholder); // Set event data
+            setSportEvent(sportEventPlaceholder);  // Set sport data
+            setShowSportEvent(showSportEventPlaceholder); // Set show sport data (sport !exist/exists)
         }
     };
 

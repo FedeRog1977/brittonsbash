@@ -4,7 +4,7 @@ import Background from '../elements/Background';
 function Home() {
     return (
         <div>
-            <Background text={"Burning Roots"} />
+            <Background text='BrittonsBashRC' />
             <div className={"body"} style={{ padding: "2em", textAlign: "justify" }}>
                 <h1>Weather Forecast</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mi leo, pretium porttitor auctor eget, tincidunt eu quam. Nunc ornare aliquam nunc id convallis. Suspendisse a lacus aliquam, fermentum justo nec, congue est. Quisque id vestibulum sapien, in ultrices elit. Maecenas sed vehicula ipsum, sed rhoncus metus. Cras eu lectus sagittis elit auctor ornare. Duis elementum elit commodo ex scelerisque, at mattis odio facilisis. Sed porta orci vitae massa mollis porta. Suspendisse bibendum, purus eu consequat pellentesque, tortor mi faucibus ligula, interdum rhoncus erat magna non ligula. Nulla dui ex, vestibulum eu dolor id, condimentum gravida orci.</p>

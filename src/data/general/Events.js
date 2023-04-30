@@ -1767,7 +1767,9 @@ export const eventData = {
 					"description": "",
 				},
 			],
-			"youthHostels": [],
+			"youthHostels": [
+				"Aviemore",
+			],
 		},
 		{
 			"id": "E2021042",
