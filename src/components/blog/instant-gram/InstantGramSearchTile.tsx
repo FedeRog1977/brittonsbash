@@ -2,7 +2,7 @@ import Button from "../../../bashBlocks/elements/Button";
 import Search from "../../../bashBlocks/elements/Search";
 import InstantGramSearchList from '../../../elements/blog/instant-gram/InstantGramSearchList'
 import { eventData } from "../../../data/general/Events";
-import './styles/InstantGramSearchTile.css'
+import './styles/InstantGramTile.css'
 import { useState } from "react";
 import Tile from "../../../bashBlocks/components/Tile";
 import Typography from "../../../bashBlocks/elements/Typography";

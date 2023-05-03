@@ -37,27 +37,44 @@ const InstantGramResultTile = (
                             <>
                                 {refactoredEvent[0].eventNames.map(
                                     ({ name, refKey }: any) => (
-                                        <Typography
-                                            type='h2'
-                                            content={
-                                                <>Part{' '}{refKey}{' '}&#8212;{' '}{name}</>
-                                            }
-                                            textAlign='center'
-                                            refKey={refKey}
-                                        />
+                                        <div>
+                                            <Typography
+                                                type='h2'
+                                                content={
+                                                    <>Part{' '}{refKey}{' '}&#8212;{' '}</>
+                                                }
+                                                textAlign='center'
+                                                color='#585858'
+                                                inline
+                                                refKey={refKey}
+                                            />
+                                            <Typography
+                                                type='h2'
+                                                content={
+                                                    <>{name}</>
+                                                }
+                                                textAlign='center'
+                                                inline
+                                                refKey={refKey}
+                                            />
+                                        </div>
                                     )
                                 )}
                             </>
                             :
-                            <Typography type='h2' content={refactoredEvent[0].eventNames[0].name} textAlign='left' inline />
+                            <Typography
+                                type={refactoredEvent[0].eventPrefix ? 'h2' : 'h1'}
+                                content={refactoredEvent[0].eventNames[0].name}
+                                textAlign='center'
+                            />
                         }
                     </div>
                     <div className='instant-gram-tile-title'>
-                        <Typography type='h3' content={refactoredEvent[0].eventStartDate} textAlign='left' inline />
+                        <Typography type='h3' content={refactoredEvent[0].eventStartDate} textAlign='left' color='#585858' inline />
                         {refactoredEvent[0].eventEndDate &&
                             <>
-                                <Typography type='h3' content={<>{' '}&#8212;{' '}</>} textAlign='left' inline />
-                                <Typography type='h3' content={refactoredEvent[0].eventEndDate} textAlign='left' inline />
+                                <Typography type='h3' content={<>{' '}&#8212;{' '}</>} textAlign='left' color='#585858' inline />
+                                <Typography type='h3' content={refactoredEvent[0].eventEndDate} textAlign='left' color='#585858' inline />
                             </>
                         }
                     </div>
