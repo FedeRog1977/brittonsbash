@@ -41,21 +41,23 @@ const ImageSlider = ({ slides }: any) => {
                                     <img src={slide.url} alt={slide.alt} className='slider-image' />
                                 </a>
                                 {slide.description &&
-                                    <Typography
-                                        type='h3'
-                                        fontFamily='sans-serif'
-                                        content={
-                                            <>
-                                                {slide.description}{' '}
-                                                <Typography
-                                                    type='body'
-                                                    content={<>{current + 1}/{slides.length}</>}
-                                                />
-                                            </>
-                                        }
-                                        textAlign='center'
-                                        paragraphMargins
-                                    />
+                                    <div className='slider-caption'>
+                                        <Typography
+                                            type='h3'
+                                            fontFamily='sans-serif'
+                                            content={
+                                                <>
+                                                    {slide.description}{' '}
+                                                    <Typography
+                                                        type='body'
+                                                        content={<>{current + 1}/{slides.length}</>}
+                                                    />
+                                                </>
+                                            }
+                                            textAlign='center'
+                                            paragraphMargins
+                                        />
+                                    </div>
                                 }
                             </>
                         )}

@@ -162,7 +162,7 @@ const InstantGramResultTile = (
                             {Array.isArray(refactoredEvent[0].eventDescription) ?
                                 <Article sections={refactoredEvent[0].eventDescription} textAlign='justify' />
                                 :
-                                <Typography type='body' content={refactoredEvent[0].eventDescription} textAlign='justify' />
+                                <Typography type='body' content={refactoredEvent[0].eventDescription} textAlign='justify' paragraphMargins />
                             }
                         </div>
                     }
