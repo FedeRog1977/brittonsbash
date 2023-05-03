@@ -3,7 +3,8 @@ button.expand-dense {
     font-family: Audi-Regular;
     background: #FFFFFF00;
     border: none;
-    border-radius: 0.125em;
+    border-radius: 0.375em;
+    transition: background-color 0.5s;
     padding: 5px;
 }
 
@@ -13,4 +14,11 @@ button.expand-regular {
 
 button.expand-dense {
     width: 25%;
+}
+
+
+button.expand-regular:hover,
+button.expand-dense:hover {
+    background-color: #F5F5F5;
+    transition: background-color 0.5s;
 }

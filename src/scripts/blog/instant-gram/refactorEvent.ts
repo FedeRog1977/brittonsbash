@@ -32,43 +32,43 @@ const refactorEvent = (
 
     var refKey = 0;
 
-    for (var a in event.names) {
+    for (var i in event.names) {
         refKey = refKey + 1;
         names.push(
             {
-                name: event.names[a],
-                refKey: refKey
+                name: event.names[i],
+                refKey: refKey,
             }
         );
     }
 
-    for (var i in sportEvent) {
-        distances.push(`${sportEvent[i].dist.toLocaleString("en-UK")}mi`);
-        elevs.push(`${sportEvent[i].elev.toLocaleString("en-UK")}ft`);
-        times.push(`${sportEvent[i].time}`);
-        for (var k in sportEvent[i].islands) {
-            islandsS.push(sportEvent[i].islands[k]);
+    for (var j in sportEvent) {
+        distances.push(`${sportEvent[j].dist.toLocaleString("en-UK")}mi`);
+        elevs.push(`${sportEvent[j].elev.toLocaleString("en-UK")}ft`);
+        times.push(`${sportEvent[j].time}`);
+        for (var k in sportEvent[j].islands) {
+            islandsS.push(sportEvent[j].islands[k]);
         }
-        for (var l in sportEvent[i].munros) {
-            munrosS.push(sportEvent[i].munros[l]);
+        for (var l in sportEvent[j].munros) {
+            munrosS.push(sportEvent[j].munros[l]);
         }
-        for (var m in sportEvent[i].munroTops) {
-            munroTopsS.push(sportEvent[i].munroTops[m]);
+        for (var m in sportEvent[j].munroTops) {
+            munroTopsS.push(sportEvent[j].munroTops[m]);
         }
-        for (var n in sportEvent[i].corbetts) {
-            corbettsS.push(sportEvent[i].corbetts[n]);
+        for (var n in sportEvent[j].corbetts) {
+            corbettsS.push(sportEvent[j].corbetts[n]);
         }
-        for (var o in sportEvent[i].corbettTops) {
-            corbettTopsS.push(sportEvent[i].corbettTops[o]);
+        for (var o in sportEvent[j].corbettTops) {
+            corbettTopsS.push(sportEvent[j].corbettTops[o]);
         }
-        for (var p in sportEvent[i].grahams) {
-            grahamsS.push(sportEvent[i].grahams[p]);
+        for (var p in sportEvent[j].grahams) {
+            grahamsS.push(sportEvent[j].grahams[p]);
         }
-        for (var q in sportEvent[i].subTwos) {
-            subTwosS.push(sportEvent[i].subTwos[q]);
+        for (var q in sportEvent[j].subTwos) {
+            subTwosS.push(sportEvent[j].subTwos[q]);
         }
-        for (var r in sportEvent[i].donalds) {
-            donaldsS.push(sportEvent[i].donalds[r]);
+        for (var r in sportEvent[j].donalds) {
+            donaldsS.push(sportEvent[j].donalds[r]);
         }
     }
 
