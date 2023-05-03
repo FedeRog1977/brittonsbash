@@ -33,8 +33,9 @@ interface TypographyProps {
     | 'overline'
     | 'underline'
     | 'line-through';
-    link?: string;
     paragraphMargins?: boolean;
+    link?: string;
+    refKey?: string;
     mT?: string;
     mB?: string;
 }
@@ -53,6 +54,7 @@ const Typography: FC<TypographyProps> = (
         textDecoration,
         paragraphMargins,
         link,
+        refKey,
         mT,
         mB,
     }: any
@@ -71,6 +73,7 @@ const Typography: FC<TypographyProps> = (
                 marginRight: 0,
                 padding: 0,
             }}
+            key={refKey}
         >
             <span
                 style={{

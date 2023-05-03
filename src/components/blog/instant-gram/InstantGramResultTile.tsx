@@ -33,7 +33,24 @@ const InstantGramResultTile = (
                                 <Typography type='h1' content=': ' textAlign='left' inline />
                             </>
                         }
-                        <Typography type='h1' content={refactoredEvent[0].eventNames} textAlign='left' inline />
+                        {refactoredEvent[0].eventNames.length > 1 ?
+                            <>
+                                {refactoredEvent[0].eventNames.map(
+                                    ({ name, refKey }: any) => (
+                                        <Typography
+                                            type='h2'
+                                            content={
+                                                <>Part{' '}{refKey}{' '}&#8212;{' '}{name}</>
+                                            }
+                                            textAlign='center'
+                                            refKey={refKey}
+                                        />
+                                    )
+                                )}
+                            </>
+                            :
+                            <Typography type='h2' content={refactoredEvent[0].eventNames[0].name} textAlign='left' inline />
+                        }
                     </div>
                     <div className='instant-gram-tile-title'>
                         <Typography type='h3' content={refactoredEvent[0].eventStartDate} textAlign='left' inline />

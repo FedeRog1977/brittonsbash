@@ -4,6 +4,7 @@ const refactorEvent = (
     const refactoredEvent: any[] = [];
     refactoredEvent.pop();
 
+    const names: any[] = [];
     const distances: any[] = [];
     const elevs: any[] = [];
     const times: any[] = [];
@@ -16,6 +17,7 @@ const refactorEvent = (
     const subTwosS: any[] = [];
     const donaldsS: any[] = [];
 
+    names.pop();
     distances.pop();
     elevs.pop();
     times.pop();
@@ -27,6 +29,18 @@ const refactorEvent = (
     grahamsS.pop();
     subTwosS.pop();
     donaldsS.pop();
+
+    var refKey = 0;
+
+    for (var a in event.names) {
+        refKey = refKey + 1;
+        names.push(
+            {
+                name: event.names[a],
+                refKey: refKey
+            }
+        );
+    }
 
     for (var i in sportEvent) {
         distances.push(`${sportEvent[i].dist.toLocaleString("en-UK")}mi`);
@@ -59,7 +73,7 @@ const refactorEvent = (
     }
 
     var eventPrefix = event.prefix;
-    var eventNames = event.names.join(' / ');
+    var eventNames = names;
     var eventStartDate = event.startDate;
     var eventEndDate = event.endDate;
     var eventDescription = event.description;

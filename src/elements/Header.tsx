@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Typography from "../bashBlocks/elements/Typography";
 import './styles/HeaderFooter.css';
 import SubHeaderBlog from "./SubHeaderBlog";
 import SubHeaderUtils from "./SubHeaderUtils";
@@ -8,7 +9,7 @@ const Header = () => {
     const [showSubHeaderBlog, setShowSubHeaderBlog] = useState(false);
     const [showSubHeaderUtils, setShowSubHeaderUtils] = useState(false);
 
-    function subHeaderClickBlog() {
+    function handleClickBlog() {
         if (showSubHeaderBlog === false) {
             setShowSubHeaderBlog(true);
             setShowSubHeaderUtils(false);
@@ -17,7 +18,7 @@ const Header = () => {
         }
     }
 
-    function subHeaderClickUtils() {
+    function handleClickUtils() {
         if (showSubHeaderUtils === false) {
             setShowSubHeaderUtils(true);
             setShowSubHeaderBlog(false);
@@ -29,9 +30,10 @@ const Header = () => {
     return (
         <>
             <header className='header'>
-                {/* <div className='headerLogo'>
-                    <img src={placeholder} alt='logo' style={{ width: 175 }}></img>
-                </div> */}
+                <div className='header-logo'>
+                    {/* <img src={placeholder} alt='logo' style={{ width: 175 }}></img> */}
+                    <Typography type='h3' content='BrittonsBashRC' color='#A2A2A2' />
+                </div>
                 <div className='header-navigation'>
                     <nav>
                         <ul>
@@ -40,8 +42,8 @@ const Header = () => {
                             <li><Link to='/employment'>Employment</Link></li>
                             <li><Link to='/library'>Library</Link></li>
                             <li>|</li>
-                            <li><a onClick={() => subHeaderClickBlog()} href='#'>Blog</a></li>
-                            <li><a onClick={() => subHeaderClickUtils()} href='#'>Utilities</a></li>
+                            <li><a onClick={() => handleClickBlog()} href='#'>Blog</a></li>
+                            <li><a onClick={() => handleClickUtils()} href='#'>Utilities</a></li>
                         </ul>
                     </nav>
                 </div>
