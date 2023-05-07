@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
   BrowserRouter,
-  // BrowserRouter as Router,
+  BrowserRouter as Router,
   Route,
   Routes
 } from "react-router-dom";
@@ -43,7 +43,7 @@ root.render(
     <BrowserRouter basename='/brittonsbash'>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/brittonsbash" element={<Home />} />
         <Route path="/academia" element={<Academia />} />
         <Route path="/employment" element={<Employment />} />
         <Route path="/library" element={<Library />} />
