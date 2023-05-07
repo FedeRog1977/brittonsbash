@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
   HashRouter,
+  // HashRouter as Router,
   // BrowserRouter,
   // BrowserRouter as Router,
   Route,
