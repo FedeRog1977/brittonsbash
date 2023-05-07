@@ -40,7 +40,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='/brittonsbash'>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
