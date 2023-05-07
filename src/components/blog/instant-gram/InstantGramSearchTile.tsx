@@ -7,6 +7,11 @@ import { useState } from "react";
 import Tile from "../../../bashBlocks/components/Tile";
 import Typography from "../../../bashBlocks/elements/Typography";
 import DropDown from "../../../bashBlocks/components/DropDown";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faSearch,
+} from "@fortawesome/free-solid-svg-icons";
+import useMobile from "../../../scripts/general/useMobile";
 
 const InstantGramSearchTile = ({ funcSelect, funcInput, funcButton }: any) => {
     const [showDropDown, setShowDropDown] = useState(false);
@@ -32,11 +37,23 @@ const InstantGramSearchTile = ({ funcSelect, funcInput, funcButton }: any) => {
                                 className='instant-gram-search'
                                 func={funcButton}
                                 content={
-                                    <Typography
-                                        type='h4'
-                                        content='Search'
-                                        color='#FFFFFF'
-                                    />
+                                    <>
+                                        {useMobile() ?
+                                            <Typography
+                                                type='h4'
+                                                content={
+                                                    <FontAwesomeIcon icon={faSearch} />
+                                                }
+                                                color='#FFFFFF'
+                                            />
+                                            :
+                                            <Typography
+                                                type='h4'
+                                                content='Search'
+                                                color='#FFFFFF'
+                                            />
+                                        }
+                                    </>
                                 }
                             />
                         </div>
