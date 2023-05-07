@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/brittonsbash/static/css/main.0fcfa951.css",
+    "main.js": "/brittonsbash/static/js/main.ab4aad28.js",
+    "static/js/787.21a77f2f.chunk.js": "/brittonsbash/static/js/787.21a77f2f.chunk.js",
+    "static/media/bg.jpg": "/brittonsbash/static/media/bg.5491b47b3c9c172a2e9e.jpg",
+    "static/media/CMUItalic.ttf": "/brittonsbash/static/media/CMUItalic.242b10aa04f441336096.ttf",
+    "static/media/CMUSerif.ttf": "/brittonsbash/static/media/CMUSerif.8ff5cee913df84291549.ttf",
+    "static/media/CMUBold.ttf": "/brittonsbash/static/media/CMUBold.c97a73040fda7e3cb554.ttf",
+    "static/media/Normal.ttf": "/brittonsbash/static/media/Normal.4dc6ba67c7575f45c1f4.ttf",
+    "static/media/Extended-Bold.ttf": "/brittonsbash/static/media/Extended-Bold.447d44339e756daf66b8.ttf",
+    "static/media/Bold.ttf": "/brittonsbash/static/media/Bold.1e7581aa8a44cf53f5c2.ttf",
+    "static/media/Italic.ttf": "/brittonsbash/static/media/Italic.4fbfd0471518fbe9d64f.ttf",
+    "static/media/Grandista.ttf": "/brittonsbash/static/media/Grandista.bec7f1e368edce800cdd.ttf",
+    "static/media/NFS.ttf": "/brittonsbash/static/media/NFS.8723982ddbc7e3136bad.ttf",
+    "static/media/xmr.svg": "/brittonsbash/static/media/xmr.45ccc83cb5c9bd7f5f6794df23a2ea69.svg",
+    "index.html": "/brittonsbash/index.html",
+    "main.0fcfa951.css.map": "/brittonsbash/static/css/main.0fcfa951.css.map",
+    "main.ab4aad28.js.map": "/brittonsbash/static/js/main.ab4aad28.js.map",
+    "787.21a77f2f.chunk.js.map": "/brittonsbash/static/js/787.21a77f2f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0fcfa951.css",
+    "static/js/main.ab4aad28.js"
+  ]
+}
