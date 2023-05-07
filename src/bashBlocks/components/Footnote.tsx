@@ -15,6 +15,7 @@ const Footnote: FC<FootnoteProps> = (
             content={
                 <Typography
                     type='footnote'
+                    textAlign='justify'
                     content={content}
                 />
             }

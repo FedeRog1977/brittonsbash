@@ -1,27 +1,30 @@
 /* Search Tile */
 
-input[type='text'].instant-gram-search {
-    font-size: 20px;
+.instant-gram-search-component {
+    margin: 15px 0px 15px 0px;
 }
 
 input[type='text'].instant-gram-search,
 button.instant-gram-search {
     font-family: Audi-Regular;
+    font-size: 20px;
     border: none;
-    border-radius: 0.125em;
+    margin: 0;
     padding: 5px;
 }
 
 input[type='text'].instant-gram-search {
     background-color: #F5F5F5;
-    width: 78.5%;
-    margin: 0.25em;
+    border-top-left-radius: 0.125em;
+    border-bottom-left-radius: 0.125em;
+    width: 79.75%;
 }
 
 button.instant-gram-search {
     background-color: #282828;
-    width: 18.5%;
-    margin: 0.25em;
+    border-top-right-radius: 0.125em;
+    border-bottom-right-radius: 0.125em;
+    width: 19.5%;
 }
 
 /* Result Tile */
@@ -49,4 +52,25 @@ button.instant-gram-search {
 .instant-gram-tile-body {
     margin: 15px 70px 15px 70px;
     /* border: 1px solid black; */
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .instant-gram-tile-title,
+    .instant-gram-tile-sport,
+    .instant-gram-tile-body {
+        margin: 15px 0px 15px 0px;
+    }
+
+    input[type='text'].instant-gram-search {
+        width: 96%;
+        margin-bottom: 7.5px;
+    }
+
+    button.instant-gram-search {
+        width: 98.75%;
+    }
+
 }

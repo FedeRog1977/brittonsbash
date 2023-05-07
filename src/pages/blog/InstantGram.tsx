@@ -7,7 +7,7 @@ import Footnote from '../../bashBlocks/components/Footnote';
 function InstantGram() {
     return (
         <div>
-            <Background content='Instant Gram' className='background-text-instant-gram' />
+            <Background content='Instant Gram' className='background-text background-text-instant-gram' />
             <InstantGramSearch />
             <Footnote content={instantGramContent[0].content} />
         </div>

@@ -22,23 +22,28 @@ const InstantGramSearchTile = ({ funcSelect, funcInput, funcButton }: any) => {
     return (
         <Tile
             type='solid'
+            top
             content={
                 <>
-                    <div>
-                        <Search className='instant-gram-search' func={funcInput} content='Search All Events' />
-                        <Button
-                            className='instant-gram-search'
-                            func={funcButton}
-                            content={
-                                <Typography
-                                    type='h4'
-                                    content='Search'
-                                    color='#FFFFFF'
-                                />
-                            }
-                        />
-                        <DropDown className='regular' func={handleClick} funcResp={showDropDown} />
-                    </div>
+                    <>
+                        <div className='instant-gram-search-component'>
+                            <Search className='instant-gram-search' func={funcInput} content='Search All Events' />
+                            <Button
+                                className='instant-gram-search'
+                                func={funcButton}
+                                content={
+                                    <Typography
+                                        type='h4'
+                                        content='Search'
+                                        color='#FFFFFF'
+                                    />
+                                }
+                            />
+                        </div>
+                        <div className='instant-gram-search-component'>
+                            <DropDown className='regular' func={handleClick} funcResp={showDropDown} />
+                        </div>
+                    </>
                     {showDropDown &&
                         <>
                             <InstantGramSearchList func={funcSelect} items={eventData[2023]} year='2023' />

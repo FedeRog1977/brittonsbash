@@ -5,7 +5,7 @@ import Background from '../../elements/Background';
 function Sport() {
     return (
         <div>
-            <Background content='Sport' className='background-text-sport' />
+            <Background content='Sport' className='background-text background-text-sport' />
             <SportResultTile />
         </div>
     );

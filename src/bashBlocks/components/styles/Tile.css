@@ -18,13 +18,21 @@
     padding: 50px 30px 50px 30px;
 }
 
+/* Mobile */
+
 @media (max-width: 768px) {
 
     .tile-clear,
     .tile-clear-condensed,
     .tile-solid {
-        margin: 20px;
+        border-radius: 0em;
+        box-shadow: none;
+        margin: 20px 0px 20px 0px;
         padding: 20px;
+    }
+
+    .tile-top {
+        margin-top: 0px;
     }
 
 }

@@ -131,16 +131,20 @@ const OSCall = () => {
                 <div className={"subHeaderConquestNavigation"}>
                     <nav>
                         <ul>
-                            <li><a onClick={currLocClick} className={"currLoc"}>Location {locationToggle}
-                                <span className={"currLocHover"}><small>Click map to pan to location</small></span>
-                            </a></li>
+                            <li>
+                                <span onClick={currLocClick} className={"currLoc"}>Location {locationToggle}
+                                    <span className={"currLocHover"}>
+                                        <small>Click map to pan to location</small>
+                                    </span>
+                                </span>
+                            </li>
                             {/* <li><a>Nearest Munro</a></li>
                             <li><a>Nearest Corbett</a></li> */}
                             <li>|</li>
-                            <li><a onClick={munroClick}>Munros</a></li>
-                            <li><a onClick={corbettClick}>Corbetts</a></li>
+                            <li><span onClick={munroClick}>Munros</span></li>
+                            <li><span onClick={corbettClick}>Corbetts</span></li>
                             <li>|</li>
-                            <li><a onClick={landmassesClick}>Routes</a></li>
+                            <li><span onClick={landmassesClick}>Routes</span></li>
                         </ul>
                     </nav>
                 </div>

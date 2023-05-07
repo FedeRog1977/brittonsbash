@@ -60,3 +60,25 @@
     transition-duration: 1s;
     transform: scale(1.05);
 }
+
+/* Mobile */
+
+
+@media (max-width: 768px) {
+
+    .image-slider {
+        height: 25vh;
+    }
+
+    .slider-image {
+        max-width: 100%;
+        box-shadow: none;
+    }
+
+    .left-arrow,
+    .right-arrow {
+        top: 45%;
+        color: #FFFFFF30;
+    }
+
+}

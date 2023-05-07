@@ -18,8 +18,9 @@
     padding: 10% 0 2.5% 0;
 }
 
-.background-text-instant-gram,
-.background-text-sport {
+.background-text,
+.background-text {
+    font-size: 64px;
     /* background: -webkit-linear-gradient(0deg, #282828 0%, #A2A2A2 200%); */
     background: -webkit-linear-gradient(0deg, #A13CC2 -50%, #9F1B7F 25%, #FF971D 100%);
     background-clip: text;
@@ -32,10 +33,24 @@
 
 .background-text-instant-gram {
     font-family: Instagram;
-    font-size: 64px;
 }
 
 .background-text-sport {
     font-family: NFS;
-    font-size: 64px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .background {
+        background-image: none;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .background-text {
+        font-size: 42px;
+    }
+
 }

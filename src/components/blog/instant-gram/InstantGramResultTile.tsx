@@ -23,7 +23,8 @@ const InstantGramResultTile = (
     }
 
     return (
-        <Tile type='solid'
+        <Tile
+            type='solid'
             content={
                 <>
                     <div className='instant-gram-tile-title'>
