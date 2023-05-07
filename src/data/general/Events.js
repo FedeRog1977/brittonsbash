@@ -1,6 +1,24 @@
 export const eventData = {
 	"2023": [
 		{
+			"id": "E2023018",
+			"prefix": "",
+			"names": [
+				"Why Don’t People Understand",
+			],
+			"startDate": "5th of May",
+			"endDate": "6th of May",
+			"description": "Weird Science, or standard practice? It's a shame people have once again started to neglect the true purpose of estate cars, A-roads and weekends. Myself included, for the last three weeks. Anyway, it was time to fix that. Almost a year later, another trip to Glen Shiel.",
+			"images": [
+				{
+					"url": "",
+					"alt": "",
+					"description": "",
+				},
+			],
+			"youthHostels": [],
+		},
+		{
 			"id": "E2023017",
 			"prefix": "Cairngorms X",
 			"names": [
