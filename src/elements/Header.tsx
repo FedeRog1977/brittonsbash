@@ -8,9 +8,11 @@ import Typography from "../bashBlocks/elements/Typography";
 import './styles/HeaderFooter.css';
 import SubHeaderBlog from "./SubHeaderBlog";
 import SubHeaderUtils from "./SubHeaderUtils";
-import { isMobile } from "../scripts/general/isMobile";
+import { useMobile } from "../scripts/general/isMobile";
 
 const Header = () => {
+    const isMobile = useMobile();
+
     const [showSubHeaderMobile, setShowSubHeaderMobile] = useState(false);
     const [showSubHeaderBlog, setShowSubHeaderBlog] = useState(false);
     const [showSubHeaderUtils, setShowSubHeaderUtils] = useState(false);
@@ -41,8 +43,6 @@ const Header = () => {
             setShowSubHeaderUtils(false);
         }
     }
-
-    console.log(isMobile)
 
     return (
         <>

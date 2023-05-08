@@ -11,9 +11,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faSearch,
 } from "@fortawesome/free-solid-svg-icons";
-import { isMobile } from "../../../scripts/general/isMobile";
+import { useMobile } from "../../../scripts/general/isMobile";
 
 const InstantGramSearchTile = ({ funcSelect, funcInput, funcButton }: any) => {
+    const isMobile = useMobile();
+
     const [showDropDown, setShowDropDown] = useState(false);
 
     const handleClick = () => {

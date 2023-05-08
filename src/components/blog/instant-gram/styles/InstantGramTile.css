@@ -1,6 +1,7 @@
 /* Search Tile */
 
 .instant-gram-search-component {
+    text-align: center;
     margin: 15px 0px 15px 0px;
 }
 
@@ -17,14 +18,14 @@ input[type='text'].instant-gram-search {
     background-color: #F5F5F5;
     border-top-left-radius: 0.125em;
     border-bottom-left-radius: 0.125em;
-    width: 79.75%;
+    width: 60%;
 }
 
 button.instant-gram-search {
-    background-color: #585858;
+    background-color: #282828;
     border-top-right-radius: 0.125em;
     border-bottom-right-radius: 0.125em;
-    width: 19.5%;
+    width: 15%;
 }
 
 /* Result Tile */

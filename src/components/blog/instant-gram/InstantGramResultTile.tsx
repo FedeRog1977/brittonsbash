@@ -80,13 +80,13 @@ const InstantGramResultTile = (
                     {refactoredEvent[0].showSportEvent &&
                         <div className='instant-gram-tile-sport'>
                             <div>
-                                <Typography type='body' content='Distance: ' textAlign='center' boldFace inline />{' '}
+                                {/* <Typography type='body' content='Distance: ' textAlign='center' boldFace inline />{' '} */}
                                 <Typography type='body' content={refactoredEvent[0].sportDist} textAlign='center' inline />
                                 <Typography type='body' content={<>&nbsp;&#124;&nbsp;</>} textAlign='center' inline />
-                                <Typography type='body' content='Elevation: ' textAlign='center' boldFace inline />{' '}
+                                {/* <Typography type='body' content='Elevation: ' textAlign='center' boldFace inline />{' '} */}
                                 <Typography type='body' content={refactoredEvent[0].sportElev} textAlign='center' inline />
                                 <Typography type='body' content={<>&nbsp;&#124;&nbsp;</>} textAlign='center' inline />
-                                <Typography type='body' content='Time: ' textAlign='center' boldFace inline />{' '}
+                                {/* <Typography type='body' content='Time: ' textAlign='center' boldFace inline />{' '} */}
                                 <Typography type='body' content={refactoredEvent[0].sportTime} textAlign='center' inline />
                             </div>
                             {refactoredEvent[0].sportIslands &&
