@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/brittonsbash/static/css/main.eed947e2.css",
-    "main.js": "/brittonsbash/static/js/main.3fd90584.js",
+    "main.css": "/brittonsbash/static/css/main.dbdd41eb.css",
+    "main.js": "/brittonsbash/static/js/main.a1a32ca6.js",
     "static/js/787.21a77f2f.chunk.js": "/brittonsbash/static/js/787.21a77f2f.chunk.js",
     "static/media/bg.jpg": "/brittonsbash/static/media/bg.5491b47b3c9c172a2e9e.jpg",
     "static/media/CMUItalic.ttf": "/brittonsbash/static/media/CMUItalic.242b10aa04f441336096.ttf",
@@ -15,12 +15,12 @@
     "static/media/NFS.ttf": "/brittonsbash/static/media/NFS.8723982ddbc7e3136bad.ttf",
     "static/media/xmr.svg": "/brittonsbash/static/media/xmr.45ccc83cb5c9bd7f5f6794df23a2ea69.svg",
     "index.html": "/brittonsbash/index.html",
-    "main.eed947e2.css.map": "/brittonsbash/static/css/main.eed947e2.css.map",
-    "main.3fd90584.js.map": "/brittonsbash/static/js/main.3fd90584.js.map",
+    "main.dbdd41eb.css.map": "/brittonsbash/static/css/main.dbdd41eb.css.map",
+    "main.a1a32ca6.js.map": "/brittonsbash/static/js/main.a1a32ca6.js.map",
     "787.21a77f2f.chunk.js.map": "/brittonsbash/static/js/787.21a77f2f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eed947e2.css",
-    "static/js/main.3fd90584.js"
+    "static/css/main.dbdd41eb.css",
+    "static/js/main.a1a32ca6.js"
   ]
 }
