@@ -5,10 +5,10 @@ import {
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Typography from "../bashBlocks/elements/Typography";
-import useMobile from "../scripts/general/useMobile";
 import './styles/HeaderFooter.css';
 import SubHeaderBlog from "./SubHeaderBlog";
 import SubHeaderUtils from "./SubHeaderUtils";
+import { isMobile } from "../scripts/general/isMobile";
 
 const Header = () => {
     const [showSubHeaderMobile, setShowSubHeaderMobile] = useState(false);
@@ -42,7 +42,7 @@ const Header = () => {
         }
     }
 
-    console.log(useMobile())
+    console.log(isMobile)
 
     return (
         <>
@@ -52,7 +52,7 @@ const Header = () => {
                     {/* <Typography type='h3' content='BrittonsBashRC' color='#A2A2A2' /> */}
                 </div>
                 <div className='header-navigation'>
-                    {useMobile() ?
+                    {isMobile ?
                         <li>
                             <span onClick={() => handleClickMobile()}>
                                 <Typography

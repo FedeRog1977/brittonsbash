@@ -7,5 +7,5 @@ export default function toSentenceCase(str) {
                 txt.substr(1).toLowerCase()
             );
         }
-    );
+    )
 };
