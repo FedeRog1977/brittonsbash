@@ -1245,7 +1245,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2022006",
-				"name": "The Bipass - Ride Across the River",
+				"name": "The Bipass – Ride Across the River",
 				"dist": 15.22,
 				"elev": 3117,
 				"time": "5:00:44",

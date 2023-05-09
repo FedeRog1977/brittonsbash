@@ -66,11 +66,11 @@ button.instant-gram-search {
     }
 
     input[type='text'].instant-gram-search {
-        width: 88%;
+        width: 80%;
     }
 
     button.instant-gram-search {
-        width: 9%;
+        width: 10%;
     }
 
 }

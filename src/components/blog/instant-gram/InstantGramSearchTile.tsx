@@ -13,7 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useMobile } from "../../../scripts/general/isMobile";
 
-const InstantGramSearchTile = ({ funcSelect, funcInput, funcButton }: any) => {
+const InstantGramSearchTile = ({ funcInput, funcButton, funcSelect }: any) => {
     const isMobile = useMobile();
 
     const [showDropDown, setShowDropDown] = useState(false);
