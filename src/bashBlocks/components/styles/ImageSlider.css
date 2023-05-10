@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     /* margin: 0px 0px 90px 0px; */
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 
 .slider-image {
@@ -69,7 +69,7 @@
 @media (max-width: 768px) {
 
     .image-slider {
-        height: 45vh;
+        height: 320px;
         overflow-x: hidden;
     }
 
@@ -82,6 +82,17 @@
     .right-arrow {
         top: 45%;
         color: #28282850;
+    }
+
+    .slide {
+        opacity: 0.5;
+        transition-duration: none;
+    }
+
+    .slide.active {
+        opacity: 1;
+        transition-duration: 1s;
+        transform: none;
     }
 
 }
