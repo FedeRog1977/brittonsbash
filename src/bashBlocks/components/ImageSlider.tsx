@@ -2,14 +2,17 @@ import React, { useState } from 'react';
 import './styles/ImageSlider.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    // faChevronCircleRight,
-    // faChevronCircleLeft,
-    faChevronLeft,
-    faChevronRight,
+    faChevronCircleLeft,
+    faChevronCircleRight,
+    // faChevronLeft,
+    // faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import Typography from '../elements/Typography';
+import { useMobile } from '../../scripts/general/isMobile';
 
 const ImageSlider = ({ slides }: any) => {
+    const isMobile = useMobile();
+
     const [current, setCurrent] = useState(0);
     const length = slides.length;
 
@@ -26,9 +29,14 @@ const ImageSlider = ({ slides }: any) => {
     }
 
     return (
-        <div className='image-slider'>
-            <FontAwesomeIcon icon={faChevronLeft} className='left-arrow' onClick={prevSlide} />
-            <FontAwesomeIcon icon={faChevronRight} className='right-arrow' onClick={nextSlide} />
+        <div
+            className='image-slider'
+            style={{
+                marginBottom: `${isMobile ? '0px' : '90px'}`
+            }}
+        >
+            <FontAwesomeIcon icon={faChevronCircleLeft} className='left-arrow' onClick={prevSlide} />
+            <FontAwesomeIcon icon={faChevronCircleRight} className='right-arrow' onClick={nextSlide} />
             {slides.map((slide, index) => {
                 return (
                     <div
@@ -37,9 +45,11 @@ const ImageSlider = ({ slides }: any) => {
                     >
                         {index === current && (
                             <>
-                                <a href={slide.url}>
-                                    <img src={slide.url} alt={slide.alt} className='slider-image' />
-                                </a>
+                                <img
+                                    className='slider-image'
+                                    src={slide.url}
+                                    alt={slide.alt}
+                                />
                                 {slide.description &&
                                     <div className='slider-caption'>
                                         <Typography
@@ -47,7 +57,7 @@ const ImageSlider = ({ slides }: any) => {
                                             fontFamily='sans-serif'
                                             content={
                                                 <>
-                                                    {slide.description}{' '}
+                                                    {slide.description}
                                                     <Typography
                                                         type='body'
                                                         content={<>{current + 1}/{slides.length}</>}

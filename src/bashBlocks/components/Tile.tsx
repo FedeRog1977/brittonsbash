@@ -7,14 +7,21 @@ interface TileProps {
     | 'clear-condensed'
     | 'solid';
     top?: boolean;
+    dense?: boolean;
     content: ReactElement;
 }
 
 const Tile: FC<TileProps> = (
-    { type, top, content }: any
+    { type, top, dense, content }: any
 ) => {
     return (
-        <div className={`tile-${type} ${top && 'tile-top'}`}>
+        <div
+            className={`
+                tile-${type}
+                ${top && 'tile-top'}
+                ${dense && 'tile-dense'}
+            `}
+        >
             {content}
         </div>
     )

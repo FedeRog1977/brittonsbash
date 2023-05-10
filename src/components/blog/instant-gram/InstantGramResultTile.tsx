@@ -6,10 +6,13 @@ import Article from "../../../bashBlocks/components/Article";
 import Tile from "../../../bashBlocks/components/Tile";
 import refactorEvent from "../../../scripts/blog/instant-gram/refactorEvent";
 import DropDown from "../../../bashBlocks/components/DropDown";
+import { useMobile } from "../../../scripts/general/isMobile";
 
 const InstantGramResultTile = (
     { event, sportEvent, showSportEvent }: any
 ) => {
+    const isMobile = useMobile();
+
     const refactoredEvent = refactorEvent({ event, sportEvent, showSportEvent });
 
     const [showDropDown, setShowDropDown] = useState(false);
@@ -25,6 +28,7 @@ const InstantGramResultTile = (
     return (
         <Tile
             type='solid'
+            dense={isMobile && true}
             content={
                 <>
                     <div className='instant-gram-tile-title'>
@@ -165,7 +169,7 @@ const InstantGramResultTile = (
                             }
                         </div>
                     }
-                    <div className='instant-gram-tile-body'>
+                    <div className='instant-gram-tile-image-slider'>
                         <ImageSlider slides={refactoredEvent[0].eventImages} />
                     </div>
                 </>

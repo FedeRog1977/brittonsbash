@@ -18,6 +18,10 @@
     padding: 50px 30px 50px 30px;
 }
 
+.tile-dense {
+    padding: 0px;
+}
+
 /* Mobile */
 
 @media (max-width: 768px) {
@@ -33,6 +37,10 @@
 
     .tile-top {
         margin-top: 0px;
+    }
+
+    .tile-dense {
+        padding: 20px 0px 20px 0px;
     }
 
 }
