@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/brittonsbash/static/css/main.78e40678.css",
+    "main.css": "/brittonsbash/static/css/main.4a44f448.css",
     "main.js": "/brittonsbash/static/js/main.1f9fbd94.js",
     "static/js/787.21a77f2f.chunk.js": "/brittonsbash/static/js/787.21a77f2f.chunk.js",
     "static/media/bg.jpg": "/brittonsbash/static/media/bg.5491b47b3c9c172a2e9e.jpg",
@@ -15,12 +15,12 @@
     "static/media/NFS.ttf": "/brittonsbash/static/media/NFS.8723982ddbc7e3136bad.ttf",
     "static/media/xmr.svg": "/brittonsbash/static/media/xmr.45ccc83cb5c9bd7f5f6794df23a2ea69.svg",
     "index.html": "/brittonsbash/index.html",
-    "main.78e40678.css.map": "/brittonsbash/static/css/main.78e40678.css.map",
+    "main.4a44f448.css.map": "/brittonsbash/static/css/main.4a44f448.css.map",
     "main.1f9fbd94.js.map": "/brittonsbash/static/js/main.1f9fbd94.js.map",
     "787.21a77f2f.chunk.js.map": "/brittonsbash/static/js/787.21a77f2f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.78e40678.css",
+    "static/css/main.4a44f448.css",
     "static/js/main.1f9fbd94.js"
   ]
 }
