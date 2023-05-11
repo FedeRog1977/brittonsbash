@@ -8,7 +8,7 @@ import Typography from "../bashBlocks/elements/Typography";
 import './styles/HeaderFooter.css';
 import SubHeaderBlog from "./SubHeaderBlog";
 import SubHeaderUtils from "./SubHeaderUtils";
-import { useMobile } from "../scripts/general/isMobile";
+import { useMobile } from "../scripts/general/useMobile";
 
 const Header = () => {
     const isMobile = useMobile();

@@ -6,7 +6,7 @@ import Article from "../../../bashBlocks/components/Article";
 import Tile from "../../../bashBlocks/components/Tile";
 import refactorEvent from "../../../scripts/compilers/refactorEvent";
 import DropDown from "../../../bashBlocks/components/DropDown";
-import { useMobile } from "../../../scripts/general/isMobile";
+import { useMobile } from "../../../scripts/general/useMobile";
 
 const InstantGramResultTile = (
     { event, sportEvent, showSportEvent }: any
