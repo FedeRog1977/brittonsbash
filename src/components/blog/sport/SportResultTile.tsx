@@ -8,6 +8,9 @@ import refactorEvent from "../../../scripts/compilers/refactorEvent";
 import DropDown from "../../../bashBlocks/components/DropDown";
 import compileSports from "../../../scripts/compilers/compileSports";
 import { sportData } from "../../../data/general/Sport";
+import compileRoadieMiles from "../../../scripts/compilers/compileRoadieMiles";
+import compileProjectMiles from "../../../scripts/compilers/compileProjectMiles";
+import compileMilesMiles from "../../../scripts/compilers/compileMilesMiles";
 
 const SportResultTile = (
     // { event, sportEvent, showSportEvent }: any
@@ -45,43 +48,47 @@ const SportResultTile = (
             type='solid'
             content={
                 <>
-                    <Typography type='h2' content={<>{totalRoadies} Total Roadies</>} />
-                    <Typography type='h2' content={<>{totalProjects} Total Projects</>} />
-                    <Typography type='h2' content={<>{totalMiles} Total Miles</>} />
+                    <Typography type='h2' content={<>{totalRoadies} Total Roadies ({compileRoadieMiles().totalRoadieMiles})</>} paragraphMargins />
+                    <Typography type='h2' content={<>{totalProjects} Total Projects ({compileProjectMiles().totalProjectMiles})</>} paragraphMargins />
+                    <Typography type='h2' content={<>{totalMiles} Total Miles ({compileMilesMiles().totalMilesMiles})</>} paragraphMargins />
+                    <Typography type='h3' content='2023' paragraphMargins />
                     {sportData[2023].roadies.map(
                         ({ id, name, dist, elev, time }: any) => (
                             <div key={id}>
-                                <Typography type='h4' content={<>{name}</>} inline boldFace />{': '}
+                                <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
                                 <Typography type='h4' content={<>{dist}mi</>} inline />{' '}
                                 <Typography type='h4' content={<>{elev.toLocaleString()}ft</>} inline />{' '}
                                 <Typography type='h4' content={<>{time}</>} inline />
                             </div>
                         )
                     )}
+                    <Typography type='h3' content='2022' paragraphMargins />
                     {sportData[2022].roadies.map(
                         ({ id, name, dist, elev, time }: any) => (
                             <div key={id}>
-                                <Typography type='h4' content={<>{name}</>} inline boldFace />{': '}
+                                <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
                                 <Typography type='h4' content={<>{dist}mi</>} inline />{' '}
                                 <Typography type='h4' content={<>{elev.toLocaleString()}ft</>} inline />{' '}
                                 <Typography type='h4' content={<>{time}</>} inline />
                             </div>
                         )
                     )}
+                    <Typography type='h3' content='2021' paragraphMargins />
                     {sportData[2021].roadies.map(
                         ({ id, name, dist, elev, time }: any) => (
                             <div key={id}>
-                                <Typography type='h4' content={<>{name}</>} inline boldFace />{': '}
+                                <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
                                 <Typography type='h4' content={<>{dist}mi</>} inline />{' '}
                                 <Typography type='h4' content={<>{elev.toLocaleString()}ft</>} inline />{' '}
                                 <Typography type='h4' content={<>{time}</>} inline />
                             </div>
                         )
                     )}
+                    <Typography type='h3' content='2020' paragraphMargins />
                     {sportData[2020].roadies.map(
                         ({ id, name, dist, elev, time }: any) => (
                             <div key={id}>
-                                <Typography type='h4' content={<>{name}</>} inline boldFace />{': '}
+                                <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
                                 <Typography type='h4' content={<>{dist}mi</>} inline />{' '}
                                 <Typography type='h4' content={<>{elev.toLocaleString()}ft</>} inline />{' '}
                                 <Typography type='h4' content={<>{time}</>} inline />
