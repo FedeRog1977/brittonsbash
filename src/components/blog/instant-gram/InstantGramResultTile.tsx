@@ -4,7 +4,7 @@ import Typography from "../../../bashBlocks/elements/Typography";
 import "./styles/InstantGramTile.css";
 import Article from "../../../bashBlocks/components/Article";
 import Tile from "../../../bashBlocks/components/Tile";
-import refactorEvent from "../../../scripts/blog/instant-gram/refactorEvent";
+import refactorEvent from "../../../scripts/compilers/refactorEvent";
 import DropDown from "../../../bashBlocks/components/DropDown";
 import { useMobile } from "../../../scripts/general/isMobile";
 
@@ -84,14 +84,11 @@ const InstantGramResultTile = (
                     {refactoredEvent[0].showSportEvent &&
                         <div className='instant-gram-tile-sport'>
                             <div>
-                                {/* <Typography type='body' content='Distance: ' textAlign='center' boldFace inline />{' '} */}
-                                <Typography type='body' content={refactoredEvent[0].sportDist} textAlign='center' inline />
-                                <Typography type='body' content={<>&nbsp;&#124;&nbsp;</>} textAlign='center' inline />
-                                {/* <Typography type='body' content='Elevation: ' textAlign='center' boldFace inline />{' '} */}
-                                <Typography type='body' content={refactoredEvent[0].sportElev} textAlign='center' inline />
-                                <Typography type='body' content={<>&nbsp;&#124;&nbsp;</>} textAlign='center' inline />
-                                {/* <Typography type='body' content='Time: ' textAlign='center' boldFace inline />{' '} */}
-                                <Typography type='body' content={refactoredEvent[0].sportTime} textAlign='center' inline />
+                                <Typography type='body' content={refactoredEvent[0].sportDist} textAlign='center' boldFace inline />
+                                <Typography type='body' content={<>&nbsp;&nbsp;</>} textAlign='center' boldFace inline />
+                                <Typography type='body' content={refactoredEvent[0].sportElev} textAlign='center' boldFace inline />
+                                <Typography type='body' content={<>&nbsp;&nbsp;</>} textAlign='center' boldFace inline />
+                                <Typography type='body' content={refactoredEvent[0].sportTime} textAlign='center' boldFace inline />
                             </div>
                             {refactoredEvent[0].sportIslands &&
                                 <div className='instant-gram-tile-sport-element'>

@@ -1,4 +1,4 @@
-import { sportData } from "../../../data/general/Sport";
+import { sportData } from "../../data/general/Sport";
 
 export default function compileEvents() {
     const allSport: any[] = [];

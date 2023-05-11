@@ -1,3 +1,6 @@
+import { toFeet } from "../formatters/toFeet";
+import { toMiles } from "../formatters/toMiles";
+
 const refactorEvent = (
     { event, sportEvent, showSportEvent }: any
 ) => {
@@ -43,9 +46,9 @@ const refactorEvent = (
     }
 
     for (var j in sportEvent) {
-        distances.push(`${sportEvent[j].dist.toLocaleString("en-UK")}mi`);
-        elevs.push(`${sportEvent[j].elev.toLocaleString("en-UK")}ft`);
-        times.push(`${sportEvent[j].time}`);
+        distances.push(toMiles(sportEvent[j].dist));
+        elevs.push(toFeet(sportEvent[j].elev));
+        times.push(sportEvent[j].time);
         for (var k in sportEvent[j].islands) {
             islandsS.push(sportEvent[j].islands[k]);
         }

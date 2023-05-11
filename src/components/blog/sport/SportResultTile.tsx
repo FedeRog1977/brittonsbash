@@ -4,9 +4,9 @@ import Typography from "../../../bashBlocks/elements/Typography";
 import "../instant-gram/styles/InstantGramTile.css";
 import Article from "../../../bashBlocks/components/Article";
 import Tile from "../../../bashBlocks/components/Tile";
-import refactorEvent from "../../../scripts/blog/instant-gram/refactorEvent";
+import refactorEvent from "../../../scripts/compilers/refactorEvent";
 import DropDown from "../../../bashBlocks/components/DropDown";
-import compileSports from "../../../scripts/blog/instant-gram/compileSports";
+import compileSports from "../../../scripts/compilers/compileSports";
 import { sportData } from "../../../data/general/Sport";
 
 const SportResultTile = (
@@ -21,42 +21,6 @@ const SportResultTile = (
     //         setShowDropDown(false);
     //     }
     // }
-
-    function getRoadieType(name: string) {
-        var type = '';
-
-        if (name === 'century') {
-            type = 'Century';
-        } else if (name === 'strathaven') {
-            type = 'Strathaven';
-        } else if (name === 'fenwickWindfarm') {
-            type = 'Fenwick + Wind Farm';
-        } else if (name === 'windfarm') {
-            type = 'Wind Farm';
-        } else if (name === 'fenwick') {
-            type = 'Fenwick';
-        } else if (name === 'throntonhall') {
-            type = 'Thorntonhall';
-        } else {
-            type = 'Other';
-        }
-
-        return type;
-    }
-
-    function getMilesType(name: string) {
-        var type = '';
-
-        if (name === 'waterfoot') {
-            type = 'Waterfoot';
-        } else if (name === 'thorntonhall') {
-            type = 'Thorntonhall';
-        } else {
-            type = 'Other';
-        }
-
-        return type;
-    }
 
     const totalRoadies =
         sportData[2023].roadies.length
@@ -87,7 +51,7 @@ const SportResultTile = (
                     {sportData[2023].roadies.map(
                         ({ id, name, dist, elev, time }: any) => (
                             <div key={id}>
-                                <Typography type='h4' content={<>{getRoadieType(name)}</>} inline boldFace />{': '}
+                                <Typography type='h4' content={<>{name}</>} inline boldFace />{': '}
                                 <Typography type='h4' content={<>{dist}mi</>} inline />{' '}
                                 <Typography type='h4' content={<>{elev.toLocaleString()}ft</>} inline />{' '}
                                 <Typography type='h4' content={<>{time}</>} inline />
@@ -97,7 +61,7 @@ const SportResultTile = (
                     {sportData[2022].roadies.map(
                         ({ id, name, dist, elev, time }: any) => (
                             <div key={id}>
-                                <Typography type='h4' content={<>{getRoadieType(name)}</>} inline boldFace />{': '}
+                                <Typography type='h4' content={<>{name}</>} inline boldFace />{': '}
                                 <Typography type='h4' content={<>{dist}mi</>} inline />{' '}
                                 <Typography type='h4' content={<>{elev.toLocaleString()}ft</>} inline />{' '}
                                 <Typography type='h4' content={<>{time}</>} inline />
@@ -107,7 +71,7 @@ const SportResultTile = (
                     {sportData[2021].roadies.map(
                         ({ id, name, dist, elev, time }: any) => (
                             <div key={id}>
-                                <Typography type='h4' content={<>{getRoadieType(name)}</>} inline boldFace />{': '}
+                                <Typography type='h4' content={<>{name}</>} inline boldFace />{': '}
                                 <Typography type='h4' content={<>{dist}mi</>} inline />{' '}
                                 <Typography type='h4' content={<>{elev.toLocaleString()}ft</>} inline />{' '}
                                 <Typography type='h4' content={<>{time}</>} inline />
@@ -117,7 +81,7 @@ const SportResultTile = (
                     {sportData[2020].roadies.map(
                         ({ id, name, dist, elev, time }: any) => (
                             <div key={id}>
-                                <Typography type='h4' content={<>{getRoadieType(name)}</>} inline boldFace />{': '}
+                                <Typography type='h4' content={<>{name}</>} inline boldFace />{': '}
                                 <Typography type='h4' content={<>{dist}mi</>} inline />{' '}
                                 <Typography type='h4' content={<>{elev.toLocaleString()}ft</>} inline />{' '}
                                 <Typography type='h4' content={<>{time}</>} inline />

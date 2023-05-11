@@ -1,8 +1,8 @@
 import { useState } from "react";
 import InstantGramSearchTile from "./InstantGramSearchTile";
 import InstantGramResultTile from "./InstantGramResultTile";
-import compileEvents from "../../../scripts/blog/instant-gram/compileEvents";
-import compileSports from "../../../scripts/blog/instant-gram/compileSports";
+import compileEvents from "../../../scripts/compilers/compileEvents";
+import compileSports from "../../../scripts/compilers/compileSports";
 
 const InstantGramSearch = () => {
     const allEvents = compileEvents();
