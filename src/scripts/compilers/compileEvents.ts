@@ -19,7 +19,7 @@ export default function compileEvents() {
         allEvents.push(eventData[2020][d]);
     }
 
-    console.log('All Events:\n', allEvents);
-
     return allEvents;
 };
+
+console.log(compileEvents());

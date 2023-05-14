@@ -87,18 +87,6 @@ const compileMiles = () => {
         2020: toFeet(totalMilesElev2020)
     });
 
-    console.log(
-        'Miles:\n\n',
-        miles,
-        '\n\nNumber of Miles:\n\n',
-        milesN,
-        '\n\nMiles Miles:\n\n',
-        milesMiles,
-        '\n\nMiles Elevation:\n\n',
-        milesElev
-
-    );
-
     return {
         miles,
         milesN,
@@ -108,3 +96,5 @@ const compileMiles = () => {
 };
 
 export default compileMiles;
+
+console.log(compileMiles());

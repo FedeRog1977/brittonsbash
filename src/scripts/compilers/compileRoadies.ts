@@ -87,18 +87,6 @@ const compileRoadies = () => {
         2020: toFeet(totalRoadieElev2020)
     });
 
-    console.log(
-        'Roadies:\n\n',
-        roadies,
-        '\n\nNumber of Roadies:\n\n',
-        roadiesN,
-        '\n\nRoadie Miles:\n\n',
-        roadiesMiles,
-        '\n\nRoadie Elevation:\n\n',
-        roadiesElev
-
-    );
-
     return {
         roadies,
         roadiesN,
@@ -108,3 +96,5 @@ const compileRoadies = () => {
 };
 
 export default compileRoadies;
+
+console.log(compileRoadies());

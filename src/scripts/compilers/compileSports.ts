@@ -19,7 +19,7 @@ export default function compileEvents() {
         allSport.push(sportData[2020].projects[w]);
     }
 
-    console.log('All Sport Events:\n', allSport);
-
     return allSport;
 };
+
+console.log(compileEvents());

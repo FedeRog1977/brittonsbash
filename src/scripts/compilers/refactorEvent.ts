@@ -118,8 +118,6 @@ const refactorEvent = (
         }
     );
 
-    console.log('Refactored Event:\n', refactoredEvent);
-
     return refactoredEvent;
 };
 
