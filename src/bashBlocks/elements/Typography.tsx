@@ -1,4 +1,5 @@
 import { FC, ReactElement } from "react";
+import { useMobile } from "../../scripts/general/useMobile";
 import './styles/Typography.css';
 
 interface TypographyProps {
@@ -59,6 +60,8 @@ const Typography: FC<TypographyProps> = (
         mB,
     }: any
 ) => {
+    const isMobile = useMobile();
+
     return (
         <div
             className={
@@ -67,8 +70,16 @@ const Typography: FC<TypographyProps> = (
             style={{
                 display: (inline && 'inline'),
                 textAlign: textAlign,
-                marginTop: (paragraphMargins ? '20px' : (mT ? mT : '0px')),
-                marginBottom: (paragraphMargins ? '30px' : (mB ? mB : '0px')),
+                marginTop: (paragraphMargins ?
+                    (isMobile ? '10px' : '20px')
+                    :
+                    (mT ? mT : '0px')
+                ),
+                marginBottom: (paragraphMargins ?
+                    (isMobile ? '15px' : '30px')
+                    :
+                    (mB ? mB : '0px')
+                ),
                 marginLeft: 0,
                 marginRight: 0,
                 padding: 0,

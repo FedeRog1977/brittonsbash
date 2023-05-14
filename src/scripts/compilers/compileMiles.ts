@@ -3,102 +3,115 @@ import { toFeet } from "../formatters/toFeet";
 import { toMiles } from "../formatters/toMiles";
 
 const compileMiles = () => {
-    const allMiles: any[] = [];
+    // Miles
 
-    var totalMiles2023 = sportData[2023].miles.length;
-    var totalMiles2022 = sportData[2022].miles.length;
-    var totalMiles2021 = sportData[2021].miles.length;
-    var totalMiles2020 = sportData[2020].miles.length;
+    const miles: any[] = [];
+    miles.push({
+        2023: sportData[2023].miles,
+        2022: sportData[2022].miles,
+        2021: sportData[2021].miles,
+        2020: sportData[2020].miles
+    });
 
-    var totalMilesMiles2023: any = 0;
-    var totalMilesMiles2022: any = 0;
-    var totalMilesMiles2021: any = 0;
-    var totalMilesMiles2020: any = 0;
+    // Number of Miles
 
-    var totalMilesElev2023: any = 0;
-    var totalMilesElev2022: any = 0;
-    var totalMilesElev2021: any = 0;
-    var totalMilesElev2020: any = 0;
+    const milesN: any[] = [];
+    milesN.push({
+        'total': (
+            sportData[2023].miles.length
+            + sportData[2022].miles.length
+            + sportData[2021].miles.length
+            + sportData[2020].miles.length
+        ),
+        2023: sportData[2023].miles.length,
+        2022: sportData[2022].miles.length,
+        2021: sportData[2021].miles.length,
+        2020: sportData[2020].miles.length
+    });
+
+    var totalMilesMiles2023: number = 0;
+    var totalMilesMiles2022: number = 0;
+    var totalMilesMiles2021: number = 0;
+    var totalMilesMiles2020: number = 0;
+
+    var totalMilesElev2023: number = 0;
+    var totalMilesElev2022: number = 0;
+    var totalMilesElev2021: number = 0;
+    var totalMilesElev2020: number = 0;
 
     for (var i in sportData[2023].miles) {
-        allMiles.push(sportData[2023].miles[i]);
         totalMilesMiles2023 = totalMilesMiles2023 + sportData[2023].miles[i].dist;
         totalMilesElev2023 = totalMilesElev2023 + sportData[2023].miles[i].elev;
     }
 
     for (var i in sportData[2022].miles) {
-        allMiles.push(sportData[2022].miles[i]);
         totalMilesMiles2022 = totalMilesMiles2022 + sportData[2022].miles[i].dist;
         totalMilesElev2022 = totalMilesElev2022 + sportData[2022].miles[i].elev;
     }
 
     for (var i in sportData[2021].miles) {
-        allMiles.push(sportData[2021].miles[i]);
         totalMilesMiles2021 = totalMilesMiles2021 + sportData[2021].miles[i].dist;
         totalMilesElev2021 = totalMilesElev2021 + sportData[2021].miles[i].elev;
     }
 
     for (var i in sportData[2020].miles) {
-        allMiles.push(sportData[2020].miles[i]);
         totalMilesMiles2020 = totalMilesMiles2020 + sportData[2020].miles[i].dist;
         totalMilesElev2020 = totalMilesElev2020 + sportData[2020].miles[i].elev;
     }
 
-    // Total Miles
+    // Miles Miles
 
-    var totalMiles =
-        totalMiles2023
-        + totalMiles2022
-        + totalMiles2021
-        + totalMiles2020;
+    const milesMiles: any[] = [];
+    milesMiles.push({
+        'total': (
+            toMiles(
+                totalMilesMiles2023
+                + totalMilesMiles2022
+                + totalMilesMiles2021
+                + totalMilesMiles2020
+            )
+        ),
+        2023: toMiles(totalMilesMiles2023),
+        2022: toMiles(totalMilesMiles2022),
+        2021: toMiles(totalMilesMiles2021),
+        2020: toMiles(totalMilesMiles2020)
+    });
 
-    // Total Miles Miles
+    // Miles Elevation
 
-    var totalMilesMiles =
-        totalMilesMiles2023
-        + totalMilesMiles2022
-        + totalMilesMiles2021
-        + totalMilesMiles2020;
+    const milesElev: any[] = [];
+    milesElev.push({
+        'total': (
+            toFeet(
+                totalMilesElev2023
+                + totalMilesElev2022
+                + totalMilesElev2021
+                + totalMilesElev2020
+            )
+        ),
+        2023: toFeet(totalMilesElev2023),
+        2022: toFeet(totalMilesElev2022),
+        2021: toFeet(totalMilesElev2021),
+        2020: toFeet(totalMilesElev2020)
+    });
 
-    totalMilesMiles = toMiles(totalMilesMiles);
-    totalMilesMiles2023 = toMiles(totalMilesMiles2023);
-    totalMilesMiles2022 = toMiles(totalMilesMiles2022);
-    totalMilesMiles2021 = toMiles(totalMilesMiles2021);
-    totalMilesMiles2020 = toMiles(totalMilesMiles2020);
+    console.log(
+        'Miles:\n\n',
+        miles,
+        '\n\nNumber of Miles:\n\n',
+        milesN,
+        '\n\Miles Miles:\n\n',
+        milesMiles,
+        '\n\Miles Elevation:\n\n',
+        milesElev
 
-    // Total Roadie Elevation
-
-    var totalMilesElev =
-        totalMilesElev2023
-        + totalMilesElev2022
-        + totalMilesElev2021
-        + totalMilesElev2020;
-
-    totalMilesElev = toFeet(totalMilesElev);
-    totalMilesElev2023 = toFeet(totalMilesElev2023);
-    totalMilesElev2022 = toFeet(totalMilesElev2022);
-    totalMilesElev2021 = toFeet(totalMilesElev2021);
-    totalMilesElev2020 = toFeet(totalMilesElev2020);
-
-    // Return Values
+    );
 
     return {
-        allMiles,
-        totalMiles,
-        totalMiles2023,
-        totalMiles2022,
-        totalMiles2021,
-        totalMiles2020,
-        totalMilesMiles,
-        totalMilesMiles2023,
-        totalMilesMiles2022,
-        totalMilesMiles2021,
-        totalMilesMiles2020,
-        totalMilesElev,
-        totalMilesElev2023,
-        totalMilesElev2022,
-        totalMilesElev2021,
-        totalMilesElev2020
+        miles,
+        milesN,
+        milesMiles,
+        milesElev
     };
 };
 

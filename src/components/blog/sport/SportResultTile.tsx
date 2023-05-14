@@ -169,23 +169,46 @@ const SportResultTile = (
                 content={
                     <>
                         <Typography
-                            type='h2'
+                            type='body'
                             content={
                                 <>
-                                    Projects: {compileProjects().totalProjects}
+                                    <Typography
+                                        type='h2'
+                                        content={
+                                            <>
+                                                Projects: {compileProjects().projectsN[0].total}
+                                            </>
+                                        }
+                                    />
+                                    <Typography
+                                        type='h3'
+                                        content={
+                                            <>
+                                                {compileProjects().projectsMiles[0].total}&nbsp;&nbsp;{compileProjects().projectsElev[0].total}
+                                            </>
+                                        }
+                                    />
                                 </>
                             }
+                            paragraphMargins
                         />
                         <Typography
-                            type='h3'
+                            type='body'
                             content={
                                 <>
-                                    {compileProjects().totalProjectMiles}&nbsp;&nbsp;{compileProjects().totalProjectElev}
+                                    <Typography
+                                        type='h3'
+                                        content={<>2023: {compileProjects().projectsN[0][2023]}</>}
+                                    />
+                                    <Typography
+                                        type='h4'
+                                        content={<>{compileProjects().projectsMiles[0][2023]}&nbsp;&nbsp;{compileProjects().projectsElev[0][2023]}</>}
+                                    />
                                 </>
                             }
+                            paragraphMargins
                         />
-                        <Typography type='h3' content={<>2023: {compileProjects().totalProjects2023}</>} paragraphMargins />
-                        {sportData[2023].projects.map(
+                        {compileProjects().projects[0][2023].map(
                             ({ id, name, dist, elev, time }: any) => (
                                 <div key={id}>
                                     <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
@@ -195,8 +218,23 @@ const SportResultTile = (
                                 </div>
                             )
                         )}
-                        <Typography type='h3' content={<>2022: {compileProjects().totalProjects2022}</>} paragraphMargins />
-                        {sportData[2022].projects.map(
+                        <Typography
+                            type='body'
+                            content={
+                                <>
+                                    <Typography
+                                        type='h3'
+                                        content={<>2022: {compileProjects().projectsN[0][2022]}</>}
+                                    />
+                                    <Typography
+                                        type='h4'
+                                        content={<>{compileProjects().projectsMiles[0][2022]}&nbsp;&nbsp;{compileProjects().projectsElev[0][2022]}</>}
+                                    />
+                                </>
+                            }
+                            paragraphMargins
+                        />
+                        {compileProjects().projects[0][2022].map(
                             ({ id, name, dist, elev, time }: any) => (
                                 <div key={id}>
                                     <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
@@ -206,8 +244,23 @@ const SportResultTile = (
                                 </div>
                             )
                         )}
-                        <Typography type='h3' content={<>2021: {compileProjects().totalProjects2021}</>} paragraphMargins />
-                        {sportData[2021].projects.map(
+                        <Typography
+                            type='body'
+                            content={
+                                <>
+                                    <Typography
+                                        type='h3'
+                                        content={<>2021: {compileProjects().projectsN[0][2021]}</>}
+                                    />
+                                    <Typography
+                                        type='h4'
+                                        content={<>{compileProjects().projectsMiles[0][2021]}&nbsp;&nbsp;{compileProjects().projectsElev[0][2021]}</>}
+                                    />
+                                </>
+                            }
+                            paragraphMargins
+                        />
+                        {compileProjects().projects[0][2021].map(
                             ({ id, name, dist, elev, time }: any) => (
                                 <div key={id}>
                                     <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
@@ -217,8 +270,23 @@ const SportResultTile = (
                                 </div>
                             )
                         )}
-                        <Typography type='h3' content={<>2020: {compileProjects().totalProjects2020}</>} paragraphMargins />
-                        {sportData[2020].projects.map(
+                        <Typography
+                            type='body'
+                            content={
+                                <>
+                                    <Typography
+                                        type='h3'
+                                        content={<>2020: {compileProjects().projectsN[0][2020]}</>}
+                                    />
+                                    <Typography
+                                        type='h4'
+                                        content={<>{compileProjects().projectsMiles[0][2020]}&nbsp;&nbsp;{compileProjects().projectsElev[0][2020]}</>}
+                                    />
+                                </>
+                            }
+                            paragraphMargins
+                        />
+                        {compileProjects().projects[0][2020].map(
                             ({ id, name, dist, elev, time }: any) => (
                                 <div key={id}>
                                     <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
@@ -236,23 +304,46 @@ const SportResultTile = (
                 content={
                     <>
                         <Typography
-                            type='h2'
+                            type='body'
                             content={
                                 <>
-                                    Miles: {compileMiles().totalMiles}
+                                    <Typography
+                                        type='h2'
+                                        content={
+                                            <>
+                                                Miles: {compileMiles().milesN[0].total}
+                                            </>
+                                        }
+                                    />
+                                    <Typography
+                                        type='h3'
+                                        content={
+                                            <>
+                                                {compileMiles().milesMiles[0].total}&nbsp;&nbsp;{compileMiles().milesElev[0].total}
+                                            </>
+                                        }
+                                    />
                                 </>
                             }
+                            paragraphMargins
                         />
                         <Typography
-                            type='h3'
+                            type='body'
                             content={
                                 <>
-                                    {compileMiles().totalMilesMiles}&nbsp;&nbsp;{compileMiles().totalMilesElev}
+                                    <Typography
+                                        type='h3'
+                                        content={<>2023: {compileMiles().milesN[0][2023]}</>}
+                                    />
+                                    <Typography
+                                        type='h4'
+                                        content={<>{compileMiles().milesMiles[0][2023]}&nbsp;&nbsp;{compileMiles().milesElev[0][2023]}</>}
+                                    />
                                 </>
                             }
+                            paragraphMargins
                         />
-                        <Typography type='h3' content={<>2023: {compileMiles().totalMiles2023}</>} paragraphMargins />
-                        {sportData[2023].miles.map(
+                        {compileMiles().miles[0][2023].map(
                             ({ id, name, dist, elev, time }: any) => (
                                 <div key={id}>
                                     <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
@@ -262,8 +353,23 @@ const SportResultTile = (
                                 </div>
                             )
                         )}
-                        <Typography type='h3' content={<>2022: {compileMiles().totalMiles2022}</>} paragraphMargins />
-                        {sportData[2022].miles.map(
+                        <Typography
+                            type='body'
+                            content={
+                                <>
+                                    <Typography
+                                        type='h3'
+                                        content={<>2022: {compileMiles().milesN[0][2022]}</>}
+                                    />
+                                    <Typography
+                                        type='h4'
+                                        content={<>{compileMiles().milesMiles[0][2022]}&nbsp;&nbsp;{compileMiles().milesElev[0][2022]}</>}
+                                    />
+                                </>
+                            }
+                            paragraphMargins
+                        />
+                        {compileMiles().miles[0][2022].map(
                             ({ id, name, dist, elev, time }: any) => (
                                 <div key={id}>
                                     <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
@@ -273,8 +379,23 @@ const SportResultTile = (
                                 </div>
                             )
                         )}
-                        <Typography type='h3' content={<>2021: {compileMiles().totalMiles2021}</>} paragraphMargins />
-                        {sportData[2021].miles.map(
+                        <Typography
+                            type='body'
+                            content={
+                                <>
+                                    <Typography
+                                        type='h3'
+                                        content={<>2021: {compileMiles().milesN[0][2021]}</>}
+                                    />
+                                    <Typography
+                                        type='h4'
+                                        content={<>{compileMiles().milesMiles[0][2021]}&nbsp;&nbsp;{compileMiles().milesElev[0][2021]}</>}
+                                    />
+                                </>
+                            }
+                            paragraphMargins
+                        />
+                        {compileMiles().miles[0][2021].map(
                             ({ id, name, dist, elev, time }: any) => (
                                 <div key={id}>
                                     <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
@@ -284,8 +405,23 @@ const SportResultTile = (
                                 </div>
                             )
                         )}
-                        <Typography type='h3' content={<>2020: {compileMiles().totalMiles2020}</>} paragraphMargins />
-                        {sportData[2020].miles.map(
+                        <Typography
+                            type='body'
+                            content={
+                                <>
+                                    <Typography
+                                        type='h3'
+                                        content={<>2020: {compileMiles().milesN[0][2020]}</>}
+                                    />
+                                    <Typography
+                                        type='h4'
+                                        content={<>{compileMiles().milesMiles[0][2020]}&nbsp;&nbsp;{compileMiles().milesElev[0][2020]}</>}
+                                    />
+                                </>
+                            }
+                            paragraphMargins
+                        />
+                        {compileMiles().miles[0][2020].map(
                             ({ id, name, dist, elev, time }: any) => (
                                 <div key={id}>
                                     <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
