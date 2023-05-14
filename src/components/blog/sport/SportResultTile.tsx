@@ -41,7 +41,7 @@ const SportResultTile = (
                                         type='h2'
                                         content={
                                             <>
-                                                Roadies: {compileRoadies().totalRoadies}
+                                                Roadies: {compileRoadies().roadiesN[0].total}
                                             </>
                                         }
                                     />
@@ -49,7 +49,7 @@ const SportResultTile = (
                                         type='h3'
                                         content={
                                             <>
-                                                {compileRoadies().totalRoadieMiles}&nbsp;&nbsp;{compileRoadies().totalRoadieElev}
+                                                {compileRoadies().roadiesMiles[0].total}&nbsp;&nbsp;{compileRoadies().roadiesElev[0].total}
                                             </>
                                         }
                                     />
@@ -63,17 +63,17 @@ const SportResultTile = (
                                 <>
                                     <Typography
                                         type='h3'
-                                        content={<>2023: {compileRoadies().totalRoadies2023}</>}
+                                        content={<>2023: {compileRoadies().roadiesN[0][2023]}</>}
                                     />
                                     <Typography
                                         type='h4'
-                                        content={<>{compileRoadies().totalRoadieMiles2023}&nbsp;&nbsp;{compileRoadies().totalRoadieElev2023}</>}
+                                        content={<>{compileRoadies().roadiesMiles[0][2023]}&nbsp;&nbsp;{compileRoadies().roadiesElev[0][2023]}</>}
                                     />
                                 </>
                             }
                             paragraphMargins
                         />
-                        {sportData[2023].roadies.map(
+                        {compileRoadies().roadies[0][2023].map(
                             ({ id, name, dist, elev, time }: any) => (
                                 <div key={id}>
                                     <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
@@ -89,17 +89,17 @@ const SportResultTile = (
                                 <>
                                     <Typography
                                         type='h3'
-                                        content={<>2022: {compileRoadies().totalRoadies2022}</>}
+                                        content={<>2022: {compileRoadies().roadiesN[0][2022]}</>}
                                     />
                                     <Typography
                                         type='h4'
-                                        content={<>{compileRoadies().totalRoadieMiles2022}&nbsp;&nbsp;{compileRoadies().totalRoadieElev2022}</>}
+                                        content={<>{compileRoadies().roadiesMiles[0][2022]}&nbsp;&nbsp;{compileRoadies().roadiesElev[0][2022]}</>}
                                     />
                                 </>
                             }
                             paragraphMargins
                         />
-                        {sportData[2022].roadies.map(
+                        {compileRoadies().roadies[0][2022].map(
                             ({ id, name, dist, elev, time }: any) => (
                                 <div key={id}>
                                     <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
@@ -115,17 +115,17 @@ const SportResultTile = (
                                 <>
                                     <Typography
                                         type='h3'
-                                        content={<>2021: {compileRoadies().totalRoadies2021}</>}
+                                        content={<>2021: {compileRoadies().roadiesN[0][2021]}</>}
                                     />
                                     <Typography
                                         type='h4'
-                                        content={<>{compileRoadies().totalRoadieMiles2021}&nbsp;&nbsp;{compileRoadies().totalRoadieElev2021}</>}
+                                        content={<>{compileRoadies().roadiesMiles[0][2021]}&nbsp;&nbsp;{compileRoadies().roadiesElev[0][2021]}</>}
                                     />
                                 </>
                             }
                             paragraphMargins
                         />
-                        {sportData[2021].roadies.map(
+                        {compileRoadies().roadies[0][2021].map(
                             ({ id, name, dist, elev, time }: any) => (
                                 <div key={id}>
                                     <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
@@ -141,17 +141,17 @@ const SportResultTile = (
                                 <>
                                     <Typography
                                         type='h3'
-                                        content={<>2020: {compileRoadies().totalRoadies2020}</>}
+                                        content={<>2020: {compileRoadies().roadiesN[0][2020]}</>}
                                     />
                                     <Typography
                                         type='h4'
-                                        content={<>{compileRoadies().totalRoadieMiles2020}&nbsp;&nbsp;{compileRoadies().totalRoadieElev2020}</>}
+                                        content={<>{compileRoadies().roadiesMiles[0][2020]}&nbsp;&nbsp;{compileRoadies().roadiesElev[0][2020]}</>}
                                     />
                                 </>
                             }
                             paragraphMargins
                         />
-                        {sportData[2020].roadies.map(
+                        {compileRoadies().roadies[0][2020].map(
                             ({ id, name, dist, elev, time }: any) => (
                                 <div key={id}>
                                     <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}

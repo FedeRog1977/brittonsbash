@@ -44,32 +44,30 @@ const ImageSlider = ({ slides }: any) => {
                         key={index}
                     >
                         {index === current && (
-                            <>
+                            <div className='image-slider-container'>
                                 <img
-                                    className='slider-image'
+                                    className='image-slider-image'
                                     src={slide.url}
                                     alt={slide.alt}
                                 />
                                 {slide.description &&
-                                    <div className='slider-caption'>
+                                    <div className='image-slider-caption'>
                                         <Typography
-                                            type='h3'
+                                            type={isMobile ? 'body' : 'h4'}
                                             fontFamily='sans-serif'
-                                            content={
-                                                <>
-                                                    {slide.description}
-                                                    <Typography
-                                                        type='body'
-                                                        content={<>{current + 1}/{slides.length}</>}
-                                                    />
-                                                </>
-                                            }
-                                            textAlign='center'
-                                            paragraphMargins
+                                            content={slide.description}
+                                            textAlign='left'
+                                            boldFace
+                                            color='#FFFFFF'
+                                        />
+                                        <Typography
+                                            type={isMobile ? 'caption' : 'body'}
+                                            content={<>{current + 1}/{slides.length}</>}
+                                            color='#FFFFFF'
                                         />
                                     </div>
                                 }
-                            </>
+                            </div>
                         )}
                     </div>
                 );

@@ -1,6 +1,24 @@
 export const eventData = {
 	"2023": [
 		{
+			"id": "E2023019",
+			"prefix": "",
+			"names": [
+				"What Could Have Been",
+			],
+			"startDate": "12th of May",
+			"endDate": "13th of May",
+			"description": "Yeah I really cba writing a description for this. Still in rage. Bottle of whisky and no hills. That’s the way it is.",
+			"images": [
+				{
+					"url": "",
+					"alt": "",
+					"description": "",
+				},
+			],
+			"youthHostels": [],
+		},
+		{
 			"id": "E2023018",
 			"prefix": "",
 			"names": [
