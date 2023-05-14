@@ -1,3 +1,4 @@
+import { sum } from "../formatters/sum";
 import { toFeet } from "../formatters/toFeet";
 import { toMiles } from "../formatters/toMiles";
 
@@ -46,8 +47,8 @@ const refactorEvent = (
     }
 
     for (var j in sportEvent) {
-        distances.push(toMiles(sportEvent[j].dist));
-        elevs.push(toFeet(sportEvent[j].elev));
+        distances.push(sportEvent[j].dist);
+        elevs.push(sportEvent[j].elev);
         times.push(sportEvent[j].time);
         for (var k in sportEvent[j].islands) {
             islandsS.push(sportEvent[j].islands[k]);
@@ -82,8 +83,8 @@ const refactorEvent = (
     var eventDescription = event.description;
     var eventImages = event.images;
     var eventYouthHostels = event.youthHostels.join(', ');
-    var sportDist = distances.join(', ');
-    var sportElev = elevs.join(', ');
+    var sportDist = toMiles(distances.reduce(sum));
+    var sportElev = toFeet(elevs.reduce(sum));
     var sportTime = times.join(', ');
     var sportIslands = islandsS.join(', ');
     var sportMunros = munrosS.join(', ')
@@ -94,29 +95,27 @@ const refactorEvent = (
     var sportSubTwos = subTwosS.join(', ');
     var sportDonalds = donaldsS.join(', ');
 
-    refactoredEvent.push(
-        {
-            eventPrefix,
-            eventNames,
-            eventStartDate,
-            eventEndDate,
-            eventDescription,
-            eventImages,
-            eventYouthHostels,
-            sportDist,
-            sportElev,
-            sportTime,
-            sportIslands,
-            sportMunros,
-            sportMunroTops,
-            sportCorbetts,
-            sportCorbettTops,
-            sportGrahams,
-            sportSubTwos,
-            sportDonalds,
-            showSportEvent,
-        }
-    );
+    refactoredEvent.push({
+        eventPrefix,
+        eventNames,
+        eventStartDate,
+        eventEndDate,
+        eventDescription,
+        eventImages,
+        eventYouthHostels,
+        sportDist,
+        sportElev,
+        sportTime,
+        sportIslands,
+        sportMunros,
+        sportMunroTops,
+        sportCorbetts,
+        sportCorbettTops,
+        sportGrahams,
+        sportSubTwos,
+        sportDonalds,
+        showSportEvent,
+    });
 
     return refactoredEvent;
 };

@@ -1,5 +1,5 @@
 import { FC, ReactElement } from "react";
-import { useMobile } from "../../scripts/general/useMobile";
+import { useMobile } from "../../scripts/display/useMobile";
 import './styles/Typography.css';
 
 interface TypographyProps {
@@ -39,6 +39,8 @@ interface TypographyProps {
     refKey?: string;
     mT?: string;
     mB?: string;
+    mL?: string;
+    mR?: string;
 }
 
 const Typography: FC<TypographyProps> = (
@@ -58,6 +60,8 @@ const Typography: FC<TypographyProps> = (
         refKey,
         mT,
         mB,
+        mL,
+        mR,
     }: any
 ) => {
     const isMobile = useMobile();
@@ -80,8 +84,8 @@ const Typography: FC<TypographyProps> = (
                     :
                     (mB ? mB : '0px')
                 ),
-                marginLeft: 0,
-                marginRight: 0,
+                marginLeft: mL ? mL : 0,
+                marginRight: mR ? mR : 0,
                 padding: 0,
             }}
             key={refKey}

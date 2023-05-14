@@ -6,7 +6,7 @@ import Article from "../../../bashBlocks/components/Article";
 import Tile from "../../../bashBlocks/components/Tile";
 import refactorEvent from "../../../scripts/compilers/refactorEvent";
 import DropDown from "../../../bashBlocks/components/DropDown";
-import { useMobile } from "../../../scripts/general/useMobile";
+import { useMobile } from "../../../scripts/display/useMobile";
 
 const InstantGramResultTile = (
     { event, sportEvent, showSportEvent }: any
@@ -35,7 +35,7 @@ const InstantGramResultTile = (
                         {refactoredEvent[0].eventPrefix &&
                             <>
                                 <Typography type='h1' content={refactoredEvent[0].eventPrefix} inline />
-                                <Typography type='h1' content=': ' inline />
+                                <Typography type='h1' content=':' inline />
                             </>
                         }
                         {refactoredEvent[0].eventNames.length > 1 ?
@@ -84,58 +84,92 @@ const InstantGramResultTile = (
                     {refactoredEvent[0].showSportEvent &&
                         <div className='instant-gram-tile-sport'>
                             <div>
-                                <Typography type='body' content={refactoredEvent[0].sportDist} textAlign='center' boldFace inline />
-                                <Typography type='body' content={<>&nbsp;&nbsp;</>} textAlign='center' boldFace inline />
-                                <Typography type='body' content={refactoredEvent[0].sportElev} textAlign='center' boldFace inline />
-                                <Typography type='body' content={<>&nbsp;&nbsp;</>} textAlign='center' boldFace inline />
-                                <Typography type='body' content={refactoredEvent[0].sportTime} textAlign='center' boldFace inline />
+                                <div className='instant-gram-tile-sport-sub-element left'>
+                                    <Typography type='body' content={refactoredEvent[0].sportDist} boldFace inline mR='5px' />
+                                    <Typography type='body' content={refactoredEvent[0].sportElev} boldFace inline mL='5px' />
+                                </div>
+                                <div className='instant-gram-tile-sport-sub-element right'>
+                                    <Typography type='body' content={<>[{refactoredEvent[0].sportTime}]</>} boldFace inline />
+                                </div>
                             </div>
                             {refactoredEvent[0].sportIslands &&
                                 <div className='instant-gram-tile-sport-element'>
-                                    <Typography type='body' content='Island(s): ' textAlign='center' boldFace inline />
-                                    <Typography type='body' content={refactoredEvent[0].sportIslands} textAlign='center' inline />
+                                    <div className='instant-gram-tile-sport-sub-element left'>
+                                        <Typography type='body' content='Island(s): ' textAlign='center' boldFace inline />
+                                    </div>
+                                    <div className='instant-gram-tile-sport-sub-element right'>
+                                        <Typography type='body' content={refactoredEvent[0].sportIslands} textAlign='center' inline />
+                                    </div>
                                 </div>
                             }
                             {refactoredEvent[0].sportMunros &&
                                 <div className='instant-gram-tile-sport-element'>
-                                    <Typography type='body' content='Munro(s): ' textAlign='center' boldFace inline />
-                                    <Typography type='body' content={refactoredEvent[0].sportMunros} textAlign='center' inline />
+                                    <div className='instant-gram-tile-sport-sub-element left'>
+                                        <Typography type='body' content='Munro(s)' boldFace inline />
+                                    </div>
+                                    <div className='instant-gram-tile-sport-sub-element right'>
+                                        <Typography type='body' content={refactoredEvent[0].sportMunros} inline />
+                                    </div>
                                 </div>
                             }
                             {refactoredEvent[0].sportMunroTops &&
                                 <div className='instant-gram-tile-sport-element'>
-                                    <Typography type='body' content='Munro Top(s): ' textAlign='center' boldFace inline />
-                                    <Typography type='body' content={refactoredEvent[0].sportMunroTops} textAlign='center' inline />
+                                    <div className='instant-gram-tile-sport-sub-element left'>
+                                        <Typography type='body' content='Munro Top(s)' boldFace inline />
+                                    </div>
+                                    <div className='instant-gram-tile-sport-sub-element right'>
+                                        <Typography type='body' content={refactoredEvent[0].sportMunroTops} inline />
+                                    </div>
                                 </div>
                             }
                             {refactoredEvent[0].sportCorbetts &&
                                 <div className='instant-gram-tile-sport-element'>
-                                    <Typography type='body' content='Corbett(s): ' textAlign='center' boldFace inline />
-                                    <Typography type='body' content={refactoredEvent[0].sportCorbetts} textAlign='center' inline />
+                                    <div className='instant-gram-tile-sport-sub-element left'>
+                                        <Typography type='body' content='Corbett(s)' boldFace inline />
+                                    </div>
+                                    <div className='instant-gram-tile-sport-sub-element right'>
+                                        <Typography type='body' content={refactoredEvent[0].sportCorbetts} inline />
+                                    </div>
                                 </div>
                             }
                             {refactoredEvent[0].sportCorbettTops &&
                                 <div className='instant-gram-tile-sport-element'>
-                                    <Typography type='body' content='Corbett Top(s): ' textAlign='center' boldFace inline />
-                                    <Typography type='body' content={refactoredEvent[0].sportCorbettTops} textAlign='center' inline />
+                                    <div className='instant-gram-tile-sport-sub-element left'>
+                                        <Typography type='body' content='Corbett Top(s)' boldFace inline />
+                                    </div>
+                                    <div className='instant-gram-tile-sport-sub-element right'>
+                                        <Typography type='body' content={refactoredEvent[0].sportCorbettTops} inline />
+                                    </div>
                                 </div>
                             }
                             {refactoredEvent[0].sportGrahams &&
                                 <div className='instant-gram-tile-sport-element'>
-                                    <Typography type='body' content='Graham(s): ' textAlign='center' boldFace inline />
-                                    <Typography type='body' content={refactoredEvent[0].sportGrahams} textAlign='center' inline />
+                                    <div className='instant-gram-tile-sport-sub-element left'>
+                                        <Typography type='body' content='Graham(s)' boldFace inline />
+                                    </div>
+                                    <div className='instant-gram-tile-sport-sub-element right'>
+                                        <Typography type='body' content={refactoredEvent[0].sportGrahams} inline />
+                                    </div>
                                 </div>
                             }
                             {refactoredEvent[0].sportSubTwos &&
                                 <div className='instant-gram-tile-sport-element'>
-                                    <Typography type='body' content='Sub 2000(s): ' textAlign='center' boldFace inline />
-                                    <Typography type='body' content={refactoredEvent[0].sportSubTwos} textAlign='center' inline />
+                                    <div className='instant-gram-tile-sport-sub-element left'>
+                                        <Typography type='body' content='Sub 2000(s)' boldFace inline />
+                                    </div>
+                                    <div className='instant-gram-tile-sport-sub-element right'>
+                                        <Typography type='body' content={refactoredEvent[0].sportSubTwos} inline />
+                                    </div>
                                 </div>
                             }
                             {refactoredEvent[0].sportDonalds &&
                                 <div className='instant-gram-tile-sport-element'>
-                                    <Typography type='body' content='Donald(s): ' textAlign='center' boldFace inline />
-                                    <Typography type='body' content={refactoredEvent[0].sportDonalds} textAlign='center' inline />
+                                    <div className='instant-gram-tile-sport-sub-element left'>
+                                        <Typography type='body' content='Donald(s)' boldFace inline />
+                                    </div>
+                                    <div className='instant-gram-tile-sport-sub-element right'>
+                                        <Typography type='body' content={refactoredEvent[0].sportDonalds} inline />
+                                    </div>
                                 </div>
                             }
                         </div>
@@ -146,8 +180,8 @@ const InstantGramResultTile = (
                                 type='body'
                                 content={
                                     <>
-                                        <Typography type='body' content='Youth Hostel(s): ' textAlign='left' boldFace inline />
-                                        <Typography type='body' content={refactoredEvent[0].eventYouthHostels} textAlign='left' inline />
+                                        <Typography type='body' content='Youth Hostel(s): ' boldFace inline />
+                                        <Typography type='body' content={refactoredEvent[0].eventYouthHostels} inline />
                                     </>
                                 }
                                 textAlign='center'

@@ -8,7 +8,7 @@ import {
     // faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import Typography from '../elements/Typography';
-import { useMobile } from '../../scripts/general/useMobile';
+import { useMobile } from '../../scripts/display/useMobile';
 
 const ImageSlider = ({ slides }: any) => {
     const isMobile = useMobile();
