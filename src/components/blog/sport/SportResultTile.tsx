@@ -1,13 +1,6 @@
-import { useState } from "react";
-import ImageSlider from "../../../bashBlocks/components/ImageSlider";
 import Typography from "../../../bashBlocks/elements/Typography";
 import "../instant-gram/styles/InstantGramTile.css";
-import Article from "../../../bashBlocks/components/Article";
 import Tile from "../../../bashBlocks/components/Tile";
-import refactorEvent from "../../../scripts/compilers/refactorEvent";
-import DropDown from "../../../bashBlocks/components/DropDown";
-import compileSports from "../../../scripts/compilers/compileSports";
-import { sportData } from "../../../data/general/Sport";
 import compileProjects from "../../../scripts/compilers/compileProjects";
 import compileMiles from "../../../scripts/compilers/compileMiles";
 import compileRoadies from "../../../scripts/compilers/compileRoadies";

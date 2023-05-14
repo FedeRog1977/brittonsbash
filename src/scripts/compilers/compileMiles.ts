@@ -3,8 +3,6 @@ import { toFeet } from "../formatters/toFeet";
 import { toMiles } from "../formatters/toMiles";
 
 const compileMiles = () => {
-    // Miles
-
     const miles: any[] = [];
     miles.push({
         2023: sportData[2023].miles,
@@ -12,8 +10,6 @@ const compileMiles = () => {
         2021: sportData[2021].miles,
         2020: sportData[2020].miles
     });
-
-    // Number of Miles
 
     const milesN: any[] = [];
     milesN.push({
@@ -39,27 +35,25 @@ const compileMiles = () => {
     var totalMilesElev2021: number = 0;
     var totalMilesElev2020: number = 0;
 
-    for (var i in sportData[2023].miles) {
-        totalMilesMiles2023 = totalMilesMiles2023 + sportData[2023].miles[i].dist;
-        totalMilesElev2023 = totalMilesElev2023 + sportData[2023].miles[i].elev;
+    for (var a in sportData[2023].miles) {
+        totalMilesMiles2023 = totalMilesMiles2023 + sportData[2023].miles[a].dist;
+        totalMilesElev2023 = totalMilesElev2023 + sportData[2023].miles[a].elev;
     }
 
-    for (var i in sportData[2022].miles) {
-        totalMilesMiles2022 = totalMilesMiles2022 + sportData[2022].miles[i].dist;
-        totalMilesElev2022 = totalMilesElev2022 + sportData[2022].miles[i].elev;
+    for (var b in sportData[2022].miles) {
+        totalMilesMiles2022 = totalMilesMiles2022 + sportData[2022].miles[b].dist;
+        totalMilesElev2022 = totalMilesElev2022 + sportData[2022].miles[b].elev;
     }
 
-    for (var i in sportData[2021].miles) {
-        totalMilesMiles2021 = totalMilesMiles2021 + sportData[2021].miles[i].dist;
-        totalMilesElev2021 = totalMilesElev2021 + sportData[2021].miles[i].elev;
+    for (var c in sportData[2021].miles) {
+        totalMilesMiles2021 = totalMilesMiles2021 + sportData[2021].miles[c].dist;
+        totalMilesElev2021 = totalMilesElev2021 + sportData[2021].miles[c].elev;
     }
 
-    for (var i in sportData[2020].miles) {
-        totalMilesMiles2020 = totalMilesMiles2020 + sportData[2020].miles[i].dist;
-        totalMilesElev2020 = totalMilesElev2020 + sportData[2020].miles[i].elev;
+    for (var d in sportData[2020].miles) {
+        totalMilesMiles2020 = totalMilesMiles2020 + sportData[2020].miles[d].dist;
+        totalMilesElev2020 = totalMilesElev2020 + sportData[2020].miles[d].elev;
     }
-
-    // Miles Miles
 
     const milesMiles: any[] = [];
     milesMiles.push({
@@ -76,8 +70,6 @@ const compileMiles = () => {
         2021: toMiles(totalMilesMiles2021),
         2020: toMiles(totalMilesMiles2020)
     });
-
-    // Miles Elevation
 
     const milesElev: any[] = [];
     milesElev.push({
@@ -100,9 +92,9 @@ const compileMiles = () => {
         miles,
         '\n\nNumber of Miles:\n\n',
         milesN,
-        '\n\Miles Miles:\n\n',
+        '\n\nMiles Miles:\n\n',
         milesMiles,
-        '\n\Miles Elevation:\n\n',
+        '\n\nMiles Elevation:\n\n',
         milesElev
 
     );

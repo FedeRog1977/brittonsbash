@@ -3,8 +3,6 @@ import { toFeet } from "../formatters/toFeet";
 import { toMiles } from "../formatters/toMiles";
 
 const compileRoadies = () => {
-    // Roadies
-
     const roadies: any[] = [];
     roadies.push({
         2023: sportData[2023].roadies,
@@ -12,8 +10,6 @@ const compileRoadies = () => {
         2021: sportData[2021].roadies,
         2020: sportData[2020].roadies
     });
-
-    // Number of Roadies
 
     const roadiesN: any[] = [];
     roadiesN.push({
@@ -39,27 +35,25 @@ const compileRoadies = () => {
     var totalRoadieElev2021: number = 0;
     var totalRoadieElev2020: number = 0;
 
-    for (var i in sportData[2023].roadies) {
-        totalRoadieMiles2023 = totalRoadieMiles2023 + sportData[2023].roadies[i].dist;
-        totalRoadieElev2023 = totalRoadieElev2023 + sportData[2023].roadies[i].elev;
+    for (var a in sportData[2023].roadies) {
+        totalRoadieMiles2023 = totalRoadieMiles2023 + sportData[2023].roadies[a].dist;
+        totalRoadieElev2023 = totalRoadieElev2023 + sportData[2023].roadies[a].elev;
     }
 
-    for (var i in sportData[2022].roadies) {
-        totalRoadieMiles2022 = totalRoadieMiles2022 + sportData[2022].roadies[i].dist;
-        totalRoadieElev2022 = totalRoadieElev2022 + sportData[2022].roadies[i].elev;
+    for (var b in sportData[2022].roadies) {
+        totalRoadieMiles2022 = totalRoadieMiles2022 + sportData[2022].roadies[b].dist;
+        totalRoadieElev2022 = totalRoadieElev2022 + sportData[2022].roadies[b].elev;
     }
 
-    for (var i in sportData[2021].roadies) {
-        totalRoadieMiles2021 = totalRoadieMiles2021 + sportData[2021].roadies[i].dist;
-        totalRoadieElev2021 = totalRoadieElev2021 + sportData[2021].roadies[i].elev;
+    for (var c in sportData[2021].roadies) {
+        totalRoadieMiles2021 = totalRoadieMiles2021 + sportData[2021].roadies[c].dist;
+        totalRoadieElev2021 = totalRoadieElev2021 + sportData[2021].roadies[c].elev;
     }
 
-    for (var i in sportData[2020].roadies) {
-        totalRoadieMiles2020 = totalRoadieMiles2020 + sportData[2020].roadies[i].dist;
-        totalRoadieElev2020 = totalRoadieElev2020 + sportData[2020].roadies[i].elev;
+    for (var d in sportData[2020].roadies) {
+        totalRoadieMiles2020 = totalRoadieMiles2020 + sportData[2020].roadies[d].dist;
+        totalRoadieElev2020 = totalRoadieElev2020 + sportData[2020].roadies[d].elev;
     }
-
-    // Roadie Miles
 
     const roadiesMiles: any[] = [];
     roadiesMiles.push({
@@ -76,8 +70,6 @@ const compileRoadies = () => {
         2021: toMiles(totalRoadieMiles2021),
         2020: toMiles(totalRoadieMiles2020)
     });
-
-    // Roadie Elevation
 
     const roadiesElev: any[] = [];
     roadiesElev.push({
