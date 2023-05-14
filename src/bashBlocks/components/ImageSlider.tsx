@@ -51,21 +51,25 @@ const ImageSlider = ({ slides }: any) => {
                                     alt={slide.alt}
                                 />
                                 {slide.description &&
-                                    <div className='image-slider-caption'>
-                                        <Typography
-                                            type={isMobile ? 'body' : 'h4'}
-                                            fontFamily='sans-serif'
-                                            content={slide.description}
-                                            textAlign='left'
-                                            boldFace
-                                            color='#FFFFFF'
-                                        />
-                                        <Typography
-                                            type={isMobile ? 'caption' : 'body'}
-                                            content={<>{current + 1}/{slides.length}</>}
-                                            color='#FFFFFF'
-                                        />
-                                    </div>
+                                    <>
+                                        <div className='image-slider-caption'>
+                                            <Typography
+                                                type={isMobile ? 'body' : 'h4'}
+                                                fontFamily='sans-serif'
+                                                content={slide.description}
+                                                textAlign='left'
+                                                boldFace
+                                                color='#FFFFFF'
+                                            />
+                                        </div>
+                                        <div className='image-slider-index'>
+                                            <Typography
+                                                type={isMobile ? 'footnote' : 'body'}
+                                                content={<>{current + 1}/{slides.length}</>}
+                                                color='#FFFFFF'
+                                            />
+                                        </div>
+                                    </>
                                 }
                             </div>
                         )}

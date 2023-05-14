@@ -203,19 +203,46 @@ a:hover {
 
 @media (max-width: 768px) {
 
+    .t1-serif,
+    .t1-sans-serif,
+    .t2-serif,
+    .t2-sans-serif {
+        font-size: 40px;
+    }
+
     .h1-serif,
     .h1-sans-serif {
-        font-size: 24px;
+        font-size: 32px;
     }
 
     .h2-serif,
     .h2-sans-serif {
-        font-size: 20px;
+        font-size: 28px;
     }
 
     .h3-serif,
     .h3-sans-serif {
-        font-size: 18px;
+        font-size: 24px;
+    }
+
+    .h4-serif,
+    .h4-sans-serif {
+        font-size: 20px;
+    }
+
+    .body-serif,
+    .body-sans-serif {
+        font-size: 14px;
+    }
+
+    .caption-serif,
+    .caption-sans-serif {
+        font-size: 14px;
+    }
+
+    .footnote-serif,
+    .footnote-sans-serif {
+        font-size: 12px;
     }
 
 }
