@@ -1,6 +1,6 @@
-export function removeDuplicates<T>(array: T[]) {
+export function removeDuplicates<T>(content: T[]) {
     const result: T[] = [];
-    array.forEach((item) => {
+    content.forEach((item) => {
         if (!result.includes(item)) {
             result.push(item);
         }

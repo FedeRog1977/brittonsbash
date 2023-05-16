@@ -31,9 +31,6 @@ const ImageSlider = ({ slides }: any) => {
     return (
         <div
             className='image-slider'
-            style={{
-                marginBottom: `${isMobile ? '0px' : '90px'}`
-            }}
         >
             <FontAwesomeIcon icon={faChevronCircleLeft} className='left-arrow' onClick={prevSlide} />
             <FontAwesomeIcon icon={faChevronCircleRight} className='right-arrow' onClick={nextSlide} />

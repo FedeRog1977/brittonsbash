@@ -75,7 +75,7 @@ const Typography: FC<TypographyProps> = (
                 display: (inline && 'inline'),
                 textAlign: textAlign,
                 marginTop: (paragraphMargins ?
-                    (isMobile ? '10px' : '20px')
+                    (isMobile ? '15px' : '30px')
                     :
                     (mT ? mT : '0px')
                 ),

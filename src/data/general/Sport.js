@@ -2,6 +2,13 @@ export const sportData = {
 	"2023": {
 		"roadies": [
 			{
+				"id": "R2023011",
+				"name": "Fenwick + Wind Farm",
+				"dist": 30.04,
+				"elev": 1640,
+				"time": "1:51:22"
+			},
+			{
 				"id": "R2023010",
 				"name": "Fenwick + Wind Farm",
 				"dist": 30.03,
