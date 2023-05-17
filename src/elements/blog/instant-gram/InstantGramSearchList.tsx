@@ -20,32 +20,38 @@ function InstantGramSearchList({ func, items, year }: any) {
             {showDropDown && items.map(
                 ({ id, prefix, names }: any) => (
                     <Button
+                        refKey={id}
                         className='expand-regular'
                         func={func}
+                        value={names.join(' ')}
                         content={
-                            <Typography
-                                type='h4'
-                                content={
-                                    <>
-                                        {prefix &&
-                                            <div>
-                                                {prefix}{':'}
-                                            </div>
-                                        }
-                                        <option key={id} value={names.join(' / ')}>
-                                            <>
-                                                {names.map(
-                                                    (name: any) => (
-                                                        <div>
-                                                            {name}{' // '}
-                                                        </div>
-                                                    )
-                                                )}
-                                            </>
-                                        </option>
-                                    </>
-                                }
-                            />
+                            <>
+                                <Typography
+                                    type='h4'
+                                    content={
+                                        <>
+                                            {prefix &&
+                                                <div>
+                                                    {prefix}{':'}
+                                                </div>
+                                            }
+                                        </>
+                                    }
+                                    boldFace
+                                />
+                                <Typography
+                                    type='h4'
+                                    content={
+                                        <>
+                                            {names.map(
+                                                (name: any) => (
+                                                    <div>{name}</div>
+                                                )
+                                            )}
+                                        </>
+                                    }
+                                />
+                            </>
                         }
                     />
                 )

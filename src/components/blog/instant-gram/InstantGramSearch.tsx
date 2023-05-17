@@ -67,10 +67,12 @@ const InstantGramSearch = () => {
 
     const handleSelect = (e: any) => {
         for (var i in allEvents) {
-            const fullName = allEvents[i].names.join(' / ').toLowerCase(); // Not inc. prefix - trouble
+            const fullName = allEvents[i].names.join(' '); // Not inc. prefix - trouble
+
+            console.log(e.currentTarget.value)
 
             if (
-                fullName.includes(e.target.value.toLowerCase())
+                fullName.includes(e.currentTarget.value)
             ) {
                 eventSport.pop();
                 setEvent(allEvents[i]); // Set event data
