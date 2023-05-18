@@ -12,7 +12,7 @@ export const hobbiesData = {
             "Other Scheme And Dotfiles",
             "...",
         ],
-        "documentTranscribing": [
+        "typography": [
             "Typesetting",
             "Typewriters",
             "...",

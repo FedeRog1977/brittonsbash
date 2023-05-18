@@ -253,7 +253,13 @@ export const commsData = {
 			"Razer Mamba 2012",
 			"Steelseries QCK Gaming Mousepad",
 			"Cisco CP-7962G",
-			"TrackPoint - Classic Dome (https://www.reddit.com/r/thinkpad/comments/f7c4x8/comparison_of_trackpoint_caps/?utm_source=share&utm_medium=web2x)",
+		],
+		"hiFi": [
+			"Audiolab 8300A Pre-Amplifier",
+			"Audiolab 8300MB Monoblok Power Amplifier",
+			"Audiolab 8300CDQ CD Player",
+			"Linn Majik LP12 Turntable",
+			"Linn Majik 109 Speakers",
 		],
 	},
 };
