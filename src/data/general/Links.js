@@ -57,6 +57,10 @@ export const linksData = {
 	],
 	systems: [
 		{
+			content: "explainshell.com",
+			href: "https://explainshell.com/",
+		},
+		{
 			content: "zsh Guide",
 			href: "https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html",
 		},
@@ -89,8 +93,16 @@ export const linksData = {
 			href: "https://www.x.org/releases/X11R7.5/doc/man/man1/xrandr.1.html",
 		},
 		{
+			content: "xrandr Notes",
+			href: "https://askubuntu.com/questions/1110171/multi-monitor-setup-with-xrandr",
+		},
+		{
 			content: "polybar-spotify",
 			href: "https://github.com/PrayagS/polybar-spotify",
+		},
+		{
+			content: "dunst Notifications",
+			href: "https://www.youtube.com/watch?v=XWlbaERuDP4",
 		},
 		{
 			content: "mop Stock Ticker Guide",
@@ -99,6 +111,10 @@ export const linksData = {
 		{
 			content: "Semantic Versioning",
 			href: "https://semver.org/",
+		},
+		{
+			content: "nerdfonts",
+			href: "https://www.nerdfonts.com/cheat-sheet",
 		},
 	],
 	typography: [
@@ -111,12 +127,20 @@ export const linksData = {
 			href: "https://www.latex-project.org/",
 		},
 		{
+			content: "LaTeX Document Classes",
+			href: "https://tex.stackexchange.com/questions/782/what-are-the-available-documentclass-types-and-their-uses",
+		},
+		{
 			content: "LaTeX Page Setup",
 			href: "https://www.overleaf.com/learn/latex/Page_size_and_margins",
 		},
 		{
 			content: "LaTeX Font Catalogue",
 			href: "https://tug.org/FontCatalogue/",
+		},
+		{
+			content: "LaTeX Symbol Guide",
+			href: "https://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf",
 		},
 		{
 			content: "LaTeX Symbol Guide",
@@ -151,24 +175,36 @@ export const linksData = {
 			href: "https://latexeditor.lagrida.com/",
 		},
 		{
+			content: "LaTeX Screenplay Template",
+			href: "https://www.overleaf.com/latex/templates/screenplay-template/grqmtrnytdhj",
+		},
+		{
 			content: "LaTeX Pronunciation",
 			href: "https://tex.stackexchange.com/questions/17502/what-is-the-correct-pronunciation-of-tex-and-latex",
 		},
 		{
-			content: "TikZ LaTeX Package",
+			content: "LaTeX TikZ Package",
 			href: "https://tikz.net/",
 		},
 		{
-			content: "TikZ LaTeX Package Examples",
+			content: "LaTeX TikZ Package Examples",
 			href: "https://texample.net/tikz/examples/",
 		},
 		{
-			content: "Game Trees in TikZ",
+			content: "LaTeX TikZ Game Trees",
 			href: "http://www.sfu.ca/~haiyunc/notes/Game_Trees_with_TikZ.pdf",
 		},
 		{
-			content: "UML Diagrams in TikZ",
+			content: "LaTeX TikZ UML Diagrams",
 			href: "https://perso.ensta-paris.fr/~kielbasi/tikzuml/var/files/doc/tikzumlmanual.pdf",
+		},
+		{
+			content: "LaTeX Dirtree Package Examples",
+			href: "http://tug.ctan.org/macros/generic/dirtree/dirtree.pdf",
+		},
+		{
+			content: "LaTeX FontAwesome Package",
+			href: "http://mirrors.ibiblio.org/CTAN/fonts/fontawesome/doc/fontawesome.pdf",
 		},
 		{
 			content: "Letter Casing",
@@ -245,6 +281,10 @@ export const linksData = {
 			href: "https://www.w3schools.com/colors/colors_converter.asp",
 		},
 		{
+			content: "HTML Two-Column Layout",
+			href: "https://www.w3schools.com/howto/howto_css_two_columns.asp",
+		},
+		{
 			content: "HTML Tag Stripper",
 			href: "https://www.striphtml.com/",
 		},
@@ -273,8 +313,8 @@ export const linksData = {
 			href: "https://mapbox.github.io/togeojson/",
 		},
 		{
-			content: "",
-			href: "",
+			content: "KT-companion Hiking App",
+			href: "https://github.com/jamealg/KT-companion",
 		},
 	],
 	apis: [
