@@ -81,6 +81,26 @@ export const sportData = {
 		],
 		"projects": [
 			{
+				"id": "P2023011",
+				"name": "Ham And Egg Sarnie",
+				"dist": 13.70,
+				"elev": 5384,
+				"time": "5:47:56",
+				"companionship": 1,
+				"islands": [],
+				"munros": [
+					"Sgùrr Chòinnich Mòr",
+					"Stob Coire an Laoigh",
+					"Stob Choire Claurigh",
+				],
+				"munroTops": [],
+				"corbetts": [],
+				"corbettTops": [],
+				"grahams": [],
+				"subTwos": [],
+				"donalds": [],
+			},
+			{
 				"id": "P2023010",
 				"name": "Why Don’t People Understand",
 				"dist": 11.64,

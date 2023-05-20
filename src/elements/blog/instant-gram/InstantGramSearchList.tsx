@@ -1,6 +1,7 @@
 import { useState } from "react";
 import DropDown from "../../../bashBlocks/components/DropDown";
 import Button from "../../../bashBlocks/elements/Button";
+import Spacing from "../../../bashBlocks/elements/Spacing";
 import Typography from "../../../bashBlocks/elements/Typography";
 
 function InstantGramSearchList({ func, items, year }: any) {
@@ -25,33 +26,32 @@ function InstantGramSearchList({ func, items, year }: any) {
                         func={func}
                         value={names.join(' ')}
                         content={
-                            <>
-                                <Typography
-                                    type='h4'
-                                    content={
-                                        <>
-                                            {prefix &&
-                                                <div>
-                                                    {prefix}{':'}
-                                                </div>
-                                            }
-                                        </>
-                                    }
-                                    boldFace
-                                />
-                                <Typography
-                                    type='h4'
-                                    content={
-                                        <>
-                                            {names.map(
-                                                (name: any) => (
-                                                    <div>{name}</div>
-                                                )
-                                            )}
-                                        </>
-                                    }
-                                />
-                            </>
+                            <Spacing mY={200}>
+                                <>
+                                    <Typography
+                                        type='h4'
+                                        content={
+                                            <>
+                                                {prefix &&
+                                                    <>{prefix}{':'}</>
+                                                }
+                                            </>
+                                        }
+                                    />
+                                    <Typography
+                                        type='h4'
+                                        content={
+                                            <>
+                                                {names.map(
+                                                    (name: any) => (
+                                                        <>{name}</>
+                                                    )
+                                                )}
+                                            </>
+                                        }
+                                    />
+                                </>
+                            </Spacing>
                         }
                     />
                 )

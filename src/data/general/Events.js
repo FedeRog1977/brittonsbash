@@ -1,6 +1,24 @@
 export const eventData = {
 	"2023": [
 		{
+			"id": "E2023020",
+			"prefix": "",
+			"names": [
+				"Ham And Egg Sarnie",
+			],
+			"startDate": "20th of May",
+			"endDate": "21st of May",
+			"description": "Back to the Grey Corries to correct our mistakes from the week before. Just slight PTSD for Griff. Anyway, this was a much more successfull with a Macc followed by Ferris. Rainy and grindy proj at times but only leaves me with the Nevis Four and Tulloch Two left of the Nevis Range.",
+			"images": [
+				{
+					"url": "",
+					"alt": "",
+					"description": "",
+				},
+			],
+			"youthHostels": [],
+		},
+		{
 			"id": "E2023019",
 			"prefix": "",
 			"names": [
