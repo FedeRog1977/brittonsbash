@@ -26,7 +26,7 @@ function InstantGramSearchList({ func, items, year }: any) {
                         func={func}
                         value={names.join(' ')}
                         content={
-                            <Spacing mY={200}>
+                            <Spacing mX={20}>
                                 <>
                                     <Typography
                                         type='h4'
@@ -44,7 +44,7 @@ function InstantGramSearchList({ func, items, year }: any) {
                                             <>
                                                 {names.map(
                                                     (name: any) => (
-                                                        <>{name}</>
+                                                        <div>{name}</div>
                                                     )
                                                 )}
                                             </>

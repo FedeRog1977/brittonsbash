@@ -8,11 +8,11 @@ interface TileProps {
     | 'solid';
     top?: boolean;
     dense?: boolean;
-    content: ReactElement;
+    children: ReactElement;
 }
 
 const Tile: FC<TileProps> = (
-    { type, top, dense, content }: any
+    { type, top, dense, children }: any
 ) => {
     return (
         <div
@@ -22,7 +22,7 @@ const Tile: FC<TileProps> = (
                 ${dense && 'tile-dense'}
             `}
         >
-            {content}
+            {children}
         </div>
     )
 }

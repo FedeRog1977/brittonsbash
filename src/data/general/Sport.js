@@ -93,7 +93,13 @@ export const sportData = {
 					"Stob Coire an Laoigh",
 					"Stob Choire Claurigh",
 				],
-				"munroTops": [],
+				"munroTops": [
+					"Beinn Na Socaich",
+					"Stob Coire Easain",
+					"Caisteal",
+					"Stob Coire Cath Na Sine",
+					"Stob A’ Choire Leith",
+				],
 				"corbetts": [],
 				"corbettTops": [],
 				"grahams": [],
@@ -1170,7 +1176,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2022012",
-				"name": "Fort William & Mallaig Reloaded (Exclusive Glenfinnan DLC)",
+				"name": "Fort William And Mallaig Reloaded (Exclusive Glenfinnan DLC)",
 				"dist": 15.24,
 				"elev": 5390,
 				"time": "5:40:29",
@@ -1330,7 +1336,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2022004",
-				"name": "Chips, Dips, Chains & Whips",
+				"name": "Chips, Dips, Chains And Whips",
 				"dist": 4.43,
 				"elev": 1362,
 				"time": "1:25:09",
@@ -2622,7 +2628,7 @@ export const sportData = {
 		"projects": [
 			{
 				"id": "P2021035",
-				"name": "To Live and Breathe Ben More",
+				"name": "To Live And Breathe Ben More",
 				"dist": 11.06,
 				"elev": 4380,
 				"time": "4:20:06",
@@ -3035,7 +3041,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021014",
-				"name": "Get Creased & Do Creise",
+				"name": "Get Creased And Do Creise",
 				"dist": 18.17,
 				"elev": 6106,
 				"time": "7:48:22",
@@ -3134,7 +3140,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021009",
-				"name": "Sgiath Chuil & Meall Glas",
+				"name": "Sgiath Chuil And Meall Glas",
 				"dist": 11.84,
 				"elev": 3918,
 				"time": "5:12:45",
@@ -3267,7 +3273,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021002",
-				"name": "Ben More & Stob Binnein",
+				"name": "Ben More And Stob Binnein",
 				"dist": 8.95,
 				"elev": 4202,
 				"time": "3:56:12",
@@ -3286,7 +3292,7 @@ export const sportData = {
 			},
 			{
 				"id": "P2021001",
-				"name": "The Brack & Cnoc Coinnich",
+				"name": "The Brack And Cnoc Coinnich",
 				"dist": 10.86,
 				"elev": 3458,
 				"time": "4:17:31",

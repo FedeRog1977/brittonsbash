@@ -1287,7 +1287,7 @@ export const eventData = {
 			"id": "E2022019",
 			"prefix": "",
 			"names": [
-				"To Live and Breathe Waterfoot – Waterfoot 50",
+				"To Live And Breathe Waterfoot – Waterfoot 50",
 			],
 			"startDate": "21st of April",
 			"endDate": "",
@@ -1303,9 +1303,9 @@ export const eventData = {
 		},
 		{
 			"id": "E2022018",
-			"prefix": "Fort William & Mallaig II",
+			"prefix": "Fort William And Mallaig II",
 			"names": [
-				"Fort William & Mallaig Reloaded (Exclusive Glenfinnan DLC)",
+				"Fort William And Mallaig Reloaded (Exclusive Glenfinnan DLC)",
 			],
 			"startDate": "15th of April",
 			"endDate": "17th of April",
@@ -1536,7 +1536,7 @@ export const eventData = {
 			"id": "E2022007",
 			"prefix": "",
 			"names": [
-				"Chips, Dips, Chains & Whips",
+				"Chips, Dips, Chains And Whips",
 			],
 			"startDate": "20th of February",
 			"endDate": "",
@@ -1608,7 +1608,7 @@ export const eventData = {
 			"id": "E2022003",
 			"prefix": "",
 			"names": [
-				"Busbyside & Thornton Hill",
+				"Busbyside And Thornton Hill",
 			],
 			"startDate": "24th of January",
 			"endDate": "",
@@ -1702,7 +1702,7 @@ export const eventData = {
 			"id": "E2021049",
 			"prefix": "",
 			"names": [
-				"To Live and Breathe Ben More",
+				"To Live And Breathe Ben More",
 			],
 			"startDate": "18th of December",
 			"endDate": "",
@@ -2288,7 +2288,7 @@ export const eventData = {
 			"id": "E2021018",
 			"prefix": "Glencoe III",
 			"names": [
-				"Get Creased & Do Creise",
+				"Get Creased And Do Creise",
 			],
 			"startDate": "25th of June",
 			"endDate": "27th of June",
@@ -2396,7 +2396,7 @@ export const eventData = {
 			"id": "E2021012",
 			"prefix": "",
 			"names": [
-				"Sgiath Chuil & Meall Glas",
+				"Sgiath Chuil And Meall Glas",
 			],
 			"startDate": "6th of June",
 			"endDate": "",
@@ -2525,7 +2525,7 @@ export const eventData = {
 			"id": "E2021005",
 			"prefix": "",
 			"names": [
-				"Ben More & Stob Binnein",
+				"Ben More And Stob Binnein",
 			],
 			"startDate": "24th of April",
 			"endDate": "",
@@ -2543,7 +2543,7 @@ export const eventData = {
 			"id": "E2021004",
 			"prefix": "",
 			"names": [
-				"The Brack & Cnoc Coinnich",
+				"The Brack And Cnoc Coinnich",
 			],
 			"startDate": "17th of April",
 			"endDate": "",
@@ -2707,7 +2707,7 @@ export const eventData = {
 		},
 		{
 			"id": "E2020006",
-			"prefix": "Fort William & Mallaig",
+			"prefix": "Fort William And Mallaig",
 			"names": [
 				"Actually Arisaig",
 			],

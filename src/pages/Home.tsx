@@ -8,16 +8,13 @@ function Home() {
     return (
         <div>
             <Background text='BrittonsBashRC' />
-            <Tile
-                type='solid'
-                content={
-                    <Article
-                        sections={articleTestData}
-                        fontFamily='serif'
-                        textAlign='justify'
-                    />
-                }
-            />
+            <Tile type='solid'>
+                <Article
+                    sections={articleTestData}
+                    fontFamily='serif'
+                    textAlign='justify'
+                />
+            </Tile>
         </div>
     );
 }

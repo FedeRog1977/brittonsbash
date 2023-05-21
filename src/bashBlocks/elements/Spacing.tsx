@@ -1,5 +1,4 @@
 import { FC, ReactElement } from "react";
-import { useMobile } from "../../scripts/display/useMobile";
 
 interface SpacingProps {
     mX?: number;

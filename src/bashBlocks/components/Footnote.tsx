@@ -10,16 +10,13 @@ const Footnote: FC<FootnoteProps> = (
     { content }: any
 ) => {
     return (
-        <Tile
-            type='clear'
-            content={
-                <Typography
-                    type='footnote'
-                    textAlign='justify'
-                    content={content}
-                />
-            }
-        />
+        <Tile type='clear'>
+            <Typography
+                type='footnote'
+                textAlign='justify'
+                content={content}
+            />
+        </Tile>
     )
 }
 

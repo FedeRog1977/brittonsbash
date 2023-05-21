@@ -18,27 +18,21 @@ function DropDownStories() {
 
     return (
         <>
-            <Tile
-                type='clear-condensed'
-                content={
-                    <Typography type='t1' fontFamily='sans-serif' content='Drop-Down' textAlign='center' paragraphMargins />
-                }
-            />
-            <Tile
-                type='solid'
-                content={
-                    <>
-                        <DropDown className='regular' func={handleClick} funcResp={showDropDown} />
-                        {showDropDown &&
-                            <Article
-                                sections={articleTestData}
-                                fontFamily='serif'
-                                textAlign='justify'
-                            />
-                        }
-                    </>
-                }
-            />
+            <Tile type='clear-condensed'>
+                <Typography type='t1' fontFamily='sans-serif' content='Drop-Down' textAlign='center' paragraphMargins />
+            </Tile>
+            <Tile type='solid'>
+                <>
+                    <DropDown className='regular' func={handleClick} funcResp={showDropDown} />
+                    {showDropDown &&
+                        <Article
+                            sections={articleTestData}
+                            fontFamily='serif'
+                            textAlign='justify'
+                        />
+                    }
+                </>
+            </Tile>
         </>
     );
 }
