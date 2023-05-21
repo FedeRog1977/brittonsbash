@@ -113,6 +113,14 @@
         color: #28282850;
     }
 
+    .left-arrow {
+        left: 1.25%;
+    }
+
+    .right-arrow {
+        right: 1.25%;
+    }
+
     .slide {
         opacity: 0.5;
         transition-duration: none;
