@@ -1,6 +1,6 @@
 export const sportData = {
-	"2023": {
-		"roadies": [
+	2023: {
+		roadies: [
 			{
 				"id": "R2023011",
 				"name": "Fenwick + Wind Farm",
@@ -79,7 +79,7 @@ export const sportData = {
 				"time": "1:56:23"
 			},
 		],
-		"projects": [
+		projects: [
 			{
 				"id": "P2023011",
 				"name": "Ham And Egg Sarnie",
@@ -300,7 +300,14 @@ export const sportData = {
 				"year": "2023",
 			},
 		],
-		"miles": [
+		miles: [
+			{
+				"id": "M2023026",
+				"name": "Waterfoot",
+				"dist": 10.30,
+				"elev": 551,
+				"time": "2:30:19",
+			},
 			{
 				"id": "M2023025",
 				"name": "Waterfoot",
@@ -478,8 +485,8 @@ export const sportData = {
 			},
 		],
 	},
-	"2022": {
-		"roadies": [
+	2022: {
+		roadies: [
 			{
 				"id": "R2022033",
 				"name": "Strathaven",
@@ -712,7 +719,7 @@ export const sportData = {
 				"time": "1:00:48",
 			},
 		],
-		"projects": [
+		projects: [
 			{
 				"id": "P2022036",
 				"name": "Kino Der Toten",
@@ -1406,7 +1413,7 @@ export const sportData = {
 				"donalds": [],
 			},
 		],
-		"miles": [
+		miles: [
 			{
 				"id": "M2022094",
 				"name": "Waterfoot",
@@ -2068,8 +2075,8 @@ export const sportData = {
 			},
 		],
 	},
-	"2021": {
-		"roadies": [
+	2021: {
+		roadies: [
 			{
 				"id": "R2021079",
 				"name": "Strathaven",
@@ -2625,7 +2632,7 @@ export const sportData = {
 				"time": "1:44:12",
 			},
 		],
-		"projects": [
+		projects: [
 			{
 				"id": "P2021035",
 				"name": "To Live And Breathe Ben More",
@@ -3310,7 +3317,7 @@ export const sportData = {
 				"donalds": [],
 			},
 		],
-		"miles": [
+		miles: [
 			{
 				"id": "M2021030",
 				"name": "Waterfoot",
@@ -3523,8 +3530,8 @@ export const sportData = {
 			},
 		],
 	},
-	"2020": {
-		"roadies": [
+	2020: {
+		roadies: [
 			{
 				"id": "R2020028",
 				"name": "Fenwick + Wind Farm",
@@ -3722,7 +3729,7 @@ export const sportData = {
 				"time": "2:07:58",
 			},
 		],
-		"projects": [
+		projects: [
 			{
 				"id": "P2020005",
 				"name": "Cairnsmore of Carsphairn",
@@ -3817,7 +3824,7 @@ export const sportData = {
 				"donalds": [],
 			},
 		],
-		"miles": [
+		miles: [
 			{
 				"id": "M2020026",
 				"name": "Waterfoot",
@@ -4002,88 +4009,4 @@ export const sportData = {
 			},
 		],
 	},
-	"pre2020": {
-		"roadies": [
-			{
-				"id": "R20xx009",
-				"name": "Other",
-				"dist": 8.77,
-				"elev": 264,
-				"time": "52:19",
-			},
-			{
-				"id": "R20xx008",
-				"name": "Other",
-				"dist": 15.31,
-				"elev": 590,
-				"time": "2:00:10",
-			},
-			{
-				"id": "R20xx007",
-				"name": "Other",
-				"dist": 28.38,
-				"elev": 594,
-				"time": "2:41:00",
-			},
-			{
-				"id": "R20xx006",
-				"name": "Other",
-				"dist": 16.60,
-				"elev": 722,
-				"time": "1:33:48",
-			},
-			{
-				"id": "R20xx005",
-				"name": "Other",
-				"dist": 24.73,
-				"elev": 981,
-				"time": "2:45:17",
-			},
-			{
-				"id": "R20xx004",
-				"name": "Other",
-				"dist": 21.92,
-				"elev": 886,
-				"time": "2:40:57",
-			},
-			{
-				"id": "R20xx003",
-				"name": "Other",
-				"dist": 12.18,
-				"elev": 478,
-				"time": "1:16:18",
-			},
-			{
-				"id": "R20xx002",
-				"name": "Other",
-				"dist": 14.30,
-				"elev": 592,
-				"time": "1:24:36",
-			},
-			{
-				"id": "R20xx001",
-				"name": "Windfarm",
-				"dist": 23.47,
-				"elev": 1334,
-				"time": "2:17:27",
-			},
-		],
-		"projects": [],
-		"miles": [
-			{
-				"id": "M20xx002",
-				"name": "Other",
-				"dist": 4.51,
-				"elev": 286,
-				"time": "1:30:32",
-			},
-			{
-				"id": "M20xx001",
-				"name": "Other",
-				"dist": 6.59,
-				"elev": 353,
-				"time": "1:49:34",
-			},
-		],
-	},
-}
+};

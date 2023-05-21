@@ -413,6 +413,9 @@ export const communicationsData = {
                 "Cisco CP-7962G-CH1",
                 "Polycom Conferencing",
             ],
+            storage: [
+                "SanDisk 256GB Ultra Flair USB 3.0 Flash Drive",
+            ],
         },
         links: {
             computers: [
@@ -1048,6 +1051,43 @@ export const communicationsData = {
     fashion: {
         styles: [],
         nineteenEighties: [],
+        fragrances: {
+            preservatives: [
+                "Terre d’Hermes Hermès",
+                "Eau d’Hermes Hermès",
+                "Eau de Narcisse Bleu Hermès",
+                "Boss Bottled",
+                "Czech & Speake No. 88",
+                "Serpentine Comme des Garçons",
+                "Fleur de Portofino Tom Ford",
+                "Moncler pour Homme Moncler",
+            ],
+            dailys: [
+                "CK One",
+                "CK2",
+                "CK Be",
+                "CK All",
+                "Kapitel 4",
+                "Kapitel 12",
+            ],
+            rinsers: [
+                "Calvin Klein Eternity Aqua",
+                "Oxygene Lanvin",
+                "Boss Orange Man",
+                "Mont Blanc Explorer",
+                "Forbidden Rose Avril Lavigne",
+            ],
+            links: [
+                {
+                    content: "Fragrantica",
+                    href: "https://www.fragrantica.com/perfume-finder/",
+                },
+                {
+                    content: "Parfumo",
+                    href: "https://www.parfumo.com/",
+                },
+            ],
+        },
         accessories: [
             "Rolex Datejust (Pending)",
             "Rolex Skydweller (Pending)",
@@ -1063,43 +1103,6 @@ export const communicationsData = {
             "Bic Lighters",
         ],
         links: [],
-    },
-    fragrances: {
-        preservatives: [
-            "Terre d’Hermes Hermès",
-            "Eau d’Hermes Hermès",
-            "Eau de Narcisse Bleu Hermès",
-            "Boss Bottled",
-            "Czech & Speake No. 88",
-            "Serpentine Comme des Garçons",
-            "Fleur de Portofino Tom Ford",
-            "Moncler pour Homme Moncler",
-        ],
-        dailys: [
-            "CK One",
-            "CK2",
-            "CK Be",
-            "CK All",
-            "Kapitel 4",
-            "Kapitel 12",
-        ],
-        rinsers: [
-            "Calvin Klein Eternity Aqua",
-            "Oxygene Lanvin",
-            "Boss Orange Man",
-            "Mont Blanc Explorer",
-            "Forbidden Rose Avril Lavigne",
-        ],
-        links: [
-            {
-                content: "Fragrantica",
-                href: "https://www.fragrantica.com/perfume-finder/",
-            },
-            {
-                content: "Parfumo",
-                href: "https://www.parfumo.com/",
-            },
-        ],
     },
     automotive: {
         models: [

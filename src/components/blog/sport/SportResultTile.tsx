@@ -4,6 +4,8 @@ import Tile from "../../../bashBlocks/components/Tile";
 import compileProjects from "../../../scripts/compilers/compileProjects";
 import compileMiles from "../../../scripts/compilers/compileMiles";
 import compileRoadies from "../../../scripts/compilers/compileRoadies";
+import { toMiles } from "../../../scripts/formatters/toMiles";
+import { toFeet } from "../../../scripts/formatters/toFeet";
 
 const SportResultTile = (
     // { event, sportEvent, showSportEvent }: any
@@ -68,8 +70,8 @@ const SportResultTile = (
                         ({ id, name, dist, elev, time }: any) => (
                             <div key={id}>
                                 <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
-                                <Typography type='h4' content={<>{dist}mi</>} inline />{' '}
-                                <Typography type='h4' content={<>{elev.toLocaleString()}ft</>} inline />{' '}
+                                <Typography type='h4' content={<>{toMiles(dist)}</>} inline />{' '}
+                                <Typography type='h4' content={<>{toFeet(elev)}</>} inline />{' '}
                                 <Typography type='h4' content={<>{time}</>} inline />
                             </div>
                         )
@@ -94,8 +96,8 @@ const SportResultTile = (
                         ({ id, name, dist, elev, time }: any) => (
                             <div key={id}>
                                 <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
-                                <Typography type='h4' content={<>{dist}mi</>} inline />{' '}
-                                <Typography type='h4' content={<>{elev.toLocaleString()}ft</>} inline />{' '}
+                                <Typography type='h4' content={<>{toMiles(dist)}</>} inline />{' '}
+                                <Typography type='h4' content={<>{toFeet(elev)}ft</>} inline />{' '}
                                 <Typography type='h4' content={<>{time}</>} inline />
                             </div>
                         )
@@ -120,8 +122,8 @@ const SportResultTile = (
                         ({ id, name, dist, elev, time }: any) => (
                             <div key={id}>
                                 <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
-                                <Typography type='h4' content={<>{dist}mi</>} inline />{' '}
-                                <Typography type='h4' content={<>{elev.toLocaleString()}ft</>} inline />{' '}
+                                <Typography type='h4' content={<>{toMiles(dist)}</>} inline />{' '}
+                                <Typography type='h4' content={<>{toFeet(elev)}ft</>} inline />{' '}
                                 <Typography type='h4' content={<>{time}</>} inline />
                             </div>
                         )
@@ -146,8 +148,8 @@ const SportResultTile = (
                         ({ id, name, dist, elev, time }: any) => (
                             <div key={id}>
                                 <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
-                                <Typography type='h4' content={<>{dist}mi</>} inline />{' '}
-                                <Typography type='h4' content={<>{elev.toLocaleString()}ft</>} inline />{' '}
+                                <Typography type='h4' content={<>{toMiles(dist)}</>} inline />{' '}
+                                <Typography type='h4' content={<>{toFeet(elev)}ft</>} inline />{' '}
                                 <Typography type='h4' content={<>{time}</>} inline />
                             </div>
                         )
@@ -200,8 +202,8 @@ const SportResultTile = (
                         ({ id, name, dist, elev, time }: any) => (
                             <div key={id}>
                                 <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
-                                <Typography type='h4' content={<>{dist}mi</>} inline />{' '}
-                                <Typography type='h4' content={<>{elev.toLocaleString()}ft</>} inline />{' '}
+                                <Typography type='h4' content={<>{toMiles(dist)}</>} inline />{' '}
+                                <Typography type='h4' content={<>{toFeet(elev)}</>} inline />{' '}
                                 <Typography type='h4' content={<>{time}</>} inline />
                             </div>
                         )
@@ -226,8 +228,8 @@ const SportResultTile = (
                         ({ id, name, dist, elev, time }: any) => (
                             <div key={id}>
                                 <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
-                                <Typography type='h4' content={<>{dist}mi</>} inline />{' '}
-                                <Typography type='h4' content={<>{elev.toLocaleString()}ft</>} inline />{' '}
+                                <Typography type='h4' content={<>{toMiles(dist)}</>} inline />{' '}
+                                <Typography type='h4' content={<>{toFeet(elev)}</>} inline />{' '}
                                 <Typography type='h4' content={<>{time}</>} inline />
                             </div>
                         )
@@ -252,8 +254,8 @@ const SportResultTile = (
                         ({ id, name, dist, elev, time }: any) => (
                             <div key={id}>
                                 <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
-                                <Typography type='h4' content={<>{dist}mi</>} inline />{' '}
-                                <Typography type='h4' content={<>{elev.toLocaleString()}ft</>} inline />{' '}
+                                <Typography type='h4' content={<>{toMiles(dist)}</>} inline />{' '}
+                                <Typography type='h4' content={<>{toFeet(elev)}</>} inline />{' '}
                                 <Typography type='h4' content={<>{time}</>} inline />
                             </div>
                         )
@@ -278,8 +280,8 @@ const SportResultTile = (
                         ({ id, name, dist, elev, time }: any) => (
                             <div key={id}>
                                 <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
-                                <Typography type='h4' content={<>{dist}mi</>} inline />{' '}
-                                <Typography type='h4' content={<>{elev.toLocaleString()}ft</>} inline />{' '}
+                                <Typography type='h4' content={<>{toMiles(dist)}</>} inline />{' '}
+                                <Typography type='h4' content={<>{toFeet(elev)}</>} inline />{' '}
                                 <Typography type='h4' content={<>{time}</>} inline />
                             </div>
                         )
@@ -332,8 +334,8 @@ const SportResultTile = (
                         ({ id, name, dist, elev, time }: any) => (
                             <div key={id}>
                                 <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
-                                <Typography type='h4' content={<>{dist}mi</>} inline />{' '}
-                                <Typography type='h4' content={<>{elev.toLocaleString()}ft</>} inline />{' '}
+                                <Typography type='h4' content={<>{toMiles(dist)}</>} inline />{' '}
+                                <Typography type='h4' content={<>{toFeet(elev)}</>} inline />{' '}
                                 <Typography type='h4' content={<>{time}</>} inline />
                             </div>
                         )
@@ -358,8 +360,8 @@ const SportResultTile = (
                         ({ id, name, dist, elev, time }: any) => (
                             <div key={id}>
                                 <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
-                                <Typography type='h4' content={<>{dist}mi</>} inline />{' '}
-                                <Typography type='h4' content={<>{elev.toLocaleString()}ft</>} inline />{' '}
+                                <Typography type='h4' content={<>{toMiles(dist)}</>} inline />{' '}
+                                <Typography type='h4' content={<>{toFeet(elev)}</>} inline />{' '}
                                 <Typography type='h4' content={<>{time}</>} inline />
                             </div>
                         )
@@ -384,8 +386,8 @@ const SportResultTile = (
                         ({ id, name, dist, elev, time }: any) => (
                             <div key={id}>
                                 <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
-                                <Typography type='h4' content={<>{dist}mi</>} inline />{' '}
-                                <Typography type='h4' content={<>{elev.toLocaleString()}ft</>} inline />{' '}
+                                <Typography type='h4' content={<>{toMiles(dist)}</>} inline />{' '}
+                                <Typography type='h4' content={<>{toFeet(elev)}</>} inline />{' '}
                                 <Typography type='h4' content={<>{time}</>} inline />
                             </div>
                         )
@@ -410,8 +412,8 @@ const SportResultTile = (
                         ({ id, name, dist, elev, time }: any) => (
                             <div key={id}>
                                 <Typography type='h4' content={<>{name}:</>} inline boldFace />{' '}
-                                <Typography type='h4' content={<>{dist}mi</>} inline />{' '}
-                                <Typography type='h4' content={<>{elev.toLocaleString()}ft</>} inline />{' '}
+                                <Typography type='h4' content={<>{toMiles(dist)}</>} inline />{' '}
+                                <Typography type='h4' content={<>{toFeet(elev)}</>} inline />{' '}
                                 <Typography type='h4' content={<>{time}</>} inline />
                             </div>
                         )

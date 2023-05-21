@@ -1,5 +1,5 @@
 export const eventData = {
-	"2023": [
+	2023: [
 		{
 			"id": "E2023020",
 			"prefix": "",
@@ -368,7 +368,7 @@ export const eventData = {
 			"youthHostels": [],
 		},
 	],
-	"2022": [
+	2022: [
 		{
 			"id": "E2022057",
 			"prefix": "",
@@ -1659,7 +1659,7 @@ export const eventData = {
 			"youthHostels": [],
 		},
 	],
-	"2021": [
+	2021: [
 		{
 			"id": "E2021051",
 			"prefix": "Cairngorms IV",
@@ -2612,7 +2612,7 @@ export const eventData = {
 			"youthHostels": [],
 		},
 	],
-	"2020": [
+	2020: [
 		{
 			"id": "E2020011",
 			"prefix": "",
