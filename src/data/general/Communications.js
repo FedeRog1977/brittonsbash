@@ -115,6 +115,14 @@ export const communicationsData = {
                 "Wilson Pro Staff RF97 Autograph V13 (Pending)",
                 "Wilson Blade 93",
             ],
+            strings: [
+                "Luxilon Alu Power (52lbs)",
+                "Wilson Natural Gut (48lbs)",
+            ],
+            gripTape: [
+                "Wilson Premium Leather Grip",
+                "Wilson Pro Overgrip",
+            ],
             balls: [
                 "Wilson US Open (Indoor)",
                 "Slazenger Wimbledon (Outdoor)"
