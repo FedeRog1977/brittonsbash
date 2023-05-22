@@ -1,6 +1,24 @@
 export const communicationsData = {
     sport: {
         projects: {
+            brands: [
+                "Rab",
+                "Mountain Equipment",
+                "Patagonia",
+                "Montane",
+                "Arc’teryx",
+                "Helly Hansen",
+                "Mammut",
+                "Haglöfs",
+                "Bridgedale",
+                "Scarpa",
+                "Salewa",
+                "La Sportiva",
+                "Osprey",
+                "Oakley",
+                "Black Diamond",
+                "DMM Wales",
+            ],
             packs: [
                 "Duffel (Various Sizes)",
                 "Rucksack, Day (Small)",
@@ -88,6 +106,15 @@ export const communicationsData = {
             ],
         },
         roadies: {
+            brands: [
+                "Giant",
+                "Shimano",
+                "Pirelli",
+                "Goodyear",
+                "Endura",
+                "Altura",
+                "POC",
+            ],
             bicycle: [
                 "Giant TCR Advanced 1 Frame",
                 "Giant Contact Stem, Bars, Seatpost and Saddle",
@@ -97,13 +124,19 @@ export const communicationsData = {
             ],
         },
         tennis: {
+            brands: [
+                "Wilson",
+                "Luxilon",
+                "Nike",
+                "K-Swiss",
+            ],
             racquets: [
                 "Wilson Pro Staff 85 6.0 Mid-Production",
                 "Wilson Hyper Pro Staff 6.1 (Pending)",
                 "Wilson Hyper Pro Staff 6.0 (Pending)",
                 "Wilson Pro Staff Tour 90 (Pending)",
-                "Wilson nCode Six One Tour 90",
-                "Wilson K Factor Six One Tour 90",
+                "Wilson nCode Six-One Tour 90",
+                "Wilson K Factor Six-One Tour 90",
                 "Wilson Six.One Tour BLX (Pending)",
                 "Wilson BLX Pro Staff Six.One 90",
                 "Wilson Pro Staff Blacked Out Prototype",
@@ -126,6 +159,16 @@ export const communicationsData = {
             balls: [
                 "Wilson US Open (Indoor)",
                 "Slazenger Wimbledon (Outdoor)"
+            ],
+            bags: [
+                "Wilson K-Factor Six-One Tour",
+                "Wilson BLX Pro Staff Six.One",
+            ],
+            shoes: [
+                "K-Swiss Mens Defier",
+                "Nike Zoom Vapor 9 Tour (Pending)",
+                "Nike Zoom Vapor Air Jordon 3 (Pending)",
+                "THE ROGER Clubhouse Mid",
             ],
             federerLegacy: [],
         },
@@ -762,9 +805,10 @@ export const communicationsData = {
         topSongs: [],
         allSongs: [],
         manufacturers: [
+            "Audiolab",
             "Bose",
-            "Technics",
             "Linn",
+            "Technics",
             "Yamaha",
         ],
         hiFi: [
@@ -1010,7 +1054,22 @@ export const communicationsData = {
             ]
         },
     },
+    stationery: {
+        writingInstruments: [
+            "rOtring Rapid Pro 0.5mm",
+            "rOtring Rapid Pro 2.0mm",
+            "Pentel 120 A3 0.5mm",
+            "Pentel P200 0.7mm",
+            "Pentel P200 0.9mm",
+            "Pentel Superb Ballpoint 0.7mm BK77",
+            "Lamy Logo Custom Vitra Black",
+            "Staedler Lumocolor 60 F",
+        ],
+        pencilCases: [],
+        writingPads: [],
+    },
     design: {
+        typography: [],
         graphicDesign: [],
         computerAidedDesign: [],
         photoManipulation: [],
@@ -1032,25 +1091,11 @@ export const communicationsData = {
             ],
             products: [],
         },
+        twoThousandsDecor: [],
         links: [],
     },
-    stationery: {
-        writingInstruments: [
-            "rOtring Rapid Pro 0.5mm",
-            "rOtring Rapid Pro 2.0mm",
-            "Pentel 120 A3 0.5mm",
-            "Pentel P200 0.7mm",
-            "Pentel P200 0.9mm",
-            "Pentel Superb Ballpoint 0.7mm BK77",
-            "Lamy Logo Custom Vitra Black",
-            "Staedler Lumocolor 60 F",
-        ],
-        pencilCases: [],
-        writingPads: [],
-    },
-    fashion: {
-        styles: [],
-        nineteenEighties: [],
+    style: {
+        brands: [],
         fragrances: {
             preservatives: [
                 "Terre d’Hermes Hermès",
@@ -1102,6 +1147,8 @@ export const communicationsData = {
             "Marlboro Cigarette Cases",
             "Bic Lighters",
         ],
+        eightiesFashion: [],
+        twoThousandsFashion: [],
         links: [],
     },
     automotive: {
