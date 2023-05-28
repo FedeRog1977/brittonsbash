@@ -6,7 +6,8 @@ export const eventData = {
             names: ['Nine To Five'],
             startDate: '26th of May',
             endDate: '27th of May',
-            description: '...',
+            description:
+                'Only a quickie this weekend to finish off the four week streak of a Friday night Macc for dinner. Sixteen then bed. Quickie resembling Corrour then home for activities.',
             images: [
                 {
                     url: '',
