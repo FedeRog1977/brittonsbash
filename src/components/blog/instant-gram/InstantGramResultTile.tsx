@@ -27,26 +27,26 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
         <Tile type="solid" dense={isMobile && true}>
             <>
                 <div className="instant-gram-tile-title">
-                    {refactoredEvent[0].prefix && (
+                    {refactoredEvent.prefix && (
                         <>
                             <Typography
                                 type="h1"
-                                content={refactoredEvent[0].prefix}
+                                content={refactoredEvent.prefix}
                                 inline
                             />
                             <Typography type="h1" content=":" inline />
                         </>
                     )}
-                    {refactoredEvent[0].names.length > 1 ? (
+                    {refactoredEvent.names.length > 1 ? (
                         <>
-                            {refactoredEvent[0].names.map(
+                            {refactoredEvent.names.map(
                                 ({ name, refKey }: any) => (
                                     <div>
                                         <Typography
                                             type="h2"
                                             content={
                                                 <>
-                                                    Part{refKey}
+                                                    Part&nbsp;{refKey}
                                                     &nbsp;&#8212;&nbsp;
                                                 </>
                                             }
@@ -66,8 +66,8 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
                         </>
                     ) : (
                         <Typography
-                            type={refactoredEvent[0].prefix ? 'h2' : 'h1'}
-                            content={refactoredEvent[0].names[0].name}
+                            type={refactoredEvent.prefix ? 'h2' : 'h1'}
+                            content={refactoredEvent.names[0].name}
                             textAlign="center"
                         />
                     )}
@@ -75,12 +75,12 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
                 <div className="instant-gram-tile-title">
                     <Typography
                         type="h3"
-                        content={refactoredEvent[0].startDate}
+                        content={refactoredEvent.startDate}
                         textAlign="left"
                         color="#585858"
                         inline
                     />
-                    {refactoredEvent[0].endDate && (
+                    {refactoredEvent.endDate && (
                         <>
                             <Typography
                                 type="h3"
@@ -91,7 +91,7 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
                             />
                             <Typography
                                 type="h3"
-                                content={refactoredEvent[0].endDate}
+                                content={refactoredEvent.endDate}
                                 textAlign="left"
                                 color="#585858"
                                 inline
@@ -99,20 +99,20 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
                         </>
                     )}
                 </div>
-                {refactoredEvent[0].showSportEvent && (
+                {refactoredEvent.showSportEvent && (
                     <div className="instant-gram-tile-sport">
                         <div>
                             <div className="instant-gram-tile-sport-sub-element left">
                                 <Typography
                                     type="body"
-                                    content={refactoredEvent[0].sportDist}
+                                    content={refactoredEvent.distance}
                                     boldFace
                                     inline
                                     mR="5px"
                                 />
                                 <Typography
                                     type="body"
-                                    content={refactoredEvent[0].sportElev}
+                                    content={refactoredEvent.elevation}
                                     boldFace
                                     inline
                                     mL="5px"
@@ -121,15 +121,13 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
                             <div className="instant-gram-tile-sport-sub-element right">
                                 <Typography
                                     type="body"
-                                    content={
-                                        <>[{refactoredEvent[0].sportTime}]</>
-                                    }
+                                    content={<>[{refactoredEvent.time}]</>}
                                     boldFace
                                     inline
                                 />
                             </div>
                         </div>
-                        {refactoredEvent[0].sportIslands && (
+                        {refactoredEvent.islands && (
                             <div className="instant-gram-tile-sport-element">
                                 <div className="instant-gram-tile-sport-sub-element left">
                                     <Typography
@@ -143,16 +141,14 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
                                 <div className="instant-gram-tile-sport-sub-element right">
                                     <Typography
                                         type="body"
-                                        content={
-                                            refactoredEvent[0].sportIslands
-                                        }
+                                        content={refactoredEvent.islands}
                                         textAlign="center"
                                         inline
                                     />
                                 </div>
                             </div>
                         )}
-                        {refactoredEvent[0].sportMunros && (
+                        {refactoredEvent.munros && (
                             <div className="instant-gram-tile-sport-element">
                                 <div className="instant-gram-tile-sport-sub-element left">
                                     <Typography
@@ -165,13 +161,13 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
                                 <div className="instant-gram-tile-sport-sub-element right">
                                     <Typography
                                         type="body"
-                                        content={refactoredEvent[0].sportMunros}
+                                        content={refactoredEvent.munros}
                                         inline
                                     />
                                 </div>
                             </div>
                         )}
-                        {refactoredEvent[0].sportMunroTops && (
+                        {refactoredEvent.munroTops && (
                             <div className="instant-gram-tile-sport-element">
                                 <div className="instant-gram-tile-sport-sub-element left">
                                     <Typography
@@ -184,15 +180,13 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
                                 <div className="instant-gram-tile-sport-sub-element right">
                                     <Typography
                                         type="body"
-                                        content={
-                                            refactoredEvent[0].sportMunroTops
-                                        }
+                                        content={refactoredEvent.munroTops}
                                         inline
                                     />
                                 </div>
                             </div>
                         )}
-                        {refactoredEvent[0].sportCorbetts && (
+                        {refactoredEvent.corbetts && (
                             <div className="instant-gram-tile-sport-element">
                                 <div className="instant-gram-tile-sport-sub-element left">
                                     <Typography
@@ -205,15 +199,13 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
                                 <div className="instant-gram-tile-sport-sub-element right">
                                     <Typography
                                         type="body"
-                                        content={
-                                            refactoredEvent[0].sportCorbetts
-                                        }
+                                        content={refactoredEvent.corbetts}
                                         inline
                                     />
                                 </div>
                             </div>
                         )}
-                        {refactoredEvent[0].sportCorbettTops && (
+                        {refactoredEvent.corbettTops && (
                             <div className="instant-gram-tile-sport-element">
                                 <div className="instant-gram-tile-sport-sub-element left">
                                     <Typography
@@ -226,15 +218,13 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
                                 <div className="instant-gram-tile-sport-sub-element right">
                                     <Typography
                                         type="body"
-                                        content={
-                                            refactoredEvent[0].sportCorbettTops
-                                        }
+                                        content={refactoredEvent.corbettTops}
                                         inline
                                     />
                                 </div>
                             </div>
                         )}
-                        {refactoredEvent[0].sportGrahams && (
+                        {refactoredEvent.grahams && (
                             <div className="instant-gram-tile-sport-element">
                                 <div className="instant-gram-tile-sport-sub-element left">
                                     <Typography
@@ -247,15 +237,13 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
                                 <div className="instant-gram-tile-sport-sub-element right">
                                     <Typography
                                         type="body"
-                                        content={
-                                            refactoredEvent[0].sportGrahams
-                                        }
+                                        content={refactoredEvent.grahams}
                                         inline
                                     />
                                 </div>
                             </div>
                         )}
-                        {refactoredEvent[0].sportSubTwos && (
+                        {refactoredEvent.subTwos && (
                             <div className="instant-gram-tile-sport-element">
                                 <div className="instant-gram-tile-sport-sub-element left">
                                     <Typography
@@ -268,15 +256,13 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
                                 <div className="instant-gram-tile-sport-sub-element right">
                                     <Typography
                                         type="body"
-                                        content={
-                                            refactoredEvent[0].sportSubTwos
-                                        }
+                                        content={refactoredEvent.subTwos}
                                         inline
                                     />
                                 </div>
                             </div>
                         )}
-                        {refactoredEvent[0].sportDonalds && (
+                        {refactoredEvent.donalds && (
                             <div className="instant-gram-tile-sport-element">
                                 <div className="instant-gram-tile-sport-sub-element left">
                                     <Typography
@@ -289,9 +275,7 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
                                 <div className="instant-gram-tile-sport-sub-element right">
                                     <Typography
                                         type="body"
-                                        content={
-                                            refactoredEvent[0].sportDonalds
-                                        }
+                                        content={refactoredEvent.donalds}
                                         inline
                                     />
                                 </div>
@@ -299,7 +283,7 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
                         )}
                     </div>
                 )}
-                {refactoredEvent[0].youthHostels && (
+                {refactoredEvent.youthHostels && (
                     <div className="instant-gram-tile-body">
                         <Typography
                             type="body"
@@ -313,9 +297,7 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
                                     />
                                     <Typography
                                         type="body"
-                                        content={
-                                            refactoredEvent[0].youthHostels
-                                        }
+                                        content={refactoredEvent.youthHostels}
                                         inline
                                     />
                                 </>
@@ -333,15 +315,15 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
                 </div>
                 {showDropDown && (
                     <div className="instant-gram-tile-body">
-                        {Array.isArray(refactoredEvent[0].description) ? (
+                        {Array.isArray(refactoredEvent.description) ? (
                             <Article
-                                sections={refactoredEvent[0].description}
+                                sections={refactoredEvent.description}
                                 textAlign="justify"
                             />
                         ) : (
                             <Typography
                                 type="body"
-                                content={refactoredEvent[0].description}
+                                content={refactoredEvent.description}
                                 textAlign="justify"
                                 paragraphMargins
                             />
@@ -349,7 +331,7 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
                     </div>
                 )}
                 <div className="instant-gram-tile-image-slider">
-                    <ImageSlider slides={refactoredEvent[0].images} />
+                    <ImageSlider slides={refactoredEvent.images} />
                 </div>
             </>
         </Tile>

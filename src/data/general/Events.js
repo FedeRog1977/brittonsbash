@@ -1,6 +1,40 @@
 export const eventData = {
     2023: [
         {
+            id: 'E2023023',
+            prefix: '',
+            names: ['KarKars Refresher'],
+            startDate: '2nd of June',
+            endDate: '',
+            description:
+                'Back out to the GoAT to round up the stunning weekend. Bon Accord to keep the Mojito streak going.',
+            images: [
+                {
+                    url: '',
+                    alt: '',
+                    description: '',
+                },
+            ],
+            youthHostels: [],
+        },
+        {
+            id: 'E2023022',
+            prefix: 'Cairngorms XI',
+            names: ['All The Trimmings'],
+            startDate: '2nd of June',
+            endDate: '3rd of June',
+            description:
+                'In annual fashion, it was time to return to Lee’s for a regulatory waste. Of course it wouldn’t be the same without BAR but we have our methods of getting around that. Quick stop in Murray Tesco and off to fry up some burg’ in the fammous kitchen. Then the real party started, muddling n’aw. Almost a leet’ of rum over a relaxed night of Ferris and Emperor Daniel Creg. Yes, another upright until 6am then up for Brian MacDonald’s famous Vrackie. Stunning one for the books.',
+            images: [
+                {
+                    url: '',
+                    alt: '',
+                    description: '',
+                },
+            ],
+            youthHostels: ['Dalwhinnie Old School'],
+        },
+        {
             id: 'E2023021',
             prefix: '',
             names: ['Nine To Five'],

@@ -104,6 +104,22 @@ export const sportData = {
         ],
         projects: [
             {
+                id: 'P2023013',
+                name: 'All The Trimmings',
+                dist: 5.83,
+                elev: 2277,
+                time: '1:53:47',
+                companionship: 1,
+                islands: [],
+                munros: [],
+                munroTops: [],
+                corbetts: ['Ben Vrackie'],
+                corbettTops: [],
+                grahams: [],
+                subTwos: [],
+                donalds: [],
+            },
+            {
                 id: 'P2023012',
                 name: 'Nine To Five',
                 dist: 8.23,
