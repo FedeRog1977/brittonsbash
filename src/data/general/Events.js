@@ -1,7 +1,7 @@
 export const eventData = {
     2023: [
         {
-            id: 'E2023023',
+            id: 'E2023025',
             prefix: '',
             names: ['KarKars Refresher'],
             startDate: '2nd of June',
@@ -18,7 +18,7 @@ export const eventData = {
             youthHostels: [],
         },
         {
-            id: 'E2023022',
+            id: 'E2023024',
             prefix: 'Cairngorms XI',
             names: ['All The Trimmings'],
             startDate: '2nd of June',
@@ -33,6 +33,40 @@ export const eventData = {
                 },
             ],
             youthHostels: ['Dalwhinnie Old School'],
+        },
+        {
+            id: 'E2023023',
+            prefix: '',
+            names: ['Waterfoot Stunners'],
+            startDate: '29th of May',
+            endDate: '',
+            description:
+                'Just a quickie round the block for the hit of blue and green.',
+            images: [
+                {
+                    url: '',
+                    alt: '',
+                    description: '',
+                },
+            ],
+            youthHostels: [],
+        },
+        {
+            id: 'E2023022',
+            prefix: '',
+            names: ['Butters'],
+            startDate: '28th of May',
+            endDate: '',
+            description:
+                'Back to the legendary Butters with PMB for an early bday hit.',
+            images: [
+                {
+                    url: '',
+                    alt: '',
+                    description: '',
+                },
+            ],
+            youthHostels: [],
         },
         {
             id: 'E2023021',
