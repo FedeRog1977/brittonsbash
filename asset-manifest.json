@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/brittonsbash/static/css/main.52765e8d.css",
-    "main.js": "/brittonsbash/static/js/main.67d21209.js",
+    "main.css": "/brittonsbash/static/css/main.714297e9.css",
+    "main.js": "/brittonsbash/static/js/main.8253fce8.js",
     "static/js/787.21a77f2f.chunk.js": "/brittonsbash/static/js/787.21a77f2f.chunk.js",
-    "static/media/bg.jpg": "/brittonsbash/static/media/bg.5491b47b3c9c172a2e9e.jpg",
+    "static/media/bg.jpg": "/brittonsbash/static/media/bg.2f2e846632d205674360.jpg",
     "static/media/CMUItalic.ttf": "/brittonsbash/static/media/CMUItalic.242b10aa04f441336096.ttf",
     "static/media/CMUSerif.ttf": "/brittonsbash/static/media/CMUSerif.8ff5cee913df84291549.ttf",
     "static/media/CMUBold.ttf": "/brittonsbash/static/media/CMUBold.c97a73040fda7e3cb554.ttf",
@@ -11,16 +11,20 @@
     "static/media/Extended-Bold.ttf": "/brittonsbash/static/media/Extended-Bold.447d44339e756daf66b8.ttf",
     "static/media/Bold.ttf": "/brittonsbash/static/media/Bold.1e7581aa8a44cf53f5c2.ttf",
     "static/media/Italic.ttf": "/brittonsbash/static/media/Italic.4fbfd0471518fbe9d64f.ttf",
+    "static/media/OpenSans-Italic.ttf": "/brittonsbash/static/media/OpenSans-Italic.910cef950734e8b2d263.ttf",
+    "static/media/OpenSans-Medium.ttf": "/brittonsbash/static/media/OpenSans-Medium.5b0a682fe3717764627e.ttf",
+    "static/media/OpenSans-Regular.ttf": "/brittonsbash/static/media/OpenSans-Regular.9a6cfa5890d7f3eef585.ttf",
+    "static/media/OpenSans-Light.ttf": "/brittonsbash/static/media/OpenSans-Light.ba19b360bc99b580b45b.ttf",
     "static/media/Grandista.ttf": "/brittonsbash/static/media/Grandista.bec7f1e368edce800cdd.ttf",
     "static/media/NFS.ttf": "/brittonsbash/static/media/NFS.8723982ddbc7e3136bad.ttf",
     "static/media/xmr.svg": "/brittonsbash/static/media/xmr.45ccc83cb5c9bd7f5f6794df23a2ea69.svg",
     "index.html": "/brittonsbash/index.html",
-    "main.52765e8d.css.map": "/brittonsbash/static/css/main.52765e8d.css.map",
-    "main.67d21209.js.map": "/brittonsbash/static/js/main.67d21209.js.map",
+    "main.714297e9.css.map": "/brittonsbash/static/css/main.714297e9.css.map",
+    "main.8253fce8.js.map": "/brittonsbash/static/js/main.8253fce8.js.map",
     "787.21a77f2f.chunk.js.map": "/brittonsbash/static/js/787.21a77f2f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.52765e8d.css",
-    "static/js/main.67d21209.js"
+    "static/css/main.714297e9.css",
+    "static/js/main.8253fce8.js"
   ]
 }
