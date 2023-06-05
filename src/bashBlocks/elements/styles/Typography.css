@@ -16,6 +16,26 @@
 }
 
 @font-face {
+    font-family: Sans-Light;
+    src: url(../../../fonts/open-sans/static/OpenSans-Light.ttf);
+}
+
+@font-face {
+    font-family: Sans-Regular;
+    src: url(../../../fonts/open-sans/static/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: Sans-Bold;
+    src: url(../../../fonts/open-sans/static/OpenSans-Medium.ttf);
+}
+
+@font-face {
+    font-family: Sans-Italic;
+    src: url(../../../fonts/open-sans/static/OpenSans-Italic.ttf);
+}
+
+/* @font-face {
     font-family: Audi-Regular;
     src: url(../../../fonts/audi/Normal.ttf);
 }
@@ -33,7 +53,7 @@
 @font-face {
     font-family: Audi-Extended;
     src: url(../../../fonts/audi/Extended-Bold.ttf);
-}
+} */
 
 /* Serif Classes */
 
@@ -103,63 +123,72 @@
 /* Sans-Serif Classes */
 
 .t1-sans-serif {
-    font-family: Audi-Extended;
+    /* font-family: Audi-Extended; */
+    font-family: Sans-Bold;
     font-size: 64px;
     color: #282828;
     padding: 0px;
 }
 
 .t2-sans-serif {
-    font-family: Audi-Bold;
+    /* font-family: Audi-Bold; */
+    font-family: Sans-Bold;
     font-size: 64px;
     color: #282828;
     padding: 0px;
 }
 
 .h1-sans-serif {
-    font-family: Audi-Bold;
+    /* font-family: Audi-Bold; */
+    font-family: Sans-Bold;
     font-size: 52px;
     color: #282828;
     padding: 0px;
 }
 
 .h2-sans-serif {
-    font-family: Audi-Bold;
+    /* font-family: Audi-Bold; */
+    font-family: Sans-Bold;
     font-size: 40px;
     color: #282828;
     padding: 0px;
 }
 
 .h3-sans-serif {
-    font-family: Audi-Bold;
+    /* font-family: Audi-Bold; */
+    font-family: Sans-Bold;
     font-size: 28px;
     color: #282828;
     padding: 0px;
 }
 
 .h4-sans-serif {
-    font-family: Audi-Regular;
+    /* font-family: Audi-Regular; */
+    font-family: Sans-Regular;
     font-size: 20px;
     color: #282828;
     padding: 0px;
 }
 
 .body-sans-serif {
-    font-family: Audi-Regular;
+    /* font-family: Audi-Regular; */
+    font-family: Sans-Regular;
     font-size: 16px;
     color: #282828;
     padding: 0px;
 }
 
 .caption-sans-serif {
-    font-family: Audi-Bold;
+    /* font-family: Audi-Bold; */
+    font-family: Sans-Bold;
     font-size: 16px;
     color: #282828;
     padding: 0px;
 }
 
 .footnote-sans-serif {
-    font-family: Audi-Regular;
+    /* font-family: Audi-Regular; */
+    font-family: Sans-Regular;
     font-size: 14px;
     color: #282828;
     padding: 0px;
@@ -172,7 +201,7 @@
 }
 
 .bold-sans-serif {
-    font-family: Audi-Bold;
+    font-family: Sans-Bold;
 }
 
 /* Italic Classes */
@@ -182,7 +211,7 @@
 }
 
 .italic-sans-serif {
-    font-family: Audi-Italic;
+    font-family: Sans-Italic;
 }
 
 /* Links */
@@ -194,7 +223,7 @@ a {
 }
 
 a:hover {
-    color: #87CEEB;
+    color: #87ceeb;
     transition: color 0.5s;
     cursor: pointer;
 }
@@ -202,7 +231,6 @@ a:hover {
 /* Mobile */
 
 @media (max-width: 768px) {
-
     .t1-serif,
     .t1-sans-serif,
     .t2-serif,
@@ -244,5 +272,4 @@ a:hover {
     .footnote-sans-serif {
         font-size: 12px;
     }
-
 }

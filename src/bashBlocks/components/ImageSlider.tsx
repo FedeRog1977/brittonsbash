@@ -12,6 +12,7 @@ import { useScreenWidth } from '../../scripts/display/useScreenWidth'
 const ImageSlider = ({ slides }: any) => {
     const isMobile = useMobile()
     const screenWidth = useScreenWidth()
+    const photoWidth = screenWidth / 1.875
 
     const [current, setCurrent] = useState(0)
     const length = slides.length
@@ -53,7 +54,7 @@ const ImageSlider = ({ slides }: any) => {
                                     style={{
                                         width: isMobile
                                             ? `${screenWidth}px`
-                                            : `${screenWidth / 1.75}px`,
+                                            : `${photoWidth}px`,
                                     }}
                                     src={slide.url}
                                     alt={slide.alt}

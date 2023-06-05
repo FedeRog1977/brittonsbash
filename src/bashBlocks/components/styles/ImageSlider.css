@@ -14,8 +14,6 @@
 }
 
 .image-slider-image {
-    /* width: ; */
-    border-radius: 0.25em;
     box-shadow: 0px 0px 10px #a8a8a8;
     /* border: 1px solid black; */
 }
@@ -53,11 +51,11 @@
 }
 
 .left-arrow {
-    left: 0px;
+    left: 3.5%;
 }
 
 .right-arrow {
-    right: 0px;
+    right: 3.5%;
 }
 
 .left-arrow:hover,
@@ -92,7 +90,6 @@
     }
 
     .image-slider-image {
-        border-radius: 0em;
         box-shadow: none;
     }
 
