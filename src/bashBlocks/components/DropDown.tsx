@@ -37,7 +37,7 @@ const DropDown: FC<DropDownProps> = ({
             <>
                 {funcResp === false && (
                     <Typography
-                        type={type ? type : 'h4'}
+                        type={type ? type : 'body'}
                         content={
                             <>
                                 {content ? (
@@ -53,7 +53,7 @@ const DropDown: FC<DropDownProps> = ({
                 )}
                 {funcResp === true && (
                     <Typography
-                        type={type ? type : 'h4'}
+                        type={type ? type : 'body'}
                         content={
                             <>
                                 {content ? (

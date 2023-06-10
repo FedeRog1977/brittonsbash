@@ -2,6 +2,14 @@ export const sportData = {
     2023: {
         roadies: [
             {
+                id: 'R2023017',
+                name: 'Fenwick + Wind Farm',
+                dist: 30.03,
+                elev: 1696,
+                time: '1:54:36',
+                speed: 15.7,
+            },
+            {
                 id: 'R2023016',
                 name: 'Strathaven',
                 dist: 36.86,
@@ -119,6 +127,22 @@ export const sportData = {
             },
         ],
         projects: [
+            {
+                id: 'P2023014',
+                name: 'An Old Friend',
+                dist: 14.5,
+                elev: 5427,
+                time: '5:08:22',
+                companionship: 1,
+                islands: [],
+                munros: ['Beinn Narnain', 'Beinn ìme'],
+                munroTops: [],
+                corbetts: ['Ben Arthur (The Cobbler)'],
+                corbettTops: [],
+                grahams: [],
+                subTwos: [],
+                donalds: [],
+            },
             {
                 id: 'P2023013',
                 name: 'All The Trimmings',
@@ -1414,22 +1438,22 @@ export const sportData = {
             {
                 id: 'M2022090',
                 name: 'Waterfoot',
-                dist: 577,
-                elev: 10.01,
+                dist: 10.01,
+                elev: 577,
                 time: '2:16:10',
             },
             {
                 id: 'M2022089',
                 name: 'Waterfoot',
-                dist: 564,
-                elev: 10.0,
+                dist: 10.0,
+                elev: 564,
                 time: '2:24:50',
             },
             {
                 id: 'M2022088',
                 name: 'Waterfoot',
-                dist: 551,
-                elev: 10.06,
+                dist: 10.06,
+                elev: 551,
                 time: '2:20:30',
             },
             {

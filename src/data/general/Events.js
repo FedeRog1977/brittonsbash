@@ -1,6 +1,22 @@
 export const eventData = {
     2023: [
         {
+            id: 'E2023026',
+            prefix: '',
+            names: ['An Old Friend'],
+            startDate: '9th of June',
+            endDate: '',
+            description: '...',
+            images: [
+                {
+                    url: '',
+                    alt: '',
+                    description: '',
+                },
+            ],
+            youthHostels: [],
+        },
+        {
             id: 'E2023025',
             prefix: '',
             names: ['KarKars Refresher'],

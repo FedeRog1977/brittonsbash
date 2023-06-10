@@ -196,12 +196,12 @@
 
 /* Bold Classes */
 
-.bold-serif {
+.bold-serif b {
     font-family: CMU-Bold;
 }
 
-.bold-sans-serif {
-    font-family: Sans-Bold;
+.bold-sans-serif b {
+    font-family: Sans-Regular;
 }
 
 /* Italic Classes */
