@@ -2,6 +2,14 @@ export const sportData = {
     2023: {
         roadies: [
             {
+                id: 'R2023018',
+                name: 'Strathaven',
+                dist: 36.89,
+                elev: 2323,
+                time: '2:22:35',
+                speed: 15.5,
+            },
+            {
                 id: 'R2023017',
                 name: 'Fenwick + Wind Farm',
                 dist: 30.03,
@@ -135,7 +143,7 @@ export const sportData = {
                 time: '5:08:22',
                 companionship: 1,
                 islands: [],
-                munros: ['Beinn Narnain', 'Beinn ìme'],
+                munros: ['Beinn Narnain', 'Beinn Ìme'],
                 munroTops: [],
                 corbetts: ['Ben Arthur (The Cobbler)'],
                 corbettTops: [],
@@ -2817,7 +2825,7 @@ export const sportData = {
                 time: '5:56:02',
                 companionship: 0,
                 islands: [],
-                munros: ['Beinn Narnain', 'Beinn ìme'],
+                munros: ['Beinn Narnain', 'Beinn Ìme'],
                 munroTops: [],
                 corbetts: ['Ben Arthur (The Cobbler)'],
                 corbettTops: [],
@@ -2960,7 +2968,7 @@ export const sportData = {
                 islands: [],
                 munros: [
                     'Beinn Narnain',
-                    'Beinn ìme',
+                    'Beinn Ìme',
                     'Ben Vane',
                     'Ben Vorlich (Loch Lomond)',
                 ],
@@ -3106,7 +3114,7 @@ export const sportData = {
                 time: '7:37:39',
                 companionship: 0,
                 islands: [],
-                munros: ['Beinn Narnain', 'Beinn ìme', 'Ben Vane'],
+                munros: ['Beinn Narnain', 'Beinn Ìme', 'Ben Vane'],
                 munroTops: [],
                 corbetts: [],
                 corbettTops: [],

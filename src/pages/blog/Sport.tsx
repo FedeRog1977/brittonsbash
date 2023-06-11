@@ -1,4 +1,3 @@
-import '../../App.css'
 import SportResultTile from '../../components/blog/sport/SportResultTile'
 import Background from '../../elements/Background'
 

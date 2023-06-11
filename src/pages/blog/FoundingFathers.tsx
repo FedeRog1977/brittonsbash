@@ -1,4 +1,3 @@
-import '../../App.css'
 import Background from '../../elements/Background'
 
 function FoundingFathers() {

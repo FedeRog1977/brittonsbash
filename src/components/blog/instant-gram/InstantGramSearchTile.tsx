@@ -1,76 +1,81 @@
-import Button from "../../../bashBlocks/elements/Button";
-import Search from "../../../bashBlocks/elements/Search";
+import Button from '../../../bashBlocks/elements/Button'
+import Search from '../../../bashBlocks/elements/Search'
 import InstantGramSearchList from '../../../elements/blog/instant-gram/InstantGramSearchList'
-import { eventData } from "../../../data/general/Events";
+import { eventData } from '../../../data/general/Events'
 import './styles/InstantGramTile.css'
-import { useState } from "react";
-import Tile from "../../../bashBlocks/components/Tile";
-import Typography from "../../../bashBlocks/elements/Typography";
-import DropDown from "../../../bashBlocks/components/DropDown";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faSearch,
-} from "@fortawesome/free-solid-svg-icons";
-import { useMobile } from "../../../scripts/display/useMobile";
+import { useState } from 'react'
+import Tile from '../../../bashBlocks/components/Tile'
+import Typography from '../../../bashBlocks/elements/Typography'
+import DropDown from '../../../bashBlocks/components/DropDown'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { useMobile } from '../../../scripts/display/useMobile'
 
 const InstantGramSearchTile = ({ funcInput, funcButton, funcSelect }: any) => {
-    const isMobile = useMobile();
-
-    const [showDropDown, setShowDropDown] = useState(false);
-
-    const handleClick = () => {
-        if (showDropDown === false) {
-            setShowDropDown(true);
-        } else {
-            setShowDropDown(false);
-        }
-    }
+    const isMobile = useMobile()
 
     return (
-        <Tile type='solid' top>
+        <Tile type="solid" top>
             <>
                 <>
-                    <div className='instant-gram-search-component'>
-                        <Search className='instant-gram-search' func={funcInput} content='Search All Events' />
+                    <div className="instant-gram-search-component">
+                        <Search
+                            className="instant-gram-search"
+                            func={funcInput}
+                            content="Search All Events"
+                        />
                         <Button
-                            className='instant-gram-search'
+                            className="instant-gram-search"
                             func={funcButton}
                             content={
                                 <>
-                                    {isMobile ?
+                                    {isMobile ? (
                                         <Typography
-                                            type='h4'
+                                            type="h4"
                                             content={
-                                                <FontAwesomeIcon icon={faSearch} />
+                                                <FontAwesomeIcon
+                                                    icon={faSearch}
+                                                />
                                             }
-                                            color='#FFFFFF'
+                                            color="#FFFFFF"
                                         />
-                                        :
+                                    ) : (
                                         <Typography
-                                            type='h4'
-                                            content='Search'
-                                            color='#FFFFFF'
+                                            type="h4"
+                                            content="Search"
+                                            color="#FFFFFF"
                                         />
-                                    }
+                                    )}
                                 </>
                             }
                         />
                     </div>
-                    <div className='instant-gram-search-component'>
-                        <DropDown className='regular' func={handleClick} funcResp={showDropDown} />
-                    </div>
                 </>
-                {showDropDown &&
-                    <>
-                        <InstantGramSearchList func={funcSelect} items={eventData[2023]} year='2023' />
-                        <InstantGramSearchList func={funcSelect} items={eventData[2022]} year='2022' />
-                        <InstantGramSearchList func={funcSelect} items={eventData[2021]} year='2021' />
-                        <InstantGramSearchList func={funcSelect} items={eventData[2020]} year='2020' />
-                    </>
-                }
+                <>
+                    <InstantGramSearchList
+                        func={funcSelect}
+                        items={eventData[2023]}
+                        year="2023"
+                    />
+                    <InstantGramSearchList
+                        func={funcSelect}
+                        items={eventData[2022]}
+                        year="2022"
+                    />
+                    <InstantGramSearchList
+                        func={funcSelect}
+                        items={eventData[2021]}
+                        year="2021"
+                    />
+                    <InstantGramSearchList
+                        func={funcSelect}
+                        items={eventData[2020]}
+                        year="2020"
+                    />
+                </>
             </>
         </Tile>
     )
-};
+}
 
-export default InstantGramSearchTile;
+export default InstantGramSearchTile

@@ -1,4 +1,3 @@
-import '../../App.css'
 import Background from '../../elements/Background'
 import InstantGramSearch from '../../components/blog/instant-gram/InstantGramSearch'
 import { instantGramContent } from '../../data/page-content/blog/instant-gram/instantGramContent'

@@ -1,6 +1,6 @@
 import { FC, ReactElement } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import Button from '../elements/Button'
 import Typography from '../elements/Typography'
 import './styles/DropDown.css'
