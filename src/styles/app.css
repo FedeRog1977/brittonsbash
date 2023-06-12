@@ -1,4 +1,4 @@
-/* Variables */
+/* Colors */
 
 :root {
     --bg: #282828;
@@ -12,6 +12,10 @@
     --link-trans: 0.25s;
     --dark-trans: 0.5s;
 }
+
+/* Standards */
+
+/* ... */
 
 /* Body */
 
