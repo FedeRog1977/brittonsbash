@@ -3,6 +3,53 @@ export const eventData = {
         {
             id: 'E2023026',
             prefix: '',
+            names: ['Good Evening Rouken Glen Park'],
+            startDate: '11th of June',
+            endDate: '',
+            description:
+                'It was a long day of recovery post-500ml-rum, but Skerryvore attendance was not negotiable. Good to finally see some irl trikz from the First Lady Loor as well. The real show.',
+            images: [
+                {
+                    url: 'https://lewisbritton.com/Blog/Photos_IG/2023/good-evening-rouken-glen-park/1.jpg',
+                    alt: '',
+                    description: 'Avril Lavigne',
+                },
+                {
+                    url: 'https://lewisbritton.com/Blog/Photos_IG/2023/good-evening-rouken-glen-park/2.jpg',
+                    alt: '',
+                    description: 'Idek',
+                },
+                {
+                    url: 'https://lewisbritton.com/Blog/Photos_IG/2023/good-evening-rouken-glen-park/3.jpg',
+                    alt: '',
+                    description: '(2*pi*r)/4',
+                },
+                {
+                    url: 'https://lewisbritton.com/Blog/Photos_IG/2023/good-evening-rouken-glen-park/4.jpg',
+                    alt: '',
+                    description: 'Landing...',
+                },
+                {
+                    url: 'https://lewisbritton.com/Blog/Photos_IG/2023/good-evening-rouken-glen-park/5.jpg',
+                    alt: '',
+                    description: '...It',
+                },
+                {
+                    url: 'https://lewisbritton.com/Blog/Photos_IG/2023/good-evening-rouken-glen-park/6.jpg',
+                    alt: '',
+                    description: 'Action Shot',
+                },
+                {
+                    url: 'https://lewisbritton.com/Blog/Photos_IG/2023/good-evening-rouken-glen-park/7.jpg',
+                    alt: '',
+                    description: 'Good Evening Rouken Glen Park!',
+                },
+            ],
+            youthHostels: [],
+        },
+        {
+            id: 'E2023026',
+            prefix: '',
             names: ['An Old Friend'],
             startDate: '9th of June',
             endDate: '',
