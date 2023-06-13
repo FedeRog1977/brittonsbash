@@ -1,29 +1,7 @@
-/* Initialize Fonts */
-
-@font-face {
-    font-family: Audi-Extended;
-    src: url(../../fonts/audi/Extended-Bold.ttf);
-}
-
-@font-face {
-    font-family: Audi-Regular;
-    src: url(../../fonts/audi/Normal.ttf);
-}
-
-@font-face {
-    font-family: Audi-Bold;
-    src: url(../../fonts/audi/Bold.ttf);
-}
-
-@font-face {
-    font-family: Audi-Italic;
-    src: url(../../fonts/audi/Italic.ttf);
-}
-
 /* Header */
 
 .header {
-    background-color: #282828;
+    background-color: var(--font-1);
     height: 75px;
     margin: 0;
     padding: 0px 150px 0px 150px;
@@ -35,10 +13,10 @@
 }
 
 .header-navigation {
-    font-family: Audi-Regular;
-    color: #A2A2A2;
+    font-family: Sans-Light;
+    color: var(--font-4);
     float: right;
-    margin: 11px 0 0 0;
+    margin: 10px 0 0 0;
 }
 
 .header-navigation li,
@@ -55,7 +33,7 @@
 .subHeaderConquestNavigation a,
 .subHeaderConquestNavigation span {
     text-decoration: none;
-    color: #A2A2A2;
+    color: var(--font-4);
     transition: color 0.5s;
 }
 
@@ -65,14 +43,14 @@
 .sub-header-navigation span:hover,
 .subHeaderConquestNavigation a:hover,
 .subHeaderConquestNavigation span:hover {
-    color: #87CEEB;
+    color: var(--font-3);
     transition: color 0.5s;
     cursor: pointer;
 }
 
 .sub-header,
 .subHeaderConquest {
-    background-color: #303030;
+    background-color: var(--font-2);
     height: 55px;
     margin: 0;
     padding: 0 150px 0 150px;
@@ -80,8 +58,8 @@
 
 .sub-header-navigation,
 .subHeaderConquestNavigation {
-    font-family: Audi-Regular;
-    color: #A2A2A2;
+    font-family: Sans-Light;
+    color: #a2a2a2;
     float: right;
     height: 50px;
     margin: 1px 0 0 0;
@@ -91,21 +69,16 @@
 /* Footer */
 
 .footer {
-    font-family: Audi-Regular;
-    font-size: 16px;
     text-align: center;
-    background-color: #282828;
+    background-color: var(--font-1);
     margin: 0;
     padding: 1.25em 7.5% 1.25em 7.5%;
 }
 
 /* Mobile */
 
-
 @media (max-width: 768px) {
-
     .header-navigation {
         display: none;
     }
-
 }

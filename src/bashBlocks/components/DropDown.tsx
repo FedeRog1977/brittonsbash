@@ -21,6 +21,7 @@ interface DropDownProps {
     func: () => void
     funcResp: boolean
     content?: string | ReactElement
+    solid?: boolean
 }
 
 const DropDown: FC<DropDownProps> = ({

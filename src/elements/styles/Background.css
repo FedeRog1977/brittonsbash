@@ -1,13 +1,3 @@
-@font-face {
-    font-family: Instagram;
-    src: url(../../fonts/Grandista.ttf);
-}
-
-@font-face {
-    font-family: NFS;
-    src: url(../../fonts/NFS.ttf);
-}
-
 .background {
     background-image: url('../../media/images/bg.jpg');
     background-attachment: fixed;
