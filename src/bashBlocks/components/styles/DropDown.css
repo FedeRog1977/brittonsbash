@@ -1,26 +1,39 @@
-button.expand-regular,
-button.expand-dense {
-    background: #ffffff00;
+button.expand-regular-clear,
+button.expand-dense-clear {
+    background-color: var(--transparrent);
     border: none;
-    border-radius: 0.25em;
+    border-radius: var(--corners-small);
     transition: background-color 0.5s;
     padding: 5px;
 }
 
 button.expand-regular-solid,
 button.expand-dense-solid {
+    background-color: var(--background);
+    border: none;
+    border-radius: var(--corners-small);
+    transition: background-color 0.5s;
+    padding: 5px;
 }
 
-button.expand-regular {
+button.expand-regular-clear,
+button.expand-regular-solid {
     width: 100%;
 }
 
-button.expand-dense {
+button.expand-dense-clear,
+button.expand-dense-solid {
     width: 25%;
 }
 
-button.expand-regular:hover,
-button.expand-dense:hover {
+button.expand-regular-clear:hover,
+button.expand-dense-clear:hover {
+    background-color: var(--background);
+    transition: background-color 0.5s;
+}
+
+button.expand-regular-solid:hover,
+button.expand-dense-solid:hover {
     background-color: var(--background);
     transition: background-color 0.5s;
 }

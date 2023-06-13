@@ -1,6 +1,4 @@
 import { FC, ReactElement } from 'react'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import Button from '../elements/Button'
 import Typography from '../elements/Typography'
 import './styles/DropDown.css'
@@ -17,55 +15,41 @@ interface DropDownProps {
         | 'body'
         | 'caption'
         | 'footnote'
-    className: 'regular' | 'dense'
+    backgroundType:
+        | 'regular-clear'
+        | 'dense-clear'
+        | 'regular-solid'
+        | 'dense-solid'
     func: () => void
     funcResp: boolean
     content?: string | ReactElement
-    solid?: boolean
 }
 
 const DropDown: FC<DropDownProps> = ({
     type,
-    className,
+    backgroundType,
     func,
     funcResp,
     content,
 }: any) => (
     <Button
-        className={`expand-${className}`}
+        className={`expand-${backgroundType}`}
         func={func}
         content={
             <>
                 {funcResp === false && (
                     <Typography
                         type={type ? type : 'body'}
-                        content={
-                            <>
-                                {content ? (
-                                    <>{content}</>
-                                ) : (
-                                    // <FontAwesomeIcon icon={faChevronDown} />
-                                    <>Expand</>
-                                )}
-                            </>
-                        }
-                        color="#585858"
+                        content={<>{content ? <>{content}</> : <>Expand</>}</>}
                     />
                 )}
                 {funcResp === true && (
                     <Typography
                         type={type ? type : 'body'}
                         content={
-                            <>
-                                {content ? (
-                                    <>{content}</>
-                                ) : (
-                                    // <FontAwesomeIcon icon={faChevronUp} />
-                                    <>Contract</>
-                                )}
-                            </>
+                            <>{content ? <>{content}</> : <>Contract</>}</>
                         }
-                        color="#87CEEB"
+                        color="var(--font-3)"
                     />
                 )}
             </>

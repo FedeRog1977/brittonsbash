@@ -36,6 +36,11 @@
 }
 
 @font-face {
+    font-family: Sans-Light-Italic;
+    src: url(../fonts/open-sans/static/OpenSans-LightItalic.ttf);
+}
+
+@font-face {
     font-family: Audi-Regular;
     src: url(../fonts/audi/Normal.ttf);
 }
@@ -71,6 +76,7 @@
     --background: #f5f5f5;
     --foreground: #ffffff;
     --shadow-1: 0px 0px 10px #d8d8d8;
+    --transparrent: #ffffff00;
     --font-1: #282828;
     --font-2: #303030;
     --font-3: #96b9ee;

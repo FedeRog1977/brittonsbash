@@ -1,89 +1,80 @@
-import { FC, ReactElement } from "react";
-import { useMobile } from "../../scripts/display/useMobile";
-import './styles/Typography.css';
+import { FC, ReactElement } from 'react'
+import { useMobile } from '../../scripts/display/useMobile'
+import './styles/Typography.css'
 
 interface TypographyProps {
     type:
-    | string
-    | 't1'
-    | 't2'
-    | 'h1'
-    | 'h2'
-    | 'h3'
-    | 'h4'
-    | 'body'
-    | 'caption'
-    | 'footnote';
-    content:
-    | string
-    | ReactElement;
-    fontFamily?:
-    | 'serif'
-    | 'sans-serif';
-    textAlign?:
-    | 'left'
-    | 'center'
-    | 'justify'
-    | 'right';
-    color?: string;
-    inline?: boolean;
-    boldFace?: boolean;
-    italicize?: boolean;
-    smallCaps?: boolean;
-    textDecoration?:
-    | 'overline'
-    | 'underline'
-    | 'line-through';
-    paragraphMargins?: boolean;
-    link?: string;
-    refKey?: string;
-    mT?: string;
-    mB?: string;
-    mL?: string;
-    mR?: string;
+        | string
+        | 't1'
+        | 't2'
+        | 'h1'
+        | 'h2'
+        | 'h3'
+        | 'h4'
+        | 'body'
+        | 'caption'
+        | 'footnote'
+    content: string | ReactElement
+    fontFamily?: 'serif' | 'sans-serif'
+    textAlign?: 'left' | 'center' | 'justify' | 'right'
+    color?: string
+    inline?: boolean
+    boldFace?: boolean
+    italicize?: boolean
+    smallCaps?: boolean
+    textDecoration?: 'overline' | 'underline' | 'line-through'
+    paragraphMargins?: boolean
+    link?: string
+    refKey?: string
+    mT?: string
+    mB?: string
+    mL?: string
+    mR?: string
 }
 
-const Typography: FC<TypographyProps> = (
-    {
-        type,
-        content,
-        fontFamily,
-        textAlign,
-        color,
-        inline,
-        boldFace,
-        italicize,
-        smallCaps,
-        textDecoration,
-        paragraphMargins,
-        link,
-        refKey,
-        mT,
-        mB,
-        mL,
-        mR,
-    }: any
-) => {
-    const isMobile = useMobile();
+const Typography: FC<TypographyProps> = ({
+    type,
+    content,
+    fontFamily,
+    textAlign,
+    color,
+    inline,
+    boldFace,
+    italicize,
+    smallCaps,
+    textDecoration,
+    paragraphMargins,
+    link,
+    refKey,
+    mT,
+    mB,
+    mL,
+    mR,
+}: any) => {
+    const isMobile = useMobile()
 
     return (
         <div
             className={
-                (fontFamily === 'serif' ? `${type}-serif` : `${type}-sans-serif`)
+                fontFamily === 'serif' ? `${type}-serif` : `${type}-sans-serif`
             }
             style={{
-                display: (inline && 'inline'),
+                display: inline && 'inline',
                 textAlign: textAlign,
-                marginTop: (paragraphMargins ?
-                    (isMobile ? '15px' : '30px')
-                    :
-                    (mT ? mT : '0px')
-                ),
-                marginBottom: (paragraphMargins ?
-                    (isMobile ? '15px' : '30px')
-                    :
-                    (mB ? mB : '0px')
-                ),
+                marginTop: paragraphMargins
+                    ? isMobile
+                        ? '15px'
+                        : '30px'
+                    : mT
+                    ? mT
+                    : '0px',
+                marginBottom: paragraphMargins
+                    ? isMobile
+                        ? '15px'
+                        : '30px'
+                    : mB
+                    ? mB
+                    : '0px',
                 marginLeft: mL ? mL : 0,
                 marginRight: mR ? mR : 0,
                 padding: 0,
@@ -93,58 +84,82 @@ const Typography: FC<TypographyProps> = (
             <span
                 style={{
                     color: color,
-                    fontVariant: (smallCaps && 'small-caps'),
+                    fontVariant: smallCaps && 'small-caps',
                     textDecoration: textDecoration,
                 }}
             >
-                {boldFace ?
+                {boldFace ? (
                     <>
-                        {italicize ?
-                            <i className={fontFamily === 'serif' ? 'italic-serif' : 'italic-sans-serif'}>
-                                <b className={fontFamily === 'serif' ? 'bold-serif' : 'bold-sans-serif'}>
+                        {italicize ? (
+                            <i
+                                className={
+                                    fontFamily === 'serif'
+                                        ? 'italic-serif'
+                                        : 'italic-sans-serif'
+                                }
+                            >
+                                <b
+                                    className={
+                                        fontFamily === 'serif'
+                                            ? 'bold-serif'
+                                            : 'bold-sans-serif'
+                                    }
+                                >
                                     <>
-                                        {link ?
+                                        {link ? (
                                             <a href={link}>{content}</a>
-                                            :
+                                        ) : (
                                             <>{content}</>
-                                        }
+                                        )}
                                     </>
                                 </b>
                             </i>
-                            :
-                            <b className={fontFamily === 'serif' ? 'bold-serif' : 'bold-sans-serif'}>
-                                {link ?
-                                    <a href={link}>{content}</a>
-                                    :
-                                    <>{content}</>
+                        ) : (
+                            <b
+                                className={
+                                    fontFamily === 'serif'
+                                        ? 'bold-serif'
+                                        : 'bold-sans-serif'
                                 }
+                            >
+                                {link ? (
+                                    <a href={link}>{content}</a>
+                                ) : (
+                                    <>{content}</>
+                                )}
                             </b>
-                        }
+                        )}
                     </>
-                    :
+                ) : (
                     <>
-                        {italicize ?
-                            <i className={fontFamily === 'serif' ? 'italic-serif' : 'italic-sans-serif'}>
-                                {link ?
-                                    <a href={link}>{content}</a>
-                                    :
-                                    <>{content}</>
+                        {italicize ? (
+                            <i
+                                className={
+                                    fontFamily === 'serif'
+                                        ? 'italic-serif'
+                                        : 'italic-sans-serif'
                                 }
+                            >
+                                {link ? (
+                                    <a href={link}>{content}</a>
+                                ) : (
+                                    <>{content}</>
+                                )}
                             </i>
-                            :
+                        ) : (
                             <>
-                                {link ?
+                                {link ? (
                                     <a href={link}>{content}</a>
-                                    :
+                                ) : (
                                     <>{content}</>
-                                }
+                                )}
                             </>
-                        }
+                        )}
                     </>
-                }
+                )}
             </span>
         </div>
     )
 }
 
-export default Typography;
+export default Typography

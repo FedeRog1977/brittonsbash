@@ -115,7 +115,7 @@
 
 .body-sans-serif {
     /* font-family: Audi-Regular; */
-    font-family: Sans-Regular;
+    font-family: Sans-Light;
     font-size: 16px;
     color: #282828;
     padding: 0px;
@@ -139,12 +139,12 @@
 
 /* Bold Classes */
 
-.bold-serif b {
+.bold-serif {
     font-family: CMU-Bold;
 }
 
-.bold-sans-serif b {
-    font-family: Sans-Regular;
+.bold-sans-serif {
+    font-family: Sans-Bold;
 }
 
 /* Italic Classes */
@@ -154,19 +154,19 @@
 }
 
 .italic-sans-serif {
-    font-family: Sans-Italic;
+    font-family: Sans-Light-Italic;
 }
 
 /* Links */
 
 a {
-    color: #282828;
+    color: var(--font-1);
     text-decoration: none;
     transition: color 0.5s;
 }
 
 a:hover {
-    color: #87ceeb;
+    color: var(--font-3);
     transition: color 0.5s;
     cursor: pointer;
 }

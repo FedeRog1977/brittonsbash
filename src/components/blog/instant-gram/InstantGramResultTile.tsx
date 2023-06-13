@@ -308,7 +308,7 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
                 )}
                 <div className="instant-gram-tile-body">
                     <DropDown
-                        className="regular"
+                        backgroundType="regular-clear"
                         func={handleClick}
                         funcResp={showDropDown}
                     />

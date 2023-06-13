@@ -4,7 +4,7 @@ import Button from '../../../bashBlocks/elements/Button'
 import Spacing from '../../../bashBlocks/elements/Spacing'
 import Typography from '../../../bashBlocks/elements/Typography'
 
-function InstantGramSearchList({ func, items, year }: any) {
+function InstantGramSearchList({ func, items, year, endType }: any) {
     const [showDropDown, setShowDropDown] = useState(false)
 
     const handleClick = () => {
@@ -18,50 +18,53 @@ function InstantGramSearchList({ func, items, year }: any) {
     return (
         <>
             <DropDown
-                type="h3"
-                className="dense"
+                type="h1"
+                backgroundType="dense-clear"
                 func={handleClick}
                 funcResp={showDropDown}
                 content={year}
             />
-            {showDropDown &&
-                items.map(({ id, prefix, names }: any) => (
-                    <Button
-                        refKey={id}
-                        className="expand-regular"
-                        func={func}
-                        value={names.join(' ')}
-                        content={
-                            <Spacing mX={20}>
-                                <>
-                                    <Typography
-                                        type="h4"
-                                        content={
-                                            <>
-                                                {prefix && (
-                                                    <>
-                                                        {prefix}
-                                                        {':'}
-                                                    </>
-                                                )}
-                                            </>
-                                        }
-                                    />
-                                    <Typography
-                                        type="h4"
-                                        content={
-                                            <>
-                                                {names.map((name: any) => (
-                                                    <div>{name}</div>
-                                                ))}
-                                            </>
-                                        }
-                                    />
-                                </>
-                            </Spacing>
-                        }
-                    />
-                ))}
+            {showDropDown && (
+                <div>
+                    {items.map(({ id, prefix, names }: any) => (
+                        <Button
+                            refKey={id}
+                            className="expand-dense-clear"
+                            func={func}
+                            value={names.join(' ')}
+                            content={
+                                <Spacing mX={20}>
+                                    <>
+                                        <Typography
+                                            type="h4"
+                                            content={
+                                                <>
+                                                    {prefix && (
+                                                        <>
+                                                            {prefix}
+                                                            {':'}
+                                                        </>
+                                                    )}
+                                                </>
+                                            }
+                                        />
+                                        <Typography
+                                            type="h4"
+                                            content={
+                                                <>
+                                                    {names.map((name: any) => (
+                                                        <div>{name}</div>
+                                                    ))}
+                                                </>
+                                            }
+                                        />
+                                    </>
+                                </Spacing>
+                            }
+                        />
+                    ))}
+                </div>
+            )}
         </>
     )
 }

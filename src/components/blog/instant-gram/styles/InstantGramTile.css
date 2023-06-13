@@ -21,8 +21,7 @@ input[type='text'].instant-gram-search {
 
 button.instant-gram-search {
     background-color: #282828;
-    border-top-right-radius: 0.125em;
-    border-bottom-right-radius: 0.125em;
+    border-radius: var(--corners-small);
     width: 15%;
 }
 

@@ -1,21 +1,21 @@
-import Button from '../../../bashBlocks/elements/Button'
-import Search from '../../../bashBlocks/elements/Search'
+// import Button from '../../../bashBlocks/elements/Button'
+// import Search from '../../../bashBlocks/elements/Search'
 import InstantGramSearchList from '../../../elements/blog/instant-gram/InstantGramSearchList'
 import { eventData } from '../../../data/general/Events'
 import './styles/InstantGramTile.css'
 import Tile from '../../../bashBlocks/components/Tile'
-import Typography from '../../../bashBlocks/elements/Typography'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { useMobile } from '../../../scripts/display/useMobile'
+// import Typography from '../../../bashBlocks/elements/Typography'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faSearch } from '@fortawesome/free-solid-svg-icons'
+// import { useMobile } from '../../../scripts/display/useMobile'
 
 const InstantGramSearchTile = ({ funcInput, funcButton, funcSelect }: any) => {
-    const isMobile = useMobile()
+    // const isMobile = useMobile()
 
     return (
         <Tile type="solid" top>
             <>
-                <>
+                {/* <>
                     <div className="instant-gram-search-component">
                         <Search
                             className="instant-gram-search"
@@ -48,7 +48,7 @@ const InstantGramSearchTile = ({ funcInput, funcButton, funcSelect }: any) => {
                             }
                         />
                     </div>
-                </>
+                </> */}
                 <>
                     <InstantGramSearchList
                         func={funcSelect}
