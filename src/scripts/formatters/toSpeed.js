@@ -1,6 +1,6 @@
 export function toSpeed(speed) {
     const speedFormatted =
-        speed.toLocaleString('en-UK', { minimumFractionDigits: 1 }) + 'mph'
+        speed.toLocaleString('en-UK', { maximumFractionDigits: 1 }) + 'mph'
 
     return speedFormatted
 }
