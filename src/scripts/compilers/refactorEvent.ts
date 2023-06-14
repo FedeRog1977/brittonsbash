@@ -91,7 +91,7 @@ const refactorEvent = ({ event, sportEvent, showSportEvent }: any) => {
         showSportEvent,
     }
 
-    console.log(refactoredEvent)
+    console.log('Refactored Event:\n\n', refactoredEvent)
     return refactoredEvent
 }
 

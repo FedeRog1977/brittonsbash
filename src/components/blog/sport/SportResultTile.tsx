@@ -24,6 +24,7 @@ const SportResultTile = () =>
         // TESTING
 
         const compiledRoadies = compileRoadies()
+        const compiledMiles = compileMiles()
 
         return (
             <>
@@ -585,7 +586,7 @@ const SportResultTile = () =>
                             )
                         )}
                     </>
-                </Tile>
+                </Tile> */}
                 <Tile type="solid">
                     <>
                         <Typography
@@ -597,7 +598,7 @@ const SportResultTile = () =>
                                         content={
                                             <>
                                                 Miles:{' '}
-                                                {compileMiles().milesN[0].total}
+                                                {compiledMiles.number.total}
                                             </>
                                         }
                                     />
@@ -605,15 +606,9 @@ const SportResultTile = () =>
                                         type="h3"
                                         content={
                                             <>
-                                                {
-                                                    compileMiles().milesMiles[0]
-                                                        .total
-                                                }
+                                                {compiledMiles.distance.total}
                                                 &nbsp;&nbsp;
-                                                {
-                                                    compileMiles().milesElev[0]
-                                                        .total
-                                                }
+                                                {compiledMiles.elevation.total}
                                             </>
                                         }
                                     />
@@ -630,7 +625,7 @@ const SportResultTile = () =>
                                         content={
                                             <>
                                                 2023:{' '}
-                                                {compileMiles().milesN[0][2023]}
+                                                {compiledMiles.number[2023]}
                                             </>
                                         }
                                     />
@@ -638,15 +633,9 @@ const SportResultTile = () =>
                                         type="h4"
                                         content={
                                             <>
-                                                {
-                                                    compileMiles()
-                                                        .milesMiles[0][2023]
-                                                }
+                                                {compiledMiles.distance[2023]}
                                                 &nbsp;&nbsp;
-                                                {
-                                                    compileMiles()
-                                                        .milesElev[0][2023]
-                                                }
+                                                {compiledMiles.elevation[2023]}
                                             </>
                                         }
                                     />
@@ -654,7 +643,7 @@ const SportResultTile = () =>
                             }
                             paragraphMargins
                         />
-                        {compileMiles().miles[0][2023].map(
+                        {compiledMiles.miles[2023].map(
                             ({ id, name, dist, elev, time }: any) => (
                                 <div key={id}>
                                     <Typography
@@ -690,7 +679,7 @@ const SportResultTile = () =>
                                         content={
                                             <>
                                                 2022:{' '}
-                                                {compileMiles().milesN[0][2022]}
+                                                {compiledMiles.number[2022]}
                                             </>
                                         }
                                     />
@@ -698,15 +687,9 @@ const SportResultTile = () =>
                                         type="h4"
                                         content={
                                             <>
-                                                {
-                                                    compileMiles()
-                                                        .milesMiles[0][2022]
-                                                }
+                                                {compiledMiles.distance[2022]}
                                                 &nbsp;&nbsp;
-                                                {
-                                                    compileMiles()
-                                                        .milesElev[0][2022]
-                                                }
+                                                {compiledMiles.elevation[2022]}
                                             </>
                                         }
                                     />
@@ -714,7 +697,7 @@ const SportResultTile = () =>
                             }
                             paragraphMargins
                         />
-                        {compileMiles().miles[0][2022].map(
+                        {compiledMiles.miles[2022].map(
                             ({ id, name, dist, elev, time }: any) => (
                                 <div key={id}>
                                     <Typography
@@ -750,7 +733,7 @@ const SportResultTile = () =>
                                         content={
                                             <>
                                                 2021:{' '}
-                                                {compileMiles().milesN[0][2021]}
+                                                {compiledMiles.number[2021]}
                                             </>
                                         }
                                     />
@@ -758,15 +741,9 @@ const SportResultTile = () =>
                                         type="h4"
                                         content={
                                             <>
-                                                {
-                                                    compileMiles()
-                                                        .milesMiles[0][2021]
-                                                }
+                                                {compiledMiles.distance[2021]}
                                                 &nbsp;&nbsp;
-                                                {
-                                                    compileMiles()
-                                                        .milesElev[0][2021]
-                                                }
+                                                {compiledMiles.elevation[2021]}
                                             </>
                                         }
                                     />
@@ -774,7 +751,7 @@ const SportResultTile = () =>
                             }
                             paragraphMargins
                         />
-                        {compileMiles().miles[0][2021].map(
+                        {compiledMiles.miles[2021].map(
                             ({ id, name, dist, elev, time }: any) => (
                                 <div key={id}>
                                     <Typography
@@ -810,7 +787,7 @@ const SportResultTile = () =>
                                         content={
                                             <>
                                                 2020:{' '}
-                                                {compileMiles().milesN[0][2020]}
+                                                {compiledMiles.number[2020]}
                                             </>
                                         }
                                     />
@@ -818,15 +795,9 @@ const SportResultTile = () =>
                                         type="h4"
                                         content={
                                             <>
-                                                {
-                                                    compileMiles()
-                                                        .milesMiles[0][2020]
-                                                }
+                                                {compiledMiles.distance[2020]}
                                                 &nbsp;&nbsp;
-                                                {
-                                                    compileMiles()
-                                                        .milesElev[0][2020]
-                                                }
+                                                {compiledMiles.elevation[2020]}
                                             </>
                                         }
                                     />
@@ -834,7 +805,7 @@ const SportResultTile = () =>
                             }
                             paragraphMargins
                         />
-                        {compileMiles().miles[0][2020].map(
+                        {compiledMiles.miles[2020].map(
                             ({ id, name, dist, elev, time }: any) => (
                                 <div key={id}>
                                     <Typography
@@ -862,7 +833,7 @@ const SportResultTile = () =>
                             )
                         )}
                     </>
-                </Tile> */}
+                </Tile>
             </>
         )
     }

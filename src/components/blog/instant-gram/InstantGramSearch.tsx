@@ -2,11 +2,11 @@ import { useState } from 'react'
 import InstantGramSearchTile from './InstantGramSearchTile'
 import InstantGramResultTile from './InstantGramResultTile'
 import compileEvents from '../../../scripts/compilers/compileEvents'
-import compileSports from '../../../scripts/compilers/compileSports'
+import compileEventSports from '../../../scripts/compilers/compileEventSports'
 
 const InstantGramSearch = () => {
     const allEvents = compileEvents()
-    const allSport = compileSports()
+    const allSport = compileEventSports()
     const eventSport: any[] = []
 
     const [searchField, setSearchField] = useState('')

@@ -1,25 +1,24 @@
-import { eventData } from "../../data/general/Events";
+import { eventData } from '../../data/general/Events'
 
 export default function compileEvents() {
-    const allEvents: any[] = [];
+    const allEvents: any[] = []
 
-    for (var a in eventData[2023]) {
-        allEvents.push(eventData[2023][a]);
-    }
+    eventData[2023].forEach((event: any) => {
+        allEvents.push(event)
+    })
 
-    for (var b in eventData[2022]) {
-        allEvents.push(eventData[2022][b]);
-    }
+    eventData[2022].forEach((event: any) => {
+        allEvents.push(event)
+    })
 
-    for (var c in eventData[2021]) {
-        allEvents.push(eventData[2021][c]);
-    }
+    eventData[2021].forEach((event: any) => {
+        allEvents.push(event)
+    })
 
-    for (var d in eventData[2020]) {
-        allEvents.push(eventData[2020][d]);
-    }
+    eventData[2020].forEach((event: any) => {
+        allEvents.push(event)
+    })
 
-    return allEvents;
-};
-
-console.log(compileEvents());
+    console.log('All Events:\n\n', allEvents)
+    return allEvents
+}

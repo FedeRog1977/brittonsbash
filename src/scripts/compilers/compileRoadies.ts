@@ -32,34 +32,6 @@ const compileRoadies = () => {
     var elevation2021: number = 0
     var elevation2020: number = 0
 
-    // for (var a in sportData[2023].roadies) {
-    //     totalRoadieMiles2023 =
-    //         totalRoadieMiles2023 + sportData[2023].roadies[a].dist
-    //     totalRoadieElev2023 =
-    //         totalRoadieElev2023 + sportData[2023].roadies[a].elev
-    // }
-
-    // for (var b in sportData[2022].roadies) {
-    //     totalRoadieMiles2022 =
-    //         totalRoadieMiles2022 + sportData[2022].roadies[b].dist
-    //     totalRoadieElev2022 =
-    //         totalRoadieElev2022 + sportData[2022].roadies[b].elev
-    // }
-
-    // for (var c in sportData[2021].roadies) {
-    //     totalRoadieMiles2021 =
-    //         totalRoadieMiles2021 + sportData[2021].roadies[c].dist
-    //     totalRoadieElev2021 =
-    //         totalRoadieElev2021 + sportData[2021].roadies[c].elev
-    // }
-
-    // for (var d in sportData[2020].roadies) {
-    //     totalRoadieMiles2020 =
-    //         totalRoadieMiles2020 + sportData[2020].roadies[d].dist
-    //     totalRoadieElev2020 =
-    //         totalRoadieElev2020 + sportData[2020].roadies[d].elev
-    // }
-
     sportData[2023].roadies.forEach((event: any) => {
         distance2023 = distance2023 + event.dist
         elevation2023 = elevation2023 + event.elev
@@ -107,7 +79,7 @@ const compileRoadies = () => {
         elevation,
     }
 
-    console.log(compiledRoadies)
+    console.log('All Roadies:\n\n', compiledRoadies)
     return compiledRoadies
 }
 
