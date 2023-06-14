@@ -39,8 +39,6 @@ const refactorEvent = ({ event, sportEvent, showSportEvent }: any) => {
         })
     })
 
-    console.log(sportEvent)
-
     sportEvent.forEach((event: any) => {
         distances.push(event.dist)
         elevations.push(event.elev)
@@ -93,6 +91,7 @@ const refactorEvent = ({ event, sportEvent, showSportEvent }: any) => {
         showSportEvent,
     }
 
+    console.log(refactoredEvent)
     return refactoredEvent
 }
 

@@ -23,6 +23,8 @@ const SportResultTile = () =>
 
         // TESTING
 
+        const compiledRoadies = compileRoadies()
+
         return (
             <>
                 <Tile type="solid">
@@ -36,10 +38,7 @@ const SportResultTile = () =>
                                         content={
                                             <>
                                                 Roadies:{' '}
-                                                {
-                                                    compileRoadies().roadiesN[0]
-                                                        .total
-                                                }
+                                                {compiledRoadies.number.total}
                                             </>
                                         }
                                     />
@@ -47,14 +46,11 @@ const SportResultTile = () =>
                                         type="h3"
                                         content={
                                             <>
-                                                {
-                                                    compileRoadies()
-                                                        .roadiesMiles[0].total
-                                                }
+                                                {compiledRoadies.distance.total}
                                                 &nbsp;&nbsp;
                                                 {
-                                                    compileRoadies()
-                                                        .roadiesElev[0].total
+                                                    compiledRoadies.elevation
+                                                        .total
                                                 }
                                             </>
                                         }
@@ -72,10 +68,7 @@ const SportResultTile = () =>
                                         content={
                                             <>
                                                 2023:{' '}
-                                                {
-                                                    compileRoadies()
-                                                        .roadiesN[0][2023]
-                                                }
+                                                {compiledRoadies.number[2023]}
                                             </>
                                         }
                                     />
@@ -83,14 +76,11 @@ const SportResultTile = () =>
                                         type="h4"
                                         content={
                                             <>
-                                                {
-                                                    compileRoadies()
-                                                        .roadiesMiles[0][2023]
-                                                }
+                                                {compiledRoadies.distance[2023]}
                                                 &nbsp;&nbsp;
                                                 {
-                                                    compileRoadies()
-                                                        .roadiesElev[0][2023]
+                                                    compiledRoadies
+                                                        .elevation[2023]
                                                 }
                                             </>
                                         }
@@ -99,7 +89,7 @@ const SportResultTile = () =>
                             }
                             paragraphMargins
                         />
-                        {compileRoadies().roadies[0][2023].map(
+                        {compiledRoadies.roadies[2023].map(
                             ({ id, name, dist, elev, time, speed }: any) => (
                                 <div key={id}>
                                     <Typography
@@ -140,10 +130,7 @@ const SportResultTile = () =>
                                         content={
                                             <>
                                                 2022:{' '}
-                                                {
-                                                    compileRoadies()
-                                                        .roadiesN[0][2022]
-                                                }
+                                                {compiledRoadies.number[2022]}
                                             </>
                                         }
                                     />
@@ -151,14 +138,11 @@ const SportResultTile = () =>
                                         type="h4"
                                         content={
                                             <>
-                                                {
-                                                    compileRoadies()
-                                                        .roadiesMiles[0][2022]
-                                                }
+                                                {compiledRoadies.distance[2022]}
                                                 &nbsp;&nbsp;
                                                 {
-                                                    compileRoadies()
-                                                        .roadiesElev[0][2022]
+                                                    compiledRoadies
+                                                        .elevation[2022]
                                                 }
                                             </>
                                         }
@@ -167,7 +151,7 @@ const SportResultTile = () =>
                             }
                             paragraphMargins
                         />
-                        {compileRoadies().roadies[0][2022].map(
+                        {compiledRoadies.roadies[2022].map(
                             ({ id, name, dist, elev, time }: any) => (
                                 <div key={id}>
                                     <Typography
@@ -203,10 +187,7 @@ const SportResultTile = () =>
                                         content={
                                             <>
                                                 2021:{' '}
-                                                {
-                                                    compileRoadies()
-                                                        .roadiesN[0][2021]
-                                                }
+                                                {compiledRoadies.number[2021]}
                                             </>
                                         }
                                     />
@@ -214,14 +195,11 @@ const SportResultTile = () =>
                                         type="h4"
                                         content={
                                             <>
-                                                {
-                                                    compileRoadies()
-                                                        .roadiesMiles[0][2021]
-                                                }
+                                                {compiledRoadies.distance[2021]}
                                                 &nbsp;&nbsp;
                                                 {
-                                                    compileRoadies()
-                                                        .roadiesElev[0][2021]
+                                                    compiledRoadies
+                                                        .elevation[2021]
                                                 }
                                             </>
                                         }
@@ -230,7 +208,7 @@ const SportResultTile = () =>
                             }
                             paragraphMargins
                         />
-                        {compileRoadies().roadies[0][2021].map(
+                        {compiledRoadies.roadies[2021].map(
                             ({ id, name, dist, elev, time }: any) => (
                                 <div key={id}>
                                     <Typography
@@ -266,10 +244,7 @@ const SportResultTile = () =>
                                         content={
                                             <>
                                                 2020:{' '}
-                                                {
-                                                    compileRoadies()
-                                                        .roadiesN[0][2020]
-                                                }
+                                                {compiledRoadies.number[2020]}
                                             </>
                                         }
                                     />
@@ -277,14 +252,11 @@ const SportResultTile = () =>
                                         type="h4"
                                         content={
                                             <>
-                                                {
-                                                    compileRoadies()
-                                                        .roadiesMiles[0][2020]
-                                                }
+                                                {compiledRoadies.distance[2020]}
                                                 &nbsp;&nbsp;
                                                 {
-                                                    compileRoadies()
-                                                        .roadiesElev[0][2020]
+                                                    compiledRoadies
+                                                        .elevation[2020]
                                                 }
                                             </>
                                         }
@@ -293,7 +265,7 @@ const SportResultTile = () =>
                             }
                             paragraphMargins
                         />
-                        {compileRoadies().roadies[0][2020].map(
+                        {compiledRoadies.roadies[2020].map(
                             ({ id, name, dist, elev, time }: any) => (
                                 <div key={id}>
                                     <Typography
@@ -322,7 +294,7 @@ const SportResultTile = () =>
                         )}
                     </>
                 </Tile>
-                <Tile type="solid">
+                {/* <Tile type="solid">
                     <>
                         <Typography
                             type="body"
@@ -890,7 +862,7 @@ const SportResultTile = () =>
                             )
                         )}
                     </>
-                </Tile>
+                </Tile> */}
             </>
         )
     }
