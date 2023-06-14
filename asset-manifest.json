@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/brittonsbash/static/css/main.45daf79d.css",
-    "main.js": "/brittonsbash/static/js/main.2c0ae222.js",
+    "main.css": "/brittonsbash/static/css/main.5b516675.css",
+    "main.js": "/brittonsbash/static/js/main.c9d2e395.js",
     "static/js/787.21a77f2f.chunk.js": "/brittonsbash/static/js/787.21a77f2f.chunk.js",
     "static/media/bg.jpg": "/brittonsbash/static/media/bg.2f2e846632d205674360.jpg",
     "static/media/CMUItalic.ttf": "/brittonsbash/static/media/CMUItalic.242b10aa04f441336096.ttf",
@@ -11,6 +11,7 @@
     "static/media/Extended-Bold.ttf": "/brittonsbash/static/media/Extended-Bold.447d44339e756daf66b8.ttf",
     "static/media/Bold.ttf": "/brittonsbash/static/media/Bold.1e7581aa8a44cf53f5c2.ttf",
     "static/media/Italic.ttf": "/brittonsbash/static/media/Italic.4fbfd0471518fbe9d64f.ttf",
+    "static/media/OpenSans-LightItalic.ttf": "/brittonsbash/static/media/OpenSans-LightItalic.0ce71e4f901a265e51a4.ttf",
     "static/media/OpenSans-Italic.ttf": "/brittonsbash/static/media/OpenSans-Italic.910cef950734e8b2d263.ttf",
     "static/media/OpenSans-Medium.ttf": "/brittonsbash/static/media/OpenSans-Medium.5b0a682fe3717764627e.ttf",
     "static/media/OpenSans-Regular.ttf": "/brittonsbash/static/media/OpenSans-Regular.9a6cfa5890d7f3eef585.ttf",
@@ -19,12 +20,12 @@
     "static/media/NFS.ttf": "/brittonsbash/static/media/NFS.8723982ddbc7e3136bad.ttf",
     "static/media/xmr.svg": "/brittonsbash/static/media/xmr.45ccc83cb5c9bd7f5f6794df23a2ea69.svg",
     "index.html": "/brittonsbash/index.html",
-    "main.45daf79d.css.map": "/brittonsbash/static/css/main.45daf79d.css.map",
-    "main.2c0ae222.js.map": "/brittonsbash/static/js/main.2c0ae222.js.map",
+    "main.5b516675.css.map": "/brittonsbash/static/css/main.5b516675.css.map",
+    "main.c9d2e395.js.map": "/brittonsbash/static/js/main.c9d2e395.js.map",
     "787.21a77f2f.chunk.js.map": "/brittonsbash/static/js/787.21a77f2f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.45daf79d.css",
-    "static/js/main.2c0ae222.js"
+    "static/css/main.5b516675.css",
+    "static/js/main.c9d2e395.js"
   ]
 }
