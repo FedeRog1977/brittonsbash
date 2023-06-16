@@ -50,7 +50,7 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
                                                     &nbsp;&#8212;&nbsp;
                                                 </>
                                             }
-                                            color="#585858"
+                                            color="var(--font-5)"
                                             inline
                                             refKey={refKey}
                                         />
@@ -77,7 +77,7 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
                         type="h3"
                         content={refactoredEvent.startDate}
                         textAlign="left"
-                        color="#585858"
+                        color="var(--font-5)"
                         inline
                     />
                     {refactoredEvent.endDate && (
@@ -86,14 +86,14 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
                                 type="h3"
                                 content={<>&nbsp;&#8212;&nbsp;</>}
                                 textAlign="left"
-                                color="#585858"
+                                color="var(--font-5)"
                                 inline
                             />
                             <Typography
                                 type="h3"
                                 content={refactoredEvent.endDate}
                                 textAlign="left"
-                                color="#585858"
+                                color="var(--font-5)"
                                 inline
                             />
                         </>
