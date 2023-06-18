@@ -1,0 +1,6 @@
+export * from './remove-duplicates'
+export * from './sum'
+export * from './to-feet'
+export * from './to-miles'
+export * from './to-sentence-case'
+export * from './to-speed'

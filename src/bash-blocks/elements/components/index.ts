@@ -1,0 +1,6 @@
+export * from './button.component'
+export * from './figure.component'
+export * from './image.component'
+export * from './search.component'
+export * from './spacing.component'
+export * from './typography.component'

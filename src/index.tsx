@@ -1,45 +1,35 @@
 import './styles/app.css'
 import ReactDOM from 'react-dom/client'
-import {
-    HashRouter,
-    // HashRouter as Router,
-    // BrowserRouter,
-    // BrowserRouter as Router,
-    Route,
-    Routes,
-} from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import reportWebVitals from './reportWebVitals'
 
-import Header from './/elements/Header'
-import Footer from './elements/Footer'
+import { Header, Footer } from './elements'
 
-import ErrorPage from './pages/ErrorPage'
-
-import Home from './pages/Home'
-import Academia from './pages/Academia'
-import Employment from './pages/Employment'
-import Library from './pages/Library'
-
-import InstantGram from './pages/blog/InstantGram'
-import Sport from './pages/blog/Sport'
-import Allroad from './pages/blog/Allroad'
-import BrittonsFoodRC from './pages/blog/BrittonsFoodRC'
-import FoundingFathers from './pages/blog/FoundingFathers'
-import Media from './pages/blog/Media'
-import MiamiVice from './pages/blog/MiamiVice'
-import Ricing from './pages/blog/Ricing'
-import ThinkFlow from './pages/blog/ThinkFlow'
-import GentlemenWhoCafe from './pages/blog/GentlemenWhoCafe'
-import GraphicDesign from './pages/blog/GraphicDesign'
-
-import Weather from './pages/utils/Weather'
-import Conquest from './pages/utils/Conquest'
-import BashBlocks from './pages/utils/BashBlocks'
+import {
+    ErrorPage,
+    Home,
+    Academia,
+    Employment,
+    Library,
+    InstantGram,
+    Sport,
+    Allroad,
+    BrittonsFoodRC,
+    FoundingFathers,
+    Media,
+    MiamiVice,
+    Ricing,
+    ThinkFlow,
+    GentlemenWhoCafe,
+    GraphicDesign,
+    Weather,
+    Conquest,
+    BashBlocks,
+} from './pages'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
 root.render(
-    // <React.StrictMode>
     <HashRouter>
         <Header />
         <Routes>
@@ -72,7 +62,6 @@ root.render(
         </Routes>
         <Footer />
     </HashRouter>
-    // </React.StrictMode>
 )
 
 reportWebVitals()
