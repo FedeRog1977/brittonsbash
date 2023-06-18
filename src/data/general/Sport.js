@@ -152,6 +152,27 @@ export const sportData = {
         ],
         projects: [
             {
+                id: 'P2023015',
+                name: 'The Devil’s Dick',
+                dist: 23.42,
+                elev: 6969,
+                time: '8:42:37',
+                companionship: 1,
+                islands: [],
+                munros: [
+                    'The Devil’s Point',
+                    'Cairn Toul',
+                    'Sgòr an Lochain Uaine',
+                    'Braeriach',
+                ],
+                munroTops: [],
+                corbetts: [],
+                corbettTops: [],
+                grahams: [],
+                subTwos: [],
+                donalds: [],
+            },
+            {
                 id: 'P2023014',
                 name: 'An Old Friend',
                 dist: 14.5,

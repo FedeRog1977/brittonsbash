@@ -41,7 +41,7 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
                         <>
                             {refactoredEvent.names.map(
                                 ({ name, refKey }: any) => (
-                                    <div>
+                                    <div key={refKey}>
                                         <Typography
                                             type="h2"
                                             content={
@@ -132,7 +132,7 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
                                 <div className="instant-gram-tile-sport-sub-element left">
                                     <Typography
                                         type="body"
-                                        content="Island(s): "
+                                        content="Island(s)"
                                         textAlign="center"
                                         boldFace
                                         inline

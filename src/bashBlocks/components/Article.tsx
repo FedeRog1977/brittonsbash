@@ -1,53 +1,32 @@
-import { FC } from "react";
-import Typography from "../elements/Typography";
+import { FC } from 'react'
+import Typography, { TypographyProps } from '../elements/Typography'
 
 interface ArticleProps {
     sections: Array<{
-        type: string
-        | 't1'
-        | 't2'
-        | 'h1'
-        | 'h2'
-        | 'h3'
-        | 'h4'
-        | 'body'
-        | 'caption'
-        | 'footnote';
-        content: string;
-        color?: string;
-        inline?: boolean;
-        boldFace?: boolean;
-        italicize?: boolean;
-        smallCaps?: boolean;
-        textDecoration?:
-        | 'overline'
-        | 'underline'
-        | 'line-through';
-        link?: string;
-    }>;
-    fontFamily?:
-    | 'serif'
-    | 'sans-serif';
-    textAlign?:
-    | 'left'
-    | 'center'
-    | 'justify'
-    | 'right';
-    mT?: string;
-    mB?: string;
+        type: string | TypographyProps['type']
+        content: string
+        color?: string
+        inline?: boolean
+        boldFace?: boolean
+        italicize?: boolean
+        smallCaps?: boolean
+        textDecoration?: 'overline' | 'underline' | 'line-through'
+        link?: string
+    }>
+    fontFamily?: 'serif' | 'sans-serif'
+    textAlign?: 'left' | 'center' | 'justify' | 'right'
+    mT?: string
+    mB?: string
 }
 
-const Article: FC<ArticleProps> = (
-    {
-        sections,
-        fontFamily,
-        textAlign,
-        mT,
-        mB,
-    }: any
-) => {
-
-    console.log(sections);
+const Article: FC<ArticleProps> = ({
+    sections,
+    fontFamily,
+    textAlign,
+    mT,
+    mB,
+}: any) => {
+    console.log(sections)
 
     return (
         <div
@@ -61,6 +40,7 @@ const Article: FC<ArticleProps> = (
         >
             {sections.map(
                 ({
+                    index,
                     type,
                     content,
                     color,
@@ -69,9 +49,10 @@ const Article: FC<ArticleProps> = (
                     italicize,
                     smallCaps,
                     textDecoration,
-                    link
+                    link,
                 }: any) => (
                     <Typography
+                        key={index}
                         type={type}
                         content={content}
                         fontFamily={fontFamily}
@@ -91,4 +72,4 @@ const Article: FC<ArticleProps> = (
     )
 }
 
-export default Article;
+export default Article

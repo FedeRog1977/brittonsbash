@@ -21,7 +21,7 @@ function InstantGramSearchList({ func, items, year }: any) {
     return (
         <>
             <DropDown
-                type="h1"
+                type={isMobile ? 'h2' : 'h1'}
                 backgroundType="dense-clear"
                 func={handleClick}
                 funcResp={showDropDown}
@@ -29,25 +29,20 @@ function InstantGramSearchList({ func, items, year }: any) {
             />
             {showDropDown && (
                 <div>
-                    {items.map(({ id, prefix, names, refKey }: any) => (
+                    {items.map(({ id, prefix, names }: any) => (
                         <Button
-                            refKey={id}
+                            key={id}
                             className={`expand-${
                                 isMobile ? 'regular' : 'dense'
                             }-clear`}
                             func={func}
-                            value={names.join(' ')}
+                            value={names.join(' - ')}
                             content={
                                 <Spacing mX={20}>
                                     <>
                                         <Typography
                                             type="h5"
-                                            content={
-                                                <>
-                                                    Event&nbsp;
-                                                    {id.slice(-2)}
-                                                </>
-                                            }
+                                            content={<>{id.slice(-2)}</>}
                                             color="var(--font-5)"
                                         />
                                         <Typography
@@ -68,7 +63,9 @@ function InstantGramSearchList({ func, items, year }: any) {
                                             content={
                                                 <>
                                                     {names.map((name: any) => (
-                                                        <div>{name}</div>
+                                                        <div key={name}>
+                                                            {name}
+                                                        </div>
                                                     ))}
                                                 </>
                                             }

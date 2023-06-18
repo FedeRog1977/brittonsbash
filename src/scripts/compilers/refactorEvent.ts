@@ -77,7 +77,8 @@ const refactorEvent = ({ event, sportEvent, showSportEvent }: any) => {
         description: event.description,
         images: event.images,
         youthHostels: event.youthHostels.join(', '),
-        distance: toMiles(distances.reduce(sum)),
+        showSportEvent,
+        distance: sportEvent && toMiles(distances.reduce(sum)),
         elevation: toFeet(elevations.reduce(sum)),
         time: times.join(', '),
         islands: islandSetAggregate.join(', '),
@@ -88,7 +89,6 @@ const refactorEvent = ({ event, sportEvent, showSportEvent }: any) => {
         grahams: grahamSetAggregate.join(', '),
         subTwos: subTwoSetAggregate.join(', '),
         donalds: donaldSetAggregate.join(', '),
-        showSportEvent,
     }
 
     console.log('Refactored Event:\n\n', refactoredEvent)

@@ -1,17 +1,19 @@
-import { ReactElement } from 'react';
+import { FC, ReactElement } from 'react'
 import './styles/Button.css'
 
-const Button = ({ refKey, className, func, value, content }: any | ReactElement) => {
+export type ButtonProps = {
+    className: string
+    func: () => void
+    value?: string
+    content: string | ReactElement
+}
+
+const Button: FC<ButtonProps> = ({ className, func, value, content }: any) => {
     return (
-        <button
-            key={refKey}
-            className={className}
-            onClick={func}
-            value={value}
-        >
+        <button className={className} onClick={func} value={value}>
             {content}
         </button>
     )
 }
 
-export default Button;
+export default Button

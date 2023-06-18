@@ -44,8 +44,8 @@ const ImageSlider = ({ slides }: any) => {
             {slides.map((slide, index) => {
                 return (
                     <div
-                        className={index === current ? 'slide active' : 'slide'}
                         key={index}
+                        className={index === current ? 'slide active' : 'slide'}
                     >
                         {index === current && (
                             <div className="image-slider-container">
@@ -67,7 +67,6 @@ const ImageSlider = ({ slides }: any) => {
                                                 fontFamily="sans-serif"
                                                 content={slide.description}
                                                 textAlign="left"
-                                                boldFace
                                                 color="#FFFFFF"
                                             />
                                         </div>

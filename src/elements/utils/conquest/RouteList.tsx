@@ -1,10 +1,11 @@
 // import { hillData } from "../../../data/Hills";
 
 function RouteList({ id, func, landmassRoutes }: any) {
-    const routes = landmassRoutes.map(
-        ({ name }: any) =>
-            <option key={name} value={name}>{name}</option>
-    );
+    const routes = landmassRoutes.map(({ index, name }: any) => (
+        <option key={index} value={name}>
+            {name}
+        </option>
+    ))
 
     return (
         <select id={id} onChange={func}>
@@ -13,4 +14,4 @@ function RouteList({ id, func, landmassRoutes }: any) {
     )
 }
 
-export default RouteList;
+export default RouteList

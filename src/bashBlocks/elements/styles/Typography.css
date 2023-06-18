@@ -115,7 +115,7 @@
 
 .body-sans-serif {
     /* font-family: Audi-Regular; */
-    font-family: Sans-Light;
+    font-family: Sans-Regular;
     font-size: 16px;
     color: #282828;
     padding: 0px;
@@ -145,6 +145,7 @@
 
 .bold-sans-serif {
     font-family: Sans-Bold;
+    letter-spacing: 0.25px;
 }
 
 /* Italic Classes */

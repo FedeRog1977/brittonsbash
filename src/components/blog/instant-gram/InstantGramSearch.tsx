@@ -7,17 +7,37 @@ import compileEventSports from '../../../scripts/compilers/compileEventSports'
 const InstantGramSearch = () => {
     const allEvents = compileEvents()
     const allSport = compileEventSports()
-    const eventSport: any[] = []
 
-    const [searchField, setSearchField] = useState('')
+    const sportOnEvent: any[] = []
+    const sportInitial = [allSport[0]]
+    const sportEmpty = [
+        {
+            id: '',
+            name: '',
+            dist: 0,
+            elev: 0,
+            time: '',
+            companionship: 0,
+            islands: [],
+            munros: [],
+            munroTops: [],
+            corbetts: [],
+            corbettTops: [],
+            grahams: [],
+            subTwos: [],
+            donalds: [],
+        },
+    ]
 
-    const initialEventHaveSport = allEvents[0].names.includes(allSport[0].name)
-    eventSport.push(allSport[0])
+    const initialSport = Boolean(allEvents[0].names.includes(allSport[0].name))
 
     const [event, setEvent] = useState(allEvents[0])
-    const [sportEvent, setSportEvent] = useState(eventSport)
-    const [showSportEvent, setShowSportEvent] = useState(initialEventHaveSport)
+    const [sportEvent, setSportEvent] = useState(
+        initialSport ? sportInitial : sportEmpty
+    )
+    const [showSportEvent, setShowSportEvent] = useState(initialSport)
 
+    const [searchField, setSearchField] = useState('')
     const [eventPlaceholder, setEventPlaceholder] = useState(event)
     const [sportEventPlaceholder, setSportEventPlaceholder] =
         useState(sportEvent)
@@ -26,24 +46,26 @@ const InstantGramSearch = () => {
 
     const handleInput = (e: any) => {
         setSearchField(e.target.value.toLowerCase())
+        console.log('Input Target Value:', searchField)
 
         for (var i in allEvents) {
-            const fullName = allEvents[i].names.join(' / ').toLowerCase() // Not inc. prefix - trouble
+            const fullName = allEvents[i].names.join(' - ').toLowerCase()
 
             if (searchField === '') {
                 setEventPlaceholder(event)
                 setSportEventPlaceholder(sportEvent)
                 setShowSportEventPlaceholder(showSportEvent)
             } else if (fullName.includes(searchField)) {
-                eventSport.pop()
-                setEventPlaceholder(allEvents[i]) // Set event data (placeholder)
-                setShowSportEventPlaceholder(false) // Set show sport data (sport !exist) (placeholder)
+                console.log('Event JSON Value:', fullName)
+                setEventPlaceholder(allEvents[i])
+                setSportEventPlaceholder(sportEmpty)
+                setShowSportEventPlaceholder(false)
 
                 for (var j in allSport) {
                     if (allEvents[i].names.includes(allSport[j].name)) {
-                        eventSport.push(allSport[j])
-                        setSportEventPlaceholder(eventSport) // Set sport data (placeholder)
-                        setShowSportEventPlaceholder(true) // Set show sport data (sport exists)
+                        sportOnEvent.push(allSport[j])
+                        setSportEventPlaceholder(sportOnEvent)
+                        setShowSportEventPlaceholder(true)
                     }
                 }
             }
@@ -56,28 +78,30 @@ const InstantGramSearch = () => {
             setSportEvent(sportEvent)
             setShowSportEvent(showSportEvent)
         } else {
-            setEvent(eventPlaceholder) // Set event data
-            setSportEvent(sportEventPlaceholder) // Set sport data
-            setShowSportEvent(showSportEventPlaceholder) // Set show sport data (sport !exist/exists)
+            setEvent(eventPlaceholder)
+            setSportEvent(sportEventPlaceholder)
+            setShowSportEvent(showSportEventPlaceholder)
         }
     }
 
     const handleSelect = (e: any) => {
-        for (var i in allEvents) {
-            const fullName = allEvents[i].names.join(' ') // Not inc. prefix - trouble
+        console.log('Button Target Value:', e.currentTarget.value)
 
-            console.log(e.currentTarget.value)
+        for (var i in allEvents) {
+            const fullName = allEvents[i].names.join(' - ')
 
             if (fullName.includes(e.currentTarget.value)) {
-                eventSport.pop()
-                setEvent(allEvents[i]) // Set event data
-                setShowSportEvent(false) // Set show sport data (sport !exist)
+                console.log('Event JSON Value:', fullName)
+
+                setEvent(allEvents[i])
+                setSportEvent(sportEmpty)
+                setShowSportEvent(false)
 
                 for (var j in allSport) {
                     if (allEvents[i].names.includes(allSport[j].name)) {
-                        eventSport.push(allSport[j])
-                        setSportEvent(eventSport) // Set sport data
-                        setShowSportEvent(true) // Set show sport data (sport exists)
+                        sportOnEvent.push(allSport[j])
+                        setSportEvent(sportOnEvent)
+                        setShowSportEvent(true)
                     }
                 }
             }

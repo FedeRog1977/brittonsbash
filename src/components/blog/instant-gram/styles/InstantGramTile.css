@@ -1,9 +1,4 @@
-/* Search Tile */
-
-.instant-gram-search-component {
-    text-align: left;
-    margin: 15px 0px 15px 0px;
-}
+/* Search Components */
 
 input[type='text'].instant-gram-search,
 button.instant-gram-search {
@@ -15,17 +10,18 @@ button.instant-gram-search {
 }
 
 input[type='text'].instant-gram-search {
-    background-color: #f5f5f5;
-    width: 60%;
+    background-color: var(--background);
+    width: 82.5%;
 }
 
 button.instant-gram-search {
-    background-color: #282828;
+    float: right;
+    background-color: var(--font-1);
     border-radius: var(--corners-small);
     width: 15%;
 }
 
-/* Result Tile */
+/* Tile Components */
 
 .instant-gram-tile-title {
     text-align: center;
@@ -79,7 +75,7 @@ button.instant-gram-search {
     }
 
     button.instant-gram-search {
-        width: 10%;
+        width: 12.5%;
     }
 
     .instant-gram-tile-title,

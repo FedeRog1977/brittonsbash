@@ -1,6 +1,23 @@
 export const eventData = {
     2023: [
         {
+            id: 'E2023028',
+            prefix: 'Cairngorms XII',
+            names: ['The Devil’s Dick'],
+            startDate: '16th of June',
+            endDate: '17th of June',
+            description:
+                'Another long-awaited proj. We made the most of the closing of the English weather, with the famous Corrour Bothy round of four. Was a good standard practice sushware, some Wojak videos, then bed, before this large’n. Nothing some screaming and Percys couldn’t fix afterwards.',
+            images: [
+                {
+                    url: '',
+                    alt: '',
+                    description: '',
+                },
+            ],
+            youthHostels: [],
+        },
+        {
             id: 'E2023027',
             prefix: '',
             names: ['Good Evening Rouken Glen Park'],

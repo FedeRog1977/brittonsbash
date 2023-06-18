@@ -2,15 +2,15 @@ import { FC, ReactElement } from 'react'
 import { useMobile } from '../../scripts/display/useMobile'
 import './styles/Typography.css'
 
-interface TypographyProps {
+export type TypographyProps = {
     type:
-        | string
         | 't1'
         | 't2'
         | 'h1'
         | 'h2'
         | 'h3'
         | 'h4'
+        | 'h5'
         | 'body'
         | 'caption'
         | 'footnote'
@@ -55,6 +55,7 @@ const Typography: FC<TypographyProps> = ({
 
     return (
         <div
+            key={refKey}
             className={
                 fontFamily === 'serif' ? `${type}-serif` : `${type}-sans-serif`
             }
@@ -79,7 +80,6 @@ const Typography: FC<TypographyProps> = ({
                 marginRight: mR ? mR : 0,
                 padding: 0,
             }}
-            key={refKey}
         >
             <span
                 style={{
