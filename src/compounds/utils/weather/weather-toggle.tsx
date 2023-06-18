@@ -2,9 +2,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import { Button } from '../../../bash-blocks'
-import WeatherHourly from './WeatherHourly'
+import { WeatherHourly } from './weather-hourly'
 
-const WeatherToggle = ({ lat, lon }: any) => {
+export const WeatherToggle = ({ lat, lon }: any) => {
     const [showWeather, setShowWeather] = useState(false)
     const [weatherLabel, setWeatherLabel] = useState(
         <FontAwesomeIcon icon={faChevronDown} />
@@ -31,5 +31,3 @@ const WeatherToggle = ({ lat, lon }: any) => {
         </div>
     )
 }
-
-export default WeatherToggle

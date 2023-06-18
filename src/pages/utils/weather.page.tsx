@@ -1,4 +1,4 @@
-import WeatherSearch from '../../compounds/utils/weather/WeatherSearch'
+import { WeatherSearch } from '../../compounds'
 import { Background } from '../../elements'
 
 export const Weather = () => (

@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { hillData } from '../../../data/general/hills.data'
-import WeatherDaily from './WeatherDaily'
-import WeatherSearchBar from './WeatherSearchBar'
-import WeatherTitle from './WeatherTitle'
+import { WeatherDaily } from './weather-daily'
+import { WeatherSearchBar } from './weather-search-bar'
+import { WeatherTitle } from './weather-title'
 import { WeatherSubTitle } from '../../../elements'
 import { toSentenceCase } from '../../../scripts'
 
-const WeatherSearch = () => {
+export const WeatherSearch = () => {
     var [lat, setLat] = useState(56.6826)
     var [lon, setLon] = useState(5.1023)
 
@@ -160,5 +160,3 @@ const WeatherSearch = () => {
         </div>
     )
 }
-
-export default WeatherSearch

@@ -1,5 +1,5 @@
 import { Background } from '../../elements'
-import SportResultTile from '../../compounds/blog/sport/SportResultTile'
+import { SportResultTile } from '../../compounds'
 
 export const Sport = () => (
     <div>

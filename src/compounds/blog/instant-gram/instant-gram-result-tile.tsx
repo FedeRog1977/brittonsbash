@@ -6,10 +6,14 @@ import {
     Tile,
     Typography,
 } from '../../../bash-blocks'
-import './styles/InstantGramTile.css'
+import './styles/instant-gram-tile.styles.css'
 import { refactorEvent, useMobile } from '../../../scripts'
 
-const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
+export const InstantGramResultTile = ({
+    event,
+    sportEvent,
+    showSportEvent,
+}: any) => {
     const isMobile = useMobile()
 
     const refactoredEvent = refactorEvent({ event, sportEvent, showSportEvent })
@@ -338,5 +342,3 @@ const InstantGramResultTile = ({ event, sportEvent, showSportEvent }: any) => {
         </Tile>
     )
 }
-
-export default InstantGramResultTile
