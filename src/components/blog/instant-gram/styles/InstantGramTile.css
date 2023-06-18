@@ -11,7 +11,7 @@ button.instant-gram-search {
 
 input[type='text'].instant-gram-search {
     background-color: var(--background);
-    width: 82.5%;
+    width: 83.125%;
 }
 
 button.instant-gram-search {
@@ -71,11 +71,11 @@ button.instant-gram-search {
 
 @media (max-width: 768px) {
     input[type='text'].instant-gram-search {
-        width: 80%;
+        width: 75%;
     }
 
     button.instant-gram-search {
-        width: 12.5%;
+        width: 20%;
     }
 
     .instant-gram-tile-title,
@@ -91,6 +91,6 @@ button.instant-gram-search {
 
     .instant-gram-tile-image-slider {
         margin: 15px 0px 15px 0px;
-        background-color: #ffffff;
+        background-color: var(--foreground);
     }
 }
