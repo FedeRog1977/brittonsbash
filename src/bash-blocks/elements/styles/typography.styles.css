@@ -66,7 +66,6 @@
 /* Sans-Serif Classes */
 
 .t1-sans-serif {
-    /* font-family: Audi-Extended; */
     font-family: Sans-Bold;
     font-size: 64px;
     color: #282828;
@@ -74,7 +73,6 @@
 }
 
 .t2-sans-serif {
-    /* font-family: Audi-Bold; */
     font-family: Sans-Bold;
     font-size: 64px;
     color: #282828;
@@ -82,7 +80,6 @@
 }
 
 .h1-sans-serif {
-    /* font-family: Audi-Bold; */
     font-family: Sans-Bold;
     font-size: 52px;
     color: #282828;
@@ -90,7 +87,6 @@
 }
 
 .h2-sans-serif {
-    /* font-family: Audi-Bold; */
     font-family: Sans-Bold;
     font-size: 40px;
     color: #282828;
@@ -98,7 +94,6 @@
 }
 
 .h3-sans-serif {
-    /* font-family: Audi-Bold; */
     font-family: Sans-Bold;
     font-size: 28px;
     color: #282828;
@@ -106,7 +101,6 @@
 }
 
 .h4-sans-serif {
-    /* font-family: Audi-Regular; */
     font-family: Sans-Regular;
     font-size: 20px;
     color: #282828;
@@ -114,15 +108,20 @@
 }
 
 .body-sans-serif {
-    /* font-family: Audi-Regular; */
     font-family: Sans-Regular;
     font-size: 16px;
     color: #282828;
     padding: 0px;
 }
 
+.body-light-sans-serif {
+    font-family: Sans-Light;
+    font-size: 16px;
+    color: #282828;
+    padding: 0px;
+}
+
 .caption-sans-serif {
-    /* font-family: Audi-Bold; */
     font-family: Sans-Bold;
     font-size: 16px;
     color: #282828;
@@ -130,7 +129,6 @@
 }
 
 .footnote-sans-serif {
-    /* font-family: Audi-Regular; */
     font-family: Sans-Regular;
     font-size: 14px;
     color: #282828;
@@ -155,7 +153,7 @@
 }
 
 .italic-sans-serif {
-    font-family: Sans-Light-Italic;
+    font-family: Sans-Italic;
 }
 
 /* Links */
@@ -203,7 +201,8 @@ a:hover {
     }
 
     .body-serif,
-    .body-sans-serif {
+    .body-sans-serif,
+    .body-light-sans-serif {
         font-size: 14px;
     }
 

@@ -12,6 +12,7 @@ export type TypographyProps = {
         | 'h4'
         | 'h5'
         | 'body'
+        | 'body-light'
         | 'caption'
         | 'footnote'
     content: string | ReactElement

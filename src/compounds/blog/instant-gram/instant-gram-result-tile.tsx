@@ -111,14 +111,14 @@ export const InstantGramResultTile = ({
                                 <Typography
                                     type="body"
                                     content={refactoredEvent.distance}
-                                    boldFace
+                                    boldFace={isMobile ? false : true}
                                     inline
                                     mR="5px"
                                 />
                                 <Typography
                                     type="body"
                                     content={refactoredEvent.elevation}
-                                    boldFace
+                                    boldFace={isMobile ? false : true}
                                     inline
                                     mL="5px"
                                 />
@@ -127,7 +127,7 @@ export const InstantGramResultTile = ({
                                 <Typography
                                     type="body"
                                     content={<>[{refactoredEvent.time}]</>}
-                                    boldFace
+                                    boldFace={isMobile ? false : true}
                                     inline
                                 />
                             </div>
@@ -139,13 +139,13 @@ export const InstantGramResultTile = ({
                                         type="body"
                                         content="Island(s)"
                                         textAlign="center"
-                                        boldFace
+                                        boldFace={isMobile ? false : true}
                                         inline
                                     />
                                 </div>
                                 <div className="instant-gram-tile-sport-sub-element right">
                                     <Typography
-                                        type="body"
+                                        type={isMobile ? 'body-light' : 'body'}
                                         content={refactoredEvent.islands}
                                         textAlign="center"
                                         inline
@@ -159,13 +159,13 @@ export const InstantGramResultTile = ({
                                     <Typography
                                         type="body"
                                         content="Munro(s)"
-                                        boldFace
+                                        boldFace={isMobile ? false : true}
                                         inline
                                     />
                                 </div>
                                 <div className="instant-gram-tile-sport-sub-element right">
                                     <Typography
-                                        type="body"
+                                        type={isMobile ? 'body-light' : 'body'}
                                         content={refactoredEvent.munros}
                                         inline
                                     />
@@ -178,13 +178,13 @@ export const InstantGramResultTile = ({
                                     <Typography
                                         type="body"
                                         content="Munro Top(s)"
-                                        boldFace
+                                        boldFace={isMobile ? false : true}
                                         inline
                                     />
                                 </div>
                                 <div className="instant-gram-tile-sport-sub-element right">
                                     <Typography
-                                        type="body"
+                                        type={isMobile ? 'body-light' : 'body'}
                                         content={refactoredEvent.munroTops}
                                         inline
                                     />
@@ -197,13 +197,13 @@ export const InstantGramResultTile = ({
                                     <Typography
                                         type="body"
                                         content="Corbett(s)"
-                                        boldFace
+                                        boldFace={isMobile ? false : true}
                                         inline
                                     />
                                 </div>
                                 <div className="instant-gram-tile-sport-sub-element right">
                                     <Typography
-                                        type="body"
+                                        type={isMobile ? 'body-light' : 'body'}
                                         content={refactoredEvent.corbetts}
                                         inline
                                     />
@@ -216,13 +216,13 @@ export const InstantGramResultTile = ({
                                     <Typography
                                         type="body"
                                         content="Corbett Top(s)"
-                                        boldFace
+                                        boldFace={isMobile ? false : true}
                                         inline
                                     />
                                 </div>
                                 <div className="instant-gram-tile-sport-sub-element right">
                                     <Typography
-                                        type="body"
+                                        type={isMobile ? 'body-light' : 'body'}
                                         content={refactoredEvent.corbettTops}
                                         inline
                                     />
@@ -235,13 +235,13 @@ export const InstantGramResultTile = ({
                                     <Typography
                                         type="body"
                                         content="Graham(s)"
-                                        boldFace
+                                        boldFace={isMobile ? false : true}
                                         inline
                                     />
                                 </div>
                                 <div className="instant-gram-tile-sport-sub-element right">
                                     <Typography
-                                        type="body"
+                                        type={isMobile ? 'body-light' : 'body'}
                                         content={refactoredEvent.grahams}
                                         inline
                                     />
@@ -254,13 +254,13 @@ export const InstantGramResultTile = ({
                                     <Typography
                                         type="body"
                                         content="Sub 2000(s)"
-                                        boldFace
+                                        boldFace={isMobile ? false : true}
                                         inline
                                     />
                                 </div>
                                 <div className="instant-gram-tile-sport-sub-element right">
                                     <Typography
-                                        type="body"
+                                        type={isMobile ? 'body-light' : 'body'}
                                         content={refactoredEvent.subTwos}
                                         inline
                                     />
@@ -273,13 +273,13 @@ export const InstantGramResultTile = ({
                                     <Typography
                                         type="body"
                                         content="Donald(s)"
-                                        boldFace
+                                        boldFace={isMobile ? false : true}
                                         inline
                                     />
                                 </div>
                                 <div className="instant-gram-tile-sport-sub-element right">
                                     <Typography
-                                        type="body"
+                                        type={isMobile ? 'body-light' : 'body'}
                                         content={refactoredEvent.donalds}
                                         inline
                                     />
