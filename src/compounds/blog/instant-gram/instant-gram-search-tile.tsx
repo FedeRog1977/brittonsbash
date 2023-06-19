@@ -16,7 +16,7 @@ export const InstantGramSearchTile = ({
     return (
         <Tile type="solid" top>
             <>
-                <div className="instant-gram-tile-body">
+                <div className="instant-gram-tile-search">
                     <Search
                         className="instant-gram-search"
                         func={funcInput}
@@ -33,20 +33,20 @@ export const InstantGramSearchTile = ({
                                         content={
                                             <FontAwesomeIcon icon={faSearch} />
                                         }
-                                        color="#FFFFFF"
+                                        color="var(--foreground)"
                                     />
                                 ) : (
                                     <Typography
                                         type="h4"
                                         content="Search"
-                                        color="#FFFFFF"
+                                        color="var(--foreground)"
                                     />
                                 )}
                             </>
                         }
                     />
                 </div>
-                <div className="instant-gram-tile-body">
+                <div className="instant-gram-tile-search">
                     <InstantGramSearchList
                         func={funcSelect}
                         items={eventData[2023]}

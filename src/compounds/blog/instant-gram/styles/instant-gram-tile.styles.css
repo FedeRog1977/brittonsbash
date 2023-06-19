@@ -55,6 +55,7 @@ button.instant-gram-search {
     /* border: 1px solid black; */
 }
 
+.instant-gram-tile-search,
 .instant-gram-tile-body,
 .instant-gram-tile-image-slider {
     margin: 15px 70px 15px 70px;
@@ -78,9 +79,13 @@ button.instant-gram-search {
         width: 20%;
     }
 
+    .instant-gram-tile-search {
+        margin: 7.5px;
+    }
+
     .instant-gram-tile-title,
     .instant-gram-tile-body {
-        margin: 7.5px;
+        margin: 7.5px 20px 7.5px 20px;
     }
 
     .instant-gram-tile-sport {
