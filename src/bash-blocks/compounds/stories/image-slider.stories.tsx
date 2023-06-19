@@ -1,4 +1,4 @@
-import { imageSliderTestData } from '../../../data/test/image-slider.test-data'
+import { imageSliderTestData } from '../../../data'
 import { Typography } from '../..'
 import { ImageSlider, Tile } from '..'
 

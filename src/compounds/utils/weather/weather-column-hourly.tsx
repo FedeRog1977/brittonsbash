@@ -2,7 +2,7 @@ import {
     WeatherAtmosphereHourly,
     WeatherIntroHourly,
     WeatherWindHourly,
-} from './hourly'
+} from '.'
 
 export const WeatherColumnHourly = ({
     dt,

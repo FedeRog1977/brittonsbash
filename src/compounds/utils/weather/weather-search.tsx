@@ -1,8 +1,6 @@
 import { useState } from 'react'
-import { hillData } from '../../../data/general/hills.data'
-import { WeatherDaily } from './weather-daily'
-import { WeatherSearchBar } from './weather-search-bar'
-import { WeatherTitle } from './weather-title'
+import { hillData } from '../../../data'
+import { WeatherDaily, WeatherSearchBar, WeatherTitle } from '.'
 import { WeatherSubTitle } from '../../../elements'
 import { toSentenceCase } from '../../../scripts'
 

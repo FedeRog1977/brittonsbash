@@ -1,6 +1,4 @@
-import { sum } from '../formatters/sum'
-import { toFeet } from '../formatters/to-feet'
-import { toMiles } from '../formatters/to-miles'
+import { sum, toFeet, toMiles } from '..'
 
 export const refactorEvent = ({ event, sportEvent, showSportEvent }: any) => {
     const names: any[] = []

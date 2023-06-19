@@ -1,6 +1,5 @@
-import { sportData } from '../../data/general/sport.data'
-import { toFeet } from '../formatters/to-feet'
-import { toMiles } from '../formatters/to-miles'
+import { sportData } from '../../data'
+import { toFeet, toMiles } from '..'
 
 export const compileRoadies = () => {
     const roadies = {

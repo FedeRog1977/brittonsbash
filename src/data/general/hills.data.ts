@@ -1,5 +1,5 @@
 export const hillData = {
-    // -- This will be removed after weather and conquest are fixed
+    // This will be removed after weather and conquest are fixed
     munros: [
         {
             name: 'Ben Cruachan',

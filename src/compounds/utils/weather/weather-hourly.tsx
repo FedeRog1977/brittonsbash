@@ -1,7 +1,6 @@
-import { WeatherColumnHourly } from './weather-column-hourly'
+import { WeatherColumnHourly, WeatherHourlyCall } from '.'
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
-import { WeatherHourlyCall } from './weather-hourly-call'
 
 export const WeatherHourly = ({ latIn, lonIn }: any) => (
     <div className={'hourly'}>

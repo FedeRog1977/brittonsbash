@@ -1,5 +1,5 @@
-import { sportData } from '../../data/general/sport.data'
-import { removeDuplicates, toFeet, toMiles } from '../formatters'
+import { sportData } from '../../data'
+import { removeDuplicates, toFeet, toMiles } from '..'
 
 export const compileProjects = () => {
     const islands: any[] = []

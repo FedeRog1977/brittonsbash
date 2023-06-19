@@ -1,8 +1,6 @@
-import { WeatherColumn } from './weather-column'
-import { WeatherToggle } from './weather-toggle'
+import { WeatherColumn, WeatherToggle, WeatherDailyCall } from '.'
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
-import { WeatherDailyCall } from './weather-daily-call'
 
 export const WeatherDaily = ({ latIn, lonIn }: any) => (
     <div className={'daily'}>

@@ -1,9 +1,4 @@
-import {
-    WeatherAtmosphere,
-    WeatherTemp,
-    WeatherIntro,
-    WeatherWind,
-} from './daily'
+import { WeatherAtmosphere, WeatherTemp, WeatherIntro, WeatherWind } from '.'
 
 export const WeatherColumn = ({
     dt,

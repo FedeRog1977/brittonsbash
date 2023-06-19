@@ -3,10 +3,9 @@ import { faHamburger } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Typography } from '../bash-blocks'
-import './styles/HeaderFooter.css'
-import { SubHeaderBlog } from './sub-header-blog'
-import { SubHeaderUtils } from './sub-header-utils'
-import { useMobile } from '../scripts/display/use-mobile'
+import './styles/header-footer.styles.css'
+import { SubHeaderBlog, SubHeaderUtils } from '.'
+import { useMobile } from '../scripts'
 
 export const Header = () => {
     const isMobile = useMobile()

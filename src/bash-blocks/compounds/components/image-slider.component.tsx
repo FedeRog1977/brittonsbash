@@ -47,48 +47,60 @@ export const ImageSlider = ({ slides }: any) => {
                         key={index}
                         className={index === current ? 'slide active' : 'slide'}
                     >
-                        {index === current && (
-                            <div className="image-slider-container">
-                                <img
-                                    className="image-slider-image"
-                                    style={{
-                                        width: isMobile
-                                            ? `${screenWidth}px`
-                                            : `${photoWidth}px`,
-                                    }}
-                                    src={slide.url}
-                                    alt={slide.alt}
-                                />
-                                {slide.description && (
-                                    <>
-                                        <div className="image-slider-caption">
-                                            <Typography
-                                                type={isMobile ? 'body' : 'h4'}
-                                                fontFamily="sans-serif"
-                                                content={slide.description}
-                                                textAlign="left"
-                                                color="#FFFFFF"
-                                            />
-                                        </div>
-                                        <div className="image-slider-index">
-                                            <Typography
-                                                type={
-                                                    isMobile
-                                                        ? 'footnote'
-                                                        : 'body'
-                                                }
-                                                content={
-                                                    <>
-                                                        {current + 1}/
-                                                        {slides.length}
-                                                    </>
-                                                }
-                                                color="#FFFFFF"
-                                            />
-                                        </div>
-                                    </>
+                        {slide.url ? (
+                            <>
+                                {index === current && (
+                                    <div className="image-slider-container">
+                                        <img
+                                            className="image-slider-image"
+                                            style={{
+                                                width: isMobile
+                                                    ? `${screenWidth}px`
+                                                    : `${photoWidth}px`,
+                                            }}
+                                            src={slide.url}
+                                            alt={slide.alt}
+                                        />
+                                        {slide.description && (
+                                            <>
+                                                <div className="image-slider-caption">
+                                                    <Typography
+                                                        type={
+                                                            isMobile
+                                                                ? 'body'
+                                                                : 'h4'
+                                                        }
+                                                        fontFamily="sans-serif"
+                                                        content={
+                                                            slide.description
+                                                        }
+                                                        textAlign="left"
+                                                        color="#FFFFFF"
+                                                    />
+                                                </div>
+                                                <div className="image-slider-index">
+                                                    <Typography
+                                                        type={
+                                                            isMobile
+                                                                ? 'footnote'
+                                                                : 'body'
+                                                        }
+                                                        content={
+                                                            <>
+                                                                {current + 1}/
+                                                                {slides.length}
+                                                            </>
+                                                        }
+                                                        color="#FFFFFF"
+                                                    />
+                                                </div>
+                                            </>
+                                        )}
+                                    </div>
                                 )}
-                            </div>
+                            </>
+                        ) : (
+                            <Typography type="h3" content="No Disc Inserted" />
                         )}
                     </div>
                 )

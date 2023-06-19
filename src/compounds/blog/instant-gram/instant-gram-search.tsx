@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import InstantGramSearchTile from './instant-gram-search-tile'
-import { InstantGramResultTile } from './instant-gram-result-tile'
+import { InstantGramSearchTile } from '.'
+import { InstantGramResultTile } from '.'
 import { compileEvents, compileEventSports } from '../../../scripts'
 
 export const InstantGramSearch = () => {

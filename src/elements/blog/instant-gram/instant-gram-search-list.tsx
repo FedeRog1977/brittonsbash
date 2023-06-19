@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Button, DropDown, Spacing, Typography } from '../../../bash-blocks'
-import { useMobile } from '../../../scripts/display/use-mobile'
+import { useMobile } from '../../../scripts'
 
 export const InstantGramSearchList = ({ func, items, year }: any) => {
     const isMobile = useMobile()

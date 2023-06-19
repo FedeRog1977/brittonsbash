@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import { Button } from '../../../bash-blocks'
-import { WeatherHourly } from './weather-hourly'
+import { WeatherHourly } from '.'
 
 export const WeatherToggle = ({ lat, lon }: any) => {
     const [showWeather, setShowWeather] = useState(false)

@@ -1,4 +1,4 @@
-import { hillData } from '../../../data/general/hills.data'
+import { hillData } from '../../../data'
 
 export const LandmassList = ({ id, func }: any) => {
     const routes = hillData.landmasses.map(({ name, subtype, subsubtype }) => (

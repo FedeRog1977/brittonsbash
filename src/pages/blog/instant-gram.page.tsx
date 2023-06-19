@@ -1,6 +1,6 @@
 import { Background } from '../../elements'
 import { InstantGramSearch } from '../../compounds'
-import { instantGramContent } from '../../data/page-content/blog/instant-gram.content'
+import { instantGramContent } from '../../data'
 import { Footnote } from '../../bash-blocks'
 
 export const InstantGram = () => (

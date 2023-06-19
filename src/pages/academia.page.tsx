@@ -1,4 +1,4 @@
-import { Background } from '../elements/background'
+import { Background } from '../elements'
 
 export const Academia = () => (
     <div>

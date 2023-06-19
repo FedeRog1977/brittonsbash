@@ -1,4 +1,4 @@
-import { hillData } from '../../../data/general/hills.data'
+import { hillData } from '../../../data'
 
 export const WeatherSearchList = ({ className, func }: any) => (
     <select className={className} onChange={func}>

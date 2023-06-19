@@ -7,12 +7,14 @@ import {
     // useMapEvents
 } from 'react-leaflet'
 import { useState } from 'react'
-import { CurrentLocation } from './current-location'
-import { HillMarker } from './hill-marker'
-import { LandmassList } from './landmass-list'
-import { RouteList } from './route-list'
-import { hillData } from '../../../data/general/hills.data'
-import { RouteMarker } from './route-marker'
+import {
+    CurrentLocation,
+    HillMarker,
+    LandmassList,
+    RouteList,
+    RouteMarker,
+} from '.'
+import { hillData } from '../../../data'
 
 export const OSCall = () => {
     // var urlKey = 'oV4hBtyHRKqV0tc61eylt8s7bxypAHkt';

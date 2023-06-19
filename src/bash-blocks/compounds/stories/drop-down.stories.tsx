@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { articleTestData } from '../../../data/test/article.test-data'
+import { articleTestData } from '../../../data'
 import { Typography } from '../..'
 import { Article, DropDown, Tile } from '..'
 

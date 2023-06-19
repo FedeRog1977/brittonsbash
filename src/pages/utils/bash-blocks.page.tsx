@@ -5,7 +5,7 @@ import {
     ImageSliderStories,
     TypographyStories,
 } from '../../bash-blocks'
-import { Background } from '../../elements/background'
+import { Background } from '../../elements'
 
 export const BashBlocks = () => (
     <>

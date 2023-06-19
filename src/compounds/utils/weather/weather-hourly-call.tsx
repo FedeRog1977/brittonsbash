@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { HourlyProps } from './types'
+import { HourlyProps } from '.'
 
 export const WeatherHourlyCall = ({ latIn, lonIn }: any) => {
     const [result, setResult] = useState<HourlyProps[]>([])

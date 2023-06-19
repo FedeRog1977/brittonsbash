@@ -1,4 +1,4 @@
-import { eventData } from '../../data/general/events.data'
+import { eventData } from '../../data'
 
 export function compileEvents() {
     const allEvents: any[] = []

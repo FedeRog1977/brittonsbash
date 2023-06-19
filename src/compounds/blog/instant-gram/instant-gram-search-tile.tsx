@@ -6,7 +6,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { useMobile } from '../../../scripts'
 
-const InstantGramSearchTile = ({ funcInput, funcButton, funcSelect }: any) => {
+export const InstantGramSearchTile = ({
+    funcInput,
+    funcButton,
+    funcSelect,
+}: any) => {
     const isMobile = useMobile()
 
     return (
@@ -70,5 +74,3 @@ const InstantGramSearchTile = ({ funcInput, funcButton, funcSelect }: any) => {
         </Tile>
     )
 }
-
-export default InstantGramSearchTile
