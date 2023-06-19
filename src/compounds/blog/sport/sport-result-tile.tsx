@@ -24,6 +24,7 @@ export const SportResultTile = () => {
     // TESTING
 
     const compiledRoadies = compileRoadies()
+    const compiledProjects = compileProjects()
     const compiledMiles = compileMiles()
 
     return (
@@ -276,298 +277,253 @@ export const SportResultTile = () => {
                     )}
                 </>
             </Tile>
-            {/* <Tile type="solid">
-                    <>
-                        <Typography
-                            type="body"
-                            content={
-                                <>
-                                    <Typography
-                                        type="h2"
-                                        content={
-                                            <>
-                                                Projects:{' '}
-                                                {
-                                                    compileProjects()
-                                                        .projectsN[0].total
-                                                }
-                                            </>
-                                        }
-                                    />
-                                    <Typography
-                                        type="h3"
-                                        content={
-                                            <>
-                                                {
-                                                    compileProjects()
-                                                        .projectsMiles[0].total
-                                                }
-                                                &nbsp;&nbsp;
-                                                {
-                                                    compileProjects()
-                                                        .projectsElev[0].total
-                                                }
-                                            </>
-                                        }
-                                    />
-                                </>
-                            }
-                            paragraphMargins
-                        />
-                        <Typography
-                            type="body"
-                            content={
-                                <>
-                                    <Typography
-                                        type="h3"
-                                        content={
-                                            <>
-                                                2023:{' '}
-                                                {
-                                                    compileProjects()
-                                                        .projectsN[0][2023]
-                                                }
-                                            </>
-                                        }
-                                    />
-                                    <Typography
-                                        type="h4"
-                                        content={
-                                            <>
-                                                {
-                                                    compileProjects()
-                                                        .projectsMiles[0][2023]
-                                                }
-                                                &nbsp;&nbsp;
-                                                {
-                                                    compileProjects()
-                                                        .projectsElev[0][2023]
-                                                }
-                                            </>
-                                        }
-                                    />
-                                </>
-                            }
-                            paragraphMargins
-                        />
-                        {compileProjects().projects[0][2023].map(
-                            ({ id, name, dist, elev, time }: any) => (
-                                <div key={id}>
-                                    <Typography
-                                        type="h4"
-                                        content={<>{name}:</>}
-                                        inline
-                                        boldFace
-                                    />{' '}
-                                    <Typography
-                                        type="h4"
-                                        content={<>{toMiles(dist)}</>}
-                                        inline
-                                    />{' '}
-                                    <Typography
-                                        type="h4"
-                                        content={<>{toFeet(elev)}</>}
-                                        inline
-                                    />{' '}
-                                    <Typography
-                                        type="h4"
-                                        content={<>{time}</>}
-                                        inline
-                                    />
-                                </div>
-                            )
-                        )}
-                        <Typography
-                            type="body"
-                            content={
-                                <>
-                                    <Typography
-                                        type="h3"
-                                        content={
-                                            <>
-                                                2022:{' '}
-                                                {
-                                                    compileProjects()
-                                                        .projectsN[0][2022]
-                                                }
-                                            </>
-                                        }
-                                    />
-                                    <Typography
-                                        type="h4"
-                                        content={
-                                            <>
-                                                {
-                                                    compileProjects()
-                                                        .projectsMiles[0][2022]
-                                                }
-                                                &nbsp;&nbsp;
-                                                {
-                                                    compileProjects()
-                                                        .projectsElev[0][2022]
-                                                }
-                                            </>
-                                        }
-                                    />
-                                </>
-                            }
-                            paragraphMargins
-                        />
-                        {compileProjects().projects[0][2022].map(
-                            ({ id, name, dist, elev, time }: any) => (
-                                <div key={id}>
-                                    <Typography
-                                        type="h4"
-                                        content={<>{name}:</>}
-                                        inline
-                                        boldFace
-                                    />{' '}
-                                    <Typography
-                                        type="h4"
-                                        content={<>{toMiles(dist)}</>}
-                                        inline
-                                    />{' '}
-                                    <Typography
-                                        type="h4"
-                                        content={<>{toFeet(elev)}</>}
-                                        inline
-                                    />{' '}
-                                    <Typography
-                                        type="h4"
-                                        content={<>{time}</>}
-                                        inline
-                                    />
-                                </div>
-                            )
-                        )}
-                        <Typography
-                            type="body"
-                            content={
-                                <>
-                                    <Typography
-                                        type="h3"
-                                        content={
-                                            <>
-                                                2021:{' '}
-                                                {
-                                                    compileProjects()
-                                                        .projectsN[0][2021]
-                                                }
-                                            </>
-                                        }
-                                    />
-                                    <Typography
-                                        type="h4"
-                                        content={
-                                            <>
-                                                {
-                                                    compileProjects()
-                                                        .projectsMiles[0][2021]
-                                                }
-                                                &nbsp;&nbsp;
-                                                {
-                                                    compileProjects()
-                                                        .projectsElev[0][2021]
-                                                }
-                                            </>
-                                        }
-                                    />
-                                </>
-                            }
-                            paragraphMargins
-                        />
-                        {compileProjects().projects[0][2021].map(
-                            ({ id, name, dist, elev, time }: any) => (
-                                <div key={id}>
-                                    <Typography
-                                        type="h4"
-                                        content={<>{name}:</>}
-                                        inline
-                                        boldFace
-                                    />{' '}
-                                    <Typography
-                                        type="h4"
-                                        content={<>{toMiles(dist)}</>}
-                                        inline
-                                    />{' '}
-                                    <Typography
-                                        type="h4"
-                                        content={<>{toFeet(elev)}</>}
-                                        inline
-                                    />{' '}
-                                    <Typography
-                                        type="h4"
-                                        content={<>{time}</>}
-                                        inline
-                                    />
-                                </div>
-                            )
-                        )}
-                        <Typography
-                            type="body"
-                            content={
-                                <>
-                                    <Typography
-                                        type="h3"
-                                        content={
-                                            <>
-                                                2020:{' '}
-                                                {
-                                                    compileProjects()
-                                                        .projectsN[0][2020]
-                                                }
-                                            </>
-                                        }
-                                    />
-                                    <Typography
-                                        type="h4"
-                                        content={
-                                            <>
-                                                {
-                                                    compileProjects()
-                                                        .projectsMiles[0][2020]
-                                                }
-                                                &nbsp;&nbsp;
-                                                {
-                                                    compileProjects()
-                                                        .projectsElev[0][2020]
-                                                }
-                                            </>
-                                        }
-                                    />
-                                </>
-                            }
-                            paragraphMargins
-                        />
-                        {compileProjects().projects[0][2020].map(
-                            ({ id, name, dist, elev, time }: any) => (
-                                <div key={id}>
-                                    <Typography
-                                        type="h4"
-                                        content={<>{name}:</>}
-                                        inline
-                                        boldFace
-                                    />{' '}
-                                    <Typography
-                                        type="h4"
-                                        content={<>{toMiles(dist)}</>}
-                                        inline
-                                    />{' '}
-                                    <Typography
-                                        type="h4"
-                                        content={<>{toFeet(elev)}</>}
-                                        inline
-                                    />{' '}
-                                    <Typography
-                                        type="h4"
-                                        content={<>{time}</>}
-                                        inline
-                                    />
-                                </div>
-                            )
-                        )}
-                    </>
-                </Tile> */}
+            <Tile type="solid">
+                <>
+                    <Typography
+                        type="body"
+                        content={
+                            <>
+                                <Typography
+                                    type="h2"
+                                    content={
+                                        <>
+                                            Projects:{' '}
+                                            {compiledProjects.number.total}
+                                        </>
+                                    }
+                                />
+                                <Typography
+                                    type="h3"
+                                    content={
+                                        <>
+                                            {compiledProjects.distance.total}
+                                            &nbsp;&nbsp;
+                                            {compiledProjects.elevation.total}
+                                        </>
+                                    }
+                                />
+                            </>
+                        }
+                        paragraphMargins
+                    />
+                    <Typography
+                        type="body"
+                        content={
+                            <>
+                                <Typography
+                                    type="h3"
+                                    content={
+                                        <>
+                                            2023:{' '}
+                                            {compiledProjects.number[2023]}
+                                        </>
+                                    }
+                                />
+                                <Typography
+                                    type="h4"
+                                    content={
+                                        <>
+                                            {compiledProjects.distance[2023]}
+                                            &nbsp;&nbsp;
+                                            {compiledProjects.elevation[2023]}
+                                        </>
+                                    }
+                                />
+                            </>
+                        }
+                        paragraphMargins
+                    />
+                    {compiledProjects.projects[2023].map(
+                        ({ id, name, dist, elev, time }: any) => (
+                            <div key={id}>
+                                <Typography
+                                    type="h4"
+                                    content={<>{name}:</>}
+                                    inline
+                                    boldFace
+                                />{' '}
+                                <Typography
+                                    type="h4"
+                                    content={<>{toMiles(dist)}</>}
+                                    inline
+                                />{' '}
+                                <Typography
+                                    type="h4"
+                                    content={<>{toFeet(elev)}</>}
+                                    inline
+                                />{' '}
+                                <Typography
+                                    type="h4"
+                                    content={<>{time}</>}
+                                    inline
+                                />
+                            </div>
+                        )
+                    )}
+                    <Typography
+                        type="body"
+                        content={
+                            <>
+                                <Typography
+                                    type="h3"
+                                    content={
+                                        <>
+                                            2022:{' '}
+                                            {compiledProjects.number[2022]}
+                                        </>
+                                    }
+                                />
+                                <Typography
+                                    type="h4"
+                                    content={
+                                        <>
+                                            {compiledProjects.distance[2022]}
+                                            &nbsp;&nbsp;
+                                            {compiledProjects.elevation[2022]}
+                                        </>
+                                    }
+                                />
+                            </>
+                        }
+                        paragraphMargins
+                    />
+                    {compiledProjects.projects[2022].map(
+                        ({ id, name, dist, elev, time }: any) => (
+                            <div key={id}>
+                                <Typography
+                                    type="h4"
+                                    content={<>{name}:</>}
+                                    inline
+                                    boldFace
+                                />{' '}
+                                <Typography
+                                    type="h4"
+                                    content={<>{toMiles(dist)}</>}
+                                    inline
+                                />{' '}
+                                <Typography
+                                    type="h4"
+                                    content={<>{toFeet(elev)}</>}
+                                    inline
+                                />{' '}
+                                <Typography
+                                    type="h4"
+                                    content={<>{time}</>}
+                                    inline
+                                />
+                            </div>
+                        )
+                    )}
+                    <Typography
+                        type="body"
+                        content={
+                            <>
+                                <Typography
+                                    type="h3"
+                                    content={
+                                        <>
+                                            2021:{' '}
+                                            {compiledProjects.number[2021]}
+                                        </>
+                                    }
+                                />
+                                <Typography
+                                    type="h4"
+                                    content={
+                                        <>
+                                            {compiledProjects.distance[2021]}
+                                            &nbsp;&nbsp;
+                                            {compiledProjects.elevation[2021]}
+                                        </>
+                                    }
+                                />
+                            </>
+                        }
+                        paragraphMargins
+                    />
+                    {compiledProjects.projects[2021].map(
+                        ({ id, name, dist, elev, time }: any) => (
+                            <div key={id}>
+                                <Typography
+                                    type="h4"
+                                    content={<>{name}:</>}
+                                    inline
+                                    boldFace
+                                />{' '}
+                                <Typography
+                                    type="h4"
+                                    content={<>{toMiles(dist)}</>}
+                                    inline
+                                />{' '}
+                                <Typography
+                                    type="h4"
+                                    content={<>{toFeet(elev)}</>}
+                                    inline
+                                />{' '}
+                                <Typography
+                                    type="h4"
+                                    content={<>{time}</>}
+                                    inline
+                                />
+                            </div>
+                        )
+                    )}
+                    <Typography
+                        type="body"
+                        content={
+                            <>
+                                <Typography
+                                    type="h3"
+                                    content={
+                                        <>
+                                            2020:{' '}
+                                            {compiledProjects.number[2020]}
+                                        </>
+                                    }
+                                />
+                                <Typography
+                                    type="h4"
+                                    content={
+                                        <>
+                                            {compiledProjects.distance[2020]}
+                                            &nbsp;&nbsp;
+                                            {compiledProjects.elevation[2020]}
+                                        </>
+                                    }
+                                />
+                            </>
+                        }
+                        paragraphMargins
+                    />
+                    {compiledProjects.projects[2020].map(
+                        ({ id, name, dist, elev, time }: any) => (
+                            <div key={id}>
+                                <Typography
+                                    type="h4"
+                                    content={<>{name}:</>}
+                                    inline
+                                    boldFace
+                                />{' '}
+                                <Typography
+                                    type="h4"
+                                    content={<>{toMiles(dist)}</>}
+                                    inline
+                                />{' '}
+                                <Typography
+                                    type="h4"
+                                    content={<>{toFeet(elev)}</>}
+                                    inline
+                                />{' '}
+                                <Typography
+                                    type="h4"
+                                    content={<>{time}</>}
+                                    inline
+                                />
+                            </div>
+                        )
+                    )}
+                </>
+            </Tile>
             <Tile type="solid">
                 <>
                     <Typography
