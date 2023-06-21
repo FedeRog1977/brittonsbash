@@ -1,4 +1,4 @@
-import './styles/app.css'
+import './components/styles/app.css'
 import ReactDOM from 'react-dom/client'
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import reportWebVitals from './reportWebVitals'

@@ -2,72 +2,72 @@
 
 @font-face {
     font-family: CMU-Serif;
-    src: url(../fonts/cmu/cmu-serif.ttf);
+    src: url(../../fonts/cmu/cmu-serif.ttf);
 }
 
 @font-face {
     font-family: CMU-Bold;
-    src: url(../fonts/cmu/cmu-bold.ttf);
+    src: url(../../fonts/cmu/cmu-bold.ttf);
 }
 
 @font-face {
     font-family: CMU-Italic;
-    src: url(../fonts/cmu/cmu-italic.ttf);
+    src: url(../../fonts/cmu/cmu-italic.ttf);
 }
 
 @font-face {
     font-family: Sans-Light;
-    src: url(../fonts/open-sans/open-sans-light.ttf);
+    src: url(../../fonts/open-sans/open-sans-light.ttf);
 }
 
 @font-face {
     font-family: Sans-Regular;
-    src: url(../fonts/open-sans/open-sans-regular.ttf);
+    src: url(../../fonts/open-sans/open-sans-regular.ttf);
 }
 
 @font-face {
     font-family: Sans-Bold;
-    src: url(../fonts/open-sans/open-sans-medium.ttf);
+    src: url(../../fonts/open-sans/open-sans-medium.ttf);
 }
 
 @font-face {
     font-family: Sans-Italic;
-    src: url(../fonts/open-sans/open-sans-italic.ttf);
+    src: url(../../fonts/open-sans/open-sans-italic.ttf);
 }
 
 @font-face {
     font-family: Sans-Light-Italic;
-    src: url(../fonts/open-sans/open-sans-light-italic.ttf);
+    src: url(../../fonts/open-sans/open-sans-light-italic.ttf);
 }
 
 @font-face {
     font-family: Audi-Regular;
-    src: url(../fonts/audi/audi-normal.ttf);
+    src: url(../../fonts/audi/audi-normal.ttf);
 }
 
 @font-face {
     font-family: Audi-Bold;
-    src: url(../fonts/audi/audi-bold.ttf);
+    src: url(../../fonts/audi/audi-bold.ttf);
 }
 
 @font-face {
     font-family: Audi-Italic;
-    src: url(../fonts/audi/audi-italic.ttf);
+    src: url(../../fonts/audi/audi-italic.ttf);
 }
 
 @font-face {
     font-family: Audi-Extended;
-    src: url(../fonts/audi/audi-extended-bold.ttf);
+    src: url(../../fonts/audi/audi-extended-bold.ttf);
 }
 
 @font-face {
     font-family: Instagram;
-    src: url(../fonts/grandista/grandista.ttf);
+    src: url(../../fonts/grandista/grandista.ttf);
 }
 
 @font-face {
     font-family: NFS;
-    src: url(../fonts/nfs/nfs.ttf);
+    src: url(../../fonts/nfs/nfs.ttf);
 }
 
 /* Colors */
