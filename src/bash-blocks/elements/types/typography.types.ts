@@ -21,7 +21,7 @@ export type TypographyTextProps = {
     link?: string
 }
 
-export type TypographyStyleProps = {
+export type TypographyContainerProps = {
     fontFamily?: 'serif' | 'sans-serif'
     textAlign?: 'left' | 'center' | 'justify' | 'right'
     paragraphMargins?: boolean
@@ -31,4 +31,4 @@ export type TypographyStyleProps = {
     mR?: string
 }
 
-export type TypographyProps = TypographyTextProps & TypographyStyleProps
+export type TypographyProps = TypographyTextProps & TypographyContainerProps
