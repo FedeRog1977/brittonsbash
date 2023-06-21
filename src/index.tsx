@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import reportWebVitals from './reportWebVitals'
 
-import { Header, Footer } from './elements'
+import { Header, Footer } from './components/elements'
 
 import {
     ErrorPage,
@@ -25,7 +25,7 @@ import {
     Weather,
     Conquest,
     BashBlocks,
-} from './pages'
+} from './components'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
