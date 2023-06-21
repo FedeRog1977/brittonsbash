@@ -3,12 +3,12 @@ import '../styles/button.styles.css'
 import { ButtonProps } from '../types'
 
 export const Button: FC<ButtonProps> = ({
-    className,
+    type,
     func,
     value,
     content,
 }: any) => (
-    <button className={className} onClick={func} value={value}>
+    <button className={type} onClick={func} value={value}>
         {content}
     </button>
 )

@@ -13,10 +13,6 @@ export const WeatherSearchBar = ({
             func={funcInput}
             content={'Search Munro'}
         />
-        <Button
-            className={'searchLocation'}
-            func={funcButton}
-            content={'Search'}
-        />
+        <Button type={'searchLocation'} func={funcButton} content={'Search'} />
     </div>
 )

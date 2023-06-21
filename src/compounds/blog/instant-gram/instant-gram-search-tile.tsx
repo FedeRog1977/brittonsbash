@@ -23,7 +23,7 @@ export const InstantGramSearchTile = ({
                         content="Search Events"
                     />
                     <Button
-                        className="instant-gram-search"
+                        type="instant-gram-search"
                         func={funcButton}
                         content={
                             <>

@@ -29,7 +29,7 @@ export const InstantGramSearchList = ({ func, items, year }: any) => {
                     {items.map(({ id, prefix, names }: any) => (
                         <Button
                             key={id}
-                            className={`expand-${
+                            type={`expand-${
                                 isMobile ? 'regular' : 'dense'
                             }-clear`}
                             func={func}

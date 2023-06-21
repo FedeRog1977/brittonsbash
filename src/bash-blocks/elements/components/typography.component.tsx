@@ -16,7 +16,6 @@ export const Typography: FC<TypographyProps> = ({
     textDecoration,
     paragraphMargins,
     link,
-    refKey,
     mT,
     mB,
     mL,
@@ -26,7 +25,6 @@ export const Typography: FC<TypographyProps> = ({
 
     return (
         <div
-            key={refKey}
             className={
                 fontFamily === 'serif' ? `${type}-serif` : `${type}-sans-serif`
             }

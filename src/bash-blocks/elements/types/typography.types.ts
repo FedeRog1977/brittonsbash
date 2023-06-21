@@ -25,7 +25,6 @@ export type TypographyStyleProps = {
     fontFamily?: 'serif' | 'sans-serif'
     textAlign?: 'left' | 'center' | 'justify' | 'right'
     paragraphMargins?: boolean
-    refKey?: string
     mT?: string
     mB?: string
     mL?: string

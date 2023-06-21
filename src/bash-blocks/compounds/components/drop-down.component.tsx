@@ -11,7 +11,7 @@ export const DropDown: FC<DropDownProps> = ({
     content,
 }: any) => (
     <Button
-        className={`expand-${backgroundType}`}
+        type={`expand-${backgroundType}`}
         func={func}
         content={
             <>

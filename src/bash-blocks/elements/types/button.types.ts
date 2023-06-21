@@ -1,5 +1,5 @@
 export type ButtonProps = {
-    className: string
+    type: string
     func: () => void
     value?: string
     content: string | React.ReactElement

@@ -23,7 +23,7 @@ export const WeatherToggle = ({ lat, lon }: any) => {
     return (
         <div>
             <Button
-                className="expandWeather"
+                type="expandWeather"
                 content={weatherLabel}
                 func={() => handleInput()}
             />

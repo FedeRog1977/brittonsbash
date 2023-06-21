@@ -57,13 +57,11 @@ export const InstantGramResultTile = ({
                                             }
                                             color="var(--font-5)"
                                             inline
-                                            refKey={refKey}
                                         />
                                         <Typography
                                             type="h2"
                                             content={<>{name}</>}
                                             inline
-                                            refKey={refKey}
                                         />
                                     </div>
                                 )
