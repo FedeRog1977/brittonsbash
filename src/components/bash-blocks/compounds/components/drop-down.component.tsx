@@ -27,7 +27,7 @@ export const DropDown: FC<DropDownProps> = ({
                         content={
                             <>{content ? <>{content}</> : <>Contract</>}</>
                         }
-                        color="var(--font-3)"
+                        color="var(--light-blue)"
                     />
                 )}
             </>

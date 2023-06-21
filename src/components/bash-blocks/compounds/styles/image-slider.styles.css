@@ -20,7 +20,7 @@
 
 .image-slider-caption {
     position: absolute;
-    text-shadow: 0px 0px 5px #282828;
+    text-shadow: 0px 0px 5px var(--darker-grey);
     bottom: 22px;
     left: 20px;
     max-width: 75%;
@@ -30,7 +30,7 @@
 
 .image-slider-index {
     position: absolute;
-    text-shadow: 0px 0px 5px #282828;
+    text-shadow: 0px 0px 5px var(--darker-grey);
     bottom: 22px;
     right: 20px;
     max-width: 25%;
@@ -41,13 +41,13 @@
 .left-arrow,
 .right-arrow {
     font-size: 32px;
-    color: #28282890;
+    color: var(--darker-grey-90);
     position: absolute;
     top: 48%;
     z-index: 10;
     cursor: pointer;
     user-select: none;
-    transition: color 0.5s;
+    transition: color var(--transition-long);
 }
 
 .left-arrow {
@@ -61,13 +61,13 @@
 .left-arrow:hover,
 .right-arrow:hover {
     color: #a8a8a8;
-    transition: color 0.5s;
+    transition: color var(--transition-long);
 }
 
 .left-arrow:active,
 .right-arrow:active {
     transform: scale(0.85);
-    transition: transform 0.25s;
+    transition: transform var(--transition-short);
 }
 
 .slide {
@@ -106,7 +106,7 @@
     .left-arrow,
     .right-arrow {
         top: 45%;
-        color: #28282850;
+        color: var(--darker-grey-50);
     }
 
     .left-arrow {

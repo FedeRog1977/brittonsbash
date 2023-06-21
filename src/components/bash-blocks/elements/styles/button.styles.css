@@ -1,5 +1,5 @@
 button {
-    transition: transform 0.25s;
+    transition: transform var(--transition-short);
 }
 
 button:hover {
@@ -8,5 +8,5 @@ button:hover {
 
 button:active {
     transform: scale(0.95);
-    transition: transform 0.25s;
+    transition: transform var(--transition-short);
 }

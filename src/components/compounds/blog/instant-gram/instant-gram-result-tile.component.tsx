@@ -55,7 +55,7 @@ export const InstantGramResultTile = ({
                                                     &nbsp;&#8212;&nbsp;
                                                 </>
                                             }
-                                            color="var(--font-5)"
+                                            color="var(--medium-grey)"
                                             inline
                                         />
                                         <Typography
@@ -80,7 +80,7 @@ export const InstantGramResultTile = ({
                         type="h3"
                         content={refactoredEvent.startDate}
                         textAlign="left"
-                        color="var(--font-5)"
+                        color="var(--medium-grey)"
                         inline
                     />
                     {refactoredEvent.endDate && (
@@ -89,14 +89,14 @@ export const InstantGramResultTile = ({
                                 type="h3"
                                 content={<>&nbsp;&#8212;&nbsp;</>}
                                 textAlign="left"
-                                color="var(--font-5)"
+                                color="var(--medium-grey)"
                                 inline
                             />
                             <Typography
                                 type="h3"
                                 content={refactoredEvent.endDate}
                                 textAlign="left"
-                                color="var(--font-5)"
+                                color="var(--medium-grey)"
                                 inline
                             />
                         </>

@@ -40,7 +40,7 @@ export const InstantGramSearchList = ({ func, items, year }: any) => {
                                         <Typography
                                             type="h5"
                                             content={<>{id.slice(-2)}</>}
-                                            color="var(--font-5)"
+                                            color="var(--medium-grey)"
                                         />
                                         <Typography
                                             type="h4"

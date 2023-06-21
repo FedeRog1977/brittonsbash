@@ -33,13 +33,13 @@ export const InstantGramSearchTile = ({
                                         content={
                                             <FontAwesomeIcon icon={faSearch} />
                                         }
-                                        color="var(--foreground)"
+                                        color="var(--white)"
                                     />
                                 ) : (
                                     <Typography
                                         type="h4"
                                         content="Search"
-                                        color="var(--foreground)"
+                                        color="var(--white)"
                                     />
                                 )}
                             </>

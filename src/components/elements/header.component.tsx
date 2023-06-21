@@ -45,8 +45,16 @@ export const Header = () => {
         <>
             <header className="header">
                 <div className="header-logo">
-                    {/* <img src={placeholder} alt='logo' style={{ width: 175 }}></img> */}
-                    {/* <Typography type='h3' content='BrittonsBashRC' color='#A2A2A2' /> */}
+                    {/* <img
+                        src={placeholder}
+                        alt="logo"
+                        style={{ width: 175 }}
+                    ></img>
+                    <Typography
+                        type="h3"
+                        content="BrittonsBashRC"
+                        color="var(--light-grey)"
+                    /> */}
                 </div>
                 <div className="header-navigation">
                     {isMobile ? (
@@ -57,7 +65,7 @@ export const Header = () => {
                                     content={
                                         <FontAwesomeIcon icon={faHamburger} />
                                     }
-                                    color="#FFFFFF"
+                                    color="var(--white)"
                                 />
                             </span>
                         </li>

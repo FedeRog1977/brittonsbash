@@ -75,7 +75,7 @@ export const ImageSlider = ({ slides }: any) => {
                                                             slide.description
                                                         }
                                                         textAlign="left"
-                                                        color="#FFFFFF"
+                                                        color="var(--white)"
                                                     />
                                                 </div>
                                                 <div className="image-slider-index">
@@ -91,7 +91,7 @@ export const ImageSlider = ({ slides }: any) => {
                                                                 {slides.length}
                                                             </>
                                                         }
-                                                        color="#FFFFFF"
+                                                        color="var(--white)"
                                                     />
                                                 </div>
                                             </>

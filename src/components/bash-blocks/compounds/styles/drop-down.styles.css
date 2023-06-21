@@ -3,16 +3,16 @@ button.expand-dense-clear {
     background-color: var(--transparrent);
     border: none;
     border-radius: var(--corners-small);
-    transition: background-color 0.5s;
+    transition: background-color var(--transition-long);
     padding: 5px;
 }
 
 button.expand-regular-solid,
 button.expand-dense-solid {
-    background-color: var(--background);
+    background-color: var(--lighter-grey);
     border: none;
     border-radius: var(--corners-small);
-    transition: background-color 0.5s;
+    transition: background-color var(--transition-long);
     padding: 5px;
 }
 
@@ -28,12 +28,12 @@ button.expand-dense-solid {
 
 button.expand-regular-clear:hover,
 button.expand-dense-clear:hover {
-    background-color: var(--background);
-    transition: background-color 0.5s;
+    background-color: var(--lighter-grey);
+    transition: background-color var(--transition-long);
 }
 
 button.expand-regular-solid:hover,
 button.expand-dense-solid:hover {
-    background-color: var(--background);
-    transition: background-color 0.5s;
+    background-color: var(--lighter-grey);
+    transition: background-color var(--transition-long);
 }

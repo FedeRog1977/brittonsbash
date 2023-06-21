@@ -1,17 +1,17 @@
 .tile-clear {
-    background-color: #ffffff00;
+    background-color: var(--transparren);
     margin: 20px 150px 20px 150px;
     padding: 50px 0px 50px 0px;
 }
 
 .tile-clear-condensed {
-    background-color: #ffffff00;
+    background-color: var(--transparren);
     margin: 20px 150px 20px 150px;
     padding: 10px 0px 10px 0px;
 }
 
 .tile-solid {
-    background-color: var(--foreground);
+    background-color: var(--white);
     border-radius: var(--corners-large);
     box-shadow: var(--shadow-1);
     margin: 20px 150px 20px 150px;
@@ -28,7 +28,7 @@
     .tile-clear,
     .tile-clear-condensed,
     .tile-solid {
-        border-radius: 0em;
+        border-radius: 0;
         box-shadow: none;
         margin: 20px 0px 20px 0px;
         padding: 20px;

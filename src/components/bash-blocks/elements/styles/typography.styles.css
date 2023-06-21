@@ -3,63 +3,63 @@
 .t1-serif {
     font-family: CMU-Bold;
     font-size: 64px;
-    color: #282828;
+    color: var(--darker-grey);
     padding: 0px;
 }
 
 .t2-serif {
     font-family: CMU-Serif;
     font-size: 64px;
-    color: #282828;
+    color: var(--darker-grey);
     padding: 0px;
 }
 
 .h1-serif {
     font-family: CMU-Bold;
     font-size: 52px;
-    color: #282828;
+    color: var(--darker-grey);
     padding: 0px;
 }
 
 .h2-serif {
     font-family: CMU-Bold;
     font-size: 40px;
-    color: #282828;
+    color: var(--darker-grey);
     padding: 0px;
 }
 
 .h3-serif {
     font-family: CMU-Bold;
     font-size: 28px;
-    color: #282828;
+    color: var(--darker-grey);
     padding: 0px;
 }
 
 .h4-serif {
     font-family: CMU-Serif;
     font-size: 20px;
-    color: #282828;
+    color: var(--darker-grey);
     padding: 0px;
 }
 
 .body-serif {
     font-family: CMU-Serif;
     font-size: 16px;
-    color: #282828;
+    color: var(--darker-grey);
     padding: 0px;
 }
 
 .caption-serif {
     font-family: CMU-Bold;
     font-size: 16px;
-    color: #282828;
+    color: var(--darker-grey);
     padding: 0px;
 }
 
 .footnote-serif {
     font-family: CMU-Serif;
     font-size: 14px;
-    color: #282828;
+    color: var(--darker-grey);
     padding: 0px;
 }
 
@@ -68,70 +68,70 @@
 .t1-sans-serif {
     font-family: Sans-Bold;
     font-size: 64px;
-    color: #282828;
+    color: var(--darker-grey);
     padding: 0px;
 }
 
 .t2-sans-serif {
     font-family: Sans-Bold;
     font-size: 64px;
-    color: #282828;
+    color: var(--darker-grey);
     padding: 0px;
 }
 
 .h1-sans-serif {
     font-family: Sans-Bold;
     font-size: 52px;
-    color: #282828;
+    color: var(--darker-grey);
     padding: 0px;
 }
 
 .h2-sans-serif {
     font-family: Sans-Bold;
     font-size: 40px;
-    color: #282828;
+    color: var(--darker-grey);
     padding: 0px;
 }
 
 .h3-sans-serif {
     font-family: Sans-Bold;
     font-size: 28px;
-    color: #282828;
+    color: var(--darker-grey);
     padding: 0px;
 }
 
 .h4-sans-serif {
     font-family: Sans-Regular;
     font-size: 20px;
-    color: #282828;
+    color: var(--darker-grey);
     padding: 0px;
 }
 
 .body-sans-serif {
     font-family: Sans-Regular;
     font-size: 16px;
-    color: #282828;
+    color: var(--darker-grey);
     padding: 0px;
 }
 
 .body-light-sans-serif {
     font-family: Sans-Light;
     font-size: 16px;
-    color: #282828;
+    color: var(--darker-grey);
     padding: 0px;
 }
 
 .caption-sans-serif {
     font-family: Sans-Bold;
     font-size: 16px;
-    color: #282828;
+    color: var(--darker-grey);
     padding: 0px;
 }
 
 .footnote-sans-serif {
     font-family: Sans-Regular;
     font-size: 14px;
-    color: #282828;
+    color: var(--darker-grey);
     padding: 0px;
 }
 
@@ -159,14 +159,14 @@
 /* Links */
 
 a {
-    color: var(--font-1);
+    color: var(--darker-grey);
     text-decoration: none;
-    transition: color 0.5s;
+    transition: color var(--transition-long);
 }
 
 a:hover {
-    color: var(--font-3);
-    transition: color 0.5s;
+    color: var(--light-blue);
+    transition: color var(--transition-long);
     cursor: pointer;
 }
 
