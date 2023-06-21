@@ -295,11 +295,11 @@ export const InstantGramResultTile = ({
                                     <Typography
                                         type="body"
                                         content="Youth Hostel(s): "
-                                        boldFace
+                                        boldFace={isMobile ? false : true}
                                         inline
                                     />
                                     <Typography
-                                        type="body"
+                                        type={isMobile ? 'body-light' : 'body'}
                                         content={refactoredEvent.youthHostels}
                                         inline
                                     />

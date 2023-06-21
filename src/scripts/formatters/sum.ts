@@ -1,3 +1,3 @@
-export function sum({ accumulator, i }: any) {
+export function sum(accumulator: number, i: number) {
     return accumulator + i
 }

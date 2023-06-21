@@ -76,7 +76,7 @@ export const refactorEvent = ({ event, sportEvent, showSportEvent }: any) => {
         images: event.images,
         youthHostels: event.youthHostels.join(', '),
         showSportEvent,
-        distance: sportEvent && toMiles(distances.reduce(sum)),
+        distance: toMiles(distances.reduce(sum)),
         elevation: toFeet(elevations.reduce(sum)),
         time: times.join(', '),
         islands: islandSetAggregate.join(', '),
