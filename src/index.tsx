@@ -1,10 +1,6 @@
 import './components/styles/app.css'
 import ReactDOM from 'react-dom/client'
 import { HashRouter, Route, Routes } from 'react-router-dom'
-import reportWebVitals from './reportWebVitals'
-
-import { Header, Footer } from './components/elements'
-
 import {
     ErrorPage,
     Home,
@@ -26,6 +22,8 @@ import {
     Conquest,
     BashBlocks,
 } from './components'
+import { Footer, Header } from './components/elements'
+import { reportWebVitals } from './react'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
