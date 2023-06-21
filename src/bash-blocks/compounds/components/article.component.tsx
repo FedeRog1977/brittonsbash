@@ -1,23 +1,5 @@
 import { FC } from 'react'
-import { Typography, TypographyProps } from '../..'
-
-type ArticleProps = {
-    sections: Array<{
-        type: string | TypographyProps['type']
-        content: string
-        color?: string
-        inline?: boolean
-        boldFace?: boolean
-        italicize?: boolean
-        smallCaps?: boolean
-        textDecoration?: 'overline' | 'underline' | 'line-through'
-        link?: string
-    }>
-    fontFamily?: 'serif' | 'sans-serif'
-    textAlign?: 'left' | 'center' | 'justify' | 'right'
-    mT?: string
-    mB?: string
-}
+import { ArticleProps, Typography } from '../..'
 
 export const Article: FC<ArticleProps> = ({
     sections,

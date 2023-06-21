@@ -1,6 +1,6 @@
 import { articleTestData } from '../../../data'
 import { Typography } from '../..'
-import { Article, Tile } from '..'
+import { Article, ArticleProps, Tile } from '..'
 
 export const ArticleStories = () => (
     <>
@@ -15,7 +15,7 @@ export const ArticleStories = () => (
         </Tile>
         <Tile type="solid">
             <Article
-                sections={articleTestData}
+                sections={articleTestData as ArticleProps['sections']}
                 fontFamily="serif"
                 textAlign="justify"
             />

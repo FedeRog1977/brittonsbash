@@ -1,14 +1,5 @@
-import { FC, ReactElement } from 'react'
-
-type SpacingProps = {
-    mX?: number
-    mY?: number
-    mT?: number
-    mB?: number
-    mL?: number
-    mR?: number
-    children?: ReactElement
-}
+import { FC } from 'react'
+import { SpacingProps } from '../types'
 
 export const Spacing: FC<SpacingProps> = ({
     mX,

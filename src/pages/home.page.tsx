@@ -1,4 +1,4 @@
-import { Article, Tile } from '../bash-blocks'
+import { Article, ArticleProps, Tile } from '../bash-blocks'
 import { articleTestData } from '../data'
 import { Background } from '../elements'
 
@@ -7,7 +7,7 @@ export const Home = () => (
         <Background text="BrittonsBashRC" />
         <Tile type="solid">
             <Article
-                sections={articleTestData}
+                sections={articleTestData as ArticleProps['sections']}
                 fontFamily="serif"
                 textAlign="justify"
             />

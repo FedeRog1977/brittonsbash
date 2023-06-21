@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { articleTestData } from '../../../data'
 import { Typography } from '../..'
-import { Article, DropDown, Tile } from '..'
+import { Article, ArticleProps, DropDown, Tile } from '..'
 
 export const DropDownStories = () => {
     const [showDropDown, setShowDropDown] = useState(false)
@@ -34,7 +34,9 @@ export const DropDownStories = () => {
                     />
                     {showDropDown && (
                         <Article
-                            sections={articleTestData}
+                            sections={
+                                articleTestData as ArticleProps['sections']
+                            }
                             fontFamily="serif"
                             textAlign="justify"
                         />
