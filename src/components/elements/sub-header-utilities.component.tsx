@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-export const SubHeaderUtils = () => {
+export const SubHeaderUtilities = () => {
     return (
         <div className="sub-header">
             <div className="sub-header-navigation">

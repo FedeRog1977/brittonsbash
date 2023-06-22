@@ -1,26 +1,17 @@
 import { useState } from 'react'
 import { Button, DropDown, Spacing, Typography } from '../../../bash-blocks'
-import { useMobile } from '../../../../scripts'
+import { useDropDown, useMobile } from '../../../../scripts'
 
 export const InstantGramSearchList = ({ func, items, year, season }: any) => {
     const isMobile = useMobile()
-
-    const [showDropDown, setShowDropDown] = useState(false)
-
-    const handleClick = () => {
-        if (showDropDown === false) {
-            setShowDropDown(true)
-        } else {
-            setShowDropDown(false)
-        }
-    }
+    const { showDropDown, setShowDropDown } = useDropDown()
 
     return (
         <>
             <DropDown
                 type={isMobile ? 'h2' : 'h1'}
                 backgroundType="dense-clear"
-                func={handleClick}
+                func={() => setShowDropDown(!showDropDown)}
                 funcResp={showDropDown}
                 content={year}
                 subContent={`Season ${season}`}

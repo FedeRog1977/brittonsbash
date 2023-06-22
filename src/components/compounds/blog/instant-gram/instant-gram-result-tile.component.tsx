@@ -7,7 +7,7 @@ import {
     Typography,
 } from '../../../bash-blocks'
 import './styles/instant-gram-tile.styles.css'
-import { refactorEvent, useMobile } from '../../../../scripts'
+import { refactorEvent, useDropDown, useMobile } from '../../../../scripts'
 
 export const InstantGramResultTile = ({
     event,
@@ -15,18 +15,8 @@ export const InstantGramResultTile = ({
     showSportEvent,
 }: any) => {
     const isMobile = useMobile()
-
+    const { showDropDown, setShowDropDown } = useDropDown()
     const refactoredEvent = refactorEvent({ event, sportEvent, showSportEvent })
-
-    const [showDropDown, setShowDropDown] = useState(false)
-
-    const handleClick = () => {
-        if (showDropDown === false) {
-            setShowDropDown(true)
-        } else {
-            setShowDropDown(false)
-        }
-    }
 
     return (
         <Tile type="solid" dense={isMobile && true}>
@@ -312,7 +302,7 @@ export const InstantGramResultTile = ({
                 <div className="instant-gram-tile-body">
                     <DropDown
                         backgroundType="regular-clear"
-                        func={handleClick}
+                        func={() => setShowDropDown(!showDropDown)}
                         funcResp={showDropDown}
                     />
                 </div>

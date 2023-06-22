@@ -2,17 +2,10 @@ import { useState } from 'react'
 import { articleTestData } from '../../../../data'
 import { Typography } from '../..'
 import { Article, ArticleProps, DropDown, Tile } from '..'
+import { useDropDown } from '../../../../scripts'
 
 export const DropDownStories = () => {
-    const [showDropDown, setShowDropDown] = useState(false)
-
-    const handleClick = () => {
-        if (showDropDown === false) {
-            setShowDropDown(true)
-        } else {
-            setShowDropDown(false)
-        }
-    }
+    const { showDropDown, setShowDropDown } = useDropDown()
 
     return (
         <>
@@ -29,7 +22,7 @@ export const DropDownStories = () => {
                 <>
                     <DropDown
                         backgroundType="regular-clear"
-                        func={handleClick}
+                        func={() => setShowDropDown(!showDropDown)}
                         funcResp={showDropDown}
                     />
                     {showDropDown && (

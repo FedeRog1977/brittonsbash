@@ -1,5 +1,9 @@
 /* Header */
 
+ul {
+    padding: 0px;
+}
+
 .header {
     background-color: var(--darker-grey);
     height: 75px;
@@ -10,6 +14,12 @@
 .header-logo {
     float: left;
     margin: 19px 0 0 0;
+}
+
+.header-logo {
+    font-family: Sans-Light;
+    color: var(--light-grey);
+    margin: 10px 0 0 0;
 }
 
 .header-navigation {
@@ -77,6 +87,10 @@
 /* Mobile */
 
 @media (max-width: 768px) {
+    .header {
+        padding: 0px 20px 0px 20px;
+    }
+
     .header-navigation {
         display: none;
     }

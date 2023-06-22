@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     faChevronCircleLeft,
     faChevronCircleRight,
+    faEject,
 } from '@fortawesome/free-solid-svg-icons'
 import { Typography } from '../..'
 import { useMobile } from '../../../../scripts'
@@ -100,7 +101,18 @@ export const ImageSlider = ({ slides }: any) => {
                                 )}
                             </>
                         ) : (
-                            <Typography type="h3" content="No Disc Inserted" />
+                            <Typography
+                                type="h3"
+                                content={
+                                    <>
+                                        No Disc Inserted{' '}
+                                        <FontAwesomeIcon
+                                            icon={faEject}
+                                            size="2xs"
+                                        />
+                                    </>
+                                }
+                            />
                         )}
                     </div>
                 )

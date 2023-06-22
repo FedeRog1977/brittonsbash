@@ -7,22 +7,12 @@ import {
     toMiles,
     toFeet,
     toSpeed,
+    useDropDown,
 } from '../../../../scripts'
 
 export const SportResultTile = () => {
-    // export const SportResultTile = ({ event, sportEvent, showSportEvent }: any) => {
-    // const [showDropDown, setShowDropDown] = useState(false);
-
-    // const handleClick = () => {
-    //     if (showDropDown === false) {
-    //         setShowDropDown(true);
-    //     } else {
-    //         setShowDropDown(false);
-    //     }
-    // }
-
-    // TESTING
-
+    // const { showDropDown, setShowDropDown } = useDropDown()
+    // MOVE TO FUNCTION HANDLER: () => setShowDropDown(!showDropDown)
     const compiledRoadies = compileRoadies()
     const compiledProjects = compileProjects()
     const compiledMiles = compileMiles()

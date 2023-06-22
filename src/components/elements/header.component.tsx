@@ -4,62 +4,26 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Typography } from '../bash-blocks'
 import './styles/header-footer.styles.css'
-import { SubHeaderBlog, SubHeaderUtils } from '.'
-import { useMobile } from '../../scripts'
+import { SubHeaderBlog, SubHeaderUtilities } from '.'
+import { useDropDown, useMobile } from '../../scripts'
 
 export const Header = () => {
     const isMobile = useMobile()
-
-    const [showSubHeaderMobile, setShowSubHeaderMobile] = useState(false)
-    const [showSubHeaderBlog, setShowSubHeaderBlog] = useState(false)
-    const [showSubHeaderUtils, setShowSubHeaderUtils] = useState(false)
-
-    function handleClickMobile() {
-        if (showSubHeaderMobile === false) {
-            setShowSubHeaderMobile(true)
-            setShowSubHeaderMobile(false)
-        } else {
-            setShowSubHeaderMobile(false)
-        }
-    }
-
-    function handleClickBlog() {
-        if (showSubHeaderBlog === false) {
-            setShowSubHeaderBlog(true)
-            setShowSubHeaderUtils(false)
-        } else {
-            setShowSubHeaderBlog(false)
-        }
-    }
-
-    function handleClickUtils() {
-        if (showSubHeaderUtils === false) {
-            setShowSubHeaderUtils(true)
-            setShowSubHeaderBlog(false)
-        } else {
-            setShowSubHeaderUtils(false)
-        }
-    }
+    const { showDropDown: showBlog, setShowDropDown: setShowBlog } =
+        useDropDown()
+    const { showDropDown: showUtilities, setShowDropDown: setShowUtilities } =
+        useDropDown()
 
     return (
         <>
             <header className="header">
                 <div className="header-logo">
-                    {/* <img
-                        src={placeholder}
-                        alt="logo"
-                        style={{ width: 175 }}
-                    ></img>
-                    <Typography
-                        type="h3"
-                        content="BrittonsBashRC"
-                        color="var(--light-grey)"
-                    /> */}
+                    <ul>BrittonsBashRC</ul>
                 </div>
                 <div className="header-navigation">
                     {isMobile ? (
                         <li>
-                            <span onClick={() => handleClickMobile()}>
+                            <span>
                                 <Typography
                                     type="h4"
                                     content={
@@ -86,12 +50,18 @@ export const Header = () => {
                                 </li>
                                 <li>|</li>
                                 <li>
-                                    <span onClick={() => handleClickBlog()}>
+                                    <span
+                                        onClick={() => setShowBlog(!showBlog)}
+                                    >
                                         Blog
                                     </span>
                                 </li>
                                 <li>
-                                    <span onClick={() => handleClickUtils()}>
+                                    <span
+                                        onClick={() =>
+                                            setShowUtilities(!showUtilities)
+                                        }
+                                    >
                                         Utilities
                                     </span>
                                 </li>
@@ -100,8 +70,10 @@ export const Header = () => {
                     )}
                 </div>
             </header>
-            {showSubHeaderBlog && <SubHeaderBlog />}
-            {showSubHeaderUtils && <SubHeaderUtils />}
+            {isMobile ? showBlog && null : showBlog && <SubHeaderBlog />}
+            {isMobile
+                ? showBlog && null
+                : showUtilities && <SubHeaderUtilities />}
         </>
     )
 }

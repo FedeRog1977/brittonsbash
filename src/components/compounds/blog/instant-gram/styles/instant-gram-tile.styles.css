@@ -31,7 +31,7 @@ button.instant-gram-search {
 
 .instant-gram-tile-sport {
     background-color: var(--lighter-grey);
-    border-radius: var(--corners-large);
+    border-radius: var(--corners-small);
     margin: 15px 70px 5px 70px;
     padding: 10px 150px 10px 150px;
     /* border: 1px solid black; */
@@ -64,7 +64,7 @@ button.instant-gram-search {
 
 .instant-gram-tile-image-slider {
     background-color: var(--lighter-grey);
-    border-radius: var(--corners-large);
+    border-radius: var(--corners-small);
     /* border: 1px solid black; */
 }
 
@@ -80,7 +80,7 @@ button.instant-gram-search {
     }
 
     .instant-gram-tile-search {
-        margin: 7.5px;
+        margin: 7.5px 0px 7.5px 0px;
     }
 
     .instant-gram-tile-title,
