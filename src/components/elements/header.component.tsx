@@ -1,8 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHamburger } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
-import { Typography } from '../bash-blocks'
 import './styles/header-footer.styles.css'
 import { SubHeaderBlog, SubHeaderUtilities } from '.'
 import { useDropDown, useMobile } from '../../scripts'
@@ -22,17 +20,19 @@ export const Header = () => {
                 </div>
                 <div className="header-navigation">
                     {isMobile ? (
-                        <li>
-                            <span>
-                                <Typography
-                                    type="h4"
-                                    content={
-                                        <FontAwesomeIcon icon={faHamburger} />
-                                    }
-                                    color="var(--white)"
+                        <>
+                            <ul>
+                                <FontAwesomeIcon
+                                    icon={faBars}
+                                    onClick={() => null}
                                 />
-                            </span>
-                        </li>
+                            </ul>
+                            {/* <nav>
+                                <ul>
+                                    <li>...</li>
+                                </ul>
+                            </nav> */}
+                        </>
                     ) : (
                         <nav>
                             <ul>
@@ -70,10 +70,8 @@ export const Header = () => {
                     )}
                 </div>
             </header>
-            {isMobile ? showBlog && null : showBlog && <SubHeaderBlog />}
-            {isMobile
-                ? showBlog && null
-                : showUtilities && <SubHeaderUtilities />}
+            {showBlog && <SubHeaderBlog />}
+            {showUtilities && <SubHeaderUtilities />}
         </>
     )
 }

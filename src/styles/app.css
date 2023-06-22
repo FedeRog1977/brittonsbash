@@ -103,7 +103,13 @@ body {
     background-color: var(--lighter-grey);
 }
 
-/* To Be Removed */
+/* Unordered Lists */
+
+ul {
+    padding: 0px;
+}
+
+/* TO BE REMOVED */
 
 h1.weatherIcon {
     font-size: 50px;

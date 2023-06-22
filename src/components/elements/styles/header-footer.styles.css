@@ -1,9 +1,5 @@
 /* Header */
 
-ul {
-    padding: 0px;
-}
-
 .header {
     background-color: var(--darker-grey);
     height: 75px;
@@ -91,7 +87,7 @@ ul {
         padding: 0px 20px 0px 20px;
     }
 
-    .header-navigation {
+    /* .header-navigation {
         display: none;
-    }
+    } */
 }

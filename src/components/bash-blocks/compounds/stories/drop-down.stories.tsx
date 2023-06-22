@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { articleTestData } from '../../../../data'
 import { Typography } from '../..'
 import { Article, ArticleProps, DropDown, Tile } from '..'
