@@ -7,8 +7,14 @@ export const Button: FC<ButtonProps> = ({
     func,
     value,
     content,
+    textAlign,
 }: any) => (
-    <button className={type} onClick={func} value={value}>
+    <button
+        className={type}
+        onClick={func}
+        value={value}
+        style={{ textAlign: textAlign ? textAlign : 'center' }}
+    >
         {content}
     </button>
 )

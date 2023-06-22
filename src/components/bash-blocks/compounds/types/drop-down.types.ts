@@ -10,4 +10,6 @@ export type DropDownProps = {
     func: () => void
     funcResp: boolean
     content?: string | React.ReactElement
+    subContent?: string
+    textAlign?: TypographyProps['textAlign']
 }

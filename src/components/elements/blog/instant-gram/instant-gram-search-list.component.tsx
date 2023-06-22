@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Button, DropDown, Spacing, Typography } from '../../../bash-blocks'
 import { useMobile } from '../../../../scripts'
 
-export const InstantGramSearchList = ({ func, items, year }: any) => {
+export const InstantGramSearchList = ({ func, items, year, season }: any) => {
     const isMobile = useMobile()
 
     const [showDropDown, setShowDropDown] = useState(false)
@@ -23,6 +23,8 @@ export const InstantGramSearchList = ({ func, items, year }: any) => {
                 func={handleClick}
                 funcResp={showDropDown}
                 content={year}
+                subContent={`Season ${season}`}
+                textAlign={isMobile ? 'center' : 'right'}
             />
             {showDropDown && (
                 <div>

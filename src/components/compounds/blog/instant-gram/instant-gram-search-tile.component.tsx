@@ -51,22 +51,26 @@ export const InstantGramSearchTile = ({
                         func={funcSelect}
                         items={eventData[2023]}
                         year="2023"
+                        season="4"
                         position="left"
                     />
                     <InstantGramSearchList
                         func={funcSelect}
                         items={eventData[2022]}
                         year="2022"
+                        season="3"
                     />
                     <InstantGramSearchList
                         func={funcSelect}
                         items={eventData[2021]}
                         year="2021"
+                        season="2"
                     />
                     <InstantGramSearchList
                         func={funcSelect}
                         items={eventData[2020]}
                         year="2020"
+                        season="1"
                         position="right"
                     />
                 </div>

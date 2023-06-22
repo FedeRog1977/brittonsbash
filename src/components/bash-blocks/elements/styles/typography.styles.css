@@ -80,21 +80,21 @@
 }
 
 .h1-sans-serif {
-    font-family: Sans-Bold;
+    font-family: Sans-Regular;
     font-size: 52px;
     color: var(--darker-grey);
     padding: 0px;
 }
 
 .h2-sans-serif {
-    font-family: Sans-Bold;
+    font-family: Sans-Regular;
     font-size: 40px;
     color: var(--darker-grey);
     padding: 0px;
 }
 
 .h3-sans-serif {
-    font-family: Sans-Bold;
+    font-family: Sans-Regular;
     font-size: 28px;
     color: var(--darker-grey);
     padding: 0px;
@@ -103,6 +103,13 @@
 .h4-sans-serif {
     font-family: Sans-Regular;
     font-size: 20px;
+    color: var(--darker-grey);
+    padding: 0px;
+}
+
+.h5-sans-serif {
+    font-family: Sans-Light;
+    font-size: 14px;
     color: var(--darker-grey);
     padding: 0px;
 }
@@ -198,6 +205,10 @@ a:hover {
     .h4-serif,
     .h4-sans-serif {
         font-size: 20px;
+    }
+
+    .h5-sans-serif {
+        font-size: 12px;
     }
 
     .body-serif,
