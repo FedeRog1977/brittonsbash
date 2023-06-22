@@ -22,8 +22,8 @@ export const Button: FC<ButtonProps> = ({
             <div
                 style={{
                     borderTopLeftRadius: 'var(--corners-small)',
-                    borderTop: '2.5px solid var(--darker-grey)',
-                    borderLeft: '2.5px solid var(--darker-grey)',
+                    borderTop: '1.5px solid var(--darker-grey)',
+                    borderLeft: '1.5px solid var(--darker-grey)',
                 }}
             >
                 {content}
