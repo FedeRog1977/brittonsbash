@@ -3,10 +3,10 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import './styles/header-footer.styles.css'
 import { SubHeaderBlog, SubHeaderUtilities } from '.'
-import { useDropDown, useMobile } from '../../scripts'
+import { useDropDown, useScreenWidth } from '../../scripts'
 
 export const Header = () => {
-    const isMobile = useMobile()
+    const { isMobile } = useScreenWidth()
     const { showDropDown: showBlog, setShowDropDown: setShowBlog } =
         useDropDown()
     const { showDropDown: showUtilities, setShowDropDown: setShowUtilities } =

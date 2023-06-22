@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 
-export function useMobile() {
-    const [width, setWidth] = useState(window.innerWidth)
+export function useScreenWidth() {
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth)
 
     function handleWindowSizeChange() {
-        setWidth(window.innerWidth)
+        setScreenWidth(window.innerWidth)
     }
 
     useEffect(() => {
@@ -14,7 +14,7 @@ export function useMobile() {
         }
     }, [])
 
-    const isMobile = width <= 768
+    const isMobile = screenWidth <= 768
 
-    return isMobile
+    return { screenWidth, isMobile }
 }

@@ -22,29 +22,31 @@ export const compileRoadies = () => {
     }
 
     var distance2023: number = 0
-    var distance2022: number = 0
-    var distance2021: number = 0
-    var distance2020: number = 0
-
     var elevation2023: number = 0
-    var elevation2022: number = 0
-    var elevation2021: number = 0
-    var elevation2020: number = 0
 
     sportData[2023].roadies.forEach((event: any) => {
         distance2023 = distance2023 + event.dist
         elevation2023 = elevation2023 + event.elev
     })
 
+    var distance2022: number = 0
+    var elevation2022: number = 0
+
     sportData[2022].roadies.forEach((event: any) => {
         distance2022 = distance2022 + event.dist
         elevation2022 = elevation2022 + event.elev
     })
 
+    var distance2021: number = 0
+    var elevation2021: number = 0
+
     sportData[2021].roadies.forEach((event: any) => {
         distance2021 = distance2021 + event.dist
         elevation2021 = elevation2021 + event.elev
     })
+
+    var distance2020: number = 0
+    var elevation2020: number = 0
 
     sportData[2020].roadies.forEach((event: any) => {
         distance2020 = distance2020 + event.dist

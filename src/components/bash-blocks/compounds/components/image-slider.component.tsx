@@ -7,12 +7,10 @@ import {
     faEject,
 } from '@fortawesome/free-solid-svg-icons'
 import { Typography } from '../..'
-import { useMobile } from '../../../../scripts'
 import { useScreenWidth } from '../../../../scripts'
 
 export const ImageSlider = ({ slides }: any) => {
-    const isMobile = useMobile()
-    const screenWidth = useScreenWidth()
+    const { screenWidth, isMobile } = useScreenWidth()
     const photoWidth = screenWidth / 1.875
 
     const [current, setCurrent] = useState(0)

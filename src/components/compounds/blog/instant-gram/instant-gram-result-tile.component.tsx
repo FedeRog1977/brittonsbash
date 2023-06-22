@@ -6,14 +6,14 @@ import {
     Typography,
 } from '../../../bash-blocks'
 import './styles/instant-gram-tile.styles.css'
-import { refactorEvent, useDropDown, useMobile } from '../../../../scripts'
+import { refactorEvent, useDropDown, useScreenWidth } from '../../../../scripts'
 
 export const InstantGramResultTile = ({
     event,
     sportEvent,
     showSportEvent,
 }: any) => {
-    const isMobile = useMobile()
+    const { isMobile } = useScreenWidth()
     const { showDropDown, setShowDropDown } = useDropDown()
     const refactoredEvent = refactorEvent({ event, sportEvent, showSportEvent })
 

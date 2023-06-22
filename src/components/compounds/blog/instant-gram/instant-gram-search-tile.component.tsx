@@ -4,14 +4,14 @@ import { eventData } from '../../../../data'
 import './styles/instant-gram-tile.styles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { useMobile } from '../../../../scripts'
+import { useScreenWidth } from '../../../../scripts'
 
 export const InstantGramSearchTile = ({
     funcInput,
     funcButton,
     funcSelect,
 }: any) => {
-    const isMobile = useMobile()
+    const { isMobile } = useScreenWidth()
 
     return (
         <Tile type="solid" top>

@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { useMobile } from '../../../../scripts'
+import { useScreenWidth } from '../../../../scripts'
 import '../styles/typography.styles.css'
 import { TypographyProps } from '../types'
 
@@ -21,7 +21,7 @@ export const Typography: FC<TypographyProps> = ({
     mL,
     mR,
 }: any) => {
-    const isMobile = useMobile()
+    const { isMobile } = useScreenWidth()
 
     return (
         <div

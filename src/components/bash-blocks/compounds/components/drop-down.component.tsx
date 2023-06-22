@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { Button, DropDownProps } from '../..'
 import { Typography } from '../..'
-import { useMobile } from '../../../../scripts'
+import { useScreenWidth } from '../../../../scripts'
 import '../styles/drop-down.styles.css'
 
 export const DropDown: FC<DropDownProps> = ({
@@ -14,7 +14,7 @@ export const DropDown: FC<DropDownProps> = ({
     textAlign,
     borders,
 }: any) => {
-    const isMobile = useMobile()
+    const { isMobile } = useScreenWidth()
 
     return (
         <Button
