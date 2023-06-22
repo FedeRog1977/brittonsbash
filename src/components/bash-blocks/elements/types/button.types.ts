@@ -6,4 +6,5 @@ export type ButtonProps = {
     value?: string
     content: string | React.ReactElement
     textAlign?: TypographyProps['textAlign']
+    borders?: boolean
 }

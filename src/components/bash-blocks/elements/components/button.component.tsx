@@ -8,13 +8,28 @@ export const Button: FC<ButtonProps> = ({
     value,
     content,
     textAlign,
+    borders,
 }: any) => (
     <button
         className={type}
         onClick={func}
         value={value}
-        style={{ textAlign: textAlign ? textAlign : 'center' }}
+        style={{
+            textAlign: textAlign ? textAlign : 'center',
+        }}
     >
-        {content}
+        {borders ? (
+            <div
+                style={{
+                    borderTopLeftRadius: 'var(--corners-small)',
+                    borderTop: '2.5px solid var(--darker-grey)',
+                    borderLeft: '2.5px solid var(--darker-grey)',
+                }}
+            >
+                {content}
+            </div>
+        ) : (
+            content
+        )}
     </button>
 )

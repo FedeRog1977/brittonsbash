@@ -12,6 +12,7 @@ export const DropDown: FC<DropDownProps> = ({
     content,
     subContent,
     textAlign,
+    borders,
 }: any) => {
     const isMobile = useMobile()
 
@@ -27,6 +28,13 @@ export const DropDown: FC<DropDownProps> = ({
                                 type="h5"
                                 color="var(--medium-grey)"
                                 content={subContent}
+                                mT={
+                                    textAlign === 'right'
+                                        ? isMobile
+                                            ? '0'
+                                            : '5px'
+                                        : '0'
+                                }
                                 mL={
                                     textAlign === 'right'
                                         ? isMobile
@@ -71,6 +79,7 @@ export const DropDown: FC<DropDownProps> = ({
                 </>
             }
             textAlign={textAlign}
+            borders={borders}
         />
     )
 }
