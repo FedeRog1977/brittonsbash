@@ -8,14 +8,11 @@
 }
 
 .header-logo {
-    float: left;
-    margin: 19px 0 0 0;
-}
-
-.header-logo {
-    font-family: Sans-Light;
+    font-family: Audi-Extended;
+    font-size: 23px;
     color: var(--light-grey);
-    margin: 10px 0 0 0;
+    float: left;
+    margin: 0px 0px 0px 0px;
 }
 
 .header-navigation {
@@ -32,12 +29,24 @@
     margin: 0px 7.5px 0px 7.5px;
 }
 
+.sub-header-navigation-mobile li {
+    font-family: Sans-Light;
+    color: var(--light-grey);
+}
+
 .header-navigation a,
 .header-navigation span,
 .sub-header-navigation a,
 .sub-header-navigation span,
 .subHeaderConquestNavigation a,
 .subHeaderConquestNavigation span {
+    text-decoration: none;
+    color: var(--light-grey);
+    transition: color var(--transition-long);
+}
+
+.sub-header-navigation-mobile a,
+.sub-header-navigation-mobile span {
     text-decoration: none;
     color: var(--light-grey);
     transition: color var(--transition-long);
@@ -62,6 +71,14 @@
     padding: 0px 150px 0px 150px;
 }
 
+.sub-header-mobile {
+    text-align: right;
+    background-color: var(--dark-grey);
+    height: auto;
+    margin: 0;
+    padding: 5px 20px 10px 5px;
+}
+
 .sub-header-navigation,
 .subHeaderConquestNavigation {
     font-family: Sans-Light;
@@ -69,6 +86,11 @@
     float: right;
     margin: 10px 0 0 0;
     padding: 0;
+}
+
+.sub-header-navigation-mobile {
+    font-family: Sans-Light;
+    color: var(--light-grey);
 }
 
 /* Footer */
@@ -86,8 +108,4 @@
     .header {
         padding: 0px 20px 0px 20px;
     }
-
-    /* .header-navigation {
-        display: none;
-    } */
 }

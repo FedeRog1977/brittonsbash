@@ -9,9 +9,15 @@ export const Spacing: FC<SpacingProps> = ({
     mL,
     mR,
     children,
+    ruleTop,
+    ruleBottom,
 }: any) => (
     <div
         style={{
+            borderTop: ruleTop ? '1.5px solid var(--darker-grey)' : undefined,
+            borderBottom: ruleBottom
+                ? '1.5px solid var(--darker-grey)'
+                : undefined,
             marginTop: mX ? `${mX / 2}px` : mT ? `${mT}px` : 0,
             marginBottom: mX ? `${mX / 2}px` : mB ? `${mB}px` : 0,
             marginLeft: mY ? `${mY / 2}px` : mL ? `${mL}px` : 0,

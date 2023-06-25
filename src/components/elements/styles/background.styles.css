@@ -43,13 +43,13 @@
 @media (max-width: 768px) {
     .background {
         background-image: none;
-        text-align: center;
-        padding: 20px;
+        /* text-align: center; */
+        padding: 35px 20px 5px 20px;
     }
 
     .background-text {
         color: var(--font1);
-        font-size: 42px;
+        font-size: 32px;
         padding: 0;
     }
 }

@@ -29,7 +29,7 @@ export const InstantGramSearchTile = ({
                             <>
                                 {isMobile ? (
                                     <Typography
-                                        type="h4"
+                                        type="body"
                                         content={
                                             <FontAwesomeIcon icon={faSearch} />
                                         }
@@ -37,7 +37,7 @@ export const InstantGramSearchTile = ({
                                     />
                                 ) : (
                                     <Typography
-                                        type="h4"
+                                        type="body"
                                         content="Search"
                                         color="var(--white)"
                                     />

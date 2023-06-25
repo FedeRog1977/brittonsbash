@@ -2,11 +2,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import '../styles/header-footer.styles.css'
-import { SubHeaderBlog, SubHeaderUtilities } from '.'
+import { HeaderMobile, SubHeaderBlog, SubHeaderUtilities } from '.'
 import { useDropDown, useScreenWidth } from '../../../scripts'
 
 export const Header = () => {
     const { isMobile } = useScreenWidth()
+    const { showDropDown: showMobile, setShowDropDown: setShowMobile } =
+        useDropDown()
     const { showDropDown: showBlog, setShowDropDown: setShowBlog } =
         useDropDown()
     const { showDropDown: showUtilities, setShowDropDown: setShowUtilities } =
@@ -20,19 +22,12 @@ export const Header = () => {
                 </div>
                 <div className="header-navigation">
                     {isMobile ? (
-                        <>
-                            <ul>
-                                <FontAwesomeIcon
-                                    icon={faBars}
-                                    onClick={() => null}
-                                />
-                            </ul>
-                            {/* <nav>
-                                <ul>
-                                    <li>...</li>
-                                </ul>
-                            </nav> */}
-                        </>
+                        <ul>
+                            <FontAwesomeIcon
+                                icon={faBars}
+                                onClick={() => setShowMobile(!showMobile)}
+                            />
+                        </ul>
                     ) : (
                         <nav>
                             <ul>
@@ -70,6 +65,12 @@ export const Header = () => {
                     )}
                 </div>
             </header>
+            {showMobile && (
+                <HeaderMobile
+                    funcMobile={() => setShowBlog(!showBlog)}
+                    funcUtilities={() => setShowUtilities(!showUtilities)}
+                />
+            )}
             {showBlog && <SubHeaderBlog />}
             {showUtilities && <SubHeaderUtilities />}
         </>

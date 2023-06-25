@@ -3,7 +3,7 @@
 input[type='text'].instant-gram-search,
 button.instant-gram-search {
     font-family: Sans-Regular;
-    font-size: 20px;
+    font-size: 16px;
     border: 1px solid var(--font2);
     border-radius: var(--corners-small);
     margin: 0;
@@ -11,11 +11,13 @@ button.instant-gram-search {
 }
 
 input[type='text'].instant-gram-search {
+    height: 25px;
     background-color: var(--lighter-grey);
-    width: 83.5%;
+    width: 83.75%;
 }
 
 button.instant-gram-search {
+    height: 35px;
     float: right;
     background-color: var(--darker-grey);
     width: 15%;

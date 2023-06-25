@@ -6,4 +6,6 @@ export type SpacingProps = {
     mL?: number
     mR?: number
     children?: React.ReactElement
+    ruleTop?: boolean
+    ruleBottom?: boolean
 }
