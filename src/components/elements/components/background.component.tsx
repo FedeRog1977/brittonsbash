@@ -1,4 +1,4 @@
-import './styles/background.styles.css'
+import '../styles/background.styles.css'
 
 export const Background = ({ content, className }: any) => (
     <div className="background">

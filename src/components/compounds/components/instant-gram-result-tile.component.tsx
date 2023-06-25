@@ -5,7 +5,7 @@ import {
     Tile,
     Typography,
 } from '../../bash-blocks'
-import './styles/instant-gram-tile.styles.css'
+import '../styles/instant-gram-tile.styles.css'
 import { refactorEvent, useDropDown, useScreenWidth } from '../../../scripts'
 
 export const InstantGramResultTile = ({

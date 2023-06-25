@@ -1,7 +1,7 @@
 import { Button, Search, Tile, Typography } from '../../bash-blocks'
 import { InstantGramSearchList } from '../../elements'
 import { eventData } from '../../../data'
-import './styles/instant-gram-tile.styles.css'
+import '../styles/instant-gram-tile.styles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { useScreenWidth } from '../../../scripts'

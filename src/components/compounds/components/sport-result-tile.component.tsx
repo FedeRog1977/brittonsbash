@@ -1,5 +1,5 @@
 import { Typography, Tile } from '../../bash-blocks'
-import '../instant-gram/styles/instant-gram-tile.styles.css'
+import '../styles/instant-gram-tile.styles.css'
 import {
     compileProjects,
     compileMiles,
