@@ -22,7 +22,8 @@ export const HeaderMobile: FC<HeaderMobileProps> = ({
                     <li>
                         <Link to="/library">Library</Link>
                     </li>
-                    <li>&#8212;</li>
+                </ul>
+                <ul>
                     <li>
                         <span onClick={funcMobile}>Blog</span>
                     </li>

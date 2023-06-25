@@ -30,8 +30,8 @@
 }
 
 .sub-header-navigation-mobile li {
-    font-family: Sans-Light;
-    color: var(--light-grey);
+    display: inline-block;
+    margin: 0px 5px 0px 5px;
 }
 
 .header-navigation a,
