@@ -1,6 +1,23 @@
 export const eventData = {
     2023: [
         {
+            id: 'E2023029',
+            prefix: '',
+            names: ['McSoup'],
+            startDate: '23rd of June',
+            endDate: '24th of June',
+            description:
+                'Ahh back on the Maccies Fort Bill tour at last! Turns out we hit a four-hour drive-in to the only place in Scotland getting storms this time. Defn=initely worth it for the Maccies, average project, drive loop, and Bruar soup.',
+            images: [
+                {
+                    url: '',
+                    alt: '',
+                    description: '',
+                },
+            ],
+            youthHostels: [],
+        },
+        {
             id: 'E2023028',
             prefix: 'Cairngorms XII',
             names: ['The Devil’s Dick'],
@@ -743,7 +760,7 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
+            youthHostels: ['Glencoe'],
         },
         {
             id: 'E2023008',
@@ -975,7 +992,7 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: ['Aviemore'],
+            youthHostels: ['Glencoe', 'Aviemore'],
         },
         {
             id: 'E2022051',
@@ -1550,7 +1567,7 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
+            youthHostels: ['Glencoe'],
         },
         {
             id: 'E2022026',

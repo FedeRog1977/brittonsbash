@@ -327,6 +327,10 @@ export const communicationsData = {
         hardware: {
             phones: [
                 'Sony Ericsson K800i',
+                'Blackberry Curve 8300',
+                'Blackberry Curve 9300 (Pending)',
+                'Blackberry Bold 9700 (Pending)',
+                'Blackberry Bold Touch (Pending)',
                 'iPhone 4',
                 'iPhone 6S',
                 'Motorola Moto One Hyper',

@@ -152,6 +152,22 @@ export const sportData = {
         ],
         projects: [
             {
+                id: 'P2023016',
+                name: 'McSoup',
+                dist: 10.35,
+                elev: 3054,
+                time: '3:45:43',
+                companionship: 1,
+                islands: [],
+                munros: ['Gairich'],
+                munroTops: [],
+                corbetts: [],
+                corbettTops: [],
+                grahams: [],
+                subTwos: [],
+                donalds: [],
+            },
+            {
                 id: 'P2023015',
                 name: 'The Devil’s Dick',
                 dist: 23.42,
