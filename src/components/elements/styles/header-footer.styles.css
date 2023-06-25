@@ -8,11 +8,12 @@
 }
 
 .header-logo {
-    font-family: Audi-Extended;
-    font-size: 23px;
+    font-family: Sans-Light;
+    font-size: 22px;
     color: var(--light-grey);
+    vertical-align: center;
+    height: 75px;
     float: left;
-    margin: 0px 0px 0px 0px;
 }
 
 .header-navigation {
