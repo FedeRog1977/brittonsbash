@@ -43,7 +43,6 @@
 .left-arrow,
 .right-arrow,
 .refresh {
-    font-size: 32px;
     color: var(--darker-grey-90);
     position: absolute;
     z-index: 10;
@@ -53,16 +52,19 @@
 }
 
 .left-arrow {
+    font-size: 32px;
     top: 48%;
     left: 3.5%;
 }
 
 .right-arrow {
+    font-size: 32px;
     top: 48%;
     right: 3.5%;
 }
 
 .refresh {
+    font-size: 24px;
     top: 4.5%;
     right: 3.5%;
 }

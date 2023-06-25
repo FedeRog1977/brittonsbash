@@ -104,18 +104,26 @@ export const ImageSlider = ({ slides }: any) => {
                                 )}
                             </>
                         ) : (
-                            <Typography
-                                type="h3"
-                                content={
-                                    <>
-                                        No Disc Inserted{' '}
-                                        <FontAwesomeIcon
-                                            icon={faEject}
-                                            size="2xs"
-                                        />
-                                    </>
-                                }
-                            />
+                            <div style={{ textAlign: 'center' }}>
+                                <Typography
+                                    type="h3"
+                                    content="No Disc Loaded"
+                                    textAlign="center"
+                                />
+                                <Typography
+                                    type="h4"
+                                    content={
+                                        <>
+                                            Insert Disc{' '}
+                                            <FontAwesomeIcon
+                                                icon={faEject}
+                                                size="2xs"
+                                            />
+                                        </>
+                                    }
+                                    textAlign="center"
+                                />
+                            </div>
                         )}
                     </div>
                 )

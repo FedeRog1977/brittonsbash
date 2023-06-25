@@ -1207,6 +1207,7 @@ export const communicationsData = {
             'Mark Knopfler Buys 1983 Les Paul from Rudy Pensa for Brothers In Arms',
             'John Suhr Designs Pensa Suhr Custom Caramel for Mark Knopfler',
             'Lenovo Founded',
+            'BlackBerry Founded',
             'Avril Lavigne Born',
         ],
         links: [
