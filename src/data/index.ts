@@ -1,3 +1,3 @@
 export * from './data'
-export * from './content'
+export * from './pages'
 export * from './mock'
