@@ -1,49 +1,51 @@
 .image-slider {
     position: relative;
-    height: 85vh;
+    height: 90vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: var(--corners-small);
+    overflow-x: hidden;
+    overflow-y: hidden;
     /* border: 1px solid black; */
 }
 
-.image-slider-container {
+/* .image-slider-container {
     position: relative;
-    /* border: 1px solid black; */
-}
+    border: 1px solid black;
+} */
 
-.image-slider-image {
-    box-shadow: 0px 0px 10px #a8a8a8;
-    /* border: 1px solid black; */
-}
+/* .image-slider-image { */
+/* box-shadow: 0px 0px 10px #a8a8a8; */
+/* border: 1px solid black; */
+/* } */
 
 .image-slider-caption {
     position: absolute;
     text-shadow: 0px 0px 5px var(--darker-grey);
-    bottom: 22px;
-    left: 20px;
+    bottom: 60px;
+    left: 50px;
     max-width: 75%;
     opacity: 0.75;
-    /* border: 1px solid black; */
 }
 
 .image-slider-index {
     position: absolute;
     text-shadow: 0px 0px 5px var(--darker-grey);
-    bottom: 22px;
-    right: 20px;
+    bottom: 60px;
+    right: 50px;
     max-width: 25%;
     opacity: 0.75;
     /* border: 1px solid black; */
 }
 
 .left-arrow,
-.right-arrow {
+.right-arrow,
+.refresh {
     font-size: 32px;
     color: var(--darker-grey-90);
     position: absolute;
-    top: 48%;
     z-index: 10;
     cursor: pointer;
     user-select: none;
@@ -51,21 +53,30 @@
 }
 
 .left-arrow {
+    top: 48%;
     left: 3.5%;
 }
 
 .right-arrow {
+    top: 48%;
+    right: 3.5%;
+}
+
+.refresh {
+    top: 4.5%;
     right: 3.5%;
 }
 
 .left-arrow:hover,
-.right-arrow:hover {
+.right-arrow:hover,
+.refresh:hover {
     color: #a8a8a8;
     transition: color var(--transition-long);
 }
 
 .left-arrow:active,
-.right-arrow:active {
+.right-arrow:active,
+.refresh:active {
     transform: scale(0.85);
     transition: transform var(--transition-short);
 }
@@ -85,8 +96,9 @@
 
 @media (max-width: 768px) {
     .image-slider {
-        height: 320px;
+        height: 300px;
         overflow-x: hidden;
+        border: 1px solid black;
     }
 
     .image-slider-image {
@@ -94,12 +106,12 @@
     }
 
     .image-slider-caption {
-        bottom: 12px;
+        bottom: 22px;
         left: 10px;
     }
 
     .image-slider-index {
-        bottom: 12px;
+        bottom: 22px;
         right: 10px;
     }
 
@@ -115,6 +127,13 @@
 
     .right-arrow {
         right: 1.25%;
+    }
+
+    .refresh {
+        font-size: 16px;
+        top: 5%;
+        right: 3.5%;
+        color: var(--darker-grey-50);
     }
 
     .slide {

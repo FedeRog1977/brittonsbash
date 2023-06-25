@@ -1,17 +1,17 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import '../styles/image-slider.styles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     faChevronCircleLeft,
     faChevronCircleRight,
     faEject,
+    faRefresh,
 } from '@fortawesome/free-solid-svg-icons'
 import { Typography } from '../..'
 import { useScreenWidth } from '../../../../scripts'
 
 export const ImageSlider = ({ slides }: any) => {
     const { screenWidth, isMobile } = useScreenWidth()
-    const photoWidth = screenWidth / 1.875
 
     const [current, setCurrent] = useState(0)
     const length = slides.length
@@ -31,6 +31,11 @@ export const ImageSlider = ({ slides }: any) => {
     return (
         <div className="image-slider">
             <FontAwesomeIcon
+                icon={faRefresh}
+                className="refresh"
+                onClick={() => setCurrent(0)}
+            />
+            <FontAwesomeIcon
                 icon={faChevronCircleLeft}
                 className="left-arrow"
                 onClick={prevSlide}
@@ -49,13 +54,13 @@ export const ImageSlider = ({ slides }: any) => {
                         {slide.url ? (
                             <>
                                 {index === current && (
-                                    <div className="image-slider-container">
+                                    <>
                                         <img
                                             className="image-slider-image"
                                             style={{
                                                 width: isMobile
-                                                    ? `${screenWidth}px`
-                                                    : `${photoWidth}px`,
+                                                    ? screenWidth
+                                                    : '100%',
                                             }}
                                             src={slide.url}
                                             alt={slide.alt}
@@ -95,7 +100,7 @@ export const ImageSlider = ({ slides }: any) => {
                                                 </div>
                                             </>
                                         )}
-                                    </div>
+                                    </>
                                 )}
                             </>
                         ) : (
