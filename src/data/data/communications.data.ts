@@ -509,6 +509,10 @@ export const communicationsData = {
                     href: 'https://tug.org/FontCatalogue/',
                 },
                 {
+                    content: 'LaTeX List Guide',
+                    href: 'https://tug.org/TUGboat/tb36-3/tb114thurnherr.pdf',
+                },
+                {
                     content: 'LaTeX Symbol Guide',
                     href: 'https://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf',
                 },
@@ -736,7 +740,7 @@ export const communicationsData = {
         allSongs: [],
         manufacturers: [
             'Audiolab',
-            'Xone',
+            'Allen & Heath',
             'Bose',
             'Linn',
             'Technics',
@@ -746,9 +750,10 @@ export const communicationsData = {
             'Audiolab 8300A Pre-Amplifier',
             'Audiolab 8300MB Monoblok Power Amplifier',
             'Audiolab 8300CDQ CD Player',
-            'Xone:92 Mixing Deck',
+            'Allen & Heath Xone:92 Mixing Deck',
             'Linn Majik LP12 Turntable',
             'Linn Majik 109 Speakers',
+            'Technics SL-1200MK7 Turntable',
         ],
         media: ['Vinyl', 'Compact Disc'],
         links: [
@@ -1083,6 +1088,10 @@ export const communicationsData = {
                     href: 'https://stockx.com/en-gb',
                 },
                 {
+                    context: 'Dover Street Market',
+                    href: 'https://shop.doverstreetmarket.com/',
+                },
+                {
                     context: 'Love from Skye',
                     href: 'https://www.lovefromskye.co.uk/',
                 },
@@ -1228,6 +1237,10 @@ export const communicationsData = {
                 href: 'https://nordicg3k.tripod.com/website/id3.html',
             },
             {
+                context: 'Internet Movie Firearms Database',
+                href: 'https://www.imfdb.org/wiki/Main_Page',
+            },
+            {
                 context: 'Flat That Could Have Been',
                 href: 'https://www.citylets.co.uk/property-rent/giffnock-fenwick-road-g46-417801/',
             },
@@ -1242,6 +1255,10 @@ export const communicationsData = {
             {
                 context: 'Time Periods',
                 href: 'https://en.wikipedia.org/wiki/List_of_time_periods',
+            },
+            {
+                context: 'Dolce Cilento',
+                href: 'https://www.dolcecilento.com/',
             },
         ],
     },
