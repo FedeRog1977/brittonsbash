@@ -17,7 +17,7 @@ export const InstantGramSearchList = ({ func, items, year, season }: any) => {
                 textAlign={isMobile ? 'center' : 'right'}
             />
             {showDropDown && (
-                <Spacing ruleTop ruleBottom>
+                <>
                     {items.map(({ id, prefix, names }: any) => (
                         <Button
                             key={id}
@@ -64,7 +64,7 @@ export const InstantGramSearchList = ({ func, items, year, season }: any) => {
                             }
                         />
                     ))}
-                </Spacing>
+                </>
             )}
         </>
     )

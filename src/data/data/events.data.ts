@@ -7,7 +7,7 @@ export const eventData = {
             startDate: '23rd of June',
             endDate: '24th of June',
             description:
-                'Ahh back on the Maccies Fort Bill tour at last! Turns out we hit a four-hour drive-in to the only place in Scotland getting storms this time. Defn=initely worth it for the Maccies, average project, drive loop, and Bruar soup.',
+                'Ahh back on the Maccies Fort Bill tour at last! Turns out we hit a four-hour drive-in to the only place in Scotland getting storms this time. Definitely worth it for the Maccies, average project, drive loop, and Bruar soup.',
             images: [
                 {
                     url: '',

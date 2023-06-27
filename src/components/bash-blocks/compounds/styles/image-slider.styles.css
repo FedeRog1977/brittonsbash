@@ -11,16 +11,6 @@
     /* border: 1px solid black; */
 }
 
-/* .image-slider-container {
-    position: relative;
-    border: 1px solid black;
-} */
-
-/* .image-slider-image { */
-/* box-shadow: 0px 0px 10px #a8a8a8; */
-/* border: 1px solid black; */
-/* } */
-
 .image-slider-caption {
     position: absolute;
     text-shadow: 0px 0px 5px var(--darker-grey);
@@ -100,7 +90,6 @@
     .image-slider {
         height: 300px;
         overflow-x: hidden;
-        border: 1px solid black;
     }
 
     .image-slider-image {

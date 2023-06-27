@@ -748,7 +748,7 @@ export const communicationsData = {
         ],
         hiFi: [
             'Audiolab 8300A Pre-Amplifier',
-            'Audiolab 8300MB Monoblok Power Amplifier',
+            'Audiolab 8300MB Monoblock Power Amplifier',
             'Audiolab 8300CDQ CD Player',
             'Allen & Heath Xone:92 Mixing Deck',
             'Linn Majik LP12 Turntable',
@@ -1090,6 +1090,10 @@ export const communicationsData = {
                 {
                     context: 'Dover Street Market',
                     href: 'https://shop.doverstreetmarket.com/',
+                },
+                {
+                    context: 'Homme+',
+                    href: 'https://www.hommeplus.eu/',
                 },
                 {
                     context: 'Love from Skye',
