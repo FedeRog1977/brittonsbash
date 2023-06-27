@@ -21,7 +21,7 @@ export const InstantGramResultTile = ({
     return (
         <Tile type="solid" dense={isMobile && true}>
             <>
-                <Spacing mB={15}>
+                <Spacing mB={isMobile ? 7.5 : 15}>
                     <>
                         {refactoredEvent.prefix && (
                             <Typography
@@ -79,7 +79,7 @@ export const InstantGramResultTile = ({
                         )}
                     </>
                 </Spacing>
-                <Spacing mT={15} mB={15}>
+                <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                     <Typography
                         type="h3"
                         content={
@@ -179,7 +179,7 @@ export const InstantGramResultTile = ({
                     />
                 )}
                 {refactoredEvent.youthHostels && (
-                    <Spacing mL={70} mR={70} mT={15} mB={15}>
+                    <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                         <Typography
                             type="body"
                             content={
@@ -201,7 +201,12 @@ export const InstantGramResultTile = ({
                         />
                     </Spacing>
                 )}
-                <Spacing mL={70} mR={70} mT={15} mB={15}>
+                <Spacing
+                    mL={isMobile ? 15 : 70}
+                    mR={isMobile ? 15 : 70}
+                    mT={isMobile ? 7.5 : 15}
+                    mB={isMobile ? 7.5 : 15}
+                >
                     <DropDown
                         backgroundType="regular-clear"
                         func={() => setShowDropDown(!showDropDown)}
