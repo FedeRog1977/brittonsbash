@@ -1,7 +1,6 @@
 import { Button, Search, Spacing, Tile, Typography } from '../../bash-blocks'
 import { InstantGramSearchList } from '../../elements'
 import { eventData } from '../../../data'
-import '../styles/instant-gram-tile.styles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { useScreenWidth } from '../../../scripts'
@@ -55,7 +54,7 @@ export const InstantGramSearchTile = ({
                     </>
                 </Spacing>
                 <Spacing mL={isMobile ? 0 : 70} mR={isMobile ? 0 : 70}>
-                    <div>
+                    <>
                         <InstantGramSearchList
                             func={funcSelect}
                             items={eventData[2023]}
@@ -82,7 +81,7 @@ export const InstantGramSearchTile = ({
                             season="1"
                             position="right"
                         />
-                    </div>
+                    </>
                 </Spacing>
             </>
         </Tile>

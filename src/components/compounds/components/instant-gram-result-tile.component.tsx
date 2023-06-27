@@ -6,8 +6,8 @@ import {
     Tile,
     Typography,
 } from '../../bash-blocks'
-import '../styles/instant-gram-tile.styles.css'
 import { refactorEvent, useDropDown, useScreenWidth } from '../../../scripts'
+import { SportActivityTile } from './sport-activity-tile.component'
 
 export const InstantGramResultTile = ({
     event,
@@ -106,10 +106,74 @@ export const InstantGramResultTile = ({
                         textAlign="center"
                     />
                 </Spacing>
+                <SportActivityTile
+                    title={{
+                        leftItem: (
+                            <>
+                                {refactoredEvent.distance}
+                                &nbsp;|&nbsp;
+                                {refactoredEvent.elevation}
+                            </>
+                        ),
+                        rightItem: <>[{refactoredEvent.time}]</>,
+                    }}
+                    entries={[
+                        {
+                            leftItem: refactoredEvent.islands && 'Island(s)',
+                            rightItem:
+                                refactoredEvent.islands &&
+                                refactoredEvent.islands,
+                        },
+                        {
+                            leftItem: refactoredEvent.munros && 'Munro(s)',
+                            rightItem:
+                                refactoredEvent.munros &&
+                                refactoredEvent.munros,
+                        },
+                        {
+                            leftItem:
+                                refactoredEvent.munroTops && 'Munro Top(s)',
+                            rightItem:
+                                refactoredEvent.munroTops &&
+                                refactoredEvent.munroTops,
+                        },
+                        {
+                            leftItem: refactoredEvent.corbetts && 'Corbett(s)',
+                            rightItem:
+                                refactoredEvent.corbetts &&
+                                refactoredEvent.corbetts,
+                        },
+                        {
+                            leftItem:
+                                refactoredEvent.corbettTops && 'Corbett Top(s)',
+                            rightItem:
+                                refactoredEvent.corbettTops &&
+                                refactoredEvent.corbettTops,
+                        },
+                        {
+                            leftItem: refactoredEvent.grahams && 'Graham(s)',
+                            rightItem:
+                                refactoredEvent.grahams &&
+                                refactoredEvent.grahams,
+                        },
+                        {
+                            leftItem: refactoredEvent.subTwos && 'SubTwo(s)',
+                            rightItem:
+                                refactoredEvent.subTwos &&
+                                refactoredEvent.subTwos,
+                        },
+                        {
+                            leftItem: refactoredEvent.donalds && 'Donald(s)',
+                            rightItem:
+                                refactoredEvent.donalds &&
+                                refactoredEvent.donalds,
+                        },
+                    ]}
+                />
                 {refactoredEvent.showSportEvent && (
                     <Spacing
-                        mL={isMobile ? 7.5 : 70}
-                        mR={isMobile ? 7.5 : 70}
+                        mL={isMobile ? 0 : 70}
+                        mR={isMobile ? 0 : 70}
                         mT={isMobile ? 7.5 : 15}
                         mB={isMobile ? 7.5 : 15}
                         pL={isMobile ? 7.5 : 150}
@@ -126,17 +190,15 @@ export const InstantGramResultTile = ({
                                 <div className="instant-gram-tile-sport-sub-element left">
                                     <Typography
                                         type="body"
-                                        content={refactoredEvent.distance}
+                                        content={
+                                            <>
+                                                {refactoredEvent.distance}
+                                                &nbsp;|&nbsp;
+                                                {refactoredEvent.elevation}
+                                            </>
+                                        }
                                         boldFace={isMobile ? false : true}
                                         inline
-                                        mR="5px"
-                                    />
-                                    <Typography
-                                        type="body"
-                                        content={refactoredEvent.elevation}
-                                        boldFace={isMobile ? false : true}
-                                        inline
-                                        mL="5px"
                                     />
                                 </div>
                                 <div className="instant-gram-tile-sport-sub-element right">
@@ -149,7 +211,7 @@ export const InstantGramResultTile = ({
                                 </div>
                             </div>
                             {refactoredEvent.islands && (
-                                <div className="instant-gram-tile-sport-element">
+                                <div>
                                     <div className="instant-gram-tile-sport-sub-element left">
                                         <Typography
                                             type="body"
@@ -172,7 +234,7 @@ export const InstantGramResultTile = ({
                                 </div>
                             )}
                             {refactoredEvent.munros && (
-                                <div className="instant-gram-tile-sport-element">
+                                <>
                                     <div className="instant-gram-tile-sport-sub-element left">
                                         <Typography
                                             type="body"
@@ -190,10 +252,10 @@ export const InstantGramResultTile = ({
                                             inline
                                         />
                                     </div>
-                                </div>
+                                </>
                             )}
                             {refactoredEvent.munroTops && (
-                                <div className="instant-gram-tile-sport-element">
+                                <>
                                     <div className="instant-gram-tile-sport-sub-element left">
                                         <Typography
                                             type="body"
@@ -211,10 +273,10 @@ export const InstantGramResultTile = ({
                                             inline
                                         />
                                     </div>
-                                </div>
+                                </>
                             )}
                             {refactoredEvent.corbetts && (
-                                <div className="instant-gram-tile-sport-element">
+                                <>
                                     <div className="instant-gram-tile-sport-sub-element left">
                                         <Typography
                                             type="body"
@@ -232,10 +294,10 @@ export const InstantGramResultTile = ({
                                             inline
                                         />
                                     </div>
-                                </div>
+                                </>
                             )}
                             {refactoredEvent.corbettTops && (
-                                <div className="instant-gram-tile-sport-element">
+                                <>
                                     <div className="instant-gram-tile-sport-sub-element left">
                                         <Typography
                                             type="body"
@@ -255,10 +317,10 @@ export const InstantGramResultTile = ({
                                             inline
                                         />
                                     </div>
-                                </div>
+                                </>
                             )}
                             {refactoredEvent.grahams && (
-                                <div className="instant-gram-tile-sport-element">
+                                <>
                                     <div className="instant-gram-tile-sport-sub-element left">
                                         <Typography
                                             type="body"
@@ -276,10 +338,10 @@ export const InstantGramResultTile = ({
                                             inline
                                         />
                                     </div>
-                                </div>
+                                </>
                             )}
                             {refactoredEvent.subTwos && (
-                                <div className="instant-gram-tile-sport-element">
+                                <>
                                     <div className="instant-gram-tile-sport-sub-element left">
                                         <Typography
                                             type="body"
@@ -297,10 +359,10 @@ export const InstantGramResultTile = ({
                                             inline
                                         />
                                     </div>
-                                </div>
+                                </>
                             )}
                             {refactoredEvent.donalds && (
-                                <div className="instant-gram-tile-sport-element">
+                                <>
                                     <div className="instant-gram-tile-sport-sub-element left">
                                         <Typography
                                             type="body"
@@ -318,7 +380,7 @@ export const InstantGramResultTile = ({
                                             inline
                                         />
                                     </div>
-                                </div>
+                                </>
                             )}
                         </>
                     </Spacing>

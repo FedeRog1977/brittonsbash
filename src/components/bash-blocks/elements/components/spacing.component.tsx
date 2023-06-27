@@ -15,14 +15,17 @@ export const Spacing: FC<SpacingProps> = ({
     pL,
     pR,
     children,
+    textAlign,
     ruleTop,
     ruleBottom,
     backgroundColor,
     border,
     borderRadius,
+    position,
 }: any) => (
     <div
         style={{
+            textAlign: textAlign,
             backgroundColor: backgroundColor,
             border: border,
             borderTop: ruleTop ? '1.5px solid var(--darker-grey)' : undefined,
@@ -30,6 +33,7 @@ export const Spacing: FC<SpacingProps> = ({
                 ? '1.5px solid var(--darker-grey)'
                 : undefined,
             borderRadius: borderRadius,
+            position: position,
             marginTop: mX ? `${mX / 2}px` : mT ? `${mT}px` : 0,
             marginBottom: mX ? `${mX / 2}px` : mB ? `${mB}px` : 0,
             marginLeft: mY ? `${mY / 2}px` : mL ? `${mL}px` : 0,

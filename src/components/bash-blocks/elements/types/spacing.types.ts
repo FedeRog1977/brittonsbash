@@ -1,3 +1,5 @@
+import { TypographyProps } from './typography.types'
+
 export type SpacingProps = {
     mX?: number
     mY?: number
@@ -12,9 +14,11 @@ export type SpacingProps = {
     pL?: number
     pR?: number
     children?: React.ReactElement
+    textAlign?: TypographyProps['textAlign']
     ruleTop?: boolean
     ruleBottom?: boolean
     backgroundColor?: string
     border?: string
     borderRadius?: string
+    position?: string
 }
