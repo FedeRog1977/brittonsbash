@@ -28,7 +28,7 @@ export const SportActivityTile: FC<SportActivityTileProps> = ({
             pL={isMobile ? 7.5 : 150}
             pR={isMobile ? 7.5 : 150}
             pT={isMobile ? 7.5 : 15}
-            pB={isMobile ? 7.5 : 15}
+            pB={isMobile ? 3.75 : 7.5}
             backgroundColor="var(--lighter-grey)"
             borderRadius={isMobile ? 'none' : 'var(--corners-small)'}
         >
@@ -40,7 +40,6 @@ export const SportActivityTile: FC<SportActivityTileProps> = ({
                             content={title.leftItem}
                             boldFace={isMobile ? false : true}
                             inline
-                            mR="5px"
                         />
                     </Spacing>
                     <Spacing textAlign="right" position="relative">
@@ -58,7 +57,7 @@ export const SportActivityTile: FC<SportActivityTileProps> = ({
                         rightItem,
                     }: SportActivityTileProps['entries'][0]) => (
                         <>
-                            <Spacing mT={7.5} />
+                            <Spacing mT={isMobile ? 3.75 : 7.5} />
                             <Spacing position="absolute">
                                 <Typography
                                     type="body"

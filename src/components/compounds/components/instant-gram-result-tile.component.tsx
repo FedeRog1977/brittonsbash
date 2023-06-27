@@ -106,284 +106,77 @@ export const InstantGramResultTile = ({
                         textAlign="center"
                     />
                 </Spacing>
-                <SportActivityTile
-                    title={{
-                        leftItem: (
-                            <>
-                                {refactoredEvent.distance}
-                                &nbsp;|&nbsp;
-                                {refactoredEvent.elevation}
-                            </>
-                        ),
-                        rightItem: <>[{refactoredEvent.time}]</>,
-                    }}
-                    entries={[
-                        {
-                            leftItem: refactoredEvent.islands && 'Island(s)',
-                            rightItem:
-                                refactoredEvent.islands &&
-                                refactoredEvent.islands,
-                        },
-                        {
-                            leftItem: refactoredEvent.munros && 'Munro(s)',
-                            rightItem:
-                                refactoredEvent.munros &&
-                                refactoredEvent.munros,
-                        },
-                        {
-                            leftItem:
-                                refactoredEvent.munroTops && 'Munro Top(s)',
-                            rightItem:
-                                refactoredEvent.munroTops &&
-                                refactoredEvent.munroTops,
-                        },
-                        {
-                            leftItem: refactoredEvent.corbetts && 'Corbett(s)',
-                            rightItem:
-                                refactoredEvent.corbetts &&
-                                refactoredEvent.corbetts,
-                        },
-                        {
-                            leftItem:
-                                refactoredEvent.corbettTops && 'Corbett Top(s)',
-                            rightItem:
-                                refactoredEvent.corbettTops &&
-                                refactoredEvent.corbettTops,
-                        },
-                        {
-                            leftItem: refactoredEvent.grahams && 'Graham(s)',
-                            rightItem:
-                                refactoredEvent.grahams &&
-                                refactoredEvent.grahams,
-                        },
-                        {
-                            leftItem: refactoredEvent.subTwos && 'SubTwo(s)',
-                            rightItem:
-                                refactoredEvent.subTwos &&
-                                refactoredEvent.subTwos,
-                        },
-                        {
-                            leftItem: refactoredEvent.donalds && 'Donald(s)',
-                            rightItem:
-                                refactoredEvent.donalds &&
-                                refactoredEvent.donalds,
-                        },
-                    ]}
-                />
                 {refactoredEvent.showSportEvent && (
-                    <Spacing
-                        mL={isMobile ? 0 : 70}
-                        mR={isMobile ? 0 : 70}
-                        mT={isMobile ? 7.5 : 15}
-                        mB={isMobile ? 7.5 : 15}
-                        pL={isMobile ? 7.5 : 150}
-                        pR={isMobile ? 7.5 : 150}
-                        pT={isMobile ? 7.5 : 15}
-                        pB={isMobile ? 7.5 : 15}
-                        backgroundColor="var(--lighter-grey)"
-                        borderRadius={
-                            isMobile ? 'none' : 'var(--corners-small)'
-                        }
-                    >
-                        <>
-                            <div>
-                                <div className="instant-gram-tile-sport-sub-element left">
-                                    <Typography
-                                        type="body"
-                                        content={
-                                            <>
-                                                {refactoredEvent.distance}
-                                                &nbsp;|&nbsp;
-                                                {refactoredEvent.elevation}
-                                            </>
-                                        }
-                                        boldFace={isMobile ? false : true}
-                                        inline
-                                    />
-                                </div>
-                                <div className="instant-gram-tile-sport-sub-element right">
-                                    <Typography
-                                        type="body"
-                                        content={<>[{refactoredEvent.time}]</>}
-                                        boldFace={isMobile ? false : true}
-                                        inline
-                                    />
-                                </div>
-                            </div>
-                            {refactoredEvent.islands && (
-                                <div>
-                                    <div className="instant-gram-tile-sport-sub-element left">
-                                        <Typography
-                                            type="body"
-                                            content="Island(s)"
-                                            textAlign="center"
-                                            boldFace={isMobile ? false : true}
-                                            inline
-                                        />
-                                    </div>
-                                    <div className="instant-gram-tile-sport-sub-element right">
-                                        <Typography
-                                            type={
-                                                isMobile ? 'body-light' : 'body'
-                                            }
-                                            content={refactoredEvent.islands}
-                                            textAlign="center"
-                                            inline
-                                        />
-                                    </div>
-                                </div>
-                            )}
-                            {refactoredEvent.munros && (
+                    <SportActivityTile
+                        title={{
+                            leftItem: (
                                 <>
-                                    <div className="instant-gram-tile-sport-sub-element left">
-                                        <Typography
-                                            type="body"
-                                            content="Munro(s)"
-                                            boldFace={isMobile ? false : true}
-                                            inline
-                                        />
-                                    </div>
-                                    <div className="instant-gram-tile-sport-sub-element right">
-                                        <Typography
-                                            type={
-                                                isMobile ? 'body-light' : 'body'
-                                            }
-                                            content={refactoredEvent.munros}
-                                            inline
-                                        />
-                                    </div>
+                                    {refactoredEvent.distance}
+                                    &nbsp;|&nbsp;
+                                    {refactoredEvent.elevation}
                                 </>
-                            )}
-                            {refactoredEvent.munroTops && (
-                                <>
-                                    <div className="instant-gram-tile-sport-sub-element left">
-                                        <Typography
-                                            type="body"
-                                            content="Munro Top(s)"
-                                            boldFace={isMobile ? false : true}
-                                            inline
-                                        />
-                                    </div>
-                                    <div className="instant-gram-tile-sport-sub-element right">
-                                        <Typography
-                                            type={
-                                                isMobile ? 'body-light' : 'body'
-                                            }
-                                            content={refactoredEvent.munroTops}
-                                            inline
-                                        />
-                                    </div>
-                                </>
-                            )}
-                            {refactoredEvent.corbetts && (
-                                <>
-                                    <div className="instant-gram-tile-sport-sub-element left">
-                                        <Typography
-                                            type="body"
-                                            content="Corbett(s)"
-                                            boldFace={isMobile ? false : true}
-                                            inline
-                                        />
-                                    </div>
-                                    <div className="instant-gram-tile-sport-sub-element right">
-                                        <Typography
-                                            type={
-                                                isMobile ? 'body-light' : 'body'
-                                            }
-                                            content={refactoredEvent.corbetts}
-                                            inline
-                                        />
-                                    </div>
-                                </>
-                            )}
-                            {refactoredEvent.corbettTops && (
-                                <>
-                                    <div className="instant-gram-tile-sport-sub-element left">
-                                        <Typography
-                                            type="body"
-                                            content="Corbett Top(s)"
-                                            boldFace={isMobile ? false : true}
-                                            inline
-                                        />
-                                    </div>
-                                    <div className="instant-gram-tile-sport-sub-element right">
-                                        <Typography
-                                            type={
-                                                isMobile ? 'body-light' : 'body'
-                                            }
-                                            content={
-                                                refactoredEvent.corbettTops
-                                            }
-                                            inline
-                                        />
-                                    </div>
-                                </>
-                            )}
-                            {refactoredEvent.grahams && (
-                                <>
-                                    <div className="instant-gram-tile-sport-sub-element left">
-                                        <Typography
-                                            type="body"
-                                            content="Graham(s)"
-                                            boldFace={isMobile ? false : true}
-                                            inline
-                                        />
-                                    </div>
-                                    <div className="instant-gram-tile-sport-sub-element right">
-                                        <Typography
-                                            type={
-                                                isMobile ? 'body-light' : 'body'
-                                            }
-                                            content={refactoredEvent.grahams}
-                                            inline
-                                        />
-                                    </div>
-                                </>
-                            )}
-                            {refactoredEvent.subTwos && (
-                                <>
-                                    <div className="instant-gram-tile-sport-sub-element left">
-                                        <Typography
-                                            type="body"
-                                            content="Sub 2000(s)"
-                                            boldFace={isMobile ? false : true}
-                                            inline
-                                        />
-                                    </div>
-                                    <div className="instant-gram-tile-sport-sub-element right">
-                                        <Typography
-                                            type={
-                                                isMobile ? 'body-light' : 'body'
-                                            }
-                                            content={refactoredEvent.subTwos}
-                                            inline
-                                        />
-                                    </div>
-                                </>
-                            )}
-                            {refactoredEvent.donalds && (
-                                <>
-                                    <div className="instant-gram-tile-sport-sub-element left">
-                                        <Typography
-                                            type="body"
-                                            content="Donald(s)"
-                                            boldFace={isMobile ? false : true}
-                                            inline
-                                        />
-                                    </div>
-                                    <div className="instant-gram-tile-sport-sub-element right">
-                                        <Typography
-                                            type={
-                                                isMobile ? 'body-light' : 'body'
-                                            }
-                                            content={refactoredEvent.donalds}
-                                            inline
-                                        />
-                                    </div>
-                                </>
-                            )}
-                        </>
-                    </Spacing>
+                            ),
+                            rightItem: <>[{refactoredEvent.time}]</>,
+                        }}
+                        entries={[
+                            {
+                                leftItem:
+                                    refactoredEvent.islands && 'Island(s)',
+                                rightItem:
+                                    refactoredEvent.islands &&
+                                    refactoredEvent.islands,
+                            },
+                            {
+                                leftItem: refactoredEvent.munros && 'Munro(s)',
+                                rightItem:
+                                    refactoredEvent.munros &&
+                                    refactoredEvent.munros,
+                            },
+                            {
+                                leftItem:
+                                    refactoredEvent.munroTops && 'Munro Top(s)',
+                                rightItem:
+                                    refactoredEvent.munroTops &&
+                                    refactoredEvent.munroTops,
+                            },
+                            {
+                                leftItem:
+                                    refactoredEvent.corbetts && 'Corbett(s)',
+                                rightItem:
+                                    refactoredEvent.corbetts &&
+                                    refactoredEvent.corbetts,
+                            },
+                            {
+                                leftItem:
+                                    refactoredEvent.corbettTops &&
+                                    'Corbett Top(s)',
+                                rightItem:
+                                    refactoredEvent.corbettTops &&
+                                    refactoredEvent.corbettTops,
+                            },
+                            {
+                                leftItem:
+                                    refactoredEvent.grahams && 'Graham(s)',
+                                rightItem:
+                                    refactoredEvent.grahams &&
+                                    refactoredEvent.grahams,
+                            },
+                            {
+                                leftItem:
+                                    refactoredEvent.subTwos && 'SubTwo(s)',
+                                rightItem:
+                                    refactoredEvent.subTwos &&
+                                    refactoredEvent.subTwos,
+                            },
+                            {
+                                leftItem:
+                                    refactoredEvent.donalds && 'Donald(s)',
+                                rightItem:
+                                    refactoredEvent.donalds &&
+                                    refactoredEvent.donalds,
+                            },
+                        ]}
+                    />
                 )}
                 {refactoredEvent.youthHostels && (
                     <Spacing mL={70} mR={70} mT={15} mB={15}>
