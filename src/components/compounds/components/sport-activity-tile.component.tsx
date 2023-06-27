@@ -66,7 +66,11 @@ export const SportActivityTile: FC<SportActivityTileProps> = ({
                                     inline
                                 />
                             </Spacing>
-                            <Spacing textAlign="right" position="relative">
+                            <Spacing
+                                mL={100}
+                                textAlign="right"
+                                position="relative"
+                            >
                                 <Typography
                                     type={isMobile ? 'body-light' : 'body'}
                                     content={rightItem}
