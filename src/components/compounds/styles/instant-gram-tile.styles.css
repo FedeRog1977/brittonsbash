@@ -1,43 +1,4 @@
-/* Search Components */
-
-input[type='text'].instant-gram-search,
-button.instant-gram-search {
-    font-family: Sans-Regular;
-    font-size: 16px;
-    border: 1px solid var(--font2);
-    border-radius: var(--corners-small);
-    margin: 0;
-    padding: 5px;
-}
-
-input[type='text'].instant-gram-search {
-    height: 25px;
-    background-color: var(--lighter-grey);
-    width: 83.75%;
-}
-
-button.instant-gram-search {
-    height: 35px;
-    float: right;
-    background-color: var(--darker-grey);
-    width: 15%;
-}
-
 /* Tile Components */
-
-.instant-gram-tile-title {
-    text-align: center;
-    margin: 7.5px 70px 7.5px 70px;
-    /* border: 1px solid black; */
-}
-
-.instant-gram-tile-sport {
-    background-color: var(--lighter-grey);
-    border-radius: var(--corners-small);
-    margin: 15px 70px 5px 70px;
-    padding: 10px 150px 10px 150px;
-    /* border: 1px solid black; */
-}
 
 .instant-gram-tile-sport-element {
     margin: 10px 0px 0px 0px;
@@ -55,49 +16,4 @@ button.instant-gram-search {
     position: relative;
     margin-left: 25%;
     /* border: 1px solid black; */
-}
-
-.instant-gram-tile-search,
-.instant-gram-tile-body,
-.instant-gram-tile-image-slider {
-    margin: 15px 70px 15px 70px;
-    /* border: 1px solid black; */
-}
-
-.instant-gram-tile-image-slider {
-    background-color: var(--lighter-grey);
-    border-radius: var(--corners-small);
-    /* border: 1px solid black; */
-}
-
-/* Mobile */
-
-@media (max-width: 768px) {
-    input[type='text'].instant-gram-search {
-        width: 76%;
-    }
-
-    button.instant-gram-search {
-        width: 20%;
-    }
-
-    .instant-gram-tile-search {
-        margin: 7.5px 0px 7.5px 0px;
-    }
-
-    .instant-gram-tile-title,
-    .instant-gram-tile-body {
-        margin: 7.5px 20px 7.5px 20px;
-    }
-
-    .instant-gram-tile-sport {
-        border-radius: 0;
-        margin: 15px 0px 15px 0px;
-        padding: 10px;
-    }
-
-    .instant-gram-tile-image-slider {
-        margin: 15px 0px 15px 0px;
-        background-color: var(--white);
-    }
 }

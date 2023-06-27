@@ -1,0 +1,24 @@
+/* Classes */
+
+input[type='text'].search {
+    font-family: Sans-Regular;
+    font-size: 16px;
+    border: 1px solid var(--font2);
+    border-radius: var(--corners-small);
+    margin: 0;
+    padding: 5px;
+}
+
+input[type='text'].search {
+    height: 25px;
+    background-color: var(--lighter-grey);
+    width: 83.75%;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    input[type='text'].search {
+        width: 76%;
+    }
+}

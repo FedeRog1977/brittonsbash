@@ -1,5 +1,5 @@
 export type TypographyTextProps = {
-    type:
+    type?:
         | 't1'
         | 't2'
         | 'h1'

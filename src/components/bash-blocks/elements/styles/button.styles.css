@@ -1,3 +1,5 @@
+/* General */
+
 button {
     transition: transform var(--transition-short);
 }
@@ -9,4 +11,30 @@ button:hover {
 button:active {
     transform: scale(0.95);
     transition: transform var(--transition-short);
+}
+
+/* Classes */
+
+button.search {
+    font-family: Sans-Regular;
+    font-size: 16px;
+    border: 1px solid var(--font2);
+    border-radius: var(--corners-small);
+    margin: 0;
+    padding: 5px;
+}
+
+button.search {
+    height: 35px;
+    float: right;
+    background-color: var(--darker-grey);
+    width: 15%;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    button.search {
+        width: 20%;
+    }
 }

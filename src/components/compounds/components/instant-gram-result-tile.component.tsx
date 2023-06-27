@@ -2,6 +2,7 @@ import {
     Article,
     DropDown,
     ImageSlider,
+    Spacing,
     Tile,
     Typography,
 } from '../../bash-blocks'
@@ -20,270 +21,317 @@ export const InstantGramResultTile = ({
     return (
         <Tile type="solid" dense={isMobile && true}>
             <>
-                <div className="instant-gram-tile-title">
-                    {refactoredEvent.prefix && (
-                        <>
+                <Spacing mB={15}>
+                    <>
+                        {refactoredEvent.prefix && (
                             <Typography
                                 type="h1"
-                                content={refactoredEvent.prefix}
-                                inline
+                                content={
+                                    <>
+                                        <Typography
+                                            content={refactoredEvent.prefix}
+                                            inline
+                                        />
+                                        <Typography content=":" inline />
+                                    </>
+                                }
+                                textAlign="center"
                             />
-                            <Typography type="h1" content=":" inline />
-                        </>
-                    )}
-                    {refactoredEvent.names.length > 1 ? (
-                        <>
-                            {refactoredEvent.names.map(
-                                ({ name, refKey }: any) => (
-                                    <div key={refKey}>
+                        )}
+                        {refactoredEvent.names.length > 1 ? (
+                            <>
+                                {refactoredEvent.names.map(
+                                    ({ name, refKey }: any) => (
                                         <Typography
                                             type="h2"
                                             content={
                                                 <>
-                                                    Part&nbsp;{refKey}
-                                                    &nbsp;&#8212;&nbsp;
+                                                    <Typography
+                                                        content={
+                                                            <>
+                                                                Part&nbsp;
+                                                                {refKey}
+                                                                &nbsp;&#8212;&nbsp;
+                                                            </>
+                                                        }
+                                                        color="var(--medium-grey)"
+                                                        inline
+                                                        key={refKey}
+                                                    />
+                                                    <Typography
+                                                        content={<>{name}</>}
+                                                        inline
+                                                        key={refKey}
+                                                    />
                                                 </>
                                             }
-                                            color="var(--medium-grey)"
+                                            textAlign="center"
+                                        />
+                                    )
+                                )}
+                            </>
+                        ) : (
+                            <Typography
+                                type={refactoredEvent.prefix ? 'h2' : 'h1'}
+                                content={refactoredEvent.names[0].name}
+                                textAlign="center"
+                            />
+                        )}
+                    </>
+                </Spacing>
+                <Spacing mT={15} mB={15}>
+                    <Typography
+                        type="h3"
+                        content={
+                            <>
+                                <Typography
+                                    content={refactoredEvent.startDate}
+                                    inline
+                                />
+                                {refactoredEvent.endDate && (
+                                    <>
+                                        <Typography
+                                            content={<>&nbsp;&#8212;&nbsp;</>}
                                             inline
                                         />
                                         <Typography
-                                            type="h2"
-                                            content={<>{name}</>}
+                                            content={refactoredEvent.endDate}
+                                            inline
+                                        />
+                                    </>
+                                )}
+                            </>
+                        }
+                        color="var(--medium-grey)"
+                        textAlign="center"
+                    />
+                </Spacing>
+                {refactoredEvent.showSportEvent && (
+                    <Spacing
+                        mL={isMobile ? 7.5 : 70}
+                        mR={isMobile ? 7.5 : 70}
+                        mT={isMobile ? 7.5 : 15}
+                        mB={isMobile ? 7.5 : 15}
+                        pL={isMobile ? 7.5 : 150}
+                        pR={isMobile ? 7.5 : 150}
+                        pT={isMobile ? 7.5 : 15}
+                        pB={isMobile ? 7.5 : 15}
+                        backgroundColor="var(--lighter-grey)"
+                        borderRadius={
+                            isMobile ? 'none' : 'var(--corners-small)'
+                        }
+                    >
+                        <>
+                            <div>
+                                <div className="instant-gram-tile-sport-sub-element left">
+                                    <Typography
+                                        type="body"
+                                        content={refactoredEvent.distance}
+                                        boldFace={isMobile ? false : true}
+                                        inline
+                                        mR="5px"
+                                    />
+                                    <Typography
+                                        type="body"
+                                        content={refactoredEvent.elevation}
+                                        boldFace={isMobile ? false : true}
+                                        inline
+                                        mL="5px"
+                                    />
+                                </div>
+                                <div className="instant-gram-tile-sport-sub-element right">
+                                    <Typography
+                                        type="body"
+                                        content={<>[{refactoredEvent.time}]</>}
+                                        boldFace={isMobile ? false : true}
+                                        inline
+                                    />
+                                </div>
+                            </div>
+                            {refactoredEvent.islands && (
+                                <div className="instant-gram-tile-sport-element">
+                                    <div className="instant-gram-tile-sport-sub-element left">
+                                        <Typography
+                                            type="body"
+                                            content="Island(s)"
+                                            textAlign="center"
+                                            boldFace={isMobile ? false : true}
                                             inline
                                         />
                                     </div>
-                                )
+                                    <div className="instant-gram-tile-sport-sub-element right">
+                                        <Typography
+                                            type={
+                                                isMobile ? 'body-light' : 'body'
+                                            }
+                                            content={refactoredEvent.islands}
+                                            textAlign="center"
+                                            inline
+                                        />
+                                    </div>
+                                </div>
+                            )}
+                            {refactoredEvent.munros && (
+                                <div className="instant-gram-tile-sport-element">
+                                    <div className="instant-gram-tile-sport-sub-element left">
+                                        <Typography
+                                            type="body"
+                                            content="Munro(s)"
+                                            boldFace={isMobile ? false : true}
+                                            inline
+                                        />
+                                    </div>
+                                    <div className="instant-gram-tile-sport-sub-element right">
+                                        <Typography
+                                            type={
+                                                isMobile ? 'body-light' : 'body'
+                                            }
+                                            content={refactoredEvent.munros}
+                                            inline
+                                        />
+                                    </div>
+                                </div>
+                            )}
+                            {refactoredEvent.munroTops && (
+                                <div className="instant-gram-tile-sport-element">
+                                    <div className="instant-gram-tile-sport-sub-element left">
+                                        <Typography
+                                            type="body"
+                                            content="Munro Top(s)"
+                                            boldFace={isMobile ? false : true}
+                                            inline
+                                        />
+                                    </div>
+                                    <div className="instant-gram-tile-sport-sub-element right">
+                                        <Typography
+                                            type={
+                                                isMobile ? 'body-light' : 'body'
+                                            }
+                                            content={refactoredEvent.munroTops}
+                                            inline
+                                        />
+                                    </div>
+                                </div>
+                            )}
+                            {refactoredEvent.corbetts && (
+                                <div className="instant-gram-tile-sport-element">
+                                    <div className="instant-gram-tile-sport-sub-element left">
+                                        <Typography
+                                            type="body"
+                                            content="Corbett(s)"
+                                            boldFace={isMobile ? false : true}
+                                            inline
+                                        />
+                                    </div>
+                                    <div className="instant-gram-tile-sport-sub-element right">
+                                        <Typography
+                                            type={
+                                                isMobile ? 'body-light' : 'body'
+                                            }
+                                            content={refactoredEvent.corbetts}
+                                            inline
+                                        />
+                                    </div>
+                                </div>
+                            )}
+                            {refactoredEvent.corbettTops && (
+                                <div className="instant-gram-tile-sport-element">
+                                    <div className="instant-gram-tile-sport-sub-element left">
+                                        <Typography
+                                            type="body"
+                                            content="Corbett Top(s)"
+                                            boldFace={isMobile ? false : true}
+                                            inline
+                                        />
+                                    </div>
+                                    <div className="instant-gram-tile-sport-sub-element right">
+                                        <Typography
+                                            type={
+                                                isMobile ? 'body-light' : 'body'
+                                            }
+                                            content={
+                                                refactoredEvent.corbettTops
+                                            }
+                                            inline
+                                        />
+                                    </div>
+                                </div>
+                            )}
+                            {refactoredEvent.grahams && (
+                                <div className="instant-gram-tile-sport-element">
+                                    <div className="instant-gram-tile-sport-sub-element left">
+                                        <Typography
+                                            type="body"
+                                            content="Graham(s)"
+                                            boldFace={isMobile ? false : true}
+                                            inline
+                                        />
+                                    </div>
+                                    <div className="instant-gram-tile-sport-sub-element right">
+                                        <Typography
+                                            type={
+                                                isMobile ? 'body-light' : 'body'
+                                            }
+                                            content={refactoredEvent.grahams}
+                                            inline
+                                        />
+                                    </div>
+                                </div>
+                            )}
+                            {refactoredEvent.subTwos && (
+                                <div className="instant-gram-tile-sport-element">
+                                    <div className="instant-gram-tile-sport-sub-element left">
+                                        <Typography
+                                            type="body"
+                                            content="Sub 2000(s)"
+                                            boldFace={isMobile ? false : true}
+                                            inline
+                                        />
+                                    </div>
+                                    <div className="instant-gram-tile-sport-sub-element right">
+                                        <Typography
+                                            type={
+                                                isMobile ? 'body-light' : 'body'
+                                            }
+                                            content={refactoredEvent.subTwos}
+                                            inline
+                                        />
+                                    </div>
+                                </div>
+                            )}
+                            {refactoredEvent.donalds && (
+                                <div className="instant-gram-tile-sport-element">
+                                    <div className="instant-gram-tile-sport-sub-element left">
+                                        <Typography
+                                            type="body"
+                                            content="Donald(s)"
+                                            boldFace={isMobile ? false : true}
+                                            inline
+                                        />
+                                    </div>
+                                    <div className="instant-gram-tile-sport-sub-element right">
+                                        <Typography
+                                            type={
+                                                isMobile ? 'body-light' : 'body'
+                                            }
+                                            content={refactoredEvent.donalds}
+                                            inline
+                                        />
+                                    </div>
+                                </div>
                             )}
                         </>
-                    ) : (
-                        <Typography
-                            type={refactoredEvent.prefix ? 'h2' : 'h1'}
-                            content={refactoredEvent.names[0].name}
-                            textAlign="center"
-                        />
-                    )}
-                </div>
-                <div className="instant-gram-tile-title">
-                    <Typography
-                        type="h3"
-                        content={refactoredEvent.startDate}
-                        textAlign="left"
-                        color="var(--medium-grey)"
-                        inline
-                    />
-                    {refactoredEvent.endDate && (
-                        <>
-                            <Typography
-                                type="h3"
-                                content={<>&nbsp;&#8212;&nbsp;</>}
-                                textAlign="left"
-                                color="var(--medium-grey)"
-                                inline
-                            />
-                            <Typography
-                                type="h3"
-                                content={refactoredEvent.endDate}
-                                textAlign="left"
-                                color="var(--medium-grey)"
-                                inline
-                            />
-                        </>
-                    )}
-                </div>
-                {refactoredEvent.showSportEvent && (
-                    <div className="instant-gram-tile-sport">
-                        <div>
-                            <div className="instant-gram-tile-sport-sub-element left">
-                                <Typography
-                                    type="body"
-                                    content={refactoredEvent.distance}
-                                    boldFace={isMobile ? false : true}
-                                    inline
-                                    mR="5px"
-                                />
-                                <Typography
-                                    type="body"
-                                    content={refactoredEvent.elevation}
-                                    boldFace={isMobile ? false : true}
-                                    inline
-                                    mL="5px"
-                                />
-                            </div>
-                            <div className="instant-gram-tile-sport-sub-element right">
-                                <Typography
-                                    type="body"
-                                    content={<>[{refactoredEvent.time}]</>}
-                                    boldFace={isMobile ? false : true}
-                                    inline
-                                />
-                            </div>
-                        </div>
-                        {refactoredEvent.islands && (
-                            <div className="instant-gram-tile-sport-element">
-                                <div className="instant-gram-tile-sport-sub-element left">
-                                    <Typography
-                                        type="body"
-                                        content="Island(s)"
-                                        textAlign="center"
-                                        boldFace={isMobile ? false : true}
-                                        inline
-                                    />
-                                </div>
-                                <div className="instant-gram-tile-sport-sub-element right">
-                                    <Typography
-                                        type={isMobile ? 'body-light' : 'body'}
-                                        content={refactoredEvent.islands}
-                                        textAlign="center"
-                                        inline
-                                    />
-                                </div>
-                            </div>
-                        )}
-                        {refactoredEvent.munros && (
-                            <div className="instant-gram-tile-sport-element">
-                                <div className="instant-gram-tile-sport-sub-element left">
-                                    <Typography
-                                        type="body"
-                                        content="Munro(s)"
-                                        boldFace={isMobile ? false : true}
-                                        inline
-                                    />
-                                </div>
-                                <div className="instant-gram-tile-sport-sub-element right">
-                                    <Typography
-                                        type={isMobile ? 'body-light' : 'body'}
-                                        content={refactoredEvent.munros}
-                                        inline
-                                    />
-                                </div>
-                            </div>
-                        )}
-                        {refactoredEvent.munroTops && (
-                            <div className="instant-gram-tile-sport-element">
-                                <div className="instant-gram-tile-sport-sub-element left">
-                                    <Typography
-                                        type="body"
-                                        content="Munro Top(s)"
-                                        boldFace={isMobile ? false : true}
-                                        inline
-                                    />
-                                </div>
-                                <div className="instant-gram-tile-sport-sub-element right">
-                                    <Typography
-                                        type={isMobile ? 'body-light' : 'body'}
-                                        content={refactoredEvent.munroTops}
-                                        inline
-                                    />
-                                </div>
-                            </div>
-                        )}
-                        {refactoredEvent.corbetts && (
-                            <div className="instant-gram-tile-sport-element">
-                                <div className="instant-gram-tile-sport-sub-element left">
-                                    <Typography
-                                        type="body"
-                                        content="Corbett(s)"
-                                        boldFace={isMobile ? false : true}
-                                        inline
-                                    />
-                                </div>
-                                <div className="instant-gram-tile-sport-sub-element right">
-                                    <Typography
-                                        type={isMobile ? 'body-light' : 'body'}
-                                        content={refactoredEvent.corbetts}
-                                        inline
-                                    />
-                                </div>
-                            </div>
-                        )}
-                        {refactoredEvent.corbettTops && (
-                            <div className="instant-gram-tile-sport-element">
-                                <div className="instant-gram-tile-sport-sub-element left">
-                                    <Typography
-                                        type="body"
-                                        content="Corbett Top(s)"
-                                        boldFace={isMobile ? false : true}
-                                        inline
-                                    />
-                                </div>
-                                <div className="instant-gram-tile-sport-sub-element right">
-                                    <Typography
-                                        type={isMobile ? 'body-light' : 'body'}
-                                        content={refactoredEvent.corbettTops}
-                                        inline
-                                    />
-                                </div>
-                            </div>
-                        )}
-                        {refactoredEvent.grahams && (
-                            <div className="instant-gram-tile-sport-element">
-                                <div className="instant-gram-tile-sport-sub-element left">
-                                    <Typography
-                                        type="body"
-                                        content="Graham(s)"
-                                        boldFace={isMobile ? false : true}
-                                        inline
-                                    />
-                                </div>
-                                <div className="instant-gram-tile-sport-sub-element right">
-                                    <Typography
-                                        type={isMobile ? 'body-light' : 'body'}
-                                        content={refactoredEvent.grahams}
-                                        inline
-                                    />
-                                </div>
-                            </div>
-                        )}
-                        {refactoredEvent.subTwos && (
-                            <div className="instant-gram-tile-sport-element">
-                                <div className="instant-gram-tile-sport-sub-element left">
-                                    <Typography
-                                        type="body"
-                                        content="Sub 2000(s)"
-                                        boldFace={isMobile ? false : true}
-                                        inline
-                                    />
-                                </div>
-                                <div className="instant-gram-tile-sport-sub-element right">
-                                    <Typography
-                                        type={isMobile ? 'body-light' : 'body'}
-                                        content={refactoredEvent.subTwos}
-                                        inline
-                                    />
-                                </div>
-                            </div>
-                        )}
-                        {refactoredEvent.donalds && (
-                            <div className="instant-gram-tile-sport-element">
-                                <div className="instant-gram-tile-sport-sub-element left">
-                                    <Typography
-                                        type="body"
-                                        content="Donald(s)"
-                                        boldFace={isMobile ? false : true}
-                                        inline
-                                    />
-                                </div>
-                                <div className="instant-gram-tile-sport-sub-element right">
-                                    <Typography
-                                        type={isMobile ? 'body-light' : 'body'}
-                                        content={refactoredEvent.donalds}
-                                        inline
-                                    />
-                                </div>
-                            </div>
-                        )}
-                    </div>
+                    </Spacing>
                 )}
                 {refactoredEvent.youthHostels && (
-                    <div className="instant-gram-tile-body">
+                    <Spacing mL={70} mR={70} mT={15} mB={15}>
                         <Typography
                             type="body"
                             content={
                                 <>
                                     <Typography
                                         type="body"
-                                        content="Youth Hostel(s): "
+                                        content={<>Youth Hostel(s):&nbsp;</>}
                                         boldFace={isMobile ? false : true}
                                         inline
                                     />
@@ -296,17 +344,22 @@ export const InstantGramResultTile = ({
                             }
                             textAlign="center"
                         />
-                    </div>
+                    </Spacing>
                 )}
-                <div className="instant-gram-tile-body">
+                <Spacing mL={70} mR={70} mT={15} mB={15}>
                     <DropDown
                         backgroundType="regular-clear"
                         func={() => setShowDropDown(!showDropDown)}
                         funcResp={showDropDown}
                     />
-                </div>
+                </Spacing>
                 {showDropDown && (
-                    <div className="instant-gram-tile-body">
+                    <Spacing
+                        mL={isMobile ? 15 : 70}
+                        mR={isMobile ? 15 : 70}
+                        mT={isMobile ? 7.5 : 15}
+                        mB={isMobile ? 7.5 : 15}
+                    >
                         {Array.isArray(refactoredEvent.description) ? (
                             <Article
                                 sections={refactoredEvent.description}
@@ -320,11 +373,19 @@ export const InstantGramResultTile = ({
                                 paragraphMargins
                             />
                         )}
-                    </div>
+                    </Spacing>
                 )}
-                <div className="instant-gram-tile-image-slider">
+                <Spacing
+                    mL={isMobile ? 0 : 70}
+                    mR={isMobile ? 0 : 70}
+                    mT={isMobile ? 7.5 : 15}
+                    backgroundColor={
+                        isMobile ? 'var(--white)' : 'var(--lighter-grey)'
+                    }
+                    borderRadius={isMobile ? 'none' : 'var(--corners-small)'}
+                >
                     <ImageSlider slides={refactoredEvent.images} />
-                </div>
+                </Spacing>
             </>
         </Tile>
     )
