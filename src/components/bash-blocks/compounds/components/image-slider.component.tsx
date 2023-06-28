@@ -45,89 +45,78 @@ export const ImageSlider = ({ slides }: any) => {
                 className="right-arrow"
                 onClick={nextSlide}
             />
-            {slides.map((slide, index) => {
-                return (
-                    <div
-                        key={index}
-                        className={index === current ? 'slide active' : 'slide'}
-                    >
-                        {slide.url ? (
-                            <>
-                                {index === current && (
-                                    <>
-                                        <img
-                                            className="image-slider-image"
-                                            style={{
-                                                width: isMobile
-                                                    ? screenWidth
-                                                    : '100%',
-                                            }}
-                                            src={slide.url}
-                                            alt={slide.alt}
-                                        />
-                                        {slide.description && (
-                                            <>
-                                                <div className="image-slider-caption">
-                                                    <Typography
-                                                        type={
-                                                            isMobile
-                                                                ? 'body'
-                                                                : 'h4'
-                                                        }
-                                                        fontFamily="sans-serif"
-                                                        content={
-                                                            slide.description
-                                                        }
-                                                        textAlign="left"
-                                                        color="var(--white)"
-                                                    />
-                                                </div>
-                                                <div className="image-slider-index">
-                                                    <Typography
-                                                        type={
-                                                            isMobile
-                                                                ? 'footnote'
-                                                                : 'body'
-                                                        }
-                                                        content={
-                                                            <>
-                                                                {current + 1}/
-                                                                {slides.length}
-                                                            </>
-                                                        }
-                                                        color="var(--white)"
-                                                    />
-                                                </div>
-                                            </>
-                                        )}
-                                    </>
-                                )}
-                            </>
-                        ) : (
-                            <div style={{ textAlign: 'center' }}>
+            {slides.map((slide, index) => (
+                <>
+                    {index === current && (
+                        <div key={index}>
+                            {slide.description && (
+                                <div className="image-slider-caption">
+                                    <Typography
+                                        type={isMobile ? 'body' : 'h4'}
+                                        fontFamily="sans-serif"
+                                        content={slide.description}
+                                        textAlign="left"
+                                        color="var(--white)"
+                                    />
+                                </div>
+                            )}
+                            <div className="image-slider-index">
                                 <Typography
-                                    type="h3"
-                                    content="No Disc Loaded"
-                                    textAlign="center"
-                                />
-                                <Typography
-                                    type="h4"
+                                    type={isMobile ? 'footnote' : 'body'}
                                     content={
                                         <>
-                                            Insert Disc{' '}
-                                            <FontAwesomeIcon
-                                                icon={faEject}
-                                                size="2xs"
-                                            />
+                                            {current + 1}/{slides.length}
                                         </>
                                     }
-                                    textAlign="center"
+                                    color="var(--white)"
                                 />
                             </div>
-                        )}
-                    </div>
-                )
-            })}
+                        </div>
+                    )}
+                </>
+            ))}
+            {slides.map((slide, index) => (
+                <div
+                    key={index}
+                    className={index === current ? 'slide active' : 'slide'}
+                >
+                    {slide.url ? (
+                        <>
+                            {index === current && (
+                                <img
+                                    className="image-slider-image"
+                                    style={{
+                                        width: isMobile ? screenWidth : '100%',
+                                    }}
+                                    src={slide.url}
+                                    alt={slide.alt}
+                                />
+                            )}
+                        </>
+                    ) : (
+                        <div style={{ textAlign: 'center' }}>
+                            <Typography
+                                type="h3"
+                                content="No Disc Loaded"
+                                textAlign="center"
+                            />
+                            <Typography
+                                type="h4"
+                                content={
+                                    <>
+                                        Insert Disc{' '}
+                                        <FontAwesomeIcon
+                                            icon={faEject}
+                                            size="2xs"
+                                        />
+                                    </>
+                                }
+                                textAlign="center"
+                            />
+                        </div>
+                    )}
+                </div>
+            ))}
         </div>
     )
 }

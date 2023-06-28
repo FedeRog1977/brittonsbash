@@ -13,18 +13,20 @@
 
 .image-slider-caption {
     position: absolute;
+    z-index: 10;
     text-shadow: 0px 0px 5px var(--darker-grey);
-    bottom: 60px;
-    left: 50px;
+    bottom: 4.5%;
+    left: 3.5%;
     max-width: 75%;
     opacity: 0.75;
 }
 
 .image-slider-index {
     position: absolute;
+    z-index: 10;
     text-shadow: 0px 0px 5px var(--darker-grey);
-    bottom: 60px;
-    right: 50px;
+    bottom: 4.5%;
+    right: 3.5%;
     max-width: 25%;
     opacity: 0.75;
     /* border: 1px solid black; */
@@ -97,13 +99,13 @@
     }
 
     .image-slider-caption {
-        bottom: 22px;
-        left: 10px;
+        bottom: 5.5%;
+        left: 3.5%;
     }
 
     .image-slider-index {
-        bottom: 22px;
-        right: 10px;
+        bottom: 5.5%;
+        right: 3.5%;
     }
 
     .left-arrow,
@@ -113,16 +115,18 @@
     }
 
     .left-arrow {
-        left: 1.25%;
+        font-size: 24px;
+        left: 3.5%;
     }
 
     .right-arrow {
-        right: 1.25%;
+        font-size: 24px;
+        right: 3.5%;
     }
 
     .refresh {
         font-size: 16px;
-        top: 5%;
+        top: 5.5%;
         right: 3.5%;
         color: var(--darker-grey-50);
     }
