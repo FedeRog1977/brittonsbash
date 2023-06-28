@@ -12,7 +12,7 @@ export const DropDown: FC<DropDownProps> = ({
     content,
     subContent,
     textAlign,
-    borders,
+    dots,
 }: any) => {
     const { isMobile } = useScreenWidth()
 
@@ -22,41 +22,11 @@ export const DropDown: FC<DropDownProps> = ({
             func={func}
             content={
                 <>
-                    {subContent && (
-                        <div style={{ float: isMobile ? 'none' : 'left' }}>
-                            <Typography
-                                type="h5"
-                                color="var(--medium-grey)"
-                                content={subContent}
-                                mT={
-                                    textAlign === 'right'
-                                        ? isMobile
-                                            ? '0'
-                                            : '5px'
-                                        : '0'
-                                }
-                                mL={
-                                    textAlign === 'right'
-                                        ? isMobile
-                                            ? '0'
-                                            : '10px'
-                                        : '0'
-                                }
-                            />
-                        </div>
-                    )}
                     {funcResp === false && (
                         <Typography
                             type={type ? type : 'body'}
                             content={
                                 <>{content ? <>{content}</> : <>Expand</>}</>
-                            }
-                            mR={
-                                textAlign === 'right'
-                                    ? isMobile
-                                        ? '0'
-                                        : '10px'
-                                    : '0'
                             }
                         />
                     )}
@@ -78,8 +48,9 @@ export const DropDown: FC<DropDownProps> = ({
                     )}
                 </>
             }
+            subContent={subContent}
             textAlign={textAlign}
-            borders={borders}
+            dots={dots}
         />
     )
 }

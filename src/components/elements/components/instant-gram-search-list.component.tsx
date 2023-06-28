@@ -15,6 +15,7 @@ export const InstantGramSearchList = ({ func, items, year, season }: any) => {
                 content={year}
                 subContent={`Season ${season}`}
                 textAlign={isMobile ? 'center' : 'right'}
+                dots
             />
             {showDropDown && (
                 <div>

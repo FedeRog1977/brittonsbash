@@ -12,5 +12,5 @@ export type DropDownProps = {
     content?: string | React.ReactElement
     subContent?: string
     textAlign?: TypographyProps['textAlign']
-    borders?: boolean
+    dots?: boolean
 }
