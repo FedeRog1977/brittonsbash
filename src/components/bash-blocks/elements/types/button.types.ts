@@ -5,7 +5,7 @@ export type ButtonProps = {
     func: () => void
     value?: string
     content: string | React.ReactElement
-    subContent?: string
+    subContent?: string | React.ReactElement
     textAlign?: TypographyProps['textAlign']
     dots?: boolean
 }

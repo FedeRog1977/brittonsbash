@@ -1,19 +1,15 @@
 button.expand-regular-clear,
 button.expand-dense-clear {
     background-color: var(--transparrent);
-    border: none;
     border-radius: var(--corners-small);
     transition: background-color var(--transition-long);
-    padding: 5px;
 }
 
 button.expand-regular-solid,
 button.expand-dense-solid {
     background-color: var(--lighter-grey);
-    border: none;
     border-radius: var(--corners-small);
     transition: background-color var(--transition-long);
-    padding: 5px;
 }
 
 button.expand-regular-clear,

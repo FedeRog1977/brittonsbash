@@ -1,6 +1,7 @@
 /* General */
 
 button {
+    border: none;
     transition: transform var(--transition-short);
 }
 
