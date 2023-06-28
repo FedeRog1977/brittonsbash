@@ -184,7 +184,7 @@ export const InstantGramResultTile = ({
                     mB={isMobile ? 7.5 : 15}
                 >
                     <DropDown
-                        backgroundType="regular-clear"
+                        buttonType="regular-clear"
                         func={() => setShowDropDown(!showDropDown)}
                         funcResp={showDropDown}
                     />

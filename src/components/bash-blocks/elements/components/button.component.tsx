@@ -60,7 +60,7 @@ export const Button: FC<ButtonProps> = ({
                         <div
                             style={{
                                 fontSize: '20px',
-                                color: 'var(--darker-grey-50)',
+                                color: 'var(--lighter-grey)',
                                 position: 'absolute',
                                 float: 'left',
                                 zIndex: 10,
@@ -73,7 +73,7 @@ export const Button: FC<ButtonProps> = ({
                         <div
                             style={{
                                 fontSize: '20px',
-                                color: 'var(--darker-grey-50)',
+                                color: 'var(--lighter-grey)',
                                 position: 'absolute',
                                 float: 'right',
                                 zIndex: 10,
@@ -86,7 +86,7 @@ export const Button: FC<ButtonProps> = ({
                         <div
                             style={{
                                 fontSize: '20px',
-                                color: 'var(--darker-grey-50)',
+                                color: 'var(--lighter-grey)',
                                 position: 'absolute',
                                 float: 'left',
                                 zIndex: 10,
@@ -99,7 +99,7 @@ export const Button: FC<ButtonProps> = ({
                         <div
                             style={{
                                 fontSize: '20px',
-                                color: 'var(--darker-grey-50)',
+                                color: 'var(--lighter-grey)',
                                 position: 'absolute',
                                 float: 'right',
                                 zIndex: 10,

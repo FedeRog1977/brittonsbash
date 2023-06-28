@@ -20,7 +20,7 @@ export const DropDownStories = () => {
             <Tile type="solid">
                 <>
                     <DropDown
-                        backgroundType="regular-clear"
+                        buttonType="regular-clear"
                         func={() => setShowDropDown(!showDropDown)}
                         funcResp={showDropDown}
                     />

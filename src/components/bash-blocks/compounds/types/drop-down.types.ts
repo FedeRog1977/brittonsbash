@@ -1,16 +1,12 @@
-import { TypographyProps } from '../..'
+import { ButtonProps, TypographyProps } from '../..'
 
 export type DropDownProps = {
-    type?: TypographyProps['type']
-    backgroundType:
-        | 'regular-clear'
-        | 'dense-clear'
-        | 'regular-solid'
-        | 'dense-solid'
+    typeType?: TypographyProps['type']
+    buttonType: ButtonProps['type']
     func: () => void
     funcResp: boolean
-    content?: string | React.ReactElement
-    subContent?: string
+    content?: ButtonProps['content']
+    subContent?: ButtonProps['subContent']
     textAlign?: TypographyProps['textAlign']
-    dots?: boolean
+    dots?: ButtonProps['dots']
 }

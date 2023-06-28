@@ -8,8 +8,8 @@ export const InstantGramSearchList = ({ func, items, year, season }: any) => {
     return (
         <>
             <DropDown
-                type={isMobile ? 'h2' : 'h1'}
-                backgroundType="dense-clear"
+                typeType={isMobile ? 'h2' : 'h1'}
+                buttonType="dense-clear"
                 func={() => setShowDropDown(!showDropDown)}
                 funcResp={showDropDown}
                 content={year}
@@ -22,9 +22,7 @@ export const InstantGramSearchList = ({ func, items, year, season }: any) => {
                     {items.map(({ id, prefix, names }: any) => (
                         <Button
                             key={id}
-                            type={`expand-${
-                                isMobile ? 'regular' : 'dense'
-                            }-clear`}
+                            type={`${isMobile ? 'regular' : 'dense'}-clear`}
                             func={func}
                             value={names.join(' - ')}
                             content={
