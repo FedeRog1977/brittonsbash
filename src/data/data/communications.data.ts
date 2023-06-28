@@ -431,6 +431,10 @@ export const communicationsData = {
                     href: 'https://explainshell.com/',
                 },
                 {
+                    content: 'DotShare.it',
+                    href: 'http://dotshare.it/category/wms/i3/sort/likes/',
+                },
+                {
                     content: 'zsh Guide',
                     href: 'https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html',
                 },
