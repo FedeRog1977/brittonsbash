@@ -1,4 +1,4 @@
-import { Background } from '../../elements'
+import { Background } from '../../bash-blocks'
 import { SportResultTile } from '../../compounds'
 
 export const Sport = () => (

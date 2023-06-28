@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { SpacingProps } from '../types'
+import { SpacingProps } from '..'
 
 export const Spacing: FC<SpacingProps> = ({
     mX,

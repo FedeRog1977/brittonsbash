@@ -28,7 +28,7 @@ export const SportActivityTile: FC<SportActivityTileProps> = ({
             pL={isMobile ? 7.5 : 150}
             pR={isMobile ? 7.5 : 150}
             pT={isMobile ? 7.5 : 15}
-            pB={isMobile ? 3.75 : 7.5}
+            pB={isMobile ? 7.5 : 15}
             backgroundColor="var(--lighter-grey)"
             borderRadius={isMobile ? 'none' : 'var(--corners-small)'}
         >
@@ -52,24 +52,32 @@ export const SportActivityTile: FC<SportActivityTileProps> = ({
                     </Spacing>
                 </>
                 {entries.map(({ leftItem, rightItem, index }: any) => (
-                    <div key={index}>
-                        <Spacing mT={isMobile ? 3.75 : 7.5} />
-                        <Spacing position="absolute">
-                            <Typography
-                                type="body"
-                                content={leftItem}
-                                boldFace={isMobile ? false : true}
-                                inline
-                            />
-                        </Spacing>
-                        <Spacing mL={100} textAlign="right" position="relative">
-                            <Typography
-                                type={isMobile ? 'body-light' : 'body'}
-                                content={rightItem}
-                                inline
-                            />
-                        </Spacing>
-                    </div>
+                    <>
+                        {Boolean(leftItem && rightItem) && (
+                            <div key={index}>
+                                <Spacing mT={isMobile ? 3.75 : 7.5} />
+                                <Spacing position="absolute">
+                                    <Typography
+                                        type="body"
+                                        content={leftItem}
+                                        boldFace={isMobile ? false : true}
+                                        inline
+                                    />
+                                </Spacing>
+                                <Spacing
+                                    mL={100}
+                                    textAlign="right"
+                                    position="relative"
+                                >
+                                    <Typography
+                                        type={isMobile ? 'body-light' : 'body'}
+                                        content={rightItem}
+                                        inline
+                                    />
+                                </Spacing>
+                            </div>
+                        )}
+                    </>
                 ))}
             </>
         </Spacing>

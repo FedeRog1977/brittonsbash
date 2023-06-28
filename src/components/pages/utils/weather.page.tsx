@@ -1,5 +1,5 @@
 import { WeatherSearch } from '../../compounds'
-import { Background } from '../../elements'
+import { Background } from '../../bash-blocks'
 
 export const Weather = () => (
     <div>

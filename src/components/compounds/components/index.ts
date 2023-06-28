@@ -1,6 +1,7 @@
 export * from './instant-gram-result-tile.component'
 export * from './instant-gram-search-tile.component'
 export * from './instant-gram-search.component'
+export * from './sport-activity-tile.component'
 export * from './sport-result-tile.component'
 export * from './weather-column.component'
 export * from './weather-column-hourly.component'

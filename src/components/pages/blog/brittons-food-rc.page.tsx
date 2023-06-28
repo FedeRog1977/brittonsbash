@@ -1,4 +1,4 @@
-import { Background } from '../../elements'
+import { Background } from '../../bash-blocks'
 
 export const BrittonsFoodRC = () => (
     <div>

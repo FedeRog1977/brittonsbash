@@ -22,7 +22,7 @@ import {
     Conquest,
     BashBlocks,
 } from './components'
-import { Footer, Header } from './components/elements'
+import { Footer, Header } from './components/bash-blocks'
 import { reportWebVitals } from './react'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)

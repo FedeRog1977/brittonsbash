@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { Link } from 'react-router-dom'
-import { HeaderMobileProps } from '../types'
+import { HeaderMobileProps } from '..'
 
 export const HeaderMobile: FC<HeaderMobileProps> = ({
     funcMobile,

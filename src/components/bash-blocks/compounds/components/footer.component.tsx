@@ -1,7 +1,7 @@
 import '../styles/header-footer.styles.css'
-import xmr from '../../../media/images/monero/xmr.svg'
-import monero from '../../../media/images/monero/monero.png'
-import { Typography } from '../../bash-blocks'
+import xmr from '../../../../media/images/monero/xmr.svg'
+import monero from '../../../../media/images/monero/monero.png'
+import { Typography } from '../..'
 
 export const Footer = () => (
     <footer className="footer">

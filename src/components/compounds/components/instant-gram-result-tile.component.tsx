@@ -7,7 +7,7 @@ import {
     Typography,
 } from '../../bash-blocks'
 import { refactorEvent, useDropDown, useScreenWidth } from '../../../scripts'
-import { SportActivityTile } from './sport-activity-tile.component'
+import { SportActivityTile } from '.'
 
 export const InstantGramResultTile = ({
     event,
@@ -120,60 +120,36 @@ export const InstantGramResultTile = ({
                         }}
                         entries={[
                             {
-                                leftItem:
-                                    refactoredEvent.islands && 'Island(s)',
-                                rightItem:
-                                    refactoredEvent.islands &&
-                                    refactoredEvent.islands,
+                                leftItem: 'Island(s)',
+                                rightItem: refactoredEvent.islands,
                             },
                             {
-                                leftItem: refactoredEvent.munros && 'Munro(s)',
-                                rightItem:
-                                    refactoredEvent.munros &&
-                                    refactoredEvent.munros,
+                                leftItem: 'Munro(s)',
+                                rightItem: refactoredEvent.munros,
                             },
                             {
-                                leftItem:
-                                    refactoredEvent.munroTops && 'Munro Top(s)',
-                                rightItem:
-                                    refactoredEvent.munroTops &&
-                                    refactoredEvent.munroTops,
+                                leftItem: 'Munro Top(s)',
+                                rightItem: refactoredEvent.munroTops,
                             },
                             {
-                                leftItem:
-                                    refactoredEvent.corbetts && 'Corbett(s)',
-                                rightItem:
-                                    refactoredEvent.corbetts &&
-                                    refactoredEvent.corbetts,
+                                leftItem: 'Corbett(s)',
+                                rightItem: refactoredEvent.corbetts,
                             },
                             {
-                                leftItem:
-                                    refactoredEvent.corbettTops &&
-                                    'Corbett Top(s)',
-                                rightItem:
-                                    refactoredEvent.corbettTops &&
-                                    refactoredEvent.corbettTops,
+                                leftItem: 'Corbett Top(s)',
+                                rightItem: refactoredEvent.corbettTops,
                             },
                             {
-                                leftItem:
-                                    refactoredEvent.grahams && 'Graham(s)',
-                                rightItem:
-                                    refactoredEvent.grahams &&
-                                    refactoredEvent.grahams,
+                                leftItem: 'Graham(s)',
+                                rightItem: refactoredEvent.grahams,
                             },
                             {
-                                leftItem:
-                                    refactoredEvent.subTwos && 'SubTwo(s)',
-                                rightItem:
-                                    refactoredEvent.subTwos &&
-                                    refactoredEvent.subTwos,
+                                leftItem: 'SubTwo(s)',
+                                rightItem: refactoredEvent.subTwos,
                             },
                             {
-                                leftItem:
-                                    refactoredEvent.donalds && 'Donald(s)',
-                                rightItem:
-                                    refactoredEvent.donalds &&
-                                    refactoredEvent.donalds,
+                                leftItem: 'Donald(s)',
+                                rightItem: refactoredEvent.donalds,
                             },
                         ]}
                     />

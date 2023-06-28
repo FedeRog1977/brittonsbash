@@ -2,8 +2,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import '../styles/header-footer.styles.css'
+import { useDropDown, useScreenWidth } from '../../../../scripts'
 import { HeaderMobile, SubHeaderBlog, SubHeaderUtilities } from '.'
-import { useDropDown, useScreenWidth } from '../../../scripts'
 
 export const Header = () => {
     const { isMobile } = useScreenWidth()

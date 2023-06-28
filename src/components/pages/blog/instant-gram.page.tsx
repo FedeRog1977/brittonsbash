@@ -1,7 +1,6 @@
-import { Background } from '../../elements'
 import { InstantGramSearch } from '../../compounds'
 import { instantGramContent } from '../../../data'
-import { Footnote } from '../../bash-blocks'
+import { Background, Footnote } from '../../bash-blocks'
 
 export const InstantGram = () => (
     <div>

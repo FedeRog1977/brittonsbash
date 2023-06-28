@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useScreenWidth } from '../../../scripts'
+import { useScreenWidth } from '../../../../scripts'
 
 export const SubHeaderUtilities = () => {
     const { isMobile } = useScreenWidth()

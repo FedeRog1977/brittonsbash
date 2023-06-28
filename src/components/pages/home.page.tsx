@@ -1,6 +1,6 @@
 import { Article, ArticleProps, Tile } from '../bash-blocks'
 import { articleTestData } from '../../data'
-import { Background } from '../elements'
+import { Background } from '../bash-blocks'
 
 export const Home = () => (
     <div>
