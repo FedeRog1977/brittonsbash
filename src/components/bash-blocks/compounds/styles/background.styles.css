@@ -10,10 +10,14 @@
 }
 
 .background-text {
-    font-size: 48px;
+    font-size: 64px;
     color: var(--lighter-grey);
     margin: 0;
     padding: 0px 25px 0px 0px;
+}
+
+.background-text-standard {
+    font-family: Sans-Light;
 }
 
 .background-text-instant-gram {
@@ -23,13 +27,13 @@
         #a13cc2 -50%,
         #9f1b7f 25%,
         #ff971d 100%
-    );
-    background: -webkit-linear-gradient(
+    ); */
+    /* background: -webkit-linear-gradient(
         0deg,
         #282828 0%,
         var(--light-grey) 200%
-    );
-    background-clip: text;
+    ); */
+    /* background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
 }
@@ -43,7 +47,6 @@
 @media (max-width: 768px) {
     .background {
         background-image: none;
-        /* text-align: center; */
         padding: 35px 20px 5px 20px;
     }
 

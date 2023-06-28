@@ -9,7 +9,10 @@ import { Background } from '../../bash-blocks'
 
 export const BashBlocks = () => (
     <>
-        <Background />
+        <Background
+            content="BashBlocks"
+            className="background-text background-text-standard"
+        />
         <TypographyStories />
         <FootnoteStories />
         <ArticleStories />

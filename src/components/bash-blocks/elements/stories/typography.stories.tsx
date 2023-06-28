@@ -3,7 +3,7 @@ import { Typography } from '..'
 
 export const TypographyStories = () => (
     <>
-        <Tile type="clear-condensed">
+        <Tile type="clear-condensed" top>
             <>
                 <Typography
                     type="t1"

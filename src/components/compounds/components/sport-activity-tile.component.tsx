@@ -1,17 +1,7 @@
 import { FC } from 'react'
+import { SportActivityTileProps } from '..'
 import { useScreenWidth } from '../../../scripts'
 import { Spacing, Typography } from '../../bash-blocks'
-
-export type SportActivityTileProps = {
-    title: {
-        leftItem: string | React.ReactElement
-        rightItem: string | React.ReactElement
-    }
-    entries: {
-        leftItem: string | React.ReactElement
-        rightItem: string | React.ReactElement
-    }[]
-}
 
 export const SportActivityTile: FC<SportActivityTileProps> = ({
     title,

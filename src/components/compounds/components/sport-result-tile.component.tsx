@@ -18,7 +18,7 @@ export const SportResultTile = () => {
 
     return (
         <>
-            <Tile type="solid">
+            <Tile type="solid" top>
                 <>
                     <Typography
                         type="body"
