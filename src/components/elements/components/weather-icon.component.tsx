@@ -12,6 +12,7 @@ import {
     faSmog,
     faCloudMoonRain,
 } from '@fortawesome/free-solid-svg-icons'
+import { Typography } from '../../bash-blocks'
 
 export const WeatherIcon = ({ icon }: any) => {
     const DeclareIcon = () => {
@@ -114,9 +115,5 @@ export const WeatherIcon = ({ icon }: any) => {
         }
     }
 
-    return (
-        <div data-testid={'weatherIcon'}>
-            <h1 className={'weatherIcon'}>{DeclareIcon()}</h1>
-        </div>
-    )
+    return <Typography type="h3" content={<>{DeclareIcon()}</>} />
 }

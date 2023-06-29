@@ -30,6 +30,7 @@ export const WeatherTempTile = ({ tempIcon, tempType }: any) => {
                     <Typography
                         type="footnote"
                         content={<>{tempType.toFixed(0)}&deg;C</>}
+                        color={tempFtColor}
                     />
                 </>
             </Spacing>

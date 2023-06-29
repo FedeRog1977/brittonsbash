@@ -9,6 +9,7 @@ export const WeatherDaily = ({ latIn, lonIn }: any) => (
                 // if (idx <= 5) {
                 return (
                     <WeatherColumn
+                        key={idx}
                         dt={value.dt}
                         icon={value.weather[0].icon}
                         temp={value.temp.day}
