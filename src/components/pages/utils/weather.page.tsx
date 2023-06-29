@@ -4,7 +4,7 @@ import { Background } from '../../bash-blocks'
 export const Weather = () => (
     <>
         <Background
-            content="Weather"
+            content="Mountain Weather"
             className="background-text background-text-standard"
         />
         <WeatherSearch />

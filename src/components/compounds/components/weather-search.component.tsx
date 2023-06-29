@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { hillData } from '../../../data'
-import { WeatherDaily, WeatherSearchBar, WeatherTitle } from '.'
+import { WeatherDaily, WeatherSearchTile, WeatherResultTitle } from '.'
 import { WeatherSubTitle } from '../../elements'
 import { toSentenceCase } from '../../../scripts'
 
@@ -144,17 +144,17 @@ export const WeatherSearch = () => {
     }
 
     return (
-        <div>
-            <WeatherSearchBar
+        <>
+            <WeatherSearchTile
                 funcSelect={handleSelect}
                 funcInput={handleInput}
                 funcButton={executeInput}
             />
-            <WeatherTitle
-                contTitle={weatherTitle}
-                contSubTitle={weatherSubTitle}
+            <WeatherResultTitle
+                title={weatherTitle}
+                subTitle={weatherSubTitle}
+                result={showWeatherContent}
             />
-            {showWeatherContent}
-        </div>
+        </>
     )
 }

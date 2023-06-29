@@ -1,14 +1,20 @@
-import { Button, Search, Spacing, Tile, Typography } from '../../bash-blocks'
-import { InstantGramSearchList } from '../../elements'
-import { eventData } from '../../../data'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { useScreenWidth } from '../../../scripts'
+import {
+    Button,
+    Search,
+    SearchList,
+    Spacing,
+    Tile,
+    Typography,
+} from '../../bash-blocks'
+import { hillData } from '../../../data'
 
-export const InstantGramSearchTile = ({
+export const WeatherSearchTile = ({
+    funcSelect,
     funcInput,
     funcButton,
-    funcSelect,
 }: any) => {
     const { isMobile } = useScreenWidth()
 
@@ -24,7 +30,7 @@ export const InstantGramSearchTile = ({
                         <Search
                             className="search"
                             func={funcInput}
-                            placeholder="Search Events"
+                            placeholder="Search Hills"
                         />
                         <Button
                             type="search"
@@ -55,31 +61,17 @@ export const InstantGramSearchTile = ({
                 </Spacing>
                 <Spacing mL={isMobile ? 0 : 70} mR={isMobile ? 0 : 70}>
                     <>
-                        <InstantGramSearchList
+                        <SearchList
+                            className="search"
                             func={funcSelect}
-                            items={eventData[2023]}
-                            year="2023"
-                            season="4"
-                            position="left"
+                            content={hillData.munros}
+                            placeholder="Munro"
                         />
-                        <InstantGramSearchList
+                        <SearchList
+                            className="search"
                             func={funcSelect}
-                            items={eventData[2022]}
-                            year="2022"
-                            season="3"
-                        />
-                        <InstantGramSearchList
-                            func={funcSelect}
-                            items={eventData[2021]}
-                            year="2021"
-                            season="2"
-                        />
-                        <InstantGramSearchList
-                            func={funcSelect}
-                            items={eventData[2020]}
-                            year="2020"
-                            season="1"
-                            position="right"
+                            content={hillData.corbetts}
+                            placeholder="Corbett"
                         />
                     </>
                 </Spacing>

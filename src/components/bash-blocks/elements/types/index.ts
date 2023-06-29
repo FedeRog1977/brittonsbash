@@ -1,3 +1,5 @@
 export * from './button.types'
 export * from './typography.types'
+export * from './search.types'
+export * from './search-list.types'
 export * from './spacing.types'

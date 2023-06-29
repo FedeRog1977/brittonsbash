@@ -1,9 +1,12 @@
 /* Classes */
 
-input[type='text'].search {
+input[type='text'].search,
+select.search {
     font-family: Sans-Regular;
     font-size: 16px;
-    border: 1px solid var(--font2);
+    color: var(--medium-grey);
+    background-color: var(--lighter-grey);
+    border: none;
     border-radius: var(--corners-small);
     margin: 0;
     padding: 5px;
@@ -11,8 +14,12 @@ input[type='text'].search {
 
 input[type='text'].search {
     height: 25px;
-    background-color: var(--lighter-grey);
     width: 83.75%;
+}
+
+select.search {
+    height: 35px;
+    width: 50%;
 }
 
 /* Mobile */

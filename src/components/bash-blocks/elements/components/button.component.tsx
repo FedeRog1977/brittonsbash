@@ -23,7 +23,10 @@ export const Button: FC<ButtonProps> = ({
                 textAlign: textAlign ? textAlign : 'center',
             }}
         >
-            <Spacing mX={10} mY={20}>
+            <Spacing
+                mX={Boolean(!isMobile && dots) ? 10 : 0}
+                mY={Boolean(!isMobile && dots) ? 20 : 0}
+            >
                 {Boolean(!isMobile && dots) ? (
                     <div
                         style={{
