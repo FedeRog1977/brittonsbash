@@ -3,7 +3,7 @@ import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 export const WeatherDaily = ({ latIn, lonIn }: any) => (
-    <div className={'daily'}>
+    <>
         <Carousel>
             <div className={'weatherResults'}>
                 {WeatherDailyCall({ latIn, lonIn }).map((value, idx) => {
@@ -63,5 +63,5 @@ export const WeatherDaily = ({ latIn, lonIn }: any) => (
             </div>
         </Carousel>
         <WeatherToggle lat={latIn} lon={lonIn} />
-    </div>
+    </>
 )

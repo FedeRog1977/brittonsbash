@@ -1,5 +1,6 @@
 export * from './button.types'
-export * from './typography.types'
+export * from './margin-padding.types'
 export * from './search.types'
 export * from './search-list.types'
 export * from './spacing.types'
+export * from './typography.types'

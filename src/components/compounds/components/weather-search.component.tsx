@@ -28,9 +28,7 @@ export const WeatherSearch = () => {
 
     const [weatherTitleLocation, setWeatherTitleLocation] =
         useState('Your Location')
-    const [weatherTitle, setWeatherTitle] = useState(
-        `Forecast for ${weatherTitleLocation}`
-    )
+    const [weatherTitle, setWeatherTitle] = useState(weatherTitleLocation)
     const [weatherSubTitle, setWeatherSubTitle] = useState(
         <WeatherSubTitle type={'curr'} lat={lat} lon={lon} />
     )
@@ -112,7 +110,7 @@ export const WeatherSearch = () => {
             `JSON Matched Summit Mark: ${weatherMark}`
         )
 
-        setWeatherTitle(`Forecast for ${weatherTitleLocation}`)
+        setWeatherTitle(weatherTitleLocation)
 
         // If the input search bar is not empty
         // Display munro result title

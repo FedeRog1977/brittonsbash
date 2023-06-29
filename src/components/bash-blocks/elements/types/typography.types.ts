@@ -1,3 +1,5 @@
+import { MarginProps } from './margin-padding.types'
+
 export type TypographyTextProps = {
     type?:
         | 't1'
@@ -25,10 +27,6 @@ export type TypographyStyleProps = {
     fontFamily?: 'serif' | 'sans-serif'
     textAlign?: 'left' | 'center' | 'justify' | 'right'
     paragraphMargins?: boolean
-    mT?: string
-    mB?: string
-    mL?: string
-    mR?: string
-}
+} & MarginProps
 
 export type TypographyProps = TypographyTextProps & TypographyStyleProps
