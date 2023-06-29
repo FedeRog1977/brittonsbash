@@ -1,32 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script>
-            ;(function (m, a, z, e) {
-                var s, t
-                try {
-                    t = m.sessionStorage.getItem('maze-us')
-                } catch (err) {}
-
-                if (!t) {
-                    t = new Date().getTime()
-                    try {
-                        m.sessionStorage.setItem('maze-us', t)
-                    } catch (err) {}
-                }
-
-                s = a.createElement('script')
-                s.src = z + '?t=' + t + '&apiKey=' + e
-                s.async = true
-                a.getElementsByTagName('head')[0].appendChild(s)
-                m.mazeUniversalSnippetApiKey = e
-            })(
-                window,
-                document,
-                'https://snippet.maze.co/maze-universal-loader.js',
-                'b7fa27cf-08c8-4d0f-b4f3-5a597331acf5'
-            )
-        </script>
         <meta charset="utf-8" />
         <link rel="icon" href="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
