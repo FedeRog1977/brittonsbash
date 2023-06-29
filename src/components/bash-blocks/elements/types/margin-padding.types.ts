@@ -1,13 +1,13 @@
 export type MarginProps = {
-    mT?: string
-    mB?: string
-    mL?: string
-    mR?: string
+    mT?: string | number
+    mB?: string | number
+    mL?: string | number
+    mR?: string | number
 }
 
 export type PaddingProps = {
-    pT?: number
-    pB?: number
-    pL?: number
-    pR?: number
+    pT?: number | number
+    pB?: number | number
+    pL?: number | number
+    pR?: number | number
 }
