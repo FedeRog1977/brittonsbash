@@ -1,5 +1,6 @@
 export * from './button.component'
 export * from './figure.component'
+export * from './flex.component'
 export * from './image.component'
 export * from './search.component'
 export * from './search-list.component'

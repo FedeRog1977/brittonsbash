@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import '../styles/search.styles.css'
-import { SearchProps } from '../types'
+import { SearchProps } from '..'
 
 export const Search: FC<SearchProps> = ({
     className,

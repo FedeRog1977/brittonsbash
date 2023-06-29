@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import '../styles/search.styles.css'
-import { SearchListProps } from '../types'
+import { SearchListProps } from '..'
 
 export const SearchList: FC<SearchListProps> = ({
     className,

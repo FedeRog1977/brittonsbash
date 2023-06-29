@@ -1,4 +1,5 @@
 import { WeatherAtmosphere, WeatherTemp, WeatherIntro, WeatherWind } from '.'
+import { Spacing } from '../../bash-blocks'
 
 export const WeatherColumn = ({
     dt,
@@ -20,29 +21,31 @@ export const WeatherColumn = ({
     sr,
     ss,
 }: any) => (
-    <div className={'weatherCol'} key={dt}>
-        <WeatherIntro
-            dt={dt}
-            icon={icon}
-            temp={temp}
-            pop={pop}
-            main={main}
-            desc={desc}
-            sr={sr}
-            ss={ss}
-        />
-        <WeatherTemp
-            tempMax={tempMax}
-            tempMin={tempMin}
-            tempFlDay={tempFlDay}
-            tempFlNight={tempFlNight}
-        />
-        <WeatherWind windDeg={windDeg} windSpd={windSpd} />
-        <WeatherAtmosphere
-            pressure={pressure}
-            humidity={humidity}
-            dp={dp}
-            uvi={uvi}
-        />
-    </div>
+    <Spacing key={dt} mX={30}>
+        <>
+            <WeatherIntro
+                dt={dt}
+                icon={icon}
+                temp={temp}
+                pop={pop}
+                main={main}
+                desc={desc}
+                sr={sr}
+                ss={ss}
+            />
+            <WeatherTemp
+                tempMax={tempMax}
+                tempMin={tempMin}
+                tempFlDay={tempFlDay}
+                tempFlNight={tempFlNight}
+            />
+            <WeatherWind windDeg={windDeg} windSpd={windSpd} />
+            <WeatherAtmosphere
+                pressure={pressure}
+                humidity={humidity}
+                dp={dp}
+                uvi={uvi}
+            />
+        </>
+    </Spacing>
 )

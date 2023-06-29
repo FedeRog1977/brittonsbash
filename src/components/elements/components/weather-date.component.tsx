@@ -35,7 +35,7 @@ export const WeatherDate = ({ dt }: any) => {
             {new Date(dt * 1000).toLocaleDateString('en-uk', {
                 day: 'numeric',
             })}
-            {suffix}&#160;Of&#160;
+            {suffix}&#160;of&#160;
             {new Date(dt * 1000).toLocaleDateString('en-uk', { month: 'long' })}
         </h4>
     )

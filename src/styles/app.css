@@ -103,43 +103,16 @@ body {
     background-color: var(--lighter-grey);
 }
 
+/* Code */
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+}
+
 /* Unordered Lists */
 
 ul {
     padding: 0px;
-}
-
-/* Flex */
-
-.flexRow {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.flexRow > * {
-    flex-shrink: 0;
-    width: 100%;
-    max-width: 100%;
-}
-
-.flexCol {
-    text-align: left;
-    background-color: rgba(0, 0, 0, 0);
-    margin: 0;
-}
-
-.flexCol.left {
-    margin-right: 0.25em;
-}
-
-.flexCol.right {
-    margin-left: 0.5em;
-}
-
-@media (min-width: 768px) {
-    .flexCol {
-        flex: 2 0;
-    }
 }
 
 /* TO BE REMOVED */
@@ -153,38 +126,6 @@ h1.weatherIcon {
 label {
     font-family: Audi-Regular;
     padding: 0.25em;
-}
-
-code {
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.weatherResults {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 0.125em 0 0.125em;
-}
-
-.weatherResults > * {
-    flex-shrink: 0;
-    width: 100%;
-    max-width: 100%;
-}
-
-.weatherCol {
-    font-family: Audi-Regular;
-    text-align: left;
-    background-color: var(--bg);
-    /* border-left: 1px solid rgba(149, 165, 166, 0.75);
-    border-right: 1px solid rgba(149, 165, 166, 0.75); */
-    margin: 0.5em 0.125em 0.5em 0.125em;
-    padding: 0.5em 0 0.5em 0;
-}
-
-@media (min-width: 768px) {
-    .weatherCol {
-        flex: 2 0;
-    }
 }
 
 .weatherIntro,
