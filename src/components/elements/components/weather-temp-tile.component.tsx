@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Spacing, Typography } from '../../bash-blocks'
 
 export const WeatherTempTile = ({ tempIcon, tempType }: any) => {
     let tempBgColor = ''
@@ -22,17 +23,16 @@ export const WeatherTempTile = ({ tempIcon, tempType }: any) => {
     }
 
     return (
-        <div
-            data-testid={'weatherTempTile'}
-            className={'flexCol'}
-            style={{ background: `${tempBgColor}`, color: `${tempFtColor}` }}
-        >
-            <div className={'weatherComponent'}>
-                <FontAwesomeIcon icon={tempIcon} />
-            </div>
-            <div className={'weatherComponent'}>
-                {tempType.toFixed(0)}&deg;C
-            </div>
+        <div style={{ background: `${tempBgColor}`, color: `${tempFtColor}` }}>
+            <Spacing pX={20} textAlign="center">
+                <>
+                    <FontAwesomeIcon icon={tempIcon} size="sm" />
+                    <Typography
+                        type="footnote"
+                        content={<>{tempType.toFixed(0)}&deg;C</>}
+                    />
+                </>
+            </Spacing>
         </div>
     )
 }

@@ -1,3 +1,5 @@
+import { Typography } from '../../bash-blocks'
+
 export const WeatherDate = ({ dt }: any) => {
     const nday = new Date(dt * 1000).toLocaleDateString('en-uk', {
         day: 'numeric',
@@ -31,12 +33,19 @@ export const WeatherDate = ({ dt }: any) => {
     }
 
     return (
-        <h4>
-            {new Date(dt * 1000).toLocaleDateString('en-uk', {
-                day: 'numeric',
-            })}
-            {suffix}&#160;of&#160;
-            {new Date(dt * 1000).toLocaleDateString('en-uk', { month: 'long' })}
-        </h4>
+        <Typography
+            type="body"
+            content={
+                <>
+                    {new Date(dt * 1000).toLocaleDateString('en-uk', {
+                        day: 'numeric',
+                    })}
+                    {suffix}&#160;of&#160;
+                    {new Date(dt * 1000).toLocaleDateString('en-uk', {
+                        month: 'long',
+                    })}
+                </>
+            }
+        />
     )
 }

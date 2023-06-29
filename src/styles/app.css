@@ -139,12 +139,6 @@ label {
     padding: 0.5em;
 }
 
-.weatherComponent {
-    text-align: center;
-    margin: 0.125em;
-    padding: 0.25em;
-}
-
 .leaflet-container {
     width: 100%;
     height: 100vh;

@@ -1,7 +1,6 @@
 .flex-row {
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid black;
 }
 
 .flex-row > * {
@@ -14,7 +13,6 @@
     text-align: left;
     background-color: rgba(0, 0, 0, 0);
     margin: 0;
-    border: 1px solid black;
 }
 
 @media (min-width: 768px) {

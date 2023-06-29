@@ -21,7 +21,7 @@ export const WeatherColumn = ({
     sr,
     ss,
 }: any) => (
-    <Spacing key={dt} mX={30}>
+    <Spacing key={dt}>
         <>
             <WeatherIntro
                 dt={dt}
