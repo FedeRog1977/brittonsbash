@@ -1,14 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationArrow } from '@fortawesome/free-solid-svg-icons'
 
-export const WeatherDeg = ({ wind }: any) => {
-    const angle = -45 + 180 + wind
+export function toWindArrow(bearing: number) {
+    const angle = -45 + 180 + bearing
 
     return (
-        <div
-            data-testid={'weatherDeg'}
-            style={{ transform: `rotate(${angle}deg)` }}
-        >
+        <div style={{ transform: `rotate(${angle}deg)` }}>
             <FontAwesomeIcon icon={faLocationArrow} />
         </div>
     )
