@@ -24,7 +24,7 @@ export const WeatherTempTile = ({ tempIcon, tempType }: any) => {
 
     return (
         <div style={{ background: `${tempBgColor}`, color: `${tempFtColor}` }}>
-            <Spacing pX={20} textAlign="center">
+            <Spacing pY={10} textAlign="center">
                 <>
                     <FontAwesomeIcon icon={tempIcon} size="sm" />
                     <Typography

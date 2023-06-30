@@ -117,22 +117,6 @@ ul {
 
 /* TO BE REMOVED */
 
-label {
-    font-family: Audi-Regular;
-    padding: 0.25em;
-}
-
-.weatherIntro,
-.weatherTemp,
-.weatherWind,
-.weatherAtmosphere,
-.weatherSuntime {
-    text-align: center;
-    background-color: var(--fg);
-    margin: 0.75em 0 0.75em 0;
-    padding: 0.5em;
-}
-
 .leaflet-container {
     width: 100%;
     height: 100vh;
@@ -161,14 +145,4 @@ label {
 #searchRoute {
     height: 100%;
     float: right;
-}
-
-button#expandWeather {
-    width: calc(100% - 0.125em);
-    height: 100;
-}
-
-input#latIn,
-input#lonIn {
-    width: 96.5%;
 }

@@ -34,14 +34,14 @@ export const Spacing: FC<SpacingProps> = ({
                 : undefined,
             borderRadius: borderRadius,
             position: position,
-            marginTop: mX ? `${mX / 2}px` : mT ? `${mT}px` : 0,
-            marginBottom: mX ? `${mX / 2}px` : mB ? `${mB}px` : 0,
-            marginLeft: mY ? `${mY / 2}px` : mL ? `${mL}px` : 0,
-            marginRight: mY ? `${mY / 2}px` : mR ? `${mR}px` : 0,
-            paddingTop: mX ? `${pX / 2}px` : pT ? `${pT}px` : 0,
-            paddingBottom: mX ? `${pX / 2}px` : pB ? `${pB}px` : 0,
-            paddingLeft: mY ? `${pY / 2}px` : pL ? `${pL}px` : 0,
-            paddingRight: mY ? `${pY / 2}px` : pR ? `${pR}px` : 0,
+            marginTop: mY ? `${mY / 2}px` : mT ? `${mT}px` : 0,
+            marginBottom: mY ? `${mY / 2}px` : mB ? `${mB}px` : 0,
+            marginLeft: mX ? `${mX / 2}px` : mL ? `${mL}px` : 0,
+            marginRight: mX ? `${mX / 2}px` : mR ? `${mR}px` : 0,
+            paddingTop: pY ? `${pY / 2}px` : pT ? `${pT}px` : 0,
+            paddingBottom: pY ? `${pY / 2}px` : pB ? `${pB}px` : 0,
+            paddingLeft: pX ? `${pX / 2}px` : pL ? `${pL}px` : 0,
+            paddingRight: pX ? `${pX / 2}px` : pR ? `${pR}px` : 0,
         }}
     >
         {children && children}

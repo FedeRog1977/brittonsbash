@@ -24,8 +24,8 @@ export const Button: FC<ButtonProps> = ({
             }}
         >
             <Spacing
-                mX={Boolean(!isMobile && dots) ? 10 : 0}
-                mY={Boolean(!isMobile && dots) ? 20 : 0}
+                mX={Boolean(!isMobile && dots) ? 20 : 0}
+                mY={Boolean(!isMobile && dots) ? 10 : 0}
             >
                 {Boolean(!isMobile && dots) ? (
                     <div

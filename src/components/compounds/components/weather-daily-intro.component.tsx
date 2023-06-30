@@ -1,3 +1,4 @@
+import { Spacing } from '../../bash-blocks'
 import {
     WeatherIcon,
     WeatherDate,
@@ -18,13 +19,15 @@ export const WeatherIntro = ({
     sr,
     ss,
 }: any) => (
-    <div data-testId={'weatherIntro'} className={'weatherIntro'}>
-        <WeatherDay dt={dt} />
-        <WeatherDate dt={dt} />
-        <WeatherIcon icon={icon} />
-        <WeatherTemp temp={temp} />
-        <WeatherPop pop={pop} />
-        <WeatherDesc main={main} desc={desc} />
-        <WeatherSrSs sr={sr} ss={ss} />
-    </div>
+    <Spacing textAlign="center">
+        <>
+            <WeatherDay dt={dt} />
+            <WeatherDate dt={dt} />
+            <WeatherIcon icon={icon} />
+            <WeatherTemp temp={temp} />
+            <WeatherPop pop={pop} />
+            <WeatherDesc main={main} desc={desc} />
+            <WeatherSrSs sr={sr} ss={ss} />
+        </>
+    </Spacing>
 )

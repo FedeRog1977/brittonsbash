@@ -26,7 +26,7 @@ export const InstantGramSearchList = ({ func, items, year, season }: any) => {
                             func={func}
                             value={names.join(' - ')}
                             content={
-                                <Spacing mX={20}>
+                                <Spacing mY={20}>
                                     <>
                                         <Typography
                                             type="h5"
