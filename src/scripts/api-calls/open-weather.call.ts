@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
-import { HourlyProps } from '..'
+import { DailyProps, HourlyProps } from '.'
 
-export const WeatherHourlyCall = ({ latIn, lonIn }: any) => {
-    const [result, setResult] = useState<HourlyProps[]>([])
+export function useOpenWeatherCall(latIn: number, lonIn: number) {
+    const [dailyResult, setDailyResult] = useState<DailyProps[]>([])
+    const [hourlyResult, setHourlyResult] = useState<HourlyProps[]>([])
 
     useEffect(() => {
         const url = 'http://api.openweathermap.org/data/3.0/onecall?'
@@ -18,11 +19,12 @@ export const WeatherHourlyCall = ({ latIn, lonIn }: any) => {
                 { method: 'GET' }
             )
             const weatherData = await data.json()
-            setResult(weatherData.hourly)
+            setDailyResult(weatherData.daily)
+            setHourlyResult(weatherData.hourly)
         }
 
         apiCall()
     }, [latIn, lonIn])
 
-    return result
+    return { dailyResult, hourlyResult }
 }
