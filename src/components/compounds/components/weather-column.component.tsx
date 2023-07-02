@@ -1,12 +1,27 @@
-import { WeatherAtmosphere, WeatherTemp, WeatherIntro, WeatherWind } from '.'
-import { Spacing } from '../../bash-blocks'
+import {
+    faCloudRain,
+    faMoon,
+    faSun,
+    faTemperatureHigh,
+    faTemperatureLow,
+} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+    toDate,
+    toTemperature,
+    toPrecipitation,
+    toBearing,
+    toSpeed,
+    toSentenceCase,
+} from '../../../scripts'
+import { Flex, Spacing, Typography } from '../../bash-blocks'
+import { WeatherIcon, WeatherTempTile, WeatherWindArrow } from '../../elements'
 
 export const WeatherColumn = ({
     dt,
     icon,
     temp,
     pop,
-    main,
     desc,
     tempMax,
     tempMin,
@@ -20,32 +35,145 @@ export const WeatherColumn = ({
     uvi,
     sr,
     ss,
-}: any) => (
-    <Spacing key={dt}>
-        <>
-            <WeatherIntro
-                dt={dt}
-                icon={icon}
-                temp={temp}
-                pop={pop}
-                main={main}
-                desc={desc}
-                sr={sr}
-                ss={ss}
-            />
-            <WeatherTemp
-                tempMax={tempMax}
-                tempMin={tempMin}
-                tempFlDay={tempFlDay}
-                tempFlNight={tempFlNight}
-            />
-            <WeatherWind windDeg={windDeg} windSpd={windSpd} />
-            <WeatherAtmosphere
-                pressure={pressure}
-                humidity={humidity}
-                dp={dp}
-                uvi={uvi}
-            />
-        </>
-    </Spacing>
-)
+}: any) => {
+    const { weekday, dayOfMonth } = toDate(dt)
+    const temperature = toTemperature(temp)
+    const precipitation = toPrecipitation(pop)
+    const { time: sunrise } = toDate(sr)
+    const { time: sunset } = toDate(ss)
+    const { bearingFormatted: bearing, bearingCompass } = toBearing(windDeg)
+    const speed = toSpeed(windSpd, true)
+
+    return (
+        <Spacing mX={5}>
+            <Spacing
+                pX={20}
+                pY={20}
+                backgroundColor="var(--lighter-grey)"
+                textAlign="center"
+            >
+                <Typography type="h4" content={weekday} />
+                <Typography type="body" content={dayOfMonth} />
+                <Typography type="h3" content={<WeatherIcon icon={icon} />} />
+                <Typography type="h4" content={temperature} />
+                <Typography
+                    type="body"
+                    content={
+                        <>
+                            <FontAwesomeIcon icon={faCloudRain} />
+                            &nbsp;{precipitation}
+                        </>
+                    }
+                />
+                <Typography
+                    type="footnote"
+                    content={toSentenceCase(desc)}
+                    inline
+                />
+                <Flex>
+                    <Spacing textAlign="center">
+                        <Typography
+                            type="footnote"
+                            content="Sunrise:"
+                            boldFace
+                        />
+                        <Typography type="footnote" content={sunrise} />
+                    </Spacing>
+                    <Spacing textAlign="center">
+                        <Typography
+                            type="footnote"
+                            content="Sunset:"
+                            boldFace
+                        />
+                        <Typography type="footnote" content={sunset} />
+                    </Spacing>
+                </Flex>
+            </Spacing>
+            <Spacing>
+                <Flex>
+                    <WeatherTempTile
+                        tempIcon={faTemperatureHigh}
+                        tempType={tempMax}
+                    />
+                    <WeatherTempTile
+                        tempIcon={faTemperatureLow}
+                        tempType={tempMin}
+                    />
+                    <WeatherTempTile tempIcon={faSun} tempType={tempFlDay} />
+                    <WeatherTempTile tempIcon={faMoon} tempType={tempFlNight} />
+                </Flex>
+            </Spacing>
+            <Spacing
+                pX={20}
+                pY={20}
+                backgroundColor="var(--lighter-grey)"
+                textAlign="center"
+            >
+                <Typography type="body" content={bearingCompass} />
+                <Typography
+                    type="body"
+                    content={<WeatherWindArrow bearing={windDeg} />}
+                />
+                <Typography type="footnote" content={bearing} />
+                <Typography type="footnote" content={speed} boldFace />
+            </Spacing>
+            <Spacing
+                pX={20}
+                pY={20}
+                backgroundColor="var(--lighter-grey)"
+                textAlign="center"
+            >
+                <Flex>
+                    <Spacing textAlign="center" mR={2.5}>
+                        <Typography
+                            type="footnote"
+                            content="Pressure:"
+                            textAlign="right"
+                            boldFace
+                        />
+                        <Typography
+                            type="footnote"
+                            content="Humidity:"
+                            textAlign="right"
+                            boldFace
+                        />
+                        <Typography
+                            type="footnote"
+                            content="Dew Pt.:"
+                            textAlign="right"
+                            boldFace
+                        />
+                        <Typography
+                            type="footnote"
+                            content="UV Index:"
+                            textAlign="right"
+                            boldFace
+                        />
+                    </Spacing>
+                    <Spacing textAlign="center" mL={2.5}>
+                        <Typography
+                            type="footnote"
+                            content={pressure + 'mb'}
+                            textAlign="left"
+                        />
+                        <Typography
+                            type="footnote"
+                            content={humidity + '%'}
+                            textAlign="left"
+                        />
+                        <Typography
+                            type="footnote"
+                            content={dp}
+                            textAlign="left"
+                        />
+                        <Typography
+                            type="footnote"
+                            content={uvi}
+                            textAlign="left"
+                        />
+                    </Spacing>
+                </Flex>
+            </Spacing>
+        </Spacing>
+    )
+}

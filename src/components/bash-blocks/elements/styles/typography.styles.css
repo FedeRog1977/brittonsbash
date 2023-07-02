@@ -63,6 +63,13 @@
     padding: 0px;
 }
 
+.tiny-serif {
+    font-family: CMU-Serif;
+    font-size: 10px;
+    color: var(--darker-grey);
+    padding: 0px;
+}
+
 /* Sans-Serif Classes */
 
 .t1-sans-serif {
@@ -138,6 +145,13 @@
 .footnote-sans-serif {
     font-family: Sans-Regular;
     font-size: 14px;
+    color: var(--darker-grey);
+    padding: 0px;
+}
+
+.tiny-sans-serif {
+    font-family: Sans-Regular;
+    font-size: 10px;
     color: var(--darker-grey);
     padding: 0px;
 }

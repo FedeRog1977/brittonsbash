@@ -13,7 +13,7 @@ import {
     faCloudMoonRain,
 } from '@fortawesome/free-solid-svg-icons'
 
-export function toWeatherIcon(icon: string) {
+export const WeatherIcon = ({ icon }: any) => {
     if (icon === '01d') {
         return (
             <div style={{ color: `rgba(238, 40, 0, 0.6)` }}>
@@ -110,5 +110,7 @@ export function toWeatherIcon(icon: string) {
                 <FontAwesomeIcon icon={faSmog} />
             </div>
         )
+    } else {
+        return <></>
     }
 }

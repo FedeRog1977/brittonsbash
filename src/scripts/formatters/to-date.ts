@@ -1,4 +1,8 @@
 export function toDate(dt: number) {
+    const hour = new Date(dt * 1000).toLocaleTimeString('en-us', {
+        hour: 'numeric',
+    })
+
     const time = new Date(dt * 1000).toLocaleTimeString('en-uk', {
         hour: 'numeric',
         minute: 'numeric',
@@ -46,5 +50,5 @@ export function toDate(dt: number) {
 
     const dayOfMonth = `${day}${daySuffix} of ${month}`
 
-    return { time, day, weekday, month, dayOfMonth }
+    return { hour, time, day, weekday, month, dayOfMonth }
 }

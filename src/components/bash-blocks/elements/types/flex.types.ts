@@ -1,3 +1,3 @@
 export type FlexProps = {
-    children: any
+    children: React.ReactNode[]
 }

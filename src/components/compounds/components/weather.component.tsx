@@ -4,7 +4,7 @@ import { WeatherDaily, WeatherSearchTile, WeatherResultTitle } from '.'
 import { WeatherSubTitle } from '../../elements'
 import { toSentenceCase } from '../../../scripts'
 
-export const WeatherSearch = () => {
+export const Weather = () => {
     var [lat, setLat] = useState(56.6826)
     var [lon, setLon] = useState(5.1023)
 

@@ -6,7 +6,7 @@ export type SpacingProps = {
     mY?: number
     pX?: number
     pY?: number
-    children?: React.ReactElement
+    children?: React.ReactNode
     textAlign?: TypographyProps['textAlign']
     ruleTop?: boolean
     ruleBottom?: boolean

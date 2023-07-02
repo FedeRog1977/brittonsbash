@@ -1,3 +1,4 @@
+import React from 'react'
 import { MarginProps } from './margin-padding.types'
 
 export type TypographyTextProps = {
@@ -13,7 +14,8 @@ export type TypographyTextProps = {
         | 'body-light'
         | 'caption'
         | 'footnote'
-    content: string | React.ReactElement
+        | 'tiny'
+    content: string | React.ReactElement | React.ReactNode | Element
     color?: string
     inline?: boolean
     boldFace?: boolean

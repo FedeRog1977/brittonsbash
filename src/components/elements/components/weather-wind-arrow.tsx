@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationArrow } from '@fortawesome/free-solid-svg-icons'
 
-export function toWindArrow(bearing: number) {
+export const WeatherWindArrow = ({ bearing }: any) => {
     const angle = -45 + 180 + bearing
 
     return (

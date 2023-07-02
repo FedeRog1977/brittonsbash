@@ -23,7 +23,6 @@ export const WeatherDaily = ({ latIn, lonIn }: any) => {
                             icon={value.weather[0].icon}
                             temp={value.temp.day}
                             pop={value.pop}
-                            main={value.weather[0].main}
                             desc={value.weather[0].description}
                             sr={value.sunrise}
                             ss={value.sunset}

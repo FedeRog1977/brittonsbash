@@ -1,4 +1,4 @@
-import { WeatherSearch } from '../../compounds'
+import { Weather as WeatherComponent } from '../../compounds'
 import { Background } from '../../bash-blocks'
 
 export const Weather = () => (
@@ -7,6 +7,6 @@ export const Weather = () => (
             content="Mountain Weather"
             className="background-text background-text-standard"
         />
-        <WeatherSearch />
+        <WeatherComponent />
     </>
 )

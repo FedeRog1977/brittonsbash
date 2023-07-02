@@ -3,7 +3,7 @@ import { InstantGramSearchTile } from '.'
 import { InstantGramResultTile } from '.'
 import { compileEvents, compileEventSports } from '../../../scripts'
 
-export const InstantGramSearch = () => {
+export const InstantGram = () => {
     const allEvents = compileEvents()
     const allSport = compileEventSports()
 
