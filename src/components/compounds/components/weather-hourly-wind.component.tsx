@@ -1,23 +1,29 @@
-import { toBearing, toWindArrow } from '../../../scripts'
-import { Typography } from '../../bash-blocks'
+import { toBearing, toSpeed, toWindArrow } from '../../../scripts'
+import { Spacing, Typography } from '../../bash-blocks'
 
 export const WeatherWindHourly = ({ windDeg, windSpd, windGst }: any) => {
-    const bearing = toBearing(windDeg)
-    const arrow = toWindArrow(windSpd)
+    const { bearingFormatted: bearing, bearingCompass } = toBearing(windDeg)
+    const arrow = toWindArrow(windDeg)
+    const speed = toSpeed(windSpd, true)
+    const gusts = toSpeed(windGst, true)
 
     return (
-        <>
-            <Typography type="body" content={bearing} />
-            <Typography type="body" content={arrow} />
-            <div>
-                <small>{windDeg}&deg;</small>
-            </div>
-            <div data-testid={'weatherWindConversionStd'}>
-                <b>{(windSpd * 2.23694).toFixed(0)}mph</b>
-            </div>
-            <div data-testid={'weatherWindConversionGusts'}>
-                <small>{(windGst * 2.23694).toFixed(0)}mph Gusts</small>
-            </div>
-        </>
+        <Spacing
+            pY={20}
+            backgroundColor="var(--lighter-grey)"
+            textAlign="center"
+        >
+            <>
+                <Typography type="body" content={bearingCompass} />
+                <Typography type="body" content={arrow} />
+                <Typography type="footnote" content={bearing} />
+                <Typography type="footnote" content={speed} boldFace />
+                <Typography
+                    type="footnote"
+                    content={gusts + ' gusts'}
+                    boldFace
+                />
+            </>
+        </Spacing>
     )
 }

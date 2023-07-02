@@ -99,7 +99,9 @@ export const SportResultTile = () => {
                                 />{' '}
                                 <Typography
                                     type="h4"
-                                    content={<>{speed && toSpeed(speed)}</>}
+                                    content={
+                                        <>{speed && toSpeed(speed, false)}</>
+                                    }
                                     inline
                                 />
                             </div>

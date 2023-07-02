@@ -1,9 +1,10 @@
-import { toBearing, toWindArrow } from '../../../scripts'
+import { toBearing, toSpeed, toWindArrow } from '../../../scripts'
 import { Spacing, Typography } from '../../bash-blocks'
 
 export const WeatherWind = ({ windDeg, windSpd }: any) => {
-    const bearing = toBearing(windDeg)
+    const { bearingFormatted: bearing, bearingCompass } = toBearing(windDeg)
     const arrow = toWindArrow(windDeg)
+    const speed = toSpeed(windSpd, true)
 
     return (
         <Spacing
@@ -12,14 +13,10 @@ export const WeatherWind = ({ windDeg, windSpd }: any) => {
             textAlign="center"
         >
             <>
-                <Typography type="body" content={bearing} />
+                <Typography type="body" content={bearingCompass} />
                 <Typography type="body" content={arrow} />
-                <div>
-                    <small>{windDeg}&deg;</small>
-                </div>
-                <div data-testid={'weatherWindConversion'}>
-                    <b>{(windSpd * 2.23694).toFixed(0)}mph</b>
-                </div>
+                <Typography type="footnote" content={bearing} />
+                <Typography type="footnote" content={speed} boldFace />
             </>
         </Spacing>
     )
