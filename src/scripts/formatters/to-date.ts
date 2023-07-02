@@ -44,7 +44,7 @@ export function toDate(dt: number) {
         month: 'long',
     })
 
-    const fullDate = `${day}${daySuffix} of ${month}`
+    const dayOfMonth = `${day}${daySuffix} of ${month}`
 
-    return { time, day, weekday, month, fullDate }
+    return { time, day, weekday, month, dayOfMonth }
 }

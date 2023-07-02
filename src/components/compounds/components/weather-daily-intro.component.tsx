@@ -18,7 +18,7 @@ export const WeatherIntro = ({
     sr,
     ss,
 }: any) => {
-    const { weekday, fullDate } = toDate(dt)
+    const { weekday, dayOfMonth } = toDate(dt)
     const fullIcon = toWeatherIcon(icon)
     const temperature = toTemperature(temp)
     const precipitation = toPrecipitation(pop)
@@ -33,7 +33,7 @@ export const WeatherIntro = ({
         >
             <>
                 <Typography type="h4" content={weekday} />
-                <Typography type="body" content={fullDate} />
+                <Typography type="body" content={dayOfMonth} />
                 <Typography type="h3" content={<>{fullIcon}</>} />
                 <Typography type="h4" content={temperature} />
                 <Typography
