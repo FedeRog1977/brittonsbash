@@ -71,22 +71,26 @@ export const WeatherColumnDaily = ({
                     inline
                 />
                 <Flex>
-                    <Spacing textAlign="center">
-                        <Typography
-                            type="footnote"
-                            content="Sunrise:"
-                            boldFace
-                        />
-                        <Typography type="footnote" content={sunrise} />
-                    </Spacing>
-                    <Spacing textAlign="center">
-                        <Typography
-                            type="footnote"
-                            content="Sunset:"
-                            boldFace
-                        />
-                        <Typography type="footnote" content={sunset} />
-                    </Spacing>
+                    <Flex item>
+                        <Spacing textAlign="center">
+                            <Typography
+                                type="footnote"
+                                content="Sunrise:"
+                                boldFace
+                            />
+                            <Typography type="footnote" content={sunrise} />
+                        </Spacing>
+                    </Flex>
+                    <Flex item>
+                        <Spacing textAlign="center">
+                            <Typography
+                                type="footnote"
+                                content="Sunset:"
+                                boldFace
+                            />
+                            <Typography type="footnote" content={sunset} />
+                        </Spacing>
+                    </Flex>
                 </Flex>
             </Spacing>
             <Spacing pY={20} backgroundColor="var(--lighter-grey)">
