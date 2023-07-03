@@ -1,3 +1,6 @@
+import { faLocationArrow } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 export function toBearing(bearing: number) {
     const bearingFormatted = bearing + '°'
 
@@ -39,5 +42,13 @@ export function toBearing(bearing: number) {
         bearingCompass = 'N/NW'
     }
 
-    return { bearingFormatted, bearingCompass }
+    const angle = -45 + 180 + bearing
+
+    const bearingArrow = (
+        <div style={{ transform: `rotate(${angle}deg)` }}>
+            <FontAwesomeIcon icon={faLocationArrow} />
+        </div>
+    )
+
+    return { bearingFormatted, bearingCompass, bearingArrow }
 }

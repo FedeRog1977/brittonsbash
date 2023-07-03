@@ -15,7 +15,7 @@ import {
     toSentenceCase,
 } from '../../../scripts'
 import { Flex, Spacing, Typography } from '../../bash-blocks'
-import { WeatherIcon, WeatherTempTile, WeatherWindArrow } from '../../elements'
+import { WeatherIcon, WeatherTempTile } from '../../elements'
 
 export const WeatherColumnDaily = ({
     dt,
@@ -41,7 +41,11 @@ export const WeatherColumnDaily = ({
     const precipitation = toPrecipitation(pop)
     const { time: sunrise } = toDate(sr)
     const { time: sunset } = toDate(ss)
-    const { bearingFormatted: bearing, bearingCompass } = toBearing(windDeg)
+    const {
+        bearingFormatted: bearing,
+        bearingCompass,
+        bearingArrow,
+    } = toBearing(windDeg)
     const speed = toSpeed(windSpd, true)
 
     return (
@@ -128,10 +132,7 @@ export const WeatherColumnDaily = ({
                 textAlign="center"
             >
                 <Typography type="body" content={bearingCompass} />
-                <Typography
-                    type="body"
-                    content={<WeatherWindArrow bearing={windDeg} />}
-                />
+                <Typography type="body" content={bearingArrow} />
                 <Typography type="footnote" content={bearing} />
                 <Typography type="footnote" content={speed} boldFace />
             </Spacing>

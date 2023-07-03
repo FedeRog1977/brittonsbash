@@ -8,7 +8,7 @@ import {
     toSpeed,
 } from '../../../scripts'
 import { Flex, Spacing, Typography } from '../../bash-blocks'
-import { WeatherIcon, WeatherWindArrow } from '../../elements'
+import { WeatherIcon } from '../../elements'
 
 export const WeatherColumnHourly = ({
     dt,
@@ -29,7 +29,11 @@ export const WeatherColumnHourly = ({
     const temperature = toTemperature(temp)
     const temperatureFl = toTemperature(tempFl)
     const precipitation = toPrecipitation(pop)
-    const { bearingFormatted: bearing, bearingCompass } = toBearing(windDeg)
+    const {
+        bearingFormatted: bearing,
+        bearingCompass,
+        bearingArrow,
+    } = toBearing(windDeg)
     const speed = toSpeed(windSpd, true)
     const gusts = toSpeed(windGst, true)
 
@@ -62,10 +66,7 @@ export const WeatherColumnHourly = ({
                 textAlign="center"
             >
                 <Typography type="body" content={bearingCompass} />
-                <Typography
-                    type="body"
-                    content={<WeatherWindArrow bearing={windDeg} />}
-                />
+                <Typography type="body" content={bearingArrow} />
                 <Typography type="footnote" content={bearing} />
                 <Typography type="footnote" content={speed} boldFace />
                 <Typography
