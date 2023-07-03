@@ -6,10 +6,10 @@ export function useOpenWeatherCall(latIn: number, lonIn: number) {
     const [hourlyResult, setHourlyResult] = useState<HourlyProps[]>([])
 
     useEffect(() => {
-        const url = 'http://api.openweathermap.org/data/3.0/onecall?'
+        const url = 'https://api.openweathermap.org/data/3.0/onecall?'
         const lat = `${latIn}`
         const lon = `${lonIn}`
-        const appid = '8cd20943bde0b48ee5d7a9b271ac1f43'
+        const appid = '6008c47adda4d19b4055c7058a622879'
         const units = 'metric'
         const lang = 'en'
 
