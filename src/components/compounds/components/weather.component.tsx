@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { hillData } from '../../../data'
 import { WeatherDaily, WeatherSearchTile, WeatherResultTitle } from '.'
 import { WeatherSubTitle } from '../../elements'
-import { toSentenceCase } from '../../../scripts'
+import { toFeet, toSentenceCase } from '../../../scripts'
 
 export const Weather = () => {
     var [lat, setLat] = useState(56.6826)
@@ -30,7 +30,7 @@ export const Weather = () => {
         useState('Your Location')
     const [weatherTitle, setWeatherTitle] = useState(weatherTitleLocation)
     const [weatherSubTitle, setWeatherSubTitle] = useState(
-        <WeatherSubTitle type={'curr'} lat={lat} lon={lon} />
+        <WeatherSubTitle type="current" lat={lat} lon={lon} />
     )
     const [weatherElevation, setWeatherElevation] = useState(0)
     const [weatherMark, setWeatherMark] = useState('')
@@ -75,7 +75,7 @@ export const Weather = () => {
                 setLon(lon)
                 setWeatherTitleLocation('Your Location')
                 setWeatherSubTitle(
-                    <WeatherSubTitle type={'current'} lat={lat} lon={lon} />
+                    <WeatherSubTitle type="current" lat={lat} lon={lon} />
                 )
             } else if (
                 hillData.munros[i].name
@@ -117,8 +117,8 @@ export const Weather = () => {
         if (searchField !== '') {
             setWeatherSubTitle(
                 <WeatherSubTitle
-                    type={'munro'}
-                    elev={weatherElevation.toLocaleString()}
+                    type="munro"
+                    elev={toFeet(weatherElevation)}
                     lat={lat}
                     lon={lon}
                     mark={weatherMark}
@@ -128,13 +128,13 @@ export const Weather = () => {
             // Keep displaying the current location title
         } else if (!searchField.toLowerCase().includes(name)) {
             setWeatherSubTitle(
-                <WeatherSubTitle type={'current'} lat={lat} lon={lon} />
+                <WeatherSubTitle type="current" lat={lat} lon={lon} />
             )
             // If there has been no change to the select drop-down or input search bar
             // Keep displaying the current location title
         } else {
             setWeatherSubTitle(
-                <WeatherSubTitle type={'current'} lat={lat} lon={lon} />
+                <WeatherSubTitle type="current" lat={lat} lon={lon} />
             )
         }
 

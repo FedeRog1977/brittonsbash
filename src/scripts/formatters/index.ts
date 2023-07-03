@@ -1,6 +1,7 @@
 export * from './remove-duplicates'
 export * from './sum'
 export * from './to-bearing'
+export * from './to-coords'
 export * from './to-date'
 export * from './to-feet'
 export * from './to-miles'
