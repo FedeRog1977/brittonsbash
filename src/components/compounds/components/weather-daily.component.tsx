@@ -1,4 +1,4 @@
-import { WeatherColumn, WeatherHourly } from '.'
+import { WeatherColumnDaily, WeatherHourly } from '.'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { DropDown, Flex, Spacing } from '../../bash-blocks'
 import {
@@ -17,7 +17,7 @@ export const WeatherDaily = ({ latIn, lonIn }: any) => {
             <Flex>
                 {dailyResult.map((value, idx) => {
                     return (
-                        <WeatherColumn
+                        <WeatherColumnDaily
                             key={idx}
                             dt={value.dt}
                             icon={value.weather[0].icon}

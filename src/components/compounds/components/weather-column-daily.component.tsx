@@ -17,7 +17,7 @@ import {
 import { Flex, Spacing, Typography } from '../../bash-blocks'
 import { WeatherIcon, WeatherTempTile, WeatherWindArrow } from '../../elements'
 
-export const WeatherColumn = ({
+export const WeatherColumnDaily = ({
     dt,
     icon,
     temp,
@@ -89,7 +89,7 @@ export const WeatherColumn = ({
                     </Spacing>
                 </Flex>
             </Spacing>
-            <Spacing>
+            <Spacing pY={20} backgroundColor="var(--lighter-grey)">
                 <Flex>
                     <WeatherTempTile
                         tempIcon={faTemperatureHigh}
