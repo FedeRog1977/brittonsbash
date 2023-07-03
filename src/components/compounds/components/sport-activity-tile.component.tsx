@@ -22,54 +22,50 @@ export const SportActivityTile: FC<SportActivityTileProps> = ({
             backgroundColor="var(--lighter-grey)"
             borderRadius={isMobile ? 'none' : 'var(--corners-small)'}
         >
-            <>
+            <Spacing position="absolute">
+                <Typography
+                    type="body"
+                    content={title.leftItem}
+                    boldFace={isMobile ? false : true}
+                    inline
+                />
+            </Spacing>
+            <Spacing textAlign="right" position="relative">
+                <Typography
+                    type="body"
+                    content={title.rightItem}
+                    boldFace={isMobile ? false : true}
+                    inline
+                />
+            </Spacing>
+            {entries.map(({ leftItem, rightItem, index }: any) => (
                 <>
-                    <Spacing position="absolute">
-                        <Typography
-                            type="body"
-                            content={title.leftItem}
-                            boldFace={isMobile ? false : true}
-                            inline
-                        />
-                    </Spacing>
-                    <Spacing textAlign="right" position="relative">
-                        <Typography
-                            type="body"
-                            content={title.rightItem}
-                            boldFace={isMobile ? false : true}
-                            inline
-                        />
-                    </Spacing>
+                    {Boolean(leftItem && rightItem) && (
+                        <div key={index}>
+                            <Spacing mT={isMobile ? 3.75 : 7.5} />
+                            <Spacing position="absolute">
+                                <Typography
+                                    type="body"
+                                    content={leftItem}
+                                    boldFace={isMobile ? false : true}
+                                    inline
+                                />
+                            </Spacing>
+                            <Spacing
+                                mL={100}
+                                textAlign="right"
+                                position="relative"
+                            >
+                                <Typography
+                                    type={isMobile ? 'body-light' : 'body'}
+                                    content={rightItem}
+                                    inline
+                                />
+                            </Spacing>
+                        </div>
+                    )}
                 </>
-                {entries.map(({ leftItem, rightItem, index }: any) => (
-                    <>
-                        {Boolean(leftItem && rightItem) && (
-                            <div key={index}>
-                                <Spacing mT={isMobile ? 3.75 : 7.5} />
-                                <Spacing position="absolute">
-                                    <Typography
-                                        type="body"
-                                        content={leftItem}
-                                        boldFace={isMobile ? false : true}
-                                        inline
-                                    />
-                                </Spacing>
-                                <Spacing
-                                    mL={100}
-                                    textAlign="right"
-                                    position="relative"
-                                >
-                                    <Typography
-                                        type={isMobile ? 'body-light' : 'body'}
-                                        content={rightItem}
-                                        inline
-                                    />
-                                </Spacing>
-                            </div>
-                        )}
-                    </>
-                ))}
-            </>
+            ))}
         </Spacing>
     )
 }

@@ -6,24 +6,16 @@ export const WeatherResultTitle = ({ title, subTitle, result }: any) => {
 
     return (
         <Tile type="solid" dense={isMobile && true}>
-            <>
-                <Spacing mB={isMobile ? 7.5 : 15}>
-                    <>
-                        <Typography
-                            type="h1"
-                            content={title}
-                            textAlign="center"
-                        />
-                        <Typography
-                            type="h2"
-                            content={subTitle}
-                            color="var(--medium-grey)"
-                            textAlign="center"
-                        />
-                    </>
-                </Spacing>
-                {result && result}
-            </>
+            <Spacing mB={isMobile ? 7.5 : 15}>
+                <Typography type="h1" content={title} textAlign="center" />
+                <Typography
+                    type="h2"
+                    content={subTitle}
+                    color="var(--medium-grey)"
+                    textAlign="center"
+                />
+            </Spacing>
+            {result && result}
         </Tile>
     )
 }

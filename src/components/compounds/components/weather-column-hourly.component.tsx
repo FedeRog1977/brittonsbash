@@ -34,7 +34,7 @@ export const WeatherColumnHourly = ({
     const gusts = toSpeed(windGst, true)
 
     return (
-        <Spacing mY={5}>
+        <Spacing mX={5}>
             <Spacing
                 pX={20}
                 pY={20}
@@ -81,61 +81,69 @@ export const WeatherColumnHourly = ({
                 textAlign="center"
             >
                 <Flex>
-                    <Spacing textAlign="center" mR={2.5}>
-                        <Typography
-                            type="tiny"
-                            content="Pressure:"
-                            textAlign="right"
-                            boldFace
-                        />
-                        <Typography
-                            type="tiny"
-                            content="Humidity:"
-                            textAlign="right"
-                            boldFace
-                        />
-                        <Typography
-                            type="tiny"
-                            content="Dew Pt.:"
-                            textAlign="right"
-                            boldFace
-                        />
-                        <Typography
-                            type="tiny"
-                            content="Visibility:"
-                            textAlign="right"
-                            boldFace
-                        />
-                        <Typography
-                            type="tiny"
-                            content="UV Index:"
-                            textAlign="right"
-                            boldFace
-                        />
-                    </Spacing>
-                    <Spacing textAlign="center" mL={2.5}>
-                        <Typography
-                            type="tiny"
-                            content={pressure + 'mb'}
-                            textAlign="left"
-                        />
-                        <Typography
-                            type="tiny"
-                            content={humidity + '%'}
-                            textAlign="left"
-                        />
-                        <Typography type="tiny" content={dp} textAlign="left" />
-                        <Typography
-                            type="tiny"
-                            content={vb / 100 + '%'}
-                            textAlign="left"
-                        />
-                        <Typography
-                            type="tiny"
-                            content={uvi}
-                            textAlign="left"
-                        />
-                    </Spacing>
+                    <Flex item>
+                        <Spacing textAlign="center" mR={2.5}>
+                            <Typography
+                                type="footnote"
+                                content="Pressure:"
+                                textAlign="right"
+                                boldFace
+                            />
+                            <Typography
+                                type="footnote"
+                                content="Humidity:"
+                                textAlign="right"
+                                boldFace
+                            />
+                            <Typography
+                                type="footnote"
+                                content="Dew Pt.:"
+                                textAlign="right"
+                                boldFace
+                            />
+                            <Typography
+                                type="footnote"
+                                content="Visibility:"
+                                textAlign="right"
+                                boldFace
+                            />
+                            <Typography
+                                type="footnote"
+                                content="UV Index:"
+                                textAlign="right"
+                                boldFace
+                            />
+                        </Spacing>
+                    </Flex>
+                    <Flex item>
+                        <Spacing textAlign="center" mL={2.5}>
+                            <Typography
+                                type="footnote"
+                                content={pressure + 'mb'}
+                                textAlign="left"
+                            />
+                            <Typography
+                                type="footnote"
+                                content={humidity + '%'}
+                                textAlign="left"
+                            />
+                            <Typography
+                                type="footnote"
+                                content={dp}
+                                textAlign="left"
+                            />
+                            <Typography
+                                type="footnote"
+                                content={vb / 100 + '%'}
+                                textAlign="left"
+                            />
+                            <Typography
+                                type="footnote"
+                                content={uvi}
+                                textAlign="left"
+                            />
+                        </Spacing>
+                    </Flex>
                 </Flex>
             </Spacing>
         </Spacing>

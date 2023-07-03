@@ -91,16 +91,30 @@ export const WeatherColumnDaily = ({
             </Spacing>
             <Spacing pY={20} backgroundColor="var(--lighter-grey)">
                 <Flex>
-                    <WeatherTempTile
-                        tempIcon={faTemperatureHigh}
-                        tempType={tempMax}
-                    />
-                    <WeatherTempTile
-                        tempIcon={faTemperatureLow}
-                        tempType={tempMin}
-                    />
-                    <WeatherTempTile tempIcon={faSun} tempType={tempFlDay} />
-                    <WeatherTempTile tempIcon={faMoon} tempType={tempFlNight} />
+                    <Flex item>
+                        <WeatherTempTile
+                            tempIcon={faTemperatureHigh}
+                            tempType={tempMax}
+                        />
+                    </Flex>
+                    <Flex item>
+                        <WeatherTempTile
+                            tempIcon={faTemperatureLow}
+                            tempType={tempMin}
+                        />
+                    </Flex>
+                    <Flex item>
+                        <WeatherTempTile
+                            tempIcon={faSun}
+                            tempType={tempFlDay}
+                        />
+                    </Flex>
+                    <Flex item>
+                        <WeatherTempTile
+                            tempIcon={faMoon}
+                            tempType={tempFlNight}
+                        />
+                    </Flex>
                 </Flex>
             </Spacing>
             <Spacing
@@ -124,54 +138,58 @@ export const WeatherColumnDaily = ({
                 textAlign="center"
             >
                 <Flex>
-                    <Spacing textAlign="center" mR={2.5}>
-                        <Typography
-                            type="footnote"
-                            content="Pressure:"
-                            textAlign="right"
-                            boldFace
-                        />
-                        <Typography
-                            type="footnote"
-                            content="Humidity:"
-                            textAlign="right"
-                            boldFace
-                        />
-                        <Typography
-                            type="footnote"
-                            content="Dew Pt.:"
-                            textAlign="right"
-                            boldFace
-                        />
-                        <Typography
-                            type="footnote"
-                            content="UV Index:"
-                            textAlign="right"
-                            boldFace
-                        />
-                    </Spacing>
-                    <Spacing textAlign="center" mL={2.5}>
-                        <Typography
-                            type="footnote"
-                            content={pressure + 'mb'}
-                            textAlign="left"
-                        />
-                        <Typography
-                            type="footnote"
-                            content={humidity + '%'}
-                            textAlign="left"
-                        />
-                        <Typography
-                            type="footnote"
-                            content={dp}
-                            textAlign="left"
-                        />
-                        <Typography
-                            type="footnote"
-                            content={uvi}
-                            textAlign="left"
-                        />
-                    </Spacing>
+                    <Flex item>
+                        <Spacing textAlign="center" mR={2.5}>
+                            <Typography
+                                type="footnote"
+                                content="Pressure:"
+                                textAlign="right"
+                                boldFace
+                            />
+                            <Typography
+                                type="footnote"
+                                content="Humidity:"
+                                textAlign="right"
+                                boldFace
+                            />
+                            <Typography
+                                type="footnote"
+                                content="Dew Pt.:"
+                                textAlign="right"
+                                boldFace
+                            />
+                            <Typography
+                                type="footnote"
+                                content="UV Index:"
+                                textAlign="right"
+                                boldFace
+                            />
+                        </Spacing>
+                    </Flex>
+                    <Flex item>
+                        <Spacing textAlign="center" mL={2.5}>
+                            <Typography
+                                type="footnote"
+                                content={pressure + 'mb'}
+                                textAlign="left"
+                            />
+                            <Typography
+                                type="footnote"
+                                content={humidity + '%'}
+                                textAlign="left"
+                            />
+                            <Typography
+                                type="footnote"
+                                content={dp}
+                                textAlign="left"
+                            />
+                            <Typography
+                                type="footnote"
+                                content={uvi}
+                                textAlign="left"
+                            />
+                        </Spacing>
+                    </Flex>
                 </Flex>
             </Spacing>
         </Spacing>

@@ -1,3 +1,4 @@
 export type FlexProps = {
-    children: React.ReactNode[]
+    children: React.ReactNode
+    item?: boolean
 }

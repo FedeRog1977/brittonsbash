@@ -27,38 +27,34 @@ export const InstantGramSearchList = ({ func, items, year, season }: any) => {
                             value={names.join(' - ')}
                             content={
                                 <Spacing mY={20}>
-                                    <>
-                                        <Typography
-                                            type="h5"
-                                            content={<>{id.slice(-2)}</>}
-                                            color="var(--medium-grey)"
-                                        />
-                                        <Typography
-                                            type="h4"
-                                            content={
-                                                <>
-                                                    {prefix && (
-                                                        <>
-                                                            {prefix}
-                                                            {':'}
-                                                        </>
-                                                    )}
-                                                </>
-                                            }
-                                        />
-                                        <Typography
-                                            type="h4"
-                                            content={
-                                                <>
-                                                    {names.map((name: any) => (
-                                                        <div key={name}>
-                                                            {name}
-                                                        </div>
-                                                    ))}
-                                                </>
-                                            }
-                                        />
-                                    </>
+                                    <Typography
+                                        type="h5"
+                                        content={<>{id.slice(-2)}</>}
+                                        color="var(--medium-grey)"
+                                    />
+                                    <Typography
+                                        type="h4"
+                                        content={
+                                            <>
+                                                {prefix && (
+                                                    <>
+                                                        {prefix}
+                                                        {':'}
+                                                    </>
+                                                )}
+                                            </>
+                                        }
+                                    />
+                                    <Typography
+                                        type="h4"
+                                        content={
+                                            <>
+                                                {names.map((name: any) => (
+                                                    <div key={name}>{name}</div>
+                                                ))}
+                                            </>
+                                        }
+                                    />
                                 </Spacing>
                             }
                         />

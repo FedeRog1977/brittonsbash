@@ -5,5 +5,5 @@ export type TileProps = {
     top?: boolean
     dense?: boolean
     textAlign?: TypographyProps['textAlign']
-    children: React.ReactElement
+    children: React.ReactNode
 }

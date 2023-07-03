@@ -18,22 +18,18 @@ export const DropDownStories = () => {
                 />
             </Tile>
             <Tile type="solid">
-                <>
-                    <DropDown
-                        buttonType="regular-clear"
-                        func={() => setShowDropDown(!showDropDown)}
-                        funcResp={showDropDown}
+                <DropDown
+                    buttonType="regular-clear"
+                    func={() => setShowDropDown(!showDropDown)}
+                    funcResp={showDropDown}
+                />
+                {showDropDown && (
+                    <Article
+                        sections={articleTestData as ArticleProps['sections']}
+                        fontFamily="serif"
+                        textAlign="justify"
                     />
-                    {showDropDown && (
-                        <Article
-                            sections={
-                                articleTestData as ArticleProps['sections']
-                            }
-                            fontFamily="serif"
-                            textAlign="justify"
-                        />
-                    )}
-                </>
+                )}
             </Tile>
         </>
     )
