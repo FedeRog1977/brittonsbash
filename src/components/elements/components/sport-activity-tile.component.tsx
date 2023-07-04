@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { SportActivityTileProps } from '..'
+import { SportActivityTileProps } from '../../compounds'
 import { useScreenWidth } from '../../../scripts'
 import { Spacing, Typography } from '../../bash-blocks'
 
