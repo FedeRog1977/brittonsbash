@@ -1,12 +1,14 @@
 import { useState } from 'react'
 import { hillData } from '../../../data'
 import { WeatherDaily, WeatherSearchTile, WeatherResultTitle } from '.'
-import { WeatherSubTitle } from '../../elements'
-import { toFeet, toSentenceCase } from '../../../scripts'
+import { toCoords, toFeet, toSentenceCase } from '../../../scripts'
+import { Typography } from '../../bash-blocks'
 
 export const Weather = () => {
     var [lat, setLat] = useState(56.6826)
     var [lon, setLon] = useState(5.1023)
+
+    const { latFormatted, lonFormatted } = toCoords(lat, lon)
 
     // const getCurrLocation = () => {
     //     navigator.geolocation.getCurrentPosition(
@@ -30,7 +32,9 @@ export const Weather = () => {
         useState('Your Location')
     const [weatherTitle, setWeatherTitle] = useState(weatherTitleLocation)
     const [weatherSubTitle, setWeatherSubTitle] = useState(
-        <WeatherSubTitle type="current" lat={lat} lon={lon} />
+        <>
+            {latFormatted}, {lonFormatted}
+        </>
     )
     const [weatherElevation, setWeatherElevation] = useState(0)
     const [weatherMark, setWeatherMark] = useState('')
@@ -75,7 +79,9 @@ export const Weather = () => {
                 setLon(lon)
                 setWeatherTitleLocation('Your Location')
                 setWeatherSubTitle(
-                    <WeatherSubTitle type="current" lat={lat} lon={lon} />
+                    <>
+                        {latFormatted}, {lonFormatted}
+                    </>
                 )
             } else if (
                 hillData.munros[i].name
@@ -116,25 +122,30 @@ export const Weather = () => {
         // Display munro result title
         if (searchField !== '') {
             setWeatherSubTitle(
-                <WeatherSubTitle
-                    type="munro"
-                    elev={toFeet(weatherElevation)}
-                    lat={lat}
-                    lon={lon}
-                    mark={weatherMark}
-                />
+                <>
+                    Munro at {toFeet(weatherElevation)} - {latFormatted},{' '}
+                    {lonFormatted}
+                    <Typography
+                        type="h4"
+                        content={'Marked by ' + weatherMark}
+                    />
+                </>
             )
             // If the text inputted into the input search bar is pulled from the suggested list (non-functional)
             // Keep displaying the current location title
         } else if (!searchField.toLowerCase().includes(name)) {
             setWeatherSubTitle(
-                <WeatherSubTitle type="current" lat={lat} lon={lon} />
+                <>
+                    {latFormatted}, {lonFormatted}
+                </>
             )
             // If there has been no change to the select drop-down or input search bar
             // Keep displaying the current location title
         } else {
             setWeatherSubTitle(
-                <WeatherSubTitle type="current" lat={lat} lon={lon} />
+                <>
+                    {latFormatted}, {lonFormatted}
+                </>
             )
         }
 
