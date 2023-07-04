@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { toTemperature } from '../../../scripts'
 import { Spacing, Typography } from '../../bash-blocks'
 
-export const WeatherTempTile = ({ tempIcon, tempType }: any) => {
+export const WeatherTemperature = ({ tempIcon, tempType }: any) => {
     let tempBgColor = ''
     let tempFtColor = ''
 

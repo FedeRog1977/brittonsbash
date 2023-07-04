@@ -15,7 +15,7 @@ import {
     toSentenceCase,
 } from '../../../scripts'
 import { Flex, Spacing, Typography } from '../../bash-blocks'
-import { WeatherIcon, WeatherTempTile } from '../../elements'
+import { WeatherIcon, WeatherTemperature } from '../../elements'
 
 export const WeatherColumnDaily = ({
     dt,
@@ -100,25 +100,25 @@ export const WeatherColumnDaily = ({
             <Spacing pY={20} backgroundColor="var(--lighter-grey)">
                 <Flex>
                     <Flex item>
-                        <WeatherTempTile
+                        <WeatherTemperature
                             tempIcon={faTemperatureHigh}
                             tempType={tempMax}
                         />
                     </Flex>
                     <Flex item>
-                        <WeatherTempTile
+                        <WeatherTemperature
                             tempIcon={faTemperatureLow}
                             tempType={tempMin}
                         />
                     </Flex>
                     <Flex item>
-                        <WeatherTempTile
+                        <WeatherTemperature
                             tempIcon={faSun}
                             tempType={tempFlDay}
                         />
                     </Flex>
                     <Flex item>
-                        <WeatherTempTile
+                        <WeatherTemperature
                             tempIcon={faMoon}
                             tempType={tempFlNight}
                         />
