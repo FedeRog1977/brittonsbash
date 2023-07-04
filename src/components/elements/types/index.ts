@@ -1,1 +1,1 @@
-export {}
+export * from './sport-activity-tile.types'

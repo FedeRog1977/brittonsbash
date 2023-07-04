@@ -7,7 +7,7 @@ import {
     Typography,
 } from '../../bash-blocks'
 import { refactorEvent, useDropDown, useScreenWidth } from '../../../scripts'
-import { SportActivityTile } from '.'
+import { SportActivityTile } from '../../elements'
 
 export const InstantGramResultTile = ({
     event,
