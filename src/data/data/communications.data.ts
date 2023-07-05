@@ -1012,142 +1012,145 @@ export const communicationsData = {
         graphicDesign: [],
         computerAidedDesign: [],
         photoManipulation: [],
-        links: [],
-    },
-    interiors: {
-        homeInteriors: {
-            manufacturers: ['Duresta', 'Iain James'],
-            products: [],
-        },
-        officeInteriors: {
-            manufacturers: ['Herman Miller', 'Vitra', 'Orangebox'],
-            products: [],
-        },
-        twoThousandsDecor: [],
-        links: [],
-    },
-    style: {
-        brands: [],
-        fragrances: {
-            preservatives: [
-                'Terre d’Hermes Hermès',
-                'Eau d’Hermes Hermès',
-                'Eau de Narcisse Bleu Hermès',
-                'Boss Bottled',
-                'Czech & Speake No. 88',
-                'Serpentine Comme des Garçons',
-                'Fleur de Portofino Tom Ford',
-                'Moncler pour Homme Moncler',
-            ],
-            dailys: [
-                'CK One',
-                'CK2',
-                'CK Be',
-                'CK All',
-                'Kapitel 4',
-                'Kapitel 12',
-            ],
-            rinsers: [
-                'Calvin Klein Eternity Aqua',
-                'Oxygene Lanvin',
-                'Boss Orange Man',
-                'Mont Blanc Explorer',
-                'Forbidden Rose Avril Lavigne',
-            ],
+        interiors: {
+            homeInteriors: {
+                manufacturers: ['Duresta', 'Iain James'],
+                products: [],
+            },
+            officeInteriors: {
+                manufacturers: ['Herman Miller', 'Vitra', 'Orangebox'],
+                products: [],
+            },
+            twoThousandsDecor: [],
             links: [
                 {
-                    content: 'Fragrantica',
-                    href: 'https://www.fragrantica.com/perfume-finder/',
-                },
-                {
-                    content: 'Parfumo',
-                    href: 'https://www.parfumo.com/',
+                    context: 'Vinterior',
+                    href: 'https://www.vinterior.co/',
                 },
             ],
         },
-        accessories: [
-            'Rolex Datejust (Pending)',
-            'Rolex Skydweller (Pending)',
-            'Rayban Wayfarers Tortoiseshell',
-            'Rayban Wayfarers Tortoiseshell (Pre-Luxottica) (Pending)',
-        ],
-        cigarettes: [
-            'Marlboro Cigarettes',
-            'Camel Cigarettes',
-            'Lucky Strike Cigarettes',
-            'Marlboro Lighter Holders',
-            'Marlboro Cigarette Cases',
-            'Bic Lighters',
-        ],
-        eightiesFashion: [],
-        twoThousandsFashion: [],
-        woke: {
-            links: [
-                {
-                    context: 'Grailed',
-                    href: 'https://www.grailed.com/',
-                },
-                {
-                    context: 'StockX',
-                    href: 'https://stockx.com/en-gb',
-                },
-                {
-                    context: 'Dover Street Market',
-                    href: 'https://shop.doverstreetmarket.com/',
-                },
-                {
-                    context: 'Homme+',
-                    href: 'https://www.hommeplus.eu/',
-                },
-                {
-                    context: 'Love from Skye',
-                    href: 'https://www.lovefromskye.co.uk/',
-                },
-                {
-                    context: '4GSeller',
-                    href: 'https://4gseller.com/',
-                },
-                {
-                    context: 'Frederick Grove',
-                    href: 'https://frederickgrove.com/collections/all',
-                },
-                {
-                    context: 'The Great Frog',
-                    href: 'https://www.thegreatfroglondon.com/',
-                },
-                {
-                    context: 'Chrome Hearts',
-                    href: 'https://www.chromehearts.com/',
-                },
-                {
-                    context: 'Celine',
-                    href: 'https://www.celine.com/en-gb/home',
-                },
-                {
-                    context: 'The Library',
-                    href: 'https://thelibrary1994.com/',
-                },
-                {
-                    context: 'Sruli Recht',
-                    href: 'https://www.srulirecht.com/',
-                },
-                {
-                    context: 'Loro Piana',
-                    href: 'https://uk.loropiana.com/en/',
-                },
-                {
-                    context: 'Brandy Melville',
-                    href: 'https://uk.brandymelville.com/',
-                },
-                {
-                    context: 'Taeha Types',
-                    href: 'https://www.taehatypes.com/archive',
-                },
-                {
-                    context: 'Garnet Pots',
-                    href: 'https://www.garnetpots.com/',
-                },
+        style: {
+            fragrances: {
+                preservatives: [
+                    'Terre d’Hermes Hermès',
+                    'Eau d’Hermes Hermès',
+                    'Eau de Narcisse Bleu Hermès',
+                    'Boss Bottled',
+                    'Czech & Speake No. 88',
+                    'Serpentine Comme des Garçons',
+                    'Fleur de Portofino Tom Ford',
+                    'Moncler pour Homme Moncler',
+                ],
+                dailys: [
+                    'CK One',
+                    'CK2',
+                    'CK Be',
+                    'CK All',
+                    'Kapitel 4',
+                    'Kapitel 12',
+                ],
+                rinsers: [
+                    'Calvin Klein Eternity Aqua',
+                    'Oxygene Lanvin',
+                    'Boss Orange Man',
+                    'Mont Blanc Explorer',
+                    'Forbidden Rose Avril Lavigne',
+                ],
+                links: [
+                    {
+                        content: 'Fragrantica',
+                        href: 'https://www.fragrantica.com/perfume-finder/',
+                    },
+                    {
+                        content: 'Parfumo',
+                        href: 'https://www.parfumo.com/',
+                    },
+                ],
+            },
+            accessories: [
+                'Rolex Datejust (Pending)',
+                'Rolex Skydweller (Pending)',
+                'Rayban Wayfarers Tortoiseshell',
+                'Rayban Wayfarers Tortoiseshell (Pre-Luxottica) (Pending)',
             ],
+            cigarettes: [
+                'Marlboro Cigarettes',
+                'Camel Cigarettes',
+                'Lucky Strike Cigarettes',
+                'Marlboro Lighter Holders',
+                'Marlboro Cigarette Cases',
+                'Bic Lighters',
+            ],
+            eightiesFashion: [],
+            twoThousandsFashion: [],
+            woke: {
+                links: [
+                    {
+                        context: 'Grailed',
+                        href: 'https://www.grailed.com/',
+                    },
+                    {
+                        context: 'StockX',
+                        href: 'https://stockx.com/en-gb',
+                    },
+                    {
+                        context: 'Dover Street Market',
+                        href: 'https://shop.doverstreetmarket.com/',
+                    },
+                    {
+                        context: 'Homme+',
+                        href: 'https://www.hommeplus.eu/',
+                    },
+                    {
+                        context: 'Love from Skye',
+                        href: 'https://www.lovefromskye.co.uk/',
+                    },
+                    {
+                        context: '4GSeller',
+                        href: 'https://4gseller.com/',
+                    },
+                    {
+                        context: 'Frederick Grove',
+                        href: 'https://frederickgrove.com/collections/all',
+                    },
+                    {
+                        context: 'The Great Frog',
+                        href: 'https://www.thegreatfroglondon.com/',
+                    },
+                    {
+                        context: 'Chrome Hearts',
+                        href: 'https://www.chromehearts.com/',
+                    },
+                    {
+                        context: 'Celine',
+                        href: 'https://www.celine.com/en-gb/home',
+                    },
+                    {
+                        context: 'The Library',
+                        href: 'https://thelibrary1994.com/',
+                    },
+                    {
+                        context: 'Sruli Recht',
+                        href: 'https://www.srulirecht.com/',
+                    },
+                    {
+                        context: 'Loro Piana',
+                        href: 'https://uk.loropiana.com/en/',
+                    },
+                    {
+                        context: 'Brandy Melville',
+                        href: 'https://uk.brandymelville.com/',
+                    },
+                    {
+                        context: 'Taeha Types',
+                        href: 'https://www.taehatypes.com/archive',
+                    },
+                    {
+                        context: 'Garnet Pots',
+                        href: 'https://www.garnetpots.com/',
+                    },
+                ],
+            },
         },
     },
     automotive: {
