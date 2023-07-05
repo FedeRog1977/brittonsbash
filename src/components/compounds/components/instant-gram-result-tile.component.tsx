@@ -7,7 +7,7 @@ import {
     Typography,
 } from '../../bash-blocks'
 import { refactorEvent, useDropDown, useScreenWidth } from '../../../scripts'
-import { SportActivityTile } from '../../elements'
+import { ActivityTile } from '../../elements'
 
 export const InstantGramResultTile = ({
     event,
@@ -102,7 +102,7 @@ export const InstantGramResultTile = ({
                 />
             </Spacing>
             {refactoredEvent.showSportEvent && (
-                <SportActivityTile
+                <ActivityTile
                     title={{
                         leftItem: (
                             <>

@@ -1,9 +1,9 @@
 import { FC } from 'react'
-import { SportActivityTileProps } from '..'
+import { ActivityTileProps } from '..'
 import { useScreenWidth } from '../../../scripts'
 import { Spacing, Typography } from '../../bash-blocks'
 
-export const SportActivityTile: FC<SportActivityTileProps> = ({
+export const ActivityTile: FC<ActivityTileProps> = ({
     title,
     entries,
 }: any) => {
