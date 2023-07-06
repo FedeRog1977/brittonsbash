@@ -7,9 +7,11 @@ import {
     Typography,
 } from '../../bash-blocks'
 import { refactorEvent, useDropDown, useScreenWidth } from '../../../scripts'
-import { ActivityTile } from '../../elements'
+import { ActivityTile } from '../../bash-blocks'
+import { InstantGramResultTileProps } from '..'
+import { FC } from 'react'
 
-export const InstantGramResultTile = ({
+export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
     event,
     sportEvent,
     showSportEvent,

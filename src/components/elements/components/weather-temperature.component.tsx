@@ -1,36 +1,41 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FC } from 'react'
+import { WeatherTemperatureProps } from '..'
 import { toTemperature } from '../../../scripts'
 import { Spacing, Typography } from '../../bash-blocks'
 
-export const WeatherTemperature = ({ tempIcon, tempType }: any) => {
-    let tempBgColor = ''
-    let tempFtColor = ''
+export const WeatherTemperature: FC<WeatherTemperatureProps> = ({
+    icon,
+    temp,
+}: any) => {
+    let backgroundColor = ''
+    let fontColor = ''
 
-    if (tempType >= 30) {
-        tempBgColor = 'rgba(238, 40, 0, 0.8)'
-        tempFtColor = 'var(--white)'
-    } else if (tempType >= 25 && tempType < 30) {
-        tempBgColor = 'rgba(238, 102, 0, 0.8)'
-        tempFtColor = 'var(--darker-grey)'
-    } else if (tempType >= 15 && tempType < 25) {
-        tempBgColor = 'rgba(255, 204, 51, 0.8)'
-        tempFtColor = 'var(--darker-grey)'
-    } else if (tempType >= 0 && tempType < 15) {
-        tempBgColor = 'rgba(255, 255, 153, 0.6)'
-        tempFtColor = 'var(--darker-grey)'
-    } else if (tempType < 0) {
-        tempBgColor = 'rgba(0, 163, 224, 0.2)'
-        tempFtColor = 'var(--darker-grey)'
+    if (temp >= 30) {
+        backgroundColor = 'rgba(238, 40, 0, 0.8)'
+        fontColor = 'var(--white)'
+    } else if (temp >= 25 && temp < 30) {
+        backgroundColor = 'rgba(238, 102, 0, 0.8)'
+        fontColor = 'var(--darker-grey)'
+    } else if (temp >= 15 && temp < 25) {
+        backgroundColor = 'rgba(255, 204, 51, 0.8)'
+        fontColor = 'var(--darker-grey)'
+    } else if (temp >= 0 && temp < 15) {
+        backgroundColor = 'rgba(255, 255, 153, 0.6)'
+        fontColor = 'var(--darker-grey)'
+    } else if (temp < 0) {
+        backgroundColor = 'rgba(0, 163, 224, 0.2)'
+        fontColor = 'var(--darker-grey)'
     }
 
     return (
-        <div style={{ background: `${tempBgColor}`, color: `${tempFtColor}` }}>
+        <div style={{ background: backgroundColor }}>
             <Spacing pY={10} textAlign="center">
-                <FontAwesomeIcon icon={tempIcon} size="2xs" />
+                <FontAwesomeIcon icon={icon} size="2xs" />
                 <Typography
                     type="footnote"
-                    content={toTemperature(tempType)}
-                    color={tempFtColor}
+                    content={toTemperature(temp)}
+                    color={fontColor}
                 />
             </Spacing>
         </div>

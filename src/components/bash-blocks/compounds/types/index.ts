@@ -1,3 +1,4 @@
+export * from './activity-tile.types'
 export * from './article.types'
 export * from './drop-down.types'
 export * from './footnote.types'

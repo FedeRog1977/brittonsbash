@@ -1,7 +1,14 @@
 import { Button, DropDown, Spacing, Typography } from '../../bash-blocks'
 import { useDropDown, useScreenWidth } from '../../../scripts'
+import { InstantGramSearchListProps } from '..'
+import { FC } from 'react'
 
-export const InstantGramSearchList = ({ func, items, year, season }: any) => {
+export const InstantGramSearchList: FC<InstantGramSearchListProps> = ({
+    func,
+    items,
+    year,
+    season,
+}: any) => {
     const { isMobile } = useScreenWidth()
     const { showDropDown, setShowDropDown } = useDropDown()
 

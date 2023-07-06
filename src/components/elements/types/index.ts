@@ -1,1 +1,2 @@
-export * from './activity-tile.types'
+export * from './instant-gram.types'
+export * from './weather.types'

@@ -4,8 +4,10 @@ import { eventData } from '../../../data'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { useScreenWidth } from '../../../scripts'
+import { FC } from 'react'
+import { InstantGramSearchTileProps } from '..'
 
-export const InstantGramSearchTile = ({
+export const InstantGramSearchTile: FC<InstantGramSearchTileProps> = ({
     funcInput,
     funcButton,
     funcSelect,
@@ -54,7 +56,6 @@ export const InstantGramSearchTile = ({
                     items={eventData[2023]}
                     year="2023"
                     season="4"
-                    position="left"
                 />
                 <InstantGramSearchList
                     func={funcSelect}
@@ -73,7 +74,6 @@ export const InstantGramSearchTile = ({
                     items={eventData[2020]}
                     year="2020"
                     season="1"
-                    position="right"
                 />
             </Spacing>
         </Tile>

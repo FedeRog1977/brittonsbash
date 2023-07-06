@@ -101,27 +101,21 @@ export const WeatherColumnDaily = ({
                 <Flex>
                     <Flex item>
                         <WeatherTemperature
-                            tempIcon={faTemperatureHigh}
-                            tempType={tempMax}
+                            icon={faTemperatureHigh}
+                            temp={tempMax}
                         />
                     </Flex>
                     <Flex item>
                         <WeatherTemperature
-                            tempIcon={faTemperatureLow}
-                            tempType={tempMin}
+                            icon={faTemperatureLow}
+                            temp={tempMin}
                         />
                     </Flex>
                     <Flex item>
-                        <WeatherTemperature
-                            tempIcon={faSun}
-                            tempType={tempFlDay}
-                        />
+                        <WeatherTemperature icon={faSun} temp={tempFlDay} />
                     </Flex>
                     <Flex item>
-                        <WeatherTemperature
-                            tempIcon={faMoon}
-                            tempType={tempFlNight}
-                        />
+                        <WeatherTemperature icon={faMoon} temp={tempFlNight} />
                     </Flex>
                 </Flex>
             </Spacing>

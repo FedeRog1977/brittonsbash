@@ -8,7 +8,7 @@ import {
     toSpeed,
     useScreenWidth,
 } from '../../../scripts'
-import { ActivityTile } from '../../elements'
+import { ActivityTile } from '../../bash-blocks'
 
 export const SportResultTile = () => {
     const { isMobile } = useScreenWidth()

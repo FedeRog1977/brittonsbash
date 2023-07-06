@@ -1,7 +1,7 @@
 import { FC } from 'react'
-import { ActivityTileProps } from '..'
-import { useScreenWidth } from '../../../scripts'
-import { Spacing, Typography } from '../../bash-blocks'
+import { ActivityTileProps } from '../../../bash-blocks'
+import { useScreenWidth } from '../../../../scripts'
+import { Spacing, Typography } from '../..'
 
 export const ActivityTile: FC<ActivityTileProps> = ({
     title,
