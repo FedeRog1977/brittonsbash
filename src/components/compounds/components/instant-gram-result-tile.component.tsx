@@ -113,40 +113,40 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
                                 {refactoredEvent.elevation}
                             </>
                         ),
-                        rightItem: <>[{refactoredEvent.time}]</>,
+                        rightItems: <>[{refactoredEvent.time}]</>,
                     }}
                     entries={[
                         {
                             leftItem: 'Island(s)',
-                            rightItem: refactoredEvent.islands,
+                            rightItems: refactoredEvent.islands,
                         },
                         {
                             leftItem: 'Munro(s)',
-                            rightItem: refactoredEvent.munros,
+                            rightItems: refactoredEvent.munros,
                         },
                         {
                             leftItem: 'Munro Top(s)',
-                            rightItem: refactoredEvent.munroTops,
+                            rightItems: refactoredEvent.munroTops,
                         },
                         {
                             leftItem: 'Corbett(s)',
-                            rightItem: refactoredEvent.corbetts,
+                            rightItems: refactoredEvent.corbetts,
                         },
                         {
                             leftItem: 'Corbett Top(s)',
-                            rightItem: refactoredEvent.corbettTops,
+                            rightItems: refactoredEvent.corbettTops,
                         },
                         {
                             leftItem: 'Graham(s)',
-                            rightItem: refactoredEvent.grahams,
+                            rightItems: refactoredEvent.grahams,
                         },
                         {
                             leftItem: 'SubTwo(s)',
-                            rightItem: refactoredEvent.subTwos,
+                            rightItems: refactoredEvent.subTwos,
                         },
                         {
                             leftItem: 'Donald(s)',
-                            rightItem: refactoredEvent.donalds,
+                            rightItems: refactoredEvent.donalds,
                         },
                     ]}
                 />

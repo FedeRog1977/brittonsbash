@@ -34,14 +34,21 @@ export const ActivityTile: FC<ActivityTileProps> = ({
                 {Array.isArray(title.rightItems) ? (
                     <>
                         {title.rightItems.map((item: string, index: number) => (
-                            <Typography
-                                key={index}
-                                type="body"
-                                content={item}
-                                boldFace={isMobile ? false : true}
-                                inline
-                                mL="10px"
-                            />
+                            <div
+                                style={{
+                                    width: isMobile ? '75px' : '100px',
+                                    display: 'inline-block',
+                                    // border: '1px solid black',
+                                }}
+                            >
+                                <Typography
+                                    key={index}
+                                    type="body"
+                                    content={item}
+                                    boldFace={isMobile ? false : true}
+                                    inline
+                                />
+                            </div>
                         ))}
                     </>
                 ) : (
@@ -67,22 +74,43 @@ export const ActivityTile: FC<ActivityTileProps> = ({
                                 />
                             </Spacing>
                             <Spacing
-                                mL={0}
+                                mL={Array.isArray(rightItems) ? 0 : 100}
                                 textAlign="right"
                                 position="relative"
                             >
-                                {rightItems.map(
-                                    (item: string, index: number) => (
-                                        <Typography
-                                            key={index}
-                                            type={
-                                                isMobile ? 'body-light' : 'body'
-                                            }
-                                            content={item}
-                                            inline
-                                            mL="10px"
-                                        />
-                                    )
+                                {Array.isArray(rightItems) ? (
+                                    <>
+                                        {rightItems.map(
+                                            (item: string, index: number) => (
+                                                <div
+                                                    style={{
+                                                        width: isMobile
+                                                            ? '75px'
+                                                            : '100px',
+                                                        display: 'inline-block',
+                                                        // border: '1px solid black',
+                                                    }}
+                                                >
+                                                    <Typography
+                                                        key={index}
+                                                        type={
+                                                            isMobile
+                                                                ? 'body-light'
+                                                                : 'body'
+                                                        }
+                                                        content={item}
+                                                        inline
+                                                    />
+                                                </div>
+                                            )
+                                        )}
+                                    </>
+                                ) : (
+                                    <Typography
+                                        type={isMobile ? 'body-light' : 'body'}
+                                        content={rightItems}
+                                        inline
+                                    />
                                 )}
                             </Spacing>
                         </div>
