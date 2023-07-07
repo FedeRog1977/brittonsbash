@@ -31,16 +31,31 @@ export const ActivityTile: FC<ActivityTileProps> = ({
                 />
             </Spacing>
             <Spacing textAlign="right" position="relative">
-                <Typography
-                    type="body"
-                    content={title.rightItem}
-                    boldFace={isMobile ? false : true}
-                    inline
-                />
+                {Array.isArray(title.rightItems) ? (
+                    <>
+                        {title.rightItems.map((item: string, index: number) => (
+                            <Typography
+                                key={index}
+                                type="body"
+                                content={item}
+                                boldFace={isMobile ? false : true}
+                                inline
+                                mL="10px"
+                            />
+                        ))}
+                    </>
+                ) : (
+                    <Typography
+                        type="body"
+                        content={title.rightItems}
+                        boldFace={isMobile ? false : true}
+                        inline
+                    />
+                )}
             </Spacing>
-            {entries.map(({ leftItem, rightItem, index }: any) => (
+            {entries.map(({ leftItem, rightItem, rightItems, index }: any) => (
                 <>
-                    {Boolean(leftItem && rightItem) && (
+                    {Boolean(leftItem && rightItems) && (
                         <div key={index}>
                             <Spacing mT={isMobile ? 3.75 : 7.5} />
                             <Spacing position="absolute">
@@ -52,15 +67,23 @@ export const ActivityTile: FC<ActivityTileProps> = ({
                                 />
                             </Spacing>
                             <Spacing
-                                mL={100}
+                                mL={0}
                                 textAlign="right"
                                 position="relative"
                             >
-                                <Typography
-                                    type={isMobile ? 'body-light' : 'body'}
-                                    content={rightItem}
-                                    inline
-                                />
+                                {rightItems.map(
+                                    (item: string, index: number) => (
+                                        <Typography
+                                            key={index}
+                                            type={
+                                                isMobile ? 'body-light' : 'body'
+                                            }
+                                            content={item}
+                                            inline
+                                            mL="10px"
+                                        />
+                                    )
+                                )}
                             </Spacing>
                         </div>
                     )}

@@ -48,6 +48,7 @@ export const Typography: FC<TypographyProps> = ({
                 marginLeft: mL ? mL : 0,
                 marginRight: mR ? mR : 0,
                 padding: 0,
+                border: '1px solid black',
             }}
         >
             <span
