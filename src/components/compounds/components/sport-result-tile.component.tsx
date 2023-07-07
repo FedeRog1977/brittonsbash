@@ -120,6 +120,52 @@ export const SportResultTile = () => {
                         })
                     )}
                 />
+                <ActivityTile
+                    title={{
+                        leftItem: '2021',
+                        rightItems: ['Distance', 'Elevation', 'Time', 'Speed'],
+                    }}
+                    entries={compiledRoadies.roadies[2021].map(
+                        ({ id, name, dist, elev, time, speed }: any) => ({
+                            leftItem: name,
+                            rightItems: [
+                                `${toMiles(dist)}`,
+                                `${toFeet(elev)}`,
+                                `${time}`,
+                                <>
+                                    {Boolean(!isMobile && speed) ? (
+                                        <>{toSpeed(speed, false)}</>
+                                    ) : (
+                                        ''
+                                    )}
+                                </>,
+                            ],
+                        })
+                    )}
+                />
+                <ActivityTile
+                    title={{
+                        leftItem: '2020',
+                        rightItems: ['Distance', 'Elevation', 'Time', 'Speed'],
+                    }}
+                    entries={compiledRoadies.roadies[2020].map(
+                        ({ id, name, dist, elev, time, speed }: any) => ({
+                            leftItem: name,
+                            rightItems: [
+                                `${toMiles(dist)}`,
+                                `${toFeet(elev)}`,
+                                `${time}`,
+                                <>
+                                    {Boolean(!isMobile && speed) ? (
+                                        <>{toSpeed(speed, false)}</>
+                                    ) : (
+                                        ''
+                                    )}
+                                </>,
+                            ],
+                        })
+                    )}
+                />
             </Tile>
             <Tile type="solid">
                 <Spacing mB={isMobile ? 7.5 : 15}>
@@ -132,170 +178,112 @@ export const SportResultTile = () => {
                 <ActivityTile
                     title={{
                         leftItem: 'Projects',
-                        rightItem: 'Statistics',
+                        rightItems: ['Occurences', 'Distance', 'Elevation'],
                     }}
                     entries={[
                         {
-                            leftItem: (
-                                <>
-                                    Total&nbsp;({compiledProjects.number.total})
-                                </>
-                            ),
-                            rightItem: (
-                                <>
-                                    {compiledProjects.distance.total}
-                                    &nbsp;|&nbsp;
-                                    {compiledProjects.elevation.total}
-                                </>
-                            ),
+                            leftItem: 'Total',
+                            rightItems: [
+                                `${compiledProjects.number.total}`,
+                                compiledProjects.distance.total,
+                                compiledProjects.elevation.total,
+                            ],
                         },
                         {
-                            leftItem: (
-                                <>2023&nbsp;({compiledProjects.number[2023]})</>
-                            ),
-                            rightItem: (
-                                <>
-                                    {compiledProjects.distance[2023]}
-                                    &nbsp;|&nbsp;
-                                    {compiledProjects.elevation[2023]}
-                                </>
-                            ),
+                            leftItem: '2023',
+                            rightItems: [
+                                `${compiledProjects.number[2023]}`,
+                                compiledProjects.distance[2023],
+                                compiledProjects.elevation[2023],
+                            ],
                         },
                         {
-                            leftItem: (
-                                <>2022&nbsp;({compiledProjects.number[2022]})</>
-                            ),
-                            rightItem: (
-                                <>
-                                    {compiledProjects.distance[2022]}
-                                    &nbsp;|&nbsp;
-                                    {compiledProjects.elevation[2022]}
-                                </>
-                            ),
+                            leftItem: '2022',
+                            rightItems: [
+                                `${compiledProjects.number[2022]}`,
+                                compiledProjects.distance[2022],
+                                compiledProjects.elevation[2022],
+                            ],
                         },
                         {
-                            leftItem: (
-                                <>2021&nbsp;({compiledProjects.number[2021]})</>
-                            ),
-                            rightItem: (
-                                <>
-                                    {compiledProjects.distance[2021]}
-                                    &nbsp;|&nbsp;
-                                    {compiledProjects.elevation[2021]}
-                                </>
-                            ),
+                            leftItem: '2021',
+                            rightItems: [
+                                `${compiledProjects.number[2021]}`,
+                                compiledProjects.distance[2021],
+                                compiledProjects.elevation[2021],
+                            ],
                         },
                         {
-                            leftItem: (
-                                <>2020&nbsp;({compiledProjects.number[2020]})</>
-                            ),
-                            rightItem: (
-                                <>
-                                    {compiledProjects.distance[2020]}
-                                    &nbsp;|&nbsp;
-                                    {compiledProjects.elevation[2020]}
-                                </>
-                            ),
+                            leftItem: '2020',
+                            rightItems: [
+                                `${compiledProjects.number[2020]}`,
+                                compiledProjects.distance[2020],
+                                compiledProjects.elevation[2020],
+                            ],
                         },
                     ]}
                 />
                 <ActivityTile
                     title={{
-                        leftItem: (
-                            <>2023&nbsp;({compiledProjects.number[2023]})</>
-                        ),
-                        rightItem: (
-                            <>
-                                {compiledProjects.distance[2023]}
-                                &nbsp;|&nbsp;
-                                {compiledProjects.elevation[2023]}
-                            </>
-                        ),
+                        leftItem: '2023',
+                        rightItems: ['Distance', 'Elevation', 'Time'],
                     }}
                     entries={compiledProjects.projects[2023].map(
-                        ({ id, name, dist, elev, time }: any) => ({
+                        ({ id, name, dist, elev, time, speed }: any) => ({
                             leftItem: name,
-                            rightItem: (
-                                <>
-                                    {toMiles(dist)}&nbsp;|&nbsp;
-                                    {toFeet(elev)}&nbsp;|&nbsp;{time}
-                                </>
-                            ),
+                            rightItems: [
+                                `${toMiles(dist)}`,
+                                `${toFeet(elev)}`,
+                                `${time}`,
+                            ],
                         })
                     )}
                 />
                 <ActivityTile
                     title={{
-                        leftItem: (
-                            <>2022&nbsp;({compiledProjects.number[2022]})</>
-                        ),
-                        rightItem: (
-                            <>
-                                {compiledProjects.distance[2022]}
-                                &nbsp;|&nbsp;
-                                {compiledProjects.elevation[2022]}
-                            </>
-                        ),
+                        leftItem: '2022',
+                        rightItems: ['Distance', 'Elevation', 'Time'],
                     }}
                     entries={compiledProjects.projects[2022].map(
-                        ({ id, name, dist, elev, time }: any) => ({
+                        ({ id, name, dist, elev, time, speed }: any) => ({
                             leftItem: name,
-                            rightItem: (
-                                <>
-                                    {toMiles(dist)}&nbsp;|&nbsp;
-                                    {toFeet(elev)}&nbsp;|&nbsp;{time}
-                                </>
-                            ),
+                            rightItems: [
+                                `${toMiles(dist)}`,
+                                `${toFeet(elev)}`,
+                                `${time}`,
+                            ],
                         })
                     )}
                 />
                 <ActivityTile
                     title={{
-                        leftItem: (
-                            <>2021&nbsp;({compiledProjects.number[2021]})</>
-                        ),
-                        rightItem: (
-                            <>
-                                {compiledProjects.distance[2021]}
-                                &nbsp;|&nbsp;
-                                {compiledProjects.elevation[2021]}
-                            </>
-                        ),
+                        leftItem: '2021',
+                        rightItems: ['Distance', 'Elevation', 'Time'],
                     }}
                     entries={compiledProjects.projects[2021].map(
-                        ({ id, name, dist, elev, time }: any) => ({
+                        ({ id, name, dist, elev, time, speed }: any) => ({
                             leftItem: name,
-                            rightItem: (
-                                <>
-                                    {toMiles(dist)}&nbsp;|&nbsp;
-                                    {toFeet(elev)}&nbsp;|&nbsp;{time}
-                                </>
-                            ),
+                            rightItems: [
+                                `${toMiles(dist)}`,
+                                `${toFeet(elev)}`,
+                                `${time}`,
+                            ],
                         })
                     )}
                 />
                 <ActivityTile
                     title={{
-                        leftItem: (
-                            <>2020&nbsp;({compiledProjects.number[2020]})</>
-                        ),
-                        rightItem: (
-                            <>
-                                {compiledProjects.distance[2020]}
-                                &nbsp;|&nbsp;
-                                {compiledProjects.elevation[2020]}
-                            </>
-                        ),
+                        leftItem: '2020',
+                        rightItems: ['Distance', 'Elevation', 'Time'],
                     }}
                     entries={compiledProjects.projects[2020].map(
-                        ({ id, name, dist, elev, time }: any) => ({
+                        ({ id, name, dist, elev, time, speed }: any) => ({
                             leftItem: name,
-                            rightItem: (
-                                <>
-                                    {toMiles(dist)}&nbsp;|&nbsp;
-                                    {toFeet(elev)}&nbsp;|&nbsp;{time}
-                                </>
-                            ),
+                            rightItems: [
+                                `${toMiles(dist)}`,
+                                `${toFeet(elev)}`,
+                                `${time}`,
+                            ],
                         })
                     )}
                 />
