@@ -295,160 +295,112 @@ export const SportResultTile = () => {
                 <ActivityTile
                     title={{
                         leftItem: 'Miles',
-                        rightItem: 'Statistics',
+                        rightItems: ['Occurences', 'Distance', 'Elevation'],
                     }}
                     entries={[
                         {
-                            leftItem: (
-                                <>Total&nbsp;({compiledMiles.number.total})</>
-                            ),
-                            rightItem: (
-                                <>
-                                    {compiledMiles.distance.total}
-                                    &nbsp;|&nbsp;
-                                    {compiledMiles.elevation.total}
-                                </>
-                            ),
+                            leftItem: 'Total',
+                            rightItems: [
+                                `${compiledMiles.number.total}`,
+                                compiledMiles.distance.total,
+                                compiledMiles.elevation.total,
+                            ],
                         },
                         {
-                            leftItem: (
-                                <>2023&nbsp;({compiledMiles.number[2023]})</>
-                            ),
-                            rightItem: (
-                                <>
-                                    {compiledMiles.distance[2023]}
-                                    &nbsp;|&nbsp;
-                                    {compiledMiles.elevation[2023]}
-                                </>
-                            ),
+                            leftItem: '2023',
+                            rightItems: [
+                                `${compiledMiles.number[2023]}`,
+                                compiledMiles.distance[2023],
+                                compiledMiles.elevation[2023],
+                            ],
                         },
                         {
-                            leftItem: (
-                                <>2022&nbsp;({compiledMiles.number[2022]})</>
-                            ),
-                            rightItem: (
-                                <>
-                                    {compiledMiles.distance[2022]}
-                                    &nbsp;|&nbsp;
-                                    {compiledMiles.elevation[2022]}
-                                </>
-                            ),
+                            leftItem: '2022',
+                            rightItems: [
+                                `${compiledMiles.number[2022]}`,
+                                compiledMiles.distance[2022],
+                                compiledMiles.elevation[2022],
+                            ],
                         },
                         {
-                            leftItem: (
-                                <>2021&nbsp;({compiledMiles.number[2021]})</>
-                            ),
-                            rightItem: (
-                                <>
-                                    {compiledMiles.distance[2021]}
-                                    &nbsp;|&nbsp;
-                                    {compiledMiles.elevation[2021]}
-                                </>
-                            ),
+                            leftItem: '2021',
+                            rightItems: [
+                                `${compiledMiles.number[2021]}`,
+                                compiledMiles.distance[2021],
+                                compiledMiles.elevation[2021],
+                            ],
                         },
                         {
-                            leftItem: (
-                                <>2020&nbsp;({compiledMiles.number[2020]})</>
-                            ),
-                            rightItem: (
-                                <>
-                                    {compiledMiles.distance[2020]}
-                                    &nbsp;|&nbsp;
-                                    {compiledMiles.elevation[2020]}
-                                </>
-                            ),
+                            leftItem: '2020',
+                            rightItems: [
+                                `${compiledMiles.number[2020]}`,
+                                compiledMiles.distance[2020],
+                                compiledMiles.elevation[2020],
+                            ],
                         },
                     ]}
                 />
                 <ActivityTile
                     title={{
-                        leftItem: <>2023&nbsp;({compiledMiles.number[2023]})</>,
-                        rightItem: (
-                            <>
-                                {compiledMiles.distance[2023]}
-                                &nbsp;|&nbsp;
-                                {compiledMiles.elevation[2023]}
-                            </>
-                        ),
+                        leftItem: '2023',
+                        rightItems: ['Distance', 'Elevation', 'Time'],
                     }}
                     entries={compiledMiles.miles[2023].map(
-                        ({ id, name, dist, elev, time }: any) => ({
+                        ({ id, name, dist, elev, time, speed }: any) => ({
                             leftItem: name,
-                            rightItem: (
-                                <>
-                                    {toMiles(dist)}&nbsp;|&nbsp;
-                                    {toFeet(elev)}&nbsp;|&nbsp;{time}
-                                </>
-                            ),
+                            rightItems: [
+                                `${toMiles(dist)}`,
+                                `${toFeet(elev)}`,
+                                `${time}`,
+                            ],
                         })
                     )}
                 />
                 <ActivityTile
                     title={{
-                        leftItem: <>2022&nbsp;({compiledMiles.number[2022]})</>,
-                        rightItem: (
-                            <>
-                                {compiledMiles.distance[2022]}
-                                &nbsp;|&nbsp;
-                                {compiledMiles.elevation[2022]}
-                            </>
-                        ),
+                        leftItem: '2022',
+                        rightItems: ['Distance', 'Elevation', 'Time'],
                     }}
                     entries={compiledMiles.miles[2022].map(
-                        ({ id, name, dist, elev, time }: any) => ({
+                        ({ id, name, dist, elev, time, speed }: any) => ({
                             leftItem: name,
-                            rightItem: (
-                                <>
-                                    {toMiles(dist)}&nbsp;|&nbsp;
-                                    {toFeet(elev)}&nbsp;|&nbsp;{time}
-                                </>
-                            ),
+                            rightItems: [
+                                `${toMiles(dist)}`,
+                                `${toFeet(elev)}`,
+                                `${time}`,
+                            ],
                         })
                     )}
                 />
                 <ActivityTile
                     title={{
-                        leftItem: <>2021&nbsp;({compiledMiles.number[2021]})</>,
-                        rightItem: (
-                            <>
-                                {compiledMiles.distance[2021]}
-                                &nbsp;|&nbsp;
-                                {compiledMiles.elevation[2021]}
-                            </>
-                        ),
+                        leftItem: '2021',
+                        rightItems: ['Distance', 'Elevation', 'Time'],
                     }}
                     entries={compiledMiles.miles[2021].map(
-                        ({ id, name, dist, elev, time }: any) => ({
+                        ({ id, name, dist, elev, time, speed }: any) => ({
                             leftItem: name,
-                            rightItem: (
-                                <>
-                                    {toMiles(dist)}&nbsp;|&nbsp;
-                                    {toFeet(elev)}&nbsp;|&nbsp;{time}
-                                </>
-                            ),
+                            rightItems: [
+                                `${toMiles(dist)}`,
+                                `${toFeet(elev)}`,
+                                `${time}`,
+                            ],
                         })
                     )}
                 />
                 <ActivityTile
                     title={{
-                        leftItem: <>2020&nbsp;({compiledMiles.number[2020]})</>,
-                        rightItem: (
-                            <>
-                                {compiledMiles.distance[2020]}
-                                &nbsp;|&nbsp;
-                                {compiledMiles.elevation[2020]}
-                            </>
-                        ),
+                        leftItem: '2020',
+                        rightItems: ['Distance', 'Elevation', 'Time'],
                     }}
                     entries={compiledMiles.miles[2020].map(
-                        ({ id, name, dist, elev, time }: any) => ({
+                        ({ id, name, dist, elev, time, speed }: any) => ({
                             leftItem: name,
-                            rightItem: (
-                                <>
-                                    {toMiles(dist)}&nbsp;|&nbsp;
-                                    {toFeet(elev)}&nbsp;|&nbsp;{time}
-                                </>
-                            ),
+                            rightItems: [
+                                `${toMiles(dist)}`,
+                                `${toFeet(elev)}`,
+                                `${time}`,
+                            ],
                         })
                     )}
                 />
