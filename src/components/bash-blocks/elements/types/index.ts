@@ -1,5 +1,6 @@
 export * from './button.types'
 export * from './flex.types'
+export * from './image.types'
 export * from './margin-padding.types'
 export * from './search.types'
 export * from './search-list.types'

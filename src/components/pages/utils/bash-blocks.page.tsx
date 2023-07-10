@@ -3,6 +3,7 @@ import {
     DropDownStories,
     FootnoteStories,
     ImageSliderStories,
+    ImageStories,
     TypographyStories,
 } from '../../bash-blocks'
 import { Background } from '../../bash-blocks'
@@ -16,6 +17,7 @@ export const BashBlocks = () => (
         <TypographyStories />
         <FootnoteStories />
         <ArticleStories />
+        <ImageStories />
         <ImageSliderStories />
         <DropDownStories />
     </>
