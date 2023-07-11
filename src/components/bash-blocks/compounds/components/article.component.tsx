@@ -25,6 +25,7 @@ export const Article: FC<ArticleProps> = ({
                     index,
                     type,
                     content,
+                    imageContent,
                     color,
                     inline,
                     boldFace,
@@ -37,6 +38,7 @@ export const Article: FC<ArticleProps> = ({
                         key={index}
                         type={type}
                         content={content}
+                        imageContent={imageContent}
                         fontFamily={fontFamily}
                         color={color}
                         textAlign={textAlign}

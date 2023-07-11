@@ -1,4 +1,5 @@
 import React from 'react'
+import { ImageProps } from './image.types'
 import { MarginProps } from './margin-padding.types'
 
 export type TypographyTextProps = {
@@ -15,7 +16,9 @@ export type TypographyTextProps = {
         | 'caption'
         | 'footnote'
         | 'tiny'
-    content: string | React.ReactElement | React.ReactNode | Element
+        | 'image'
+    content?: string | React.ReactElement | React.ReactNode | Element
+    imageContent?: ImageProps
     color?: string
     inline?: boolean
     boldFace?: boolean

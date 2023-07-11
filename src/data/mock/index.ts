@@ -1,2 +1,2 @@
 export * from './article.mock'
-export * from './image-slider.mock'
+export * from './image.mock'

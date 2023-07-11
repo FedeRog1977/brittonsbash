@@ -2,6 +2,7 @@ import {
     ArticleStories,
     DropDownStories,
     FootnoteStories,
+    ImageMatrixStories,
     ImageSliderStories,
     ImageStories,
     TypographyStories,
@@ -16,8 +17,9 @@ export const BashBlocks = () => (
         />
         <TypographyStories />
         <FootnoteStories />
-        <ArticleStories />
         <ImageStories />
+        <ArticleStories />
+        <ImageMatrixStories />
         <ImageSliderStories />
         <DropDownStories />
     </>

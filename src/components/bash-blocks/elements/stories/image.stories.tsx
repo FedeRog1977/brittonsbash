@@ -1,6 +1,6 @@
-import { imageSliderTestData } from '../../../../data'
+import { imageTestData } from '../../../../data'
 import { Tile } from '../..'
-import { Image, Typography } from '..'
+import { Typography } from '..'
 
 export const ImageStories = () => (
     <>
@@ -14,10 +14,13 @@ export const ImageStories = () => (
             />
         </Tile>
         <Tile type="solid">
-            <Image
-                url={imageSliderTestData[0].url}
-                alt={imageSliderTestData[0].alt}
-                caption={imageSliderTestData[0].description}
+            <Typography
+                type="image"
+                imageContent={{
+                    url: imageTestData[0].url,
+                    alt: imageTestData[0].alt,
+                    description: imageTestData[0].description,
+                }}
             />
         </Tile>
     </>

@@ -1,4 +1,4 @@
-import { imageSliderTestData } from '../../../../data'
+import { imageTestData } from '../../../../data'
 import { Typography } from '../..'
 import { ImageSlider, Tile } from '..'
 import { useScreenWidth } from '../../../../scripts'
@@ -18,7 +18,7 @@ export const ImageSliderStories = () => {
                 />
             </Tile>
             <Tile type="solid" dense={isMobile && true}>
-                <ImageSlider slides={imageSliderTestData} />
+                <ImageSlider slides={imageTestData} />
             </Tile>
         </>
     )

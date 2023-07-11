@@ -364,13 +364,13 @@ export const TypographyStories = () => (
             <Typography
                 type="body"
                 fontFamily="serif"
-                content="(CamelCase) (PascalCase) (Upper)"
+                content="CamelCase (PascalCase) (Upper)"
                 textAlign="left"
             />
             <Typography
                 type="body"
                 fontFamily="serif"
-                content="(camelCase) (pascalCase) (Lower)"
+                content="camelCase (pascalCase) (Lower)"
                 textAlign="left"
             />
             <Typography

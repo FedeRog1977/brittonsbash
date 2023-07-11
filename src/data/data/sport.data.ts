@@ -443,6 +443,13 @@ export const sportData = {
         ],
         miles: [
             {
+                id: 'M2023031',
+                name: 'Other',
+                dist: 3.08,
+                elev: 531,
+                time: '50:31',
+            },
+            {
                 id: 'M2023030',
                 name: 'Other',
                 dist: 4.2,

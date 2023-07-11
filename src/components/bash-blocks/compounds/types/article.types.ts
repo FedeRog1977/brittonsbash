@@ -1,7 +1,7 @@
-import { MarginProps, TypographyProps, TypographyStyleProps } from '../..'
+import { MarginProps, TypographyProps, TypographyTextProps } from '../..'
 
 export type ArticleProps = {
-    sections: TypographyStyleProps[]
+    sections: TypographyTextProps[]
     fontFamily?: TypographyProps['fontFamily']
     textAlign?: TypographyProps['textAlign']
 } & MarginProps

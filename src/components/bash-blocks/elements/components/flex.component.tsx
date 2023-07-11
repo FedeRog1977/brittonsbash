@@ -1,18 +1,20 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { FlexProps } from '..'
 import '../styles/flex.styles.css'
 
-export const Flex: FC<FlexProps> = ({ children, item }: any) => {
+export const Flex: FC<FlexProps> = ({ children, item, center }: any) => {
     if (item) {
-        return <div className="flex-col">{children}</div>
+        return (
+            <div
+                className="flex-col"
+                style={{
+                    textAlign: center && 'center',
+                }}
+            >
+                {children}
+            </div>
+        )
     }
 
-    return (
-        <div className="flex-row">
-            {/* {children.map((child: React.ReactElement) => (
-                <div className="flex-col">{child}</div>
-            ))} */}
-            {children}
-        </div>
-    )
+    return <div className="flex-row">{children}</div>
 }

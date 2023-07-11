@@ -6,6 +6,7 @@ import { TypographyProps } from '..'
 export const Typography: FC<TypographyProps> = ({
     type,
     content,
+    imageContent,
     fontFamily,
     textAlign,
     color,
@@ -22,6 +23,50 @@ export const Typography: FC<TypographyProps> = ({
     mR,
 }: any) => {
     const { isMobile } = useScreenWidth()
+
+    if (type === 'image') {
+        return (
+            <div
+                style={{
+                    display: inline && 'inline',
+                    textAlign: 'center',
+                    marginTop: paragraphMargins
+                        ? isMobile
+                            ? '15px'
+                            : '30px'
+                        : mT
+                        ? mT
+                        : '0px',
+                    marginBottom: paragraphMargins
+                        ? isMobile
+                            ? '15px'
+                            : '30px'
+                        : mB
+                        ? mB
+                        : '0px',
+                    marginLeft: mL ? mL : 0,
+                    marginRight: mR ? mR : 0,
+                    padding: 0,
+                }}
+            >
+                <img
+                    style={{
+                        width: isMobile ? '250px' : '500px',
+                    }}
+                    src={imageContent.url}
+                    alt={imageContent.alt}
+                />
+                {imageContent.description && (
+                    <Typography
+                        type="caption"
+                        content={imageContent.description}
+                        fontFamily={fontFamily}
+                        mT={5}
+                    />
+                )}
+            </div>
+        )
+    }
 
     return (
         <div

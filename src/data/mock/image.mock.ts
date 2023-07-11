@@ -1,4 +1,4 @@
-export const imageSliderTestData = [
+export const imageTestData = [
     {
         url: 'https://lewisbritton.com/Blog/Photos_IG/2023/on-the-day/13.jpg',
         alt: 'test-1',
