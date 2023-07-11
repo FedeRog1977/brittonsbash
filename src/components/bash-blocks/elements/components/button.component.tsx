@@ -63,12 +63,12 @@ export const Button: FC<ButtonProps> = ({
                         <div
                             style={{
                                 fontSize: '20px',
-                                color: 'var(--lighter-grey)',
+                                color: 'var(--light-grey)',
                                 position: 'absolute',
                                 float: 'left',
                                 zIndex: 10,
-                                top: '-3px',
-                                left: '2px',
+                                top: '-5px',
+                                left: '-7.5px',
                             }}
                         >
                             &#x2022;
@@ -76,12 +76,12 @@ export const Button: FC<ButtonProps> = ({
                         <div
                             style={{
                                 fontSize: '20px',
-                                color: 'var(--lighter-grey)',
+                                color: 'var(--light-grey)',
                                 position: 'absolute',
                                 float: 'right',
                                 zIndex: 10,
-                                top: '-3px',
-                                right: '2px',
+                                top: '-5px',
+                                right: '-7.5px',
                             }}
                         >
                             &#x2022;
@@ -89,12 +89,12 @@ export const Button: FC<ButtonProps> = ({
                         <div
                             style={{
                                 fontSize: '20px',
-                                color: 'var(--lighter-grey)',
+                                color: 'var(--light-grey)',
                                 position: 'absolute',
                                 float: 'left',
                                 zIndex: 10,
-                                bottom: '-3px',
-                                left: '2px',
+                                bottom: '-5px',
+                                left: '-7.5px',
                             }}
                         >
                             &#x2022;
@@ -102,12 +102,12 @@ export const Button: FC<ButtonProps> = ({
                         <div
                             style={{
                                 fontSize: '20px',
-                                color: 'var(--lighter-grey)',
+                                color: 'var(--light-grey)',
                                 position: 'absolute',
                                 float: 'right',
                                 zIndex: 10,
-                                bottom: '-3px',
-                                right: '2px',
+                                bottom: '-5px',
+                                right: '-7.5px',
                             }}
                         >
                             &#x2022;

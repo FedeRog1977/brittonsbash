@@ -21,6 +21,8 @@ export const DropDown: FC<DropDownProps> = ({
                     <Typography
                         type={typeType ? typeType : 'body'}
                         content={<>{content ? <>{content}</> : <>Expand</>}</>}
+                        mT={content ? 0 : 2.5}
+                        mB={content ? 0 : 5}
                     />
                 )}
                 {funcResp === true && (
@@ -30,6 +32,8 @@ export const DropDown: FC<DropDownProps> = ({
                             <>{content ? <>{content}</> : <>Contract</>}</>
                         }
                         color="var(--light-blue)"
+                        mT={content ? 0 : 2.5}
+                        mB={content ? 0 : 5}
                     />
                 )}
             </>
