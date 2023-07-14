@@ -60,7 +60,7 @@ export const ActivityTile: FC<ActivityTileProps> = ({
                     />
                 )}
             </Spacing>
-            {entries.map(({ leftItem, rightItem, rightItems, index }: any) => (
+            {entries.map(({ leftItem, rightItems, index }: any) => (
                 <>
                     {Boolean(leftItem && rightItems) && (
                         <div key={index}>
