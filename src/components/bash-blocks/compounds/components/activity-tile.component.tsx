@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 import { ActivityTileProps } from '../../../bash-blocks'
 import { useScreenWidth } from '../../../../scripts'
 import { Spacing, Typography } from '../..'
@@ -6,7 +6,7 @@ import { Spacing, Typography } from '../..'
 export const ActivityTile: FC<ActivityTileProps> = ({
     title,
     entries,
-}: any) => {
+}: ActivityTileProps) => {
     const { isMobile } = useScreenWidth()
 
     return (
@@ -33,23 +33,28 @@ export const ActivityTile: FC<ActivityTileProps> = ({
             <Spacing textAlign="right" position="relative">
                 {Array.isArray(title.rightItems) ? (
                     <>
-                        {title.rightItems.map((item: string, index: number) => (
-                            <div
-                                style={{
-                                    width: isMobile ? '75px' : '100px',
-                                    display: 'inline-block',
-                                    // border: '1px solid black',
-                                }}
-                            >
-                                <Typography
-                                    key={index}
-                                    type="body"
-                                    content={item}
-                                    boldFace={isMobile ? false : true}
-                                    inline
-                                />
-                            </div>
-                        ))}
+                        {title.rightItems.map(
+                            (
+                                item: ActivityTileProps['title']['rightItems'],
+                                index: number
+                            ) => (
+                                <div
+                                    style={{
+                                        width: isMobile ? '75px' : '100px',
+                                        display: 'inline-block',
+                                        // border: '1px solid black',
+                                    }}
+                                >
+                                    <Typography
+                                        key={index}
+                                        type="body"
+                                        content={item as React.ReactElement}
+                                        boldFace={isMobile ? false : true}
+                                        inline
+                                    />
+                                </div>
+                            )
+                        )}
                     </>
                 ) : (
                     <Typography
@@ -81,7 +86,10 @@ export const ActivityTile: FC<ActivityTileProps> = ({
                                 {Array.isArray(rightItems) ? (
                                     <>
                                         {rightItems.map(
-                                            (item: string, index: number) => (
+                                            (
+                                                item: ActivityTileProps['entries'][0]['rightItems'],
+                                                index: number
+                                            ) => (
                                                 <div
                                                     style={{
                                                         width: isMobile

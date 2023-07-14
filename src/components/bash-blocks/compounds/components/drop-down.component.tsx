@@ -11,7 +11,7 @@ export const DropDown: FC<DropDownProps> = ({
     subContent,
     textAlign,
     dots,
-}: any) => (
+}: DropDownProps) => (
     <Button
         type={buttonType}
         func={func}

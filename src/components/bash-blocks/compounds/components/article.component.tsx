@@ -7,51 +7,47 @@ export const Article: FC<ArticleProps> = ({
     textAlign,
     mT,
     mB,
-}: any) => {
-    console.log(sections)
-
-    return (
-        <div
-            style={{
-                marginTop: mT,
-                marginBottom: mB,
-                marginLeft: 0,
-                marginRight: 0,
-                padding: 0,
-            }}
-        >
-            {sections.map(
-                ({
-                    index,
-                    type,
-                    content,
-                    imageContent,
-                    color,
-                    inline,
-                    boldFace,
-                    italicize,
-                    smallCaps,
-                    textDecoration,
-                    link,
-                }: any) => (
-                    <Typography
-                        key={index}
-                        type={type}
-                        content={content}
-                        imageContent={imageContent}
-                        fontFamily={fontFamily}
-                        color={color}
-                        textAlign={textAlign}
-                        inline={inline}
-                        boldFace={boldFace}
-                        italicize={italicize}
-                        smallCaps={smallCaps}
-                        textDecoration={textDecoration}
-                        link={link}
-                        paragraphMargins
-                    />
-                )
-            )}
-        </div>
-    )
-}
+}: ArticleProps) => (
+    <div
+        style={{
+            marginTop: mT,
+            marginBottom: mB,
+            marginLeft: 0,
+            marginRight: 0,
+            padding: 0,
+        }}
+    >
+        {sections.map(
+            ({
+                index,
+                type,
+                content,
+                imageContent,
+                color,
+                inline,
+                boldFace,
+                italicize,
+                smallCaps,
+                textDecoration,
+                link,
+            }: any) => (
+                <Typography
+                    key={index}
+                    type={type}
+                    content={content}
+                    imageContent={imageContent}
+                    fontFamily={fontFamily}
+                    color={color}
+                    textAlign={textAlign}
+                    inline={inline}
+                    boldFace={boldFace}
+                    italicize={italicize}
+                    smallCaps={smallCaps}
+                    textDecoration={textDecoration}
+                    link={link}
+                    paragraphMargins
+                />
+            )
+        )}
+    </div>
+)
