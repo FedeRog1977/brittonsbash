@@ -4,9 +4,8 @@ import { HeaderMobileProps } from '..'
 import { useScreenWidth } from '../../../../scripts'
 
 export const HeaderMobile: FC<HeaderMobileProps> = ({
-    funcMobile,
-    funcUtilities,
-}: any) => {
+    ...props
+}: HeaderMobileProps) => {
     const { isMobile } = useScreenWidth()
 
     return (
@@ -31,10 +30,10 @@ export const HeaderMobile: FC<HeaderMobileProps> = ({
                             </ul>
                             <ul>
                                 <li>
-                                    <span onClick={funcMobile}>Blog</span>
+                                    <span onClick={props.funcMobile}>Blog</span>
                                 </li>
                                 <li>
-                                    <span onClick={funcUtilities}>
+                                    <span onClick={props.funcUtilities}>
                                         Utilities
                                     </span>
                                 </li>

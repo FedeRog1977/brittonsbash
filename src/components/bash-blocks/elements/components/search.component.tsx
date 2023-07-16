@@ -6,7 +6,7 @@ export const Search: FC<SearchProps> = ({
     className,
     func,
     placeholder,
-}: any) => (
+}: SearchProps) => (
     <input
         type="text"
         className={className}

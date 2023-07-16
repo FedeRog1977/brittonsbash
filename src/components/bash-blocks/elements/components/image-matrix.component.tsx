@@ -3,13 +3,15 @@ import { ImageMatrixProps, Typography } from '..'
 import { useScreenWidth } from '../../../../scripts'
 import { Flex } from './flex.component'
 
-export const ImageMatrix: FC<ImageMatrixProps> = ({ items }: any) => {
+export const ImageMatrix: FC<ImageMatrixProps> = ({
+    ...props
+}: ImageMatrixProps) => {
     const { isMobile } = useScreenWidth()
 
     return (
         <>
             <Flex center>
-                {items.map(({ url, alt, description }: any) => (
+                {props.items.map(({ url, alt, description }: any) => (
                     <Flex item key={alt}>
                         <img
                             style={{

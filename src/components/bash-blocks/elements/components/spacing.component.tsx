@@ -1,49 +1,62 @@
 import { FC } from 'react'
 import { SpacingProps } from '..'
 
-export const Spacing: FC<SpacingProps> = ({
-    mX,
-    mY,
-    mT,
-    mB,
-    mL,
-    mR,
-    pX,
-    pY,
-    pT,
-    pB,
-    pL,
-    pR,
-    children,
-    textAlign,
-    ruleTop,
-    ruleBottom,
-    backgroundColor,
-    border,
-    borderRadius,
-    position,
-}: any) => (
+export const Spacing: FC<SpacingProps> = ({ ...props }: SpacingProps) => (
     <div
         style={{
-            textAlign: textAlign,
-            backgroundColor: backgroundColor,
-            border: border,
-            borderTop: ruleTop ? '1.5px solid var(--darker-grey)' : undefined,
-            borderBottom: ruleBottom
+            textAlign: props.textAlign,
+            backgroundColor: props.backgroundColor,
+            border: props.border,
+            borderTop: props.ruleTop
                 ? '1.5px solid var(--darker-grey)'
                 : undefined,
-            borderRadius: borderRadius,
-            position: position,
-            marginTop: mY ? `${mY / 2}px` : mT ? `${mT}px` : 0,
-            marginBottom: mY ? `${mY / 2}px` : mB ? `${mB}px` : 0,
-            marginLeft: mX ? `${mX / 2}px` : mL ? `${mL}px` : 0,
-            marginRight: mX ? `${mX / 2}px` : mR ? `${mR}px` : 0,
-            paddingTop: pY ? `${pY / 2}px` : pT ? `${pT}px` : 0,
-            paddingBottom: pY ? `${pY / 2}px` : pB ? `${pB}px` : 0,
-            paddingLeft: pX ? `${pX / 2}px` : pL ? `${pL}px` : 0,
-            paddingRight: pX ? `${pX / 2}px` : pR ? `${pR}px` : 0,
+            borderBottom: props.ruleBottom
+                ? '1.5px solid var(--darker-grey)'
+                : undefined,
+            borderRadius: props.borderRadius,
+            position: props.position ? props.position : undefined,
+            marginTop: props.mY
+                ? `${props.mY / 2}px`
+                : props.mT
+                ? `${props.mT}px`
+                : 0,
+            marginBottom: props.mY
+                ? `${props.mY / 2}px`
+                : props.mB
+                ? `${props.mB}px`
+                : 0,
+            marginLeft: props.mX
+                ? `${props.mX / 2}px`
+                : props.mL
+                ? `${props.mL}px`
+                : 0,
+            marginRight: props.mX
+                ? `${props.mX / 2}px`
+                : props.mR
+                ? `${props.mR}px`
+                : 0,
+            paddingTop: props.pY
+                ? `${props.pY / 2}px`
+                : props.pT
+                ? `${props.pT}px`
+                : 0,
+            paddingBottom: props.pY
+                ? `${props.pY / 2}px`
+                : props.pB
+                ? `${props.pB}px`
+                : 0,
+            paddingLeft: props.pX
+                ? `${props.pX / 2}px`
+                : props.pL
+                ? `${props.pL}px`
+                : 0,
+            paddingRight: props.pX
+                ? `${props.pX / 2}px`
+                : props.pR
+                ? `${props.pR}px`
+                : 0,
         }}
     >
-        {children && children}
+        {props.children && props.children}
     </div>
 )

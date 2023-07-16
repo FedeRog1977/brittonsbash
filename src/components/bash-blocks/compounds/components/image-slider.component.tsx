@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { FC, useState } from 'react'
 import '../styles/image-slider.styles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -7,14 +7,16 @@ import {
     faEject,
     faRefresh,
 } from '@fortawesome/free-solid-svg-icons'
-import { Typography } from '../..'
+import { ImageSliderProps, Typography } from '../..'
 import { useScreenWidth } from '../../../../scripts'
 
-export const ImageSlider = ({ slides }: any) => {
+export const ImageSlider: FC<ImageSliderProps> = ({
+    ...props
+}: ImageSliderProps) => {
     const { screenWidth, isMobile } = useScreenWidth()
 
     const [current, setCurrent] = useState(0)
-    const length = slides.length
+    const length = props.slides.length
 
     const nextSlide = () => {
         setCurrent(current === length - 1 ? 0 : current + 1)
@@ -24,7 +26,7 @@ export const ImageSlider = ({ slides }: any) => {
         setCurrent(current === 0 ? length - 1 : current - 1)
     }
 
-    if (!Array.isArray(slides) || slides.length <= 0) {
+    if (!Array.isArray(props.slides) || props.slides.length <= 0) {
         return null
     }
 
@@ -45,7 +47,7 @@ export const ImageSlider = ({ slides }: any) => {
                 className="right-arrow"
                 onClick={nextSlide}
             />
-            {slides.map((slide, index) => (
+            {props.slides.map((slide, index) => (
                 <>
                     {index === current && (
                         <div key={index}>
@@ -65,7 +67,7 @@ export const ImageSlider = ({ slides }: any) => {
                                     type={isMobile ? 'footnote' : 'body'}
                                     content={
                                         <>
-                                            {current + 1}/{slides.length}
+                                            {current + 1}/{props.slides.length}
                                         </>
                                     }
                                     color="var(--white)"
@@ -75,7 +77,7 @@ export const ImageSlider = ({ slides }: any) => {
                     )}
                 </>
             ))}
-            {slides.map((slide, index) => (
+            {props.slides.map((slide, index) => (
                 <div
                     key={index}
                     className={index === current ? 'slide active' : 'slide'}

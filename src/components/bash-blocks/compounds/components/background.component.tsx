@@ -1,7 +1,11 @@
+import { FC } from 'react'
+import { BackgroundProps } from '..'
 import '../styles/background.styles.css'
 
-export const Background = ({ content, className }: any) => (
+export const Background: FC<BackgroundProps> = ({
+    ...props
+}: BackgroundProps) => (
     <div className="background">
-        <span className={className}>{content}</span>
+        <span className={props.className}>{props.content}</span>
     </div>
 )

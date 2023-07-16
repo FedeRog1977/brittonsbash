@@ -2,44 +2,49 @@ import { FC } from 'react'
 import { Button, DropDownProps } from '../..'
 import { Typography } from '../..'
 
-export const DropDown: FC<DropDownProps> = ({
-    typeType,
-    buttonType,
-    func,
-    funcResp,
-    content,
-    subContent,
-    textAlign,
-    dots,
-}: DropDownProps) => (
+export const DropDown: FC<DropDownProps> = ({ ...props }: DropDownProps) => (
     <Button
-        type={buttonType}
-        func={func}
+        type={props.buttonType}
+        func={props.func}
         content={
             <>
-                {funcResp === false && (
+                {props.funcResp === false && (
                     <Typography
-                        type={typeType ? typeType : 'body'}
-                        content={<>{content ? <>{content}</> : <>Expand</>}</>}
-                        mT={content ? 0 : 2.5}
-                        mB={content ? 0 : 5}
+                        type={props.typeType ? props.typeType : 'body'}
+                        content={
+                            <>
+                                {props.content ? (
+                                    <>{props.content}</>
+                                ) : (
+                                    <>Expand</>
+                                )}
+                            </>
+                        }
+                        mT={props.content ? 0 : 2.5}
+                        mB={props.content ? 0 : 5}
                     />
                 )}
-                {funcResp === true && (
+                {props.funcResp === true && (
                     <Typography
-                        type={typeType ? typeType : 'body'}
+                        type={props.typeType ? props.typeType : 'body'}
                         content={
-                            <>{content ? <>{content}</> : <>Contract</>}</>
+                            <>
+                                {props.content ? (
+                                    <>{props.content}</>
+                                ) : (
+                                    <>Contract</>
+                                )}
+                            </>
                         }
                         color="var(--light-blue)"
-                        mT={content ? 0 : 2.5}
-                        mB={content ? 0 : 5}
+                        mT={props.content ? 0 : 2.5}
+                        mB={props.content ? 0 : 5}
                     />
                 )}
             </>
         }
-        subContent={subContent}
-        textAlign={textAlign}
-        dots={dots}
+        subContent={props.subContent}
+        textAlign={props.textAlign}
+        dots={props.dots}
     />
 )

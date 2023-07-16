@@ -2,19 +2,19 @@ import { FC } from 'react'
 import { FlexProps } from '..'
 import '../styles/flex.styles.css'
 
-export const Flex: FC<FlexProps> = ({ children, item, center }: any) => {
-    if (item) {
+export const Flex: FC<FlexProps> = ({ ...props }: FlexProps) => {
+    if (props.item) {
         return (
             <div
                 className="flex-col"
                 style={{
-                    textAlign: center && 'center',
+                    textAlign: props.center ? 'center' : 'left',
                 }}
             >
-                {children}
+                {props.children}
             </div>
         )
     }
 
-    return <div className="flex-row">{children}</div>
+    return <div className="flex-row">{props.children}</div>
 }

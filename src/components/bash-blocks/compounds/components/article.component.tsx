@@ -1,23 +1,17 @@
 import { FC } from 'react'
 import { ArticleProps, Typography } from '../..'
 
-export const Article: FC<ArticleProps> = ({
-    sections,
-    fontFamily,
-    textAlign,
-    mT,
-    mB,
-}: ArticleProps) => (
+export const Article: FC<ArticleProps> = ({ ...props }: ArticleProps) => (
     <div
         style={{
-            marginTop: mT,
-            marginBottom: mB,
+            marginTop: props.mT,
+            marginBottom: props.mB,
             marginLeft: 0,
             marginRight: 0,
             padding: 0,
         }}
     >
-        {sections.map(
+        {props.sections.map(
             ({
                 index,
                 type,
@@ -36,9 +30,9 @@ export const Article: FC<ArticleProps> = ({
                     type={type}
                     content={content}
                     imageContent={imageContent}
-                    fontFamily={fontFamily}
+                    fontFamily={props.fontFamily}
                     color={color}
-                    textAlign={textAlign}
+                    textAlign={props.textAlign}
                     inline={inline}
                     boldFace={boldFace}
                     italicize={italicize}

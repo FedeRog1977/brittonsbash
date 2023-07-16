@@ -4,48 +4,32 @@ import '../styles/typography.styles.css'
 import { TypographyProps } from '..'
 
 export const Typography: FC<TypographyProps> = ({
-    type,
-    content,
-    imageContent,
-    fontFamily,
-    textAlign,
-    color,
-    inline,
-    boldFace,
-    italicize,
-    smallCaps,
-    textDecoration,
-    paragraphMargins,
-    link,
-    mT,
-    mB,
-    mL,
-    mR,
-}: any) => {
+    ...props
+}: TypographyProps) => {
     const { isMobile } = useScreenWidth()
 
-    if (type === 'image') {
+    if (props.imageContent) {
         return (
             <div
                 style={{
-                    display: inline && 'inline',
+                    display: props.inline ? 'inline' : undefined,
                     textAlign: 'center',
-                    marginTop: paragraphMargins
+                    marginTop: props.paragraphMargins
                         ? isMobile
                             ? '15px'
                             : '30px'
-                        : mT
-                        ? mT
+                        : props.mT
+                        ? props.mT
                         : '0px',
-                    marginBottom: paragraphMargins
+                    marginBottom: props.paragraphMargins
                         ? isMobile
                             ? '15px'
                             : '30px'
-                        : mB
-                        ? mB
+                        : props.mB
+                        ? props.mB
                         : '0px',
-                    marginLeft: mL ? mL : 0,
-                    marginRight: mR ? mR : 0,
+                    marginLeft: props.mL ? props.mL : 0,
+                    marginRight: props.mR ? props.mR : 0,
                     padding: 0,
                 }}
             >
@@ -53,14 +37,14 @@ export const Typography: FC<TypographyProps> = ({
                     style={{
                         width: isMobile ? '250px' : '500px',
                     }}
-                    src={imageContent.url}
-                    alt={imageContent.alt}
+                    src={props.imageContent.url}
+                    alt={props.imageContent.alt}
                 />
-                {imageContent.description && (
+                {props.imageContent.description && (
                     <Typography
                         type="caption"
-                        content={imageContent.description}
-                        fontFamily={fontFamily}
+                        content={props.imageContent.description}
+                        fontFamily={props.fontFamily}
                         mT={5}
                     />
                 )}
@@ -71,59 +55,63 @@ export const Typography: FC<TypographyProps> = ({
     return (
         <div
             className={
-                fontFamily === 'serif' ? `${type}-serif` : `${type}-sans-serif`
+                props.fontFamily === 'serif'
+                    ? `${props.type}-serif`
+                    : `${props.type}-sans-serif`
             }
             style={{
-                display: inline && 'inline',
-                textAlign: textAlign,
-                marginTop: paragraphMargins
+                display: props.inline ? 'inline' : undefined,
+                textAlign: props.textAlign,
+                marginTop: props.paragraphMargins
                     ? isMobile
                         ? '15px'
                         : '30px'
-                    : mT
-                    ? mT
+                    : props.mT
+                    ? props.mT
                     : '0px',
-                marginBottom: paragraphMargins
+                marginBottom: props.paragraphMargins
                     ? isMobile
                         ? '15px'
                         : '30px'
-                    : mB
-                    ? mB
+                    : props.mB
+                    ? props.mB
                     : '0px',
-                marginLeft: mL ? mL : 0,
-                marginRight: mR ? mR : 0,
+                marginLeft: props.mL ? props.mL : 0,
+                marginRight: props.mR ? props.mR : 0,
                 padding: 0,
             }}
         >
             <span
                 style={{
-                    color: color,
-                    fontVariant: smallCaps && 'small-caps',
-                    textDecoration: textDecoration,
+                    color: props.color,
+                    fontVariant: props.smallCaps ? 'small-caps' : undefined,
+                    textDecoration: props.textDecoration,
                 }}
             >
-                {boldFace ? (
+                {props.boldFace ? (
                     <>
-                        {italicize ? (
+                        {props.italicize ? (
                             <i
                                 className={
-                                    fontFamily === 'serif'
+                                    props.fontFamily === 'serif'
                                         ? 'italic-serif'
                                         : 'italic-sans-serif'
                                 }
                             >
                                 <b
                                     className={
-                                        fontFamily === 'serif'
+                                        props.fontFamily === 'serif'
                                             ? 'bold-serif'
                                             : 'bold-sans-serif'
                                     }
                                 >
                                     <>
-                                        {link ? (
-                                            <a href={link}>{content}</a>
+                                        {props.link ? (
+                                            <a href={props.link}>
+                                                <>{props.content}</>
+                                            </a>
                                         ) : (
-                                            <>{content}</>
+                                            <>{props.content}</>
                                         )}
                                     </>
                                 </b>
@@ -131,41 +119,47 @@ export const Typography: FC<TypographyProps> = ({
                         ) : (
                             <b
                                 className={
-                                    fontFamily === 'serif'
+                                    props.fontFamily === 'serif'
                                         ? 'bold-serif'
                                         : 'bold-sans-serif'
                                 }
                             >
-                                {link ? (
-                                    <a href={link}>{content}</a>
+                                {props.link ? (
+                                    <a href={props.link}>
+                                        <>{props.content}</>
+                                    </a>
                                 ) : (
-                                    <>{content}</>
+                                    <>{props.content}</>
                                 )}
                             </b>
                         )}
                     </>
                 ) : (
                     <>
-                        {italicize ? (
+                        {props.italicize ? (
                             <i
                                 className={
-                                    fontFamily === 'serif'
+                                    props.fontFamily === 'serif'
                                         ? 'italic-serif'
                                         : 'italic-sans-serif'
                                 }
                             >
-                                {link ? (
-                                    <a href={link}>{content}</a>
+                                {props.link ? (
+                                    <a href={props.link}>
+                                        <>{props.content}</>
+                                    </a>
                                 ) : (
-                                    <>{content}</>
+                                    <>{props.content}</>
                                 )}
                             </i>
                         ) : (
                             <>
-                                {link ? (
-                                    <a href={link}>{content}</a>
+                                {props.link ? (
+                                    <a href={props.link}>
+                                        <>{props.content}</>
+                                    </a>
                                 ) : (
-                                    <>{content}</>
+                                    <>{props.content}</>
                                 )}
                             </>
                         )}

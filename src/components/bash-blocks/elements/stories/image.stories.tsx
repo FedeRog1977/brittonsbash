@@ -15,7 +15,6 @@ export const ImageStories = () => (
         </Tile>
         <Tile type="solid">
             <Typography
-                type="image"
                 imageContent={{
                     url: imageTestData[0].url,
                     alt: imageTestData[0].alt,

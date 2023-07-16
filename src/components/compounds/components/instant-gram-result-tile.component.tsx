@@ -15,7 +15,7 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
     event,
     sportEvent,
     showSportEvent,
-}: any) => {
+}: InstantGramResultTileProps) => {
     const { isMobile } = useScreenWidth()
     const { showDropDown, setShowDropDown } = useDropDown()
     const refactoredEvent = refactorEvent({ event, sportEvent, showSportEvent })

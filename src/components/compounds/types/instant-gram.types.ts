@@ -6,5 +6,5 @@ export type InstantGramSearchTileProps = {
 export type InstantGramResultTileProps = {
     event: {}
     sportEvent: {}
-    showSportEvent: {}
+    showSportEvent: boolean
 }

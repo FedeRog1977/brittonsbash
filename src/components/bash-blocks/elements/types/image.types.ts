@@ -7,3 +7,7 @@ export type ImageProps = {
 export type ImageMatrixProps = {
     items: ImageProps[]
 }
+
+export type ImageSliderProps = {
+    slides: ImageProps[]
+}

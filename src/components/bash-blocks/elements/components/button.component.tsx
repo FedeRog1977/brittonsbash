@@ -3,31 +3,23 @@ import '../styles/button.styles.css'
 import { ButtonProps, Spacing, Typography } from '..'
 import { useScreenWidth } from '../../../../scripts'
 
-export const Button: FC<ButtonProps> = ({
-    type,
-    func,
-    value,
-    content,
-    subContent,
-    textAlign,
-    dots,
-}: any) => {
+export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
     const { isMobile } = useScreenWidth()
 
     return (
         <button
-            className={type}
-            onClick={func}
-            value={value}
+            className={props.type}
+            onClick={props.func}
+            value={props.value}
             style={{
-                textAlign: textAlign ? textAlign : 'center',
+                textAlign: props.textAlign ? props.textAlign : 'center',
             }}
         >
             <Spacing
-                mX={Boolean(!isMobile && dots) ? 20 : 0}
-                mY={Boolean(!isMobile && dots) ? 10 : 0}
+                mX={Boolean(!isMobile && props.dots) ? 20 : 0}
+                mY={Boolean(!isMobile && props.dots) ? 10 : 0}
             >
-                {Boolean(!isMobile && dots) ? (
+                {Boolean(!isMobile && props.dots) ? (
                     <div
                         style={{
                             position: 'relative',
@@ -37,11 +29,11 @@ export const Button: FC<ButtonProps> = ({
                             alignItems: isMobile ? undefined : 'center',
                         }}
                     >
-                        {subContent && (
+                        {props.subContent && (
                             <div
                                 style={{
                                     float:
-                                        textAlign === 'right'
+                                        props.textAlign === 'right'
                                             ? isMobile
                                                 ? 'none'
                                                 : 'left'
@@ -53,7 +45,7 @@ export const Button: FC<ButtonProps> = ({
                                     color="var(--medium-grey)"
                                     content={
                                         <>
-                                            {subContent}
+                                            {props.subContent}
                                             &nbsp;
                                         </>
                                     }
@@ -112,15 +104,15 @@ export const Button: FC<ButtonProps> = ({
                         >
                             &#x2022;
                         </div>
-                        {content}
+                        {props.content}
                     </div>
                 ) : (
                     <div>
-                        {subContent && (
+                        {props.subContent && (
                             <div
                                 style={{
                                     float:
-                                        textAlign === 'right'
+                                        props.textAlign === 'right'
                                             ? isMobile
                                                 ? 'none'
                                                 : 'left'
@@ -130,11 +122,11 @@ export const Button: FC<ButtonProps> = ({
                                 <Typography
                                     type="h5"
                                     color="var(--medium-grey)"
-                                    content={<>{subContent}</>}
+                                    content={<>{props.subContent}</>}
                                 />
                             </div>
                         )}
-                        {content}
+                        {props.content}
                     </div>
                 )}
             </Spacing>

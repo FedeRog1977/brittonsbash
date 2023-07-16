@@ -3,16 +3,13 @@ import '../styles/search.styles.css'
 import { SearchListProps } from '..'
 
 export const SearchList: FC<SearchListProps> = ({
-    className,
-    func,
-    content,
-    placeholder,
-}: any) => (
-    <select className={className} onChange={func}>
+    ...props
+}: SearchListProps) => (
+    <select className={props.className} onChange={props.func}>
         <option value="" disabled selected>
-            Select {placeholder}
+            Select {props.placeholder}
         </option>
-        {content.map(({ index, name }: any) => (
+        {props.content.map(({ index, name }: any) => (
             <option key={index} value={name}>
                 {name}
             </option>

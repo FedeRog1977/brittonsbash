@@ -13,6 +13,6 @@ export type SpacingProps = {
     backgroundColor?: string
     border?: string
     borderRadius?: string
-    position?: string
+    position?: 'static' | 'relative' | 'absolute' | 'sticky' | 'fixed'
 } & MarginProps &
     PaddingProps
