@@ -14,13 +14,7 @@ export const Typography: FC<TypographyProps> = ({
                 style={{
                     display: props.inline ? 'inline' : undefined,
                     textAlign: 'center',
-                    marginTop: props.paragraphMargins
-                        ? isMobile
-                            ? '15px'
-                            : '30px'
-                        : props.mT
-                        ? props.mT
-                        : '0px',
+                    marginTop: props.mT ? props.mT : '0px',
                     marginBottom: props.paragraphMargins
                         ? isMobile
                             ? '15px'
@@ -62,13 +56,7 @@ export const Typography: FC<TypographyProps> = ({
             style={{
                 display: props.inline ? 'inline' : undefined,
                 textAlign: props.textAlign,
-                marginTop: props.paragraphMargins
-                    ? isMobile
-                        ? '15px'
-                        : '30px'
-                    : props.mT
-                    ? props.mT
-                    : '0px',
+                marginTop: props.mT ? props.mT : '0px',
                 marginBottom: props.paragraphMargins
                     ? isMobile
                         ? '15px'
