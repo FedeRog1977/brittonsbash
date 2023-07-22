@@ -160,6 +160,22 @@ export const sportData = {
         ],
         projects: [
             {
+                id: 'P2023017',
+                name: 'D’tox',
+                dist: 5.09,
+                elev: 2211,
+                time: '1:40:25',
+                companionship: 0,
+                islands: [],
+                munros: ['Beinn Odhar'],
+                munroTops: [],
+                corbetts: [],
+                corbettTops: [],
+                grahams: [],
+                subTwos: [],
+                donalds: [],
+            },
+            {
                 id: 'P2023016',
                 name: 'McSoup',
                 dist: 10.35,

@@ -39,19 +39,12 @@ export const InstantGramSearchList: FC<InstantGramSearchListProps> = ({
                                         content={<>{id.slice(-2)}</>}
                                         color="var(--medium-grey)"
                                     />
-                                    <Typography
-                                        type="h4"
-                                        content={
-                                            <>
-                                                {prefix && (
-                                                    <>
-                                                        {prefix}
-                                                        {':'}
-                                                    </>
-                                                )}
-                                            </>
-                                        }
-                                    />
+                                    {prefix && (
+                                        <Typography
+                                            type="h4"
+                                            content={prefix + ':'}
+                                        />
+                                    )}
                                     <Typography
                                         type="h4"
                                         content={
@@ -61,6 +54,11 @@ export const InstantGramSearchList: FC<InstantGramSearchListProps> = ({
                                                 ))}
                                             </>
                                         }
+                                    />
+                                    <Typography
+                                        type="h5"
+                                        content={<>&#9135;</>}
+                                        color="var(--medium-grey)"
                                     />
                                 </Spacing>
                             }

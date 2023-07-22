@@ -59,11 +59,11 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                                 position: 'absolute',
                                 float: 'left',
                                 zIndex: 10,
-                                top: '-5px',
-                                left: '-7.5px',
+                                top: '-9.5px',
+                                left: '-12.5px',
                             }}
                         >
-                            &#x2022;
+                            &#x25A1;
                         </div>
                         <div
                             style={{
@@ -72,11 +72,11 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                                 position: 'absolute',
                                 float: 'right',
                                 zIndex: 10,
-                                top: '-5px',
-                                right: '-7.5px',
+                                top: '-9.5px',
+                                right: '-12.5px',
                             }}
                         >
-                            &#x2022;
+                            &#x25A1;
                         </div>
                         <div
                             style={{
@@ -86,10 +86,10 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                                 float: 'left',
                                 zIndex: 10,
                                 bottom: '-5px',
-                                left: '-7.5px',
+                                left: '-12.5px',
                             }}
                         >
-                            &#x2022;
+                            &#x25A1;
                         </div>
                         <div
                             style={{
@@ -99,10 +99,10 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                                 float: 'right',
                                 zIndex: 10,
                                 bottom: '-5px',
-                                right: '-7.5px',
+                                right: '-12.5px',
                             }}
                         >
-                            &#x2022;
+                            &#x25A1;
                         </div>
                         {props.content}
                     </div>
