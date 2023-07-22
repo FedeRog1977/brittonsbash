@@ -22,7 +22,12 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
 
     return (
         <Tile type="solid" dense={isMobile && true}>
-            <Spacing mB={isMobile ? 7.5 : 15}>
+            <Spacing
+                mL={isMobile ? 15 : 70}
+                mR={isMobile ? 15 : 70}
+                mB={isMobile ? 7.5 : 15}
+                border="1 px solid black"
+            >
                 {refactoredEvent.prefix && (
                     <Typography
                         type="h1"
