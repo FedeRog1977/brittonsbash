@@ -42,7 +42,7 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
                                 <Typography content=":" inline />
                             </>
                         }
-                        textAlign="center"
+                        textAlign="left"
                     />
                 )}
                 {refactoredEvent.names.length > 1 ? (
@@ -71,7 +71,7 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
                                         />
                                     </>
                                 }
-                                textAlign="center"
+                                textAlign="left"
                             />
                         ))}
                     </>
@@ -79,11 +79,16 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
                     <Typography
                         type={refactoredEvent.prefix ? 'h1' : 't1'}
                         content={refactoredEvent.names[0].name}
-                        textAlign="center"
+                        textAlign="left"
                     />
                 )}
             </Spacing>
-            <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
+            <Spacing
+                mL={isMobile ? 15 : 70}
+                mR={isMobile ? 15 : 70}
+                mT={isMobile ? 7.5 : 15}
+                mB={isMobile ? 7.5 : 15}
+            >
                 <Typography
                     type="h2"
                     content={
@@ -107,7 +112,7 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
                         </>
                     }
                     color="var(--medium-grey)"
-                    textAlign="center"
+                    textAlign="left"
                 />
             </Spacing>
             {refactoredEvent.showSportEvent && (
@@ -168,6 +173,7 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
                     buttonType="regular-clear"
                     func={() => setShowDropDown(!showDropDown)}
                     funcResp={showDropDown}
+                    textAlign="left"
                 />
             </Spacing>
             {showDropDown && (

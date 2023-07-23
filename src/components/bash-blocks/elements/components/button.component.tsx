@@ -7,14 +7,7 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
     const { isMobile } = useScreenWidth()
 
     return (
-        <button
-            className={props.type}
-            onClick={props.func}
-            value={props.value}
-            style={{
-                textAlign: props.textAlign ? props.textAlign : 'center',
-            }}
-        >
+        <button className={props.type} onClick={props.func} value={props.value}>
             <Spacing
                 mX={Boolean(!isMobile && props.accents) ? 20 : 0}
                 mY={Boolean(!isMobile && props.accents) ? 10 : 0}
@@ -22,10 +15,18 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                 <div
                     style={{
                         position: 'relative',
-                        textAlign: 'center',
+                        textAlign: props.textAlign ? props.textAlign : 'center',
                         display: isMobile ? undefined : 'flex',
-                        justifyContent: isMobile ? undefined : 'center',
-                        alignItems: isMobile ? undefined : 'center',
+                        justifyContent: isMobile
+                            ? undefined
+                            : props.textAlign
+                            ? props.textAlign
+                            : 'center',
+                        alignItems: isMobile
+                            ? undefined
+                            : props.textAlign
+                            ? props.textAlign
+                            : 'center',
                     }}
                 >
                     {Boolean(!isMobile && props.accents) && (

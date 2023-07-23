@@ -18,7 +18,6 @@ export const InstantGramSearchList: FC<InstantGramSearchListProps> = ({
                 funcResp={showDropDown}
                 content={props.year}
                 subContent={`Season ${props.season}`}
-                textAlign={isMobile ? 'center' : 'right'}
                 color="var(--darker-grey)"
                 accents
             />
