@@ -219,7 +219,6 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
                             type="body"
                             content={refactoredEvent.description}
                             textAlign="justify"
-                            paragraphMargins
                         />
                     )}
                 </Spacing>
