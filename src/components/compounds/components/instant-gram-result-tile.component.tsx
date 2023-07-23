@@ -12,10 +12,11 @@ import { InstantGramResultTileProps } from '..'
 import { FC } from 'react'
 
 export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
-    event,
-    sportEvent,
-    showSportEvent,
+    ...props
 }: InstantGramResultTileProps) => {
+    const event = props.event
+    const sportEvent = props.sportEvent
+    const showSportEvent = props.showSportEvent
     const { isMobile } = useScreenWidth()
     const { showDropDown, setShowDropDown } = useDropDown()
     const refactoredEvent = refactorEvent({ event, sportEvent, showSportEvent })

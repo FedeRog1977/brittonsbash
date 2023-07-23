@@ -45,6 +45,6 @@ export const DropDown: FC<DropDownProps> = ({ ...props }: DropDownProps) => (
         }
         subContent={props.subContent}
         textAlign={props.textAlign}
-        dots={props.dots}
+        accents={props.accents}
     />
 )

@@ -27,7 +27,7 @@ export const eventData = {
                 {
                     type: 'body',
                     content:
-                        'This may have been a European holiday but you know what they say, there’s no such thing as a trip to Milan without a docking in America’s South. Nor is there much sweet about their dear Alabama. Though itt lives up to its reputation: refined, elegant and welcoming in the north; raw, rough, and wild in the southern swamplands. And maybe, in a drunken haze, sending you off with some souvenirs that leave you questioning your decisions. What an outstanding week, probably best it was a solo trip.',
+                        'This may have been a European holiday but you know what they say, there’s no such thing as a trip to Milan without a docking in America’s South. Nor is there much sweet about their dear Alabama. Though it lives up to its reputation: refined, elegant and welcoming in the north; raw, rough, and wild in the southern swamplands. And maybe, in a drunken haze, sending you off with some souvenirs that leave you questioning your decisions. What an outstanding week, probably best it was a solo trip.',
                 },
                 {
                     type: 'h3',

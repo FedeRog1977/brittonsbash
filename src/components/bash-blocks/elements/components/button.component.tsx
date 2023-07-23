@@ -16,10 +16,10 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
             }}
         >
             <Spacing
-                mX={Boolean(!isMobile && props.dots) ? 20 : 0}
-                mY={Boolean(!isMobile && props.dots) ? 10 : 0}
+                mX={Boolean(!isMobile && props.accents) ? 20 : 0}
+                mY={Boolean(!isMobile && props.accents) ? 10 : 0}
             >
-                {Boolean(!isMobile && props.dots) ? (
+                {Boolean(!isMobile && props.accents) ? (
                     <div
                         style={{
                             position: 'relative',
@@ -54,34 +54,34 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                         )}
                         <div
                             style={{
-                                fontSize: '20px',
-                                color: 'var(--light-grey)',
+                                fontSize: '15px',
+                                color: 'var(--lighter-grey)',
                                 position: 'absolute',
                                 float: 'left',
                                 zIndex: 10,
-                                top: '-9.5px',
+                                top: '-5px',
                                 left: '-12.5px',
                             }}
                         >
-                            &#x25A1;
+                            &#x25E4;
                         </div>
                         <div
                             style={{
-                                fontSize: '20px',
-                                color: 'var(--light-grey)',
+                                fontSize: '15px',
+                                color: 'var(--lighter-grey)',
                                 position: 'absolute',
                                 float: 'right',
                                 zIndex: 10,
-                                top: '-9.5px',
+                                top: '-5px',
                                 right: '-12.5px',
                             }}
                         >
-                            &#x25A1;
+                            &#x25E5;
                         </div>
                         <div
                             style={{
-                                fontSize: '20px',
-                                color: 'var(--light-grey)',
+                                fontSize: '15px',
+                                color: 'var(--lighter-grey)',
                                 position: 'absolute',
                                 float: 'left',
                                 zIndex: 10,
@@ -89,12 +89,12 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                                 left: '-12.5px',
                             }}
                         >
-                            &#x25A1;
+                            &#x25E3;
                         </div>
                         <div
                             style={{
-                                fontSize: '20px',
-                                color: 'var(--light-grey)',
+                                fontSize: '15px',
+                                color: 'var(--lighter-grey)',
                                 position: 'absolute',
                                 float: 'right',
                                 zIndex: 10,
@@ -102,7 +102,7 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                                 right: '-12.5px',
                             }}
                         >
-                            &#x25A1;
+                            &#x25E2;
                         </div>
                         {props.content}
                     </div>

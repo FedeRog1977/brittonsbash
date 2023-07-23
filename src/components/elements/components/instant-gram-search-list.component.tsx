@@ -4,11 +4,8 @@ import { InstantGramSearchListProps } from '..'
 import { FC } from 'react'
 
 export const InstantGramSearchList: FC<InstantGramSearchListProps> = ({
-    func,
-    items,
-    year,
-    season,
-}: any) => {
+    ...props
+}: InstantGramSearchListProps) => {
     const { isMobile } = useScreenWidth()
     const { showDropDown, setShowDropDown } = useDropDown()
 
@@ -19,18 +16,18 @@ export const InstantGramSearchList: FC<InstantGramSearchListProps> = ({
                 buttonType="dense-clear"
                 func={() => setShowDropDown(!showDropDown)}
                 funcResp={showDropDown}
-                content={year}
-                subContent={`Season ${season}`}
+                content={props.year}
+                subContent={`Season ${props.season}`}
                 textAlign={isMobile ? 'center' : 'right'}
-                dots
+                accents
             />
             {showDropDown && (
                 <div>
-                    {items.map(({ id, prefix, names }: any) => (
+                    {props.items.map(({ id, prefix, names }: any) => (
                         <Button
                             key={id}
                             type={`${isMobile ? 'regular' : 'dense'}-clear`}
-                            func={func}
+                            func={props.func}
                             value={names.join(' - ')}
                             content={
                                 <Spacing mY={20}>

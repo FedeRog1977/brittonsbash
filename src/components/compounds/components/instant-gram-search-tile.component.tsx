@@ -8,10 +8,8 @@ import { FC } from 'react'
 import { InstantGramSearchTileProps } from '..'
 
 export const InstantGramSearchTile: FC<InstantGramSearchTileProps> = ({
-    funcInput,
-    funcButton,
-    funcSelect,
-}: any) => {
+    ...props
+}: InstantGramSearchTileProps) => {
     const { isMobile } = useScreenWidth()
 
     return (
@@ -23,12 +21,12 @@ export const InstantGramSearchTile: FC<InstantGramSearchTileProps> = ({
             >
                 <Search
                     className="search"
-                    func={funcInput}
+                    func={props.funcInput}
                     placeholder="Search Events"
                 />
                 <Button
                     type="search"
-                    func={funcButton}
+                    func={props.funcButton}
                     content={
                         <>
                             {isMobile ? (
@@ -52,25 +50,25 @@ export const InstantGramSearchTile: FC<InstantGramSearchTileProps> = ({
             </Spacing>
             <Spacing mL={isMobile ? 0 : 70} mR={isMobile ? 0 : 70}>
                 <InstantGramSearchList
-                    func={funcSelect}
+                    func={props.funcSelect}
                     items={eventData[2023]}
                     year="2023"
                     season="4"
                 />
                 <InstantGramSearchList
-                    func={funcSelect}
+                    func={props.funcSelect}
                     items={eventData[2022]}
                     year="2022"
                     season="3"
                 />
                 <InstantGramSearchList
-                    func={funcSelect}
+                    func={props.funcSelect}
                     items={eventData[2021]}
                     year="2021"
                     season="2"
                 />
                 <InstantGramSearchList
-                    func={funcSelect}
+                    func={props.funcSelect}
                     items={eventData[2020]}
                     year="2020"
                     season="1"

@@ -1,5 +1,5 @@
 export type InstantGramSearchListProps = {
-    func: () => void
+    func: (() => void) | ((e: any) => void)
     items: {
         id: string
         prefix: string

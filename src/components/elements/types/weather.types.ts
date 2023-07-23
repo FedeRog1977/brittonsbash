@@ -1,7 +1,7 @@
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons'
 
 export type WeatherProps = {
-    icon: IconDefinition
+    icon: IconDefinition | string
 }
 
 export type WeatherTemperatureProps = {
