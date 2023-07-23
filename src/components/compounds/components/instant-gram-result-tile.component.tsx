@@ -1,6 +1,7 @@
 import {
     Article,
     DropDown,
+    ImageMatrix,
     ImageSlider,
     Spacing,
     Tile,
@@ -20,6 +21,7 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
     const { isMobile } = useScreenWidth()
     const { showDropDown, setShowDropDown } = useDropDown()
     const refactoredEvent = refactorEvent({ event, sportEvent, showSportEvent })
+    const sliderLimitHit = refactoredEvent.images.length > 20
 
     return (
         <Tile type="solid" dense={isMobile && true}>
@@ -233,6 +235,15 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
             >
                 <ImageSlider slides={refactoredEvent.images} />
             </Spacing>
+            {/* <Spacing
+                mL={isMobile ? 0 : 70}
+                mR={isMobile ? 0 : 70}
+                mT={isMobile ? 7.5 : 15}
+            >
+                {!sliderLimitHit && (
+                    <ImageMatrix items={refactoredEvent.images} />
+                )}
+            </Spacing> */}
         </Tile>
     )
 }

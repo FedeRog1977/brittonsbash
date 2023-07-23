@@ -10,27 +10,54 @@ export const ImageMatrix: FC<ImageMatrixProps> = ({
 
     return (
         <>
-            <Flex center>
-                {props.items.map(({ url, alt, description }: any) => (
-                    <Flex item key={alt}>
-                        <img
-                            style={{
-                                width: isMobile ? '100%' : '100%',
-                            }}
-                            src={url}
-                            alt={alt}
-                        />
-                        {description && (
-                            <Typography
-                                type="caption"
-                                content={description}
-                                textAlign="center"
-                                mT={5}
-                                mB={7.5}
+            <Flex>
+                {props.items
+                    .slice(0, 3)
+                    .map(({ url, alt, description }: any) => (
+                        <Flex item key={alt} center>
+                            <img
+                                style={{
+                                    width: isMobile ? '100%' : '97.5%',
+                                    textAlign: 'center',
+                                }}
+                                src={url}
+                                alt={alt}
                             />
-                        )}
-                    </Flex>
-                ))}
+                            {description && (
+                                <Typography
+                                    type="caption"
+                                    content={description}
+                                    textAlign="center"
+                                    mT={5}
+                                    mB={7.5}
+                                />
+                            )}
+                        </Flex>
+                    ))}
+            </Flex>
+            <Flex>
+                {props.items
+                    .slice(4, 7)
+                    .map(({ url, alt, description }: any) => (
+                        <Flex item key={alt} center>
+                            <img
+                                style={{
+                                    width: isMobile ? '100%' : '97.5%',
+                                }}
+                                src={url}
+                                alt={alt}
+                            />
+                            {description && (
+                                <Typography
+                                    type="caption"
+                                    content={description}
+                                    textAlign="center"
+                                    mT={5}
+                                    mB={7.5}
+                                />
+                            )}
+                        </Flex>
+                    ))}
             </Flex>
         </>
     )
