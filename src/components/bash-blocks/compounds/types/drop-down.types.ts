@@ -8,5 +8,6 @@ export type DropDownProps = {
     content?: ButtonProps['content']
     subContent?: ButtonProps['subContent']
     textAlign?: TypographyProps['textAlign']
+    color?: string
     accents?: ButtonProps['accents']
 }

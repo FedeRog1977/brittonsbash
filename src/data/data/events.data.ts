@@ -19,7 +19,7 @@ export const eventData = {
         },
         {
             id: 'E2023030',
-            prefix: 'Nineth Different Kind Hol-e-day',
+            prefix: 'Ninth Different Kind Hol-e-day',
             names: ['Sweet Home Alabama'],
             startDate: '13th of July',
             endDate: '19th of July',
@@ -30,7 +30,7 @@ export const eventData = {
                         'This may have been a European holiday but you know what they say, there’s no such thing as a trip to Milan without a docking in America’s South. Nor is there much sweet about their dear Alabama. Though it lives up to its reputation: refined, elegant and welcoming in the north; raw, rough, and wild in the southern swamplands. And maybe, in a drunken haze, sending you off with some souvenirs that leave you questioning your decisions. What an outstanding week, probably best it was a solo trip.',
                 },
                 {
-                    type: 'h3',
+                    type: 'h2',
                     content: 'London',
                 },
                 {
@@ -54,7 +54,7 @@ export const eventData = {
                         'On Sunday, I had to say my unfortunate goodbyes to PMB. But that’s okay, I just hit up The Design Museum again to read the same books, and hit up the Japan House for some pieces. Then, then it was time. Time to make my way to the South. Wasn’t too bad a trip with the RyanAir cowboys either. We’re alive, but they must go through tyres at the same rate I do on those cargo donkeys. Yeah, there wasn’t much to do at 1am in Milano when I arrived apart from get gelat’ and rock a beer in the hostel. Big day ahead anyway. Bigger than I knew. The railing in the bunk across from me caused a little trouble with sleep, but all good. That’s just the mixed dorm beta.',
                 },
                 {
-                    type: 'h3',
+                    type: 'h2',
                     content: 'Milan',
                 },
                 {
@@ -380,11 +380,6 @@ export const eventData = {
                     description: '',
                 },
                 {
-                    url: 'https://lewisbritton.com/Blog/Photos_IG/2023/sweet-home-alabama/.jpg',
-                    alt: 'sweet-home-alabama-1',
-                    description: '',
-                },
-                {
                     url: 'https://lewisbritton.com/Blog/Photos_IG/2023/sweet-home-alabama/62.jpg',
                     alt: 'sweet-home-alabama-1',
                     description: '',
@@ -685,11 +680,6 @@ export const eventData = {
                     description: '',
                 },
                 {
-                    url: 'https://lewisbritton.com/Blog/Photos_IG/2023/sweet-home-alabama/122.jpg',
-                    alt: 'sweet-home-alabama-1',
-                    description: '',
-                },
-                {
                     url: 'https://lewisbritton.com/Blog/Photos_IG/2023/sweet-home-alabama/123.jpg',
                     alt: 'sweet-home-alabama-1',
                     description: '',
@@ -955,11 +945,6 @@ export const eventData = {
                     description: '',
                 },
                 {
-                    url: 'https://lewisbritton.com/Blog/Photos_IG/2023/sweet-home-alabama/177.jpg',
-                    alt: 'sweet-home-alabama-1',
-                    description: '',
-                },
-                {
                     url: 'https://lewisbritton.com/Blog/Photos_IG/2023/sweet-home-alabama/178.jpg',
                     alt: 'sweet-home-alabama-186',
                     description: '',
@@ -1002,16 +987,6 @@ export const eventData = {
                 {
                     url: 'https://lewisbritton.com/Blog/Photos_IG/2023/sweet-home-alabama/186.jpg',
                     alt: 'sweet-home-alabama-185',
-                    description: '',
-                },
-                {
-                    url: 'https://lewisbritton.com/Blog/Photos_IG/2023/sweet-home-alabama/187.jpg',
-                    alt: 'sweet-home-alabama-187',
-                    description: '',
-                },
-                {
-                    url: 'https://lewisbritton.com/Blog/Photos_IG/2023/sweet-home-alabama/188.jpg',
-                    alt: 'sweet-home-alabama-188',
                     description: '',
                 },
             ],
@@ -2449,7 +2424,7 @@ export const eventData = {
             endDate: '14th of June',
             description: [
                 {
-                    type: 'h3',
+                    type: 'h2',
                     content: 'Wilmslow',
                 },
                 {
@@ -2458,7 +2433,7 @@ export const eventData = {
                         'After the train-in to Manchester Airport us, we were greeted with round two of cancelled sleazyJet flights. After some debate we settled on a gentlemen’s retreat to the Premier Inn, in Wilmers us. On easyJet of course. A few hay fever seizures later, we were in the Coach & Four you and me and you, running a fine two-courser. Also on easyJet. In fact, just let it be known that from this point until Munich, everything was on seazyJet. Finally bagged the cycle cafeé, then the god-awful pub next to the optician’s for a game of pool. We retired to slumber over some yellow labels and La Guy D’Familia and Papa D’Americano. In traditionalé Wilmers fashion, the next day begun with some Giada then a Juniper all-you-can-eat. The day’s activities formed a very soy trip into Manchester to browse Soylfridges and experience the glorious three different kind seafood with rice stick (rice pasta). I did pick up a good Crockett piece from Uni Qlo which made some appearances in Italy. Let’s not forget the £15 of mocha ice cream afterwards. Once again, the night was capped with some La Guy D’Familia and Papa D’Americano. The third day under the dome started with much hope but a drone of Doomer depression. All the transport was successful though and we made it to Munich.',
                 },
                 {
-                    type: 'h3',
+                    type: 'h2',
                     content: 'Munich',
                 },
                 {
@@ -2467,7 +2442,7 @@ export const eventData = {
                         'Sadly we didn’t have anywhere near as much time here as we’d hoped. With our Munich leg cut two days short, we tried to make the most of it with the classic poached sausage and schnitzel dinner. After a quickie at the local gelateria to get us warmed up for L’Italy, it was onto the Hofbräuhaus to sink a few steins, then a night cap bar for a couple’ more beer, large and a final pint to sober us up. An excellent night ended in a very rogue manner, with me running the run-out back to the accommodation to no ones’s knowledge. Apparently worrying your friends trumps prime autismé. Anyway, a quick run for the bus the next morning and we were off to Verona; an amazing seven-hour journey through the Scottish Highlands Mk.II. I have a copy, you have a copy.',
                 },
                 {
-                    type: 'h3',
+                    type: 'h2',
                     content: 'Verona',
                 },
                 {
@@ -2476,7 +2451,7 @@ export const eventData = {
                         'Herhona, my personal favourite of the locations. And J.PELLEGRINO’s too, I’m led to believe. Once again, a shame we only got to spend one night in this place because the accommodation and everything surrounding it was stunning. After d’loading, it was straight off to the first bareria of the evening to sink some H’Aperols and three different kind bar snack. We decided to tun the free-for-all dinner beta and end up in the place that looked best. This paid off big-time. Don’t even remember the name but, first place we ended up served possibly the finest meal I’ve ever blessed my (goddamn) palate with. Some magnificent tagliatelle followed by wild boar ragù, served alongside a house red and some homebrews. The best of the night was still to come however. Romeo five-star beereria, Verona. The greatest drinking establishment on earth. Negronis with branded ice cubes, herheyhas, and Japanese ginseng freakin’ zen garden something cocktails. A stunning arena. Big shout-out to Edoardo Bullio dood. The next morning capped her off well, with a glorious pistachio pasteria. We weren’ leaving ‘til just after midday though so there was of course time for a bellini, negroni and herheyha pre-train. And yeah, the train was a bit depressing coz they still believed in masks and it was 30°.',
                 },
                 {
-                    type: 'h3',
+                    type: 'h2',
                     content: 'Venice',
                 },
                 {

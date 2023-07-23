@@ -27,11 +27,10 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
                 mL={isMobile ? 15 : 70}
                 mR={isMobile ? 15 : 70}
                 mB={isMobile ? 7.5 : 15}
-                border="1 px solid black"
             >
                 {refactoredEvent.prefix && (
                     <Typography
-                        type="h1"
+                        type="t1"
                         content={
                             <>
                                 <Typography
@@ -48,7 +47,7 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
                     <>
                         {refactoredEvent.names.map(({ name, refKey }: any) => (
                             <Typography
-                                type="h2"
+                                type="h1"
                                 content={
                                     <>
                                         <Typography
@@ -76,7 +75,7 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
                     </>
                 ) : (
                     <Typography
-                        type={refactoredEvent.prefix ? 'h2' : 'h1'}
+                        type={refactoredEvent.prefix ? 'h1' : 't1'}
                         content={refactoredEvent.names[0].name}
                         textAlign="center"
                     />
@@ -84,7 +83,7 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
             </Spacing>
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                 <Typography
-                    type="h3"
+                    type="h2"
                     content={
                         <>
                             <Typography
@@ -157,29 +156,6 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
                     ]}
                 />
             )}
-            {refactoredEvent.youthHostels && (
-                <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
-                    <Typography
-                        type="body"
-                        content={
-                            <>
-                                <Typography
-                                    type="body"
-                                    content={<>Youth Hostel(s):&nbsp;</>}
-                                    boldFace={isMobile ? false : true}
-                                    inline
-                                />
-                                <Typography
-                                    type={isMobile ? 'body-light' : 'body'}
-                                    content={refactoredEvent.youthHostels}
-                                    inline
-                                />
-                            </>
-                        }
-                        textAlign="center"
-                    />
-                </Spacing>
-            )}
             <Spacing
                 mL={isMobile ? 15 : 70}
                 mR={isMobile ? 15 : 70}
@@ -199,6 +175,38 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
                     mT={isMobile ? 7.5 : 15}
                     mB={isMobile ? 7.5 : 15}
                 >
+                    {refactoredEvent.youthHostels && (
+                        <Spacing
+                            mT={isMobile ? 7.5 : 15}
+                            mB={isMobile ? 7.5 : 15}
+                        >
+                            <Typography
+                                type="body"
+                                content={
+                                    <>
+                                        <Typography
+                                            type="body"
+                                            content={
+                                                <>Youth Hostel(s):&nbsp;</>
+                                            }
+                                            boldFace={isMobile ? false : true}
+                                            inline
+                                        />
+                                        <Typography
+                                            type={
+                                                isMobile ? 'body-light' : 'body'
+                                            }
+                                            content={
+                                                refactoredEvent.youthHostels
+                                            }
+                                            inline
+                                        />
+                                    </>
+                                }
+                                textAlign="center"
+                            />
+                        </Spacing>
+                    )}
                     {Array.isArray(refactoredEvent.description) ? (
                         <Article
                             sections={refactoredEvent.description}

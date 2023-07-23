@@ -16,10 +16,11 @@ export const DropDown: FC<DropDownProps> = ({ ...props }: DropDownProps) => (
                                 {props.content ? (
                                     <>{props.content}</>
                                 ) : (
-                                    <>Expand</>
+                                    <>Expand ...</>
                                 )}
                             </>
                         }
+                        color={props.color ? props.color : 'var(--medium-grey)'}
                         mT={props.content ? 0 : 2.5}
                         mB={props.content ? 0 : 5}
                     />
@@ -32,7 +33,7 @@ export const DropDown: FC<DropDownProps> = ({ ...props }: DropDownProps) => (
                                 {props.content ? (
                                     <>{props.content}</>
                                 ) : (
-                                    <>Contract</>
+                                    <>... Contract</>
                                 )}
                             </>
                         }
