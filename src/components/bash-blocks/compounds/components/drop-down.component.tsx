@@ -6,6 +6,7 @@ export const DropDown: FC<DropDownProps> = ({ ...props }: DropDownProps) => (
     <Button
         type={props.buttonType}
         func={props.func}
+        value={props.value}
         content={
             <>
                 {props.funcResp === false && (
@@ -45,13 +46,7 @@ export const DropDown: FC<DropDownProps> = ({ ...props }: DropDownProps) => (
             </>
         }
         subContent={props.subContent}
-        textAlign={
-            props.textAlign
-                ? Boolean(props.textAlign === 'left' && props.funcResp === true)
-                    ? 'right'
-                    : props.textAlign
-                : props.textAlign
-        }
+        textAlign={props.textAlign}
         accents={props.accents}
     />
 )

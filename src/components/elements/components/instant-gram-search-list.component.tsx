@@ -9,6 +9,8 @@ export const InstantGramSearchList: FC<InstantGramSearchListProps> = ({
     const { isMobile } = useScreenWidth()
     const { showDropDown, setShowDropDown } = useDropDown()
 
+    console.log('ITEMS:\n\n', props.items)
+
     return (
         <>
             <DropDown
@@ -24,41 +26,61 @@ export const InstantGramSearchList: FC<InstantGramSearchListProps> = ({
             {showDropDown && (
                 <div>
                     {props.items.map(({ id, prefix, names }: any) => (
-                        <Button
+                        // <Button
+                        //     key={id}
+                        //     type={`${isMobile ? 'regular' : 'dense'}-clear`}
+                        //     func={props.func}
+                        //     value={names.join(' - ')}
+                        //     content={
+                        //         <Spacing mY={20}>
+                        //             <Typography
+                        //                 type="h5"
+                        //                 content={<>{id.slice(-2)}</>}
+                        //                 color="var(--medium-grey)"
+                        //             />
+                        //             {prefix && (
+                        //                 <Typography
+                        //                     type="h4"
+                        //                     content={prefix + ':'}
+                        //                 />
+                        //             )}
+                        //             <Typography
+                        //                 type="h4"
+                        //                 content={
+                        //                     <>
+                        //                         {names.map((name: any) => (
+                        //                             <div key={name}>{name}</div>
+                        //                         ))}
+                        //                     </>
+                        //                 }
+                        //             />
+                        //             <Typography
+                        //                 type="h5"
+                        //                 content={<>&#9135;</>}
+                        //                 color="var(--medium-grey)"
+                        //             />
+                        //         </Spacing>
+                        //     }
+                        // />
+                        <DropDown
                             key={id}
-                            type={`${isMobile ? 'regular' : 'dense'}-clear`}
-                            func={props.func}
+                            typeType="h4"
+                            buttonType={`${
+                                isMobile ? 'regular' : 'dense'
+                            }-clear`}
                             value={names.join(' - ')}
+                            func={() => props.func}
                             content={
-                                <Spacing mY={20}>
-                                    <Typography
-                                        type="h5"
-                                        content={<>{id.slice(-2)}</>}
-                                        color="var(--medium-grey)"
-                                    />
-                                    {prefix && (
-                                        <Typography
-                                            type="h4"
-                                            content={prefix + ':'}
-                                        />
-                                    )}
-                                    <Typography
-                                        type="h4"
-                                        content={
-                                            <>
-                                                {names.map((name: any) => (
-                                                    <div key={name}>{name}</div>
-                                                ))}
-                                            </>
-                                        }
-                                    />
-                                    <Typography
-                                        type="h5"
-                                        content={<>&#9135;</>}
-                                        color="var(--medium-grey)"
-                                    />
-                                </Spacing>
+                                <>
+                                    {prefix && prefix + ':'}
+                                    {names.map((name: any) => (
+                                        <div key={name + 'dkjsdj'}>{name}</div>
+                                    ))}
+                                </>
                             }
+                            subContent={id.slice(-2)}
+                            color="var(--darker-grey)"
+                            accents
                         />
                     ))}
                 </div>

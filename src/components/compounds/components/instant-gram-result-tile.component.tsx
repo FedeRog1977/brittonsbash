@@ -21,7 +21,6 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
     const { isMobile } = useScreenWidth()
     const { showDropDown, setShowDropDown } = useDropDown()
     const refactoredEvent = refactorEvent({ event, sportEvent, showSportEvent })
-    const sliderLimitHit = refactoredEvent.images.length > 20
 
     return (
         <Tile type="solid" dense={isMobile && true}>
@@ -173,7 +172,7 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
                     buttonType="regular-clear"
                     func={() => setShowDropDown(!showDropDown)}
                     funcResp={showDropDown}
-                    textAlign="left"
+                    textAlign="center"
                 />
             </Spacing>
             {showDropDown && (
@@ -184,36 +183,26 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
                     mB={isMobile ? 7.5 : 15}
                 >
                     {refactoredEvent.youthHostels && (
-                        <Spacing
-                            mT={isMobile ? 7.5 : 15}
-                            mB={isMobile ? 7.5 : 15}
-                        >
-                            <Typography
-                                type="body"
-                                content={
-                                    <>
-                                        <Typography
-                                            type="body"
-                                            content={
-                                                <>Youth Hostel(s):&nbsp;</>
-                                            }
-                                            boldFace={isMobile ? false : true}
-                                            inline
-                                        />
-                                        <Typography
-                                            type={
-                                                isMobile ? 'body-light' : 'body'
-                                            }
-                                            content={
-                                                refactoredEvent.youthHostels
-                                            }
-                                            inline
-                                        />
-                                    </>
-                                }
-                                textAlign="center"
-                            />
-                        </Spacing>
+                        <Typography
+                            type="body"
+                            content={
+                                <>
+                                    <Typography
+                                        type="body"
+                                        content={<>Youth Hostel(s):&nbsp;</>}
+                                        boldFace={isMobile ? false : true}
+                                        inline
+                                    />
+                                    <Typography
+                                        type={isMobile ? 'body-light' : 'body'}
+                                        content={refactoredEvent.youthHostels}
+                                        inline
+                                    />
+                                </>
+                            }
+                            textAlign="center"
+                            paragraphMargins
+                        />
                     )}
                     {Array.isArray(refactoredEvent.description) ? (
                         <Article
@@ -240,15 +229,6 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
             >
                 <ImageSlider slides={refactoredEvent.images} />
             </Spacing>
-            {/* <Spacing
-                mL={isMobile ? 0 : 70}
-                mR={isMobile ? 0 : 70}
-                mT={isMobile ? 7.5 : 15}
-            >
-                {!sliderLimitHit && (
-                    <ImageMatrix items={refactoredEvent.images} />
-                )}
-            </Spacing> */}
         </Tile>
     )
 }
