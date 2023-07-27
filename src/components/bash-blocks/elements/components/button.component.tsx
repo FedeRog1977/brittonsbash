@@ -7,7 +7,11 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
     const { isMobile } = useScreenWidth()
 
     return (
-        <button className={props.type} onClick={props.func} value={props.value}>
+        <button
+            className={props.buttonType}
+            onClick={props.func}
+            value={props.value}
+        >
             <Spacing
                 mX={Boolean(!isMobile && props.accents) ? 20 : 0}
                 mY={Boolean(!isMobile && props.accents) ? 10 : 0}
@@ -16,7 +20,11 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                     style={{
                         position: 'relative',
                         textAlign: props.textAlign ? props.textAlign : 'center',
-                        display: isMobile ? undefined : 'flex',
+                        display: isMobile
+                            ? undefined
+                            : props.accentsTop
+                            ? undefined
+                            : 'flex',
                         justifyContent: isMobile
                             ? undefined
                             : props.textAlign
@@ -86,51 +94,80 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                         </>
                     )}
                     {props.subContent && (
-                        <div
-                            style={{
-                                float:
-                                    props.textAlign === 'right'
-                                        ? isMobile
-                                            ? 'none'
-                                            : 'left'
-                                        : 'none',
-                            }}
-                        >
-                            <Typography
-                                type="h5"
-                                color="var(--medium-grey)"
-                                content={
-                                    <>
-                                        {props.subContent}
-                                        {isMobile ? '' : <>&nbsp;</>}
-                                    </>
-                                }
-                            />
-                        </div>
+                        <Typography
+                            type="h5"
+                            color="var(--medium-grey)"
+                            content={
+                                <>
+                                    {props.subContent}
+                                    {isMobile ? '' : <>&nbsp;</>}
+                                </>
+                            }
+                        />
                     )}
-                    {props.content}
-                    {props.accents && (
-                        <div
-                            style={{
-                                float:
-                                    props.textAlign === 'right'
-                                        ? isMobile
-                                            ? 'none'
-                                            : 'left'
-                                        : 'none',
-                            }}
-                        >
+                    <>
+                        {props.funcResp === false && (
                             <Typography
-                                type="h5"
-                                color="var(--medium-grey)"
+                                type={props.typeType ? props.typeType : 'body'}
                                 content={
                                     <>
-                                        {isMobile ? '' : <>&nbsp;</>}
-                                        {isMobile ? <>&#9135;</> : <>&#124;</>}
+                                        {props.content ? (
+                                            <>{props.content}</>
+                                        ) : (
+                                            <>Expand ...</>
+                                        )}
                                     </>
                                 }
+                                color={
+                                    props.color
+                                        ? props.color
+                                        : 'var(--medium-grey)'
+                                }
+                                mT={props.content ? 0 : 2.5}
+                                mB={props.content ? 0 : 5}
                             />
-                        </div>
+                        )}
+                        {props.funcResp === true && (
+                            <Typography
+                                type={props.typeType ? props.typeType : 'body'}
+                                content={
+                                    <>
+                                        {props.content ? (
+                                            <>{props.content}</>
+                                        ) : (
+                                            <>... Contract</>
+                                        )}
+                                    </>
+                                }
+                                color="var(--light-blue)"
+                                mT={props.content ? 0 : 2.5}
+                                mB={props.content ? 0 : 5}
+                            />
+                        )}
+                    </>
+                    {props.accents && (
+                        <Typography
+                            type="h5"
+                            color="var(--medium-grey)"
+                            content={
+                                <>
+                                    {isMobile ? (
+                                        ''
+                                    ) : props.accentsTop ? (
+                                        ''
+                                    ) : (
+                                        <>&nbsp;</>
+                                    )}
+                                    {isMobile ? (
+                                        <>&#9135;</>
+                                    ) : props.accentsTop ? (
+                                        <>&#9135;</>
+                                    ) : (
+                                        <>&#124;</>
+                                    )}
+                                </>
+                            }
+                        />
                     )}
                 </div>
             </Spacing>

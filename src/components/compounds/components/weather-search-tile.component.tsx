@@ -1,14 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { useScreenWidth } from '../../../scripts'
-import {
-    Button,
-    Search,
-    SearchList,
-    Spacing,
-    Tile,
-    Typography,
-} from '../../bash-blocks'
+import { Button, Search, SearchList, Spacing, Tile } from '../../bash-blocks'
 import { hillData } from '../../../data'
 
 export const WeatherSearchTile = ({
@@ -31,27 +24,19 @@ export const WeatherSearchTile = ({
                     placeholder="Search Hills"
                 />
                 <Button
-                    type="search"
+                    buttonType="search"
                     func={funcButton}
+                    funcResp={false}
                     content={
                         <>
                             {isMobile ? (
-                                <Typography
-                                    type="body"
-                                    content={
-                                        <FontAwesomeIcon icon={faSearch} />
-                                    }
-                                    color="var(--white)"
-                                />
+                                <FontAwesomeIcon icon={faSearch} />
                             ) : (
-                                <Typography
-                                    type="body"
-                                    content="Search"
-                                    color="var(--white)"
-                                />
+                                'Search'
                             )}
                         </>
                     }
+                    color="var(--white)"
                 />
             </Spacing>
             <Spacing mL={isMobile ? 0 : 70} mR={isMobile ? 0 : 70}>

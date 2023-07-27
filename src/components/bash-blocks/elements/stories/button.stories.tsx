@@ -1,9 +1,9 @@
 import { articleTestData } from '../../../../data'
-import { Typography } from '../..'
-import { Article, ArticleProps, DropDown, Tile } from '..'
+import { Button, Typography } from '../..'
+import { Article, ArticleProps, Tile } from '../../compounds'
 import { useDropDown } from '../../../../scripts'
 
-export const DropDownStories = () => {
+export const ButtonStories = () => {
     const { showDropDown, setShowDropDown } = useDropDown()
 
     return (
@@ -18,7 +18,7 @@ export const DropDownStories = () => {
                 />
             </Tile>
             <Tile type="solid">
-                <DropDown
+                <Button
                     buttonType="regular-clear"
                     func={() => setShowDropDown(!showDropDown)}
                     funcResp={showDropDown}

@@ -1,4 +1,4 @@
-import { Button, DropDown, Spacing, Typography } from '../../bash-blocks'
+import { Button } from '../../bash-blocks'
 import { useDropDown, useScreenWidth } from '../../../scripts'
 import { InstantGramSearchListProps } from '..'
 import { FC } from 'react'
@@ -9,11 +9,9 @@ export const InstantGramSearchList: FC<InstantGramSearchListProps> = ({
     const { isMobile } = useScreenWidth()
     const { showDropDown, setShowDropDown } = useDropDown()
 
-    console.log('ITEMS:\n\n', props.items)
-
     return (
         <>
-            <DropDown
+            <Button
                 typeType={isMobile ? 'h2' : 'h1'}
                 buttonType="dense-clear"
                 func={() => setShowDropDown(!showDropDown)}
@@ -26,50 +24,15 @@ export const InstantGramSearchList: FC<InstantGramSearchListProps> = ({
             {showDropDown && (
                 <div>
                     {props.items.map(({ id, prefix, names }: any) => (
-                        // <Button
-                        //     key={id}
-                        //     type={`${isMobile ? 'regular' : 'dense'}-clear`}
-                        //     func={props.func}
-                        //     value={names.join(' - ')}
-                        //     content={
-                        //         <Spacing mY={20}>
-                        //             <Typography
-                        //                 type="h5"
-                        //                 content={<>{id.slice(-2)}</>}
-                        //                 color="var(--medium-grey)"
-                        //             />
-                        //             {prefix && (
-                        //                 <Typography
-                        //                     type="h4"
-                        //                     content={prefix + ':'}
-                        //                 />
-                        //             )}
-                        //             <Typography
-                        //                 type="h4"
-                        //                 content={
-                        //                     <>
-                        //                         {names.map((name: any) => (
-                        //                             <div key={name}>{name}</div>
-                        //                         ))}
-                        //                     </>
-                        //                 }
-                        //             />
-                        //             <Typography
-                        //                 type="h5"
-                        //                 content={<>&#9135;</>}
-                        //                 color="var(--medium-grey)"
-                        //             />
-                        //         </Spacing>
-                        //     }
-                        // />
-                        <DropDown
+                        <Button
                             key={id}
                             typeType="h4"
                             buttonType={`${
                                 isMobile ? 'regular' : 'dense'
                             }-clear`}
                             value={names.join(' - ')}
-                            func={() => props.func}
+                            func={props.func}
+                            funcResp={false}
                             content={
                                 <>
                                     {prefix && prefix + ':'}
@@ -81,6 +44,7 @@ export const InstantGramSearchList: FC<InstantGramSearchListProps> = ({
                             subContent={id.slice(-2)}
                             color="var(--darker-grey)"
                             accents
+                            accentsTop
                         />
                     ))}
                 </div>

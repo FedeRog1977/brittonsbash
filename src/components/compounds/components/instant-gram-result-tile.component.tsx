@@ -1,7 +1,6 @@
 import {
     Article,
-    DropDown,
-    ImageMatrix,
+    Button,
     ImageSlider,
     Spacing,
     Tile,
@@ -168,7 +167,7 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
                 mT={isMobile ? 7.5 : 15}
                 mB={isMobile ? 7.5 : 15}
             >
-                <DropDown
+                <Button
                     buttonType="regular-clear"
                     func={() => setShowDropDown(!showDropDown)}
                     funcResp={showDropDown}

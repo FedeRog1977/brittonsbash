@@ -1,4 +1,4 @@
-import { Button, Search, Spacing, Tile, Typography } from '../../bash-blocks'
+import { Button, Search, Spacing, Tile } from '../../bash-blocks'
 import { InstantGramSearchList } from '../../elements'
 import { eventData } from '../../../data'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -25,27 +25,19 @@ export const InstantGramSearchTile: FC<InstantGramSearchTileProps> = ({
                     placeholder="Search Events"
                 />
                 <Button
-                    type="search"
+                    buttonType="search"
                     func={props.funcButton}
+                    funcResp={false}
                     content={
                         <>
                             {isMobile ? (
-                                <Typography
-                                    type="body"
-                                    content={
-                                        <FontAwesomeIcon icon={faSearch} />
-                                    }
-                                    color="var(--white)"
-                                />
+                                <FontAwesomeIcon icon={faSearch} />
                             ) : (
-                                <Typography
-                                    type="body"
-                                    content="Search"
-                                    color="var(--white)"
-                                />
+                                'Search'
                             )}
                         </>
                     }
+                    color="var(--white)"
                 />
             </Spacing>
             <Spacing mL={isMobile ? 0 : 70} mR={isMobile ? 0 : 70}>

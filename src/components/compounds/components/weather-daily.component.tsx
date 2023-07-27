@@ -1,6 +1,6 @@
 import { WeatherColumnDaily, WeatherHourly } from '.'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
-import { DropDown, Flex, Spacing } from '../../bash-blocks'
+import { Button, Flex, Spacing } from '../../bash-blocks'
 import {
     useDropDown,
     useOpenWeatherCall,
@@ -47,7 +47,7 @@ export const WeatherDaily = ({ latIn, lonIn }: any) => {
                 })}
             </Flex>
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
-                <DropDown
+                <Button
                     buttonType="regular-clear"
                     func={() => setShowDropDown(!showDropDown)}
                     funcResp={showDropDown}

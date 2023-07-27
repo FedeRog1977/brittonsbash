@@ -1,6 +1,6 @@
 import {
     ArticleStories,
-    DropDownStories,
+    ButtonStories,
     FootnoteStories,
     ImageMatrixStories,
     ImageSliderStories,
@@ -21,6 +21,6 @@ export const BashBlocks = () => (
         <ArticleStories />
         <ImageMatrixStories />
         <ImageSliderStories />
-        <DropDownStories />
+        <ButtonStories />
     </>
 )

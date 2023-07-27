@@ -1,7 +1,6 @@
 export * from './activity-tile.component'
 export * from './article.component'
 export * from './background.component'
-export * from './drop-down.component'
 export * from './footnote.component'
 export * from './footer.component'
 export * from './header.component'
