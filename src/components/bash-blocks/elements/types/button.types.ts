@@ -12,4 +12,5 @@ export type ButtonProps = {
     color?: string
     accents?: boolean
     accentsTop?: boolean
+    bars?: boolean
 }

@@ -12,10 +12,7 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
             onClick={props.func}
             value={props.value}
         >
-            <Spacing
-                mX={Boolean(!isMobile && props.accents) ? 20 : 0}
-                mY={Boolean(!isMobile && props.accents) ? 10 : 0}
-            >
+            <Spacing mX={20} mY={10}>
                 <div
                     style={{
                         position: 'relative',
@@ -37,9 +34,9 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                             : 'center',
                     }}
                 >
-                    {Boolean(!isMobile && props.accents) && (
+                    {Boolean(!isMobile && props.bars) && (
                         <>
-                            {/* <div
+                            <div
                                 style={{
                                     fontSize: '12.5px',
                                     color: 'var(--lighter-grey)',
@@ -90,7 +87,7 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                                 }}
                             >
                                 &#x25E2;
-                            </div> */}
+                            </div>
                         </>
                     )}
                     {props.subContent && (
