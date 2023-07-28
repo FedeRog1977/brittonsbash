@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { useState } from 'react'
 import '../styles/image-slider.styles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -10,7 +10,7 @@ import {
 import { ImageSliderProps, Typography } from '../..'
 import { useScreenWidth } from '../../../../scripts'
 
-export const ImageSlider: FC<ImageSliderProps> = ({
+export const ImageSlider: React.FC<ImageSliderProps> = ({
     ...props
 }: ImageSliderProps) => {
     const { screenWidth, isMobile } = useScreenWidth()

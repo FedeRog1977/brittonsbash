@@ -4,10 +4,9 @@ import { eventData } from '../../../data'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { useScreenWidth } from '../../../scripts'
-import { FC } from 'react'
 import { InstantGramSearchTileProps } from '..'
 
-export const InstantGramSearchTile: FC<InstantGramSearchTileProps> = ({
+export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
     ...props
 }: InstantGramSearchTileProps) => {
     const { isMobile } = useScreenWidth()

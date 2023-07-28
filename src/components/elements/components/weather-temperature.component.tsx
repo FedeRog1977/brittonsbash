@@ -1,11 +1,10 @@
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { FC } from 'react'
 import { WeatherTemperatureProps } from '..'
 import { toTemperature } from '../../../scripts'
 import { Spacing, Typography } from '../../bash-blocks'
 
-export const WeatherTemperature: FC<WeatherTemperatureProps> = ({
+export const WeatherTemperature: React.FC<WeatherTemperatureProps> = ({
     ...props
 }: WeatherTemperatureProps) => {
     let backgroundColor = ''

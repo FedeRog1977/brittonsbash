@@ -1,7 +1,6 @@
-import { FC } from 'react'
 import { SpacingProps } from '..'
 
-export const Spacing: FC<SpacingProps> = ({ ...props }: SpacingProps) => (
+export const Spacing: React.FC<SpacingProps> = ({ ...props }: SpacingProps) => (
     <div
         style={{
             textAlign: props.textAlign,

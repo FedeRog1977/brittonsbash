@@ -1,9 +1,8 @@
 import { Button } from '../../bash-blocks'
 import { useDropDown, useScreenWidth } from '../../../scripts'
 import { InstantGramSearchListProps } from '..'
-import { FC } from 'react'
 
-export const InstantGramSearchList: FC<InstantGramSearchListProps> = ({
+export const InstantGramSearchList: React.FC<InstantGramSearchListProps> = ({
     ...props
 }: InstantGramSearchListProps) => {
     const { isMobile } = useScreenWidth()

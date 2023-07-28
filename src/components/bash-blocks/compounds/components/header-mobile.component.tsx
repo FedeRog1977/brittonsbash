@@ -1,9 +1,8 @@
-import { FC } from 'react'
 import { Link } from 'react-router-dom'
 import { HeaderMobileProps } from '..'
 import { useScreenWidth } from '../../../../scripts'
 
-export const HeaderMobile: FC<HeaderMobileProps> = ({
+export const HeaderMobile: React.FC<HeaderMobileProps> = ({
     ...props
 }: HeaderMobileProps) => {
     const { isMobile } = useScreenWidth()

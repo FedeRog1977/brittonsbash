@@ -1,7 +1,6 @@
-import { FC } from 'react'
 import { ArticleProps, Typography } from '../..'
 
-export const Article: FC<ArticleProps> = ({ ...props }: ArticleProps) => {
+export const Article: React.FC<ArticleProps> = ({ ...props }: ArticleProps) => {
     const sectionsFinal = props.sections.length - 1
 
     return (

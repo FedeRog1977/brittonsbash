@@ -1,10 +1,10 @@
-import { FC } from 'react'
 import { BackgroundProps } from '..'
 import '../styles/background.styles.css'
+import backgroundImage from './../../../../media/images/pages/background.jpg'
 
-// const standard = {
-//     backgroundImage: "url('../../../../media/images/pages/background.jpg')",
-//     textAlign: 'left',
+// const background = {
+//     backgroundImage: backgroundImage,
+//     // textAlign: 'left',
 //     backgroundAttachment: 'fixed',
 //     backgroundPosition: 'top',
 //     backgroundRepeat: 'no-repeat',
@@ -13,12 +13,12 @@ import '../styles/background.styles.css'
 //     padding: '175px 150px 25px 150px',
 // }
 
-export const Background: FC<BackgroundProps> = ({
+export const Background: React.FC<BackgroundProps> = ({
     ...props
 }: BackgroundProps) => (
     <div
         className="background"
-        // style={standard}
+        // style={background}
     >
         <span className={props.className}>{props.content}</span>
     </div>

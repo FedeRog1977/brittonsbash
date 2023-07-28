@@ -1,9 +1,8 @@
-import { FC } from 'react'
 import { useScreenWidth } from '../../../../scripts'
 import '../styles/typography.styles.css'
 import { TypographyProps } from '..'
 
-export const Typography: FC<TypographyProps> = ({
+export const Typography: React.FC<TypographyProps> = ({
     ...props
 }: TypographyProps) => {
     const { isMobile } = useScreenWidth()
@@ -100,7 +99,7 @@ export const Typography: FC<TypographyProps> = ({
                                                 <>{props.content}</>
                                             </a>
                                         ) : (
-                                            <>{props.content}</>
+                                            props.content
                                         )}
                                     </>
                                 </b>
@@ -113,13 +112,15 @@ export const Typography: FC<TypographyProps> = ({
                                         : 'bold-sans-serif'
                                 }
                             >
-                                {props.link ? (
-                                    <a href={props.link}>
-                                        <>{props.content}</>
-                                    </a>
-                                ) : (
-                                    <>{props.content}</>
-                                )}
+                                <>
+                                    {props.link ? (
+                                        <a href={props.link}>
+                                            <>{props.content}</>
+                                        </a>
+                                    ) : (
+                                        props.content
+                                    )}
+                                </>
                             </b>
                         )}
                     </>
@@ -133,13 +134,15 @@ export const Typography: FC<TypographyProps> = ({
                                         : 'italic-sans-serif'
                                 }
                             >
-                                {props.link ? (
-                                    <a href={props.link}>
-                                        <>{props.content}</>
-                                    </a>
-                                ) : (
-                                    <>{props.content}</>
-                                )}
+                                <>
+                                    {props.link ? (
+                                        <a href={props.link}>
+                                            <>{props.content}</>
+                                        </a>
+                                    ) : (
+                                        props.content
+                                    )}
+                                </>
                             </i>
                         ) : (
                             <>
@@ -148,7 +151,7 @@ export const Typography: FC<TypographyProps> = ({
                                         <>{props.content}</>
                                     </a>
                                 ) : (
-                                    <>{props.content}</>
+                                    props.content
                                 )}
                             </>
                         )}

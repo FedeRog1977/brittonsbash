@@ -1,11 +1,10 @@
-import { FC } from 'react'
 import '../styles/button.styles.css'
 import { ButtonProps, Spacing, Typography } from '..'
 import { useScreenWidth } from '../../../../scripts'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
-export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
+export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
     const { isMobile } = useScreenWidth()
 
     return (
@@ -111,7 +110,7 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                             </div>
                         </>
                     )}
-                    {props.subContent && (
+                    {Boolean(props.subContent) && (
                         <Typography
                             type="h5"
                             color="var(--medium-grey)"
@@ -123,24 +122,7 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                             }
                         />
                     )}
-                    {!props.content && (
-                        <div
-                            style={{
-                                position: 'absolute',
-                                float: 'right',
-                                zIndex: 10,
-                            }}
-                        >
-                            <Typography
-                                type="h5"
-                                color="var(--medium-grey)"
-                                content={
-                                    <FontAwesomeIcon icon={faChevronDown} />
-                                }
-                            />
-                        </div>
-                    )}
-                    {props.funcResp === false && (
+                    {Boolean(props.funcResp === false) ? (
                         <Typography
                             type={props.typeType ? props.typeType : 'body'}
                             content={props.content ? props.content : 'Expand'}
@@ -148,15 +130,41 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                                 props.color ? props.color : 'var(--medium-grey)'
                             }
                         />
-                    )}
-                    {props.funcResp === true && (
+                    ) : (
                         <Typography
                             type={props.typeType ? props.typeType : 'body'}
                             content={props.content ? props.content : 'Contract'}
                             color="var(--light-blue)"
                         />
                     )}
-                    {props.accents && (
+                    {Boolean(!props.content) && (
+                        <div
+                            style={{
+                                position: 'absolute',
+                                float: 'right',
+                                zIndex: 10,
+                                top: '1.75px',
+                                right: '1px',
+                            }}
+                        >
+                            <Typography
+                                type="h5"
+                                content={
+                                    props.funcResp === false ? (
+                                        <FontAwesomeIcon icon={faChevronDown} />
+                                    ) : (
+                                        <FontAwesomeIcon icon={faChevronUp} />
+                                    )
+                                }
+                                color={
+                                    props.funcResp === false
+                                        ? 'var(--medium-grey)'
+                                        : 'var(--light-blue)'
+                                }
+                            />
+                        </div>
+                    )}
+                    {Boolean(props.accents) && (
                         <Typography
                             type="h5"
                             color="var(--medium-grey)"

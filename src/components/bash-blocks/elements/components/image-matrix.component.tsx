@@ -1,9 +1,8 @@
-import { FC } from 'react'
 import { ImageMatrixProps, Typography } from '..'
 import { useScreenWidth } from '../../../../scripts'
 import { Flex } from './flex.component'
 
-export const ImageMatrix: FC<ImageMatrixProps> = ({
+export const ImageMatrix: React.FC<ImageMatrixProps> = ({
     ...props
 }: ImageMatrixProps) => {
     const { isMobile } = useScreenWidth()

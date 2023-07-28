@@ -9,9 +9,8 @@ import {
 import { refactorEvent, useDropDown, useScreenWidth } from '../../../scripts'
 import { ActivityTile } from '../../bash-blocks'
 import { InstantGramResultTileProps } from '..'
-import { FC } from 'react'
 
-export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
+export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
     ...props
 }: InstantGramResultTileProps) => {
     const event = props.event
@@ -171,7 +170,7 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
                     buttonType="regular-clear"
                     func={() => setShowDropDown(!showDropDown)}
                     funcResp={showDropDown}
-                    textAlign="left"
+                    textAlign="center"
                 />
             </Spacing>
             {showDropDown && (

@@ -1,9 +1,8 @@
-import { FC } from 'react'
 import { ActivityTileProps } from '../../../bash-blocks'
 import { useScreenWidth } from '../../../../scripts'
 import { Spacing, Typography } from '../..'
 
-export const ActivityTile: FC<ActivityTileProps> = ({
+export const ActivityTile: React.FC<ActivityTileProps> = ({
     ...props
 }: ActivityTileProps) => {
     const { isMobile } = useScreenWidth()

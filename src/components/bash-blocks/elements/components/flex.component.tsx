@@ -1,8 +1,7 @@
-import { FC } from 'react'
 import { FlexProps } from '..'
 import '../styles/flex.styles.css'
 
-export const Flex: FC<FlexProps> = ({ ...props }: FlexProps) => {
+export const Flex: React.FC<FlexProps> = ({ ...props }: FlexProps) => {
     if (props.item) {
         return (
             <div

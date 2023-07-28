@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { TileProps } from '..'
 import '../styles/tile.styles.css'
 
-export const Tile: FC<TileProps> = ({ ...props }: TileProps) => (
+export const Tile: React.FC<TileProps> = ({ ...props }: TileProps) => (
     <div
         className={`
                 tile-${props.type}

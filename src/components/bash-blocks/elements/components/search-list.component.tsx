@@ -1,8 +1,7 @@
-import { FC } from 'react'
 import '../styles/search.styles.css'
 import { SearchListProps } from '..'
 
-export const SearchList: FC<SearchListProps> = ({
+export const SearchList: React.FC<SearchListProps> = ({
     ...props
 }: SearchListProps) => (
     <select className={props.className} onChange={props.func}>
