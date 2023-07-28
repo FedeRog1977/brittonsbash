@@ -12,7 +12,15 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
             onClick={props.func}
             value={props.value}
         >
-            <Spacing mY={Boolean(props.accents) ? 10 : 0}>
+            <Spacing
+                mY={
+                    Boolean(props.accents)
+                        ? Boolean(props.content)
+                            ? 10
+                            : 0
+                        : 0
+                }
+            >
                 <div
                     style={{
                         position: 'relative',
@@ -102,46 +110,52 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                             }
                         />
                     )}
-                    <>
-                        {props.funcResp === false && (
-                            <Typography
-                                type={props.typeType ? props.typeType : 'body'}
-                                content={
-                                    <>
-                                        {props.content ? (
-                                            <>{props.content}</>
-                                        ) : (
-                                            <>Expand</>
-                                        )}
-                                    </>
-                                }
-                                color={
-                                    props.color
-                                        ? props.color
-                                        : 'var(--medium-grey)'
-                                }
-                                mT={props.content ? 0 : 2.5}
-                                mB={props.content ? 0 : 5}
-                            />
-                        )}
-                        {props.funcResp === true && (
-                            <Typography
-                                type={props.typeType ? props.typeType : 'body'}
-                                content={
-                                    <>
-                                        {props.content ? (
-                                            <>{props.content}</>
-                                        ) : (
-                                            <>Contract</>
-                                        )}
-                                    </>
-                                }
-                                color="var(--light-blue)"
-                                mT={props.content ? 0 : 2.5}
-                                mB={props.content ? 0 : 5}
-                            />
-                        )}
-                    </>
+                    {Boolean(props.funcResp) ? (
+                        <>
+                            {props.funcResp === false && (
+                                <Typography
+                                    type={
+                                        props.typeType ? props.typeType : 'body'
+                                    }
+                                    content={
+                                        <>
+                                            {props.content
+                                                ? props.content
+                                                : 'Expand'}
+                                        </>
+                                    }
+                                    color={
+                                        props.color
+                                            ? props.color
+                                            : 'var(--medium-grey)'
+                                    }
+                                />
+                            )}
+                            {props.funcResp === true && (
+                                <Typography
+                                    type={
+                                        props.typeType ? props.typeType : 'body'
+                                    }
+                                    content={
+                                        <>
+                                            {props.content
+                                                ? props.content
+                                                : 'Contract'}
+                                        </>
+                                    }
+                                    color="var(--light-blue)"
+                                />
+                            )}
+                        </>
+                    ) : (
+                        <Typography
+                            type={props.typeType ? props.typeType : 'body'}
+                            content={props.content}
+                            color={
+                                props.color ? props.color : 'var(--medium-grey)'
+                            }
+                        />
+                    )}
                     {props.accents && (
                         <Typography
                             type="h5"
