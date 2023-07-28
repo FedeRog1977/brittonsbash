@@ -9,6 +9,12 @@ export const InstantGramSearchList: FC<InstantGramSearchListProps> = ({
     const { isMobile } = useScreenWidth()
     const { showDropDown, setShowDropDown } = useDropDown()
 
+    const wrapperFunction = (func: any) => {
+        console.log('TEST', func())
+        func()
+        setShowDropDown(false)
+    }
+
     return (
         <>
             <Button
@@ -26,25 +32,33 @@ export const InstantGramSearchList: FC<InstantGramSearchListProps> = ({
                     {props.items.map(({ id, prefix, names }: any) => (
                         <Button
                             key={id}
-                            typeType="h4"
                             buttonType={`${
                                 isMobile ? 'regular' : 'dense'
                             }-clear`}
-                            value={names.join(' - ')}
-                            func={props.func}
+                            func={() => setShowDropDown(false)}
                             funcResp={false}
                             content={
-                                <>
-                                    {prefix && prefix + ':'}
-                                    {names.map((name: any) => (
-                                        <div key={name + 'dkjsdj'}>{name}</div>
-                                    ))}
-                                </>
+                                <Button
+                                    key={id}
+                                    typeType="h4"
+                                    buttonType="regular-clear"
+                                    value={names.join(' - ')}
+                                    func={props.func}
+                                    funcResp={false}
+                                    content={
+                                        <>
+                                            {prefix && prefix + ':'}
+                                            {names.map((name: any) => (
+                                                <div key={name}>{name}</div>
+                                            ))}
+                                        </>
+                                    }
+                                    color="var(--darker-grey)"
+                                    subContent={id.slice(-2)}
+                                    accents
+                                    accentsTop
+                                />
                             }
-                            subContent={id.slice(-2)}
-                            color="var(--darker-grey)"
-                            accents
-                            accentsTop
                         />
                     ))}
                 </div>

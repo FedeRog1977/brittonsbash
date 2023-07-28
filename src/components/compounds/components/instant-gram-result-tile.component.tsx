@@ -30,7 +30,7 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
             >
                 {refactoredEvent.prefix && (
                     <Typography
-                        type="t1"
+                        type="t2"
                         content={
                             <>
                                 <Typography
@@ -75,7 +75,7 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
                     </>
                 ) : (
                     <Typography
-                        type={refactoredEvent.prefix ? 'h1' : 't1'}
+                        type={refactoredEvent.prefix ? 'h1' : 't2'}
                         content={refactoredEvent.names[0].name}
                         textAlign="left"
                     />
@@ -88,7 +88,7 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
                 mB={isMobile ? 7.5 : 15}
             >
                 <Typography
-                    type="h2"
+                    type="h3"
                     content={
                         <>
                             <Typography

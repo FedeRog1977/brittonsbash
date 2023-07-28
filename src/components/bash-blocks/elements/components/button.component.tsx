@@ -12,7 +12,7 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
             onClick={props.func}
             value={props.value}
         >
-            <Spacing mX={20} mY={10}>
+            <Spacing mY={Boolean(props.accents) ? 10 : 0}>
                 <div
                     style={{
                         position: 'relative',
@@ -111,7 +111,7 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                                         {props.content ? (
                                             <>{props.content}</>
                                         ) : (
-                                            <>Expand ...</>
+                                            <>Expand</>
                                         )}
                                     </>
                                 }
@@ -132,7 +132,7 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                                         {props.content ? (
                                             <>{props.content}</>
                                         ) : (
-                                            <>... Contract</>
+                                            <>Contract</>
                                         )}
                                     </>
                                 }
