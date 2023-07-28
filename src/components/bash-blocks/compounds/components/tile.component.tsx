@@ -1,4 +1,3 @@
-import { FC } from 'react'
 import { TileProps } from '..'
 import '../styles/tile.styles.css'
 

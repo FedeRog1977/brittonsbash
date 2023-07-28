@@ -1,4 +1,4 @@
-import '../styles/button.styles.css'
+import '../styles/button.styles.scss'
 import { ButtonProps, Spacing, Typography } from '..'
 import { useScreenWidth } from '../../../../scripts'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -20,8 +20,8 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                             ? 5
                             : 0
                         : Boolean(props.content)
-                        ? 1.5
-                        : 2.5
+                        ? -2
+                        : 5
                 }
                 mB={
                     Boolean(props.accents)
@@ -143,7 +143,7 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                                 position: 'absolute',
                                 float: 'right',
                                 zIndex: 10,
-                                top: '1.75px',
+                                top: '0px',
                                 right: '1px',
                             }}
                         >

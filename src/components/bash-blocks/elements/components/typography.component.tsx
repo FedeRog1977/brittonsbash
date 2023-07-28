@@ -66,7 +66,6 @@ export const Typography: React.FC<TypographyProps> = ({
                 marginLeft: props.mL ? props.mL : 0,
                 marginRight: props.mR ? props.mR : 0,
                 padding: 0,
-                border: '1px solid black',
             }}
         >
             <span

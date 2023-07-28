@@ -8,12 +8,6 @@ export const InstantGramSearchList: React.FC<InstantGramSearchListProps> = ({
     const { isMobile } = useScreenWidth()
     const { showDropDown, setShowDropDown } = useDropDown()
 
-    const wrapperFunction = (func: any) => {
-        console.log('TEST', func())
-        func()
-        setShowDropDown(false)
-    }
-
     return (
         <>
             <Button

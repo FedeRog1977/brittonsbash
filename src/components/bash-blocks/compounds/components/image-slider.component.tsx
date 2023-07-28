@@ -5,7 +5,7 @@ import {
     faChevronCircleLeft,
     faChevronCircleRight,
     faEject,
-    faRefresh,
+    faRedo,
 } from '@fortawesome/free-solid-svg-icons'
 import { ImageSliderProps, Typography } from '../..'
 import { useScreenWidth } from '../../../../scripts'
@@ -33,7 +33,7 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
     return (
         <div className="image-slider">
             <FontAwesomeIcon
-                icon={faRefresh}
+                icon={faRedo}
                 className="refresh"
                 onClick={() => setCurrent(0)}
             />

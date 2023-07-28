@@ -14,8 +14,11 @@ export const HillMarker = ({ type }: any) => {
                             <div>
                                 <img
                                     src={'../../images/hills/albanian.jpg'}
+                                    alt={name}
                                     style={{ width: '200px' }}
-                                ></img>
+                                >
+                                    {image}
+                                </img>
                             </div>
                             <div>
                                 <h4>
