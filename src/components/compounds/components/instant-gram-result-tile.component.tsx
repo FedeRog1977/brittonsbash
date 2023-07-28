@@ -171,7 +171,7 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
                     buttonType="regular-clear"
                     func={() => setShowDropDown(!showDropDown)}
                     funcResp={showDropDown}
-                    textAlign="center"
+                    textAlign="left"
                 />
             </Spacing>
             {showDropDown && (

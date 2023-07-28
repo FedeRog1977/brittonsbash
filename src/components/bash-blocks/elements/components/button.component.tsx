@@ -2,6 +2,8 @@ import { FC } from 'react'
 import '../styles/button.styles.css'
 import { ButtonProps, Spacing, Typography } from '..'
 import { useScreenWidth } from '../../../../scripts'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
     const { isMobile } = useScreenWidth()
@@ -13,12 +15,23 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
             value={props.value}
         >
             <Spacing
-                mY={
+                mT={
                     Boolean(props.accents)
                         ? Boolean(props.content)
-                            ? 10
+                            ? 5
                             : 0
-                        : 0
+                        : Boolean(props.content)
+                        ? 1.5
+                        : 2.5
+                }
+                mB={
+                    Boolean(props.accents)
+                        ? Boolean(props.content)
+                            ? 5
+                            : 0
+                        : Boolean(props.content)
+                        ? 0
+                        : 5
                 }
             >
                 <div
@@ -110,50 +123,37 @@ export const Button: FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                             }
                         />
                     )}
-                    {Boolean(props.funcResp) ? (
-                        <>
-                            {props.funcResp === false && (
-                                <Typography
-                                    type={
-                                        props.typeType ? props.typeType : 'body'
-                                    }
-                                    content={
-                                        <>
-                                            {props.content
-                                                ? props.content
-                                                : 'Expand'}
-                                        </>
-                                    }
-                                    color={
-                                        props.color
-                                            ? props.color
-                                            : 'var(--medium-grey)'
-                                    }
-                                />
-                            )}
-                            {props.funcResp === true && (
-                                <Typography
-                                    type={
-                                        props.typeType ? props.typeType : 'body'
-                                    }
-                                    content={
-                                        <>
-                                            {props.content
-                                                ? props.content
-                                                : 'Contract'}
-                                        </>
-                                    }
-                                    color="var(--light-blue)"
-                                />
-                            )}
-                        </>
-                    ) : (
+                    {!props.content && (
+                        <div
+                            style={{
+                                position: 'absolute',
+                                float: 'right',
+                                zIndex: 10,
+                            }}
+                        >
+                            <Typography
+                                type="h5"
+                                color="var(--medium-grey)"
+                                content={
+                                    <FontAwesomeIcon icon={faChevronDown} />
+                                }
+                            />
+                        </div>
+                    )}
+                    {props.funcResp === false && (
                         <Typography
                             type={props.typeType ? props.typeType : 'body'}
-                            content={props.content}
+                            content={props.content ? props.content : 'Expand'}
                             color={
                                 props.color ? props.color : 'var(--medium-grey)'
                             }
+                        />
+                    )}
+                    {props.funcResp === true && (
+                        <Typography
+                            type={props.typeType ? props.typeType : 'body'}
+                            content={props.content ? props.content : 'Contract'}
+                            color="var(--light-blue)"
                         />
                     )}
                     {props.accents && (
