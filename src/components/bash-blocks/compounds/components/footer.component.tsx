@@ -1,4 +1,4 @@
-import '../styles/header-footer.styles.css'
+import '../styles/header-footer.styles.scss'
 import xmr from '../../../../media/images/monero/xmr.svg'
 import monero from '../../../../media/images/monero/monero.png'
 import { Spacing, Typography } from '../..'

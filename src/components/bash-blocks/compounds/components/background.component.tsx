@@ -1,5 +1,5 @@
 import { BackgroundProps } from '..'
-import '../styles/background.styles.css'
+import '../styles/background.styles.scss'
 
 export const Background: React.FC<BackgroundProps> = ({
     ...props

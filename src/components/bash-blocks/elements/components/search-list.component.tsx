@@ -1,4 +1,4 @@
-import '../styles/search.styles.css'
+import '../styles/search.styles.scss'
 import { SearchListProps } from '..'
 
 export const SearchList: React.FC<SearchListProps> = ({

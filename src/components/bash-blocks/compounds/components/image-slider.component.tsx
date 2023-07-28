@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import '../styles/image-slider.styles.css'
+import '../styles/image-slider.styles.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     faChevronCircleLeft,

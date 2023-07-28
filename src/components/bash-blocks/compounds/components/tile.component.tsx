@@ -1,5 +1,5 @@
 import { TileProps } from '..'
-import '../styles/tile.styles.css'
+import '../styles/tile.styles.scss'
 
 export const Tile: React.FC<TileProps> = ({ ...props }: TileProps) => (
     <div

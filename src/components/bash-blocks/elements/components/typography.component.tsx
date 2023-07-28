@@ -1,5 +1,5 @@
 import { useScreenWidth } from '../../../../scripts'
-import '../styles/typography.styles.css'
+import '../styles/typography.styles.scss'
 import { TypographyProps } from '..'
 
 export const Typography: React.FC<TypographyProps> = ({
