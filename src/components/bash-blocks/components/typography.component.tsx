@@ -92,97 +92,13 @@ export const Typography: React.FC<TypographyProps> = ({
                     textDecoration: props.textDecoration,
                 }}
             >
-                {/* {props.boldFace ? (
-                    <>
-                        {props.italicize ? (
-                            <i
-                                className={
-                                    props.fontFamily === 'serif'
-                                        ? 'italic-serif'
-                                        : 'italic-sans-serif'
-                                }
-                            >
-                                <b
-                                    className={
-                                        props.fontFamily === 'serif'
-                                            ? 'bold-serif'
-                                            : 'bold-sans-serif'
-                                    }
-                                >
-                                    <>
-                                        {props.link ? (
-                                            <a href={props.link}>
-                                                <>{props.content}</>
-                                            </a>
-                                        ) : (
-                                            props.content
-                                        )}
-                                    </>
-                                </b>
-                            </i>
-                        ) : (
-                            <b
-                                className={
-                                    props.fontFamily === 'serif'
-                                        ? 'bold-serif'
-                                        : 'bold-sans-serif'
-                                }
-                            >
-                                <>
-                                    {props.link ? (
-                                        <a href={props.link}>
-                                            <>{props.content}</>
-                                        </a>
-                                    ) : (
-                                        props.content
-                                    )}
-                                </>
-                            </b>
-                        )}
-                    </>
+                {props.link ? (
+                    <a href={props.link}>
+                        <>{props.content}</>
+                    </a>
                 ) : (
-                    <>
-                        {props.italicize ? (
-                            <i
-                                className={
-                                    props.fontFamily === 'serif'
-                                        ? 'italic-serif'
-                                        : 'italic-sans-serif'
-                                }
-                            >
-                                <>
-                                    {props.link ? (
-                                        <a href={props.link}>
-                                            <>{props.content}</>
-                                        </a>
-                                    ) : (
-                                        props.content
-                                    )}
-                                </>
-                            </i>
-                        ) : (
-                            <>
-                                {props.link ? (
-                                    <a href={props.link}>
-                                        <>{props.content}</>
-                                    </a>
-                                ) : (
-                                    props.content
-                                )}
-                            </>
-                        )}
-                    </>
-                )} */}
-                {/* <>{props.content}</> */}
-                <>
-                    {props.link ? (
-                        <a href={props.link}>
-                            <>{props.content}</>
-                        </a>
-                    ) : (
-                        props.content
-                    )}
-                </>
+                    <>{props.content}</>
+                )}
             </span>
         </div>
     )
