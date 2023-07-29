@@ -1,2 +1,3 @@
-export * from './compounds'
-export * from './elements'
+export * from './components'
+export * from './stories'
+export * from './types'

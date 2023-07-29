@@ -1,7 +1,0 @@
-export * from './button.component'
-export * from './flex.component'
-export * from './image-matrix.component'
-export * from './search.component'
-export * from './search-list.component'
-export * from './spacing.component'
-export * from './typography.component'

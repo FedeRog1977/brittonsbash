@@ -192,7 +192,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                                         inline
                                     />
                                     <Typography
-                                        type={isMobile ? 'body-light' : 'body'}
+                                        type="body"
                                         content={refactoredEvent.youthHostels}
                                         inline
                                     />
