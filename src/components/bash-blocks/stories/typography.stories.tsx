@@ -8,8 +8,10 @@ export const TypographyStories = () => (
                 fontFamily="sans-serif"
                 content="Typography"
                 textAlign="center"
-                paragraphMargins
             />
+        </Tile>
+
+        <Tile type="solid">
             <Typography
                 type="h1"
                 fontFamily="sans-serif"
@@ -17,136 +19,162 @@ export const TypographyStories = () => (
                 textAlign="center"
                 paragraphMargins
             />
-        </Tile>
-        <Tile type="solid">
             <Typography
                 type="t1"
                 fontFamily="serif"
                 content="Typography t1"
                 textAlign="left"
+                paragraphMargins
             />
             <Typography
                 type="t2"
                 fontFamily="serif"
                 content="Typography t2"
                 textAlign="left"
+                paragraphMargins
             />
             <Typography
                 type="h1"
                 fontFamily="serif"
                 content="Typography h1"
                 textAlign="left"
+                paragraphMargins
             />
             <Typography
                 type="h2"
                 fontFamily="serif"
                 content="Typography h2"
                 textAlign="left"
+                paragraphMargins
             />
             <Typography
                 type="h3"
                 fontFamily="serif"
                 content="Typography h3"
                 textAlign="left"
+                paragraphMargins
             />
             <Typography
                 type="h4"
                 fontFamily="serif"
                 content="Typography h4"
                 textAlign="left"
+                paragraphMargins
             />
-            <div>
-                <Typography
-                    type="body"
-                    fontFamily="serif"
-                    content="Typography body"
-                    textAlign="justify"
-                    inline
-                />{' '}
-                <Typography
-                    type="body"
-                    fontFamily="serif"
-                    content="Typography body bold-faced"
-                    textAlign="justify"
-                    boldFace
-                    inline
-                />{' '}
-                <Typography
-                    type="body"
-                    fontFamily="serif"
-                    content="Typography body italicized"
-                    textAlign="justify"
-                    italicize
-                    inline
-                />{' '}
-                <Typography
-                    type="body"
-                    fontFamily="serif"
-                    content="Typography body bold-faced and italicized (bold-oblique)"
-                    textAlign="justify"
-                    boldFace
-                    italicize
-                    inline
-                />
-            </div>
-            <div>
-                <Typography
-                    type="body"
-                    fontFamily="serif"
-                    content="Typography body link"
-                    textAlign="justify"
-                    inline
-                    link="http://lewisbritton.com"
-                />{' '}
-                <Typography
-                    type="body"
-                    fontFamily="serif"
-                    content="Typography body bold-faced link"
-                    textAlign="justify"
-                    boldFace
-                    inline
-                    link="http://lewisbritton.com"
-                />{' '}
-                <Typography
-                    type="body"
-                    fontFamily="serif"
-                    content="Typography body italicized link"
-                    textAlign="justify"
-                    italicize
-                    inline
-                    link="http://lewisbritton.com"
-                />{' '}
-                <Typography
-                    type="body"
-                    fontFamily="serif"
-                    content="Typography body bold-faced and italicized (bold-oblique) link"
-                    textAlign="justify"
-                    boldFace
-                    italicize
-                    inline
-                    link="http://lewisbritton.com"
-                />
-            </div>
+            <Typography
+                type="body"
+                fontFamily="serif"
+                content={
+                    <>
+                        <Typography
+                            fontFamily="serif"
+                            content="Typography body"
+                            textAlign="justify"
+                            inline
+                        />{' '}
+                        <Typography
+                            fontFamily="serif"
+                            content="Typography body bold-faced"
+                            textAlign="justify"
+                            boldFace
+                            inline
+                        />{' '}
+                        <Typography
+                            fontFamily="serif"
+                            content="Typography body italicized"
+                            textAlign="justify"
+                            italicize
+                            inline
+                        />{' '}
+                        <Typography
+                            fontFamily="serif"
+                            content="Typography body bold-faced and italicized (bold-oblique)"
+                            textAlign="justify"
+                            boldFace
+                            italicize
+                            inline
+                        />
+                    </>
+                }
+                paragraphMargins
+            />
+            <Typography
+                type="body"
+                fontFamily="serif"
+                content={
+                    <>
+                        <Typography
+                            fontFamily="serif"
+                            content="Typography body link"
+                            textAlign="justify"
+                            inline
+                            link={{
+                                url: 'http://lewisbritton.com',
+                                newTab: true,
+                            }}
+                        />{' '}
+                        <Typography
+                            fontFamily="serif"
+                            content="Typography body bold-faced link"
+                            textAlign="justify"
+                            boldFace
+                            inline
+                            link={{
+                                url: 'http://lewisbritton.com',
+                                newTab: true,
+                            }}
+                        />{' '}
+                        <Typography
+                            fontFamily="serif"
+                            content="Typography body italicized link"
+                            textAlign="justify"
+                            italicize
+                            inline
+                            link={{
+                                url: 'http://lewisbritton.com',
+                                newTab: true,
+                            }}
+                        />{' '}
+                        <Typography
+                            fontFamily="serif"
+                            content="Typography body bold-faced and italicized (bold-oblique) link"
+                            textAlign="justify"
+                            boldFace
+                            italicize
+                            inline
+                            link={{
+                                url: 'http://lewisbritton.com',
+                                newTab: true,
+                            }}
+                        />
+                    </>
+                }
+                paragraphMargins
+            />
             <Typography
                 type="caption"
                 fontFamily="serif"
                 content="Typography caption"
                 textAlign="left"
+                paragraphMargins
             />
             <Typography
                 type="footnote"
                 fontFamily="serif"
                 content="Typography footnote"
                 textAlign="left"
+                paragraphMargins
             />
             <Typography
                 type="tiny"
                 fontFamily="serif"
                 content="Typography tiny"
                 textAlign="left"
+                paragraphMargins
             />
         </Tile>
-        <Tile type="clear-condensed">
+
+        <Tile type="solid">
             <Typography
                 type="h1"
                 fontFamily="sans-serif"
@@ -154,136 +182,220 @@ export const TypographyStories = () => (
                 textAlign="center"
                 paragraphMargins
             />
-        </Tile>
-        <Tile type="solid">
             <Typography
                 type="t1"
                 fontFamily="sans-serif"
                 content="Typography t1"
                 textAlign="left"
+                paragraphMargins
             />
             <Typography
                 type="t2"
                 fontFamily="sans-serif"
                 content="Typography t2"
                 textAlign="left"
+                paragraphMargins
             />
             <Typography
                 type="h1"
                 fontFamily="sans-serif"
                 content="Typography h1"
                 textAlign="left"
+                paragraphMargins
             />
             <Typography
                 type="h2"
                 fontFamily="sans-serif"
                 content="Typography h2"
                 textAlign="left"
+                paragraphMargins
             />
             <Typography
                 type="h3"
                 fontFamily="sans-serif"
                 content="Typography h3"
                 textAlign="left"
+                paragraphMargins
             />
             <Typography
                 type="h4"
                 fontFamily="sans-serif"
                 content="Typography h4"
                 textAlign="left"
+                paragraphMargins
             />
-            <div>
-                <Typography
-                    type="body"
-                    fontFamily="sans-serif"
-                    content="Typography body"
-                    textAlign="justify"
-                    inline
-                />{' '}
-                <Typography
-                    type="body"
-                    fontFamily="sans-serif"
-                    content="Typography body bold-faced"
-                    textAlign="justify"
-                    boldFace
-                    inline
-                />{' '}
-                <Typography
-                    type="body"
-                    fontFamily="sans-serif"
-                    content="Typography body italicized"
-                    textAlign="justify"
-                    italicize
-                    inline
-                />{' '}
-                <Typography
-                    type="body"
-                    fontFamily="sans-serif"
-                    content="Typography body bold-faced and italicized"
-                    textAlign="justify"
-                    boldFace
-                    italicize
-                    inline
-                />
-            </div>
-            <div>
-                <Typography
-                    type="body"
-                    fontFamily="sans-serif"
-                    content="Typography body link"
-                    textAlign="justify"
-                    inline
-                    link="http://lewisbritton.com"
-                />{' '}
-                <Typography
-                    type="body"
-                    fontFamily="sans-serif"
-                    content="Typography body bold-faced link"
-                    textAlign="justify"
-                    boldFace
-                    inline
-                    link="http://lewisbritton.com"
-                />{' '}
-                <Typography
-                    type="body"
-                    fontFamily="sans-serif"
-                    content="Typography body italicized link"
-                    textAlign="justify"
-                    italicize
-                    inline
-                    link="http://lewisbritton.com"
-                />{' '}
-                <Typography
-                    type="body"
-                    fontFamily="sans-serif"
-                    content="Typography body bold-faced and italicized (bold-oblique) link"
-                    textAlign="justify"
-                    boldFace
-                    italicize
-                    inline
-                    link="http://lewisbritton.com"
-                />
-            </div>
+            <Typography
+                type="body"
+                fontFamily="sans-serif"
+                content={
+                    <>
+                        <Typography
+                            content="Typography body"
+                            textAlign="justify"
+                            inline
+                        />{' '}
+                        <Typography
+                            content="Typography body bold-faced"
+                            textAlign="justify"
+                            boldFace
+                            inline
+                        />{' '}
+                        <Typography
+                            content="Typography body italicized"
+                            textAlign="justify"
+                            italicize
+                            inline
+                        />{' '}
+                        <Typography
+                            content="Typography body bold-faced and italicized (bold-oblique)"
+                            textAlign="justify"
+                            boldFace
+                            italicize
+                            inline
+                        />
+                    </>
+                }
+                paragraphMargins
+            />
+            <Typography
+                type="body"
+                fontFamily="sans-serif"
+                content={
+                    <>
+                        <Typography
+                            content="Typography body link"
+                            textAlign="justify"
+                            inline
+                            link={{
+                                url: 'http://lewisbritton.com',
+                                newTab: true,
+                            }}
+                        />{' '}
+                        <Typography
+                            content="Typography body bold-faced link"
+                            textAlign="justify"
+                            boldFace
+                            inline
+                            link={{
+                                url: 'http://lewisbritton.com',
+                                newTab: true,
+                            }}
+                        />{' '}
+                        <Typography
+                            content="Typography body italicized link"
+                            textAlign="justify"
+                            italicize
+                            inline
+                            link={{
+                                url: 'http://lewisbritton.com',
+                                newTab: true,
+                            }}
+                        />{' '}
+                        <Typography
+                            content="Typography body bold-faced and italicized (bold-oblique) link"
+                            textAlign="justify"
+                            boldFace
+                            italicize
+                            inline
+                            link={{
+                                url: 'http://lewisbritton.com',
+                                newTab: true,
+                            }}
+                        />
+                    </>
+                }
+                paragraphMargins
+            />
             <Typography
                 type="caption"
                 fontFamily="sans-serif"
                 content="Typography caption"
                 textAlign="left"
+                paragraphMargins
             />
             <Typography
                 type="footnote"
                 fontFamily="sans-serif"
                 content="Typography footnote"
                 textAlign="left"
+                paragraphMargins
             />
             <Typography
                 type="tiny"
                 fontFamily="sans-serif"
                 content="Typography tiny"
                 textAlign="left"
+                paragraphMargins
             />
         </Tile>
-        <Tile type="clear-condensed">
+
+        <Tile type="solid">
+            <Typography
+                type="h1"
+                fontFamily="sans-serif"
+                content="Alignment"
+                textAlign="center"
+                paragraphMargins
+            />
+            <Typography
+                type="h2"
+                fontFamily="sans-serif"
+                content="Left"
+                textAlign="left"
+                paragraphMargins
+            />
+            <Typography
+                type="body"
+                fontFamily="serif"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                textAlign="left"
+                paragraphMargins
+            />
+            <Typography
+                type="h2"
+                fontFamily="sans-serif"
+                content="Right"
+                textAlign="left"
+                paragraphMargins
+            />
+            <Typography
+                type="body"
+                fontFamily="serif"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                textAlign="right"
+                paragraphMargins
+            />
+            <Typography
+                type="h2"
+                fontFamily="sans-serif"
+                content="Center"
+                textAlign="left"
+                paragraphMargins
+            />
+            <Typography
+                type="body"
+                fontFamily="serif"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                textAlign="center"
+                paragraphMargins
+            />
+            <Typography
+                type="h2"
+                fontFamily="sans-serif"
+                content="Justify"
+                textAlign="left"
+                paragraphMargins
+            />
+            <Typography
+                type="body"
+                fontFamily="serif"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                textAlign="justify"
+                paragraphMargins
+            />
+        </Tile>
+
+        <Tile type="solid">
             <Typography
                 type="h1"
                 fontFamily="sans-serif"
@@ -291,8 +403,6 @@ export const TypographyStories = () => (
                 textAlign="center"
                 paragraphMargins
             />
-        </Tile>
-        <Tile type="solid">
             <Typography
                 type="h2"
                 fontFamily="sans-serif"
@@ -318,16 +428,15 @@ export const TypographyStories = () => (
                 textDecoration="underline"
             />
         </Tile>
-        <Tile type="clear-condensed">
+
+        <Tile type="solid">
             <Typography
                 type="h1"
                 fontFamily="sans-serif"
-                content="Casing"
+                content="Casing Examples"
                 textAlign="center"
                 paragraphMargins
             />
-        </Tile>
-        <Tile type="solid">
             <Typography
                 type="body"
                 fontFamily="serif"

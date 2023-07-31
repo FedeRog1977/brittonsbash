@@ -24,7 +24,7 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
                 <Typography
                     type="body"
                     content={props.title.leftItem}
-                    boldFace={isMobile ? false : true}
+                    boldFace
                     inline
                 />
             </Spacing>
@@ -71,7 +71,7 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
                                 <Typography
                                     type="body"
                                     content={leftItem}
-                                    boldFace={isMobile ? false : true}
+                                    boldFace
                                     inline
                                 />
                             </Spacing>

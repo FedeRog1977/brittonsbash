@@ -122,28 +122,30 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                             }
                         />
                     )}
-                    {Boolean(props.funcResp === false) ? (
-                        <Typography
-                            type={props.typeType ? props.typeType : 'body'}
-                            content={props.content ? props.content : 'Expand'}
-                            color={
-                                props.color ? props.color : 'var(--medium-grey)'
-                            }
-                        />
-                    ) : (
-                        <Typography
-                            type={props.typeType ? props.typeType : 'body'}
-                            content={props.content ? props.content : 'Contract'}
-                            color="var(--light-blue)"
-                        />
-                    )}
+                    <Typography
+                        type={props.typeType ? props.typeType : 'body'}
+                        content={
+                            props.content
+                                ? props.content
+                                : Boolean(props.funcResp === false)
+                                ? 'Expand'
+                                : 'Contract'
+                        }
+                        color={
+                            props.color
+                                ? props.color
+                                : Boolean(props.funcResp === false)
+                                ? 'var(--medium-grey)'
+                                : 'var(--light-blue)'
+                        }
+                    />
                     {Boolean(!props.content) && (
                         <div
                             style={{
                                 position: 'absolute',
                                 float: 'right',
                                 zIndex: 10,
-                                top: '0px',
+                                top: '1px',
                                 right: '1px',
                             }}
                         >

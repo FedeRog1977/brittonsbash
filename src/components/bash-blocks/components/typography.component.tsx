@@ -93,7 +93,10 @@ export const Typography: React.FC<TypographyProps> = ({
                 }}
             >
                 {props.link ? (
-                    <a href={props.link}>
+                    <a
+                        href={props.link.url}
+                        target={props.link.newTab ? '_blank' : undefined}
+                    >
                         <>{props.content}</>
                     </a>
                 ) : (

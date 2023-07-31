@@ -746,6 +746,7 @@ export const communicationsData = {
             'Audiolab',
             'Allen & Heath',
             'Bose',
+            'Bang & Olufsen',
             'Linn',
             'Technics',
             'Yamaha',
@@ -1001,7 +1002,8 @@ export const communicationsData = {
             'Pentel P200 0.7mm',
             'Pentel P200 0.9mm',
             'Pentel Superb Ballpoint 0.7mm BK77',
-            'Lamy Logo Custom Vitra Black',
+            'LAMY Joy 1.5 Calligraphy Fountain Pen',
+            'LAMY Logo Custom Vitra Black',
             'Staedler Lumocolor 60 F',
         ],
         pencilCases: [],
@@ -1152,6 +1154,14 @@ export const communicationsData = {
                 ],
             },
         },
+        reading: [
+            'Herman Miller: A Way of Living',
+            '1000 Design Classics',
+            'The First Fifty Years 1913-1963 Arthur Andersen & Co',
+            'IBM - Graphic Design Guide From 1969 To 1987',
+            'The Atlas of Furniture Design',
+            'Magazine B (Various)',
+        ],
     },
     automotive: {
         models: [

@@ -1,3 +1,4 @@
+import { LinkProps } from '.'
 import { ImageProps } from './image.types'
 import { MarginProps } from './margin-padding.types'
 
@@ -22,7 +23,7 @@ export type TypographyTextProps = {
     italicize?: boolean
     smallCaps?: boolean
     textDecoration?: 'overline' | 'underline' | 'line-through'
-    link?: string
+    link?: LinkProps['link']
 }
 
 export type TypographyStyleProps = {
