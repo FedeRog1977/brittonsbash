@@ -185,9 +185,8 @@ export const OSCall = () => {
                 scrollWheelZoom={true}
             >
                 <TileLayer
-                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    // url="https://api.os.uk/maps/raster/v1/zxy/Leisure_27700/{z}/{x}/{y}.png?key=oV4hBtyHRKqV0tc61eylt8s7bxypAHkt"
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    url="https://api.os.uk/maps/raster/v1/zxy/Outdoor_3857/{z}/{x}/{y}.png?key=VfSaBhJrLbr7vR7GLkAAGH02AZM6lzkP"
+                    // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
                 {showCurrLoc && <CurrentLocation />}
                 {showMunros && <HillMarker type={'Munro'} />}
