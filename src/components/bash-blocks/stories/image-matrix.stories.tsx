@@ -13,7 +13,24 @@ export const ImageMatrixStories = () => (
             />
         </Tile>
         <Tile type="solid">
+            <Typography
+                type="h1"
+                fontFamily="sans-serif"
+                content="Default"
+                textAlign="center"
+                paragraphMargins
+            />
             <ImageMatrix items={imageTestData} />
+        </Tile>
+        <Tile type="solid">
+            <Typography
+                type="h1"
+                fontFamily="sans-serif"
+                content="Custom Columns"
+                textAlign="center"
+                paragraphMargins
+            />
+            <ImageMatrix items={imageTestData} columns={5} />
         </Tile>
     </>
 )

@@ -7,7 +7,7 @@ import {
     faEject,
     faRedo,
 } from '@fortawesome/free-solid-svg-icons'
-import { ImageSliderProps, Typography } from '..'
+import { ImageProps, ImageSliderProps, Typography } from '..'
 import { useScreenWidth } from '../../../scripts'
 
 export const ImageSlider: React.FC<ImageSliderProps> = ({
@@ -47,9 +47,9 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
                 className="right-arrow"
                 onClick={nextSlide}
             />
-            {props.slides.map((slide, index) => (
-                <>
-                    {index === current && (
+            {props.slides.map((slide: ImageProps, index: number) => {
+                if (index === current) {
+                    return (
                         <div key={index}>
                             {slide.description && (
                                 <div className="image-slider-caption">
@@ -74,10 +74,12 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
                                 />
                             </div>
                         </div>
-                    )}
-                </>
-            ))}
-            {props.slides.map((slide, index) => (
+                    )
+                }
+
+                return null
+            })}
+            {props.slides.map((slide: ImageProps, index: number) => (
                 <div
                     key={index}
                     className={index === current ? 'slide active' : 'slide'}

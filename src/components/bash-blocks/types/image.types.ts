@@ -6,6 +6,7 @@ export type ImageProps = {
 
 export type ImageMatrixProps = {
     items: ImageProps[]
+    columns?: number
 }
 
 export type ImageSliderProps = {
