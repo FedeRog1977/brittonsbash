@@ -804,7 +804,7 @@ export const communicationsData = {
             },
             {
                 application: 'Mixing Deck',
-                name: 'Allen & Heath Xone:92 Mixing Deck',
+                name: 'Allen & Heath Xone:92',
                 quantity: 1,
             },
         ],
