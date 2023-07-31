@@ -46,7 +46,7 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
                                         key={index}
                                         type="body"
                                         content={item as React.ReactElement}
-                                        boldFace={isMobile ? false : true}
+                                        boldFace
                                         inline
                                     />
                                 </div>
@@ -57,7 +57,7 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
                     <Typography
                         type="body"
                         content={props.title.rightItems}
-                        boldFace={isMobile ? false : true}
+                        boldFace
                         inline
                     />
                 )}
