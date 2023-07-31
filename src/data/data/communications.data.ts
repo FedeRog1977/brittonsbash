@@ -752,13 +752,61 @@ export const communicationsData = {
             'Yamaha',
         ],
         hiFi: [
-            'Audiolab 8300A Pre-Amplifier',
-            'Audiolab 8300MB Monoblock Power Amplifier',
-            'Audiolab 8300CDQ CD Player',
-            'Allen & Heath Xone:92 Mixing Deck',
-            'Linn Majik LP12 Turntable',
-            'Linn Majik 109 Speakers',
-            'Technics SL-1200MK7 Turntable',
+            {
+                application: 'Turntable',
+                name: 'Technics SL-1200MK7',
+                quantity: 2,
+            },
+            {
+                application: 'Turntable',
+                name: 'Linn Majik LP12 Turntable',
+                quantity: 1,
+            },
+            {
+                application: 'CD Player',
+                name: 'Technics SL-DZ1200',
+                quantity: 2,
+            },
+            {
+                application: 'Pre-Amplifier',
+                name: 'Audiolab 8000A',
+                quantity: 1,
+            },
+            {
+                application: 'CD Player Pre-Amplifier',
+                name: 'Audiolab 8000CD',
+                quantity: 1,
+            },
+            {
+                application: 'FM Radio',
+                name: 'Audiolab 8000T',
+                quantity: 1,
+            },
+            {
+                application: 'Power Amplifier Monoblock',
+                name: 'Audiolab 8300MB',
+                quantity: 6,
+            },
+            {
+                application: 'Tweeter (High Range Speaker)',
+                name: 'Linn Majik 109',
+                quantity: 2,
+            },
+            {
+                application: 'Mid (Mid Range Speaker)',
+                name: 'Linn UNDECIDED',
+                quantity: 2,
+            },
+            {
+                application: 'Subwoofer (Low Range Speaker)',
+                name: 'Linn UNDECIDED',
+                quantity: 2,
+            },
+            {
+                application: 'Mixing Deck',
+                name: 'Allen & Heath Xone:92 Mixing Deck',
+                quantity: 1,
+            },
         ],
         media: ['Vinyl', 'Compact Disc'],
         links: [
