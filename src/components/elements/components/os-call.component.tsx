@@ -9,7 +9,7 @@ import {
 import { useState } from 'react'
 import {
     CurrentLocation,
-    HillMarker,
+    HillMarkers,
     LandmassList,
     RouteList,
     RouteMarker,
@@ -189,8 +189,8 @@ export const OSCall = () => {
                     // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
                 {showCurrLoc && <CurrentLocation />}
-                {showMunros && <HillMarker type={'Munro'} />}
-                {showCorbetts && <HillMarker type={'Corbett'} />}
+                {showMunros && <HillMarkers type="Munro" />}
+                {showCorbetts && <HillMarkers type="Corbett" />}
                 {showRouteMarker && routeMarker}
             </MapContainer>
         </>

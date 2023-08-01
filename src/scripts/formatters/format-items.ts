@@ -1,7 +1,7 @@
 import { ImageProps } from '../../components/bash-blocks'
 
 export function formatItems(items: ImageProps[], columns: number) {
-    const itemsFormatted: any[] = []
+    const itemsFormatted: ImageProps[][] = []
 
     for (let i = 0; i < items.length; i += columns) {
         itemsFormatted.push(items.slice(i, i + columns))

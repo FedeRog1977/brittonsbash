@@ -20,13 +20,12 @@ export const ImageMatrix: React.FC<ImageMatrixProps> = ({
                         <Flex item key={rowItem.alt} center>
                             <img
                                 style={{
-                                    width: isMobile
-                                        ? '100%'
-                                        : row.length === 1
-                                        ? '100%'
-                                        : props.columns === 1
-                                        ? '100%'
-                                        : '97.5%',
+                                    width:
+                                        isMobile ||
+                                        row.length === 1 ||
+                                        props.columns === 1
+                                            ? '100%'
+                                            : '97.5%',
                                 }}
                                 src={rowItem.url}
                                 alt={rowItem.alt}
