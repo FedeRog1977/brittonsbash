@@ -1,7 +1,3 @@
-import { OSCall } from '../../elements'
+import { Conquest as ConquestComponent } from '../../compounds'
 
-export const Conquest = () => (
-    <>
-        <OSCall />
-    </>
-)
+export const Conquest = () => <ConquestComponent />

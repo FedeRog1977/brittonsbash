@@ -8,18 +8,17 @@ import {
 } from 'react-leaflet'
 import { useState } from 'react'
 import {
-    CurrentLocation,
-    HillMarkers,
+    ConquestLocationMarker,
+    ConquestHillMarkers,
     LandmassList,
     RouteList,
     RouteMarker,
-} from '.'
+} from '../../elements/components'
 import { hillData } from '../../../data'
+import { ordnanceSurveyCall } from '../../../scripts'
 
-export const OSCall = () => {
-    // var urlKey = 'oV4hBtyHRKqV0tc61eylt8s7bxypAHkt';
-    // var urlPrefix = 'https://api.os.uk/maps/raster/v1/zxy/';
-    // var apiUrl = `${urlPrefix}Leisure_27700/{z}/{x}/{y}.png?key=${urlKey}`
+export const Conquest = () => {
+    const apiUrl = ordnanceSurveyCall()
 
     const [showCurrLoc, setShowCurrLoc] = useState(false)
     const [locationToggle, setLocationToggle] = useState('Off')
@@ -184,13 +183,10 @@ export const OSCall = () => {
                 zoom={10}
                 scrollWheelZoom={true}
             >
-                <TileLayer
-                    url="https://api.os.uk/maps/raster/v1/zxy/Outdoor_3857/{z}/{x}/{y}.png?key=VfSaBhJrLbr7vR7GLkAAGH02AZM6lzkP"
-                    // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                {showCurrLoc && <CurrentLocation />}
-                {showMunros && <HillMarkers type="Munro" />}
-                {showCorbetts && <HillMarkers type="Corbett" />}
+                <TileLayer url={apiUrl} />
+                {showCurrLoc && <ConquestLocationMarker />}
+                {showMunros && <ConquestHillMarkers type="Munro" />}
+                {showCorbetts && <ConquestHillMarkers type="Corbett" />}
                 {showRouteMarker && routeMarker}
             </MapContainer>
         </>
