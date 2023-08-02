@@ -818,6 +818,10 @@ export const communicationsData = {
                 content: 'Audio Affair',
                 href: 'https://www.audioaffair.co.uk/',
             },
+            {
+                content: 'Speakers For Dummies',
+                href: 'https://mynewmicrophone.com/differences-between-mid-range-speakers-tweeters-woofers/',
+            },
         ],
     },
     culinary: {
@@ -1278,7 +1282,7 @@ export const communicationsData = {
             'Sixteen Candles',
             'The Karate Kid',
             'Scarface (UK)',
-            'Alchemy Live',
+            'Alchemy: Dire Straits Live CD Release',
             'Go Insane Album',
             'World Geodetic System EPSG4326 Coordinate System',
             'Michael Jordan NBA Career',
