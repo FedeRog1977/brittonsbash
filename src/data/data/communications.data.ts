@@ -1294,6 +1294,10 @@ export const communicationsData = {
         ],
         links: [
             {
+                content: 'DC Web (Strathclyde Certificates)',
+                href: 'https://student.digidocs.strath.ac.uk/Account/Login',
+            },
+            {
                 content: 'Textreader Pro',
                 href: 'https://textreader.pro/',
             },
