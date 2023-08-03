@@ -2,6 +2,7 @@ import { Marker, Popup } from 'react-leaflet'
 import { ConquestHillMarkerArrayProps } from '..'
 import { toCoords, toFeet } from '../../../scripts'
 import { Spacing, Typography } from '../../bash-blocks'
+import imagePlaceholder from '../../../media/images/pages/placeholder.webp'
 
 export const ConquestMarkerArray: React.FC<ConquestHillMarkerArrayProps> = ({
     ...props
@@ -16,6 +17,7 @@ export const ConquestMarkerArray: React.FC<ConquestHillMarkerArrayProps> = ({
                         <Popup>
                             <Spacing textAlign="center">
                                 <Typography type="h4" content={name} />
+                                <Spacing mY={30} />
                                 <Typography
                                     type="body"
                                     content={
@@ -23,23 +25,22 @@ export const ConquestMarkerArray: React.FC<ConquestHillMarkerArrayProps> = ({
                                     }
                                     boldFace
                                 />
-                                <Spacing mY={20} />
-                                <Typography
-                                    type="body"
-                                    content="Found at"
-                                    boldFace
-                                />
                                 <Typography
                                     type="body"
                                     content={latFormatted + ', ' + lonFormatted}
                                 />
-                                <Spacing mY={20} />
                                 <Typography
                                     type="body"
-                                    content="Marked by"
-                                    boldFace
+                                    content={summit + ' summit'}
                                 />
-                                <Typography type="body" content={summit} />
+                                <Spacing mY={30} />
+                                <img
+                                    style={{
+                                        width: '250px',
+                                    }}
+                                    src={imagePlaceholder}
+                                    alt={imagePlaceholder}
+                                />
                             </Spacing>
                         </Popup>
                     </Marker>

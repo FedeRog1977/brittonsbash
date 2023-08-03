@@ -1,4 +1,14 @@
+import { appendScript, appendStyle } from '..'
+
 export function ordnanceSurveyCall() {
+    appendStyle('https://unpkg.com/leaflet@1.9.4/dist/leaflet.css')
+    appendStyle(
+        'https://cdn.jsdelivr.net/gh/OrdnanceSurvey/os-api-branding@0.3.1/os-api-branding.css'
+    )
+    appendScript(
+        'https://cdn.jsdelivr.net/gh/OrdnanceSurvey/os-api-branding@0.3.1/os-api-branding.js'
+    )
+
     // Road 27700
     // const key = 'oV4hBtyHRKqV0tc61eylt8s7bxypAHkt';
     // const prefix = 'https://api.os.uk/maps/raster/v1/zxy/';
