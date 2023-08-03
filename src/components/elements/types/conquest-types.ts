@@ -1,5 +1,5 @@
 export type ConquestHillMarkersProps = {
-    type: string
+    type: 'Munro' | 'Corbett' | 'Munro Top' | 'Corbett Top'
 }
 
 export type ConquestHillMarkerArrayProps = {
