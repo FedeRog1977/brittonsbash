@@ -25,8 +25,5 @@ export function ordnanceSurveyCall() {
     // const prefix = 'https://api.os.uk/maps/raster/v1/zxy/'
     // const apiUrl = `${prefix}Outdoor_3857/{z}/{x}/{y}.png?key=${key}`
 
-    // Open Street Maps 3857
-    // const apiUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-
     return apiUrl
 }

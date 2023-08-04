@@ -1,4 +1,5 @@
 export * from './format-items'
+export * from './from-british-grid-projection'
 export * from './remove-duplicates'
 export * from './sum'
 export * from './to-bearing'

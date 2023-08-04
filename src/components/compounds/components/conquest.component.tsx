@@ -15,7 +15,7 @@ import {
     RouteMarker,
 } from '../../elements/components'
 import { hillData } from '../../../data'
-import { ordnanceSurveyCall } from '../../../scripts'
+import { fromBritishGridProjection, ordnanceSurveyCall } from '../../../scripts'
 import L from 'leaflet'
 import CRS from 'leaflet'
 import proj4 from 'proj4'
@@ -135,27 +135,36 @@ export const Conquest = () => {
         return <script></script>
     }
 
-    const britishGridProjectionEPSG27700 = proj4.defs(
-        'EPSG:27700',
-        '+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +towgs84=446.448,-125.157,542.06,0.15,0.247,0.842,-20.489 +units=m +no_defs'
-    )
+    function toBritishGridProjection() {
+        proj4.defs(
+            'EPSG:27700',
+            `+proj=tmerc
+            +lat_0=49
+            +lon_0=-2
+            +k=0.9996012717
+            +x_0=400000
+            +y_0=-100000
+            +ellps=airy
+            +towgs84=446.448,-125.157,542.06,0.15,0.247,0.842,-20.489
+            +units=m
+            +no_defs`
+        )
 
-    const britishGridProjection = [
-        britishGridProjectionEPSG27700,
-        {
-            resolutions: [
-                896.0, 448.0, 224.0, 112.0, 56.0, 28.0, 14.0, 7.0, 3.5, 1.75,
-            ],
-            origin: [-238375, 1376256],
-        },
-    ]
-
-    proj4('EPSG:27700')
-
-    function transformCoords(coords: number[]) {
-        return proj4('EPSG:27700', 'EPSG:4326', coords).reverse()
+        return proj4('EPSG:27700')
     }
 
+    toBritishGridProjection()
+    console.log(proj4('EPSG:27700'))
+
+    // const britishGridProjection = [
+    //     britishGridProjectionEPSG27700,
+    //     {
+    //         resolutions: [
+    //             896.0, 448.0, 224.0, 112.0, 56.0, 28.0, 14.0, 7.0, 3.5, 1.75,
+    //         ],
+    //         origin: [-238375, 1376256],
+    //     },
+    // ]
     /* --- */
 
     return (
@@ -213,15 +222,15 @@ export const Conquest = () => {
             )}
             <MapContainer
                 // crs={britishGridProjectionEPSG27700}
-                // crs={L.CRS.EPSG3395}
-                center={[56.6539, -5.1715]} // 56.6539, -5.1715; 205685, 755842
+                crs={L.CRS.EPSG3395}
+                center={fromBritishGridProjection([205685, 755842])}
                 // cursor={true}
                 minZoom={0}
                 maxZoom={9}
-                // maxBounds={[
-                //     transformCoords([-238375, 0]),
-                //     transformCoords([900000, 1376256]),
-                // ]}
+                maxBounds={[
+                    fromBritishGridProjection([-238375, 0]),
+                    fromBritishGridProjection([900000, 1376256]),
+                ]}
                 attributionControl={false}
                 zoom={10}
                 scrollWheelZoom={true}

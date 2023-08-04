@@ -315,7 +315,7 @@ export const hillData = {
         },
     ],
     // --
-    // This will be removed after weather and coquest are fixed
+    // This will be removed after weather and conquest are fixed
     corbetts: [
         {
             name: 'Beinn a Bhuiridh',
