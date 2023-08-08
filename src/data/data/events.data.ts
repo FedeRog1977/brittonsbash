@@ -1,6 +1,23 @@
 export const eventData = {
     2023: [
         {
+            id: 'E2023032',
+            prefix: '',
+            names: ['Mark’s And Spencer'],
+            startDate: '5th of August',
+            endDate: '',
+            description:
+                'Been a couple of years since these bad boys. Back to good old Crinners for Meall Uss and Sgeeath Hull, again without the Corbett coz it got a little grim near the end. It was nothing two trips to M&S and a bottle of rum can’t fix though.',
+            images: [
+                {
+                    url: '',
+                    alt: '',
+                    description: '',
+                },
+            ],
+            youthHostels: [],
+        },
+        {
             id: 'E2023031',
             prefix: '',
             names: ['D’tox'],

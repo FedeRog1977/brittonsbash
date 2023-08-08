@@ -2,6 +2,22 @@ export const sportData = {
     2023: {
         roadies: [
             {
+                id: 'R2023026',
+                name: 'Fenwick + Wind Farm',
+                dist: 30.06,
+                elev: 1598,
+                time: '1:44:29',
+                speed: 17.3,
+            },
+            {
+                id: 'R2023025',
+                name: 'Fenwick + Wind Farm',
+                dist: 30.12,
+                elev: 1729,
+                time: '1:44:58',
+                speed: 17.2,
+            },
+            {
                 id: 'R2023024',
                 name: 'Fenwick + Wind Farm',
                 dist: 30.04,
@@ -183,6 +199,22 @@ export const sportData = {
             },
         ],
         projects: [
+            {
+                id: 'P2023018',
+                name: 'Mark’s And Spencer',
+                dist: 11.1,
+                elev: 4413,
+                time: '4:20:01',
+                companionship: 1,
+                islands: [],
+                munros: ['Sgiath Chuil', 'Meall Glas'],
+                munroTops: [],
+                corbetts: [''],
+                corbettTops: [],
+                grahams: [],
+                subTwos: [],
+                donalds: [],
+            },
             {
                 id: 'P2023017',
                 name: 'D’tox',
