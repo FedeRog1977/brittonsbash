@@ -1,10 +1,10 @@
-import { Button, Search, Spacing, Tile } from '../../bash-blocks'
-import { InstantGramSearchList } from '../../elements'
-import { eventData } from '../../../data'
+import { Button, Search, Spacing, Tile } from '../../../bash-blocks'
+import { InstantGramSearchList } from '.'
+import { eventData } from '../../../../data'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { useScreenWidth } from '../../../scripts'
-import { InstantGramSearchTileProps } from '..'
+import { useScreenWidth } from '../../../../scripts'
+import { InstantGramSearchTileProps } from '../..'
 
 export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
     ...props

@@ -1,11 +1,11 @@
 import { WeatherColumnDaily, WeatherHourly } from '.'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
-import { Button, Flex, Spacing } from '../../bash-blocks'
+import { Button, Flex, Spacing } from '../../../bash-blocks'
 import {
     useDropDown,
     useOpenWeatherCall,
     useScreenWidth,
-} from '../../../scripts'
+} from '../../../../scripts'
 
 export const WeatherDaily = ({ latIn, lonIn }: any) => {
     const { isMobile } = useScreenWidth()

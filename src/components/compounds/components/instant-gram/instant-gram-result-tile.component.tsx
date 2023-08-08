@@ -6,10 +6,10 @@ import {
     Spacing,
     Tile,
     Typography,
-} from '../../bash-blocks'
-import { refactorEvent, useDropDown, useScreenWidth } from '../../../scripts'
-import { ActivityTile } from '../../bash-blocks'
-import { InstantGramResultTileProps } from '..'
+} from '../../../bash-blocks'
+import { refactorEvent, useDropDown, useScreenWidth } from '../../../../scripts'
+import { ActivityTile } from '../../../bash-blocks'
+import { InstantGramResultTileProps } from '../..'
 
 export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
     ...props

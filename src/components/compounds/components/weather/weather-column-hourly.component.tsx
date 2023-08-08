@@ -6,9 +6,9 @@ import {
     toPrecipitation,
     toBearing,
     toSpeed,
-} from '../../../scripts'
-import { Flex, Spacing, Typography } from '../../bash-blocks'
-import { WeatherIcon } from '../../elements'
+} from '../../../../scripts'
+import { Flex, Spacing, Typography } from '../../../bash-blocks'
+import { WeatherIcon } from '../..'
 
 export const WeatherColumnHourly = ({
     dt,

@@ -1,4 +1,4 @@
-import { Typography, Tile, Spacing } from '../../bash-blocks'
+import { Typography, Tile, Spacing } from '../../../bash-blocks'
 import {
     compileProjects,
     compileMiles,
@@ -7,8 +7,8 @@ import {
     toFeet,
     toSpeed,
     useScreenWidth,
-} from '../../../scripts'
-import { ActivityTile } from '../../bash-blocks'
+} from '../../../../scripts'
+import { ActivityTile } from '../../../bash-blocks'
 
 export const SportResultTile = () => {
     const { isMobile } = useScreenWidth()

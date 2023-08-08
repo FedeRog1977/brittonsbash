@@ -1,6 +1,6 @@
 import { InstantGramSearchTile } from '.'
 import { InstantGramResultTile } from '.'
-import { useInstantGram } from '../../../scripts'
+import { useInstantGram } from '../../../../scripts'
 
 export const InstantGram = () => {
     const {

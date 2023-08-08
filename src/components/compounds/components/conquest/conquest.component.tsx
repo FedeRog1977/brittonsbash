@@ -13,9 +13,12 @@ import {
     LandmassList,
     RouteList,
     RouteMarker,
-} from '../../elements/components'
-import { hillData } from '../../../data'
-import { fromBritishGridProjection, ordnanceSurveyCall } from '../../../scripts'
+} from '.'
+import { hillData } from '../../../../data'
+import {
+    fromBritishGridProjection,
+    ordnanceSurveyCall,
+} from '../../../../scripts'
 import L from 'leaflet'
 
 export const Conquest = () => {

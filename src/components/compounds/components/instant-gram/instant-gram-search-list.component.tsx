@@ -1,6 +1,6 @@
-import { Button } from '../../bash-blocks'
-import { useDropDown, useScreenWidth } from '../../../scripts'
-import { InstantGramSearchListProps } from '..'
+import { Button } from '../../../bash-blocks'
+import { useDropDown, useScreenWidth } from '../../../../scripts'
+import { InstantGramSearchListProps } from '../..'
 
 export const InstantGramSearchList: React.FC<InstantGramSearchListProps> = ({
     ...props

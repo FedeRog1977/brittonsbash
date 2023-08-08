@@ -1,5 +1,5 @@
-import { useScreenWidth } from '../../../scripts'
-import { Spacing, Tile, Typography } from '../../bash-blocks'
+import { useScreenWidth } from '../../../../scripts'
+import { Spacing, Tile, Typography } from '../../../bash-blocks'
 
 export const WeatherResultTitle = ({ title, subTitle, result }: any) => {
     const { isMobile } = useScreenWidth()

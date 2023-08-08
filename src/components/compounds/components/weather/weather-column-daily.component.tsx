@@ -13,9 +13,9 @@ import {
     toBearing,
     toSpeed,
     toSentenceCase,
-} from '../../../scripts'
-import { Flex, Spacing, Typography } from '../../bash-blocks'
-import { WeatherIcon, WeatherTemperature } from '../../elements'
+} from '../../../../scripts'
+import { Flex, Spacing, Typography } from '../../../bash-blocks'
+import { WeatherIcon, WeatherTemperature } from '.'
 
 export const WeatherColumnDaily = ({
     dt,

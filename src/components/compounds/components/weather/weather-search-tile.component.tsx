@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { useScreenWidth } from '../../../scripts'
-import { Button, Search, SearchList, Spacing, Tile } from '../../bash-blocks'
-import { hillData } from '../../../data'
+import { useScreenWidth } from '../../../../scripts'
+import { Button, Search, SearchList, Spacing, Tile } from '../../../bash-blocks'
+import { hillData } from '../../../../data'
 
 export const WeatherSearchTile = ({
     funcSelect,
