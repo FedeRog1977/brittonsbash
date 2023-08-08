@@ -17,8 +17,6 @@ import {
 import { hillData } from '../../../data'
 import { fromBritishGridProjection, ordnanceSurveyCall } from '../../../scripts'
 import L from 'leaflet'
-import CRS from 'leaflet'
-import proj4 from 'proj4'
 
 export const Conquest = () => {
     const apiUrl = ordnanceSurveyCall()
