@@ -18,6 +18,9 @@ export const communicationsData = {
                 'Oakley',
                 'Black Diamond',
                 'DMM Wales',
+                'Tiso',
+                'Cairngorm Mountain Sports',
+                'Nevisport',
             ],
             packs: [
                 'Duffel (Various Sizes)',
@@ -104,12 +107,6 @@ export const communicationsData = {
                 'Sunglasses (Omit)',
                 'Ski Goggles',
             ],
-            links: [
-                {
-                    content: 'Scotland’s Mountains (Flickr)',
-                    href: 'https://www.flickr.com/photos/scotlandsmountains/with/49836416736/',
-                },
-            ],
         },
         roadies: {
             brands: [
@@ -120,6 +117,8 @@ export const communicationsData = {
                 'Endura',
                 'Altura',
                 'POC',
+                'Dales Cycles',
+                'Evans Cycles',
             ],
             bicycle: [
                 'Giant TCR Advanced 1 Frame',
@@ -165,46 +164,184 @@ export const communicationsData = {
                 'Nike Zoom Vapor Air Jordon 3 (Pending)',
                 'THE ROGER Clubhouse Mid',
             ],
-            links: {
-                federer: [
-                    {
-                        content: 'Career Achievements',
-                        href: 'https://en.wikipedia.org/wiki/List_of_career_achievements_by_Roger_Federer',
-                    },
-                    {
-                        content: 'Retirement Ceremony',
-                        href: 'https://www.youtube.com/watch?v=DKJr2R2l7Ko',
-                    },
-                    {
-                        content: 'Final Match',
-                        href: 'https://www.discoveryplus.com/gb/video/sport/dplus-sport-dplus-sport-sport/r-federer-r-nadal-j-sock-f-tiafoe-3315011',
-                    },
-                    {
-                        content: 'Federer vs Blake - Masters Finals 2006',
-                        href: 'https://www.youtube.com/watch?v=obFDQRDW7I8',
-                    },
-                    {
-                        content: 'Federer vs Roddick - Australian Open 2007',
-                        href: 'https://www.youtube.com/watch?v=28iBHDBmIg0&t=856s',
-                    },
-                    {
-                        content: 'Australian Open 2017 Rally',
-                        href: 'https://www.youtube.com/watch?v=cDv6uCyq8OE',
-                    },
-                    {
-                        content: 'Return of 140mph Roddick Serve',
-                        href: 'https://www.youtube.com/watch?v=5gcvLbtaNxM',
-                    },
-                    {
-                        content: 'US Open 2009 Tweener',
-                        href: 'https://www.youtube.com/watch?v=pMJ0-1GGf5k',
-                    },
-                ],
-            },
         },
         miles: [],
+        links: {
+            projects: [
+                {
+                    content: 'Strava - Lewis Britton',
+                    href: 'https://www.strava.com/athletes/23679031',
+                },
+                {
+                    content: 'Walkhighlands - Roger_Bagerer',
+                    href: 'https://www.walkhighlands.co.uk/Forum/memberlist.php?mode=viewmap&u=182872',
+                },
+                {
+                    content: 'Walkhighlands - CraigG350123',
+                    href: 'https://www.walkhighlands.co.uk/Forum/memberlist.php?mode=viewmap&u=176594',
+                },
+                {
+                    content: 'Walkhighlands GPS',
+                    href: 'https://www.walkhighlands.co.uk/maps/',
+                },
+                {
+                    content: 'Ordnance Survey GPS',
+                    href: 'https://explore.osmaps.com/?lat=51.776100&lon=-1.894300&zoom=7.0000&style=Standard&type=2d',
+                },
+                {
+                    content: 'Ordnance Survey Shop',
+                    href: 'https://shop.ordnancesurvey.co.uk/',
+                },
+                {
+                    content: 'Ordnance Survey Selector',
+                    href: 'https://shop.ordnancesurvey.co.uk/map-selector/',
+                },
+                {
+                    content: 'OpenStreetMap',
+                    href: 'https://www.openstreetmap.org/#map=9/55.8229/-4.6033',
+                },
+                {
+                    content: 'Harvey Maps',
+                    href: 'https://www.harveymaps.co.uk/',
+                },
+                {
+                    content: 'Met Office',
+                    href: 'https://www.metoffice.gov.uk/',
+                },
+                {
+                    content: 'Met Office Mountain',
+                    href: 'https://www.metoffice.gov.uk/weather/specialist-forecasts/mountain',
+                },
+                {
+                    content: 'Windy',
+                    href: 'https://www.windy.com/-Webcams/United-Kingdom/Scotland/Fort-William/Allt-na-Diollaid/webcams/1595283181?56.715,-5.640,10',
+                },
+                {
+                    content: 'MWIS',
+                    href: 'https://www.mwis.org.uk/',
+                },
+                {
+                    content: 'MWIS Webcams',
+                    href: 'https://www.mwis.org.uk/information/webcams/scotland',
+                },
+                {
+                    context: 'Weather Symbols',
+                    href: 'https://www.wpc.ncep.noaa.gov/dailywxmap/plottedwx.html',
+                },
+                {
+                    content: 'Flickr - Scotland’s Mountains',
+                    href: 'https://www.flickr.com/photos/scotlandsmountains/with/49836416736/',
+                },
+                {
+                    content: 'Mountaineering Scotland',
+                    href: 'https://www.mountaineering.scot/',
+                },
+                {
+                    content: 'Mountains of Scotland',
+                    href: 'https://www.mountainsofscotland.co.uk/index.htm',
+                },
+                {
+                    content: 'The Database of British and Irish Hills',
+                    href: 'http://www.hills-database.co.uk/downloads.html',
+                },
+                {
+                    content: 'Hill Bagging',
+                    href: 'https://www.hill-bagging.co.uk/',
+                },
+                {
+                    content: 'Haroldstreet GPS',
+                    href: 'https://www.haroldstreet.org.uk/',
+                },
+                {
+                    content: 'Peakbagger',
+                    href: 'https://www.peakbagger.com/Default.aspx',
+                },
+                {
+                    content: 'BritishNationalGrid',
+                    href: 'https://britishnationalgrid.uk/#NN385662',
+                },
+                {
+                    content: 'TrigpointingUK',
+                    href: 'https://trigpointing.uk/',
+                },
+                {
+                    content: 'Gear Repairs',
+                    href: 'https://www.scottishmountaingear.com/',
+                },
+                {
+                    content: 'Gear Repairs',
+                    href: 'https://lancashiresportsrepairs.co.uk/',
+                },
+                {
+                    content: '33 Munros',
+                    href: 'https://www.strava.com/activities/5571470389',
+                },
+            ],
+            tennis: [
+                {
+                    content: 'ATP Tour',
+                    href: 'https://www.atptour.com/en/',
+                },
+                {
+                    content: 'Tennis Companion',
+                    href: 'https://tenniscompanion.org/',
+                },
+                {
+                    content: 'Federer Racquets',
+                    href: 'https://www.perfect-tennis.com/the-many-racquets-of-roger-federer/',
+                },
+                {
+                    content: 'Federer Career Achievements',
+                    href: 'https://en.wikipedia.org/wiki/List_of_career_achievements_by_Roger_Federer',
+                },
+                {
+                    content: 'Federer Retirement Ceremony',
+                    href: 'https://www.youtube.com/watch?v=DKJr2R2l7Ko',
+                },
+                {
+                    content: 'Federer Final Match',
+                    href: 'https://www.discoveryplus.com/gb/video/sport/dplus-sport-dplus-sport-sport/r-federer-r-nadal-j-sock-f-tiafoe-3315011',
+                },
+                {
+                    content: 'Federer vs Blake - Masters Finals 2006',
+                    href: 'https://www.youtube.com/watch?v=obFDQRDW7I8',
+                },
+                {
+                    content: 'Federer vs Roddick - Australian Open 2007',
+                    href: 'https://www.youtube.com/watch?v=28iBHDBmIg0&t=856s',
+                },
+                {
+                    content: 'Federer Australian Open 2017 Rally',
+                    href: 'https://www.youtube.com/watch?v=cDv6uCyq8OE',
+                },
+                {
+                    content: 'Federer Return of 140mph Roddick Serve',
+                    href: 'https://www.youtube.com/watch?v=5gcvLbtaNxM',
+                },
+                {
+                    content: 'Federer US Open 2009 Tweener',
+                    href: 'https://www.youtube.com/watch?v=pMJ0-1GGf5k',
+                },
+                {
+                    content: 'Federer Gillette Fusion Proglide Advert',
+                    href: 'https://www.youtube.com/watch?v=KojlQtskZdk',
+                },
+            ],
+        },
     },
     computers: {
+        brands: [
+            'IBM',
+            'Lenovo',
+            'Intel',
+            'Corsair',
+            'ASUS',
+            'Nvidia',
+            'Western Digital',
+            'LG',
+            'Logitech',
+            'Ducky',
+        ],
         operatingSystems: [
             'Artix Linux',
             'Arch Linux',
@@ -299,7 +436,8 @@ export const communicationsData = {
                 'React Leaflet',
                 'Mapbox',
                 'toGeoJSON',
-                'Chart.js (Upcoming)',
+                'proj4',
+                'Chart.js',
                 'LaTeX.js',
             ],
             frameworks: [
@@ -710,13 +848,86 @@ export const communicationsData = {
             ],
         },
     },
-    mathematicsAndStatistics: {
-        links: [
-            {
-                content: 'Higher Maths Papers',
-                href: 'https://www.highermathematics.co.uk/higher-past-papers/',
-            },
-        ],
+    mathsStatsFinance: {
+        brands: ['Clydesdale Bank (Virgin Money)', 'BNP Paribas', 'PayPal'],
+        links: {
+            maths: [
+                {
+                    content: 'Higher Maths Papers',
+                    href: 'https://www.highermathematics.co.uk/higher-past-papers/',
+                },
+                {
+                    content: 'Number Sets',
+                    href: 'https://math.libretexts.org/Courses/Borough_of_Manhattan_Community_College/MAT_206.5/Chapter_0%3A_Introduction/0.2%3A_Sets_of_Numbers#:~:text=A%20set%20of%20numbers%20is,the%20elements%202%20and%2031',
+                },
+                {
+                    content: 'Regular Expressions',
+                    href: 'https://en.wikipedia.org/wiki/Regular_expression',
+                },
+            ],
+            finance: [
+                {
+                    content: 'Self-Assessment Tax',
+                    href: 'https://www.gov.uk/log-in-file-self-assessment-tax-return',
+                },
+                {
+                    content: 'The Wall Street Journal',
+                    href: 'https://www.wsj.com/',
+                },
+                {
+                    content: 'Investopedia',
+                    href: 'https://www.investopedia.com/',
+                },
+                {
+                    content: 'The Balance',
+                    href: 'https://www.thebalancemoney.com/',
+                },
+                {
+                    content: 'eToro',
+                    href: 'https://www.etoro.com/',
+                },
+                {
+                    content: 'Trading 212',
+                    href: 'https://www.trading212.com/',
+                },
+                {
+                    content: 'Statista',
+                    href: 'https://www.statista.com/',
+                },
+                {
+                    content: 'Office for National Statistics (ONS)',
+                    href: 'https://www.ons.gov.uk/',
+                },
+                {
+                    content: 'Center for Research in Security Prices (CRSP)',
+                    href: 'https://www.crsp.org/',
+                },
+                {
+                    content: 'Stata',
+                    href: 'https://stats.oarc.ucla.edu/stata/',
+                },
+                {
+                    content: 'OLS Matrix Form',
+                    href: 'https://web.stanford.edu/~mrosenfe/soc_meth_proj3/matrix_OLS_NYU_notes.pdf',
+                },
+                {
+                    content: 'p-value to t-stat Converter',
+                    href: 'https://www.socscistatistics.com/pvalues/tdistribution.aspx',
+                },
+                {
+                    content: 'Kenneth R. French Data',
+                    href: 'https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html',
+                },
+                {
+                    content: 'Hou-Xue-Zhang Data',
+                    href: 'https://global-q.org/index.html',
+                },
+                {
+                    content: 'Wooldridge Book',
+                    href: 'https://economics.ut.ac.ir/documents/3030266/14100645/Jeffrey_M._Wooldridge_Introductory_Econometrics_A_Modern_Approach__2012.pdf',
+                },
+            ],
+        },
     },
     film: {
         genres: [],
@@ -819,6 +1030,16 @@ export const communicationsData = {
             },
         ],
     },
+    videoGames: {
+        topGames: [],
+        allGames: [],
+        links: [
+            {
+                content: 'The Sims Resource',
+                href: 'https://www.thesimsresource.com/',
+            },
+        ],
+    },
     culinary: {
         brands: [
             'Wusthof',
@@ -829,6 +1050,14 @@ export const communicationsData = {
             'Sant’ Andrea',
             'Dartington Crystal',
             'LSA',
+            'LocknLock',
+            'Pyrex',
+            'Marks & Spencer',
+            'Waitrose',
+            'Whole Foods Market',
+            'Lakeland',
+            'Cazcabel',
+            'Fever Tree',
         ],
         knives: [
             'Peeling',
@@ -1032,11 +1261,28 @@ export const communicationsData = {
         ],
         appliances: [],
         restaurants: [],
+        mixology: [],
         links: {
+            cooking: [
+                {
+                    content: 'Pizza Dough Calculator',
+                    href: 'https://www.stadlermade.com/pizza-calculator/',
+                },
+                {
+                    content: 'Packing Containers',
+                    href: 'https://www.enviropack.org.uk/',
+                },
+            ],
             restaurants: [
                 {
                     content: 'Kanpai',
                     href: 'http://kanpaisushiedinburgh.co.uk/#!/food',
+                },
+            ],
+            mixology: [
+                {
+                    content: 'Master of Malt',
+                    href: 'https://www.masterofmalt.com/',
                 },
             ],
         },
@@ -1055,6 +1301,7 @@ export const communicationsData = {
         ],
         pencilCases: [],
         writingPads: [],
+        links: {},
     },
     design: {
         typography: [],
@@ -1071,12 +1318,6 @@ export const communicationsData = {
                 products: [],
             },
             twoThousandsDecor: [],
-            links: [
-                {
-                    context: 'Vinterior',
-                    href: 'https://www.vinterior.co/',
-                },
-            ],
         },
         style: {
             fragrances: {
@@ -1109,20 +1350,6 @@ export const communicationsData = {
                     'Mont Blanc Explorer',
                     'Forbidden Rose Avril Lavigne',
                 ],
-                links: [
-                    {
-                        content: 'Fragrantica',
-                        href: 'https://www.fragrantica.com/perfume-finder/',
-                    },
-                    {
-                        content: 'Parfumo',
-                        href: 'https://www.parfumo.com/',
-                    },
-                    {
-                        content: 'Alberto Morillas Perfumer',
-                        href: 'https://www.fragrantica.com/noses/Alberto_Morillas.html',
-                    },
-                ],
             },
             accessories: [
                 'Rolex Datejust (Pending)',
@@ -1140,75 +1367,8 @@ export const communicationsData = {
             ],
             eightiesFashion: [],
             twoThousandsFashion: [],
-            woke: {
-                links: [
-                    {
-                        context: 'Grailed',
-                        href: 'https://www.grailed.com/',
-                    },
-                    {
-                        context: 'StockX',
-                        href: 'https://stockx.com/en-gb',
-                    },
-                    {
-                        context: 'Dover Street Market',
-                        href: 'https://shop.doverstreetmarket.com/',
-                    },
-                    {
-                        context: 'Homme+',
-                        href: 'https://www.hommeplus.eu/',
-                    },
-                    {
-                        context: 'Love from Skye',
-                        href: 'https://www.lovefromskye.co.uk/',
-                    },
-                    {
-                        context: '4GSeller',
-                        href: 'https://4gseller.com/',
-                    },
-                    {
-                        context: 'Frederick Grove',
-                        href: 'https://frederickgrove.com/collections/all',
-                    },
-                    {
-                        context: 'The Great Frog',
-                        href: 'https://www.thegreatfroglondon.com/',
-                    },
-                    {
-                        context: 'Chrome Hearts',
-                        href: 'https://www.chromehearts.com/',
-                    },
-                    {
-                        context: 'Celine',
-                        href: 'https://www.celine.com/en-gb/home',
-                    },
-                    {
-                        context: 'The Library',
-                        href: 'https://thelibrary1994.com/',
-                    },
-                    {
-                        context: 'Sruli Recht',
-                        href: 'https://www.srulirecht.com/',
-                    },
-                    {
-                        context: 'Loro Piana',
-                        href: 'https://uk.loropiana.com/en/',
-                    },
-                    {
-                        context: 'Brandy Melville',
-                        href: 'https://uk.brandymelville.com/',
-                    },
-                    {
-                        context: 'Taeha Types',
-                        href: 'https://www.taehatypes.com/archive',
-                    },
-                    {
-                        context: 'Garnet Pots',
-                        href: 'https://www.garnetpots.com/',
-                    },
-                ],
-            },
         },
+        lego: [],
         reading: [
             'Herman Miller: A Way of Living',
             '1000 Design Classics',
@@ -1217,6 +1377,108 @@ export const communicationsData = {
             'The Atlas of Furniture Design',
             'Magazine B (Various)',
         ],
+        links: {
+            graphicDesign: [
+                {
+                    context: 'Miami Vice Color Palette',
+                    href: 'https://www.color-hex.com/color-palette/45581',
+                },
+            ],
+            interiors: [
+                {
+                    context: 'Vinterior',
+                    href: 'https://www.vinterior.co/',
+                },
+            ],
+            style: [
+                {
+                    content: 'Fragrantica',
+                    href: 'https://www.fragrantica.com/perfume-finder/',
+                },
+                {
+                    content: 'Parfumo',
+                    href: 'https://www.parfumo.com/',
+                },
+                {
+                    content: 'Alberto Morillas Perfumer',
+                    href: 'https://www.fragrantica.com/noses/Alberto_Morillas.html',
+                },
+                {
+                    context: 'Grailed',
+                    href: 'https://www.grailed.com/',
+                },
+                {
+                    context: 'StockX',
+                    href: 'https://stockx.com/en-gb',
+                },
+                {
+                    context: 'Dover Street Market',
+                    href: 'https://shop.doverstreetmarket.com/',
+                },
+                {
+                    context: 'Homme+',
+                    href: 'https://www.hommeplus.eu/',
+                },
+                {
+                    context: 'Love from Skye',
+                    href: 'https://www.lovefromskye.co.uk/',
+                },
+                {
+                    context: '4GSeller',
+                    href: 'https://4gseller.com/',
+                },
+                {
+                    context: 'Frederick Grove',
+                    href: 'https://frederickgrove.com/collections/all',
+                },
+                {
+                    context: 'The Great Frog',
+                    href: 'https://www.thegreatfroglondon.com/',
+                },
+                {
+                    context: 'Chrome Hearts',
+                    href: 'https://www.chromehearts.com/',
+                },
+                {
+                    context: 'Celine',
+                    href: 'https://www.celine.com/en-gb/home',
+                },
+                {
+                    context: 'The Library',
+                    href: 'https://thelibrary1994.com/',
+                },
+                {
+                    context: 'Sruli Recht',
+                    href: 'https://www.srulirecht.com/',
+                },
+                {
+                    context: 'Loro Piana',
+                    href: 'https://uk.loropiana.com/en/',
+                },
+                {
+                    context: 'Brandy Melville',
+                    href: 'https://uk.brandymelville.com/',
+                },
+                {
+                    context: 'Taeha Types',
+                    href: 'https://www.taehatypes.com/archive',
+                },
+                {
+                    context: 'Garnet Pots',
+                    href: 'https://www.garnetpots.com/',
+                },
+            ],
+            lego: [
+                {
+                    content: 'BrickLink',
+                    href: 'https://www.bricklink.com/v2/main.page',
+                },
+                {
+                    content: 'BrickArms',
+                    href: 'http://brickarms.com/index.php',
+                },
+            ],
+        },
     },
     automotive: {
         models: [
@@ -1239,41 +1501,33 @@ export const communicationsData = {
         ],
         links: [
             {
+                context: 'Audi A6 Allroad Specs',
+                href: 'https://www.autoevolution.com/cars/audi-allroad-2006.html#aeng_audi-allroad-2006-30-tfsi-v6',
+            },
+            {
+                context: 'Quattro Daily',
+                href: 'https://www.quattrodaily.com/',
+            },
+            {
+                context: 'C5 Allroad Power',
+                href: 'https://www.youtube.com/watch?v=r4kZQVB-mwE',
+            },
+            {
+                context: 'Classic Trader',
+                href: 'https://www.classic-trader.com/uk/cars',
+            },
+            {
+                context: 'Romans International',
+                href: 'https://www.romansinternational.com/',
+            },
+            {
                 context: 'Geometry Comparison',
                 href: 'https://www.carsized.com/en/',
             },
         ],
     },
-    people: {
-        links: [
-            {
-                content: 'Luke Smith',
-                href: 'https://lukesmith.xyz/',
-            },
-            {
-                content: 'Donald E. Knuth',
-                href: 'https://www-cs-faculty.stanford.edu/~knuth/',
-            },
-            {
-                content: 'Bram Moolenaar',
-                href: 'https://www.moolenaar.net/',
-            },
-            {
-                content: 'Jan Hammer',
-                href: 'https://janhammer.com/',
-            },
-            {
-                content: 'Alex Krasny',
-                href: 'https://agreeordie.com/features/fashion/',
-            },
-            {
-                content: 'Martin Hotine',
-                href: 'https://upload.wikimedia.org/wikipedia/commons/6/69/Martin_Hotine_600dpi.png',
-            },
-        ],
-    },
     miscellaneous: {
-        nineteenEightyFour: [
+        eightyFour: [
             'Miami Vice Begins',
             'IBM Model M Original Release',
             'IBM Personal Computer AT',
@@ -1295,51 +1549,201 @@ export const communicationsData = {
             'BlackBerry Founded',
             'Avril Lavigne Born',
         ],
-        links: [
-            {
-                content: 'DC Web (Strathclyde Certificates)',
-                href: 'https://student.digidocs.strath.ac.uk/Account/Login',
-            },
-            {
-                content: 'Textreader Pro',
-                href: 'https://textreader.pro/',
-            },
-            {
-                content: 'Centripetal Force',
-                href: 'https://en.wikipedia.org/wiki/Centripetal_force',
-            },
-            {
-                context: 'Wilmington Is Home',
-                href: 'https://wilmingtonishome.weebly.com/one-tree-hill.html',
-            },
-            {
-                context: 'The Bren Ten',
-                href: 'https://nordicg3k.tripod.com/website/id3.html',
-            },
-            {
-                context: 'Internet Movie Firearms Database',
-                href: 'https://www.imfdb.org/wiki/Main_Page',
-            },
-            {
-                context: 'Flat That Could Have Been',
-                href: 'https://www.citylets.co.uk/property-rent/giffnock-fenwick-road-g46-417801/',
-            },
-            {
-                context: 'Weather Symbols',
-                href: 'https://www.wpc.ncep.noaa.gov/dailywxmap/plottedwx.html',
-            },
-            {
-                context: 'Collar And Daniell',
-                href: 'https://archive.org/details/collardaniellsfi00collrich/page/4/mode/2up',
-            },
-            {
-                context: 'Time Periods',
-                href: 'https://en.wikipedia.org/wiki/List_of_time_periods',
-            },
-            {
-                context: 'Dolce Cilento',
-                href: 'https://www.dolcecilento.com/',
-            },
-        ],
+        links: {
+            entertainment: [
+                {
+                    content: 'YouTube',
+                    href: 'https://www.youtube.com/',
+                },
+                {
+                    content: 'Netflix',
+                    href: 'https://www.netflix.com/gb/login?nextpage=https%3A%2F%2Fwww.netflix.com%2Fbrowse',
+                },
+                {
+                    content: 'Amazon Prime Video',
+                    href: 'https://www.amazon.co.uk/Amazon-Video/b?ie=UTF8&node=3010085031',
+                },
+                {
+                    content: 'Disney+',
+                    href: 'https://www.disneyplus.com/en-gb',
+                },
+                {
+                    content: 'Discovery+',
+                    href: 'https://www.discoveryplus.com/gb',
+                },
+                {
+                    content: 'BBC Sounds',
+                    href: 'https://www.bbc.co.uk/sounds',
+                },
+                {
+                    content: 'eBay',
+                    href: 'https://ebau.co.uk/',
+                },
+            ],
+            people: [
+                {
+                    content: 'Luke Smith',
+                    href: 'https://lukesmith.xyz/',
+                },
+                {
+                    content: 'Donald E. Knuth',
+                    href: 'https://www-cs-faculty.stanford.edu/~knuth/',
+                },
+                {
+                    content: 'Bram Moolenaar',
+                    href: 'https://www.moolenaar.net/',
+                },
+                {
+                    content: 'Jan Hammer',
+                    href: 'https://janhammer.com/',
+                },
+                {
+                    content: 'Alex Krasny',
+                    href: 'https://agreeordie.com/features/fashion/',
+                },
+                {
+                    content: 'Martin Hotine',
+                    href: 'https://upload.wikimedia.org/wikipedia/commons/6/69/Martin_Hotine_600dpi.png',
+                },
+                {
+                    content: 'Mark Smith (Seat 61)',
+                    href: 'https://www.seat61.com/',
+                },
+            ],
+            guns: [
+                {
+                    context: 'Colt',
+                    href: 'https://www.colt.com/',
+                },
+                {
+                    context: 'Bud’s Gun Shop',
+                    href: 'https://www.budsgunshop.com/index.php',
+                },
+                {
+                    context: 'The Bren Ten',
+                    href: 'https://nordicg3k.tripod.com/website/id3.html',
+                },
+            ],
+            classicInfomercials: [
+                {
+                    content: 'H2O X5 Mop',
+                    href: 'https://www.youtube.com/watch?v=nIutuA3daeU',
+                },
+                {
+                    content: 'Magic Bullet',
+                    href: 'https://www.youtube.com/watch?v=JkZPhJ-mKXE',
+                },
+                {
+                    content: 'Nutri Bullet',
+                    href: 'https://www.youtube.com/watch?v=jJugpRf8G7U',
+                },
+                {
+                    content: 'Gotham Steel Pan',
+                    href: 'https://www.youtube.com/watch?v=rzwQskfRQsU',
+                },
+                {
+                    content: 'XHose',
+                    href: 'https://www.youtube.com/watch?v=oYyf1rDEGH0',
+                },
+                {
+                    content: 'Paint Zoom Sprayer',
+                    href: 'https://www.youtube.com/watch?v=Q-DOgYKelvk',
+                },
+                {
+                    content: 'Shaun T’s Insanity Workout',
+                    href: 'https://www.youtube.com/watch?v=ZLK28BHJDd8',
+                },
+                {
+                    content: 'Wonder Core Smart',
+                    href: 'https://www.youtube.com/watch?v=KYLT95DTxO8',
+                },
+                {
+                    content: 'Ahh Bra',
+                    href: 'https://www.youtube.com/watch?v=_GxCdcFYUQY',
+                },
+            ],
+            miscellaneous: [
+                {
+                    content: 'East Renfrewshire Bins',
+                    href: 'https://www.eastrenfrewshire.gov.uk/bin-days?formid=3017&pageSessionId=3d3f54e0-1d84-4078-b40d-892b0e34e460&fsn=5b8c91af-f0eb-4d55-80e2-3d6fd3440c91',
+                },
+                {
+                    content: 'Wayback Machine',
+                    href: 'https://archive.org/web/',
+                },
+                {
+                    content: 'Textreader Pro',
+                    href: 'https://textreader.pro/',
+                },
+                {
+                    content: 'TTSMP3',
+                    href: 'https://ttsmp3.com/text-to-speech/British%20English/',
+                },
+                {
+                    content: 'Know Your Meme',
+                    href: 'https://knowyourmeme.com/',
+                },
+                {
+                    content: 'DC Web (Strathclyde Certificates)',
+                    href: 'https://student.digidocs.strath.ac.uk/Account/Login',
+                },
+                {
+                    content: 'Centripetal Force',
+                    href: 'https://en.wikipedia.org/wiki/Centripetal_force',
+                },
+                {
+                    context: 'Wilmington Is Home',
+                    href: 'https://wilmingtonishome.weebly.com/one-tree-hill.html',
+                },
+                {
+                    context: 'Internet Movie Firearms Database',
+                    href: 'https://www.imfdb.org/wiki/Main_Page',
+                },
+                {
+                    context: 'Flat That Could Have Been',
+                    href: 'https://www.citylets.co.uk/property-rent/giffnock-fenwick-road-g46-417801/',
+                },
+                {
+                    context: 'Collar And Daniell',
+                    href: 'https://archive.org/details/collardaniellsfi00collrich/page/4/mode/2up',
+                },
+                {
+                    context: 'Time Periods',
+                    href: 'https://en.wikipedia.org/wiki/List_of_time_periods',
+                },
+                {
+                    context: 'Dolce Cilento',
+                    href: 'https://www.dolcecilento.com/',
+                },
+                {
+                    context: 'Advert Finder',
+                    href: 'https://www.sounds-familiar.info/',
+                },
+                {
+                    context: 'Sunset Beach TV Series (James Intro Meme)',
+                    href: 'https://www.google.com/search?q=sunset+beach+(tv+series)&oq=sunset+beach&aqs=chrome.0.69i59j69i57.2487j0j9&sourceid=chrome&ie=UTF-8',
+                },
+                {
+                    context: 'Stewie Griffin Sound Board',
+                    href: 'https://www.101soundboards.com/boards/10397-stewie-griffin-sounds-family-guy-seasons-1-and-2',
+                },
+                {
+                    context: 'Cho Dai Di',
+                    href: 'https://www.help-pages.net/HelpDocuments/English/othergames_ChoDaiDiSuper_eng.pdf',
+                },
+                {
+                    context: 'Cho Dai Di',
+                    href: 'https://www.pagat.com/climbing/bigtwo.html',
+                },
+                {
+                    context: 'The Political Compass',
+                    href: 'https://www.politicalcompass.org/uk2017',
+                },
+                {
+                    context: '16 Personalities Test',
+                    href: 'https://www.16personalities.com/',
+                },
+            ],
+        },
     },
 }
