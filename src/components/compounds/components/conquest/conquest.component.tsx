@@ -19,7 +19,8 @@ import {
     fromBritishGridProjection,
     ordnanceSurveyCall,
 } from '../../../../scripts'
-import L from 'leaflet'
+// import L from 'leaflet'
+import * as L from 'leaflet'
 
 export const Conquest = () => {
     const apiUrl = ordnanceSurveyCall()
@@ -129,6 +130,19 @@ export const Conquest = () => {
         }
     }
 
+    var crs = new L.Proj.CRS(
+        'EPSG:27700',
+        `+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717
+        +x_0=400000 +y_0=-100000 +ellps=airy +towgs84=446.448,
+        -125.157,542.06,0.15,0.247,0.842,-20.489 +units=m +no_defs`,
+        {
+            resolutions: [
+                896.0, 448.0, 224.0, 112.0, 56.0, 28.0, 14.0, 7.0, 3.5, 1.75,
+            ],
+            origin: [-238375, 1376256],
+        }
+    )
+
     return (
         <>
             <div className="subHeaderConquest">
@@ -183,7 +197,7 @@ export const Conquest = () => {
                 </div>
             )}
             <MapContainer
-                crs={L.CRS.EPSG3857}
+                crs={crs}
                 center={fromBritishGridProjection([205685, 755842])}
                 minZoom={5}
                 maxZoom={20}
