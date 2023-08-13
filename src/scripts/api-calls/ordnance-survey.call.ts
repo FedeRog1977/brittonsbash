@@ -20,14 +20,14 @@ export function ordnanceSurveyCall() {
     )
 
     // Road 27700
-    const key = 'VfSaBhJrLbr7vR7GLkAAGH02AZM6lzkP'
-    const prefix = 'https://api.os.uk/maps/raster/v1/zxy/'
-    const apiUrl = `${prefix}Leisure_27700/{z}/{x}/{y}.png?key=${key}`
-
-    // Outdoor 3857
     // const key = 'VfSaBhJrLbr7vR7GLkAAGH02AZM6lzkP'
     // const prefix = 'https://api.os.uk/maps/raster/v1/zxy/'
-    // const apiUrl = `${prefix}Outdoor_3857/{z}/{x}/{y}.png?key=${key}`
+    // const apiUrl = `${prefix}Leisure_27700/{z}/{x}/{y}.png?key=${key}`
+
+    // Outdoor 3857
+    const key = 'VfSaBhJrLbr7vR7GLkAAGH02AZM6lzkP'
+    const prefix = 'https://api.os.uk/maps/raster/v1/zxy/'
+    const apiUrl = `${prefix}Outdoor_3857/{z}/{x}/{y}.png?key=${key}`
 
     // OpenStreetMap (Temporary)
     // const apiUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
