@@ -1684,6 +1684,10 @@ export const communicationsData = {
                     href: 'https://knowyourmeme.com/',
                 },
                 {
+                    content: 'Meme Generator',
+                    href: 'https://imgflip.com/memegenerator',
+                },
+                {
                     content: 'DC Web (Strathclyde Certificates)',
                     href: 'https://student.digidocs.strath.ac.uk/Account/Login',
                 },
