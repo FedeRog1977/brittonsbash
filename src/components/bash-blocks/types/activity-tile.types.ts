@@ -1,6 +1,6 @@
 export type ActivityTileProps = {
     title: {
-        leftItem: string | React.ReactElement
+        leftItem?: string | React.ReactElement
         rightItems?:
             | string
             | React.ReactElement

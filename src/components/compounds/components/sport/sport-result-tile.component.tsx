@@ -175,9 +175,9 @@ export const SportResultTile = () => {
                         textAlign="center"
                     />
                 </Spacing>
+                <Typography type="h2" content="Projects" textAlign="center" />
                 <ActivityTile
                     title={{
-                        leftItem: 'Projects',
                         rightItems: ['Occurences', 'Distance', 'Elevation'],
                     }}
                     entries={[
@@ -223,9 +223,97 @@ export const SportResultTile = () => {
                         },
                     ]}
                 />
+                <Typography type="h2" content="Hills" textAlign="center" />
                 <ActivityTile
                     title={{
-                        leftItem: '2023',
+                        rightItems: [
+                            'Munros',
+                            '‘Tops',
+                            'Corbetts',
+                            '‘Tops',
+                            'Grahams',
+                            'Sub2000s',
+                            'Donalds',
+                        ],
+                    }}
+                    entries={[
+                        {
+                            leftItem: 'Unique',
+                            rightItems: [
+                                `${compiledProjects.munros.number.unique}`,
+                                `${compiledProjects.munroTops.number.unique}`,
+                                `${compiledProjects.corbetts.number.unique}`,
+                                `${compiledProjects.corbettTops.number.unique}`,
+                                `${compiledProjects.grahams.number.unique}`,
+                                `${compiledProjects.subTwos.number.unique}`,
+                                `${compiledProjects.donalds.number.unique}`,
+                            ],
+                        },
+                        {
+                            leftItem: 'Total',
+                            rightItems: [
+                                `${compiledProjects.munros.number.total}`,
+                                `${compiledProjects.munroTops.number.total}`,
+                                `${compiledProjects.corbetts.number.total}`,
+                                `${compiledProjects.corbettTops.number.total}`,
+                                `${compiledProjects.grahams.number.total}`,
+                                `${compiledProjects.subTwos.number.total}`,
+                                `${compiledProjects.donalds.number.total}`,
+                            ],
+                        },
+                        {
+                            leftItem: '2023',
+                            rightItems: [
+                                `${compiledProjects.munros.number[2023]}`,
+                                `${compiledProjects.munroTops.number[2023]}`,
+                                `${compiledProjects.corbetts.number[2023]}`,
+                                `${compiledProjects.corbettTops.number[2023]}`,
+                                `${compiledProjects.grahams.number[2023]}`,
+                                `${compiledProjects.subTwos.number[2023]}`,
+                                `${compiledProjects.donalds.number[2023]}`,
+                            ],
+                        },
+                        {
+                            leftItem: '2022',
+                            rightItems: [
+                                `${compiledProjects.munros.number[2022]}`,
+                                `${compiledProjects.munroTops.number[2022]}`,
+                                `${compiledProjects.corbetts.number[2022]}`,
+                                `${compiledProjects.corbettTops.number[2022]}`,
+                                `${compiledProjects.grahams.number[2022]}`,
+                                `${compiledProjects.subTwos.number[2022]}`,
+                                `${compiledProjects.donalds.number[2022]}`,
+                            ],
+                        },
+                        {
+                            leftItem: '2021',
+                            rightItems: [
+                                `${compiledProjects.munros.number[2021]}`,
+                                `${compiledProjects.munroTops.number[2021]}`,
+                                `${compiledProjects.corbetts.number[2021]}`,
+                                `${compiledProjects.corbettTops.number[2021]}`,
+                                `${compiledProjects.grahams.number[2021]}`,
+                                `${compiledProjects.subTwos.number[2021]}`,
+                                `${compiledProjects.donalds.number[2021]}`,
+                            ],
+                        },
+                        {
+                            leftItem: '2020',
+                            rightItems: [
+                                `${compiledProjects.munros.number[2020]}`,
+                                `${compiledProjects.munroTops.number[2020]}`,
+                                `${compiledProjects.corbetts.number[2020]}`,
+                                `${compiledProjects.corbettTops.number[2020]}`,
+                                `${compiledProjects.grahams.number[2020]}`,
+                                `${compiledProjects.subTwos.number[2020]}`,
+                                `${compiledProjects.donalds.number[2020]}`,
+                            ],
+                        },
+                    ]}
+                />
+                <Typography type="h2" content="2023" textAlign="center" />
+                <ActivityTile
+                    title={{
                         rightItems: ['Distance', 'Elevation', 'Time'],
                     }}
                     entries={compiledProjects.projects[2023].map(
@@ -239,9 +327,9 @@ export const SportResultTile = () => {
                         })
                     )}
                 />
+                <Typography type="h2" content="2022" textAlign="center" />
                 <ActivityTile
                     title={{
-                        leftItem: '2022',
                         rightItems: ['Distance', 'Elevation', 'Time'],
                     }}
                     entries={compiledProjects.projects[2022].map(
@@ -255,9 +343,9 @@ export const SportResultTile = () => {
                         })
                     )}
                 />
+                <Typography type="h2" content="2021" textAlign="center" />
                 <ActivityTile
                     title={{
-                        leftItem: '2021',
                         rightItems: ['Distance', 'Elevation', 'Time'],
                     }}
                     entries={compiledProjects.projects[2021].map(
@@ -271,9 +359,9 @@ export const SportResultTile = () => {
                         })
                     )}
                 />
+                <Typography type="h2" content="2020" textAlign="center" />
                 <ActivityTile
                     title={{
-                        leftItem: '2020',
                         rightItems: ['Distance', 'Elevation', 'Time'],
                     }}
                     entries={compiledProjects.projects[2020].map(

@@ -37,13 +37,13 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
                                 index: number
                             ) => (
                                 <div
+                                    key={index}
                                     style={{
                                         width: isMobile ? '75px' : '100px',
                                         display: 'inline-block',
                                     }}
                                 >
                                     <Typography
-                                        key={index}
                                         type="body"
                                         content={item as React.ReactElement}
                                         boldFace
@@ -88,6 +88,7 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
                                                 index: number
                                             ) => (
                                                 <div
+                                                    key={index}
                                                     style={{
                                                         width: isMobile
                                                             ? '75px'
@@ -96,7 +97,6 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
                                                     }}
                                                 >
                                                     <Typography
-                                                        key={index}
                                                         type="body"
                                                         content={item}
                                                         inline

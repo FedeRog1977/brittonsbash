@@ -19,8 +19,6 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                         ? Boolean(props.content)
                             ? 5
                             : 0
-                        : Boolean(props.content)
-                        ? -2
                         : 5
                 }
                 mB={
@@ -28,8 +26,6 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                         ? Boolean(props.content)
                             ? 5
                             : 0
-                        : Boolean(props.content)
-                        ? 0
                         : 5
                 }
             >

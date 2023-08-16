@@ -11,20 +11,11 @@ button:hover {
 /* Classes */
 
 button.search {
-    font-family: Sans-Regular;
-    font-size: 16px;
-    border: 1px solid var(--font2);
     border-radius: var(--corners-small);
-    height: 35px;
     float: right;
     background-color: var(--darker-grey);
+    transition: transform var(--transition-short);
     width: 15%;
-    transition: transform var(--transition-short);
-}
-
-button.search:active {
-    transform: scale(0.99);
-    transition: transform var(--transition-short);
 }
 
 button.regular-clear,
@@ -61,11 +52,11 @@ button.dense-solid:hover {
     transition: background-color var(--transition-long);
 }
 
+button.search:active,
 button.regular-clear:active,
 button.dense-clear:active,
 button.regular-solid:active,
 button.dense-solid:active {
-    background-color: var(--lighter-grey);
     transform: scale(0.99);
     transition: transform var(--transition-short);
 }
