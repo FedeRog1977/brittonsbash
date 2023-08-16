@@ -2596,7 +2596,7 @@ export const sportData = {
             },
             {
                 id: 'R2021038',
-                name: 'Windfarm',
+                name: 'Wind Farm',
                 dist: 23.58,
                 elev: 1365,
                 time: '1:25:23',
@@ -2821,7 +2821,7 @@ export const sportData = {
             },
             {
                 id: 'R2021006',
-                name: 'Windfarm',
+                name: 'Wind Farm',
                 dist: 23.32,
                 elev: 1368,
                 time: '1:32:07',
@@ -3752,7 +3752,7 @@ export const sportData = {
             },
             {
                 id: 'R2020019',
-                name: 'Windfarm',
+                name: 'Wind Farm',
                 dist: 17.61,
                 elev: 789,
                 time: '1:26:19',
@@ -3808,28 +3808,28 @@ export const sportData = {
             },
             {
                 id: 'R2020011',
-                name: 'Windfarm',
+                name: 'Wind Farm',
                 dist: 21.43,
                 elev: 1123,
                 time: '1:14:36',
             },
             {
                 id: 'R2020010',
-                name: 'Windfarm',
+                name: 'Wind Farm',
                 dist: 29.18,
                 elev: 1753,
                 time: '1:58:17',
             },
             {
                 id: 'R2020009',
-                name: 'Windfarm',
+                name: 'Wind Farm',
                 dist: 21.55,
                 elev: 1128,
                 time: '1:19:39',
             },
             {
                 id: 'R2020008',
-                name: 'Windfarm',
+                name: 'Wind Farm',
                 dist: 22.29,
                 elev: 1167,
                 time: '1:24:19',
@@ -4030,7 +4030,7 @@ export const sportData = {
             },
             {
                 id: 'M2020018',
-                name: 'Windfarm',
+                name: 'Wind Farm',
                 dist: 21.95,
                 elev: 1135,
                 time: '5:05:24',
@@ -4072,7 +4072,7 @@ export const sportData = {
             },
             {
                 id: 'M2020012',
-                name: 'Windfarm',
+                name: 'Wind Farm',
                 dist: 22.44,
                 elev: 1186,
                 time: '6:06:54',

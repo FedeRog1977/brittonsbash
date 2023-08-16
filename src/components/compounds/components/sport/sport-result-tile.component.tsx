@@ -26,9 +26,9 @@ export const SportResultTile = () => {
                         textAlign="center"
                     />
                 </Spacing>
+                <Typography type="h2" content="Roadies" textAlign="center" />
                 <ActivityTile
                     title={{
-                        leftItem: 'Roadies',
                         rightItems: ['Occurences', 'Distance', 'Elevation'],
                     }}
                     entries={[
@@ -74,9 +74,79 @@ export const SportResultTile = () => {
                         },
                     ]}
                 />
+                <Typography type="h2" content="Routes" textAlign="center" />
                 <ActivityTile
                     title={{
-                        leftItem: '2023',
+                        rightItems: [
+                            'Centuries',
+                            'Strathavens',
+                            "Fen. + WF's",
+                            'Fenwicks',
+                            'Wind Farms',
+                            "T'halls",
+                        ],
+                    }}
+                    entries={[
+                        {
+                            leftItem: 'Total',
+                            rightItems: [
+                                `${compiledRoadies.centuries.total}`,
+                                `${compiledRoadies.strathavens.total}`,
+                                `${compiledRoadies.fenwickWindfarms.total}`,
+                                `${compiledRoadies.fenwicks.total}`,
+                                `${compiledRoadies.windfarms.total}`,
+                                `${compiledRoadies.thorntonhalls.total}`,
+                            ],
+                        },
+                        {
+                            leftItem: '2023',
+                            rightItems: [
+                                `${compiledRoadies.centuries[2023]}`,
+                                `${compiledRoadies.strathavens[2023]}`,
+                                `${compiledRoadies.fenwickWindfarms[2023]}`,
+                                `${compiledRoadies.fenwicks[2023]}`,
+                                `${compiledRoadies.windfarms[2023]}`,
+                                `${compiledRoadies.thorntonhalls[2023]}`,
+                            ],
+                        },
+                        {
+                            leftItem: '2022',
+                            rightItems: [
+                                `${compiledRoadies.centuries[2022]}`,
+                                `${compiledRoadies.strathavens[2022]}`,
+                                `${compiledRoadies.fenwickWindfarms[2022]}`,
+                                `${compiledRoadies.fenwicks[2022]}`,
+                                `${compiledRoadies.windfarms[2022]}`,
+                                `${compiledRoadies.thorntonhalls[2022]}`,
+                            ],
+                        },
+                        {
+                            leftItem: '2021',
+                            rightItems: [
+                                `${compiledRoadies.centuries[2021]}`,
+                                `${compiledRoadies.strathavens[2021]}`,
+                                `${compiledRoadies.fenwickWindfarms[2021]}`,
+                                `${compiledRoadies.fenwicks[2021]}`,
+                                `${compiledRoadies.windfarms[2021]}`,
+                                `${compiledRoadies.thorntonhalls[2021]}`,
+                            ],
+                        },
+                        {
+                            leftItem: '2020',
+                            rightItems: [
+                                `${compiledRoadies.centuries[2020]}`,
+                                `${compiledRoadies.strathavens[2020]}`,
+                                `${compiledRoadies.fenwickWindfarms[2020]}`,
+                                `${compiledRoadies.fenwicks[2020]}`,
+                                `${compiledRoadies.windfarms[2020]}`,
+                                `${compiledRoadies.thorntonhalls[2020]}`,
+                            ],
+                        },
+                    ]}
+                />
+                <Typography type="h2" content="2023" textAlign="center" />
+                <ActivityTile
+                    title={{
                         rightItems: ['Distance', 'Elevation', 'Time', 'Speed'],
                     }}
                     entries={compiledRoadies.roadies[2023].map(
@@ -97,9 +167,9 @@ export const SportResultTile = () => {
                         })
                     )}
                 />
+                <Typography type="h2" content="2022" textAlign="center" />
                 <ActivityTile
                     title={{
-                        leftItem: '2022',
                         rightItems: ['Distance', 'Elevation', 'Time', 'Speed'],
                     }}
                     entries={compiledRoadies.roadies[2022].map(
@@ -120,9 +190,9 @@ export const SportResultTile = () => {
                         })
                     )}
                 />
+                <Typography type="h2" content="2021" textAlign="center" />
                 <ActivityTile
                     title={{
-                        leftItem: '2021',
                         rightItems: ['Distance', 'Elevation', 'Time', 'Speed'],
                     }}
                     entries={compiledRoadies.roadies[2021].map(
@@ -143,9 +213,9 @@ export const SportResultTile = () => {
                         })
                     )}
                 />
+                <Typography type="h2" content="2020" textAlign="center" />
                 <ActivityTile
                     title={{
-                        leftItem: '2020',
                         rightItems: ['Distance', 'Elevation', 'Time', 'Speed'],
                     }}
                     entries={compiledRoadies.roadies[2020].map(
