@@ -4,11 +4,11 @@ export function toSpeed(speed: number, isKmh: boolean) {
     isKmh
         ? (speedFormatted =
               (speed * 2.23694).toLocaleString('en-UK', {
-                  maximumFractionDigits: 0,
-              }) + 'mph')
+                  minimumFractionDigits: 0,
+              }) + ' mph')
         : (speedFormatted =
-              speed.toLocaleString('en-UK', { maximumFractionDigits: 1 }) +
-              'mph')
+              speed.toLocaleString('en-UK', { minimumFractionDigits: 1 }) +
+              ' mph')
 
     return speedFormatted
 }

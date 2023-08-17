@@ -1,4 +1,4 @@
-import { Typography, Tile, Spacing } from '../../../bash-blocks'
+import { Typography, Tile } from '../../../bash-blocks'
 import {
     compileProjects,
     compileMiles,
@@ -19,13 +19,7 @@ export const SportResultTile = () => {
     return (
         <>
             <Tile type="solid" top>
-                <Spacing mB={isMobile ? 7.5 : 15}>
-                    <Typography
-                        type="h1"
-                        content="Roadies"
-                        textAlign="center"
-                    />
-                </Spacing>
+                <Typography type="h1" content="Roadies" textAlign="center" />
                 <Typography type="h2" content="Roadies" textAlign="center" />
                 <ActivityTile
                     title={{
@@ -80,10 +74,10 @@ export const SportResultTile = () => {
                         rightItems: [
                             'Centuries',
                             'Strathavens',
-                            "Fen. + WF's",
+                            'Fen. + WF’s',
                             'Fenwicks',
                             'Wind Farms',
-                            "T'halls",
+                            'T’halls',
                         ],
                     }}
                     entries={[
@@ -238,13 +232,7 @@ export const SportResultTile = () => {
                 />
             </Tile>
             <Tile type="solid">
-                <Spacing mB={isMobile ? 7.5 : 15}>
-                    <Typography
-                        type="h1"
-                        content="Projects"
-                        textAlign="center"
-                    />
-                </Spacing>
+                <Typography type="h1" content="Projects" textAlign="center" />
                 <Typography type="h2" content="Projects" textAlign="center" />
                 <ActivityTile
                     title={{
@@ -447,12 +435,10 @@ export const SportResultTile = () => {
                 />
             </Tile>
             <Tile type="solid">
-                <Spacing mB={isMobile ? 7.5 : 15}>
-                    <Typography type="h1" content="Miles" textAlign="center" />
-                </Spacing>
+                <Typography type="h1" content="Miles" textAlign="center" />
+                <Typography type="h2" content="Miles" textAlign="center" />
                 <ActivityTile
                     title={{
-                        leftItem: 'Miles',
                         rightItems: ['Occurences', 'Distance', 'Elevation'],
                     }}
                     entries={[
@@ -498,9 +484,57 @@ export const SportResultTile = () => {
                         },
                     ]}
                 />
+                <Typography type="h2" content="Routes" textAlign="center" />
                 <ActivityTile
                     title={{
-                        leftItem: '2023',
+                        rightItems: ['Wind Farms', 'T’Halls', 'Waterfoots'],
+                    }}
+                    entries={[
+                        {
+                            leftItem: 'Total',
+                            rightItems: [
+                                `${compiledMiles.windfarms.total}`,
+                                `${compiledMiles.thorntonhalls.total}`,
+                                `${compiledMiles.waterfoots.total}`,
+                            ],
+                        },
+                        {
+                            leftItem: '2023',
+                            rightItems: [
+                                `${compiledMiles.windfarms[2023]}`,
+                                `${compiledMiles.thorntonhalls[2023]}`,
+                                `${compiledMiles.waterfoots[2023]}`,
+                            ],
+                        },
+                        {
+                            leftItem: '2022',
+                            rightItems: [
+                                `${compiledMiles.windfarms[2022]}`,
+                                `${compiledMiles.thorntonhalls[2022]}`,
+                                `${compiledMiles.waterfoots[2022]}`,
+                            ],
+                        },
+                        {
+                            leftItem: '2021',
+                            rightItems: [
+                                `${compiledMiles.windfarms[2021]}`,
+                                `${compiledMiles.thorntonhalls[2021]}`,
+                                `${compiledMiles.waterfoots[2021]}`,
+                            ],
+                        },
+                        {
+                            leftItem: '2020',
+                            rightItems: [
+                                `${compiledMiles.windfarms[2020]}`,
+                                `${compiledMiles.thorntonhalls[2020]}`,
+                                `${compiledMiles.waterfoots[2020]}`,
+                            ],
+                        },
+                    ]}
+                />
+                <Typography type="h2" content="2023" textAlign="center" />
+                <ActivityTile
+                    title={{
                         rightItems: ['Distance', 'Elevation', 'Time'],
                     }}
                     entries={compiledMiles.miles[2023].map(
@@ -514,9 +548,9 @@ export const SportResultTile = () => {
                         })
                     )}
                 />
+                <Typography type="h2" content="2022" textAlign="center" />
                 <ActivityTile
                     title={{
-                        leftItem: '2022',
                         rightItems: ['Distance', 'Elevation', 'Time'],
                     }}
                     entries={compiledMiles.miles[2022].map(
@@ -530,9 +564,9 @@ export const SportResultTile = () => {
                         })
                     )}
                 />
+                <Typography type="h2" content="2021" textAlign="center" />
                 <ActivityTile
                     title={{
-                        leftItem: '2021',
                         rightItems: ['Distance', 'Elevation', 'Time'],
                     }}
                     entries={compiledMiles.miles[2021].map(
@@ -546,9 +580,9 @@ export const SportResultTile = () => {
                         })
                     )}
                 />
+                <Typography type="h2" content="2020" textAlign="center" />
                 <ActivityTile
                     title={{
-                        leftItem: '2020',
                         rightItems: ['Distance', 'Elevation', 'Time'],
                     }}
                     entries={compiledMiles.miles[2020].map(
