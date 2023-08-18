@@ -2754,6 +2754,10 @@ export const eventData = {
                     alt: 'on-the-day-20',
                 },
                 {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/on-the-day/26.JPG',
+                    alt: 'on-the-day-26',
+                },
+                {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/on-the-day/21.jpg',
                     alt: 'on-the-day-21',
                 },
@@ -2772,10 +2776,6 @@ export const eventData = {
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/on-the-day/25.jpg',
                     alt: 'on-the-day-25',
-                },
-                {
-                    url: 'https://lewisbritton.com/blog/instant-gram/2023/on-the-day/26.jpg',
-                    alt: 'on-the-day-26',
                 },
             ],
             youthHostels: [],
