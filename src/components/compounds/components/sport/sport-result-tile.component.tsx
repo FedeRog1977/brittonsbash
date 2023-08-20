@@ -18,7 +18,7 @@ export const SportResultTile = () => {
 
     return (
         <>
-            <Tile type="solid" top>
+            <Tile type="solid" dense={isMobile ? true : false} top>
                 <Typography type="h1" content="Roadies" textAlign="center" />
                 <Typography type="h2" content="Roadies" textAlign="center" />
                 <ActivityTile
@@ -74,10 +74,10 @@ export const SportResultTile = () => {
                         rightItems: [
                             'Centuries',
                             'Strathavens',
-                            'Fen. + WF’s',
+                            'Fenwick + WF’s',
                             'Fenwicks',
                             'Wind Farms',
-                            'T’halls',
+                            'Thorntonhalls',
                         ],
                     }}
                     entries={[
@@ -286,9 +286,9 @@ export const SportResultTile = () => {
                     title={{
                         rightItems: [
                             'Munros',
-                            '‘Tops',
+                            'Munro Tops',
                             'Corbetts',
-                            '‘Tops',
+                            'Corbett Tops',
                             'Grahams',
                             'Sub2000s',
                             'Donalds',
@@ -487,7 +487,11 @@ export const SportResultTile = () => {
                 <Typography type="h2" content="Routes" textAlign="center" />
                 <ActivityTile
                     title={{
-                        rightItems: ['Wind Farms', 'T’Halls', 'Waterfoots'],
+                        rightItems: [
+                            'Wind Farms',
+                            'Thorntonhalls',
+                            'Waterfoots',
+                        ],
                     }}
                     entries={[
                         {

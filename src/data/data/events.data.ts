@@ -1,6 +1,22 @@
 export const eventData = {
     2023: [
         {
+            id: 'E2023033',
+            prefix: '',
+            names: ['Stac Post-Lee'],
+            startDate: '18th of August',
+            endDate: '19th of August',
+            description:
+                'Quite a confused one to be honest. What was supposed to be a re-run of the Lochnagar five, or Return To Lamar if you will, turned into an impromptu trip to Lee’s. Not complaining. Quick stop at, finally the correct, Tesco Perth for the £1.50 Lindor then a feast of sushware followed by bolognese at Lee’s. Sadly no wasted this time becasue we still thought we might get a decent proj in. Haha lol. Wish we had gone a litre down now. The discontinued Brooklyn can over Quantum and some Skyfall was cool though. Just a sub-two the next day followed by a standard procedure Waterfoot upon arrival back in the only place better than Lee’s. Meme, I don’t actually agree with that but it works.',
+            images: [
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/cairngorms-xiii/1.jpg',
+                    alt: 'cairngorms-xiii-1',
+                },
+            ],
+            youthHostels: ['Dalwhinnie Old School'],
+        },
+        {
             id: 'E2023032',
             prefix: '',
             names: ['Mark’s And Spencer'],

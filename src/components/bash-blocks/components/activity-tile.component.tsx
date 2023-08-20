@@ -13,8 +13,8 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
             mR={isMobile ? 0 : 70}
             mT={isMobile ? 7.5 : 15}
             mB={isMobile ? 7.5 : 15}
-            pL={isMobile ? 15 : 150}
-            pR={isMobile ? 15 : 150}
+            pL={isMobile ? 15 : 70}
+            pR={isMobile ? 15 : 70}
             pT={isMobile ? 7.5 : 15}
             pB={isMobile ? 7.5 : 15}
             backgroundColor="var(--lighter-grey)"
@@ -39,7 +39,7 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
                                 <div
                                     key={index}
                                     style={{
-                                        width: isMobile ? '75px' : '100px',
+                                        width: isMobile ? '75px' : '125px',
                                         display: 'inline-block',
                                     }}
                                 >
@@ -92,7 +92,7 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
                                                     style={{
                                                         width: isMobile
                                                             ? '75px'
-                                                            : '100px',
+                                                            : '125px',
                                                         display: 'inline-block',
                                                     }}
                                                 >

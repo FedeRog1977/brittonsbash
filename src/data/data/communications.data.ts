@@ -1548,6 +1548,7 @@ export const communicationsData = {
             'Lenovo Founded',
             'BlackBerry Founded',
             'Avril Lavigne Born',
+            'Marks & Spencer Centenary',
         ],
         links: {
             entertainment: [
