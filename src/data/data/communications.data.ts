@@ -1352,10 +1352,13 @@ export const communicationsData = {
                 ],
             },
             accessories: [
-                'Rolex Datejust (Pending)',
-                'Rolex Skydweller (Pending)',
+                'Rolex Datejust',
+                'Rolex Skydweller',
                 'Rayban Wayfarers Tortoiseshell',
-                'Rayban Wayfarers Tortoiseshell (Pre-Luxottica) (Pending)',
+                'Rayban Wayfarers Tortoiseshell (Pre-Luxottica)',
+                'Carrera Endurance 65',
+                'Alpina Quattro Miami Vice Sunglasses 80’s',
+                'Linda Farrow 6031 Scarface Movie Glasses',
             ],
             cigarettes: [
                 'Marlboro Cigarettes',
@@ -1391,6 +1394,10 @@ export const communicationsData = {
                 },
             ],
             style: [
+                {
+                    content: 'Vintage Sunglasses',
+                    href: 'https://www.vintage-sunglasses-shop.com/eyewear/12861/linda-farrow-6031-scarface-movie-glasses',
+                },
                 {
                     content: 'Fragrantica',
                     href: 'https://www.fragrantica.com/perfume-finder/',
