@@ -1,7 +1,8 @@
+import { EventSportEventProjectProps } from '.'
 import { sportData } from '../../data'
 
 export function compileEventSports() {
-    const allSport: any[] = []
+    const allSport: EventSportEventProjectProps[] = []
 
     sportData[2023].projects.forEach((event: any) => {
         allSport.push(event)

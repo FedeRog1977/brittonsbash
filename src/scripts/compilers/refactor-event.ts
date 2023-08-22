@@ -1,6 +1,6 @@
-import { sum, toFeet, toMiles } from '..'
+import { EventProps, sum, toFeet, toMiles } from '..'
 
-export const refactorEvent = ({ event, sportEvent, showSportEvent }: any) => {
+export const refactorEvent = ({ ...props }: EventProps) => {
     const names: any[] = []
     const distances: any[] = []
     const elevations: any[] = []
@@ -29,7 +29,7 @@ export const refactorEvent = ({ event, sportEvent, showSportEvent }: any) => {
 
     var refKey = 0
 
-    event.names.forEach((name: string) => {
+    props.event.names.forEach((name: string) => {
         refKey = refKey + 1
         names.push({
             name: name,
@@ -37,7 +37,7 @@ export const refactorEvent = ({ event, sportEvent, showSportEvent }: any) => {
         })
     })
 
-    sportEvent.forEach((event: any) => {
+    props.sportEvent.forEach((event: any) => {
         distances.push(event.dist)
         elevations.push(event.elev)
         times.push(event.time)
@@ -68,14 +68,15 @@ export const refactorEvent = ({ event, sportEvent, showSportEvent }: any) => {
     })
 
     const refactoredEvent = {
-        prefix: event.prefix,
+        prefix: props.event.prefix,
         names,
-        startDate: event.startDate,
-        endDate: event.endDate,
-        description: event.description,
-        images: event.images,
-        youthHostels: event.youthHostels.join(', '),
-        showSportEvent,
+        startDate: props.event.startDate,
+        endDate: props.event.endDate,
+        description: props.event.description,
+        images: props.event.images,
+        youthHostels:
+            props.event.youthHostels && props.event.youthHostels.join(', '),
+        showSportEvent: props.showSportEvent,
         distance: toMiles(distances.reduce(sum)),
         elevation: toFeet(elevations.reduce(sum)),
         time: times.join(', '),

@@ -1,3 +1,5 @@
+import { EventProps } from '../../../scripts'
+
 export type InstantGramSearchListProps = {
     func: (() => void) | ((e: any) => void)
     items: {
@@ -15,8 +17,4 @@ export type InstantGramSearchTileProps = {
     funcSelect: (e: any) => void
 }
 
-export type InstantGramResultTileProps = {
-    event: {}
-    sportEvent: {}
-    showSportEvent: boolean
-}
+export type InstantGramResultTileProps = EventProps

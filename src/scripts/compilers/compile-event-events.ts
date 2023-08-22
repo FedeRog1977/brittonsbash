@@ -1,7 +1,8 @@
 import { eventData } from '../../data'
+import { EventEventProps } from '.'
 
-export function compileEvents() {
-    const allEvents: any[] = []
+export function compileEventEvents() {
+    const allEvents: EventEventProps[] = []
 
     eventData[2023].forEach((event: any) => {
         allEvents.push(event)

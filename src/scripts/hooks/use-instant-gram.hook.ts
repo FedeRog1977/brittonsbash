@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { compileEvents, compileEventSports } from '..'
+import { compileEventEvents, compileEventSports } from '..'
 
 export function useInstantGram() {
-    const allEvents = compileEvents()
+    const allEvents = compileEventEvents()
     const allSport = compileEventSports()
 
     const sportOnEvent: any[] = []
