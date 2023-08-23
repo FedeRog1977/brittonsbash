@@ -195,8 +195,8 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                                 <>
                                     <Typography
                                         type="body"
-                                        content={<>Youth Hostel(s):&nbsp;</>}
-                                        boldFace={isMobile ? false : true}
+                                        content="Youth Hostel(s): "
+                                        boldFace
                                         inline
                                     />
                                     <Typography

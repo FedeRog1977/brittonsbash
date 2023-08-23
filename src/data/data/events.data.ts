@@ -7,7 +7,7 @@ export const eventData = {
             startDate: '19th of August',
             endDate: '',
             description:
-                'After the bolognese with conchiglie following the shushi started at Lee’s, I was inspired yet again to work on the old sausage pasta recipe.',
+                'After the bolognese with conchiglie following the sushware starter at Lee’s, I was inspired yet again to work on the old sausage pasta recipe.',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/sausage-party/1.jpg',
