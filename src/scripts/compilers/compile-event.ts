@@ -1,6 +1,6 @@
-import { EventProps, sum, toFeet, toMiles } from '..'
+import { CompiledEventProps, sum, toFeet, toMiles } from '..'
 
-export const refactorEvent = ({ ...props }: EventProps) => {
+export const compileEvent = ({ ...props }: CompiledEventProps) => {
     const names: any[] = []
     const distances: any[] = []
     const elevations: any[] = []

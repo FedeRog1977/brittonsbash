@@ -1,15 +1,15 @@
 import { sportData } from '../../data'
-import { toFeet, toMiles } from '..'
+import { CompiledRoadieProps, toFeet, toMiles } from '..'
 
-export const compileRoadies = () => {
-    const roadies = {
+export function compileRoadies() {
+    const roadies: CompiledRoadieProps['roadies'] = {
         2023: sportData[2023].roadies,
         2022: sportData[2022].roadies,
         2021: sportData[2021].roadies,
         2020: sportData[2020].roadies,
     }
 
-    const number = {
+    const number: CompiledRoadieProps['number'] = {
         total:
             sportData[2023].roadies.length +
             sportData[2022].roadies.length +
@@ -202,7 +202,7 @@ export const compileRoadies = () => {
         thorntonhalls2021 +
         thorntonhalls2020
 
-    const centuries = {
+    const centuries: CompiledRoadieProps['centuries'] = {
         total: centuriesTotal,
         2023: centuries2023,
         2022: centuries2022,
@@ -210,7 +210,7 @@ export const compileRoadies = () => {
         2020: centuries2020,
     }
 
-    const strathavens = {
+    const strathavens: CompiledRoadieProps['strathavens'] = {
         total: strathavensTotal,
         2023: strathavens2023,
         2022: strathavens2022,
@@ -218,7 +218,7 @@ export const compileRoadies = () => {
         2020: strathavens2020,
     }
 
-    const fenwickWindfarms = {
+    const fenwickWindfarms: CompiledRoadieProps['fenwickWindfarms'] = {
         total: fenwickWindfarmsTotal,
         2023: fenwickWindfarms2023,
         2022: fenwickWindfarms2022,
@@ -226,7 +226,7 @@ export const compileRoadies = () => {
         2020: fenwickWindfarms2020,
     }
 
-    const fenwicks = {
+    const fenwicks: CompiledRoadieProps['fenwicks'] = {
         total: fenwicksTotal,
         2023: fenwicks2023,
         2022: fenwicks2022,
@@ -234,7 +234,7 @@ export const compileRoadies = () => {
         2020: fenwicks2020,
     }
 
-    const windfarms = {
+    const windfarms: CompiledRoadieProps['windfarms'] = {
         total: windfarmsTotal,
         2023: windfarms2023,
         2022: windfarms2022,
@@ -242,7 +242,7 @@ export const compileRoadies = () => {
         2020: windfarms2020,
     }
 
-    const thorntonhalls = {
+    const thorntonhalls: CompiledRoadieProps['thorntonhalls'] = {
         total: thorntonhallsTotal,
         2023: thorntonhalls2023,
         2022: thorntonhalls2022,
@@ -250,7 +250,7 @@ export const compileRoadies = () => {
         2020: thorntonhalls2020,
     }
 
-    const distance = {
+    const distance: CompiledRoadieProps['distance'] = {
         total: toMiles(
             distance2023 + distance2022 + distance2021 + distance2020
         ),
@@ -260,7 +260,7 @@ export const compileRoadies = () => {
         2020: toMiles(distance2020),
     }
 
-    const elevation = {
+    const elevation: CompiledRoadieProps['elevation'] = {
         total: toFeet(
             elevation2023 + elevation2022 + elevation2021 + elevation2020
         ),
@@ -270,7 +270,7 @@ export const compileRoadies = () => {
         2020: toFeet(elevation2020),
     }
 
-    const compiledRoadies = {
+    const compiledRoadies: CompiledRoadieProps = {
         roadies,
         number,
         distance,

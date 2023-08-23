@@ -7,7 +7,7 @@ import {
     Tile,
     Typography,
 } from '../../../bash-blocks'
-import { refactorEvent, useDropDown, useScreenWidth } from '../../../../scripts'
+import { compileEvent, useDropDown, useScreenWidth } from '../../../../scripts'
 import { ActivityTile } from '../../../bash-blocks'
 import { InstantGramResultTileProps } from '../..'
 
@@ -26,7 +26,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
         showDropDown: showImageMatrix,
         setShowDropDown: setShowImageMatrix,
     } = useDropDown()
-    const refactoredEvent = refactorEvent({ event, sportEvent, showSportEvent })
+    const refactoredEvent = compileEvent({ event, sportEvent, showSportEvent })
 
     return (
         <Tile type="solid" dense={isMobile && true}>

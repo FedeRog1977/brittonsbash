@@ -30,40 +30,40 @@ export const SportResultTile = () => {
                             leftItem: 'Total',
                             rightItems: [
                                 `${compiledRoadies.number.total}`,
-                                compiledRoadies.distance.total,
-                                compiledRoadies.elevation.total,
+                                compiledRoadies.distance.total as string,
+                                compiledRoadies.elevation.total as string,
                             ],
                         },
                         {
                             leftItem: '2023',
                             rightItems: [
                                 `${compiledRoadies.number[2023]}`,
-                                compiledRoadies.distance[2023],
-                                compiledRoadies.elevation[2023],
+                                compiledRoadies.distance[2023] as string,
+                                compiledRoadies.elevation[2023] as string,
                             ],
                         },
                         {
                             leftItem: '2022',
                             rightItems: [
                                 `${compiledRoadies.number[2022]}`,
-                                compiledRoadies.distance[2022],
-                                compiledRoadies.elevation[2022],
+                                compiledRoadies.distance[2022] as string,
+                                compiledRoadies.elevation[2022] as string,
                             ],
                         },
                         {
                             leftItem: '2021',
                             rightItems: [
                                 `${compiledRoadies.number[2021]}`,
-                                compiledRoadies.distance[2021],
-                                compiledRoadies.elevation[2021],
+                                compiledRoadies.distance[2021] as string,
+                                compiledRoadies.elevation[2021] as string,
                             ],
                         },
                         {
                             leftItem: '2020',
                             rightItems: [
                                 `${compiledRoadies.number[2020]}`,
-                                compiledRoadies.distance[2020],
-                                compiledRoadies.elevation[2020],
+                                compiledRoadies.distance[2020] as string,
+                                compiledRoadies.elevation[2020] as string,
                             ],
                         },
                     ]}
@@ -243,40 +243,40 @@ export const SportResultTile = () => {
                             leftItem: 'Total',
                             rightItems: [
                                 `${compiledProjects.number.total}`,
-                                compiledProjects.distance.total,
-                                compiledProjects.elevation.total,
+                                compiledProjects.distance.total as string,
+                                compiledProjects.elevation.total as string,
                             ],
                         },
                         {
                             leftItem: '2023',
                             rightItems: [
                                 `${compiledProjects.number[2023]}`,
-                                compiledProjects.distance[2023],
-                                compiledProjects.elevation[2023],
+                                compiledProjects.distance[2023] as string,
+                                compiledProjects.elevation[2023] as string,
                             ],
                         },
                         {
                             leftItem: '2022',
                             rightItems: [
                                 `${compiledProjects.number[2022]}`,
-                                compiledProjects.distance[2022],
-                                compiledProjects.elevation[2022],
+                                compiledProjects.distance[2022] as string,
+                                compiledProjects.elevation[2022] as string,
                             ],
                         },
                         {
                             leftItem: '2021',
                             rightItems: [
                                 `${compiledProjects.number[2021]}`,
-                                compiledProjects.distance[2021],
-                                compiledProjects.elevation[2021],
+                                compiledProjects.distance[2021] as string,
+                                compiledProjects.elevation[2021] as string,
                             ],
                         },
                         {
                             leftItem: '2020',
                             rightItems: [
                                 `${compiledProjects.number[2020]}`,
-                                compiledProjects.distance[2020],
-                                compiledProjects.elevation[2020],
+                                compiledProjects.distance[2020] as string,
+                                compiledProjects.elevation[2020] as string,
                             ],
                         },
                     ]}
@@ -446,40 +446,40 @@ export const SportResultTile = () => {
                             leftItem: 'Total',
                             rightItems: [
                                 `${compiledMiles.number.total}`,
-                                compiledMiles.distance.total,
-                                compiledMiles.elevation.total,
+                                compiledMiles.distance.total as string,
+                                compiledMiles.elevation.total as string,
                             ],
                         },
                         {
                             leftItem: '2023',
                             rightItems: [
                                 `${compiledMiles.number[2023]}`,
-                                compiledMiles.distance[2023],
-                                compiledMiles.elevation[2023],
+                                compiledMiles.distance[2023] as string,
+                                compiledMiles.elevation[2023] as string,
                             ],
                         },
                         {
                             leftItem: '2022',
                             rightItems: [
                                 `${compiledMiles.number[2022]}`,
-                                compiledMiles.distance[2022],
-                                compiledMiles.elevation[2022],
+                                compiledMiles.distance[2022] as string,
+                                compiledMiles.elevation[2022] as string,
                             ],
                         },
                         {
                             leftItem: '2021',
                             rightItems: [
                                 `${compiledMiles.number[2021]}`,
-                                compiledMiles.distance[2021],
-                                compiledMiles.elevation[2021],
+                                compiledMiles.distance[2021] as string,
+                                compiledMiles.elevation[2021] as string,
                             ],
                         },
                         {
                             leftItem: '2020',
                             rightItems: [
                                 `${compiledMiles.number[2020]}`,
-                                compiledMiles.distance[2020],
-                                compiledMiles.elevation[2020],
+                                compiledMiles.distance[2020] as string,
+                                compiledMiles.elevation[2020] as string,
                             ],
                         },
                     ]}

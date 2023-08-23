@@ -1,15 +1,15 @@
 import { sportData } from '../../data'
-import { removeDuplicates, toFeet, toMiles } from '..'
+import { CompiledProjectProps, removeDuplicates, toFeet, toMiles } from '..'
 
-export const compileProjects = () => {
-    const projects = {
+export function compileProjects() {
+    const projects: CompiledProjectProps['projects'] = {
         2023: sportData[2023].projects,
         2022: sportData[2022].projects,
         2021: sportData[2021].projects,
         2020: sportData[2020].projects,
     }
 
-    const number = {
+    const number: CompiledProjectProps['number'] = {
         total:
             sportData[2023].projects.length +
             sportData[2022].projects.length +
@@ -298,7 +298,7 @@ export const compileProjects = () => {
         donaldsTotal.push(donald)
     })
 
-    const islands = {
+    const islands: CompiledProjectProps['islands'] = {
         names: {
             total: islandsTotal.sort(),
             unique: removeDuplicates(islandsTotal).sort(),
@@ -317,7 +317,7 @@ export const compileProjects = () => {
         },
     }
 
-    const munros = {
+    const munros: CompiledProjectProps['munros'] = {
         names: {
             total: munrosTotal.sort(),
             unique: removeDuplicates(munrosTotal).sort(),
@@ -336,7 +336,7 @@ export const compileProjects = () => {
         },
     }
 
-    const munroTops = {
+    const munroTops: CompiledProjectProps['munroTops'] = {
         names: {
             total: munroTopsTotal.sort(),
             unique: removeDuplicates(munroTopsTotal).sort(),
@@ -355,7 +355,7 @@ export const compileProjects = () => {
         },
     }
 
-    const corbetts = {
+    const corbetts: CompiledProjectProps['corbetts'] = {
         names: {
             total: corbettsTotal.sort(),
             unique: removeDuplicates(corbettsTotal).sort(),
@@ -374,7 +374,7 @@ export const compileProjects = () => {
         },
     }
 
-    const corbettTops = {
+    const corbettTops: CompiledProjectProps['corbettTops'] = {
         names: {
             total: corbettTopsTotal.sort(),
             unique: removeDuplicates(corbettTopsTotal).sort(),
@@ -393,7 +393,7 @@ export const compileProjects = () => {
         },
     }
 
-    const grahams = {
+    const grahams: CompiledProjectProps['grahams'] = {
         names: {
             total: grahamsTotal.sort(),
             unique: removeDuplicates(grahamsTotal).sort(),
@@ -412,7 +412,7 @@ export const compileProjects = () => {
         },
     }
 
-    const subTwos = {
+    const subTwos: CompiledProjectProps['subTwos'] = {
         names: {
             total: subTwosTotal.sort(),
             unique: removeDuplicates(subTwosTotal).sort(),
@@ -431,7 +431,7 @@ export const compileProjects = () => {
         },
     }
 
-    const donalds = {
+    const donalds: CompiledProjectProps['donalds'] = {
         names: {
             total: donaldsTotal.sort(),
             unique: removeDuplicates(donaldsTotal).sort(),
@@ -450,7 +450,7 @@ export const compileProjects = () => {
         },
     }
 
-    const distance = {
+    const distance: CompiledProjectProps['distance'] = {
         total: toMiles(
             distance2023 + distance2022 + distance2021 + distance2020
         ),
@@ -460,7 +460,7 @@ export const compileProjects = () => {
         2020: toMiles(distance2020),
     }
 
-    const elevation = {
+    const elevation: CompiledProjectProps['elevation'] = {
         total: toFeet(
             elevation2023 + elevation2022 + elevation2021 + elevation2020
         ),
@@ -470,7 +470,7 @@ export const compileProjects = () => {
         2020: toFeet(elevation2020),
     }
 
-    const compiledProjects = {
+    const compiledProjects: CompiledProjectProps = {
         projects,
         number,
         distance,

@@ -1,4 +1,4 @@
-import { EventProps } from '../../../scripts'
+import { CompiledEventProps } from '../../../scripts'
 
 export type InstantGramSearchListProps = {
     func: (() => void) | ((e: any) => void)
@@ -17,4 +17,4 @@ export type InstantGramSearchTileProps = {
     funcSelect: (e: any) => void
 }
 
-export type InstantGramResultTileProps = EventProps
+export type InstantGramResultTileProps = CompiledEventProps
