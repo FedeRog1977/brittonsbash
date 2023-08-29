@@ -29,7 +29,7 @@ export const articleTestData = [
     {
         type: 'image',
         imageContent: {
-            url: 'https://lewisbritton.com/Blog/Photos_IG/2023/on-the-day/13.jpg',
+            url: 'https://lewisbritton.com/blog/instant-gram/2023/on-the-day/13.jpg',
             alt: 'test-1',
             description: 'Lorem Ipsum',
         },
