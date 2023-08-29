@@ -1,6 +1,20 @@
 export const eventData = {
     2023: [
         {
+            id: 'E2023035',
+            prefix: 'The Knoydart Special',
+            names: ['Out Where ...', '... The Buses Don’t Run'],
+            startDate: '19th of August',
+            endDate: '',
+            description: '...',
+            images: [
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-knoydart-special/1.jpg',
+                    alt: 'the-knoydart-special-1',
+                },
+            ],
+        },
+        {
             id: 'E2023034',
             prefix: '',
             names: ['Sausage Party'],
@@ -1201,7 +1215,6 @@ export const eventData = {
                     alt: 'mcsoup-7',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2023028',
@@ -1548,7 +1561,6 @@ export const eventData = {
                     alt: 'nine-to-five-7',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2023020',

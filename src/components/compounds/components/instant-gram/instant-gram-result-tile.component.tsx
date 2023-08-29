@@ -130,7 +130,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                                 {refactoredEvent.elevation}
                             </>
                         ),
-                        rightItems: <>[{refactoredEvent.time}]</>,
+                        rightItems: refactoredEvent.time,
                     }}
                     entries={[
                         {
