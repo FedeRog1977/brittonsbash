@@ -16,7 +16,7 @@ export const ImageSliderStories = () => {
                     paragraphMargins
                 />
             </Tile>
-            <Tile type="solid" dense={isMobile && true}>
+            <Tile type="solid" dense={isMobile}>
                 <ImageSlider slides={imageTestData} />
             </Tile>
         </>

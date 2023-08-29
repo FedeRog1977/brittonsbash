@@ -29,7 +29,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
     const refactoredEvent = compileEvent({ event, sportEvent, showSportEvent })
 
     return (
-        <Tile type="solid" dense={isMobile && true}>
+        <Tile type="solid" dense={isMobile}>
             <Spacing
                 mL={isMobile ? 15 : 70}
                 mR={isMobile ? 15 : 70}

@@ -1,18 +1,26 @@
-import { CompiledEventProps, sum, toFeet, toMiles } from '..'
+import {
+    CompiledEventProps,
+    ProjectProps,
+    RefactoredEventNameProps,
+    RefactoredEventProps,
+    sum,
+    toFeet,
+    toMiles,
+} from '..'
 
 export const compileEvent = ({ ...props }: CompiledEventProps) => {
-    const names: any[] = []
-    const distances: any[] = []
-    const elevations: any[] = []
-    const times: any[] = []
-    const islandSetAggregate: any[] = []
-    const munroSetAggregate: any[] = []
-    const munroTopSetAggregate: any[] = []
-    const corbettSetAggregate: any[] = []
-    const corbettTopSetAggregate: any[] = []
-    const grahamSetAggregate: any[] = []
-    const subTwoSetAggregate: any[] = []
-    const donaldSetAggregate: any[] = []
+    const names: RefactoredEventNameProps[] = []
+    const distances: number[] = []
+    const elevations: number[] = []
+    const times: string[] = []
+    const islandSetAggregate: string[] = []
+    const munroSetAggregate: string[] = []
+    const munroTopSetAggregate: string[] = []
+    const corbettSetAggregate: string[] = []
+    const corbettTopSetAggregate: string[] = []
+    const grahamSetAggregate: string[] = []
+    const subTwoSetAggregate: string[] = []
+    const donaldSetAggregate: string[] = []
 
     names.pop()
     distances.pop()
@@ -37,46 +45,47 @@ export const compileEvent = ({ ...props }: CompiledEventProps) => {
         })
     })
 
-    props.sportEvent.forEach((event: any) => {
-        distances.push(event.dist)
-        elevations.push(event.elev)
-        times.push(event.time)
-        event.islands.forEach((islandSet: string) => {
+    props.sportEvent.forEach((sportEvent: ProjectProps) => {
+        distances.push(sportEvent.dist)
+        elevations.push(sportEvent.elev)
+        times.push(sportEvent.time)
+        sportEvent.islands?.forEach((islandSet: string) => {
             islandSetAggregate.push(islandSet)
         })
-        event.munros.forEach((munroSet: string) => {
+        sportEvent.munros?.forEach((munroSet: string) => {
             munroSetAggregate.push(munroSet)
         })
-        event.munroTops.forEach((munroTopSet: string) => {
+        sportEvent.munroTops?.forEach((munroTopSet: string) => {
             munroTopSetAggregate.push(munroTopSet)
         })
-        event.corbetts.forEach((corbettSet: string) => {
+        sportEvent.corbetts?.forEach((corbettSet: string) => {
             corbettSetAggregate.push(corbettSet)
         })
-        event.corbettTops.forEach((corbettTopSet: string) => {
+        sportEvent.corbettTops?.forEach((corbettTopSet: string) => {
             corbettTopSetAggregate.push(corbettTopSet)
         })
-        event.grahams.forEach((grahamSet: string) => {
+        sportEvent.grahams?.forEach((grahamSet: string) => {
             grahamSetAggregate.push(grahamSet)
         })
-        event.subTwos.forEach((subTwoSet: string) => {
+        sportEvent.subTwos?.forEach((subTwoSet: string) => {
             subTwoSetAggregate.push(subTwoSet)
         })
-        event.donalds.forEach((donaldSet: string) => {
+        sportEvent.donalds?.forEach((donaldSet: string) => {
             donaldSetAggregate.push(donaldSet)
         })
     })
 
-    const refactoredEvent = {
+    const refactoredEvent: RefactoredEventProps = {
         prefix: props.event.prefix,
         names,
         startDate: props.event.startDate,
         endDate: props.event.endDate,
         description: props.event.description,
         images: props.event.images,
+        attractions:
+            props.event.attractions && props.event.attractions.join(', '),
         youthHostels:
             props.event.youthHostels && props.event.youthHostels.join(', '),
-        showSportEvent: props.showSportEvent,
         distance: toMiles(distances.reduce(sum)),
         elevation: toFeet(elevations.reduce(sum)),
         time: times.join(', '),
@@ -88,6 +97,7 @@ export const compileEvent = ({ ...props }: CompiledEventProps) => {
         grahams: grahamSetAggregate.join(', '),
         subTwos: subTwoSetAggregate.join(', '),
         donalds: donaldSetAggregate.join(', '),
+        showSportEvent: props.showSportEvent,
     }
 
     console.log('Refactored Event:\n\n', refactoredEvent)

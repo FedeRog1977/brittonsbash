@@ -18,7 +18,7 @@ export const SportResultTile = () => {
 
     return (
         <>
-            <Tile type="solid" dense={isMobile ? true : false} top>
+            <Tile type="solid" dense={isMobile} top>
                 <Typography type="h1" content="Roadies" textAlign="center" />
                 <Typography type="h2" content="Roadies" textAlign="center" />
                 <ActivityTile

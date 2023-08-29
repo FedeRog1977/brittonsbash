@@ -5,7 +5,7 @@ export const WeatherResultTitle = ({ title, subTitle, result }: any) => {
     const { isMobile } = useScreenWidth()
 
     return (
-        <Tile type="solid" dense={isMobile && true}>
+        <Tile type="solid" dense={isMobile}>
             <Spacing mB={isMobile ? 7.5 : 15}>
                 <Typography type="h1" content={title} textAlign="center" />
                 <Typography

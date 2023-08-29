@@ -1,9 +1,11 @@
 import { ArticleProps, ImageProps } from '../../../components/bash-blocks'
 import { AggregationAlphabeticalProps, AggregationNumericalProps } from '.'
 
+// Base Props
+
 export type EventProps = {
-    id: string
-    prefix: string
+    id?: string
+    prefix?: string
     names: string[]
     startDate: string
     endDate?: string
@@ -47,6 +49,8 @@ export type MilesProps = {
     time: string
 }
 
+// Intermediary Props
+
 type AggregateSportProps = {
     roadies: RoadieProps[]
     projects: RoadieProps[]
@@ -59,6 +63,8 @@ export type SportProps = {
     2022: AggregateSportProps
     2023: AggregateSportProps
 }
+
+// Compiled Props
 
 export type CompiledEventProps = {
     event: EventProps
@@ -141,4 +147,34 @@ export type CompiledMilesProps = {
     windfarms: AggregationNumericalProps
     thorntonhalls: AggregationNumericalProps
     waterfoots: AggregationNumericalProps
+}
+
+// Refactored Props
+
+export type RefactoredEventNameProps = {
+    refKey: number
+    name: string
+}
+
+export type RefactoredEventProps = {
+    prefix?: EventProps['prefix']
+    names: RefactoredEventNameProps[]
+    startDate: EventProps['startDate']
+    endDate?: EventProps['endDate']
+    description: EventProps['description']
+    images: EventProps['images']
+    attractions?: string
+    youthHostels?: string
+    distance?: string
+    elevation?: string
+    time?: string
+    islands?: string
+    munros?: string
+    munroTops?: string
+    corbetts?: string
+    corbettTops?: string
+    grahams?: string
+    subTwos?: string
+    donalds?: string
+    showSportEvent: CompiledEventProps['showSportEvent']
 }
