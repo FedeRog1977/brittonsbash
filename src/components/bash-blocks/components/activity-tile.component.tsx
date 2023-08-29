@@ -1,4 +1,4 @@
-import { ActivityTileProps } from '..'
+import { ActivityTileProps, Flex } from '..'
 import { useScreenWidth } from '../../../scripts'
 import { Spacing, Typography } from '..'
 
@@ -22,7 +22,7 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
         >
             <Spacing position="absolute">
                 <Typography
-                    type="body"
+                    type="footnote"
                     content={props.title.leftItem}
                     boldFace
                     inline
@@ -39,12 +39,16 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
                                 <div
                                     key={index}
                                     style={{
-                                        width: isMobile ? '75px' : '125px',
+                                        width: isMobile
+                                            ? '75px'
+                                            : // : 'fit-content',
+                                              '100px',
+                                        // marginLeft: '1rem',
                                         display: 'inline-block',
                                     }}
                                 >
                                     <Typography
-                                        type="body"
+                                        type="footnote"
                                         content={item as React.ReactElement}
                                         boldFace
                                         inline
@@ -55,7 +59,7 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
                     </>
                 ) : (
                     <Typography
-                        type="body"
+                        type="footnote"
                         content={props.title.rightItems}
                         boldFace
                         inline
@@ -69,7 +73,7 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
                             <Spacing mT={isMobile ? 3.75 : 7.5} />
                             <Spacing position="absolute">
                                 <Typography
-                                    type="body"
+                                    type="footnote"
                                     content={leftItem}
                                     boldFace
                                     inline
@@ -92,12 +96,14 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
                                                     style={{
                                                         width: isMobile
                                                             ? '75px'
-                                                            : '125px',
+                                                            : // : 'fit-content',
+                                                              '100px',
+                                                        // marginLeft: '1rem',
                                                         display: 'inline-block',
                                                     }}
                                                 >
                                                     <Typography
-                                                        type="body"
+                                                        type="footnote"
                                                         content={item}
                                                         inline
                                                     />
@@ -107,7 +113,7 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
                                     </>
                                 ) : (
                                     <Typography
-                                        type="body"
+                                        type="footnote"
                                         content={rightItems}
                                         inline
                                     />

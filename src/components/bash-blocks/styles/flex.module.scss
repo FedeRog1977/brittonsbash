@@ -1,22 +1,16 @@
-.flex-row {
+.flexRow {
     display: flex;
     flex-wrap: wrap;
 }
 
-.flex-row > * {
+.flexRow > * {
     flex-shrink: 0;
     width: 100%;
     max-width: 100%;
 }
 
-.flex-col {
-    text-align: left;
-    background-color: rgba(0, 0, 0, 0);
-    margin: 0;
-}
-
 @media (min-width: 768px) {
-    .flex-col {
+    .flexCol {
         flex: 2 0;
     }
 }

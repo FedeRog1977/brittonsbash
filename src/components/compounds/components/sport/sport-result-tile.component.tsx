@@ -74,7 +74,7 @@ export const SportResultTile = () => {
                         rightItems: [
                             'Centuries',
                             'Strathavens',
-                            'Fenwick + WF’s',
+                            'Fenwick + Wind Farms',
                             'Fenwicks',
                             'Wind Farms',
                             'Thorntonhalls',

@@ -1,11 +1,11 @@
 import { FlexProps } from '..'
-import '../styles/flex.styles.scss'
+import styles from '../styles/flex.module.scss'
 
 export const Flex: React.FC<FlexProps> = ({ ...props }: FlexProps) => {
     if (props.item) {
         return (
             <div
-                className="flex-col"
+                className={styles.flexCol}
                 style={{
                     textAlign: props.center ? 'center' : 'left',
                 }}
@@ -15,5 +15,5 @@ export const Flex: React.FC<FlexProps> = ({ ...props }: FlexProps) => {
         )
     }
 
-    return <div className="flex-row">{props.children}</div>
+    return <div className={styles.flexRow}>{props.children}</div>
 }
