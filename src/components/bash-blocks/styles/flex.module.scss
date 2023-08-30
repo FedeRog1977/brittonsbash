@@ -1,12 +1,12 @@
 .flexRow {
     display: flex;
     flex-wrap: wrap;
-}
 
-.flexRow > * {
-    flex-shrink: 0;
-    width: 100%;
-    max-width: 100%;
+    > * {
+        flex-shrink: 0;
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 @media (min-width: 768px) {

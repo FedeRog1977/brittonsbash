@@ -122,7 +122,8 @@
 }
 
 .body-sans-serif {
-    font-family: Sans-Light;
+    // font-family: Sans-Light;
+    font-family: Sans-Regular;
     font-size: 16px;
     color: var(--darker-grey);
     padding: 0px;
@@ -136,14 +137,16 @@
 }
 
 .footnote-sans-serif {
-    font-family: Sans-Light;
+    // font-family: Sans-Light;
+    font-family: Sans-Regular;
     font-size: 14px;
     color: var(--darker-grey);
     padding: 0px;
 }
 
 .tiny-sans-serif {
-    font-family: Sans-Light;
+    // font-family: Sans-Light;
+    font-family: Sans-Regular;
     font-size: 10px;
     color: var(--darker-grey);
     padding: 0px;
