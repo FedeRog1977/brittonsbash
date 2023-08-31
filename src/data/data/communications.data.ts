@@ -749,6 +749,14 @@ export const communicationsData = {
                     content: 'Phonetic Symbols',
                     href: 'https://www.phon.ucl.ac.uk/home/wells/phoneticsymbolsforenglish.htm',
                 },
+                {
+                    content: 'English Pronunciations',
+                    href: 'https://en.wikipedia.org/wiki/Help:IPA/English',
+                },
+                {
+                    content: 'Word Reference',
+                    href: 'wordreference.com',
+                },
             ],
             web: [
                 {
@@ -844,6 +852,10 @@ export const communicationsData = {
                 {
                     content: 'OS Maps Project',
                     href: 'https://osdatahub.os.uk/projects/Burning_Roots',
+                },
+                {
+                    content: 'OpenStreetMap Map Features',
+                    href: 'https://en.wikipedia.org/wiki/Help:IPA/English',
                 },
             ],
         },

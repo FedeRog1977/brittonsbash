@@ -18,7 +18,6 @@ export const InstantGramSearchList: React.FC<InstantGramSearchListProps> = ({
                 content={props.year}
                 subContent={`Season ${props.season}`}
                 color="var(--darker-grey)"
-                accents
             />
             {showDropDown && (
                 <div>
@@ -48,7 +47,6 @@ export const InstantGramSearchList: React.FC<InstantGramSearchListProps> = ({
                                     }
                                     color="var(--darker-grey)"
                                     subContent={id.slice(-2)}
-                                    accents
                                     accentsTop
                                 />
                             }
