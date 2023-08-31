@@ -7,13 +7,12 @@ export const ImageSliderStories = () => {
 
     return (
         <>
-            <Tile type="clear-condensed">
+            <Tile type="clear">
                 <Typography
                     type="t1"
                     fontFamily="sans-serif"
                     content="Image Slider"
                     textAlign="center"
-                    paragraphMargins
                 />
             </Tile>
             <Tile type="solid" dense={isMobile}>

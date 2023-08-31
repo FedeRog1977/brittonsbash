@@ -3,13 +3,12 @@ import { imageTestData } from '../../../data'
 
 export const ImageMatrixStories = () => (
     <>
-        <Tile type="clear-condensed" top>
+        <Tile type="clear">
             <Typography
                 type="t1"
                 fontFamily="sans-serif"
                 content="Image Matrix"
                 textAlign="center"
-                paragraphMargins
             />
         </Tile>
         <Tile type="solid">

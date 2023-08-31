@@ -1,16 +1,10 @@
-.tile-clear {
-    background-color: var(--transparren);
+.clear {
+    background-color: var(--transparrent);
     margin: 20px 150px 20px 150px;
     padding: 50px 0px 50px 0px;
 }
 
-.tile-clear-condensed {
-    background-color: var(--transparren);
-    margin: 20px 150px 20px 150px;
-    padding: 10px 0px 10px 0px;
-}
-
-.tile-solid {
+.solid {
     background-color: var(--white);
     border-radius: var(--corners-large);
     box-shadow: var(--shadow-1);
@@ -18,27 +12,34 @@
     padding: 50px 30px 50px 30px;
 }
 
-.tile-dense {
+.dense {
     padding: 0px;
+}
+
+.outline {
+    border: 1px solid var(--darker-grey);
+}
+
+.noShadow {
+    box-shadow: none;
 }
 
 /* Mobile */
 
 @media (max-width: 768px) {
-    .tile-clear,
-    .tile-clear-condensed,
-    .tile-solid {
+    .clear,
+    .solid {
         border-radius: 0;
         box-shadow: none;
         margin: 20px 0px 20px 0px;
         padding: 20px;
     }
 
-    .tile-top {
+    .top {
         margin-top: 0px;
     }
 
-    .tile-dense {
+    .dense {
         padding: 20px 0px 20px 0px;
     }
 }

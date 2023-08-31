@@ -2,7 +2,7 @@ import { Tile, Typography } from '..'
 
 export const TypographyStories = () => (
     <>
-        <Tile type="clear-condensed" top>
+        <Tile type="clear" top>
             <Typography
                 type="t1"
                 fontFamily="sans-serif"

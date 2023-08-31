@@ -3,13 +3,12 @@ import { articleTestData } from '../../../data'
 
 export const ArticleStories = () => (
     <>
-        <Tile type="clear-condensed">
+        <Tile type="clear">
             <Typography
                 type="t1"
                 fontFamily="sans-serif"
                 content="Article"
                 textAlign="center"
-                paragraphMargins
             />
         </Tile>
         <Tile type="solid">

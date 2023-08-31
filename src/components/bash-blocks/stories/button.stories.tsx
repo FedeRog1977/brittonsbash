@@ -8,13 +8,12 @@ export const ButtonStories = () => {
 
     return (
         <>
-            <Tile type="clear-condensed">
+            <Tile type="clear">
                 <Typography
                     type="t1"
                     fontFamily="sans-serif"
                     content="Button"
                     textAlign="center"
-                    paragraphMargins
                 />
             </Tile>
             <Tile type="solid">

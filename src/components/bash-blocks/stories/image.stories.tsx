@@ -3,13 +3,12 @@ import { imageTestData } from '../../../data'
 
 export const ImageStories = () => (
     <>
-        <Tile type="clear-condensed" top>
+        <Tile type="clear" top>
             <Typography
                 type="t1"
                 fontFamily="sans-serif"
                 content="Image"
                 textAlign="center"
-                paragraphMargins
             />
         </Tile>
         <Tile type="solid">

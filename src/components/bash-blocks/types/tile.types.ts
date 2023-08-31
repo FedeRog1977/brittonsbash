@@ -1,9 +1,11 @@
 import { TypographyProps } from '.'
 
 export type TileProps = {
-    type: 'clear' | 'clear-condensed' | 'solid'
+    type: 'clear' | 'solid'
     top?: boolean
     dense?: boolean
+    outline?: boolean
+    noShadow?: boolean
     textAlign?: TypographyProps['textAlign']
     children: React.ReactNode
 }
