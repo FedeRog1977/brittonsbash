@@ -1,4 +1,4 @@
-import { LinkProps } from '.'
+import { AlignProps, LinkProps } from '.'
 import { ImageProps } from './image.types'
 import { MarginProps } from './margin-padding.types'
 
@@ -28,7 +28,7 @@ export type TypographyTextProps = {
 
 export type TypographyStyleProps = {
     fontFamily?: 'serif' | 'sans-serif'
-    textAlign?: 'left' | 'center' | 'justify' | 'right'
+    textAlign?: AlignProps
     paragraphMargins?: boolean
 } & MarginProps
 

@@ -1,4 +1,5 @@
 export * from './activity-tile.types'
+export * from './align.types'
 export * from './article.types'
 export * from './background.types'
 export * from './footnote.types'

@@ -1,5 +1,5 @@
+import { AlignProps } from '.'
 import { MarginProps, PaddingProps } from './margin-padding.types'
-import { TypographyProps } from './typography.types'
 
 export type SpacingProps = {
     mX?: number
@@ -7,7 +7,7 @@ export type SpacingProps = {
     pX?: number
     pY?: number
     children?: React.ReactNode
-    textAlign?: TypographyProps['textAlign']
+    textAlign?: AlignProps
     ruleTop?: boolean
     ruleBottom?: boolean
     backgroundColor?: string

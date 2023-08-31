@@ -24,7 +24,27 @@
     box-shadow: none;
 }
 
-/* Mobile */
+.align {
+    &Inherit {
+        text-align: inherit;
+    }
+
+    &Left {
+        text-align: left;
+    }
+
+    &Center {
+        text-align: center;
+    }
+
+    &Right {
+        text-align: right;
+    }
+
+    &Justify {
+        text-align: justify;
+    }
+}
 
 @media (max-width: 768px) {
     .clear,

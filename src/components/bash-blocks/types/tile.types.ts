@@ -1,4 +1,4 @@
-import { TypographyProps } from '.'
+import { AlignProps } from '.'
 
 export type TileProps = {
     type: 'clear' | 'solid'
@@ -6,6 +6,6 @@ export type TileProps = {
     dense?: boolean
     outline?: boolean
     noShadow?: boolean
-    textAlign?: TypographyProps['textAlign']
+    textAlign?: AlignProps
     children: React.ReactNode
 }
