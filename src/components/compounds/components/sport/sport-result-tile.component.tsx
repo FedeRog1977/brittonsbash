@@ -21,56 +21,114 @@ export const SportResultTile = () => {
             <Tile type="solid" dense={isMobile} top>
                 <Typography type="h1" content="Roadies" textAlign="center" />
                 <Typography type="h2" content="Roadies" textAlign="center" />
-                <ActivityTile
-                    title={{
-                        rightItems: ['Occurences', 'Distance', 'Elevation'],
+                <ActivityTileTemp
+                    leftColumn={{
+                        entries: ['Total', '2023', '2022', '2021', '2020'],
                     }}
-                    entries={[
+                    rightColumns={[
                         {
-                            leftItem: 'Total',
-                            rightItems: [
+                            title: 'Occurences',
+                            entries: [
                                 `${compiledRoadies.number.total}`,
-                                compiledRoadies.distance.total as string,
-                                compiledRoadies.elevation.total as string,
-                            ],
-                        },
-                        {
-                            leftItem: '2023',
-                            rightItems: [
                                 `${compiledRoadies.number[2023]}`,
-                                compiledRoadies.distance[2023] as string,
-                                compiledRoadies.elevation[2023] as string,
-                            ],
-                        },
-                        {
-                            leftItem: '2022',
-                            rightItems: [
                                 `${compiledRoadies.number[2022]}`,
-                                compiledRoadies.distance[2022] as string,
-                                compiledRoadies.elevation[2022] as string,
-                            ],
-                        },
-                        {
-                            leftItem: '2021',
-                            rightItems: [
                                 `${compiledRoadies.number[2021]}`,
-                                compiledRoadies.distance[2021] as string,
-                                compiledRoadies.elevation[2021] as string,
+                                `${compiledRoadies.number[2020]}`,
                             ],
                         },
                         {
-                            leftItem: '2020',
-                            rightItems: [
-                                `${compiledRoadies.number[2020]}`,
+                            title: 'Distance',
+                            entries: [
+                                compiledRoadies.distance.total as string,
+                                compiledRoadies.distance[2023] as string,
+                                compiledRoadies.distance[2022] as string,
+                                compiledRoadies.distance[2021] as string,
                                 compiledRoadies.distance[2020] as string,
+                            ],
+                        },
+                        {
+                            title: 'Elevation',
+                            entries: [
+                                compiledRoadies.elevation.total as string,
+                                compiledRoadies.elevation[2023] as string,
+                                compiledRoadies.elevation[2022] as string,
+                                compiledRoadies.elevation[2021] as string,
                                 compiledRoadies.elevation[2020] as string,
                             ],
                         },
                     ]}
                 />
+                <Typography type="h2" content="Routes" textAlign="center" />
                 <ActivityTileTemp
                     leftColumn={{
-                        title: 'Roadies',
+                        entries: ['Total', '2023', '2022', '2021', '2020'],
+                    }}
+                    rightColumns={[
+                        {
+                            title: 'Centuries',
+                            entries: [
+                                `${compiledRoadies.centuries.total}`,
+                                `${compiledRoadies.centuries[2023]}`,
+                                `${compiledRoadies.centuries[2022]}`,
+                                `${compiledRoadies.centuries[2021]}`,
+                                `${compiledRoadies.centuries[2020]}`,
+                            ],
+                        },
+                        {
+                            title: 'Strathavens',
+                            entries: [
+                                `${compiledRoadies.strathavens.total}`,
+                                `${compiledRoadies.strathavens[2023]}`,
+                                `${compiledRoadies.strathavens[2022]}`,
+                                `${compiledRoadies.strathavens[2021]}`,
+                                `${compiledRoadies.strathavens[2020]}`,
+                            ],
+                        },
+                        {
+                            title: 'Fenwick + Wind Farms',
+                            entries: [
+                                `${compiledRoadies.fenwickWindfarms.total}`,
+                                `${compiledRoadies.fenwickWindfarms[2023]}`,
+                                `${compiledRoadies.fenwickWindfarms[2022]}`,
+                                `${compiledRoadies.fenwickWindfarms[2021]}`,
+                                `${compiledRoadies.fenwickWindfarms[2020]}`,
+                            ],
+                        },
+                        {
+                            title: 'Fenwicks',
+                            entries: [
+                                `${compiledRoadies.fenwicks.total}`,
+                                `${compiledRoadies.fenwicks[2023]}`,
+                                `${compiledRoadies.fenwicks[2022]}`,
+                                `${compiledRoadies.fenwicks[2021]}`,
+                                `${compiledRoadies.fenwicks[2020]}`,
+                            ],
+                        },
+                        {
+                            title: 'Wind Farms',
+                            entries: [
+                                `${compiledRoadies.windfarms.total}`,
+                                `${compiledRoadies.windfarms[2023]}`,
+                                `${compiledRoadies.windfarms[2022]}`,
+                                `${compiledRoadies.windfarms[2021]}`,
+                                `${compiledRoadies.windfarms[2020]}`,
+                            ],
+                        },
+                        {
+                            title: 'Thorntonhalls',
+                            entries: [
+                                `${compiledRoadies.thorntonhalls.total}`,
+                                `${compiledRoadies.thorntonhalls[2023]}`,
+                                `${compiledRoadies.thorntonhalls[2022]}`,
+                                `${compiledRoadies.thorntonhalls[2021]}`,
+                                `${compiledRoadies.thorntonhalls[2020]}`,
+                            ],
+                        },
+                    ]}
+                />
+                <Typography type="h2" content="2023" textAlign="center" />
+                <ActivityTileTemp
+                    leftColumn={{
                         entries: compiledRoadies.roadies[2023].map(
                             ({ name }: any) => name as string
                         ),
@@ -94,169 +152,135 @@ export const SportResultTile = () => {
                                 ({ time }: any) => time as string
                             ),
                         },
-                    ]}
-                />
-                <Typography type="h2" content="Routes" textAlign="center" />
-                <ActivityTile
-                    title={{
-                        rightItems: [
-                            'Centuries',
-                            'Strathavens',
-                            'Fenwick + Wind Farms',
-                            'Fenwicks',
-                            'Wind Farms',
-                            'Thorntonhalls',
-                        ],
-                    }}
-                    entries={[
                         {
-                            leftItem: 'Total',
-                            rightItems: [
-                                `${compiledRoadies.centuries.total}`,
-                                `${compiledRoadies.strathavens.total}`,
-                                `${compiledRoadies.fenwickWindfarms.total}`,
-                                `${compiledRoadies.fenwicks.total}`,
-                                `${compiledRoadies.windfarms.total}`,
-                                `${compiledRoadies.thorntonhalls.total}`,
-                            ],
-                        },
-                        {
-                            leftItem: '2023',
-                            rightItems: [
-                                `${compiledRoadies.centuries[2023]}`,
-                                `${compiledRoadies.strathavens[2023]}`,
-                                `${compiledRoadies.fenwickWindfarms[2023]}`,
-                                `${compiledRoadies.fenwicks[2023]}`,
-                                `${compiledRoadies.windfarms[2023]}`,
-                                `${compiledRoadies.thorntonhalls[2023]}`,
-                            ],
-                        },
-                        {
-                            leftItem: '2022',
-                            rightItems: [
-                                `${compiledRoadies.centuries[2022]}`,
-                                `${compiledRoadies.strathavens[2022]}`,
-                                `${compiledRoadies.fenwickWindfarms[2022]}`,
-                                `${compiledRoadies.fenwicks[2022]}`,
-                                `${compiledRoadies.windfarms[2022]}`,
-                                `${compiledRoadies.thorntonhalls[2022]}`,
-                            ],
-                        },
-                        {
-                            leftItem: '2021',
-                            rightItems: [
-                                `${compiledRoadies.centuries[2021]}`,
-                                `${compiledRoadies.strathavens[2021]}`,
-                                `${compiledRoadies.fenwickWindfarms[2021]}`,
-                                `${compiledRoadies.fenwicks[2021]}`,
-                                `${compiledRoadies.windfarms[2021]}`,
-                                `${compiledRoadies.thorntonhalls[2021]}`,
-                            ],
-                        },
-                        {
-                            leftItem: '2020',
-                            rightItems: [
-                                `${compiledRoadies.centuries[2020]}`,
-                                `${compiledRoadies.strathavens[2020]}`,
-                                `${compiledRoadies.fenwickWindfarms[2020]}`,
-                                `${compiledRoadies.fenwicks[2020]}`,
-                                `${compiledRoadies.windfarms[2020]}`,
-                                `${compiledRoadies.thorntonhalls[2020]}`,
-                            ],
-                        },
-                    ]}
-                />
-                <Typography type="h2" content="2023" textAlign="center" />
-                <ActivityTile
-                    title={{
-                        rightItems: ['Distance', 'Elevation', 'Time', 'Speed'],
-                    }}
-                    entries={compiledRoadies.roadies[2023].map(
-                        ({ id, name, dist, elev, time, speed }: any) => ({
-                            leftItem: name,
-                            rightItems: [
-                                `${toMiles(dist)}`,
-                                `${toFeet(elev)}`,
-                                `${time}`,
-                                <>
-                                    {Boolean(!isMobile && speed) ? (
-                                        <>{toSpeed(speed, false)}</>
+                            title: 'Speed',
+                            entries: compiledRoadies.roadies[2023].map(
+                                ({ speed }: any) =>
+                                    speed ? (
+                                        (toSpeed(speed, false) as string)
                                     ) : (
-                                        ''
-                                    )}
-                                </>,
-                            ],
-                        })
-                    )}
+                                        <>&nbsp;</>
+                                    )
+                            ),
+                        },
+                    ]}
                 />
                 <Typography type="h2" content="2022" textAlign="center" />
-                <ActivityTile
-                    title={{
-                        rightItems: ['Distance', 'Elevation', 'Time', 'Speed'],
+                <ActivityTileTemp
+                    leftColumn={{
+                        entries: compiledRoadies.roadies[2022].map(
+                            ({ name }: any) => name as string
+                        ),
                     }}
-                    entries={compiledRoadies.roadies[2022].map(
-                        ({ id, name, dist, elev, time, speed }: any) => ({
-                            leftItem: name,
-                            rightItems: [
-                                `${toMiles(dist)}`,
-                                `${toFeet(elev)}`,
-                                `${time}`,
-                                <>
-                                    {Boolean(!isMobile && speed) ? (
-                                        <>{toSpeed(speed, false)}</>
+                    rightColumns={[
+                        {
+                            title: 'Distance',
+                            entries: compiledRoadies.roadies[2022].map(
+                                ({ dist }: any) => toMiles(dist) as string
+                            ),
+                        },
+                        {
+                            title: 'Elevation',
+                            entries: compiledRoadies.roadies[2022].map(
+                                ({ elev }: any) => toFeet(elev) as string
+                            ),
+                        },
+                        {
+                            title: 'Time',
+                            entries: compiledRoadies.roadies[2022].map(
+                                ({ time }: any) => time as string
+                            ),
+                        },
+                        {
+                            title: 'Speed',
+                            entries: compiledRoadies.roadies[2022].map(
+                                ({ speed }: any) =>
+                                    speed ? (
+                                        (toSpeed(speed, false) as string)
                                     ) : (
-                                        ''
-                                    )}
-                                </>,
-                            ],
-                        })
-                    )}
+                                        <>&nbsp;</>
+                                    )
+                            ),
+                        },
+                    ]}
                 />
                 <Typography type="h2" content="2021" textAlign="center" />
-                <ActivityTile
-                    title={{
-                        rightItems: ['Distance', 'Elevation', 'Time', 'Speed'],
+                <ActivityTileTemp
+                    leftColumn={{
+                        entries: compiledRoadies.roadies[2021].map(
+                            ({ name }: any) => name as string
+                        ),
                     }}
-                    entries={compiledRoadies.roadies[2021].map(
-                        ({ id, name, dist, elev, time, speed }: any) => ({
-                            leftItem: name,
-                            rightItems: [
-                                `${toMiles(dist)}`,
-                                `${toFeet(elev)}`,
-                                `${time}`,
-                                <>
-                                    {Boolean(!isMobile && speed) ? (
-                                        <>{toSpeed(speed, false)}</>
+                    rightColumns={[
+                        {
+                            title: 'Distance',
+                            entries: compiledRoadies.roadies[2021].map(
+                                ({ dist }: any) => toMiles(dist) as string
+                            ),
+                        },
+                        {
+                            title: 'Elevation',
+                            entries: compiledRoadies.roadies[2021].map(
+                                ({ elev }: any) => toFeet(elev) as string
+                            ),
+                        },
+                        {
+                            title: 'Time',
+                            entries: compiledRoadies.roadies[2021].map(
+                                ({ time }: any) => time as string
+                            ),
+                        },
+                        {
+                            title: 'Speed',
+                            entries: compiledRoadies.roadies[2021].map(
+                                ({ speed }: any) =>
+                                    speed ? (
+                                        (toSpeed(speed, false) as string)
                                     ) : (
-                                        ''
-                                    )}
-                                </>,
-                            ],
-                        })
-                    )}
+                                        <>&nbsp;</>
+                                    )
+                            ),
+                        },
+                    ]}
                 />
                 <Typography type="h2" content="2020" textAlign="center" />
-                <ActivityTile
-                    title={{
-                        rightItems: ['Distance', 'Elevation', 'Time', 'Speed'],
+                <ActivityTileTemp
+                    leftColumn={{
+                        entries: compiledRoadies.roadies[2020].map(
+                            ({ name }: any) => name as string
+                        ),
                     }}
-                    entries={compiledRoadies.roadies[2020].map(
-                        ({ id, name, dist, elev, time, speed }: any) => ({
-                            leftItem: name,
-                            rightItems: [
-                                `${toMiles(dist)}`,
-                                `${toFeet(elev)}`,
-                                `${time}`,
-                                <>
-                                    {Boolean(!isMobile && speed) ? (
-                                        <>{toSpeed(speed, false)}</>
+                    rightColumns={[
+                        {
+                            title: 'Distance',
+                            entries: compiledRoadies.roadies[2020].map(
+                                ({ dist }: any) => toMiles(dist) as string
+                            ),
+                        },
+                        {
+                            title: 'Elevation',
+                            entries: compiledRoadies.roadies[2020].map(
+                                ({ elev }: any) => toFeet(elev) as string
+                            ),
+                        },
+                        {
+                            title: 'Time',
+                            entries: compiledRoadies.roadies[2020].map(
+                                ({ time }: any) => time as string
+                            ),
+                        },
+                        {
+                            title: 'Speed',
+                            entries: compiledRoadies.roadies[2020].map(
+                                ({ speed }: any) =>
+                                    speed ? (
+                                        (toSpeed(speed, false) as string)
                                     ) : (
-                                        ''
-                                    )}
-                                </>,
-                            ],
-                        })
-                    )}
+                                        <>&nbsp;</>
+                                    )
+                            ),
+                        },
+                    ]}
                 />
             </Tile>
             <Tile type="solid">

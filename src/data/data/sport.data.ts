@@ -3,6 +3,14 @@ export const sportData = {
         roadies: [
             {
                 id: 'R2023038',
+                name: 'Other',
+                dist: 9.35,
+                elev: 797,
+                time: '36:25',
+                speed: 15.4,
+            },
+            {
+                id: 'R2023037',
                 name: 'Strathaven',
                 dist: 36.69,
                 elev: 2188,
@@ -10,7 +18,7 @@ export const sportData = {
                 speed: 17.4,
             },
             {
-                id: 'R2023037',
+                id: 'R2023036',
                 name: 'Fenwick + Wind Farm',
                 dist: 27.62,
                 elev: 1837,
@@ -18,7 +26,7 @@ export const sportData = {
                 speed: 16.9,
             },
             {
-                id: 'R2023036',
+                id: 'R2023035',
                 name: 'Fenwick + Wind Farm',
                 dist: 30.02,
                 elev: 1650,
@@ -26,7 +34,7 @@ export const sportData = {
                 speed: 17.8,
             },
             {
-                id: 'R2023035',
+                id: 'R2023034',
                 name: 'Fenwick + Wind Farm',
                 dist: 30.09,
                 elev: 2385,
@@ -34,7 +42,7 @@ export const sportData = {
                 speed: 17.3,
             },
             {
-                id: 'R2023034',
+                id: 'R2023033',
                 name: 'Fenwick + Wind Farm',
                 dist: 30.1,
                 elev: 2113,
@@ -42,7 +50,7 @@ export const sportData = {
                 speed: 16.6,
             },
             {
-                id: 'R2023033',
+                id: 'R2023032',
                 name: 'Fenwick + Wind Farm',
                 dist: 30.7,
                 elev: 1834,
@@ -50,7 +58,7 @@ export const sportData = {
                 speed: 17.3,
             },
             {
-                id: 'R2023032',
+                id: 'R2023031',
                 name: 'Strathaven',
                 dist: 36.68,
                 elev: 3061,
@@ -58,7 +66,7 @@ export const sportData = {
                 speed: 16.5,
             },
             {
-                id: 'R2023031',
+                id: 'R2023030',
                 name: 'Fenwick + Wind Farm',
                 dist: 30.1,
                 elev: 1795,
@@ -66,7 +74,7 @@ export const sportData = {
                 speed: 17.0,
             },
             {
-                id: 'R2023030',
+                id: 'R2023029',
                 name: 'Strathaven',
                 dist: 36.7,
                 elev: 2402,

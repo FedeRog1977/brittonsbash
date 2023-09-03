@@ -259,6 +259,13 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                     <ImageMatrix items={refactoredEvent.images} columns={4} />
                 </Spacing>
             )}
+            {/* <Spacing
+                mL={isMobile ? 0 : 70}
+                mR={isMobile ? 0 : 70}
+                mT={isMobile ? 15 : 30}
+            >
+                <ImageMatrix items={refactoredEvent.images} columns={4} />
+            </Spacing> */}
         </Tile>
     )
 }

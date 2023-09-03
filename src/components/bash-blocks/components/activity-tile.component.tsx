@@ -153,12 +153,16 @@ export const ActivityTileTemp: React.FC<ActivityTileTempProps> = ({
                         display: 'inline-block',
                     }}
                 >
-                    <Typography
-                        type="footnote"
-                        content={props.leftColumn.title}
-                        boldFace
-                        inline
-                    />
+                    {props.leftColumn.title != null ? (
+                        <Typography
+                            type="footnote"
+                            content={props.leftColumn.title}
+                            boldFace
+                            inline
+                        />
+                    ) : (
+                        <Typography type="footnote" content={<>&nbsp;</>} />
+                    )}
                     {Array.isArray(props.leftColumn.entries) ? (
                         <>
                             {props.leftColumn.entries.map(
@@ -169,7 +173,9 @@ export const ActivityTileTemp: React.FC<ActivityTileTempProps> = ({
                                     <Typography
                                         key={index}
                                         type="footnote"
-                                        content={entry as React.ReactElement}
+                                        content={entry}
+                                        boldFace
+                                        mT={isMobile ? 3.75 : 7.5}
                                     />
                                 )
                             )}
@@ -182,9 +188,10 @@ export const ActivityTileTemp: React.FC<ActivityTileTempProps> = ({
                     )}
                 </div>
             </Spacing>
-            {props.rightColumns.map(({ title, entries }: any) => (
-                <Spacing textAlign="right" position="relative">
+            <Spacing textAlign="right" position="relative">
+                {props.rightColumns.map(({ index, title, entries }: any) => (
                     <div
+                        key={index}
                         style={{
                             width: 'fit-content',
                             marginLeft: '1rem',
@@ -207,9 +214,8 @@ export const ActivityTileTemp: React.FC<ActivityTileTempProps> = ({
                                         <Typography
                                             key={index}
                                             type="footnote"
-                                            content={
-                                                entry as React.ReactElement
-                                            }
+                                            content={entry}
+                                            mT={isMobile ? 3.75 : 7.5}
                                         />
                                     )
                                 )}
@@ -221,8 +227,8 @@ export const ActivityTileTemp: React.FC<ActivityTileTempProps> = ({
                             />
                         )}
                     </div>
-                </Spacing>
-            ))}
+                ))}
+            </Spacing>
         </Spacing>
     )
 }

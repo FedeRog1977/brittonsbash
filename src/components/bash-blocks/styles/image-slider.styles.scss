@@ -77,13 +77,13 @@
 
 .slide {
     opacity: 0.5;
-    transition-duration: 1s ease;
+    transition-duration: 2s ease;
 }
 
 .slide.active {
     opacity: 1;
-    transition-duration: 1s;
-    transform: scale(1.05);
+    transition-duration: 2s;
+    // transform: scale(1.05);
 }
 
 /* Mobile */
