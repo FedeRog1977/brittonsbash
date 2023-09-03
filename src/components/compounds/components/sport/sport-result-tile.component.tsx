@@ -1,4 +1,4 @@
-import { Typography, Tile } from '../../../bash-blocks'
+import { Typography, Tile, ActivityTileTemp } from '../../../bash-blocks'
 import {
     compileProjects,
     compileMiles,
@@ -65,6 +65,34 @@ export const SportResultTile = () => {
                                 compiledRoadies.distance[2020] as string,
                                 compiledRoadies.elevation[2020] as string,
                             ],
+                        },
+                    ]}
+                />
+                <ActivityTileTemp
+                    leftColumn={{
+                        title: 'Roadies',
+                        entries: compiledRoadies.roadies[2023].map(
+                            ({ name }: any) => name as string
+                        ),
+                    }}
+                    rightColumns={[
+                        {
+                            title: 'Distance',
+                            entries: compiledRoadies.roadies[2023].map(
+                                ({ dist }: any) => toMiles(dist) as string
+                            ),
+                        },
+                        {
+                            title: 'Elevation',
+                            entries: compiledRoadies.roadies[2023].map(
+                                ({ elev }: any) => toFeet(elev) as string
+                            ),
+                        },
+                        {
+                            title: 'Time',
+                            entries: compiledRoadies.roadies[2023].map(
+                                ({ time }: any) => time as string
+                            ),
                         },
                     ]}
                 />

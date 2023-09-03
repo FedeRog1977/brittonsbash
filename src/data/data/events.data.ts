@@ -1,6 +1,19 @@
 export const eventData = {
     2023: [
         {
+            id: 'E2023037',
+            names: ['Lorraine Kelly - Halfway House'],
+            startDate: '1st of September',
+            endDate: '2nd of September',
+            description: '...',
+            images: [
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/lorraine-kelly/1.jpg',
+                    alt: 'lorraine-kelly-1',
+                },
+            ],
+        },
+        {
             id: 'E2023036',
             prefix: 'The Knoydart Special',
             names: ['Out Where ...', '... The Buses Don’t Run'],

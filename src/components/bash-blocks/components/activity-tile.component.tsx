@@ -1,4 +1,4 @@
-import { ActivityTileProps, Flex } from '..'
+import { ActivityTileProps, ActivityTileTempProps } from '..'
 import { useScreenWidth } from '../../../scripts'
 import { Spacing, Typography } from '..'
 
@@ -122,6 +122,106 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
                         </div>
                     )}
                 </>
+            ))}
+        </Spacing>
+    )
+}
+
+export const ActivityTileTemp: React.FC<ActivityTileTempProps> = ({
+    ...props
+}: ActivityTileTempProps) => {
+    const { isMobile } = useScreenWidth()
+
+    return (
+        <Spacing
+            mL={isMobile ? 0 : 70}
+            mR={isMobile ? 0 : 70}
+            mT={isMobile ? 7.5 : 15}
+            mB={isMobile ? 7.5 : 15}
+            pL={isMobile ? 15 : 70}
+            pR={isMobile ? 15 : 70}
+            pT={isMobile ? 7.5 : 15}
+            pB={isMobile ? 7.5 : 15}
+            backgroundColor="var(--lighter-grey)"
+            borderRadius={isMobile ? 'none' : 'var(--corners-small)'}
+        >
+            <Spacing position="absolute">
+                <div
+                    style={{
+                        width: 'fit-content',
+                        marginRight: '1rem',
+                        display: 'inline-block',
+                    }}
+                >
+                    <Typography
+                        type="footnote"
+                        content={props.leftColumn.title}
+                        boldFace
+                        inline
+                    />
+                    {Array.isArray(props.leftColumn.entries) ? (
+                        <>
+                            {props.leftColumn.entries.map(
+                                (
+                                    entry: ActivityTileTempProps['leftColumn']['entries'],
+                                    index: number
+                                ) => (
+                                    <Typography
+                                        key={index}
+                                        type="footnote"
+                                        content={entry as React.ReactElement}
+                                    />
+                                )
+                            )}
+                        </>
+                    ) : (
+                        <Typography
+                            type="footnote"
+                            content={props.leftColumn.entries}
+                        />
+                    )}
+                </div>
+            </Spacing>
+            {props.rightColumns.map(({ title, entries }: any) => (
+                <Spacing textAlign="right" position="relative">
+                    <div
+                        style={{
+                            width: 'fit-content',
+                            marginLeft: '1rem',
+                            display: 'inline-block',
+                        }}
+                    >
+                        <Typography
+                            type="footnote"
+                            content={title}
+                            boldFace
+                            inline
+                        />
+                        {Array.isArray(entries) ? (
+                            <>
+                                {entries.map(
+                                    (
+                                        entry: ActivityTileTempProps['rightColumns'][0]['entries'],
+                                        index: number
+                                    ) => (
+                                        <Typography
+                                            key={index}
+                                            type="footnote"
+                                            content={
+                                                entry as React.ReactElement
+                                            }
+                                        />
+                                    )
+                                )}
+                            </>
+                        ) : (
+                            <Typography
+                                type="footnote"
+                                content={props.leftColumn.entries}
+                            />
+                        )}
+                    </div>
+                </Spacing>
             ))}
         </Spacing>
     )
