@@ -17,7 +17,7 @@ export type ActivityTileProps = {
 
 type EntriesProps = {
     title?: string | React.ReactElement
-    entries: string | React.ReactElement | (string | React.ReactElement)[]
+    entries: (string | React.ReactElement | undefined)[]
 }
 
 export type ActivityTileTempProps = {

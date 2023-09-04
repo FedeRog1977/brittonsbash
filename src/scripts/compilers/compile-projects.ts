@@ -46,28 +46,28 @@ export function compileProjects() {
         distance2023 = distance2023 + event.dist
         elevation2023 = elevation2023 + event.elev
 
-        event.islands.forEach((island: any) => {
+        event.islands?.forEach((island: any) => {
             islands2023.push(island)
         })
-        event.munros.forEach((munro: any) => {
+        event.munros?.forEach((munro: any) => {
             munros2023.push(munro)
         })
-        event.munroTops.forEach((munroTop: any) => {
+        event.munroTops?.forEach((munroTop: any) => {
             munroTops2023.push(munroTop)
         })
-        event.corbetts.forEach((corbett: any) => {
+        event.corbetts?.forEach((corbett: any) => {
             corbetts2023.push(corbett)
         })
-        event.corbettTops.forEach((corbettTop: any) => {
+        event.corbettTops?.forEach((corbettTop: any) => {
             corbettTops2023.push(corbettTop)
         })
-        event.grahams.forEach((graham: any) => {
+        event.grahams?.forEach((graham: any) => {
             grahams2023.push(graham)
         })
-        event.subTwos.forEach((subTwo: any) => {
+        event.subTwos?.forEach((subTwo: any) => {
             subTwos2023.push(subTwo)
         })
-        event.donalds.forEach((donald: any) => {
+        event.donalds?.forEach((donald: any) => {
             donalds2023.push(donald)
         })
     })
@@ -113,28 +113,28 @@ export function compileProjects() {
         distance2022 = distance2022 + event.dist
         elevation2022 = elevation2022 + event.elev
 
-        event.islands.forEach((island: any) => {
+        event.islands?.forEach((island: any) => {
             islands2022.push(island)
         })
-        event.munros.forEach((munro: any) => {
+        event.munros?.forEach((munro: any) => {
             munros2022.push(munro)
         })
-        event.munroTops.forEach((munroTop: any) => {
+        event.munroTops?.forEach((munroTop: any) => {
             munroTops2022.push(munroTop)
         })
-        event.corbetts.forEach((corbett: any) => {
+        event.corbetts?.forEach((corbett: any) => {
             corbetts2022.push(corbett)
         })
-        event.corbettTops.forEach((corbettTop: any) => {
+        event.corbettTops?.forEach((corbettTop: any) => {
             corbettTops2022.push(corbettTop)
         })
-        event.grahams.forEach((graham: any) => {
+        event.grahams?.forEach((graham: any) => {
             grahams2022.push(graham)
         })
-        event.subTwos.forEach((subTwo: any) => {
+        event.subTwos?.forEach((subTwo: any) => {
             subTwos2022.push(subTwo)
         })
-        event.donalds.forEach((donald: any) => {
+        event.donalds?.forEach((donald: any) => {
             donalds2022.push(donald)
         })
     })
@@ -180,28 +180,28 @@ export function compileProjects() {
         distance2021 = distance2021 + event.dist
         elevation2021 = elevation2021 + event.elev
 
-        event.islands.forEach((island: any) => {
+        event.islands?.forEach((island: any) => {
             islands2021.push(island)
         })
-        event.munros.forEach((munro: any) => {
+        event.munros?.forEach((munro: any) => {
             munros2021.push(munro)
         })
-        event.munroTops.forEach((munroTop: any) => {
+        event.munroTops?.forEach((munroTop: any) => {
             munroTops2021.push(munroTop)
         })
-        event.corbetts.forEach((corbett: any) => {
+        event.corbetts?.forEach((corbett: any) => {
             corbetts2021.push(corbett)
         })
-        event.corbettTops.forEach((corbettTop: any) => {
+        event.corbettTops?.forEach((corbettTop: any) => {
             corbettTops2021.push(corbettTop)
         })
-        event.grahams.forEach((graham: any) => {
+        event.grahams?.forEach((graham: any) => {
             grahams2021.push(graham)
         })
-        event.subTwos.forEach((subTwo: any) => {
+        event.subTwos?.forEach((subTwo: any) => {
             subTwos2021.push(subTwo)
         })
-        event.donalds.forEach((donald: any) => {
+        event.donalds?.forEach((donald: any) => {
             donalds2021.push(donald)
         })
     })
@@ -247,28 +247,28 @@ export function compileProjects() {
         distance2020 = distance2020 + event.dist
         elevation2020 = elevation2020 + event.elev
 
-        event.islands.forEach((island: any) => {
+        event.islands?.forEach((island: any) => {
             islands2020.push(island)
         })
-        event.munros.forEach((munro: any) => {
+        event.munros?.forEach((munro: any) => {
             munros2020.push(munro)
         })
-        event.munroTops.forEach((munroTop: any) => {
+        event.munroTops?.forEach((munroTop: any) => {
             munroTops2020.push(munroTop)
         })
-        event.corbetts.forEach((corbett: any) => {
+        event.corbetts?.forEach((corbett: any) => {
             corbetts2020.push(corbett)
         })
-        event.corbettTops.forEach((corbettTop: any) => {
+        event.corbettTops?.forEach((corbettTop: any) => {
             corbettTops2020.push(corbettTop)
         })
-        event.grahams.forEach((graham: any) => {
+        event.grahams?.forEach((graham: any) => {
             grahams2020.push(graham)
         })
-        event.subTwos.forEach((subTwo: any) => {
+        event.subTwos?.forEach((subTwo: any) => {
             subTwos2020.push(subTwo)
         })
-        event.donalds.forEach((donald: any) => {
+        event.donalds?.forEach((donald: any) => {
             donalds2020.push(donald)
         })
     })

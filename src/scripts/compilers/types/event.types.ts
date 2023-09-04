@@ -3,16 +3,16 @@ import { AggregationAlphabeticalProps, AggregationNumericalProps } from '.'
 
 // Base Props
 
-type AmenitiesProps = {
-    attractions?: string[]
-    interiors?: string[]
-    style?: string[]
-    stationery?: string[]
-    kitchen?: string[]
-    bakeries?: string[]
-    restaurants?: string[]
-    bars?: string[]
-}
+// type AmenitiesProps = {
+//     attractions?: string[]
+//     interiors?: string[]
+//     style?: string[]
+//     stationery?: string[]
+//     kitchen?: string[]
+//     bakeries?: string[]
+//     restaurants?: string[]
+//     bars?: string[]
+// }
 
 export type EventProps = {
     id?: string
@@ -22,7 +22,7 @@ export type EventProps = {
     endDate?: string
     description: string | ArticleProps['sections']
     images: ImageProps[]
-    amenities?: string[] | AmenitiesProps
+    amenities?: string[]
     youthHostels?: string[]
 }
 

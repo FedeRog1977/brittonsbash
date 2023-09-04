@@ -302,18 +302,12 @@ export const sportData = {
                 elev: 5551,
                 time: '6:43:22',
                 companionship: 1,
-                islands: [],
                 munros: [
                     'Sgùrr nan Coireachan (Glen Dessary)',
                     'Garbh Chioch Mhòr',
                     'Sgùrr na Cìche',
                 ],
                 munroTops: ['Garbh Chioch Bheag'],
-                corbetts: [],
-                corbettTops: [],
-                grahams: [],
-                subTwos: [],
-                donalds: [],
             },
             {
                 id: 'P2023021',
@@ -678,6 +672,13 @@ export const sportData = {
             },
         ],
         miles: [
+            {
+                id: 'M2023038',
+                name: 'Waterfoot',
+                dist: 10.03,
+                elev: 545,
+                time: '2:24:42',
+            },
             {
                 id: 'M2023037',
                 name: 'Waterfoot',

@@ -163,29 +163,27 @@ export const ActivityTileTemp: React.FC<ActivityTileTempProps> = ({
                     ) : (
                         <Typography type="footnote" content={<>&nbsp;</>} />
                     )}
-                    {Array.isArray(props.leftColumn.entries) ? (
-                        <>
-                            {props.leftColumn.entries.map(
-                                (
-                                    entry: ActivityTileTempProps['leftColumn']['entries'],
-                                    index: number
-                                ) => (
-                                    <Typography
-                                        key={index}
-                                        type="footnote"
-                                        content={entry}
-                                        boldFace
-                                        mT={isMobile ? 3.75 : 7.5}
-                                    />
-                                )
-                            )}
-                        </>
-                    ) : (
-                        <Typography
-                            type="footnote"
-                            content={props.leftColumn.entries}
-                        />
-                    )}
+                    <>
+                        {props.leftColumn.entries?.map(
+                            (
+                                entry: ActivityTileTempProps['leftColumn']['entries'][0],
+                                index: number
+                            ) => {
+                                if (entry)
+                                    return (
+                                        <Typography
+                                            key={index}
+                                            type="footnote"
+                                            content={entry}
+                                            boldFace
+                                            mT={isMobile ? 3.75 : 7.5}
+                                        />
+                                    )
+
+                                return null
+                            }
+                        )}
+                    </>
                 </div>
             </Spacing>
             <Spacing textAlign="right" position="relative">
@@ -194,6 +192,7 @@ export const ActivityTileTemp: React.FC<ActivityTileTempProps> = ({
                         key={index}
                         style={{
                             width: 'fit-content',
+                            maxWidth: isMobile ? '250px' : '500px',
                             marginLeft: '1rem',
                             display: 'inline-block',
                         }}
@@ -204,28 +203,26 @@ export const ActivityTileTemp: React.FC<ActivityTileTempProps> = ({
                             boldFace
                             inline
                         />
-                        {Array.isArray(entries) ? (
-                            <>
-                                {entries.map(
-                                    (
-                                        entry: ActivityTileTempProps['rightColumns'][0]['entries'],
-                                        index: number
-                                    ) => (
-                                        <Typography
-                                            key={index}
-                                            type="footnote"
-                                            content={entry}
-                                            mT={isMobile ? 3.75 : 7.5}
-                                        />
-                                    )
-                                )}
-                            </>
-                        ) : (
-                            <Typography
-                                type="footnote"
-                                content={props.leftColumn.entries}
-                            />
-                        )}
+                        <>
+                            {entries?.map(
+                                (
+                                    entry: ActivityTileTempProps['rightColumns'][0]['entries'][0],
+                                    index: number
+                                ) => {
+                                    if (entry)
+                                        return (
+                                            <Typography
+                                                key={index}
+                                                type="footnote"
+                                                content={entry}
+                                                mT={isMobile ? 3.75 : 7.5}
+                                            />
+                                        )
+
+                                    return null
+                                }
+                            )}
+                        </>
                     </div>
                 ))}
             </Spacing>

@@ -1,4 +1,5 @@
 import {
+    ActivityTileTemp,
     Article,
     Button,
     ImageMatrix,
@@ -8,7 +9,6 @@ import {
     Typography,
 } from '../../../bash-blocks'
 import { compileEvent, useDropDown, useScreenWidth } from '../../../../scripts'
-import { ActivityTile } from '../../../bash-blocks'
 import { InstantGramResultTileProps } from '../..'
 
 export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
@@ -121,49 +121,41 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                 />
             </Spacing>
             {refactoredEvent.showSportEvent && (
-                <ActivityTile
-                    title={{
-                        leftItem: (
-                            <>
-                                {refactoredEvent.distance}
-                                &nbsp;|&nbsp;
-                                {refactoredEvent.elevation}
-                            </>
-                        ),
-                        rightItems: refactoredEvent.time,
+                <ActivityTileTemp
+                    leftColumn={{
+                        title: `${refactoredEvent.distance} | ${refactoredEvent.elevation}`,
+                        entries: [
+                            refactoredEvent.islands && 'Island(s)',
+                            refactoredEvent.munros && 'Munro(s)',
+                            refactoredEvent.munroTops && 'Munro Top(s)',
+                            refactoredEvent.corbetts && 'Corbett(s)',
+                            refactoredEvent.corbettTops && 'Corbett Top(s)',
+                            refactoredEvent.grahams && 'Graham(s)',
+                            refactoredEvent.subTwos && 'SubTwo(s)',
+                            refactoredEvent.donalds && 'Donald(s)',
+                        ],
                     }}
-                    entries={[
+                    rightColumns={[
                         {
-                            leftItem: 'Island(s)',
-                            rightItems: refactoredEvent.islands,
-                        },
-                        {
-                            leftItem: 'Munro(s)',
-                            rightItems: refactoredEvent.munros,
-                        },
-                        {
-                            leftItem: 'Munro Top(s)',
-                            rightItems: refactoredEvent.munroTops,
-                        },
-                        {
-                            leftItem: 'Corbett(s)',
-                            rightItems: refactoredEvent.corbetts,
-                        },
-                        {
-                            leftItem: 'Corbett Top(s)',
-                            rightItems: refactoredEvent.corbettTops,
-                        },
-                        {
-                            leftItem: 'Graham(s)',
-                            rightItems: refactoredEvent.grahams,
-                        },
-                        {
-                            leftItem: 'SubTwo(s)',
-                            rightItems: refactoredEvent.subTwos,
-                        },
-                        {
-                            leftItem: 'Donald(s)',
-                            rightItems: refactoredEvent.donalds,
+                            title: refactoredEvent.time,
+                            entries: [
+                                refactoredEvent.islands &&
+                                    refactoredEvent.islands,
+                                refactoredEvent.munros &&
+                                    refactoredEvent.munros,
+                                refactoredEvent.munroTops &&
+                                    refactoredEvent.munroTops,
+                                refactoredEvent.corbetts &&
+                                    refactoredEvent.corbetts,
+                                refactoredEvent.corbettTops &&
+                                    refactoredEvent.corbettTops,
+                                refactoredEvent.grahams &&
+                                    refactoredEvent.grahams,
+                                refactoredEvent.subTwos &&
+                                    refactoredEvent.subTwos,
+                                refactoredEvent.donalds &&
+                                    refactoredEvent.donalds,
+                            ],
                         },
                     ]}
                 />
