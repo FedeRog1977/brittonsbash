@@ -1192,7 +1192,7 @@ export const eventData = {
                     description: '',
                 },
             ],
-            attractions: ['...', '...'],
+            amenities: ['...', '...'],
             youthHostels: ['Astor Hyde Park', 'QUO Milano'],
         },
         {
@@ -1523,7 +1523,7 @@ export const eventData = {
                     alt: 'butters-5',
                 },
             ],
-            attractions: ['The Buttery - Two Fat Ladies'],
+            amenities: ['The Buttery - Two Fat Ladies'],
         },
         {
             id: 'E2023021',

@@ -82,8 +82,7 @@ export const compileEvent = ({ ...props }: CompiledEventProps) => {
         endDate: props.event.endDate,
         description: props.event.description,
         images: props.event.images,
-        attractions:
-            props.event.attractions && props.event.attractions.join(', '),
+        amenities: props.event.amenities && props.event.amenities.join(', '),
         youthHostels:
             props.event.youthHostels && props.event.youthHostels.join(', '),
         distance: toMiles(distances.reduce(sum)),

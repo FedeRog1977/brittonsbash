@@ -3,6 +3,17 @@ import { AggregationAlphabeticalProps, AggregationNumericalProps } from '.'
 
 // Base Props
 
+type AmenitiesProps = {
+    attractions?: string[]
+    interiors?: string[]
+    style?: string[]
+    stationery?: string[]
+    kitchen?: string[]
+    bakeries?: string[]
+    restaurants?: string[]
+    bars?: string[]
+}
+
 export type EventProps = {
     id?: string
     prefix?: string
@@ -11,7 +22,7 @@ export type EventProps = {
     endDate?: string
     description: string | ArticleProps['sections']
     images: ImageProps[]
-    attractions?: string[]
+    amenities?: string[] | AmenitiesProps
     youthHostels?: string[]
 }
 
@@ -163,7 +174,7 @@ export type RefactoredEventProps = {
     endDate?: EventProps['endDate']
     description: EventProps['description']
     images: EventProps['images']
-    attractions?: string
+    amenities?: string
     youthHostels?: string
     distance?: string
     elevation?: string
