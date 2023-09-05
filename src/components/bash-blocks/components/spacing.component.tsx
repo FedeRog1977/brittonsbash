@@ -5,6 +5,7 @@ export const Spacing: React.FC<SpacingProps> = ({ ...props }: SpacingProps) => (
         style={{
             textAlign: props.textAlign,
             backgroundColor: props.backgroundColor,
+            width: props.width,
             border: props.border,
             borderTop: props.ruleTop
                 ? '1.5px solid var(--darker-grey)'

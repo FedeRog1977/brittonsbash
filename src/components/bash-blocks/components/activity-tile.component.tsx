@@ -7,7 +7,7 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
 }: ActivityTileProps) => {
     const { isMobile } = useScreenWidth()
 
-    return (
+    const content: React.ReactElement = (
         <Spacing
             mL={isMobile ? 0 : 70}
             mR={isMobile ? 0 : 70}
@@ -18,6 +18,7 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
             pT={isMobile ? 7.5 : 15}
             pB={isMobile ? 7.5 : 15}
             backgroundColor="var(--lighter-grey)"
+            // width="1000px"
             borderRadius={isMobile ? 'none' : 'var(--corners-small)'}
         >
             <Spacing position="absolute">
@@ -99,4 +100,8 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
             </Spacing>
         </Spacing>
     )
+
+    if (isMobile) return <div style={{ overflowX: 'scroll' }}>{content}</div>
+
+    return content
 }

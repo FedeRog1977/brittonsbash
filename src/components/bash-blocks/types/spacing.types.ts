@@ -11,6 +11,7 @@ export type SpacingProps = {
     ruleTop?: boolean
     ruleBottom?: boolean
     backgroundColor?: string
+    width?: string
     border?: string
     borderRadius?: string
     position?: 'static' | 'relative' | 'absolute' | 'sticky' | 'fixed'

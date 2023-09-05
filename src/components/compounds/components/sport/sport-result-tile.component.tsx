@@ -282,7 +282,7 @@ export const SportResultTile = () => {
                     ]}
                 />
             </Tile>
-            <Tile type="solid">
+            <Tile type="solid" dense={isMobile}>
                 <Typography type="h1" content="Projects" textAlign="center" />
                 <Typography type="h2" content="Projects" textAlign="center" />
                 <ActivityTile
@@ -538,7 +538,7 @@ export const SportResultTile = () => {
                     ]}
                 />
             </Tile>
-            <Tile type="solid">
+            <Tile type="solid" dense={isMobile}>
                 <Typography type="h1" content="Miles" textAlign="center" />
                 <Typography type="h2" content="Miles" textAlign="center" />
                 <ActivityTile
