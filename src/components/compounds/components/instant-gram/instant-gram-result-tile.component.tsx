@@ -1,5 +1,5 @@
 import {
-    ActivityTileTemp,
+    ActivityTile,
     Article,
     Button,
     ImageMatrix,
@@ -121,7 +121,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                 />
             </Spacing>
             {refactoredEvent.showSportEvent && (
-                <ActivityTileTemp
+                <ActivityTile
                     leftColumn={{
                         title: `${refactoredEvent.distance} | ${refactoredEvent.elevation}`,
                         entries: [

@@ -1,26 +1,9 @@
-export type ActivityTileProps = {
-    title: {
-        leftItem?: string | React.ReactElement
-        rightItems?:
-            | string
-            | React.ReactElement
-            | (string | React.ReactElement)[]
-    }
-    entries: {
-        leftItem: string | React.ReactElement
-        rightItems?:
-            | string
-            | React.ReactElement
-            | (string | React.ReactElement)[]
-    }[]
-}
-
-type EntriesProps = {
+type ColumnProps = {
     title?: string | React.ReactElement
     entries: (string | React.ReactElement | undefined)[]
 }
 
-export type ActivityTileTempProps = {
-    leftColumn: EntriesProps
-    rightColumns: EntriesProps[]
+export type ActivityTileProps = {
+    leftColumn: ColumnProps
+    rightColumns: ColumnProps[]
 }
