@@ -18,68 +18,42 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
             pT={isMobile ? 7.5 : 15}
             pB={isMobile ? 7.5 : 15}
             backgroundColor="var(--lighter-grey)"
-            // width="1000px"
             borderRadius={isMobile ? 'none' : 'var(--corners-small)'}
         >
-            <Spacing position="absolute">
+            <div
+                style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'auto auto',
+                    border: '1px solid black',
+                }}
+            >
                 <div
                     style={{
-                        width: 'fit-content',
-                        marginRight: '1rem',
-                        display: 'inline-block',
+                        gridColumn: '1/2',
+                        border: '1px solid black',
                     }}
                 >
-                    {props.leftColumn.title != null ? (
-                        <Typography
-                            type="footnote"
-                            content={props.leftColumn.title}
-                            boldFace
-                            inline
-                        />
-                    ) : (
-                        <Typography type="footnote" content={<>&nbsp;</>} />
-                    )}
-                    {props.leftColumn.entries?.map(
-                        (
-                            entry: ActivityTileProps['leftColumn']['entries'][0],
-                            index: number
-                        ) => {
-                            if (entry)
-                                return (
-                                    <Typography
-                                        key={index}
-                                        type="footnote"
-                                        content={entry}
-                                        boldFace
-                                        mT={isMobile ? 3.75 : 7.5}
-                                    />
-                                )
-
-                            return null
-                        }
-                    )}
-                </div>
-            </Spacing>
-            <Spacing textAlign="right" position="relative">
-                {props.rightColumns.map(({ index, title, entries }: any) => (
                     <div
-                        key={index}
                         style={{
                             width: 'fit-content',
-                            maxWidth: isMobile ? '250px' : '500px',
-                            marginLeft: '1rem',
+                            marginRight: '1rem',
                             display: 'inline-block',
+                            border: '1px solid black',
                         }}
                     >
-                        <Typography
-                            type="footnote"
-                            content={title}
-                            boldFace
-                            inline
-                        />
-                        {entries?.map(
+                        {props.leftColumn.title != null ? (
+                            <Typography
+                                type="footnote"
+                                content={props.leftColumn.title}
+                                boldFace
+                                inline
+                            />
+                        ) : (
+                            <Typography type="footnote" content={<>&nbsp;</>} />
+                        )}
+                        {props.leftColumn.entries?.map(
                             (
-                                entry: ActivityTileProps['rightColumns'][0]['entries'][0],
+                                entry: ActivityTileProps['leftColumn']['entries'][0],
                                 index: number
                             ) => {
                                 if (entry)
@@ -88,6 +62,7 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
                                             key={index}
                                             type="footnote"
                                             content={entry}
+                                            boldFace
                                             mT={isMobile ? 3.75 : 7.5}
                                         />
                                     )
@@ -96,8 +71,55 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
                             }
                         )}
                     </div>
-                ))}
-            </Spacing>
+                </div>
+                <div
+                    style={{
+                        gridColumn: '2/2',
+                        textAlign: 'right',
+                        border: '1px solid black',
+                    }}
+                >
+                    {props.rightColumns.map(
+                        ({ index, title, entries }: any) => (
+                            <div
+                                key={index}
+                                style={{
+                                    width: 'fit-content',
+                                    maxWidth: isMobile ? '250px' : '500px',
+                                    marginLeft: '1rem',
+                                    display: 'inline-block',
+                                    border: '1px solid black',
+                                }}
+                            >
+                                <Typography
+                                    type="footnote"
+                                    content={title}
+                                    boldFace
+                                    inline
+                                />
+                                {entries?.map(
+                                    (
+                                        entry: ActivityTileProps['rightColumns'][0]['entries'][0],
+                                        index: number
+                                    ) => {
+                                        if (entry)
+                                            return (
+                                                <Typography
+                                                    key={index}
+                                                    type="footnote"
+                                                    content={entry}
+                                                    mT={isMobile ? 3.75 : 7.5}
+                                                />
+                                            )
+
+                                        return null
+                                    }
+                                )}
+                            </div>
+                        )
+                    )}
+                </div>
+            </div>
         </Spacing>
     )
 
