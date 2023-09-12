@@ -1,4 +1,4 @@
-import { AlignProps, LinkProps, TypographyProps } from '.'
+import { LinkProps, TypographyProps } from '.'
 
 export type ButtonProps = {
     typeType?: TypographyProps['type']
@@ -9,9 +9,7 @@ export type ButtonProps = {
     link?: LinkProps['link']
     content?: string | React.ReactElement
     subContent?: string | React.ReactElement
-    textAlign?: AlignProps
+    subContentTop?: boolean
     color?: string
-    accents?: boolean
-    accentsTop?: boolean
-    bars?: boolean
+    removePadding?: boolean
 }

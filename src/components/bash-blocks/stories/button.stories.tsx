@@ -21,7 +21,6 @@ export const ButtonStories = () => {
                     buttonType="regular-clear"
                     func={() => setShowDropDown(!showDropDown)}
                     funcResp={showDropDown}
-                    textAlign="left"
                 />
                 {showDropDown && (
                     <Article

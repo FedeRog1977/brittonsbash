@@ -170,7 +170,6 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                     buttonType="regular-clear"
                     func={() => setShowDescription(!showDescription)}
                     funcResp={showDescription}
-                    textAlign="left"
                 />
             </Spacing>
             {showDescription && (
@@ -239,7 +238,6 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                     func={() => setShowImageMatrix(!showImageMatrix)}
                     funcResp={showImageMatrix}
                     content="Show images in matrix form"
-                    textAlign="center"
                 />
             </Spacing>
             {showImageMatrix && (

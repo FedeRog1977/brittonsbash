@@ -47,7 +47,8 @@ export const InstantGramSearchList: React.FC<InstantGramSearchListProps> = ({
                                     }
                                     color="var(--darker-grey)"
                                     subContent={id.slice(-2)}
-                                    accentsTop
+                                    subContentTop
+                                    removePadding
                                 />
                             }
                         />

@@ -1,5 +1,5 @@
 import '../styles/button.styles.scss'
-import { ButtonProps, Spacing, Typography } from '..'
+import { ButtonProps, Typography } from '..'
 import { useScreenWidth } from '../../../scripts'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
@@ -12,112 +12,57 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
             className={props.buttonType}
             onClick={props.func}
             value={props.value}
+            style={{
+                paddingTop: props.removePadding ? '0px' : '5px',
+                paddingBottom: props.removePadding ? '0px' : '5px',
+            }}
         >
-            <Spacing
-                mT={
-                    Boolean(props.accents)
-                        ? Boolean(props.content)
-                            ? 5
-                            : 0
-                        : 5
-                }
-                mB={
-                    Boolean(props.accents)
-                        ? Boolean(props.content)
-                            ? 5
-                            : 0
-                        : 5
-                }
+            <div
+                style={{
+                    position: 'relative',
+                    display: isMobile
+                        ? props.subContent
+                            ? undefined
+                            : 'grid'
+                        : props.subContentTop
+                        ? undefined
+                        : 'grid',
+                    gridTemplateColumns: 'auto auto',
+                    alignContent: 'center',
+                    justifyContent: Boolean(props.content)
+                        ? 'center'
+                        : undefined,
+                    alignItems: isMobile ? undefined : 'center',
+                }}
             >
-                <div
-                    style={{
-                        position: 'relative',
-                        textAlign: props.textAlign ? props.textAlign : 'center',
-                        display: isMobile
-                            ? undefined
-                            : props.accentsTop
-                            ? undefined
-                            : 'flex',
-                        justifyContent: isMobile
-                            ? undefined
-                            : props.textAlign
-                            ? props.textAlign
-                            : 'center',
-                        alignItems: isMobile
-                            ? undefined
-                            : props.textAlign
-                            ? props.textAlign
-                            : 'center',
-                    }}
-                >
-                    {Boolean(!isMobile && props.bars) && (
-                        <>
-                            <div
-                                style={{
-                                    fontSize: '12.5px',
-                                    color: 'var(--lighter-grey)',
-                                    position: 'absolute',
-                                    float: 'left',
-                                    zIndex: 10,
-                                    top: '-5px',
-                                    left: '-12.5px',
-                                }}
-                            >
-                                &#x25E4;
-                            </div>
-                            <div
-                                style={{
-                                    fontSize: '12.5px',
-                                    color: 'var(--lighter-grey)',
-                                    position: 'absolute',
-                                    float: 'right',
-                                    zIndex: 10,
-                                    top: '-5px',
-                                    right: '-12.5px',
-                                }}
-                            >
-                                &#x25E5;
-                            </div>
-                            <div
-                                style={{
-                                    fontSize: '12.5px',
-                                    color: 'var(--lighter-grey)',
-                                    position: 'absolute',
-                                    float: 'left',
-                                    zIndex: 10,
-                                    bottom: '-5px',
-                                    left: '-12.5px',
-                                }}
-                            >
-                                &#x25E3;
-                            </div>
-                            <div
-                                style={{
-                                    fontSize: '12.5px',
-                                    color: 'var(--lighter-grey)',
-                                    position: 'absolute',
-                                    float: 'right',
-                                    zIndex: 10,
-                                    bottom: '-5px',
-                                    right: '-12.5px',
-                                }}
-                            >
-                                &#x25E2;
-                            </div>
-                        </>
-                    )}
-                    {Boolean(props.subContent) && (
+                {Boolean(props.subContent) && (
+                    <div
+                        style={{
+                            gridColumn: '1 / 2',
+                            textAlign: Boolean(isMobile && props.content)
+                                ? 'center'
+                                : props.subContentTop
+                                ? 'center'
+                                : 'right',
+                        }}
+                    >
                         <Typography
                             type="h5"
                             color="var(--medium-grey)"
-                            content={
-                                <>
-                                    {props.subContent}
-                                    {isMobile ? '' : <>&nbsp;</>}
-                                </>
-                            }
+                            content={props.subContent}
                         />
-                    )}
+                    </div>
+                )}
+                <div
+                    style={{
+                        gridColumn: `${props.subContent ? '2' : '1'} / 2`,
+                        textAlign: Boolean(isMobile && props.content)
+                            ? 'center'
+                            : props.subContentTop
+                            ? 'center'
+                            : 'left',
+                    }}
+                >
                     <Typography
                         type={props.typeType ? props.typeType : 'body'}
                         content={
@@ -135,59 +80,33 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                                 : 'var(--light-blue)'
                         }
                     />
-                    {Boolean(!props.content) && (
-                        <div
-                            style={{
-                                position: 'absolute',
-                                float: 'right',
-                                zIndex: 10,
-                                top: '1px',
-                                right: '1px',
-                            }}
-                        >
-                            <Typography
-                                type="h5"
-                                content={
-                                    props.funcResp === false ? (
-                                        <FontAwesomeIcon icon={faChevronDown} />
-                                    ) : (
-                                        <FontAwesomeIcon icon={faChevronUp} />
-                                    )
-                                }
-                                color={
-                                    props.funcResp === false
-                                        ? 'var(--medium-grey)'
-                                        : 'var(--light-blue)'
-                                }
-                            />
-                        </div>
-                    )}
-                    {Boolean(props.accents) && (
+                </div>
+                {Boolean(!props.content) && (
+                    <div
+                        style={{
+                            gridColumn: '2 / 2',
+                            textAlign: 'right',
+                            border: isMobile ? '1px solid #00000000' : 'none',
+                        }}
+                    >
                         <Typography
                             type="h5"
-                            color="var(--medium-grey)"
                             content={
-                                <>
-                                    {isMobile ? (
-                                        ''
-                                    ) : props.accentsTop ? (
-                                        ''
-                                    ) : (
-                                        <>&nbsp;</>
-                                    )}
-                                    {isMobile ? (
-                                        <>&#9135;</>
-                                    ) : props.accentsTop ? (
-                                        <>&#9135;</>
-                                    ) : (
-                                        <>&#124;</>
-                                    )}
-                                </>
+                                props.funcResp === false ? (
+                                    <FontAwesomeIcon icon={faChevronDown} />
+                                ) : (
+                                    <FontAwesomeIcon icon={faChevronUp} />
+                                )
+                            }
+                            color={
+                                props.funcResp === false
+                                    ? 'var(--medium-grey)'
+                                    : 'var(--light-blue)'
                             }
                         />
-                    )}
-                </div>
-            </Spacing>
+                    </div>
+                )}
+            </div>
         </button>
     )
 }

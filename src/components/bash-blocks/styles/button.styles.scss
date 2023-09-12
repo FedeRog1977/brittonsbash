@@ -1,7 +1,15 @@
 /* General */
 
+button::-moz-focus-inner,
+input[type='button']::-moz-focus-inner {
+    border: 0 none !important;
+    padding: 0 !important;
+}
+
 button {
-    border: none;
+    border: 0 none !important;
+    margin: 0;
+    padding: 0;
 }
 
 button:hover {
@@ -57,7 +65,7 @@ button.regular-clear:active,
 button.dense-clear:active,
 button.regular-solid:active,
 button.dense-solid:active {
-    transform: scale(0.99);
+    transform: scale(0.999);
     transition: transform var(--transition-short);
 }
 

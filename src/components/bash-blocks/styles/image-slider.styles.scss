@@ -8,15 +8,14 @@
     border-radius: var(--corners-small);
     overflow-x: hidden;
     overflow-y: hidden;
-    /* border: 1px solid black; */
 }
 
 .image-slider-caption {
     position: absolute;
     z-index: 10;
     text-shadow: 0px 0px 5px var(--darker-grey);
-    bottom: 4.5%;
-    left: 3.5%;
+    bottom: 24px;
+    left: 24px;
     max-width: 75%;
     opacity: 0.75;
 }
@@ -25,11 +24,10 @@
     position: absolute;
     z-index: 10;
     text-shadow: 0px 0px 5px var(--darker-grey);
-    bottom: 4.5%;
-    right: 3.5%;
+    bottom: 24px;
+    right: 24px;
     max-width: 25%;
     opacity: 0.75;
-    /* border: 1px solid black; */
 }
 
 .left-arrow,
@@ -46,19 +44,19 @@
 .left-arrow {
     font-size: 32px;
     top: 48%;
-    left: 3.5%;
+    left: 24px;
 }
 
 .right-arrow {
     font-size: 32px;
     top: 48%;
-    right: 3.5%;
+    right: 24px;
 }
 
 .refresh {
-    font-size: 24px;
-    top: 4.5%;
-    right: 3.5%;
+    font-size: 22px;
+    top: 24px;
+    right: 24px;
 }
 
 .left-arrow:hover,
@@ -71,19 +69,18 @@
 .left-arrow:active,
 .right-arrow:active,
 .refresh:active {
-    transform: scale(0.85);
+    transform: scale(0.99);
     transition: transform var(--transition-short);
 }
 
 .slide {
-    opacity: 0.5;
+    opacity: 0.75;
     transition-duration: 2s ease;
 }
 
 .slide.active {
     opacity: 1;
     transition-duration: 2s;
-    // transform: scale(1.05);
 }
 
 /* Mobile */
@@ -99,13 +96,13 @@
     }
 
     .image-slider-caption {
-        bottom: 5.5%;
-        left: 3.5%;
+        bottom: 16px;
+        left: 12px;
     }
 
     .image-slider-index {
-        bottom: 5.5%;
-        right: 3.5%;
+        bottom: 16px;
+        right: 12px;
     }
 
     .left-arrow,
@@ -116,18 +113,18 @@
 
     .left-arrow {
         font-size: 24px;
-        left: 3.5%;
+        left: 12px;
     }
 
     .right-arrow {
         font-size: 24px;
-        right: 3.5%;
+        right: 12px;
     }
 
     .refresh {
         font-size: 16px;
-        top: 5.5%;
-        right: 3.5%;
+        top: 16px;
+        right: 12px;
         color: var(--darker-grey-50);
     }
 
@@ -139,6 +136,5 @@
     .slide.active {
         opacity: 1;
         transition-duration: 1s;
-        // transform: none;
     }
 }
