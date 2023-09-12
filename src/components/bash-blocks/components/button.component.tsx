@@ -86,7 +86,9 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                         style={{
                             gridColumn: '2 / 2',
                             textAlign: 'right',
-                            border: isMobile ? '1px solid #00000000' : 'none',
+                            border: isMobile
+                                ? '1px solid var(--transparrent)'
+                                : 'none',
                         }}
                     >
                         <Typography
