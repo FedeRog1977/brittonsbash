@@ -7,13 +7,15 @@ export const Typography: React.FC<TypographyProps> = ({
     ...props
 }: TypographyProps) => {
     const { isMobile } = useScreenWidth()
-    const classNamesImgCont = cx(styles.imageContainer, {
+    const classNamesImgContainer = cx(styles.imageContainer, {
         [styles.inline]: props.inline,
         [styles[`paragraphMargins${isMobile ? 'Mobile' : 'Desktop'}`]]:
             props.paragraphMargins,
     })
-    const classNamesImg = cx(styles[`image${isMobile ? 'Mobile' : 'Desktop'}`])
-    const classNamesTxtCont = cx(
+    const classNamesImage = cx(
+        styles[`image${isMobile ? 'Mobile' : 'Desktop'}`]
+    )
+    const classNamesTextContainer = cx(
         ...(props.textAlign
             ? [styles[`align${toUpperCase(props.textAlign)}`]]
             : []),
@@ -23,7 +25,7 @@ export const Typography: React.FC<TypographyProps> = ({
                 props.paragraphMargins,
         }
     )
-    const classNamesTxt = cx(
+    const classNamesText = cx(
         ...(props.fontFamily === 'serif'
             ? [styles[`serif${props.type ? toUpperCase(props.type) : ''}`]]
             : [
@@ -70,7 +72,7 @@ export const Typography: React.FC<TypographyProps> = ({
     if (props.imageContent) {
         return (
             <div
-                className={classNamesImgCont}
+                className={classNamesImgContainer}
                 // style={{
                 //     marginTop: props.mT ? props.mT : 0,
                 //     marginBottom: props.mB ? props.mB : 0,
@@ -79,7 +81,7 @@ export const Typography: React.FC<TypographyProps> = ({
                 // }}
             >
                 <img
-                    className={classNamesImg}
+                    className={classNamesImage}
                     src={props.imageContent.url}
                     alt={props.imageContent.alt}
                 />
@@ -97,7 +99,7 @@ export const Typography: React.FC<TypographyProps> = ({
 
     return (
         <div
-            className={classNamesTxtCont}
+            className={classNamesTextContainer}
             // style={{
             //     marginTop: props.mT ? props.mT : 0,
             //     marginBottom: props.mB ? props.mB : 0,
@@ -105,7 +107,7 @@ export const Typography: React.FC<TypographyProps> = ({
             //     marginRight: props.mR ? props.mR : 0,
             // }}
         >
-            <span className={classNamesTxt}>
+            <span className={classNamesText}>
                 {props.link ? (
                     <a
                         href={props.link.url}
