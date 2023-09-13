@@ -9,22 +9,26 @@ export const Typography: React.FC<TypographyProps> = ({
     const { isMobile } = useScreenWidth()
     const classNamesImgCont = cx(styles.imageContainer, {
         [styles.inline]: props.inline,
+        [styles[`paragraphMargins${isMobile ? 'Mobile' : 'Desktop'}`]]:
+            props.paragraphMargins,
     })
-    const classNamesImg = cx(
-        ...(isMobile ? [styles.imageMobile] : [styles.imageDesktop])
-    )
+    const classNamesImg = cx(styles[`image${isMobile ? 'Mobile' : 'Desktop'}`])
     const classNamesTxtCont = cx(
         ...(props.textAlign
             ? [styles[`align${toUpperCase(props.textAlign)}`]]
             : []),
-        { [styles.inline]: props.inline }
+        {
+            [styles.inline]: props.inline,
+            [styles[`paragraphMargins${isMobile ? 'Mobile' : 'Desktop'}`]]:
+                props.paragraphMargins,
+        }
     )
     const classNamesTxt = cx(
         ...(props.fontFamily === 'serif'
-            ? [styles[`serif${toUpperCase(props.type ? props.type : '')}`]]
+            ? [styles[`serif${props.type ? toUpperCase(props.type) : ''}`]]
             : [
                   styles[
-                      `sansSerif${toUpperCase(props.type ? props.type : '')}`
+                      `sansSerif${props.type ? toUpperCase(props.type) : ''}`
                   ],
               ]),
         ...(props.fontFamily === 'serif'
@@ -51,9 +55,11 @@ export const Typography: React.FC<TypographyProps> = ({
         {
             [styles.smallCaps]: props.smallCaps,
             [styles[
-                `textDecoration${toUpperCase(
-                    props.textDecoration ? props.textDecoration : 'None'
-                )}`
+                `textDecoration${
+                    props.textDecoration
+                        ? toUpperCase(props.textDecoration)
+                        : 'None'
+                }`
             ]]: props.textDecoration,
             [styles[
                 `color${props.color ? toUpperCase(props.color) : 'DarkerGrey'}`
@@ -65,18 +71,12 @@ export const Typography: React.FC<TypographyProps> = ({
         return (
             <div
                 className={classNamesImgCont}
-                style={{
-                    marginTop: props.mT ? props.mT : '0px',
-                    marginBottom: props.paragraphMargins
-                        ? isMobile
-                            ? '15px'
-                            : '30px'
-                        : props.mB
-                        ? props.mB
-                        : '0px',
-                    marginLeft: props.mL ? props.mL : 0,
-                    marginRight: props.mR ? props.mR : 0,
-                }}
+                // style={{
+                //     marginTop: props.mT ? props.mT : 0,
+                //     marginBottom: props.mB ? props.mB : 0,
+                //     marginLeft: props.mL ? props.mL : 0,
+                //     marginRight: props.mR ? props.mR : 0,
+                // }}
             >
                 <img
                     className={classNamesImg}
@@ -98,18 +98,12 @@ export const Typography: React.FC<TypographyProps> = ({
     return (
         <div
             className={classNamesTxtCont}
-            style={{
-                marginTop: props.mT ? props.mT : '0px',
-                marginBottom: props.paragraphMargins
-                    ? isMobile
-                        ? '15px'
-                        : '30px'
-                    : props.mB
-                    ? props.mB
-                    : '0px',
-                marginLeft: props.mL ? props.mL : 0,
-                marginRight: props.mR ? props.mR : 0,
-            }}
+            // style={{
+            //     marginTop: props.mT ? props.mT : 0,
+            //     marginBottom: props.mB ? props.mB : 0,
+            //     marginLeft: props.mL ? props.mL : 0,
+            //     marginRight: props.mR ? props.mR : 0,
+            // }}
         >
             <span className={classNamesTxt}>
                 {props.link ? (

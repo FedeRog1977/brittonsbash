@@ -1,24 +1,23 @@
 /* Image */
 
-.imageContainer {
-    text-align: center;
-    padding: 0;
-}
+.image {
+    &Container {
+        text-align: center;
+        padding: 0;
+    }
 
-image {
     &Desktop {
-        width: 250px;
+        max-width: 500px;
     }
 
     &Mobile {
-        width: 500px;
+        max-width: 250px;
     }
 }
 
 /* Serif */
 
 .serif {
-    color: var(--darker-grey);
     padding: 0;
 
     &T1 {
@@ -169,19 +168,19 @@ image {
 
 .textDecoration {
     &None {
-        text-decoration: none;
+        text-decoration-line: none;
     }
 
     &Overline {
-        text-decoration: overline;
+        text-decoration-line: overline;
     }
 
     &Underline {
-        text-decoration: underline;
+        text-decoration-line: underline;
     }
 
     &LineThrough {
-        text-decoration: line-through;
+        text-decoration-line: line-through;
     }
 }
 
@@ -274,6 +273,18 @@ a:hover {
 
     &Transparrent {
         color: var(--transparrent);
+    }
+}
+
+/* Paragraph Margins */
+
+.paragraphMargins {
+    &Desktop {
+        margin-bottom: 30px;
+    }
+
+    &Mobile {
+        margin-bottom: 15px;
     }
 }
 
