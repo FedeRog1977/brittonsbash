@@ -1,4 +1,4 @@
-import { LinkProps, TypographyProps } from '.'
+import { ColorProps, LinkProps, TypographyProps } from '.'
 
 export type ButtonProps = {
     typeType?: TypographyProps['type']
@@ -10,6 +10,6 @@ export type ButtonProps = {
     content?: string | React.ReactElement
     subContent?: string | React.ReactElement
     subContentTop?: boolean
-    color?: string
+    color?: ColorProps
     removePadding?: boolean
 }

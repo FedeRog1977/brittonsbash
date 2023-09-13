@@ -1,18 +1,71 @@
-import { useScreenWidth } from '../../../scripts'
-import '../styles/typography.styles.scss'
+import { toUpperCase, useScreenWidth } from '../../../scripts'
 import { TypographyProps } from '..'
+import cx from 'classnames'
+import styles from '../styles/typography.module.scss'
 
 export const Typography: React.FC<TypographyProps> = ({
     ...props
 }: TypographyProps) => {
     const { isMobile } = useScreenWidth()
+    const classNamesImgCont = cx(styles.imageContainer, {
+        [styles.inline]: props.inline,
+    })
+    const classNamesImg = cx(
+        ...(isMobile ? [styles.imageMobile] : [styles.imageDesktop])
+    )
+    const classNamesTxtCont = cx(
+        ...(props.textAlign
+            ? [styles[`align${toUpperCase(props.textAlign)}`]]
+            : []),
+        { [styles.inline]: props.inline }
+    )
+    const classNamesTxt = cx(
+        ...(props.fontFamily === 'serif'
+            ? [styles[`serif${toUpperCase(props.type ? props.type : '')}`]]
+            : [
+                  styles[
+                      `sansSerif${toUpperCase(props.type ? props.type : '')}`
+                  ],
+              ]),
+        ...(props.fontFamily === 'serif'
+            ? props.boldFace
+                ? [styles.serifBold]
+                : []
+            : props.boldFace
+            ? [styles.sansSerifBold]
+            : []),
+        ...(props.fontFamily === 'serif'
+            ? props.italicize
+                ? [styles.serifItalic]
+                : []
+            : props.italicize
+            ? [styles.sansSerifItalic]
+            : []),
+        ...(props.fontFamily === 'serif'
+            ? Boolean(props.boldFace && props.italicize)
+                ? [styles.serifBoldItalic]
+                : []
+            : Boolean(props.boldFace && props.italicize)
+            ? [styles.sansSerifBoldItalic]
+            : []),
+        {
+            [styles.smallCaps]: props.smallCaps,
+            [styles[
+                `textDecoration${toUpperCase(
+                    props.textDecoration ? props.textDecoration : 'None'
+                )}`
+            ]]: props.textDecoration,
+            [styles[
+                `color${props.color ? toUpperCase(props.color) : 'DarkerGrey'}`
+            ]]: props.color,
+        }
+    )
 
     if (props.imageContent) {
         return (
             <div
+                className={classNamesImgCont}
                 style={{
-                    display: props.inline ? 'inline' : undefined,
-                    textAlign: 'center',
                     marginTop: props.mT ? props.mT : '0px',
                     marginBottom: props.paragraphMargins
                         ? isMobile
@@ -23,13 +76,10 @@ export const Typography: React.FC<TypographyProps> = ({
                         : '0px',
                     marginLeft: props.mL ? props.mL : 0,
                     marginRight: props.mR ? props.mR : 0,
-                    padding: 0,
                 }}
             >
                 <img
-                    style={{
-                        width: isMobile ? '250px' : '500px',
-                    }}
+                    className={classNamesImg}
                     src={props.imageContent.url}
                     alt={props.imageContent.alt}
                 />
@@ -47,14 +97,8 @@ export const Typography: React.FC<TypographyProps> = ({
 
     return (
         <div
-            className={
-                props.fontFamily === 'serif'
-                    ? `${props.type}-serif`
-                    : `${props.type}-sans-serif`
-            }
+            className={classNamesTxtCont}
             style={{
-                display: props.inline ? 'inline' : undefined,
-                textAlign: props.textAlign,
                 marginTop: props.mT ? props.mT : '0px',
                 marginBottom: props.paragraphMargins
                     ? isMobile
@@ -65,33 +109,9 @@ export const Typography: React.FC<TypographyProps> = ({
                     : '0px',
                 marginLeft: props.mL ? props.mL : 0,
                 marginRight: props.mR ? props.mR : 0,
-                padding: 0,
             }}
         >
-            <span
-                className={
-                    props.fontFamily === 'serif'
-                        ? props.boldFace
-                            ? props.italicize
-                                ? 'bold-italic-serif'
-                                : 'bold-serif'
-                            : props.italicize
-                            ? 'italic-serif'
-                            : 'serif'
-                        : props.boldFace
-                        ? props.italicize
-                            ? 'bold-italic-sans-serif'
-                            : 'bold-sans-serif'
-                        : props.italicize
-                        ? 'italic-sans-serif'
-                        : 'sans-serif'
-                }
-                style={{
-                    color: props.color,
-                    fontVariant: props.smallCaps ? 'small-caps' : undefined,
-                    textDecoration: props.textDecoration,
-                }}
-            >
+            <span className={classNamesTxt}>
                 {props.link ? (
                     <a
                         href={props.link.url}

@@ -5,7 +5,7 @@ export const TypographyStories = () => (
         <Tile type="clear" top>
             <Typography
                 type="t1"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Typography"
                 textAlign="center"
             />
@@ -14,7 +14,7 @@ export const TypographyStories = () => (
         <Tile type="solid">
             <Typography
                 type="h1"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Serif Types"
                 textAlign="center"
                 paragraphMargins
@@ -177,56 +177,56 @@ export const TypographyStories = () => (
         <Tile type="solid">
             <Typography
                 type="h1"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Sans-Serif Types"
                 textAlign="center"
                 paragraphMargins
             />
             <Typography
                 type="t1"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Typography t1"
                 textAlign="left"
                 paragraphMargins
             />
             <Typography
                 type="t2"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Typography t2"
                 textAlign="left"
                 paragraphMargins
             />
             <Typography
                 type="h1"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Typography h1"
                 textAlign="left"
                 paragraphMargins
             />
             <Typography
                 type="h2"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Typography h2"
                 textAlign="left"
                 paragraphMargins
             />
             <Typography
                 type="h3"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Typography h3"
                 textAlign="left"
                 paragraphMargins
             />
             <Typography
                 type="h4"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Typography h4"
                 textAlign="left"
                 paragraphMargins
             />
             <Typography
                 type="body"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content={
                     <>
                         <Typography
@@ -259,7 +259,7 @@ export const TypographyStories = () => (
             />
             <Typography
                 type="body"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content={
                     <>
                         <Typography
@@ -308,21 +308,21 @@ export const TypographyStories = () => (
             />
             <Typography
                 type="caption"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Typography caption"
                 textAlign="left"
                 paragraphMargins
             />
             <Typography
                 type="footnote"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Typography footnote"
                 textAlign="left"
                 paragraphMargins
             />
             <Typography
                 type="tiny"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Typography tiny"
                 textAlign="left"
                 paragraphMargins
@@ -332,14 +332,14 @@ export const TypographyStories = () => (
         <Tile type="solid">
             <Typography
                 type="h1"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Alignment"
                 textAlign="center"
                 paragraphMargins
             />
             <Typography
                 type="h2"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Left"
                 textAlign="left"
                 paragraphMargins
@@ -353,7 +353,7 @@ export const TypographyStories = () => (
             />
             <Typography
                 type="h2"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Right"
                 textAlign="left"
                 paragraphMargins
@@ -367,7 +367,7 @@ export const TypographyStories = () => (
             />
             <Typography
                 type="h2"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Center"
                 textAlign="left"
                 paragraphMargins
@@ -381,7 +381,7 @@ export const TypographyStories = () => (
             />
             <Typography
                 type="h2"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Justify"
                 textAlign="left"
                 paragraphMargins
@@ -398,14 +398,14 @@ export const TypographyStories = () => (
         <Tile type="solid">
             <Typography
                 type="h1"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Text Decoration"
                 textAlign="center"
                 paragraphMargins
             />
             <Typography
                 type="h2"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Typography overline"
                 textAlign="left"
                 inline
@@ -413,15 +413,15 @@ export const TypographyStories = () => (
             />{' '}
             <Typography
                 type="h2"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Typography strike-through"
                 textAlign="left"
                 inline
-                textDecoration="line-through"
+                textDecoration="lineThrough"
             />{' '}
             <Typography
                 type="h2"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Typography underline"
                 textAlign="left"
                 inline
@@ -432,7 +432,7 @@ export const TypographyStories = () => (
         <Tile type="solid">
             <Typography
                 type="h1"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Casing Examples"
                 textAlign="center"
                 paragraphMargins

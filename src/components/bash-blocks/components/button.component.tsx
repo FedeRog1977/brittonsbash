@@ -48,7 +48,7 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                     >
                         <Typography
                             type="h5"
-                            color="var(--medium-grey)"
+                            color="mediumGrey"
                             content={props.subContent}
                         />
                     </div>
@@ -76,8 +76,8 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                             Boolean(props.funcResp === false && props.color)
                                 ? props.color
                                 : Boolean(props.funcResp === false)
-                                ? 'var(--medium-grey)'
-                                : 'var(--light-blue)'
+                                ? 'mediumGrey'
+                                : 'lightBlue'
                         }
                     />
                 </div>
@@ -102,8 +102,8 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                             }
                             color={
                                 props.funcResp === false
-                                    ? 'var(--medium-grey)'
-                                    : 'var(--light-blue)'
+                                    ? 'mediumGrey'
+                                    : 'lightBlue'
                             }
                         />
                     </div>

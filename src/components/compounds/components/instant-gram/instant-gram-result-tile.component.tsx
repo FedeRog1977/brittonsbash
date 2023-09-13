@@ -65,7 +65,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                                                     &nbsp;&#8212;&nbsp;
                                                 </>
                                             }
-                                            color="var(--medium-grey)"
+                                            color="mediumGrey"
                                             inline
                                             key={refKey}
                                         />
@@ -116,7 +116,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                             )}
                         </>
                     }
-                    color="var(--medium-grey)"
+                    color="mediumGrey"
                     textAlign="left"
                 />
             </Spacing>

@@ -11,7 +11,7 @@ export const ButtonStories = () => {
             <Tile type="clear">
                 <Typography
                     type="t1"
-                    fontFamily="sans-serif"
+                    fontFamily="sansSerif"
                     content="Button"
                     textAlign="center"
                 />

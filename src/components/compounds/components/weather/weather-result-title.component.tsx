@@ -11,7 +11,7 @@ export const WeatherResultTitle = ({ title, subTitle, result }: any) => {
                 <Typography
                     type="h2"
                     content={subTitle}
-                    color="var(--medium-grey)"
+                    color="mediumGrey"
                     textAlign="center"
                 />
             </Spacing>

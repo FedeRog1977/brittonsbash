@@ -55,10 +55,10 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
                                 <div className="image-slider-caption">
                                     <Typography
                                         type={isMobile ? 'body' : 'h4'}
-                                        fontFamily="sans-serif"
+                                        fontFamily="sansSerif"
                                         content={slide.description}
                                         textAlign="left"
-                                        color="var(--white)"
+                                        color="white"
                                     />
                                 </div>
                             )}
@@ -70,7 +70,7 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
                                             {current + 1}/{props.slides.length}
                                         </>
                                     }
-                                    color="var(--white)"
+                                    color="white"
                                 />
                             </div>
                         </div>

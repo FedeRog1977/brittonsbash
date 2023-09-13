@@ -6,7 +6,7 @@ export const ImageStories = () => (
         <Tile type="clear" top>
             <Typography
                 type="t1"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Image"
                 textAlign="center"
             />

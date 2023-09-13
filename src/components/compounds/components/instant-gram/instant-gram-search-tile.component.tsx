@@ -36,7 +36,7 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                             )}
                         </>
                     }
-                    color="var(--white)"
+                    color="white"
                 />
             </Spacing>
             <Spacing mL={isMobile ? 0 : 70} mR={isMobile ? 0 : 70}>

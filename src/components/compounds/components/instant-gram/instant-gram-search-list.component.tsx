@@ -17,7 +17,7 @@ export const InstantGramSearchList: React.FC<InstantGramSearchListProps> = ({
                 funcResp={showDropDown}
                 content={props.year}
                 subContent={`Season ${props.season}`}
-                color="var(--darker-grey)"
+                color="darkerGrey"
             />
             {showDropDown && (
                 <div>
@@ -45,7 +45,7 @@ export const InstantGramSearchList: React.FC<InstantGramSearchListProps> = ({
                                             ))}
                                         </>
                                     }
-                                    color="var(--darker-grey)"
+                                    color="darkerGrey"
                                     subContent={id.slice(-2)}
                                     subContentTop
                                     removePadding

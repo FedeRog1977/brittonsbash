@@ -9,7 +9,7 @@ export const Footer = () => (
             <Typography
                 type="h3"
                 content="A Lewis Britton Production"
-                color="var(--light-grey)"
+                color="lightGrey"
                 textAlign="center"
             />
         </Spacing>
@@ -17,14 +17,14 @@ export const Footer = () => (
             <Typography
                 type="body"
                 content={<img src={xmr} alt="xmr" style={{ height: '15px' }} />}
-                color="var(--light-grey)"
+                color="lightGrey"
                 textAlign="center"
                 inline
             />{' '}
             <Typography
                 type="body"
                 content="Monero Donations"
-                color="var(--light-grey)"
+                color="lightGrey"
                 textAlign="center"
                 inline
             />
@@ -41,7 +41,7 @@ export const Footer = () => (
                         ZMTJSSkB46V
                     </code>
                 }
-                color="var(--light-grey)"
+                color="lightGrey"
                 textAlign="center"
             />
         </Spacing>
@@ -55,7 +55,7 @@ export const Footer = () => (
                         style={{ height: '100px' }}
                     />
                 }
-                color="var(--light-grey)"
+                color="lightGrey"
                 textAlign="center"
             />
         </Spacing>
@@ -63,7 +63,7 @@ export const Footer = () => (
             <Typography
                 type="body"
                 content={<>&#169; Lewis Britton 2020&mdash;2023</>}
-                color="var(--light-grey)"
+                color="lightGrey"
                 textAlign="center"
             />
         </Spacing>

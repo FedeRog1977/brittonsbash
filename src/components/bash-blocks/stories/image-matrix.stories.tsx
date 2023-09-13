@@ -6,7 +6,7 @@ export const ImageMatrixStories = () => (
         <Tile type="clear">
             <Typography
                 type="t1"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Image Matrix"
                 textAlign="center"
             />
@@ -14,7 +14,7 @@ export const ImageMatrixStories = () => (
         <Tile type="solid">
             <Typography
                 type="h1"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Default"
                 textAlign="center"
                 paragraphMargins
@@ -24,7 +24,7 @@ export const ImageMatrixStories = () => (
         <Tile type="solid">
             <Typography
                 type="h1"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Custom Columns"
                 textAlign="center"
                 paragraphMargins

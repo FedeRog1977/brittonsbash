@@ -5,7 +5,7 @@ export const FootnoteStories = () => (
         <Tile type="clear">
             <Typography
                 type="t1"
-                fontFamily="sans-serif"
+                fontFamily="sansSerif"
                 content="Page Footnote"
                 textAlign="center"
             />

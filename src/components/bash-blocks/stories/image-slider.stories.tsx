@@ -10,7 +10,7 @@ export const ImageSliderStories = () => {
             <Tile type="clear">
                 <Typography
                     type="t1"
-                    fontFamily="sans-serif"
+                    fontFamily="sansSerif"
                     content="Image Slider"
                     textAlign="center"
                 />

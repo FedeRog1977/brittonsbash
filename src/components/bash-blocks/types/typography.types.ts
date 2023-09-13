@@ -1,4 +1,4 @@
-import { AlignProps, LinkProps } from '.'
+import { AlignProps, ColorProps, LinkProps } from '.'
 import { ImageProps } from './image.types'
 import { MarginProps } from './margin-padding.types'
 
@@ -17,17 +17,17 @@ export type TypographyTextProps = {
         | 'tiny'
     content?: string | React.ReactElement | React.ReactNode | Element
     imageContent?: ImageProps
-    color?: string
+    color?: ColorProps
     inline?: boolean
     boldFace?: boolean
     italicize?: boolean
     smallCaps?: boolean
-    textDecoration?: 'overline' | 'underline' | 'line-through'
+    textDecoration?: 'overline' | 'underline' | 'lineThrough'
     link?: LinkProps['link']
 }
 
 export type TypographyStyleProps = {
-    fontFamily?: 'serif' | 'sans-serif'
+    fontFamily?: 'serif' | 'sansSerif'
     textAlign?: AlignProps
     paragraphMargins?: boolean
 } & MarginProps
