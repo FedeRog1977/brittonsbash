@@ -1,4 +1,4 @@
-import { Button } from '../../../bash-blocks'
+import { Button, Spacing } from '../../../bash-blocks'
 import { useDropDown, useScreenWidth } from '../../../../scripts'
 import { InstantGramSearchListProps } from '../..'
 
@@ -11,7 +11,7 @@ export const InstantGramSearchList: React.FC<InstantGramSearchListProps> = ({
     return (
         <>
             <Button
-                typeType={isMobile ? 'h2' : 'h1'}
+                typeType="t2"
                 buttonType="dense-clear"
                 func={() => setShowDropDown(!showDropDown)}
                 funcResp={showDropDown}
@@ -30,26 +30,28 @@ export const InstantGramSearchList: React.FC<InstantGramSearchListProps> = ({
                             func={() => setShowDropDown(false)}
                             funcResp={false}
                             content={
-                                <Button
-                                    key={id}
-                                    typeType="h4"
-                                    buttonType="regular-clear"
-                                    value={names.join(' - ')}
-                                    func={props.func}
-                                    funcResp={false}
-                                    content={
-                                        <>
-                                            {prefix && prefix + ':'}
-                                            {names.map((name: any) => (
-                                                <div key={name}>{name}</div>
-                                            ))}
-                                        </>
-                                    }
-                                    color="darkerGrey"
-                                    subContent={id.slice(-2)}
-                                    subContentTop
-                                    removePadding
-                                />
+                                <Spacing mY={isMobile ? 15 : 30}>
+                                    <Button
+                                        key={id}
+                                        typeType={isMobile ? 'h4' : 'body'}
+                                        buttonType="regular-clear"
+                                        value={names.join(' - ')}
+                                        func={props.func}
+                                        funcResp={false}
+                                        content={
+                                            <>
+                                                {prefix && prefix + ':'}
+                                                {names.map((name: any) => (
+                                                    <div key={name}>{name}</div>
+                                                ))}
+                                            </>
+                                        }
+                                        color="darkerGrey"
+                                        subContent={id.slice(-2)}
+                                        subContentTop
+                                        removePadding
+                                    />
+                                </Spacing>
                             }
                         />
                     ))}

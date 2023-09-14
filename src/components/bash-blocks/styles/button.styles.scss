@@ -46,6 +46,12 @@ button.dense-solid {
         transform var(--transition-short), padding var(--transition-long);
 }
 
+button.dense-clear,
+button.dense-solid {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 button.regular-clear,
 button.regular-solid {
     width: 100%;

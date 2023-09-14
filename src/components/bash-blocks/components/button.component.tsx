@@ -47,7 +47,7 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                         }}
                     >
                         <Typography
-                            type="h5"
+                            type="bodyLight"
                             color="mediumGrey"
                             content={props.subContent}
                         />
@@ -92,7 +92,7 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                         }}
                     >
                         <Typography
-                            type="h5"
+                            type="bodyLight"
                             content={
                                 props.funcResp === false ? (
                                     <FontAwesomeIcon icon={faChevronDown} />

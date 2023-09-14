@@ -22,52 +22,92 @@
 
     &T1 {
         font-family: CMU-Bold;
-        font-size: 64px;
+        font-size: 52px;
+
+        @media (max-width: 768px) {
+            font-size: 24px;
+        }
     }
 
     &T2 {
         font-family: CMU-Serif;
-        font-size: 64px;
+        font-size: 52px;
+
+        @media (max-width: 768px) {
+            font-size: 24px;
+        }
     }
 
     &H1 {
         font-family: CMU-Bold;
-        font-size: 52px;
+        font-size: 46px;
+
+        @media (max-width: 768px) {
+            font-size: 22px;
+        }
     }
 
     &H2 {
         font-family: CMU-Bold;
-        font-size: 40px;
+        font-size: 32px;
+
+        @media (max-width: 768px) {
+            font-size: 20px;
+        }
     }
 
     &H3 {
         font-family: CMU-Bold;
-        font-size: 28px;
+        font-size: 24px;
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
     }
 
     &H4 {
         font-family: CMU-Serif;
-        font-size: 20px;
+        font-size: 24px;
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
     }
 
     &Body {
         font-family: CMU-Serif;
         font-size: 16px;
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
     }
 
     &Caption {
         font-family: CMU-Bold;
         font-size: 16px;
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
     }
 
     &Footnote {
         font-family: CMU-Serif;
         font-size: 14px;
+
+        @media (max-width: 768px) {
+            font-size: 10px;
+        }
     }
 
     &Tiny {
         font-family: CMU-Serif;
         font-size: 10px;
+
+        @media (max-width: 768px) {
+            font-size: 8px;
+        }
     }
 
     &Bold {
@@ -91,57 +131,101 @@
 
     &T1 {
         font-family: Sans-Bold;
-        font-size: 64px;
+        font-size: 52px;
+
+        @media (max-width: 768px) {
+            font-size: 24px;
+        }
     }
 
     &T2 {
-        font-family: Sans-Bold;
-        font-size: 56px;
+        font-family: Sans-Regular;
+        font-size: 52px;
+
+        @media (max-width: 768px) {
+            font-size: 24px;
+        }
     }
 
     &H1 {
-        font-family: Sans-Regular;
-        font-size: 52px;
+        font-family: Sans-Bold;
+        font-size: 46px;
+
+        @media (max-width: 768px) {
+            font-size: 22px;
+        }
     }
 
     &H2 {
-        font-family: Sans-Regular;
-        font-size: 40px;
+        font-family: Sans-Bold;
+        font-size: 32px;
+
+        @media (max-width: 768px) {
+            font-size: 20px;
+        }
     }
 
     &H3 {
-        font-family: Sans-Regular;
-        font-size: 28px;
+        font-family: Sans-Bold;
+        font-size: 24px;
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
     }
 
     &H4 {
         font-family: Sans-Regular;
-        font-size: 20px;
-    }
+        font-size: 24px;
 
-    &H5 {
-        font-family: Sans-Light;
-        font-size: 14px;
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
     }
 
     &Body {
         font-family: Sans-Regular;
         font-size: 16px;
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
+    }
+
+    &BodyLight {
+        font-family: Sans-Light;
+        font-size: 14px;
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
     }
 
     &Caption {
         font-family: Sans-Bold;
         font-size: 16px;
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
     }
 
     &Footnote {
         font-family: Sans-Regular;
         font-size: 14px;
+
+        @media (max-width: 768px) {
+            font-size: 10px;
+        }
     }
 
     &Tiny {
         font-family: Sans-Regular;
         font-size: 10px;
+
+        @media (max-width: 768px) {
+            font-size: 8px;
+        }
     }
 
     &Bold {
@@ -290,50 +374,50 @@ a:hover {
 
 /* Mobile */
 
-// @media (max-width: 768px) {
-//     .t1-serif,
-//     .t1-sans-serif,
-//     .t2-serif,
-//     .t2-sans-serif {
-//         font-size: 24px;
-//     }
+@media (max-width: 768px) {
+    .t1-serif,
+    .t1-sans-serif,
+    .t2-serif,
+    .t2-sans-serif {
+        font-size: 24px;
+    }
 
-//     .h1-serif,
-//     .h1-sans-serif {
-//         font-size: 22px;
-//     }
+    .h1-serif,
+    .h1-sans-serif {
+        font-size: 22px;
+    }
 
-//     .h2-serif,
-//     .h2-sans-serif {
-//         font-size: 18px;
-//     }
+    .h2-serif,
+    .h2-sans-serif {
+        font-size: 18px;
+    }
 
-//     .h3-serif,
-//     .h3-sans-serif {
-//         font-size: 14px;
-//     }
+    .h3-serif,
+    .h3-sans-serif {
+        font-size: 14px;
+    }
 
-//     .h4-serif,
-//     .h4-sans-serif {
-//         font-size: 12px;
-//     }
+    .h4-serif,
+    .h4-sans-serif {
+        font-size: 12px;
+    }
 
-//     .h5-sans-serif {
-//         font-size: 10px;
-//     }
+    .h5-sans-serif {
+        font-size: 10px;
+    }
 
-//     .body-serif,
-//     .body-sans-serif {
-//         font-size: 12px;
-//     }
+    .body-serif,
+    .body-sans-serif {
+        font-size: 12px;
+    }
 
-//     .caption-serif,
-//     .caption-sans-serif {
-//         font-size: 12px;
-//     }
+    .caption-serif,
+    .caption-sans-serif {
+        font-size: 12px;
+    }
 
-//     .footnote-serif,
-//     .footnote-sans-serif {
-//         font-size: 10px;
-//     }
-// }
+    .footnote-serif,
+    .footnote-sans-serif {
+        font-size: 10px;
+    }
+}

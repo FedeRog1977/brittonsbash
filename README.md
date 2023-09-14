@@ -247,6 +247,22 @@ npx prettier --write .
 
 -   [Guide](https://prettier.io/docs/en/install.html)
 
+## React Lazy Load Image Component
+
+Install:
+
+```
+npm i --save react-lazy-load-image-component
+```
+
+Add TypeScript support:
+
+```
+npm install -D @types/react-lazy-load-image-component
+```
+
+-   [Guide](https://www.freecodecamp.org/news/how-to-lazy-load-images-in-react/)
+
 ## React Responsive Carousel
 
 Install:

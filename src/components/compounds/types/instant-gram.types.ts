@@ -1,5 +1,7 @@
 import { CompiledEventProps } from '../../../scripts'
 
+export type AmenitiesTileProps = { title: string; content: string }
+
 export type InstantGramSearchListProps = {
     func: (() => void) | ((e: any) => void)
     items: {

@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import '../styles/image-slider.styles.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     faChevronCircleLeft,
@@ -9,11 +8,12 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { ImageProps, ImageSliderProps, Typography } from '..'
 import { useScreenWidth } from '../../../scripts'
+import styles from '../styles/image.module.scss'
 
 export const ImageSlider: React.FC<ImageSliderProps> = ({
     ...props
 }: ImageSliderProps) => {
-    const { screenWidth, isMobile } = useScreenWidth()
+    const { isMobile } = useScreenWidth()
 
     const [current, setCurrent] = useState(0)
     const length = props.slides.length
@@ -31,20 +31,20 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
     }
 
     return (
-        <div className="image-slider">
+        <div className={styles.imageSlider}>
             <FontAwesomeIcon
                 icon={faExchange}
-                className="refresh"
+                className={styles.refresh}
                 onClick={() => setCurrent(0)}
             />
             <FontAwesomeIcon
                 icon={faChevronCircleLeft}
-                className="left-arrow"
+                className={styles.leftArrow}
                 onClick={prevSlide}
             />
             <FontAwesomeIcon
                 icon={faChevronCircleRight}
-                className="right-arrow"
+                className={styles.rightArrow}
                 onClick={nextSlide}
             />
             {props.slides.map((slide: ImageProps, index: number) => {
@@ -52,7 +52,7 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
                     return (
                         <div key={index}>
                             {slide.description && (
-                                <div className="image-slider-caption">
+                                <div className={styles.imageSliderCaption}>
                                     <Typography
                                         type={isMobile ? 'body' : 'h4'}
                                         fontFamily="sansSerif"
@@ -62,14 +62,12 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
                                     />
                                 </div>
                             )}
-                            <div className="image-slider-index">
+                            <div className={styles.imageSliderIndex}>
                                 <Typography
                                     type={isMobile ? 'footnote' : 'body'}
-                                    content={
-                                        <>
-                                            {current + 1}/{props.slides.length}
-                                        </>
-                                    }
+                                    content={`${current + 1}/${
+                                        props.slides.length
+                                    }`}
                                     color="white"
                                 />
                             </div>
@@ -82,28 +80,23 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
             {props.slides.map((slide: ImageProps, index: number) => (
                 <div
                     key={index}
-                    className={index === current ? 'slide active' : 'slide'}
+                    className={`${styles.imageSliderSlide} ${
+                        index === current ? styles.imageSliderSlideActive : ''
+                    }`}
                 >
                     {slide.url ? (
                         <>
                             {index === current && (
                                 <img
-                                    className="image-slider-image"
-                                    style={{
-                                        width: isMobile ? screenWidth : '100%',
-                                    }}
+                                    className={styles.imageSliderImage}
                                     src={slide.url}
                                     alt={slide.alt}
                                 />
                             )}
                         </>
                     ) : (
-                        <div style={{ textAlign: 'center' }}>
-                            <Typography
-                                type="h3"
-                                content="No Disc Loaded"
-                                textAlign="center"
-                            />
+                        <>
+                            <Typography type="h3" content="No Disc Loaded" />
                             <Typography
                                 type="h4"
                                 content={
@@ -115,9 +108,8 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
                                         />
                                     </>
                                 }
-                                textAlign="center"
                             />
-                        </div>
+                        </>
                     )}
                 </div>
             ))}

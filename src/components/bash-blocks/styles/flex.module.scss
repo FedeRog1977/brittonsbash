@@ -1,6 +1,9 @@
 .flexRow {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    border: 1px solid black;
 
     > * {
         flex-shrink: 0;
@@ -9,8 +12,68 @@
     }
 }
 
-@media (min-width: 768px) {
-    .flexCol {
+.flexRow:first-child {
+    padding-top: 0;
+    padding-bottom: 2.5px;
+
+    @media (max-width: 768px) {
+        padding: 0;
+    }
+}
+
+.flexRow:last-child {
+    padding-top: 2.5px;
+    padding-bottom: 0;
+
+    @media (max-width: 768px) {
+        padding: 0;
+    }
+}
+
+.flexRow:only-child {
+    padding: 0;
+}
+
+.flexCol {
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+
+    @media (max-width: 768px) {
+        padding-top: 2.5px;
+        padding-bottom: 2.5px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @media (min-width: 768px) {
         flex: 2 0;
     }
+}
+
+.flexCol:first-child {
+    padding-left: 0;
+    padding-right: 2.5px;
+
+    @media (max-width: 768px) {
+        padding-top: 0;
+        padding-bottom: 2.5px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.flexCol:last-child {
+    padding-left: 2.5px;
+    padding-right: 0;
+
+    @media (max-width: 768px) {
+        padding-top: 2.5px;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.flexCol:only-child {
+    padding: 0;
 }

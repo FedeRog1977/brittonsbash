@@ -24,13 +24,11 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
                 style={{
                     display: 'grid',
                     gridTemplateColumns: 'auto auto',
-                    border: '1px solid black',
                 }}
             >
                 <div
                     style={{
                         gridColumn: '1/2',
-                        border: '1px solid black',
                     }}
                 >
                     <div
@@ -38,7 +36,6 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
                             width: 'fit-content',
                             marginRight: '1rem',
                             display: 'inline-block',
-                            border: '1px solid black',
                         }}
                     >
                         {props.leftColumn.title != null ? (
@@ -76,7 +73,6 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
                     style={{
                         gridColumn: '2/2',
                         textAlign: 'right',
-                        border: '1px solid black',
                     }}
                 >
                     {props.rightColumns.map(
@@ -88,7 +84,6 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
                                     maxWidth: isMobile ? '250px' : '500px',
                                     marginLeft: '1rem',
                                     display: 'inline-block',
-                                    border: '1px solid black',
                                 }}
                             >
                                 <Typography

@@ -9,7 +9,7 @@ import {
     Typography,
 } from '../../../bash-blocks'
 import { compileEvent, useDropDown, useScreenWidth } from '../../../../scripts'
-import { InstantGramResultTileProps } from '../..'
+import { AmenitiesTile, InstantGramResultTileProps } from '../..'
 
 export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
     ...props
@@ -37,7 +37,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
             >
                 {refactoredEvent.prefix && (
                     <Typography
-                        type="t2"
+                        type="t1"
                         content={`${refactoredEvent.prefix}:`}
                         textAlign="left"
                     />
@@ -46,7 +46,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                     <>
                         {refactoredEvent.names.map(({ name, refKey }: any) => (
                             <Typography
-                                type="h1"
+                                type="t2"
                                 content={
                                     <>
                                         <Typography
@@ -74,7 +74,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                     </>
                 ) : (
                     <Typography
-                        type={refactoredEvent.prefix ? 'h1' : 't2'}
+                        type={refactoredEvent.prefix ? 't2' : 't1'}
                         content={refactoredEvent.names[0].name}
                         textAlign="left"
                     />
@@ -87,7 +87,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                 mB={isMobile ? 7.5 : 15}
             >
                 <Typography
-                    type="h3"
+                    type="h4"
                     content={
                         <>
                             {refactoredEvent.startDate}
@@ -161,28 +161,98 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                     mT={isMobile ? 7.5 : 15}
                     mB={isMobile ? 7.5 : 15}
                 >
-                    {refactoredEvent.youthHostels && (
-                        <Typography
-                            type="body"
-                            content={
-                                <>
-                                    <Typography
-                                        type="body"
-                                        content="Youth Hostel(s): "
-                                        boldFace
-                                        inline
+                    <Spacing mL={isMobile ? 0 : 140} mR={isMobile ? 0 : 140}>
+                        {refactoredEvent.features && (
+                            <>
+                                {refactoredEvent.features.cities && (
+                                    <AmenitiesTile
+                                        title="Cities: "
+                                        content={
+                                            refactoredEvent.features.cities
+                                        }
                                     />
-                                    <Typography
-                                        type="body"
-                                        content={refactoredEvent.youthHostels}
-                                        inline
+                                )}
+                                {refactoredEvent.features.districts && (
+                                    <AmenitiesTile
+                                        title="Districts: "
+                                        content={
+                                            refactoredEvent.features.districts
+                                        }
                                     />
-                                </>
-                            }
-                            textAlign="center"
-                            paragraphMargins
-                        />
-                    )}
+                                )}
+                                {refactoredEvent.features.attractions && (
+                                    <AmenitiesTile
+                                        title="Attractions: "
+                                        content={
+                                            refactoredEvent.features.attractions
+                                        }
+                                    />
+                                )}
+                                {refactoredEvent.features.youthHostels && (
+                                    <AmenitiesTile
+                                        title="Youth Hostels: "
+                                        content={
+                                            refactoredEvent.features
+                                                .youthHostels
+                                        }
+                                    />
+                                )}
+                                {refactoredEvent.features.supermarkets && (
+                                    <AmenitiesTile
+                                        title="Supermarkets: "
+                                        content={
+                                            refactoredEvent.features
+                                                .supermarkets
+                                        }
+                                    />
+                                )}
+                                {refactoredEvent.features.shops && (
+                                    <AmenitiesTile
+                                        title="Shops: "
+                                        content={refactoredEvent.features.shops}
+                                    />
+                                )}
+                                {refactoredEvent.features.foodstuffs && (
+                                    <AmenitiesTile
+                                        title="Foodstuffs: "
+                                        content={
+                                            refactoredEvent.features.foodstuffs
+                                        }
+                                    />
+                                )}
+                                {refactoredEvent.features.bakeries && (
+                                    <AmenitiesTile
+                                        title="Bakeries: "
+                                        content={
+                                            refactoredEvent.features.bakeries
+                                        }
+                                    />
+                                )}
+                                {refactoredEvent.features.gelaterias && (
+                                    <AmenitiesTile
+                                        title="Gelaterias: "
+                                        content={
+                                            refactoredEvent.features.gelaterias
+                                        }
+                                    />
+                                )}
+                                {refactoredEvent.features.restaurants && (
+                                    <AmenitiesTile
+                                        title="Restaurants: "
+                                        content={
+                                            refactoredEvent.features.restaurants
+                                        }
+                                    />
+                                )}
+                                {refactoredEvent.features.bars && (
+                                    <AmenitiesTile
+                                        title="Bars: "
+                                        content={refactoredEvent.features.bars}
+                                    />
+                                )}
+                            </>
+                        )}
+                    </Spacing>
                     {Array.isArray(refactoredEvent.description) ? (
                         <Article
                             sections={refactoredEvent.description}
@@ -197,7 +267,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                     )}
                 </Spacing>
             )}
-            <Spacing
+            {/* <Spacing
                 mL={isMobile ? 0 : 70}
                 mR={isMobile ? 0 : 70}
                 mT={isMobile ? 7.5 : 15}
@@ -208,8 +278,8 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                 borderRadius={isMobile ? 'none' : 'var(--corners-small)'}
             >
                 <ImageSlider slides={refactoredEvent.images} />
-            </Spacing>
-            <Spacing
+            </Spacing> */}
+            {/* <Spacing
                 mL={isMobile ? 15 : 70}
                 mR={isMobile ? 15 : 70}
                 mT={isMobile ? 7.5 : 15}
@@ -221,8 +291,8 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                     funcResp={showImageMatrix}
                     content="Show images in matrix form"
                 />
-            </Spacing>
-            {showImageMatrix && (
+            </Spacing> */}
+            {/* {showImageMatrix && (
                 <Spacing
                     mL={isMobile ? 0 : 70}
                     mR={isMobile ? 0 : 70}
@@ -230,7 +300,14 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                 >
                     <ImageMatrix items={refactoredEvent.images} columns={4} />
                 </Spacing>
-            )}
+            )} */}
+            <Spacing
+                mL={isMobile ? 0 : 70}
+                mR={isMobile ? 0 : 70}
+                mT={isMobile ? 7.5 : 15}
+            >
+                <ImageMatrix items={refactoredEvent.images} columns={4} />
+            </Spacing>
         </Tile>
     )
 }

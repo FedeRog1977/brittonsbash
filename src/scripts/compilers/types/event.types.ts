@@ -3,16 +3,19 @@ import { AggregationAlphabeticalProps, AggregationNumericalProps } from '.'
 
 // Base Props
 
-// type AmenitiesProps = {
-//     attractions?: string[]
-//     interiors?: string[]
-//     style?: string[]
-//     stationery?: string[]
-//     kitchen?: string[]
-//     bakeries?: string[]
-//     restaurants?: string[]
-//     bars?: string[]
-// }
+type FeaturesProps = {
+    cities?: string[]
+    districts?: string[]
+    attractions?: string[]
+    youthHostels?: string[]
+    supermarkets?: string[]
+    shops?: string[]
+    foodstuffs?: string[]
+    bakeries?: string[]
+    gelaterias?: string[]
+    restaurants?: string[]
+    bars?: string[]
+}
 
 export type EventProps = {
     id?: string
@@ -21,9 +24,8 @@ export type EventProps = {
     startDate: string
     endDate?: string
     description: string | ArticleProps['sections']
+    features?: FeaturesProps
     images: ImageProps[]
-    amenities?: string[]
-    youthHostels?: string[]
 }
 
 export type RoadieProps = {
@@ -172,10 +174,21 @@ export type RefactoredEventProps = {
     names: RefactoredEventNameProps[]
     startDate: EventProps['startDate']
     endDate?: EventProps['endDate']
+    features?: {
+        cities?: string
+        districts?: string
+        attractions?: string
+        youthHostels?: string
+        supermarkets?: string
+        shops?: string
+        foodstuffs?: string
+        bakeries?: string
+        gelaterias?: string
+        restaurants?: string
+        bars?: string
+    }
     description: EventProps['description']
     images: EventProps['images']
-    amenities?: string
-    youthHostels?: string
     distance?: string
     elevation?: string
     time?: string

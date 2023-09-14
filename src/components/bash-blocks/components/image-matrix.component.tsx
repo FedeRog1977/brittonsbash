@@ -1,15 +1,13 @@
 import { ImageMatrixProps, ImageProps, Typography } from '..'
 import { formatItems, useScreenWidth } from '../../../scripts'
 import { Flex } from './flex.component'
-import cx from 'classnames'
-import styles from '../styles/image-matrix.module.scss'
+import styles from '../styles/image.module.scss'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export const ImageMatrix: React.FC<ImageMatrixProps> = ({
     ...props
 }: ImageMatrixProps) => {
     const { isMobile } = useScreenWidth()
-
-    const classNames = cx(styles.image)
 
     const formattedItems = formatItems(
         props.items,
@@ -22,16 +20,8 @@ export const ImageMatrix: React.FC<ImageMatrixProps> = ({
                 <Flex key={index}>
                     {row.map((rowItem: ImageProps) => (
                         <Flex item key={rowItem.alt} center>
-                            <img
-                                className={classNames}
-                                // style={{
-                                //     width:
-                                //         isMobile ||
-                                //         row.length === 1 ||
-                                //         props.columns === 1
-                                //             ? '100%'
-                                //             : '97.5%',
-                                // }}
+                            <LazyLoadImage
+                                className={styles.image}
                                 src={rowItem.url}
                                 alt={rowItem.alt}
                             />

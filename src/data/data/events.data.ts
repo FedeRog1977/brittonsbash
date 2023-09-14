@@ -1,15 +1,106 @@
 export const eventData = {
     2023: [
         {
-            id: 'E2023036',
+            id: 'E2023038',
             prefix: 'Tenth Different Kind Hol-e-day',
             names: ['Something Actually Good Come Out’a’va France'],
             startDate: '7th of September',
             endDate: '11th of September',
+            features: {
+                cities: ['Paris'],
+                districts: [
+                    'Montmartre',
+                    'Grandes Boulevards',
+                    'Boulevard Haussmann',
+                    'Boulevard Saint-Germain',
+                    'Rue Saint-Honoré',
+                    'Avenue Montaigne',
+                ],
+                attractions: [
+                    'Louvre Pyramid',
+                    'Tuileries Garden',
+                    'Champs-Élysées',
+                    'Arc de Triomphe',
+                    'Tour Eiffel',
+                    'Panthéon',
+                    'Luxembourg Gardens',
+                    'Maison&Objet',
+                ],
+                youthHostels: ['Generator Paris'],
+                supermarkets: [
+                    'Franprix',
+                    'Carrefour',
+                    'La Vie Claire',
+                    'Epic',
+                    'G20',
+                ],
+                shops: [
+                    'Le Bon Marché',
+                    'Vitra',
+                    'Cassina',
+                    'Maisons du Monde',
+                    'Milibos',
+                    'The Centre Pompidou',
+                    'Galeries Lafayette (Haussmann)',
+                    'Galeries Lafayette (Champs-Élysées)',
+                    'Galerie Royale',
+                    'Passage Jouffroy',
+                    'BHV Marais',
+                    'Hermes',
+                    'Rimowa',
+                    'Comme des Garçons',
+                    'Chrome Hearts',
+                    'Loro Piana',
+                    'Salomon',
+                    'One Block Down',
+                    'Lancryer',
+                    'Boutique Le Creuset',
+                    'Villeroy & Boch',
+                    'LDA Cuisines',
+                    'Victor KV',
+                    'Cinquieme Set',
+                ],
+                foodstuffs: [
+                    'Baguettes',
+                    'Pates de fruits',
+                    'Tarte au citron',
+                    'Crêpes',
+                    'Macarons',
+                    'Various cheeses',
+                    '1664 Blonde',
+                    'Duvel Triple Hop Citra',
+                    'Cherry Chouffe',
+                    'Leffe Rituel',
+                    'Leffe Ruby',
+                    'Desperados Mojito',
+                ],
+                bakeries: [
+                    'Maison Lardeux',
+                    'Au Levain d’Antan',
+                    'Boris Lumé Boulangerie',
+                    'Pain Pain',
+                    'La Recolte ',
+                    'Ladurêe',
+                    'Grandepré',
+                    'Patisserie Sébastien Degardin',
+                ],
+                gelaterias: ['Amorino', 'La Glacerie Paris'],
+                restaurants: [
+                    'Trebón',
+                    'Cavale',
+                    'Chez Nous',
+                    'El Cartel del Taco',
+                    'Sushi Shunei',
+                    'GEMÜSE Kabap',
+                    'LÜKS Kabab',
+                ],
+                bars: ['Little Red Door'],
+            },
             description: [
                 {
                     type: 'body',
-                    content: '...',
+                    content:
+                        'Perhaps Gino D’Acampo was wrong after all, perhaps not always nothingk good come out’a’va France. it was getting to that point again, tired of the wage slavery and in need of a messy one. Plenty of mess was had yet not half as much as there was in Milan. At least this time I stayed away from the forty reds and forty blues, which absolutely helped me avoid the down and out recovery week. Only very minor illnesses from this one thankfully.',
                 },
                 {
                     type: 'h2',
@@ -17,7 +108,8 @@ export const eventData = {
                 },
                 {
                     type: 'body',
-                    content: '...',
+                    content:
+                        'Day 0 isn’t really worth mentioning as all it involved was arriving at 10pm at the airport and waiting about two hours for the only remaining bus to get me into Paris for about 1am. Kebab shop wans’t even open, so unironically my first meal in Paris was actually a ... wait for it ... McDonalds. Wasn’t very pleasant being woke up by three woke sk8er bois as soon as I drifted off either. Anyway, day 1. Following the tred, this was my biggest day (available on Strava for your leisure, of course). I basically just tried my hardest to tick off as many locations from my list as possbile. Being the first day, I also thought I’d try hit as many of the typical touristy locations as possible too. Yes, including Tour Eiffel. Only ate baguettes throughout the day, little did I know this was gonna become the biggest trend of the weekend. Friday night I was still stuck in the room with the goddamn sk8er bois so my only evening entertainment option was to get wasted on the bench outside the hostel, considering I was also kicked out for cracking a beer in the communal area. Lee would not approve of that kiddo. Day 1: big ticks, big wasted, big success.',
                 },
                 {
                     type: 'h2',
@@ -25,7 +117,8 @@ export const eventData = {
                 },
                 {
                     type: 'body',
-                    content: '...',
+                    content:
+                        'Day 2 was always going to be my Montmartre day. it was the recurring reccomendation I’d had in the build-up, and it had something that resembled a hill; an incline at least. She’s a beautiful little place, although the first bakeria I wanted to go to wasn’t open on weekends, RIP. I did make it to the James reccie however, which was a great’n. Then up the hill for some views. But yeah, after that I just sort of reverted to my plan from the day before which was stop at every shop I passed to get wasted with cans. Worked nicely. I also made sure to load up on baguettes from the James reccie place too, for casual wasted street snacking. To be honest, I don’t even really remember where I walked after that. Think I went back down to the river for some views and back around some shops. Aaaannnyway, Saturday night’s alright for fighting. Except this time there were no Aussies to fight off. Yes, that means what you think it does. The sk8er bois were gone and in came two far more pleasant, physically tolerable, less odor emitting ladies from New Zealand and Argentina. Then Slovenia entered the chat, and all those things Tate has said about central European señoritas was proven correct. Though our blonde bimbo vs. quiet loner, mountaineer, farm girl types may be significantly opposing, the observations are valid. At least now I could have some actual conversations. ... ...... Of course by this point I was also like eight deep, so was ready for a group bench wasted session over another six. Yeah, that was a solid 4am finish with a Desperados Mojito nightcap from the sketchy news stand place.',
                 },
                 {
                     type: 'h2',
@@ -33,7 +126,8 @@ export const eventData = {
                 },
                 {
                     type: 'body',
-                    content: '...',
+                    content:
+                        'Gradually, these days were getting harder to arise into. Started with 7am the first day, we’ve probably reached about 8:30am now. But that’s an 8:30 followed by some serious grunting and groaning with the fellow residents',
                 },
                 {
                     type: 'h2',
@@ -725,6 +819,7 @@ export const eventData = {
             names: ['Sweet Home Alabama'],
             startDate: '13th of July',
             endDate: '19th of July',
+            features: { youthHostels: ['Astor Hyde Park', 'QUO Milano'] },
             description: [
                 {
                     type: 'body',
@@ -1692,8 +1787,6 @@ export const eventData = {
                     description: '',
                 },
             ],
-            amenities: ['...', '...'],
-            youthHostels: ['Astor Hyde Park', 'QUO Milano'],
         },
         {
             id: 'E2023029',
@@ -5846,10 +5939,8 @@ export const eventData = {
     2020: [
         {
             id: 'E2020011',
-            prefix: '',
             names: ['Some Stuff'],
             startDate: 'December',
-            endDate: '',
             description:
                 'Some normie happenings after the first project season came to an end.',
             images: [
@@ -5859,14 +5950,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2020010',
-            prefix: '',
             names: ['Cairnsmore of Carsphairn'],
             startDate: '19th of December',
-            endDate: '',
             description:
                 'Another regret-filled project in the old Timbys. Struggled to move pretty much all day to be honest. Good stop in Ayr afterwards though at M&S for some late lunch and mince pies. Also the historic day when Griff had to wear a skull China-19 mask coz it’s all Poundland had.',
             images: [
@@ -5876,14 +5964,12 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2020009',
             prefix: 'Ben Oolium',
             names: ['Ultimate Supreme Depression'],
             startDate: '14th of November',
-            endDate: '',
             description:
                 'Yeah this was probably the most depressing day I’ve had in the Scottish outdoors so far. Starting the day with a flat tyre should clearly have been a sign of caution. The hypothermia, white-out and trench foot did however, make for the most rewarding Green Welly Stop coffee ever. But of course the night had to be capped off by me dropping my crate.',
             images: [
@@ -5893,7 +5979,6 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2020008',
@@ -5910,11 +5995,12 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: ['Cairngorm Lodge (Glenmore)'],
+            amenities: {
+                youthHostels: ['Cairngorm Lodge (Glenmore)'],
+            },
         },
         {
             id: 'E2020007',
-            prefix: '',
             names: ['Bag One Get Three Free'],
             startDate: '5th of September',
             endDate: '',
@@ -5927,7 +6013,6 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2020006',
@@ -5944,14 +6029,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2020005',
-            prefix: '',
             names: ['Ben Lomond'],
             startDate: '3rd of August',
-            endDate: '',
             description:
                 'My, unfortunately and very unfittingly, soy introduction to the project game.',
             images: [
@@ -5961,11 +6043,9 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2020004',
-            prefix: '',
             names: ['Some Stuff'],
             startDate: 'April',
             endDate: 'July',
@@ -5978,14 +6058,12 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2020003',
             prefix: 'Gentlemen Who Café Present',
             names: ['Glasgow Adventures'],
             startDate: '13th of February',
-            endDate: '',
             description:
                 'Some adventures of the Gentlemen Who Café duo around Glesgee in the final days of in-person uni.',
             images: [
@@ -5995,7 +6073,6 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2020002',
@@ -6012,14 +6089,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2020001',
-            prefix: '',
             names: ['Loch Lomond'],
             startDate: '12th of January',
-            endDate: '',
             description:
                 'The standard winter stroll around Loch Lomond with the Mancunians. Almost like the calm before the shit show.',
             images: [
@@ -6029,7 +6103,6 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
     ],
 }
