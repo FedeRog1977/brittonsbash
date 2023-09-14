@@ -38,15 +38,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                 {refactoredEvent.prefix && (
                     <Typography
                         type="t2"
-                        content={
-                            <>
-                                <Typography
-                                    content={refactoredEvent.prefix}
-                                    inline
-                                />
-                                <Typography content=":" inline />
-                            </>
-                        }
+                        content={`${refactoredEvent.prefix}:`}
                         textAlign="left"
                     />
                 )}
@@ -98,20 +90,10 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                     type="h3"
                     content={
                         <>
-                            <Typography
-                                content={refactoredEvent.startDate}
-                                inline
-                            />
+                            {refactoredEvent.startDate}
                             {refactoredEvent.endDate && (
                                 <>
-                                    <Typography
-                                        content={<>&nbsp;&#8212;&nbsp;</>}
-                                        inline
-                                    />
-                                    <Typography
-                                        content={refactoredEvent.endDate}
-                                        inline
-                                    />
+                                    &nbsp;&#8212;&nbsp;{refactoredEvent.endDate}
                                 </>
                             )}
                         </>

@@ -404,28 +404,32 @@ export const TypographyStories = () => (
                 paragraphMargins
             />
             <Typography
-                type="h2"
-                fontFamily="sansSerif"
-                content="Typography overline"
-                textAlign="left"
-                inline
-                textDecoration="overline"
-            />{' '}
-            <Typography
-                type="h2"
-                fontFamily="sansSerif"
-                content="Typography strike-through"
-                textAlign="left"
-                inline
-                textDecoration="lineThrough"
-            />{' '}
-            <Typography
-                type="h2"
-                fontFamily="sansSerif"
-                content="Typography underline"
-                textAlign="left"
-                inline
-                textDecoration="underline"
+                content={
+                    <>
+                        <Typography
+                            type="h2"
+                            fontFamily="sansSerif"
+                            content="Typography overline"
+                            inline
+                            textDecoration="overline"
+                        />{' '}
+                        <Typography
+                            type="h2"
+                            fontFamily="sansSerif"
+                            content="Typography strike-through"
+                            inline
+                            textDecoration="lineThrough"
+                        />{' '}
+                        <Typography
+                            type="h2"
+                            fontFamily="sansSerif"
+                            content="Typography underline"
+                            inline
+                            textDecoration="underline"
+                        />
+                    </>
+                }
+                textAlign="center"
             />
         </Tile>
 

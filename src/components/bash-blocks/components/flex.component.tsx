@@ -8,6 +8,7 @@ export const Flex: React.FC<FlexProps> = ({ ...props }: FlexProps) => {
                 className={styles.flexCol}
                 style={{
                     textAlign: props.center ? 'center' : 'left',
+                    border: '1px solid black',
                 }}
             >
                 {props.children}
