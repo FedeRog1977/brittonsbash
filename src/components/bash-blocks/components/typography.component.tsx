@@ -73,12 +73,16 @@ export const Typography: React.FC<TypographyProps> = ({
         return (
             <div
                 className={classNamesImgContainer}
-                // style={{
-                //     marginTop: props.mT ? props.mT : 0,
-                //     marginBottom: props.mB ? props.mB : 0,
-                //     marginLeft: props.mL ? props.mL : 0,
-                //     marginRight: props.mR ? props.mR : 0,
-                // }}
+                style={{
+                    marginTop: props.mT ? props.mT : 0,
+                    marginBottom: props.paragraphMargins
+                        ? 30
+                        : props.mB
+                        ? props.mB
+                        : 0,
+                    marginLeft: props.mL ? props.mL : 0,
+                    marginRight: props.mR ? props.mR : 0,
+                }}
             >
                 <img
                     className={classNamesImage}
@@ -100,12 +104,16 @@ export const Typography: React.FC<TypographyProps> = ({
     return (
         <div
             className={classNamesTextContainer}
-            // style={{
-            //     marginTop: props.mT ? props.mT : 0,
-            //     marginBottom: props.mB ? props.mB : 0,
-            //     marginLeft: props.mL ? props.mL : 0,
-            //     marginRight: props.mR ? props.mR : 0,
-            // }}
+            style={{
+                marginTop: props.mT ? props.mT : 0,
+                marginBottom: props.paragraphMargins
+                    ? 30
+                    : props.mB
+                    ? props.mB
+                    : 0,
+                marginLeft: props.mL ? props.mL : 0,
+                marginRight: props.mR ? props.mR : 0,
+            }}
         >
             <span className={classNamesText}>
                 {props.link ? (

@@ -7,8 +7,6 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 export const ImageMatrix: React.FC<ImageMatrixProps> = ({
     ...props
 }: ImageMatrixProps) => {
-    const { isMobile } = useScreenWidth()
-
     const formattedItems = formatItems(
         props.items,
         props.columns ? props.columns : 3
@@ -19,7 +17,7 @@ export const ImageMatrix: React.FC<ImageMatrixProps> = ({
             {formattedItems.map((row: ImageProps[], index: number) => (
                 <Flex key={index}>
                     {row.map((rowItem: ImageProps) => (
-                        <Flex item key={rowItem.alt} center>
+                        <Flex item key={rowItem.alt}>
                             <LazyLoadImage
                                 className={styles.image}
                                 src={rowItem.url}
@@ -27,11 +25,10 @@ export const ImageMatrix: React.FC<ImageMatrixProps> = ({
                             />
                             {rowItem.description && (
                                 <Typography
-                                    type="caption"
+                                    type="bodyLight"
                                     content={rowItem.description}
                                     textAlign="center"
-                                    mT={5}
-                                    mB={10}
+                                    mT={3.75}
                                 />
                             )}
                         </Flex>
