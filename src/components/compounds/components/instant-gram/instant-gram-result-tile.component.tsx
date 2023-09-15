@@ -4,6 +4,7 @@ import {
     Button,
     ImageMatrix,
     ImageSlider,
+    Modal,
     Spacing,
     Tile,
     Typography,
@@ -22,10 +23,8 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
         showDropDown: showDescription,
         setShowDropDown: setShowDescription,
     } = useDropDown()
-    const {
-        showDropDown: showImageMatrix,
-        setShowDropDown: setShowImageMatrix,
-    } = useDropDown()
+    const { showDropDown: showModal, setShowDropDown: setShowModal } =
+        useDropDown()
     const refactoredEvent = compileEvent({ event, sportEvent, showSportEvent })
 
     return (
@@ -267,47 +266,34 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                     )}
                 </Spacing>
             )}
-            {/* <Spacing
-                mL={isMobile ? 0 : 70}
-                mR={isMobile ? 0 : 70}
-                mT={isMobile ? 7.5 : 15}
-                mB={isMobile ? 7.5 : 15}
-                backgroundColor={
-                    isMobile ? 'var(--white)' : 'var(--lighter-grey)'
-                }
-                borderRadius={isMobile ? 'none' : 'var(--corners-small)'}
-            >
-                <ImageSlider slides={refactoredEvent.images} />
-            </Spacing> */}
-            {/* <Spacing
-                mL={isMobile ? 15 : 70}
-                mR={isMobile ? 15 : 70}
-                mT={isMobile ? 7.5 : 15}
-                mB={isMobile ? 7.5 : 15}
-            >
-                <Button
-                    buttonType="regular-clear"
-                    func={() => setShowImageMatrix(!showImageMatrix)}
-                    funcResp={showImageMatrix}
-                    content="Show images in matrix form"
-                />
-            </Spacing> */}
-            {/* {showImageMatrix && (
-                <Spacing
-                    mL={isMobile ? 0 : 70}
-                    mR={isMobile ? 0 : 70}
-                    mT={isMobile ? 15 : 30}
-                >
-                    <ImageMatrix items={refactoredEvent.images} columns={4} />
-                </Spacing>
-            )} */}
             <Spacing
                 mL={isMobile ? 0 : 70}
                 mR={isMobile ? 0 : 70}
                 mT={isMobile ? 7.5 : 15}
+                mB={isMobile ? 7.5 : 15}
             >
                 <ImageMatrix items={refactoredEvent.images} columns={4} />
             </Spacing>
+            <Spacing
+                mL={isMobile ? 15 : 70}
+                mR={isMobile ? 15 : 70}
+                mT={isMobile ? 7.5 : 15}
+            >
+                <Button
+                    buttonType="regular-clear"
+                    func={() => setShowModal(!showModal)}
+                    funcResp={showModal}
+                    content="Show image slideshow"
+                />
+            </Spacing>
+            {showModal && (
+                <Modal
+                    isOpen={showModal}
+                    onClose={() => setShowModal(!showModal)}
+                >
+                    <ImageSlider slides={refactoredEvent.images} />
+                </Modal>
+            )}
         </Tile>
     )
 }

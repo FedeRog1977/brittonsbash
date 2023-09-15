@@ -263,6 +263,22 @@ npm install -D @types/react-lazy-load-image-component
 
 -   [Guide](https://www.freecodecamp.org/news/how-to-lazy-load-images-in-react/)
 
+## React Modal
+
+Install:
+
+```
+npm i --save react-modal
+```
+
+Add TypeScript support:
+
+```
+npm install -D @types/react-modal
+```
+
+-   [Guide](https://www.npmjs.com/package/react-modal)
+
 ## React Responsive Carousel
 
 Install:

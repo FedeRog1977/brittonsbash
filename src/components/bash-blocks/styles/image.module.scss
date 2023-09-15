@@ -13,7 +13,6 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: var(--corners-small);
     overflow-x: hidden;
     overflow-y: hidden;
 
@@ -121,7 +120,7 @@ img {
 .leftArrow:hover,
 .rightArrow:hover,
 .refresh:hover {
-    color: #a8a8a8;
+    color: var(--light-grey);
     transition: color var(--transition-long);
 }
 

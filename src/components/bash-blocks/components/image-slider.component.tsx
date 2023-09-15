@@ -54,7 +54,7 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
                             {slide.description && (
                                 <div className={styles.imageSliderCaption}>
                                     <Typography
-                                        type={isMobile ? 'body' : 'h4'}
+                                        type={isMobile ? 'footnote' : 'body'}
                                         fontFamily="sansSerif"
                                         content={slide.description}
                                         textAlign="left"
