@@ -296,6 +296,21 @@ export const sportData = {
         ],
         projects: [
             {
+                id: 'P2023023',
+                name: 'Führer’s Thule',
+                dist: 14.26,
+                elev: 5167,
+                time: '4:56:41',
+                companionship: 1,
+                munros: [
+                    'Sgùrr na Ruaidhe',
+                    'Càrn nan Gobhar (Strathfarrar)',
+                    'Sgùrr a’ Choire Ghlais',
+                    'Sgùrr Fhuar-thuill',
+                ],
+                munroTops: ['Creag Ghorm A’ Bhealaich', 'Sgùrr na Fearstaig'],
+            },
+            {
                 id: 'P2023022',
                 name: 'Lorraine Kelly - Halfway House',
                 dist: 17.44,
@@ -672,6 +687,27 @@ export const sportData = {
             },
         ],
         miles: [
+            {
+                id: 'M2023042',
+                name: 'Other',
+                dist: 10.93,
+                elev: 541,
+                time: '3:31:13',
+            },
+            {
+                id: 'M2023041',
+                name: 'Other',
+                dist: 14.94,
+                elev: 1024,
+                time: '4:46:48',
+            },
+            {
+                id: 'M2023040',
+                name: 'Other',
+                dist: 16.1,
+                elev: 646,
+                time: '5:05:47',
+            },
             {
                 id: 'M2023039',
                 name: 'Waterfoot',
