@@ -3726,23 +3726,6 @@ export const eventData = {
     ],
     2022: [
         {
-            id: 'E2022057',
-            prefix: '',
-            names: ['Christmas 2022'],
-            startDate: '25th of December',
-            endDate: '26th of December',
-            description:
-                'The annual installment of meal underscore large followed by cheese underscore lots. That usually falls on a big calendar holiday that I can’t recall the name of. All I know is that it falls the day before the annual 26th of December Waterfoot stroll with McN.',
-            images: [
-                {
-                    url: '',
-                    alt: '',
-                    description: '',
-                },
-            ],
-            youthHostels: [],
-        },
-        {
             id: 'E2022056',
             prefix: '',
             names: ['Traction Control'],
