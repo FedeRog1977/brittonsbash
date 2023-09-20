@@ -13,6 +13,7 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
             onClick={props.func}
             value={props.value}
             style={{
+                width: props.dense ? '50%' : undefined,
                 paddingTop: props.removePadding ? '0px' : '5px',
                 paddingBottom: props.removePadding ? '0px' : '5px',
             }}

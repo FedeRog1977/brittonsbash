@@ -1,6 +1,7 @@
 import {
     ActivityTile,
     Article,
+    ArticlePreface,
     Button,
     ImageMatrix,
     ImageSlider,
@@ -10,7 +11,7 @@ import {
     Typography,
 } from '../../../bash-blocks'
 import { compileEvent, useDropDown, useScreenWidth } from '../../../../scripts'
-import { FeaturesTile, InstantGramResultTileProps } from '../..'
+import { InstantGramResultTileProps } from '../..'
 
 export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
     ...props
@@ -23,6 +24,8 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
         showDropDown: showDescription,
         setShowDropDown: setShowDescription,
     } = useDropDown()
+    const { showDropDown: showMatrix, setShowDropDown: setShowMatrix } =
+        useDropDown()
     const { showDropDown: showModal, setShowDropDown: setShowModal } =
         useDropDown()
     const refactoredEvent = compileEvent({ event, sportEvent, showSportEvent })
@@ -167,98 +170,127 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                     mT={isMobile ? 7.5 : 15}
                     mB={isMobile ? 7.5 : 15}
                 >
-                    <Spacing mL={isMobile ? 0 : 140} mR={isMobile ? 0 : 140}>
-                        {refactoredEvent.features && (
-                            <>
-                                {refactoredEvent.features.cities && (
-                                    <FeaturesTile
-                                        title="Cities: "
-                                        content={
-                                            refactoredEvent.features.cities
-                                        }
-                                    />
-                                )}
-                                {refactoredEvent.features.districts && (
-                                    <FeaturesTile
-                                        title="Districts: "
-                                        content={
-                                            refactoredEvent.features.districts
-                                        }
-                                    />
-                                )}
-                                {refactoredEvent.features.attractions && (
-                                    <FeaturesTile
-                                        title="Attractions: "
-                                        content={
-                                            refactoredEvent.features.attractions
-                                        }
-                                    />
-                                )}
-                                {refactoredEvent.features.youthHostels && (
-                                    <FeaturesTile
-                                        title="Youth Hostels: "
-                                        content={
-                                            refactoredEvent.features
-                                                .youthHostels
-                                        }
-                                    />
-                                )}
-                                {refactoredEvent.features.supermarkets && (
-                                    <FeaturesTile
-                                        title="Supermarkets: "
-                                        content={
-                                            refactoredEvent.features
-                                                .supermarkets
-                                        }
-                                    />
-                                )}
-                                {refactoredEvent.features.shops && (
-                                    <FeaturesTile
-                                        title="Shops: "
-                                        content={refactoredEvent.features.shops}
-                                    />
-                                )}
-                                {refactoredEvent.features.foodstuffs && (
-                                    <FeaturesTile
-                                        title="Foodstuffs: "
-                                        content={
-                                            refactoredEvent.features.foodstuffs
-                                        }
-                                    />
-                                )}
-                                {refactoredEvent.features.bakeries && (
-                                    <FeaturesTile
-                                        title="Bakeries: "
-                                        content={
-                                            refactoredEvent.features.bakeries
-                                        }
-                                    />
-                                )}
-                                {refactoredEvent.features.gelaterias && (
-                                    <FeaturesTile
-                                        title="Gelaterias: "
-                                        content={
-                                            refactoredEvent.features.gelaterias
-                                        }
-                                    />
-                                )}
-                                {refactoredEvent.features.restaurants && (
-                                    <FeaturesTile
-                                        title="Restaurants: "
-                                        content={
-                                            refactoredEvent.features.restaurants
-                                        }
-                                    />
-                                )}
-                                {refactoredEvent.features.bars && (
-                                    <FeaturesTile
-                                        title="Bars: "
-                                        content={refactoredEvent.features.bars}
-                                    />
-                                )}
-                            </>
-                        )}
-                    </Spacing>
+                    {refactoredEvent.features && (
+                        <Spacing
+                            mL={isMobile ? 0 : 280}
+                            mR={isMobile ? 0 : 280}
+                        >
+                            <ArticlePreface
+                                entries={[
+                                    ...(refactoredEvent.features.cities
+                                        ? [
+                                              {
+                                                  title: 'Cities:',
+                                                  content:
+                                                      refactoredEvent.features
+                                                          .cities,
+                                              },
+                                          ]
+                                        : [{}]),
+                                    ...(refactoredEvent.features.districts
+                                        ? [
+                                              {
+                                                  title: 'Districts:',
+                                                  content:
+                                                      refactoredEvent.features
+                                                          .districts,
+                                              },
+                                          ]
+                                        : [{}]),
+                                    ...(refactoredEvent.features.attractions
+                                        ? [
+                                              {
+                                                  title: 'Attractions:',
+                                                  content:
+                                                      refactoredEvent.features
+                                                          .attractions,
+                                              },
+                                          ]
+                                        : [{}]),
+                                    ...(refactoredEvent.features.youthHostels
+                                        ? [
+                                              {
+                                                  title: 'Youth Hostels:',
+                                                  content:
+                                                      refactoredEvent.features
+                                                          .youthHostels,
+                                              },
+                                          ]
+                                        : [{}]),
+                                    ...(refactoredEvent.features.supermarkets
+                                        ? [
+                                              {
+                                                  title: 'Supermarkets:',
+                                                  content:
+                                                      refactoredEvent.features
+                                                          .supermarkets,
+                                              },
+                                          ]
+                                        : [{}]),
+                                    ...(refactoredEvent.features.shops
+                                        ? [
+                                              {
+                                                  title: 'Shops:',
+                                                  content:
+                                                      refactoredEvent.features
+                                                          .shops,
+                                              },
+                                          ]
+                                        : [{}]),
+                                    ...(refactoredEvent.features.foodstuffs
+                                        ? [
+                                              {
+                                                  title: 'Foodstuffs:',
+                                                  content:
+                                                      refactoredEvent.features
+                                                          .foodstuffs,
+                                              },
+                                          ]
+                                        : [{}]),
+                                    ...(refactoredEvent.features.bakeries
+                                        ? [
+                                              {
+                                                  title: 'Bakeries:',
+                                                  content:
+                                                      refactoredEvent.features
+                                                          .bakeries,
+                                              },
+                                          ]
+                                        : [{}]),
+                                    ...(refactoredEvent.features.gelaterias
+                                        ? [
+                                              {
+                                                  title: 'Gelaterias:',
+                                                  content:
+                                                      refactoredEvent.features
+                                                          .gelaterias,
+                                              },
+                                          ]
+                                        : [{}]),
+                                    ...(refactoredEvent.features.restaurants
+                                        ? [
+                                              {
+                                                  title: 'Restaurants:',
+                                                  content:
+                                                      refactoredEvent.features
+                                                          .restaurants,
+                                              },
+                                          ]
+                                        : [{}]),
+                                    ...(refactoredEvent.features.bars
+                                        ? [
+                                              {
+                                                  title: 'Bars:',
+                                                  content:
+                                                      refactoredEvent.features
+                                                          .bars,
+                                              },
+                                          ]
+                                        : [{}]),
+                                ]}
+                            />
+                        </Spacing>
+                    )}
                     {Array.isArray(refactoredEvent.description) ? (
                         <Article
                             sections={refactoredEvent.description}
@@ -274,25 +306,36 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                 </Spacing>
             )}
             <Spacing
-                mL={isMobile ? 0 : 70}
-                mR={isMobile ? 0 : 70}
-                mT={isMobile ? 7.5 : 15}
-                mB={isMobile ? 7.5 : 15}
-            >
-                <ImageMatrix items={refactoredEvent.images} columns={4} />
-            </Spacing>
-            <Spacing
                 mL={isMobile ? 15 : 70}
                 mR={isMobile ? 15 : 70}
                 mT={isMobile ? 7.5 : 15}
+                textAlign="center"
             >
+                <Button
+                    buttonType="regular-clear"
+                    func={() => setShowMatrix(!showMatrix)}
+                    funcResp={showMatrix}
+                    content="Show image matrix"
+                    dense
+                />
                 <Button
                     buttonType="regular-clear"
                     func={() => setShowModal(!showModal)}
                     funcResp={showModal}
                     content="Show image slideshow"
+                    dense
                 />
             </Spacing>
+            {showMatrix && (
+                <Spacing
+                    mL={isMobile ? 0 : 70}
+                    mR={isMobile ? 0 : 70}
+                    mT={isMobile ? 7.5 : 15}
+                    mB={isMobile ? 7.5 : 15}
+                >
+                    <ImageMatrix items={refactoredEvent.images} columns={4} />
+                </Spacing>
+            )}
             {showModal && (
                 <Modal
                     isOpen={showModal}

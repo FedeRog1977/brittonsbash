@@ -23,8 +23,8 @@ export type EventProps = {
     names: string[]
     startDate: string
     endDate?: string
-    description: string | ArticleProps['sections']
     features?: FeaturesProps
+    description: string | ArticleProps['sections']
     images: ImageProps[]
 }
 

@@ -11,5 +11,6 @@ export type ButtonProps = {
     subContent?: string | React.ReactElement
     subContentTop?: boolean
     color?: ColorProps
+    dense?: boolean
     removePadding?: boolean
 }

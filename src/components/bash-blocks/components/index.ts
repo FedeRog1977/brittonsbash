@@ -1,4 +1,5 @@
 export * from './activity-tile.component'
+export * from './article-preface.component'
 export * from './article.component'
 export * from './background.component'
 export * from './footnote.component'
