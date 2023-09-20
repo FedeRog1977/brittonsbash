@@ -1,25 +1,25 @@
 import { Button, Spacing } from '../../../bash-blocks'
-import { useDropDown, useScreenWidth } from '../../../../scripts'
+import { useShowElement, useScreenWidth } from '../../../../scripts'
 import { InstantGramSearchListProps } from '../..'
 
 export const InstantGramSearchList: React.FC<InstantGramSearchListProps> = ({
     ...props
 }: InstantGramSearchListProps) => {
     const { isMobile } = useScreenWidth()
-    const { showDropDown, setShowDropDown } = useDropDown()
+    const { showElement, setShowElement } = useShowElement()
 
     return (
         <>
             <Button
                 typeType="t2"
                 buttonType="dense-clear"
-                func={() => setShowDropDown(!showDropDown)}
-                funcResp={showDropDown}
+                func={() => setShowElement(!showElement)}
+                funcResp={showElement}
                 content={props.year}
                 subContent={`Season ${props.season}`}
                 color="darkerGrey"
             />
-            {showDropDown && (
+            {showElement && (
                 <div>
                     {props.items.map(({ id, prefix, names }: any) => (
                         <Button
@@ -27,7 +27,7 @@ export const InstantGramSearchList: React.FC<InstantGramSearchListProps> = ({
                             buttonType={`${
                                 isMobile ? 'regular' : 'dense'
                             }-clear`}
-                            func={() => setShowDropDown(false)}
+                            func={() => setShowElement(false)}
                             funcResp={false}
                             content={
                                 <Spacing mY={isMobile ? 15 : 30}>

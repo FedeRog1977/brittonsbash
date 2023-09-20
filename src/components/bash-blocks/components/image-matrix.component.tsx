@@ -1,5 +1,5 @@
 import { ImageMatrixProps, ImageProps, Typography } from '..'
-import { formatItems, useScreenWidth } from '../../../scripts'
+import { formatItems } from '../../../scripts'
 import { Flex } from './flex.component'
 import styles from '../styles/image.module.scss'
 import { LazyLoadImage } from 'react-lazy-load-image-component'

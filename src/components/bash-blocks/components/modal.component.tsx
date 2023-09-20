@@ -1,9 +1,8 @@
 import ReactModal from 'react-modal'
-import { Button, Spacing, Tile, Typography } from '.'
+import { Spacing, Tile } from '.'
 import styles from '../styles/modal.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
-import { TileProps } from '../types'
 import { useScreenWidth } from '../../../scripts'
 
 type ModalProps = {

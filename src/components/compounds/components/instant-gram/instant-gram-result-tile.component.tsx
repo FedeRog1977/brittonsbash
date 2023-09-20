@@ -10,7 +10,11 @@ import {
     Tile,
     Typography,
 } from '../../../bash-blocks'
-import { compileEvent, useDropDown, useScreenWidth } from '../../../../scripts'
+import {
+    compileEvent,
+    useShowElement,
+    useScreenWidth,
+} from '../../../../scripts'
 import { InstantGramResultTileProps } from '../..'
 
 export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
@@ -20,14 +24,12 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
     const sportEvent = props.sportEvent
     const showSportEvent = props.showSportEvent
     const { isMobile } = useScreenWidth()
-    const {
-        showDropDown: showDescription,
-        setShowDropDown: setShowDescription,
-    } = useDropDown()
-    const { showDropDown: showMatrix, setShowDropDown: setShowMatrix } =
-        useDropDown()
-    const { showDropDown: showModal, setShowDropDown: setShowModal } =
-        useDropDown()
+    const { showElement: showDescription, setShowElement: setShowDescription } =
+        useShowElement()
+    const { showElement: showMatrix, setShowElement: setShowMatrix } =
+        useShowElement()
+    const { showElement: showModal, setShowElement: setShowModal } =
+        useShowElement()
     const refactoredEvent = compileEvent({ event, sportEvent, showSportEvent })
 
     return (

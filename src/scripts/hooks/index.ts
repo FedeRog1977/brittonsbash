@@ -1,6 +1,6 @@
 export * from './append-script.tag'
 export * from './append-style.tag'
-export * from './use-drop-down.hook'
+export * from './use-show-element.hook'
 export * from './use-element-width.hook'
 export * from './use-instant-gram.hook'
 export * from './use-screen-width.hook'

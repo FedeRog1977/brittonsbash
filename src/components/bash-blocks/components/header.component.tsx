@@ -2,16 +2,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import '../styles/header-footer.styles.scss'
-import { useDropDown, useScreenWidth } from '../../../scripts'
+import { useShowElement, useScreenWidth } from '../../../scripts'
 
 export const Header = () => {
     const { isMobile } = useScreenWidth()
-    const { showDropDown: showMobile, setShowDropDown: setShowMobile } =
-        useDropDown()
-    const { showDropDown: showBlog, setShowDropDown: setShowBlog } =
-        useDropDown()
-    const { showDropDown: showUtilities, setShowDropDown: setShowUtilities } =
-        useDropDown()
+    const { showElement: showMobile, setShowElement: setShowMobile } =
+        useShowElement()
+    const { showElement: showBlog, setShowElement: setShowBlog } =
+        useShowElement()
+    const { showElement: showUtilities, setShowElement: setShowUtilities } =
+        useShowElement()
 
     const resetHeader = () => {
         setShowBlog(false)
