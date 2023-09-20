@@ -2,6 +2,13 @@
     background-color: var(--transparrent);
     margin: 20px 150px 20px 150px;
     padding: 50px 0px 50px 0px;
+
+    @media (max-width: 768px) {
+        border-radius: 0;
+        box-shadow: none;
+        margin: 20px 0px 20px 0px;
+        padding: 20px;
+    }
 }
 
 .solid {
@@ -10,10 +17,27 @@
     box-shadow: var(--shadow-1);
     margin: 20px 150px 20px 150px;
     padding: 50px 30px 50px 30px;
+
+    @media (max-width: 768px) {
+        border-radius: 0;
+        box-shadow: none;
+        margin: 20px 0px 20px 0px;
+        padding: 20px;
+    }
+}
+
+.top {
+    @media (max-width: 768px) {
+        margin-top: 0px;
+    }
 }
 
 .dense {
     padding: 0px;
+
+    @media (max-width: 768px) {
+        padding: 20px 0px 20px 0px;
+    }
 }
 
 .outline {
@@ -43,23 +67,5 @@
 
     &Justify {
         text-align: justify;
-    }
-}
-
-@media (max-width: 768px) {
-    .clear,
-    .solid {
-        border-radius: 0;
-        box-shadow: none;
-        margin: 20px 0px 20px 0px;
-        padding: 20px;
-    }
-
-    .top {
-        margin-top: 0px;
-    }
-
-    .dense {
-        padding: 20px 0px 20px 0px;
     }
 }

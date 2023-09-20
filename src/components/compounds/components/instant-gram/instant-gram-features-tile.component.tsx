@@ -1,10 +1,10 @@
-import { AmenitiesTileProps } from '../..'
+import { FeaturesTileProps } from '../..'
 import { Typography } from '../../../bash-blocks'
 
-export const AmenitiesTile: React.FC<AmenitiesTileProps> = ({
+export const FeaturesTile: React.FC<FeaturesTileProps> = ({
     title,
     content,
-}: AmenitiesTileProps) => {
+}: FeaturesTileProps) => {
     return (
         <Typography
             type="body"

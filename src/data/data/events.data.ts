@@ -870,6 +870,9 @@ export const eventData = {
             names: ['Stac Post-Lee'],
             startDate: '18th of August',
             endDate: '19th of August',
+            features: {
+                youthHostels: ['Dalwhinnie Old School'],
+            },
             description:
                 'Quite a confused one to be honest. What was supposed to be a re-run of the Lochnagar five, or Return To Lamar if you will, turned into an impromptu trip to Lee’s. Not complaining. Quick stop at, finally the correct, Tesco Perth for the £1.50 Lindor then a feast of sushware followed by bolognese at Lee’s. Sadly no wasted this time becasue we still thought we might get a decent proj in. Haha lol. Wish we had gone a litre down now. The discontinued Brooklyn can over Quantum and some Skyfall was cool though. Just a sub-two the next day followed by a standard procedure Waterfoot upon arrival back in the only place better than Lee’s. Meme, I don’t actually agree with that but it works.',
             images: [
@@ -930,7 +933,6 @@ export const eventData = {
                     alt: 'cairngorms-xiii-14',
                 },
             ],
-            youthHostels: ['Dalwhinnie Old School'],
         },
         {
             id: 'E2023031',
@@ -1000,7 +1002,9 @@ export const eventData = {
             names: ['Sweet Home Alabama'],
             startDate: '13th of July',
             endDate: '19th of July',
-            features: { youthHostels: ['Astor Hyde Park', 'QUO Milano'] },
+            features: {
+                youthHostels: ['Astor Hyde Park', 'QUO Milano'],
+            },
             description: [
                 {
                     type: 'body',
@@ -2202,6 +2206,9 @@ export const eventData = {
             names: ['All The Trimmings'],
             startDate: '2nd of June',
             endDate: '3rd of June',
+            features: {
+                youthHostels: ['Dalwhinnie Old School'],
+            },
             description:
                 'In annual fashion, it was time to return to Lee’s for a regulatory waste. Of course it wouldn’t be the same without BAR but we have our methods of getting around that. Quick stop in Murray Tesco and off to fry up some burg’ in the fammous kitchen. Then the real party started, muddling n’aw. Almost a leet’ of rum over a relaxed night of Ferris and Emperor Daniel Creg. Yes, another upright until 6am then up for Brian MacDonald’s famous Vrackie. Stunning one for the books.',
             images: [
@@ -2250,7 +2257,6 @@ export const eventData = {
                     alt: 'cairngorms-xi-11',
                 },
             ],
-            youthHostels: ['Dalwhinnie Old School'],
         },
         {
             id: 'E2023022',
@@ -2394,7 +2400,6 @@ export const eventData = {
                     alt: 'ham-and-egg-sarnie-12',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2023018',
@@ -2530,6 +2535,9 @@ export const eventData = {
             names: ['Bromine-eaking Barium-d', 'On The Edge'],
             startDate: '14th of April',
             endDate: '16th of April',
+            features: {
+                youthHostels: ['Cairngorm Lodge (Glenmore)'],
+            },
             description: '...',
             images: [
                 {
@@ -2661,7 +2669,6 @@ export const eventData = {
                     alt: 'cairngorms-x-32',
                 },
             ],
-            youthHostels: ['Cairngorm Lodge (Glenmore)'],
         },
         {
             id: 'E2023015',
@@ -2669,6 +2676,9 @@ export const eventData = {
             names: ['Le Tourę De Żabka'],
             startDate: '5th of April',
             endDate: '9th of April',
+            features: {
+                youthHostels: ['Hostel Wratislavia'],
+            },
             description: '...',
             images: [
                 {
@@ -2816,7 +2826,6 @@ export const eventData = {
                     alt: 'le-toure-de-zabka-36',
                 },
             ],
-            youthHostels: ['Hostel Wratislavia'],
         },
         {
             id: 'E2023014',
@@ -3053,6 +3062,9 @@ export const eventData = {
             names: ['In The Air Today'],
             startDate: '10th of March',
             endDate: '11th of March',
+            features: {
+                youthHostels: ['Glen Nevis'],
+            },
             description: '...',
             images: [
                 {
@@ -3132,7 +3144,6 @@ export const eventData = {
                     alt: 'in-the-air-today-19',
                 },
             ],
-            youthHostels: ['Glen Nevis'],
         },
         {
             id: 'E2023011',
@@ -3180,6 +3191,9 @@ export const eventData = {
             names: ['Two Tones, Two Bones'],
             startDate: '24th of February',
             endDate: '25th of February',
+            features: {
+                youthHostels: ['Glencoe Independent (Bunkhouse)'],
+            },
             description: '...',
             images: [
                 {
@@ -3235,7 +3249,6 @@ export const eventData = {
                     alt: 'glencoe-xii-13',
                 },
             ],
-            youthHostels: ['Glencoe Independent (Bunkhouse)'],
         },
         {
             id: 'E2023009',
@@ -3243,6 +3256,9 @@ export const eventData = {
             names: ['Version Control'],
             startDate: '17th of February',
             endDate: '19th of February',
+            features: {
+                youthHostels: ['Aviemore'],
+            },
             description: '...',
             images: [
                 {
@@ -3322,7 +3338,6 @@ export const eventData = {
                     alt: 'cairngorms-ix-19',
                 },
             ],
-            youthHostels: ['Aviemore'],
         },
         {
             id: 'E2023008',
@@ -3330,6 +3345,9 @@ export const eventData = {
             names: ['Back To Schoolish'],
             startDate: '10th of February',
             endDate: '11th of February',
+            features: {
+                youthHostels: ['Glencoe'],
+            },
             description: '...',
             images: [
                 {
@@ -3381,7 +3399,6 @@ export const eventData = {
                     alt: 'glencoe-xi-12',
                 },
             ],
-            youthHostels: ['Glencoe'],
         },
         {
             id: 'E2023007',
@@ -3408,6 +3425,9 @@ export const eventData = {
             names: ['Review'],
             startDate: '3rd of February',
             endDate: '4th of February',
+            features: {
+                youthHostels: ['Glencoe'],
+            },
             description: '...',
             images: [
                 {
@@ -3439,13 +3459,15 @@ export const eventData = {
                     alt: 'review-7',
                 },
             ],
-            youthHostels: ['Glencoe'],
         },
         {
             id: 'E2023005',
             names: ['Simulated Failed Project II'],
             startDate: '27th of January',
             endDate: '28th of January',
+            features: {
+                youthHostels: ['Inverness'],
+            },
             description: '...',
             images: [
                 {
@@ -3497,13 +3519,15 @@ export const eventData = {
                     alt: 'simulated-failed-project-12',
                 },
             ],
-            youthHostels: ['Inverness'],
         },
         {
             id: 'E2023004',
             names: ['Whatever Works'],
             startDate: '20th of January',
             endDate: '21st of January',
+            features: {
+                youthHostels: ['Glen Nevis'],
+            },
             description: '...',
             images: [
                 {
@@ -3551,13 +3575,15 @@ export const eventData = {
                     alt: 'whatever-works-11',
                 },
             ],
-            youthHostels: ['Glen Nevis'],
         },
         {
             id: 'E2023003',
             names: ['On The Day'],
             startDate: '13th of January',
             endDate: '14th of January',
+            features: {
+                youthHostels: ['Inverness'],
+            },
             description: '...',
             images: [
                 {
@@ -3665,7 +3691,6 @@ export const eventData = {
                     alt: 'on-the-day-25',
                 },
             ],
-            youthHostels: ['Inverness'],
         },
         {
             id: 'E2023002',
@@ -3727,10 +3752,8 @@ export const eventData = {
     2022: [
         {
             id: 'E2022056',
-            prefix: '',
             names: ['Traction Control'],
             startDate: '11th of December',
-            endDate: '',
             description:
                 'I was just having too much fun with the odometer this weekend. After a trip to Tyndrum for a coffee on Saturday, I continued the trend with some sight-seeing from Ballageich and some traction controlling for a Heron coffee.',
             images: [
@@ -3740,14 +3763,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022055',
-            prefix: '',
             names: ['Strathaven Sunners'],
             startDate: '27th of November',
-            endDate: '',
             description:
                 'Back on’t’ road again at last. Finally got that new tubeless on and got straight back on the road. You know where.',
             images: [
@@ -3757,7 +3777,6 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022054',
@@ -3765,6 +3784,9 @@ export const eventData = {
             names: ['Berlers'],
             startDate: '17th of November',
             endDate: '21st of November',
+            features: {
+                youthHostels: ['acama Kreuzberg'],
+            },
             description:
                 '‘twas time for the chamber city. Routine flight with the RyanAir cowboys, alright landing for them to be honest. Excellent first night in Berlers; a few curryvoorshts then gay smoking chamber for beers and reds. Up nice and fresh on Friday at midday for a treat out of the breakfast rouge dispenser and off to fishmarket south after some excellent coffware. Did some general strolling around some shops and Lime’ing, went in some questionable shops and ended up at a fine sushware dinner place. Then off to Bergers for two attempts. I’m sure you can figure how they went. Off to another smoking chamber then a cocktail chamber to roll-in the night. Once again, up at midday on the Saturday and off to Wilmers café for a bagers and coffee. Then a stroll down to the parlers but I got kb’d so I went a stroll around shops. Place called Lokal for dinner after like three down in some royal chamber bar, probably too wasted to enjoy it as much as it deserved. Onwards to some keeosks for some street beers. Then Pirers. Met a nice coke dealer and Crug got pretty wasted. I’ll keep those videos and pictures to ourselves. Even after dinner, chips and a burger at a Rate My Takeaway chamber, and three kebabs; CG was too wasted to get out of bed on the Sunday so Awaz and I went a stroll around the rich district, went to a choccy chamber, and Five Guys for lunch (aha). Finally met CG to go to the one Xmas market that was actually open and downed some mullers and eggers. Then to a beereria finally for a final cooryvoorsht. Early night for the Monday morning flight.',
             images: [
@@ -3917,14 +3939,15 @@ export const eventData = {
                     alt: 'berlers-37',
                 },
             ],
-            youthHostels: ['acama Kreuzberg'],
         },
         {
             id: 'E2022053',
-            prefix: '',
             names: ['Kino Der Toten'],
             startDate: '11th of November',
             endDate: '12th of November',
+            features: {
+                youthHostels: ['Glen Nevis'],
+            },
             description:
                 'Round 115 and 116 at last. Since we’re hostelmen now, it was time to bag the Glen Nevis YH for some evening leisure and The Prodigal Son, after the Oban d’tour. Uncle.Sank a good crate of frizzante too. We had a money-optimizing start to Saturday with CG remaining in slumber until 9:59 then it was off to ‘leven for my first fat dab of the Mamores. Shame, I was kinda hoping my first hit of these would be running all ten in one but, I suppose its ‘too late in the year’ for that. Anyway, it was good to be running a sea-to-summit (sort of) again after so much time in the Cairny G’s recently. The route was routine, good runn’r. The many-different-kind-terrain was also a good brek’r in for the fresh rubber. Pack-a-Punched up a Coop meal deal dinner and got ready for the weekend to take a big turn. Another 50 miles to Edinburgh and back to witness a Hard.Style performance with some management passes, a MEGAPINT and thicc milks. Came back down to earth on Sunday though, with the Troon solo followed my Christoph Tile.',
             images: [
@@ -3934,7 +3957,6 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: ['Glen Nevis'],
         },
         {
             id: 'E2022052',
@@ -3942,6 +3964,9 @@ export const eventData = {
             names: ['The Vault'],
             startDate: '28th of October',
             endDate: '30th of October',
+            features: {
+                youthHostels: ['Glencoe', 'Aviemore'],
+            },
             description:
                 'I say ‘Cairngorms VIII’ however, this was really Scotland I. This one started with an impromptu stop at the Glunky Bunky youth hostel on our way to the proj. Shared artillery with some weap’s but right decision. We went a few down and ran Beinn Left of Creag Meagaidh on Saturday. Then off to Aviemore for a Mambos sesh and a bottle of rum down in the currum. Four hours of sleep, clean shave then out to Route 7 for brekkers then Le Tour De Outdoor Shops. Success with some gloves, pub jacket and finally replacement boots. If they ain’t broke, don’t fix.',
             images: [
@@ -3951,7 +3976,6 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: ['Glencoe', 'Aviemore'],
         },
         {
             id: 'E2022051',
@@ -3968,14 +3992,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022050',
-            prefix: '',
             names: ['Le Trun Du La ALL'],
             startDate: '18th of October',
-            endDate: '',
             description:
                 'After a long ten days without the man himself, I was finally reunited with the ALL for some quality time together in Royal Troon.',
             images: [
@@ -3985,7 +4006,6 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022049',
@@ -3993,6 +4013,9 @@ export const eventData = {
             names: ['Sons And Lovers'],
             startDate: '14th of October',
             endDate: '16th of October',
+            features: {
+                youthHostels: ['Aviemore'],
+            },
             description:
                 'I should have been pink wojak on this trip bu that fact is, I was just so goddamn in need of my return to projects that nothing could have made this one bad. Over a week that the ALL had been in the geerage meaning I couldn’t run the originally intended Cairn Toul proj because of the drive-in and need for an early start. So I booked my first non-west-highland-line highland train ticket and bukked two nights in Hamish’s dungeon. The sofa sex chamber. The Aviemore Youth Hostel. My first time soloing a hostel, and doing it right too, with one of those nights in a shared room. Anyway, quiet Friday with one beer and some dev. Also some dood had a shared rant with me about ThinkPads, was excellent. ‘Twas the bus the next morning to the Ski Centre car park to take off on by backup plan, Cairn Gorm and Macdui. Excellent conditions straight into the very unexpected, but glorious, snow storm. Bit disappointing though, 60mph snow gusts stopped me from getting over to Macdui again. So I had a quick coffee and ran the walk-out, in a very Just Cause 2 climate-change-like fashion. Another quiet night cooking up a storm, running Mambos for two, then soloing a crate and Star Wars in the currum. Didn’t get to do much on the Sunday, train times weren’t very forgiving. Tried Route 7. Denied. So just browsed a few outdoor shops and went home. Much. Needed.',
             images: [
@@ -4002,11 +4025,9 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: ['Aviemore'],
         },
         {
             id: 'E2022048',
-            prefix: '',
             names: ['The Paul Michael Britton Experience'],
             startDate: '31st of September',
             endDate: '2nd of October',
@@ -4019,11 +4040,9 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022047',
-            prefix: '',
             names: ['Farewell, Roger'],
             startDate: '23rd of September',
             endDate: '25th of September',
@@ -4036,14 +4055,12 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022046',
             prefix: 'Beinn England II',
             names: ['In Honour Of H.M. Queen Elizabeth II'],
             startDate: '19th of September',
-            endDate: '',
             description:
                 'A return to Atholl, England to honour Her Majesty Queen Elizabeth II’s national day of mourning. Late 7am start for a eighteen miler. All good tho, nothing to be back for apart from the funeral re-run. Some doomer jazz on the walk-out and drive-out. Also a quickie in Dunkeld for some icers.',
             images: [
@@ -4053,14 +4070,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022045',
-            prefix: '',
             names: ['KarKars Warm-Up'],
             startDate: '17th of September',
-            endDate: '',
             description:
                 'First Lady Jooma ‘J. Herman Vitra Miller’ Loor’s first Friday functional proj. It was into the ‘stallion for an 800er and drive-in to Atholl. Quickie in Tesco Perth for some so little calorie and Kate Moss Marshmello edition. Then, an attempt at the Atholl Arms but a phat rejection. Alright us because where there’s a business problem, we provide and install the business solution. Tents up and a Tootie Brookie each before bed. Good proj the next day before finally hitting up Ka Ka Lok for one of the fist meals.',
             images: [
@@ -4070,11 +4084,9 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022044',
-            prefix: '',
             names: ['Lombard Trial'],
             startDate: '2nd of September',
             endDate: '3rd of September',
@@ -4087,14 +4099,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022043',
-            prefix: '',
             names: ['L.Earn'],
             startDate: '27th of August',
-            endDate: '',
             description:
                 'A stunning (darling) Saturday morning called for a proj. I was gonna go meet Crug and Tulla for Gulvain but they claimed they were starting at 7:30 so would have been a 4’er for me. Of course they ended up starting at 11 though, so yeah. Anyway I finally took to Vorly II and Stucc Tae Ma Groin Mish in Loch Earn. Long awaited proj. Was scenic but far too busy with bams on the Vorlich summit. I did enjoy their My Way choir however. The proj was followed by another runner at Max’s.',
             images: [
@@ -4104,14 +4113,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022042',
-            prefix: '',
             names: ['Minecraft Sheep Hill'],
             startDate: '25th of August',
-            endDate: '',
             description:
                 'Needed to get the heart rate regulated. Back to the April 2021 spot it was for a quick round.',
             images: [
@@ -4121,14 +4127,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022041',
-            prefix: '',
             names: ['Ah Yes, I Found My Groin And Without GitHub’s Help!'],
             startDate: '24th of August',
-            endDate: '',
             description:
                 'It was finally time. Time for the test which would determine the remainder of my 2022 career. We succeeded. Only a small project, yes, but a project which would correct my course and set me back on the right tracks. This was also the day I developed a love for bananas. Didn’t realise how effective they were. It was also the first day I’ve ever bagged the afternoon train home.',
             images: [
@@ -4138,14 +4141,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022040',
-            prefix: '',
             names: ['Duncarnock III (Well)'],
             startDate: '19th of August',
-            endDate: '',
             description:
                 'Yet another outing to the ((now) in)famous Duncarnock. A chance at redemption post-L’Amirale Durncarnock. And, a test of the groin. Sad to report that I’ve still not found it. Come on GitHub.',
             images: [
@@ -4155,7 +4155,6 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022039',
@@ -4172,14 +4171,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022038',
-            prefix: '',
             names: ['Fenwick + Wind Farm Loop'],
             startDate: '12th of August',
-            endDate: '',
             description:
                 'After a week of having RoGeR back, and his survival of five rounds on the classic route, the closing act called for some updated stills.',
             images: [
@@ -4189,11 +4185,10 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022037',
-            prefix: 'Fifth Different Kind Hol-e-day – Baptism Of Fire',
+            prefix: 'Fifth Different Kind Hol-e-day - Baptism Of Fire',
             names: [
                 'A New Hope',
                 'Out Of Commission',
@@ -4211,11 +4206,9 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022036',
-            prefix: '',
             names: ['The Maze'],
             startDate: '15th of July',
             endDate: '16th of July',
@@ -4228,14 +4221,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022035',
-            prefix: '',
             names: ['Full Stack of 64'],
             startDate: '10th of July',
-            endDate: '',
             description:
                 'Finally making the long-awaited appearance in the ‘foot where I have enough trig blocks for a full stack of 64.',
             images: [
@@ -4245,11 +4235,9 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022034',
-            prefix: '',
             names: ['Beinn Last of Drumochter'],
             startDate: '1st of July',
             endDate: '2nd of July',
@@ -4262,14 +4250,12 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022033',
             prefix: 'Lui Five',
             names: ['Resurrection'],
             startDate: '20th of June',
-            endDate: '',
             description:
                 'An anxious return to the tour after a week of four different kind ho-e-day and four beer, large and night, MIN. Started with a cancelled 5:30 sleeper service to Fort Bill but was all good, SoyRail set me up with a roadie hottie in a cab to Tyndrum. Got there about fifteen minutes before expected so not complaining. First task was to gather some footage for the Beinn One Hundred special feature length. Perfect morning conditions made this very easy. Started with the Corbett this time to add a bit of interest to the route. Was all standard procedure from there. Met a fine gentleman, Philip, on Ben Oss, with whom I completed the route.',
             images: [
@@ -4279,14 +4265,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022032',
-            prefix: '',
             names: ['Duncarnock II'],
             startDate: '16th of June',
-            endDate: '',
             description:
                 'Yet another uni frustration rage quit local trig bag. Back to my very first. Full traverse this time from Neilston to Giffnock. Stop at Waitrose for the essential S.PELLEGRINO frizzanté.',
             images: [
@@ -4296,11 +4279,9 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022031',
-            prefix: '',
             names: ['Four Different Kind Hol-e-day'],
             startDate: '7th of June',
             endDate: '14th of June',
@@ -4544,7 +4525,6 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022030',
@@ -4552,6 +4532,9 @@ export const eventData = {
             names: ['L’Hotel D’ALL', 'Beinn One Hundred'],
             startDate: '3rd of June',
             endDate: '5th of June',
+            features: {
+                youthHostels: ['Dalwhinnie Old School'],
+            },
             description:
                 'This proj started with an excellent leg stretch for the ALL; First Lady Jooma and I took to the A9 with some John Mayer and Percy Pigs. After docking in the Newtonmore proj car park, it was sushware over a round of Mr. Tate’s finest. The other kids had a quick bag before docking in the FIVE, then it was onto the Brothers In Arms beer garden. It was a proj however, so at a good sensible Supreme Gentleman’s bedtime, it was time for the first use of the L’Hotel D’ALL / ALL Inn and the FIVE-TWO-FIVE Star Hotel. It was a late rise the next morning for a quick double-down bag of Beinn Two Behind Those Ones Mark and Craig Did When I Was Uprighting. We hit up House of Allroads afterwards for a quickie ice crémà and some lorne for the next day. AwazFM and I ran some pretty damn good steak and mac-cheese for diesel, over a bottle of Wilmslow’s finest Casa Italinio Chianti. Capped the night with an even more successful one at the Dalwhinnie lodge where we double-downed on pint and cocktail each round. I’m pretty sure that, even though we didn’t realize it, we were kicked out. Back at Lee’s, Jooma and I ran a night cap of Ferris Bueller’s Day Off over six teas. Ran a couple’ lorne for brekkie the next day then hit up Beinn One Hundred across from Beinn Day Before while AwazFM uprighted it in the FIVE.',
             images: [
@@ -4561,14 +4544,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: ['Dalwhinnie Old School'],
         },
         {
             id: 'E2022029',
-            prefix: '',
             names: ['Beinn England'],
             startDate: '28th of May',
-            endDate: '',
             description:
                 'Great stroll in Blair Atholl, England preceded by bolognese and a tube with some Dire Straits. Proceeded by a trip to House of Bruar, a ‘two scooop’ pint of ice cream, coffee, and the purchase of a beautiful new headware piece.',
             images: [
@@ -4578,14 +4558,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022028',
-            prefix: '',
             names: ['The Fruit'],
             startDate: '22nd of May',
-            endDate: '',
             description: 'A quick Sunday squelch in some wet moorland.',
             images: [
                 {
@@ -4594,14 +4571,15 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022027',
-            prefix: '',
             names: ['The Magnificent Seven'],
             startDate: '13th of May',
             endDate: '14th of May',
+            features: {
+                youthHostels: ['Glencoe'],
+            },
             description:
                 'A weekend away for Crug’s birthday sadly for me turned into Beinn Lose The Phone, so these leisurely pieces unfortunately do not belong to me. It was however an excellent weekend. Glen Shiel seven on the Saturday, followed by a semi-successful stop bag of the Glencoe Youth Hostel. Then the ferree to Corran on Sunday for a roll with lorne, black, bacon and egg. Also finally bagged Drovers on the drive-out.',
             images: [
@@ -4611,14 +4589,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: ['Glencoe'],
         },
         {
             id: 'E2022026',
-            prefix: '',
             names: ['Beinn Uruguay'],
             startDate: '7th of May',
-            endDate: '',
             description:
                 'Back to business. A DISC in the back of the FIVE with sushware then bed. A real Friday night. Uruguay turned out to be a bit more of an interesting one than expected. We both took our respective ditours and ended up straight arming Uruguay. See Strava for the deets.',
             images: [
@@ -4628,14 +4603,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022025',
-            prefix: '',
             names: ['T2 Trainspotting'],
             startDate: '3rd of May',
-            endDate: '',
             description:
                 'A return to the field for yet another insurance bag to keep the ten-week streak in-tact. Back to Corrour for the additional two Munros south of Ossian. It was a fantastic day in the clag, definitely needed the compass to keep me right.',
             images: [
@@ -4645,11 +4617,9 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022024',
-            prefix: '',
             names: ['St. Andrews Pit Stop II'],
             startDate: '30th of April',
             endDate: '1st of May',
@@ -4662,14 +4632,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022023',
-            prefix: '',
             names: ['Trainspotting'],
             startDate: '26th of April',
-            endDate: '',
             description:
                 'Back on the solo proj’s! The first solo project of 2022 took me to Corrour which didn’t disappoint. If you turn a blind eye to the construction on the estate and the fact that the owner is actually having a ROAD put in (wtf!), the remoteness is not closely matched (until Out Where the Buses Don’t Run of course). I planned to run all three southerly Munros however, by the time I’d made my way through the famous bog sink pits on the Beinn na Lap walk-out, if I’d added in the extra two, it would be Corrour-Glasgow run-out. So a trip to the café and an episode of Selling Sunset it was. I also hit my first 39bpm in the cafe but it jumped back up to 42 when I grabbed my phone to capture the moment, RIP.',
             images: [
@@ -4679,14 +4646,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022022',
-            prefix: '',
             names: ['Thornliemuir Duo'],
             startDate: '25th of April',
-            endDate: '',
             description:
                 'Another frustration-driven Monday trig bag. Back out to Neilston for two of the remaining three I still have to run out there.',
             images: [
@@ -4696,14 +4660,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022021',
-            prefix: '',
             names: ['Hot Date II'],
             startDate: '23rd of April',
-            endDate: '',
             description:
                 'After a good one at Vinny’s, it was time for the First Lady Jooma Loor and I to finally bag the ALL.',
             images: [
@@ -4713,11 +4674,9 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022020',
-            prefix: '',
             names: ['The Cairnwell Nine'],
             startDate: '22nd of April',
             endDate: '23rd of April',
@@ -4806,14 +4765,11 @@ export const eventData = {
                     description: 'Out to Beinn One',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022019',
-            prefix: '',
-            names: ['To Live And Breathe Waterfoot – Waterfoot 50'],
+            names: ['To Live And Breathe Waterfoot - Waterfoot 50'],
             startDate: '21st of April',
-            endDate: '',
             description:
                 'A monumental stroll to the ‘foot for the 50th bag. Followed by a cool down at the wind farm.',
             images: [
@@ -4823,7 +4779,6 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022018',
@@ -4833,6 +4788,9 @@ export const eventData = {
             ],
             startDate: '15th of April',
             endDate: '17th of April',
+            features: {
+                youthHostels: ['Sheena’s Backpacker’s Lodge'],
+            },
             description:
                 'A weekend trip to Glenfinnan and Mallaig. Started with a can on the A82 followed by an emergency pit stop for another can at the Green Welly Stop. Then it was onto Morrisons Fort Bill for more cans and a double-down on Pringles and Manomasas. We pitched in the car park for the round and fired up the BBQ for the second double-down on the M&S 3 for £10 meat deal. It was McNeilerAwazFM and myself in the back of the FIVE this time, put to sleep by some Wojak. Saturday’s project was good. Back on the trend of long walk-ins but it was good to hit a couple’ ‘ros and Corbett tops. Shoutout to Sheena in Mallaig, accomodation is luxurious. Sunday was a slow day after a night in the Steam Inn (yes, the steamin’ mish) so no Beinn Guylian Chocolatier, but a stop in an Arisaig café and the Nevis Centre Fort Bill for lunch.',
             images: [
@@ -4842,11 +4800,9 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022017',
-            prefix: '',
             names: ['Beinn Slugger'],
             startDate: '8th of April',
             endDate: '9th of April',
@@ -4859,14 +4815,16 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022016',
             prefix: 'Glencoe IX',
-            names: ['Ùrar – 2022 Edition', 'Glencoe Wage'],
+            names: ['Ùrar - 2022 Edition', 'Glencoe Wage'],
             startDate: '1st of April',
             endDate: '3rd of April',
+            features: {
+                youthHostels: ['Glencoe Independent (Bunkhouse)'],
+            },
             description:
                 'The first gentlemen’s retreat of 2022. Excellent to finally have McNeilerAwazFM back on tour, and see the debut of First Lady Jooma Loor on the 2020-Present project tour. It was a pretty typical Friday with spaghellio harbonhero with garlio de baginio, and three ‘eineke’. After a leisurely start to Saturday, we made our way back to the one I promised myself I would never touch again, Ben Ùrar. However, it turned out to be an excellent decision. This hill certainly redeemed itself this weekend with the sun, snow, burn and Merrill Lynch corb. The Chinese chicken roast dinner service went excellently, ending with a standing ovation as Mark and I made our way from the kitchen, through the dining room, to the Range Rover. After that, it was off to the Clachaig for a heavy one followed by a crate and a Lewis dram before bed. Sunday saw a slower start and a very challenging lap of Glencoe Lochan. Accompanied by a debriefing over some Oomer content. Five erosions and on the road again. We made a pit stop in Tyndrum to finally bag a cheese wageburger at TJ’s.',
             images: [
@@ -4876,11 +4834,9 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: ['Glencoe Independent (Bunkhouse)'],
         },
         {
             id: 'E2022015',
-            prefix: '',
             names: ['Loch YeeYeeAssHaircut'],
             startDate: '25th of March',
             endDate: '26th of March',
@@ -4923,14 +4879,11 @@ export const eventData = {
                     description: 'Test Description',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022014',
-            prefix: '',
             names: ['Strathaven Stunners'],
             startDate: '23rd of March',
-            endDate: '',
             description:
                 'I don’t usually stop on the old loop but the stunning hazy 17° blue sky got me thinking about a time when this landscape might no longer exist, after the boomer developers get their hands on it. So, here’s some shots.',
             images: [
@@ -4940,14 +4893,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022013',
-            prefix: '',
             names: ['Rolling Back the Years'],
             startDate: '20th of March',
-            endDate: '',
             description:
                 'Rolling back the years to a 2011 classic in a fine day spent with Paul and an old Dundas & Money Wilson friend.',
             images: [
@@ -4957,11 +4907,9 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022012',
-            prefix: '',
             names: ['Beinn Bhuidhe'],
             startDate: '18th of March',
             endDate: '19th of March',
@@ -4974,12 +4922,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022011',
             prefix: 'Dùran Dùran III',
-            names: ['The Bipass – Ride Across the River'],
+            names: ['The Bipass - Ride Across the River'],
             startDate: '11th of March',
             endDate: '12th of March',
             description:
@@ -4991,14 +4938,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022010',
-            prefix: '',
-            names: ['Monday Miles – The Fantastic Four'],
+            names: ['Monday Miles - The Fantastic Four'],
             startDate: '7th of March',
-            endDate: '',
             description:
                 'Beginning to come down from the high of the mountaineering and PR roadie setting over the weekend, I decided it was the time to run my first fantastic four on Strava. That is, the four GoATs of sport as my four most recent uploads. Of course, as follows: the Queens Park four set stunner, the Fort of Bogs, Strathaven torque fest and this, the 2020 OG, the ‘foot.',
             images: [
@@ -5008,11 +4952,9 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022009',
-            prefix: '',
             names: ['Fort of Bogs'],
             startDate: '4th of March',
             endDate: '5th of March',
@@ -5025,14 +4967,12 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022008',
             prefix: 'The Big Four-O II',
             names: ['A Monumental Day in the ‘foot'],
             startDate: '25th of February',
-            endDate: '',
             description:
                 'Projer Baggerer and First Lady Jooma Loor took to the urban streets in a traditional 2020 fashion to run their first Waterfoot lap as a duo in over a year! This wasn’t any lap though. This lap marked Projer Baggerer’s 40th round on the famous route. A day to remember. Of course, there’s no good pictures coz it was about 9pm so here’s the ALL in the bay ready to chauffeur Jooma Loor to the start line, and some very displeasing diesel news.',
             images: [
@@ -5042,14 +4982,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022007',
-            prefix: '',
             names: ['Chips, Dips, Chains And Whips'],
             startDate: '20th of February',
-            endDate: '',
             description:
                 'Every good session has some chips, dips, chains and whips. Even if the boots are stewed buttwad! A much needed very short day proj to the Sub Two’er Dumyat, in my future home of Stirling. Excellent to rawdog my first cairn bucket. Only about 30% Shariq Malik weather this time. Yeah-yeah-what. Liverking out.',
             images: [
@@ -5059,14 +4996,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022006',
-            prefix: '',
             names: ['Hot Date'],
             startDate: '19th of February',
-            endDate: '',
             description:
                 'A hot chick, bolognese, a medium bodied red, and the One Tree Hill soundtrack. What more do you need?',
             images: [
@@ -5076,11 +5010,9 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022005',
-            prefix: '',
             names: ['Simulated Failed Project'],
             startDate: '11th of February',
             endDate: '12th of February',
@@ -5093,14 +5025,12 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022004',
             prefix: 'Beinn Shariq Malik',
             names: ['Riders on the Storm'],
             startDate: '5th of February',
-            endDate: '',
             description:
                 'The north face of Shariq Malik destroyed us. Only 50mph gusts but the hale, rain and clag made it way more depressing than a Corb should be. Good fun tho.',
             images: [
@@ -5110,14 +5040,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022003',
-            prefix: '',
             names: ['Busbyside And Thornton Hill'],
             startDate: '24th of January',
-            endDate: '',
             description:
                 'It came late this semester but it was inevitable. The second rage quit from university lectures mid-day and escape to the local trigs! This time it was a train to Busby followed by a short travvy past Busbyside, through Thorntonhall, to Thornton Hill. In classic project fashion, it was a run-for-the-train scenario at the end.',
             images: [
@@ -5127,11 +5054,9 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022002',
-            prefix: '',
             names: ['Lung Buster 3000'],
             startDate: '21st of January',
             endDate: '22nd of January',
@@ -5144,14 +5069,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2022001',
-            prefix: '',
             names: ['Some Stuff'],
             startDate: 'January',
-            endDate: '',
             description: 'Some highlights from the year so far.',
             images: [
                 {
@@ -5160,7 +5082,6 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
     ],
     2021: [
@@ -5170,6 +5091,9 @@ export const eventData = {
             names: ['New Year, Same Chads'],
             startDate: '31st of December',
             endDate: '2nd of January (2022)',
+            features: {
+                youthHostels: ['Aviemore'],
+            },
             description:
                 'An interesting one, finally seeing the birth of a new meme.. tea. Of course, the weekend was started with the traditional seeing off of a loaf in the back of the FIVE and some whisky chocolate liqueurs. Well done Oxy, good find. This time, from Murray’s famous Perth Tesco. Many a beer had already been deleted upon arrival and to be honest, it was a blur from then to 4am. I removed 4l of Aviemore’s finest water from existence before bed so obviously I was fine for a 9am wake-up and promptly obliterated some lorne, ran a run and helped the mighty Hamish clean up the embarassment in the care home. When the rest finally dragged themselves up at 2pm, it was off to Loch Morlich for a 20 meter walk then back to the currum for Jile, Skyfall and tea. And, just a little rum and trop. Back when we were drinkers, this would have been laughable however now that we are seasoned tea enthusiasts, we sought continuation of the warm embrace of a council brew in a trip to The House of Bruar and Hettie’s Tea Rooms, Pitlochry to break up the Sunday drive home.',
             images: [
@@ -5179,11 +5103,9 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: ['Aviemore'],
         },
         {
             id: 'E2021050',
-            prefix: '',
             names: ['Christmas 2021'],
             startDate: '25th of December',
             endDate: '26th of December',
@@ -5196,51 +5118,25 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021049',
-            prefix: '',
             names: ['To Live And Breathe Ben More'],
             startDate: '18th of December',
-            endDate: '',
             description:
                 "This is undoubtedly my favourite project to date. Not to mention, one of the most unexpected. Since first running Ben More and Stob Binnein in April, even though I was still fresh talent in the highland game, I knew the route would always be one of my favourites. In fact, Ben More's ascent is by far my favourite incline; steep, grindy and so rewarding. That’s why if a perfect weather day ever came by, this would be how I chose to spend my day. And that’s exactly what happened, a passing by of the TV while the BBC weather gal spoke of the possible inversion across the entirety of the west of Scotland had me swifty cancel my Firday night plans and immediately book my west highland ticket! With stunning inversions and 17° summits, you can see for yourself that it paid off.",
             images: [
                 {
-                    url: 'https://lewisbritton.com/blog/instant-gram/2021/moremore29.jpg',
-                    alt: '',
-                    description: '',
-                },
-                {
-                    url: 'https://lewisbritton.com/blog/instant-gram/2021/moremore28.jpg',
-                    alt: '',
-                    description: '',
-                },
-                {
-                    url: 'https://lewisbritton.com/blog/instant-gram/2021/moremore27.jpg',
-                    alt: '',
-                    description: '',
-                },
-                {
-                    url: 'https://lewisbritton.com/blog/instant-gram/2021/moremore26.jpg',
-                    alt: '',
-                    description: '',
-                },
-                {
-                    url: 'https://lewisbritton.com/blog/instant-gram/2021/moremore13.jpg',
+                    url: '',
                     alt: '',
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021048',
-            prefix: '',
-            names: ['Strathaven 20 – Five and Drive, Eleven and Ride'],
+            names: ['Strathaven 20 - Five and Drive, Eleven and Ride'],
             startDate: '13th of December',
-            endDate: '',
             description:
                 'Let’s keep it family appropriate on here and say.. ‘nuff said. Good sobering ride though.',
             images: [
@@ -5250,7 +5146,6 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021047',
@@ -5258,6 +5153,9 @@ export const eventData = {
             names: ['Farewell, My Love...', 'Papped Out.'],
             startDate: '10th of December',
             endDate: '12th of December',
+            features: {
+                youthHostels: ['Glencoe Independent (Bunkhouse)'],
+            },
             description:
                 'The final send-off for the year. The event we’d been waiting for. Finally running “The Corbett”!! This weekend is probably the best example of something actually going to plan. A few loaves, blocks and cans upon arrival at the indy hostel then off to the Clachaig for some black gold. A soothing and much needed 30° lie-in the next morning followed by “The Corbett”, only seven months after we originally set our eyes on it! Of course our Christmas dinner went down very smoothly afterwards along with a medium body. Sunday mostly existed to burn off the disgusting amount of roast-up, fruit cake and brandy cream which had been consoomed the night before. The Pap was an excellent burner, just what we needed.',
             images: [
@@ -5267,14 +5165,12 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: ['Glencoe Independent (Bunkhouse)'],
         },
         {
             id: 'E2021046',
             prefix: 'Turning 30 II',
             names: ['300 Miles of Waterfoot'],
             startDate: '4th of December',
-            endDate: '',
             description: 'Yet another 30th birthday, this time in the foot.',
             images: [
                 {
@@ -5283,14 +5179,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021045',
-            prefix: '',
             names: ['David Meikle Bin'],
             startDate: '27th of November',
-            endDate: '',
             description:
                 'Yet another storm cancelling project plans. However, it was a great excuse to get a Glencoe briefing session in on a long-awaiting round of the great David Meikle Bin in Carron Meikleham Valley.',
             images: [
@@ -5300,11 +5193,9 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021044',
-            prefix: '',
             names: ['Back on the Horse'],
             startDate: '19th of November',
             endDate: '20th of November',
@@ -5317,7 +5208,6 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021043',
@@ -5325,6 +5215,9 @@ export const eventData = {
             names: ['Four Chads, Three Bottles of Whisky'],
             startDate: '12th of November',
             endDate: '14th of November',
+            features: {
+                youthHostels: ['Aviemore'],
+            },
             description:
                 'Ahh what a good one. First send with Oxy on board, had no idea what I was in for. The drinking started early in the FIVE on the drive-in but I wasn’t complaining, we had plenty-a-crate to work out way through. Stuck to the traditional loaf on the drive-in too, before the M&S roast beef in the Aviemore Youth Hostel. We worked our way through about half a crate each then headed boys én tourè to Mambo’s, where Griff and I spent the evening sparking some questionable debates in the SUMC chat. They headed to whatever that Aviemore nightclub is called but of course I did a Lewis and just went back to the hostel and solo’d a few’ in an arm chair. This was the least messy of the nights. We were all still a little tender the next day however, and so saw the birth of the Aviemore care home. Lorne and trop down and off Murk and I went for an attempted walk around Loch Morlich. We only made it through the front door of the Pine Marten though. Couple coffees and the worst chips of our lives later, we attempted the walk-out. Oxy and the Griff had to rescue us in the FIVE on their abseiling drive-out however. Good Thai curry sobered us up right good after that. Gained me the title of the ‘Highland chef’ from Oxy. Anyway, after that it was straight back on the crates and ‘Lewis measure’ drams. That’s like a 300ml glass. Got us a good three bottles down between four people in no time. They headed back out to the nightclub after that. Who knows what I did. Give them the room key certainly wansn’t something I did. Woke up to smashed-up tube, cans, toilet paper and a wet flare sign the next morning so must have been a good one. Wee Route 7 Cafe sorted us out the next morning. Drive-out was very questionable. Griff didn’t speak a word.',
             images: [
@@ -5334,14 +5227,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: ['Aviemore'],
         },
         {
             id: 'E2021042',
-            prefix: '',
             names: ['Neilston ‘Two’er’ Pad'],
             startDate: '7th of November',
-            endDate: '',
             description:
                 'A quickie blast of the ALL over to Neilston for a couple’ more trigs.',
             images: [
@@ -5351,11 +5241,9 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021041',
-            prefix: '',
             names: ['St. Andrews Pit Stop'],
             startDate: '5th of November',
             endDate: '6th of November',
@@ -5368,14 +5256,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021040',
-            prefix: '',
             names: ['Castle Farm'],
             startDate: '4th of November',
-            endDate: '',
             description:
                 'A slight d’tour from the usual Waterfoot lap to bag the local trig this time. Yeah, I went all those laps without even knowing it was there. I didn’t actually count this as a Waterfoot lap because I was trying to save the next milestone to do with Murk. So that, along with the fact that back in 2020 Strava cut out mid-‘foot once, means my actual Waterfoot count is what the table says plus two!',
             images: [
@@ -5385,14 +5270,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021039',
-            prefix: '',
             names: ['Strathaven Stunners'],
             startDate: '3rd of November',
-            endDate: '',
             description:
                 'Yet again, attempting to preserve some stunning scenery in the least appropriate and authentic form imaginable. Although these were taking in waiting for a taxi to come pick up me, RoGeR and our flattened tyre. My relationship with inner tubes is horrific.',
             images: [
@@ -5402,14 +5284,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021038',
-            prefix: '',
             names: ['Meikle Dripps'],
             startDate: '31st of October',
-            endDate: '',
             description:
                 'Hahahahaha yeah, this one speaks for itself. When I saw the name of this trig over my daily OS map briefing session, I knew it had to be done ASAP.',
             images: [
@@ -5419,11 +5298,9 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021037',
-            prefix: '',
             names: ['Beinn a’ Ghlò'],
             startDate: '22nd of October',
             endDate: '23rd of October',
@@ -5436,7 +5313,6 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021036',
@@ -5453,14 +5329,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021035',
-            prefix: '',
             names: ['Cnoc Linn Park Mhòr'],
             startDate: '10th of October',
-            endDate: '',
             description:
                 'This was just a short Sunday wander to get another local trig bagged. Until about a week ago, I actually had no clue there was one this close to home. Convenient when the 15mph winds are too much for a Strathaven loop.',
             images: [
@@ -5470,14 +5343,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021034',
-            prefix: '',
             names: ['SUMC Cobble'],
             startDate: '2nd of October',
-            endDate: '',
             description:
                 'I didn’t think I’d be back on The Cobbler for a third time this year after The Playground and Last Day of Summer? however, it of course never disappoints. It was also good to finally see The Cobbler in the clag. I’ve only conquered this hill in clear, sunny conditions so it was good to experience the ESE face in slightly more awkward conditions. I say this was a SUMC walk but I did the ascent on my own coz I wanted the chad 120bpm run-in heart rate and I don’t believe in the ‘taking breaks’ hoax but, was joined by three excellent gents on the descent. The route took me almost three hours, hitting three segment PRs on the way. I have no clue how good that time is overall though coz I’ve never done this hill on it’s own. So yes, I did have Narnain, Ìme, Vane and Vorlich blue balls by the end of it.',
             images: [
@@ -5487,14 +5357,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021033',
-            prefix: '',
             names: ['Duncarnock'],
             startDate: '28th of September',
-            endDate: '',
             description:
                 'My introduction to the fine sport of triangulation station bagging. Of course, I ’ve seen my fair share of trigs before on hills but they don’t really count if they’re attached to something you can tick off on Walkhighlands. The rogue ones are the true ones. Anyway, an excellent walk from Neilston station to Patterton and some lovely views out north-west (wink).',
             images: [
@@ -5504,7 +5371,6 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021032',
@@ -5521,16 +5387,13 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021031',
-            prefix: '',
             names: ['1v1’ing Mark'],
             startDate: '18th of September',
-            endDate: '',
             description:
-                'Finally taking to the highlands with McNeilerAwazFM to hit up a 1v1 420 B L A Z E – I T 360 no scope double wall bang Nuketown window hack. ‘Twas a successful session filled with good domestic discussions and panang curry recipe planning.',
+                'Finally taking to the highlands with McNeilerAwazFM to hit up a 1v1 420 B L A Z E - I T 360 no scope double wall bang Nuketown window hack. ‘Twas a successful session filled with good domestic discussions and panang curry recipe planning.',
             images: [
                 {
                     url: '',
@@ -5538,14 +5401,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021030',
-            prefix: '',
             names: ['Last Day of Summer?'],
             startDate: '8th of September',
-            endDate: '',
             description:
                 'The plan for this one was to add two new things into one of my favourtie routes. Surprisingly, I’d never actually been to the Narnain trig so the plan was to take the trad Narnain path from the A83 which crosses over the trig and all three cairns. Then, to drop down the Ben Arthur (The Cobbler) via the tourist staircase and follow the usual route on to Beinn Ìme. After this, I’d drop form Beinn Ìme to Beinn Luibhean, the corbett to the south west of it then do an A83 walk-out. All went to plan until I saw how disgusting the traverse looked; lose all your height, followed by fort of bogs, followed by fort of bogs vertical edition. So, I just came back down the tourist path and forestry commission access. Great day still, highs of 34° and a stunning coffee at Slanj.',
             images: [
@@ -5555,7 +5415,6 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021029',
@@ -5563,6 +5422,9 @@ export const eventData = {
             names: ['A Weekend on Dave'],
             startDate: '3rd of September',
             endDate: '5th of September',
+            features: {
+                youthHostels: ['Dalwhinnie Old School'],
+            },
             description:
                 'An excellent one at Lee’s and Joe’s. Friday night BBQ in the Newtonmore proj car park with the slow cooked Tesco yellow label beef side, a tube and a drum. Ahh back in the drum days. Then it was off to ‘bed’; upright in the passenger’s seat of the ‘sta. Good proj the next day with a one-to-one rice-soy ratio. Then off to Lee’ five star hostel for steak and mac-cheese. Capped the night off with a legendary one in the Dalwhinnie Lodge, or ‘BAR’ as it’s advertised, with many-a-pint, many-a-cocktail, many-a-cake, and dusting off the absinthe chamber. Ran another upright on the sofa when we got back to Lee’s. Was a rough start the next day so I ran a third upright in the ‘sta while the others did the proj. Great pit stop at the Bothy Bar at the Atholl Arms for fish and chips on the drive-out though.',
             images: [
@@ -5572,11 +5434,9 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: ['Dalwhinnie Old School'],
         },
         {
             id: 'E2021028',
-            prefix: '',
             names: ['Wilmslow'],
             startDate: '29th of August',
             endDate: '31st of August',
@@ -5589,14 +5449,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021027',
-            prefix: '',
             names: ['Beinn an Lochain'],
             startDate: '28th of August',
-            endDate: '',
             description:
                 'The first project in the ALL. One that needs little words. This corbett is one of the most underrated hills I’ve visited so far. So much reward for so little effort.',
             images: [
@@ -5606,14 +5463,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021026',
-            prefix: '',
             names: ['Strathaven Stunners'],
             startDate: '25th of August',
-            endDate: '',
             description:
                 'Preserving some stunning scenery in the least appropriate and authentic form imaginable. But it’ll have to do.',
             images: [
@@ -5623,7 +5477,6 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021025',
@@ -5640,14 +5493,12 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021024',
             prefix: 'Dùran Dùran',
             names: ['Race Against the Thunderstorm'],
             startDate: '12th of August',
-            endDate: '',
             description:
                 'A quickie solo train runner out of boredom and desire for a proj, even though the biggie version was soon-to-come. Faced the thunderstorm and 40mph winds which weren’t encouraging enough to run the round of five. Finished early so I ran the walk-out from Bridge of Orchy to Tyndrum and stopped for a horrific and overpriced Real Food Cafe coffee.',
             images: [
@@ -5657,12 +5508,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021023',
             prefix: 'Glencoe V',
-            names: ['The Rereturn – Unpause'],
+            names: ['The Rereturn - Unpause'],
             startDate: '6th of August',
             endDate: '7th of August',
             description:
@@ -5674,14 +5524,12 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021022',
             prefix: 'The Big Four-O',
             names: ['Lindt Master Chocolatier'],
             startDate: '3rd of August',
-            endDate: '',
             description:
                 'An excellent solo train proj to celebrate my 40th birthday. Of course it was no Cruachan but the views of Cruachan made it very much worth it. There was also a great grindy incline to scratch my itch. Met some decent English on route as well, believe it or not. Ran into them again at the post-proj cafe for a debriefing. Ended up being pretty pricey though. Coffee was about £4 which wasn’t really ideal after paying £10.50 for a bottle of water at the convenience store. The £10 of course being the Skippinish Western Ocean album to take my 50p purchase up to the minimum card spend.',
             images: [
@@ -5691,12 +5539,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021021',
             prefix: 'Glencoe IV',
-            names: ['Skyfall – Pause'],
+            names: ['Skyfall - Pause'],
             startDate: '23rd of July',
             endDate: '24th of July',
             description:
@@ -5708,14 +5555,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021020',
-            prefix: '',
             names: ['The Playground'],
             startDate: '15th of July',
-            endDate: '',
             description:
                 'I consider this project my greatest achievement to date. Not only in the hills or in sport but, in life. At 23.94 miles and 9,162 feet, this 13.5 hour day is by far one of the most enduring, satisfying and beautifully rewarding I’ve ever experienced. It was part flex, part chad, and part “I’ve just had my Coooviiid Noynteen vaccine and want to prove it doesn’t effect me”. I was also recovering from a flu that I got, from the dumb 3am starts at my wagey job cucking and grinding for the paper (later leading to the A6 C6 TDV allroad TDI quattro, however), and grinding daily Strathaven cycles. Anyway, no need to complain, I deserve no sympathy. This was a damn good day. The Arrochar Alps still get a bad rep’ amongst more serious enthusiasts or ‘baggers’ (actually soys). However, how could you possibly deny the beauty and versatility of the playground that is these stunning four Munros, two Corbetts, and Corbett top? Especially when they’re basically in the back yard of the major western cities. The payoff for such a cheap day out is unmatched. Of course en route to having only seven minutes to spare at the train station, this route also saw the famous coining of the A82 Run-Out and its components: Slingshot, Freerun Frenzy, Tightrope Walk 1, and Tightrope Walk 2.',
             images: [
@@ -5725,14 +5569,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021019',
-            prefix: '',
             names: ['Cruachan Ridge Walk'],
             startDate: '1st of July',
-            endDate: '',
             description:
                 'The first solo proj I set out to send without doing any research. Originally planned to do the Crucachan four just by looking at a topographical map with a minimal amount of features. I.e. couldn’t actually tell it was a real ridge that you can’t just turn the diesel and autopilot on for. Of course when I saw the ridge, I was not disappointed. It made for one of my most stunning and rewarding projects to date. I did however, only have time to do the Cruachan two. Goddamn train projects.',
             images: [
@@ -5742,7 +5583,6 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021018',
@@ -5759,14 +5599,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021017',
-            prefix: '',
             names: ['Fenwick + Wind Farm'],
             startDate: '22nd of June',
-            endDate: '',
             description:
                 'A very rare stop en-route for a photo opportunity. Doesn’t effect my local legend status though, so can afford it.',
             images: [
@@ -5776,14 +5613,12 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021016',
             prefix: 'Turning 30',
             names: ['Drams at the Readee'],
             startDate: '20th of June',
-            endDate: '',
             description:
                 'First real experience in the ooah clag clug for the day. Wrong turn to start the proj saw us take a very interesting d’tour across an excellent fort of bogs towards, what we didn’t realise was, a corbett. Of course we turned back towards the ‘ros and kicked ourselves later when we found out. Anyway, excellent incline to Beinn Numer One then it was just turn the diesel on from there. I wasn’t that familiar with the Lawers range at the time to I had no clue that, because we weren’t dong the Lawers seven, just the ones the Griff had missed last time he was in the round, he made me miss Lawers by about 500ft from Beinn Ghlas. Let’s not get hung up on that anyway.',
             images: [
@@ -5793,14 +5628,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021015',
-            prefix: '',
             names: ['‘Larich Five... Minus One Coz Done It'],
             startDate: '17th of June',
-            endDate: '',
             description:
                 'Ahh the birth of the perpetual use of the term ‘project’ for hill rounds. This was a fairly routine proj to be honest. It was touching on the more enduring side but really it was just the perfect length and amount of climbing. Quite an interesting encounter on Beinn Adrian Griffiths actually where a fell runner asked me to photograph him next to the cairn, followed by a demand that I run down with him to Beinn Tachymeter to do the same again. As much of a douche as he was, I sort of appreciated the dominant pragmatic man’s approach, so of course I did it. Lucky he didn’t follow onto Beinn Suck Ma Groin or Beinn Pollo Ad Astra though. I’d already done Beinn Whore so no need for Beinn Drop All Your Height. The route was capped off beautifully by a run-out back to Crianlarich and a couple’ punnets of Benmore Farm strawberries with the view of More himself.',
             images: [
@@ -5810,7 +5642,6 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021014',
@@ -5827,14 +5658,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021013',
-            prefix: '',
             names: ['Beinn Whore'],
             startDate: '10th of June',
-            endDate: '',
             description:
                 'Beinn first hill with Owain and his omnidriod poles. Good claggy fun.',
             images: [
@@ -5844,14 +5672,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021012',
-            prefix: '',
             names: ['Sgiath Chuil And Meall Glas'],
             startDate: '6th of June',
-            endDate: '',
             description:
                 'A fairly routing Sunday project. Not a great deal to report. Gained a trig, missed a corbett. Typical. No Saturday project this week coz we got to successful wasted on Friday celebrating my birth and observing First Lady Jooma Loor querying Able Faces senior on how often Marc Banjamin relieves his semen across Able Faces senior’s face.',
             images: [
@@ -5861,14 +5686,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021011',
-            prefix: '',
             names: ['Giffnock Village Happenings'],
             startDate: '4th of June',
-            endDate: '',
             description:
                 'The gentlemen and I took to the streets of Finneston for a Pickled Ginger sushi sesh to celebrate my birth. We followed this up with a stop at the McNeilerAwazFM kitchen for a rate and some cho dai, in my new found love, for fingers.',
             images: [
@@ -5878,14 +5700,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021010',
-            prefix: '',
             names: ['Arrochar Four... Minus One Coz Train'],
             startDate: '2nd of June',
-            endDate: '',
             description:
                 'Following the century; continuing the trend of ‘I’ve just spent a weekend in Manchester and desperately need an inappropriate amount of activity’, I finally took to the field of The Playground, intending to hit up the round of four munros. It was a perfect day, still in the 25-30° period but of course I was wearing black gloves and a buff to cover up my sun burn from the day before. It was another monumental day, seeing my longest project to date and the birth of the A82 run-out from the Ben Vorlich road. Sadly I didn’t hit Vorlich though because of, you guessed it, train times. However, the 3 mile run across the A82 and adjacent beach certainly made for the equivalent of another munro. For other Wojak reasons, this day was slightly monumental in another way. I mean, not in any way which lives up to the project itself but certainly in satisfaction of my ‘controysoytion to soyciety’ and my ‘footure’. I got the call half way Beinn Ìme from ScoyttishSoyer to tell me I’d been accepted on the scholarship. That is, I wouldn’t be paying the eight large for my upcoming Strathbloat course. This was quite funny considering just the day before, while on the century, I got the call from my new wagey boss to tell me I got the job I applied for there.',
             images: [
@@ -5895,14 +5714,12 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021009',
             prefix: 'Lui Four',
             names: ['Redemption in Blood'],
             startDate: '27th of May',
-            endDate: '',
             description:
                 'As those select few know, this is probably the most important day of my 2021 and my most monumental achievement to its date. We all know about my two failed attempts on Ben Lui, laughable. “Dude you’re a bloody embarrassment”. But a few weeks later something clicked. Two of my friends were talking about going out to send the Lui Four and I’m not sure if it was jealousy of ability and being considered one of those incapable or, just simply that I was so anxious to prove to myself that I could do it but, it was in that moment that I drunkenly decided to book my second ticket to Tyndrum for one more attempt. Just in the passing of these few weeks though, my attitude changed. I’d felt a different kind of connection to hills and why people want to escape to them. I began to appreciate the freedom and happiness it can bring, instead of ticks on a 2007 website. So, I studied up on the literature, videos, and started to autistically learn all the hill and route beta because this time it actually excited me, it wasn’t just a task. I made my appearance in Tyndrum the following week and sent the Lui four. From then on, it was a summer of solo project, followed by solo project, followed by weekend duo project. Repeat until death.',
             images: [
@@ -5912,7 +5729,6 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021008',
@@ -5920,6 +5736,9 @@ export const eventData = {
             names: ['Bidean nam Bail', 'Bukkake Etive Beag'],
             startDate: '20th of May',
             endDate: '22nd of May',
+            features: {
+                youthHostels: ['Glencoe Independent (Bunkhouse)'],
+            },
             description:
                 'My real introduction to the beauty of my country, on the first gentlemen’s retreat of 2021. This was an excellent weekend with the gentlemen, starting with loading the Saab full of creates and barbeque food for the Thursday camp in the yard of the.. yuck.. Kingshouse Hotel. A freezing cold pitch with the tepid embrace of a Lost Layger drew us promptly to the bar at the Kingshouse, only to be let down by their lack of hospitality. Putting them in the middle finger club. Anyway, great day on Bidean next, even though I babied out of the summit. Followed by the classic Co-op dinner on the Glencoe Independent rage stove. Of course, also a lorne fry-up the next morning to fuly open her up. Saturday was excellent too. A successful Buachaille Etive Bagged. Clachaig for the second night, bit of Choi Dai for fingers ofc.',
             images: [
@@ -5929,14 +5748,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: ['Glencoe Independent (Bunkhouse)'],
         },
         {
             id: 'E2021007',
-            prefix: '',
             names: ['Ben Donich'],
             startDate: '11th of May',
-            endDate: '',
             description:
                 'A stunning and unexpectedly rewarding evening project.',
             images: [
@@ -5946,7 +5762,6 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021006',
@@ -5963,14 +5778,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021005',
-            prefix: '',
             names: ['Ben More And Stob Binnein'],
             startDate: '24th of April',
-            endDate: '',
             description:
                 'What I didn’t realise when looking across from Ben More to Stob Binnein was just how much of a famous shot it was. I mean, it’s no ‘Executive Producer: Michael Mann’ freeze frame but it’s up there in the appreciation community of Scotland’s mountains. The cornice Stob Binnein is a winter landscape photographer’s dream. This project was still in the warm-up period of 2021 during the 4am phase and wow, what a great way it was to kick off the munro season for the year. It involved one of my favourite ascents to date: the north-westerly Ben More staircase. No walk-in, no slog, just up, up, up! It was about three quarters of the way up Ben More when we realised just how good the conditions were. We ran into patches of February/March snow and the low-level cloud began to roll back in. After topping out on the hill, I realised I was overlooking my first inversion. We’d timed it perfectly as well, the cloud was floating over the ridge between the twin peaks. Although I think the 4am start was getting to the Griff a bit because he spent ten minutes arguing that what were were looking at weren’t clouds, they were in fact “inversions, Britton”. Ahh, maybe Skye is part of the mainland after all. We perched on the top of Stob Binnein at 11:30am and enjoyed the albedo effect giving us a 15° sunbathe. When people ask why I wake up early for hills or sleep in the back of a car on Friday nights, I show them this.',
             images: [
@@ -5980,14 +5792,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021004',
-            prefix: '',
             names: ['The Brack And Cnoc Coinnich'],
             startDate: '17th of April',
-            endDate: '',
             description:
                 'The birth of the 4am starts in the SAAB 9-3 1.9 Turbo Diesel Vi Wagon in a cool grey, and a wonderful start to the year. Still a hill Virgin, not a hill Chad at this point so who’s to know what will come.',
             images: [
@@ -5997,14 +5806,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021003',
-            prefix: '',
             names: ['Southside Explorations'],
             startDate: 'April',
-            endDate: '',
             description:
                 'It may have been a slow start to the year due to the soydown restrictions however, I still managed to get some fine shots from the Minecraft sheep mound and on the Waterfoot laps. The clam before the storm...',
             images: [
@@ -6014,14 +5820,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021002',
-            prefix: '',
             names: ['Dissertation SoyPoses'],
             startDate: '21st of March',
-            endDate: '',
             description:
                 'Some people feel the completion of a dissertation is a monumental moment. Especially business school students because it’s probably the only thing they’ve done their entire life that their parents have been happy about. Or that they actually feel accomplished over. Sorry, I did meet a few nice people in my time there. Anyway, I wanted to show off the x220.',
             images: [
@@ -6031,14 +5834,11 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
         {
             id: 'E2021001',
-            prefix: '',
             names: ['Mother’s Day'],
             startDate: '14th of March',
-            endDate: '',
             description:
                 'A late start to the year apparently. We don’t celebrate crap like this but idk, I felt like the dining table needed a nice centerpiece.',
             images: [
@@ -6048,7 +5848,6 @@ export const eventData = {
                     description: '',
                 },
             ],
-            youthHostels: [],
         },
     ],
     2020: [
@@ -6110,7 +5909,7 @@ export const eventData = {
                     description: '',
                 },
             ],
-            amenities: {
+            features: {
                 youthHostels: ['Cairngorm Lodge (Glenmore)'],
             },
         },
@@ -6118,7 +5917,6 @@ export const eventData = {
             id: 'E2020007',
             names: ['Bag One Get Three Free'],
             startDate: '5th of September',
-            endDate: '',
             description:
                 'First multi-‘ro project. It’s probably one of the easiest projects in the Scottish Highlands but, once again, my choice of Timberland Pradas did not make the route the first bit enjoyable. Grow up Britton, get your act together!',
             images: [
@@ -6192,7 +5990,7 @@ export const eventData = {
         {
             id: 'E2020002',
             prefix: 'Gentlemen Who Café Present',
-            names: ['Cheshire 2020 – The Golden Triangle'],
+            names: ['Cheshire 2020 - The Golden Triangle'],
             startDate: '24th of January',
             endDate: '26th of January',
             description:

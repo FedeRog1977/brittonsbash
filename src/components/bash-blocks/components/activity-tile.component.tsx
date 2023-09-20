@@ -9,10 +9,6 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
 
     const content: React.ReactElement = (
         <Spacing
-            mL={isMobile ? 0 : 70}
-            mR={isMobile ? 0 : 70}
-            mT={isMobile ? 7.5 : 15}
-            mB={isMobile ? 7.5 : 15}
             pL={isMobile ? 15 : 70}
             pR={isMobile ? 15 : 70}
             pT={isMobile ? 7.5 : 15}

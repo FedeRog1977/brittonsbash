@@ -10,7 +10,7 @@ import {
     Typography,
 } from '../../../bash-blocks'
 import { compileEvent, useDropDown, useScreenWidth } from '../../../../scripts'
-import { AmenitiesTile, InstantGramResultTileProps } from '../..'
+import { FeaturesTile, InstantGramResultTileProps } from '../..'
 
 export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
     ...props
@@ -102,44 +102,51 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                 />
             </Spacing>
             {refactoredEvent.showSportEvent && (
-                <ActivityTile
-                    leftColumn={{
-                        title: `${refactoredEvent.distance} | ${refactoredEvent.elevation}`,
-                        entries: [
-                            refactoredEvent.islands && 'Island(s)',
-                            refactoredEvent.munros && 'Munro(s)',
-                            refactoredEvent.munroTops && 'Munro Top(s)',
-                            refactoredEvent.corbetts && 'Corbett(s)',
-                            refactoredEvent.corbettTops && 'Corbett Top(s)',
-                            refactoredEvent.grahams && 'Graham(s)',
-                            refactoredEvent.subTwos && 'SubTwo(s)',
-                            refactoredEvent.donalds && 'Donald(s)',
-                        ],
-                    }}
-                    rightColumns={[
-                        {
-                            title: refactoredEvent.time,
+                <Spacing
+                    mL={isMobile ? 0 : 70}
+                    mR={isMobile ? 0 : 70}
+                    mT={isMobile ? 7.5 : 15}
+                    mB={isMobile ? 7.5 : 15}
+                >
+                    <ActivityTile
+                        leftColumn={{
+                            title: `${refactoredEvent.distance} | ${refactoredEvent.elevation}`,
                             entries: [
-                                refactoredEvent.islands &&
-                                    refactoredEvent.islands,
-                                refactoredEvent.munros &&
-                                    refactoredEvent.munros,
-                                refactoredEvent.munroTops &&
-                                    refactoredEvent.munroTops,
-                                refactoredEvent.corbetts &&
-                                    refactoredEvent.corbetts,
-                                refactoredEvent.corbettTops &&
-                                    refactoredEvent.corbettTops,
-                                refactoredEvent.grahams &&
-                                    refactoredEvent.grahams,
-                                refactoredEvent.subTwos &&
-                                    refactoredEvent.subTwos,
-                                refactoredEvent.donalds &&
-                                    refactoredEvent.donalds,
+                                refactoredEvent.islands && 'Island(s)',
+                                refactoredEvent.munros && 'Munro(s)',
+                                refactoredEvent.munroTops && 'Munro Top(s)',
+                                refactoredEvent.corbetts && 'Corbett(s)',
+                                refactoredEvent.corbettTops && 'Corbett Top(s)',
+                                refactoredEvent.grahams && 'Graham(s)',
+                                refactoredEvent.subTwos && 'SubTwo(s)',
+                                refactoredEvent.donalds && 'Donald(s)',
                             ],
-                        },
-                    ]}
-                />
+                        }}
+                        rightColumns={[
+                            {
+                                title: refactoredEvent.time,
+                                entries: [
+                                    refactoredEvent.islands &&
+                                        refactoredEvent.islands,
+                                    refactoredEvent.munros &&
+                                        refactoredEvent.munros,
+                                    refactoredEvent.munroTops &&
+                                        refactoredEvent.munroTops,
+                                    refactoredEvent.corbetts &&
+                                        refactoredEvent.corbetts,
+                                    refactoredEvent.corbettTops &&
+                                        refactoredEvent.corbettTops,
+                                    refactoredEvent.grahams &&
+                                        refactoredEvent.grahams,
+                                    refactoredEvent.subTwos &&
+                                        refactoredEvent.subTwos,
+                                    refactoredEvent.donalds &&
+                                        refactoredEvent.donalds,
+                                ],
+                            },
+                        ]}
+                    />
+                </Spacing>
             )}
             <Spacing
                 mL={isMobile ? 15 : 70}
@@ -164,7 +171,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                         {refactoredEvent.features && (
                             <>
                                 {refactoredEvent.features.cities && (
-                                    <AmenitiesTile
+                                    <FeaturesTile
                                         title="Cities: "
                                         content={
                                             refactoredEvent.features.cities
@@ -172,7 +179,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                                     />
                                 )}
                                 {refactoredEvent.features.districts && (
-                                    <AmenitiesTile
+                                    <FeaturesTile
                                         title="Districts: "
                                         content={
                                             refactoredEvent.features.districts
@@ -180,7 +187,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                                     />
                                 )}
                                 {refactoredEvent.features.attractions && (
-                                    <AmenitiesTile
+                                    <FeaturesTile
                                         title="Attractions: "
                                         content={
                                             refactoredEvent.features.attractions
@@ -188,7 +195,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                                     />
                                 )}
                                 {refactoredEvent.features.youthHostels && (
-                                    <AmenitiesTile
+                                    <FeaturesTile
                                         title="Youth Hostels: "
                                         content={
                                             refactoredEvent.features
@@ -197,7 +204,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                                     />
                                 )}
                                 {refactoredEvent.features.supermarkets && (
-                                    <AmenitiesTile
+                                    <FeaturesTile
                                         title="Supermarkets: "
                                         content={
                                             refactoredEvent.features
@@ -206,13 +213,13 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                                     />
                                 )}
                                 {refactoredEvent.features.shops && (
-                                    <AmenitiesTile
+                                    <FeaturesTile
                                         title="Shops: "
                                         content={refactoredEvent.features.shops}
                                     />
                                 )}
                                 {refactoredEvent.features.foodstuffs && (
-                                    <AmenitiesTile
+                                    <FeaturesTile
                                         title="Foodstuffs: "
                                         content={
                                             refactoredEvent.features.foodstuffs
@@ -220,7 +227,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                                     />
                                 )}
                                 {refactoredEvent.features.bakeries && (
-                                    <AmenitiesTile
+                                    <FeaturesTile
                                         title="Bakeries: "
                                         content={
                                             refactoredEvent.features.bakeries
@@ -228,7 +235,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                                     />
                                 )}
                                 {refactoredEvent.features.gelaterias && (
-                                    <AmenitiesTile
+                                    <FeaturesTile
                                         title="Gelaterias: "
                                         content={
                                             refactoredEvent.features.gelaterias
@@ -236,7 +243,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                                     />
                                 )}
                                 {refactoredEvent.features.restaurants && (
-                                    <AmenitiesTile
+                                    <FeaturesTile
                                         title="Restaurants: "
                                         content={
                                             refactoredEvent.features.restaurants
@@ -244,7 +251,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                                     />
                                 )}
                                 {refactoredEvent.features.bars && (
-                                    <AmenitiesTile
+                                    <FeaturesTile
                                         title="Bars: "
                                         content={refactoredEvent.features.bars}
                                     />
