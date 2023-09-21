@@ -2,12 +2,12 @@ import { GridProps } from '..'
 import styles from '../styles/grid.module.scss'
 
 export const Grid: React.FC<GridProps> = ({ ...props }: GridProps) => {
-    if (props.itemId) {
+    if (props.item) {
         return (
             <div
                 className={styles.gridItem}
                 style={{
-                    gridColumn: `${props.itemId} / ${props.itemOf}`,
+                    gridColumn: `${props.item[0]} / ${props.item[1]}`,
                     textAlign: props.textAlign ? props.textAlign : undefined,
                 }}
             >

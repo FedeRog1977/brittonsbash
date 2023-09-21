@@ -17,7 +17,7 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
             borderRadius={isMobile ? 'none' : 'var(--corners-small)'}
         >
             <Grid align="auto auto">
-                <Grid itemId={1} itemOf={2}>
+                <Grid item={[1, 2]}>
                     <div
                         style={{
                             width: 'fit-content',
@@ -56,7 +56,7 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
                         )}
                     </div>
                 </Grid>
-                <Grid itemId={2} itemOf={2} textAlign="right">
+                <Grid item={[2, 2]} textAlign="right">
                     {props.rightColumns.map(
                         ({ index, title, entries }: any) => (
                             <div
