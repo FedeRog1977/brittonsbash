@@ -191,7 +191,7 @@ export const eventData = {
                 {
                     type: 'body',
                     content:
-                        'Day 2 was always going to be my Montmartre day. it was the recurring reccomendation I’d had in the build-up, and it had something that resembled a hill; an incline at least. She’s a beautiful little place, although the first bakeria I wanted to go to wasn’t open on weekends, RIP. I did make it to the James reccie however, which was a great’n. Then up the hill for some views. But yeah, after that I just sort of reverted to my plan from the day before which was stop at every shop I passed to get wasted with cans. Worked nicely. I also made sure to load up on baguettes from the James reccie place too, for casual wasted street snacking. To be honest, I don’t even really remember where I walked after that. Think I went back down to the river for some views and back around some shops. Aaaannnyway, Saturday night’s alright for fighting, except this time there were no Aussies to fight off. Yes, that means what you think it does. The sk8er bois were gone and in came two far more pleasant, physically tolerable, less odor emitting ladies from New Zealand and Argentina. Then Slovenia entered the chat, and all those things Tate has said about central European señoritas was proven correct. Though our blonde bimbo vs. quiet loner, mountaineer, farm girl types may be significantly opposing, the observations are valid. At least now I could have some actual conversations. ... ...... Of course by this point I was also like eight deep, so was ready for a group bench wasted session over another six. Yeah, that was a solid 4am finish with a Desperados Mojito nightcap from the sketchy news stand place.',
+                        'Day 2 was always going to be my Montmartre day. it was the recurring recommendation I’d had in the build-up, and it had something that resembled a hill; an incline at least. She’s a beautiful little place, although the first bakeria I wanted to go to wasn’t open on weekends, RIP. I did make it to the James reccie however, which was a great’n. Then up the hill for some views. But yeah, after that I just sort of reverted to my plan from the day before which was stop at every shop I passed to get wasted with cans. Worked nicely. I also made sure to load up on baguettes from the James reccie place too, for casual wasted street snacking. To be honest, I don’t even really remember where I walked after that. Think I went back down to the river for some views and back around some shops. Aaaannnyway, Saturday night’s alright for fighting, except this time there were no Aussies to fight off. Yes, that means what you think it does. The sk8er bois were gone and in came two far more pleasant, physically tolerable, less odor emitting ladies from New Zealand and Argentina. Then Slovenia entered the chat, and all those things Tate has said about central European señoritas was proven correct. Though our blonde bimbo vs. quiet loner, mountaineer, farm girl types may be significantly opposing, the observations are valid. At least now I could have some actual conversations. ... ...... Of course by this point I was also like eight deep, so was ready for a group bench wasted session over another six. Yeah, that was a solid 4am finish with a Desperados Mojito nightcap from the sketchy news stand place.',
                 },
                 {
                     type: 'h2',
@@ -200,7 +200,7 @@ export const eventData = {
                 {
                     type: 'body',
                     content:
-                        'Gradually, these days were getting harder to arise into. Started with 7am the first day, we’ve probably reached about 8:30am now. But that’s an 8:30 followed by some serious grunting and groaning with the fellow residents',
+                        'Gradually, these days were getting harder to arise into. Started with 7am the first day, we’ve probably reached about 8:30am now. But that’s an 8:30 followed by some serious grunting and groaning with the fellow residents. I walked back and fourth from the communal sink about three times before I decided I couldn’t be bothered shaving. It took a lot of effort to make that decision. Anyway, New Zealand, Argentina, and myself headed on back to Montmartre for yet another Maison Lardeux. The gals appreciated the reccie, but not the walk-in. All good coz my philosophy always is: break them on the drink, break them on the hills. We parted ways and it was finally time for me to head south of the river to see some goddamn Emily in Paris locations. Drr drr! It was then I realised I made a huge mistake by not venturing south before. The gardens, gelaterias, Whole Foods wannabes, were stunning. Bit of a later return to the hostel this time as it was actually by biggest miles day. Effing Garmin dies though, so it only caught the ten mile walk-in. RIP. I thought I went hard on Saturday night but, good lord, Sunday soon prevailed. As well as being an arrow through my heart and my soul. Argentina and I took to the famous junkie bench again for minimum six more Desperados Mojitos, with the impression the night was coming to an early end at like 2am. Then the search through the carousels and the carnival arcades (erm ... the bar), searching everywhere from steeplechase to palisades (actually the first person I saw when I walked in) took me back to Slovenia. The gaze said “you are the perfect stranger”, we should’ve left it that way. But we ended up in the shooting gallery (the closed rooftop bar), where the promises were made. Only to rock away, rock away. Lesson learned.',
                 },
                 {
                     type: 'h2',
@@ -208,7 +208,8 @@ export const eventData = {
                 },
                 {
                     type: 'body',
-                    content: '...',
+                    content:
+                        'And the big wheel keep on turnin’, no more neon burning up above. Monday was a day of sad goodbyes. What an excellent and unique bunch, they definitely fulfilled the expectation. She took off her silver locket and said “remember me by this”. Put her hand in my pocket. Gave me a keepsake and a kiss. And that was that. Monday was a slow day, once again just wandering Montmartre and smashing baguettes and a jar of fig preserve after we all parted ways onto our own further conquests. All that remains of the story is that it was a routine trip to the airport and an expensive ride home. I bagged the Glasgow airport bus, lol. I did see Concorde for the first time at CDG though. So that was good Liam Neeson, When Irish Eyes Are Crying, IRA moment. What a journey.',
                 },
             ],
             images: [
@@ -717,7 +718,7 @@ export const eventData = {
         },
         {
             id: 'E2023035',
-            names: ['Lorraine Kelly - Halfway House'],
+            names: ['Lorraine Kelly — Halfway House'],
             startDate: '1st of September',
             endDate: '2nd of September',
             description:
@@ -2303,7 +2304,7 @@ export const eventData = {
                     alt: 'butters-5',
                 },
             ],
-            amenities: ['The Buttery - Two Fat Ladies'],
+            amenities: ['The Buttery — Two Fat Ladies'],
         },
         {
             id: 'E2023020',
@@ -4188,7 +4189,7 @@ export const eventData = {
         },
         {
             id: 'E2022037',
-            prefix: 'Fifth Different Kind Hol-e-day - Baptism Of Fire',
+            prefix: 'Fifth Different Kind Hol-e-day — Baptism Of Fire',
             names: [
                 'A New Hope',
                 'Out Of Commission',
@@ -4768,7 +4769,7 @@ export const eventData = {
         },
         {
             id: 'E2022019',
-            names: ['To Live And Breathe Waterfoot - Waterfoot 50'],
+            names: ['To Live And Breathe Waterfoot — Waterfoot 50'],
             startDate: '21st of April',
             description:
                 'A monumental stroll to the ‘foot for the 50th bag. Followed by a cool down at the wind farm.',
@@ -4819,7 +4820,7 @@ export const eventData = {
         {
             id: 'E2022016',
             prefix: 'Glencoe IX',
-            names: ['Ùrar - 2022 Edition', 'Glencoe Wage'],
+            names: ['Ùrar — 2022 Edition', 'Glencoe Wage'],
             startDate: '1st of April',
             endDate: '3rd of April',
             features: {
@@ -4926,7 +4927,7 @@ export const eventData = {
         {
             id: 'E2022011',
             prefix: 'Dùran Dùran III',
-            names: ['The Bipass - Ride Across the River'],
+            names: ['The Bipass — Ride Across the River'],
             startDate: '11th of March',
             endDate: '12th of March',
             description:
@@ -4941,7 +4942,7 @@ export const eventData = {
         },
         {
             id: 'E2022010',
-            names: ['Monday Miles - The Fantastic Four'],
+            names: ['Monday Miles — The Fantastic Four'],
             startDate: '7th of March',
             description:
                 'Beginning to come down from the high of the mountaineering and PR roadie setting over the weekend, I decided it was the time to run my first fantastic four on Strava. That is, the four GoATs of sport as my four most recent uploads. Of course, as follows: the Queens Park four set stunner, the Fort of Bogs, Strathaven torque fest and this, the 2020 OG, the ‘foot.',
@@ -5135,7 +5136,7 @@ export const eventData = {
         },
         {
             id: 'E2021048',
-            names: ['Strathaven 20 - Five and Drive, Eleven and Ride'],
+            names: ['Strathaven 20 — Five and Drive, Eleven and Ride'],
             startDate: '13th of December',
             description:
                 'Let’s keep it family appropriate on here and say.. ‘nuff said. Good sobering ride though.',
@@ -5512,7 +5513,7 @@ export const eventData = {
         {
             id: 'E2021023',
             prefix: 'Glencoe V',
-            names: ['The Rereturn - Unpause'],
+            names: ['The Rereturn — Unpause'],
             startDate: '6th of August',
             endDate: '7th of August',
             description:
@@ -5543,7 +5544,7 @@ export const eventData = {
         {
             id: 'E2021021',
             prefix: 'Glencoe IV',
-            names: ['Skyfall - Pause'],
+            names: ['Skyfall — Pause'],
             startDate: '23rd of July',
             endDate: '24th of July',
             description:
@@ -5990,7 +5991,7 @@ export const eventData = {
         {
             id: 'E2020002',
             prefix: 'Gentlemen Who Café Present',
-            names: ['Cheshire 2020 - The Golden Triangle'],
+            names: ['Cheshire 2020 — The Golden Triangle'],
             startDate: '24th of January',
             endDate: '26th of January',
             description:
