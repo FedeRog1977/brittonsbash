@@ -1,3 +1,4 @@
+export * from './use-weather.hook'
 export * from './weather-column-daily.component'
 export * from './weather-column-hourly.component'
 export * from './weather-daily.component'

@@ -1,5 +1,4 @@
-import { WeatherSearchTile, WeatherResultTitle } from '.'
-import { useWeather } from '../../../../scripts'
+import { WeatherSearchTile, WeatherResultTitle, useWeather } from '.'
 
 export const Weather = () => {
     const {

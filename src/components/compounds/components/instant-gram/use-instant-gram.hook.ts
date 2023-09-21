@@ -1,13 +1,16 @@
-import { useState } from 'react'
-import { compileEventEvents, compileEventSports } from '..'
+import { useEffect, useState } from 'react'
+import {
+    compileEventEvents,
+    compileEventSports,
+    ProjectProps,
+} from '../../../../scripts'
 
 export function useInstantGram() {
     const allEvents = compileEventEvents()
     const allSport = compileEventSports()
 
-    const sportOnEvent: any[] = []
-    const sportInitial = [allSport[0]]
-    const sportEmpty = [
+    const sportOnEvent: ProjectProps[] = []
+    const emptySportOnEvent: ProjectProps[] = [
         {
             id: '',
             name: '',
@@ -26,20 +29,26 @@ export function useInstantGram() {
         },
     ]
 
-    const initialSport = Boolean(allEvents[0].names.includes(allSport[0].name))
-
     const [event, setEvent] = useState(allEvents[0])
-    const [sportEvent, setSportEvent] = useState(
-        initialSport ? sportInitial : sportEmpty
-    )
-    const [showSportEvent, setShowSportEvent] = useState(initialSport)
+    const [sportEvent, setSportEvent] = useState(emptySportOnEvent)
+    const [showSportOnEvent, setShowSportEvent] = useState(false)
+
+    useEffect(() => {
+        for (var j in allSport) {
+            if (allEvents[0].names.includes(allSport[j].name)) {
+                sportOnEvent.push(allSport[j])
+                setSportEvent(sportOnEvent)
+                setShowSportEvent(true)
+            }
+        }
+    }, [])
 
     const [searchField, setSearchField] = useState('')
     const [eventPlaceholder, setEventPlaceholder] = useState(event)
     const [sportEventPlaceholder, setSportEventPlaceholder] =
         useState(sportEvent)
     const [showSportEventPlaceholder, setShowSportEventPlaceholder] =
-        useState(showSportEvent)
+        useState(showSportOnEvent)
 
     const handleInput = (e: any) => {
         setSearchField(e.target.value.toLowerCase())
@@ -51,11 +60,11 @@ export function useInstantGram() {
             if (searchField === '') {
                 setEventPlaceholder(event)
                 setSportEventPlaceholder(sportEvent)
-                setShowSportEventPlaceholder(showSportEvent)
+                setShowSportEventPlaceholder(showSportOnEvent)
             } else if (fullName.includes(searchField)) {
                 console.log('Event JSON Value:', fullName)
                 setEventPlaceholder(allEvents[i])
-                setSportEventPlaceholder(sportEmpty)
+                setSportEventPlaceholder(emptySportOnEvent)
                 setShowSportEventPlaceholder(false)
 
                 for (var j in allSport) {
@@ -73,7 +82,7 @@ export function useInstantGram() {
         if (searchField === '') {
             setEvent(event)
             setSportEvent(sportEvent)
-            setShowSportEvent(showSportEvent)
+            setShowSportEvent(showSportOnEvent)
         } else {
             setEvent(eventPlaceholder)
             setSportEvent(sportEventPlaceholder)
@@ -91,7 +100,7 @@ export function useInstantGram() {
                 console.log('Event JSON Value:', fullName)
 
                 setEvent(allEvents[i])
-                setSportEvent(sportEmpty)
+                setSportEvent(emptySportOnEvent)
                 setShowSportEvent(false)
 
                 for (var j in allSport) {
@@ -111,6 +120,6 @@ export function useInstantGram() {
         handleSelect,
         event,
         sportEvent,
-        showSportEvent,
+        showSportOnEvent,
     }
 }

@@ -1,6 +1,4 @@
-import { InstantGramSearchTile } from '.'
-import { InstantGramResultTile } from '.'
-import { useInstantGram } from '../../../../scripts'
+import { InstantGramSearchTile, InstantGramResultTile, useInstantGram } from '.'
 
 export const InstantGram = () => {
     const {
@@ -9,7 +7,7 @@ export const InstantGram = () => {
         handleSelect,
         event,
         sportEvent,
-        showSportEvent,
+        showSportOnEvent,
     } = useInstantGram()
 
     return (
@@ -22,7 +20,7 @@ export const InstantGram = () => {
             <InstantGramResultTile
                 event={event}
                 sportEvent={sportEvent}
-                showSportEvent={showSportEvent}
+                showSportEvent={showSportOnEvent}
             />
         </>
     )

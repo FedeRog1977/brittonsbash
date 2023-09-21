@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { Typography } from '../../components/bash-blocks'
-import { WeatherDaily } from '../../components/compounds'
-import { hillData } from '../../data'
-import { toCoords, toSentenceCase, toFeet } from '..'
+import { Typography } from '../../../bash-blocks'
+import { WeatherDaily } from '../..'
+import { hillData } from '../../../../data'
+import { toCoords, toSentenceCase, toFeet } from '../../../../scripts'
 
 export function useWeather() {
     var [lat, setLat] = useState(56.6826)
