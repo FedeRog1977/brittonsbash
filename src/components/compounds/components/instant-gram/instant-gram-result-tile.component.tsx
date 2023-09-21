@@ -317,14 +317,14 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                     buttonType="regular-clear"
                     func={() => setShowMatrix(!showMatrix)}
                     funcResp={showMatrix}
-                    content="Show image matrix"
+                    content="Image matrix"
                     dense
                 />
                 <Button
                     buttonType="regular-clear"
                     func={() => setShowModal(!showModal)}
                     funcResp={showModal}
-                    content="Show image slideshow"
+                    content="Image slideshow"
                     dense
                 />
             </Spacing>
