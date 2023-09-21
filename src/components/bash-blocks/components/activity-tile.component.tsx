@@ -1,4 +1,4 @@
-import { ActivityTileProps } from '..'
+import { ActivityTileProps, Grid } from '..'
 import { useScreenWidth } from '../../../scripts'
 import { Spacing, Typography } from '..'
 
@@ -16,17 +16,8 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
             backgroundColor="var(--lighter-grey)"
             borderRadius={isMobile ? 'none' : 'var(--corners-small)'}
         >
-            <div
-                style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'auto auto',
-                }}
-            >
-                <div
-                    style={{
-                        gridColumn: '1/2',
-                    }}
-                >
+            <Grid align="auto auto">
+                <Grid itemId={1} itemOf={2}>
                     <div
                         style={{
                             width: 'fit-content',
@@ -64,13 +55,8 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
                             }
                         )}
                     </div>
-                </div>
-                <div
-                    style={{
-                        gridColumn: '2/2',
-                        textAlign: 'right',
-                    }}
-                >
+                </Grid>
+                <Grid itemId={2} itemOf={2} textAlign="right">
                     {props.rightColumns.map(
                         ({ index, title, entries }: any) => (
                             <div
@@ -109,8 +95,8 @@ export const ActivityTile: React.FC<ActivityTileProps> = ({
                             </div>
                         )
                     )}
-                </div>
-            </div>
+                </Grid>
+            </Grid>
         </Spacing>
     )
 
