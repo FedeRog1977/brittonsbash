@@ -9,5 +9,5 @@ export type ColorProps =
     | 'lighterGrey'
     | 'lightBlue'
     | 'white'
-    | 'transparrent'
+    | 'transparent'
     | undefined

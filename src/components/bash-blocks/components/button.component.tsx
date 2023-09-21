@@ -90,7 +90,7 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                             gridColumn: '2 / 2',
                             textAlign: 'right',
                             border: isMobile
-                                ? '1px solid var(--transparrent)'
+                                ? '1px solid var(--transparent)'
                                 : 'none',
                         }}
                     >
