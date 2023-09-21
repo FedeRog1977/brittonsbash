@@ -16,6 +16,7 @@ import {
     useScreenWidth,
 } from '../../../../scripts'
 import { InstantGramResultTileProps } from '../..'
+import { useEffect } from 'react'
 
 export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
     ...props
@@ -31,6 +32,10 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
     const { showElement: showModal, setShowElement: setShowModal } =
         useShowElement()
     const refactoredEvent = compileEvent({ event, sportEvent, showSportEvent })
+
+    useEffect(() => {
+        setShowMatrix(true)
+    }, [])
 
     return (
         <Tile type="solid" dense={isMobile}>

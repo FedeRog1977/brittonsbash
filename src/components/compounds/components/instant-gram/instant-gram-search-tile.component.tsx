@@ -13,7 +13,7 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
 
     return (
         <Tile type="solid" top>
-            <Spacing
+            {/* <Spacing
                 mL={isMobile ? 0 : 70}
                 mR={isMobile ? 0 : 70}
                 mB={isMobile ? 7.5 : 15}
@@ -38,7 +38,7 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                     }
                     color="white"
                 />
-            </Spacing>
+            </Spacing> */}
             <Spacing mL={isMobile ? 0 : 70} mR={isMobile ? 0 : 70}>
                 <InstantGramSearchList
                     func={props.funcSelect}
