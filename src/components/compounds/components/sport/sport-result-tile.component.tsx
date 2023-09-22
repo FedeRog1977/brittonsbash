@@ -1,4 +1,4 @@
-import { Typography, Tile, ActivityTile } from '../../../bash-blocks'
+import { Typography, Tile, ColumnTable } from '../../../bash-blocks'
 import {
     compileProjects,
     compileMiles,
@@ -20,7 +20,7 @@ export const SportResultTile = () => {
             <Tile type="solid" dense={isMobile} top>
                 <Typography type="h1" content="Roadies" textAlign="center" />
                 <Typography type="h2" content="Roadies" textAlign="center" />
-                <ActivityTile
+                <ColumnTable
                     leftColumn={{
                         entries: ['Total', '2023', '2022', '2021', '2020'],
                     }}
@@ -58,7 +58,7 @@ export const SportResultTile = () => {
                     ]}
                 />
                 <Typography type="h2" content="Routes" textAlign="center" />
-                <ActivityTile
+                <ColumnTable
                     leftColumn={{
                         entries: ['Total', '2023', '2022', '2021', '2020'],
                     }}
@@ -126,7 +126,7 @@ export const SportResultTile = () => {
                     ]}
                 />
                 <Typography type="h2" content="2023" textAlign="center" />
-                <ActivityTile
+                <ColumnTable
                     leftColumn={{
                         entries: compiledRoadies.roadies[2023].map(
                             ({ name }: any) => name as string
@@ -165,7 +165,7 @@ export const SportResultTile = () => {
                     ]}
                 />
                 <Typography type="h2" content="2022" textAlign="center" />
-                <ActivityTile
+                <ColumnTable
                     leftColumn={{
                         entries: compiledRoadies.roadies[2022].map(
                             ({ name }: any) => name as string
@@ -204,7 +204,7 @@ export const SportResultTile = () => {
                     ]}
                 />
                 <Typography type="h2" content="2021" textAlign="center" />
-                <ActivityTile
+                <ColumnTable
                     leftColumn={{
                         entries: compiledRoadies.roadies[2021].map(
                             ({ name }: any) => name as string
@@ -243,7 +243,7 @@ export const SportResultTile = () => {
                     ]}
                 />
                 <Typography type="h2" content="2020" textAlign="center" />
-                <ActivityTile
+                <ColumnTable
                     leftColumn={{
                         entries: compiledRoadies.roadies[2020].map(
                             ({ name }: any) => name as string
@@ -285,7 +285,7 @@ export const SportResultTile = () => {
             <Tile type="solid" dense={isMobile}>
                 <Typography type="h1" content="Projects" textAlign="center" />
                 <Typography type="h2" content="Projects" textAlign="center" />
-                <ActivityTile
+                <ColumnTable
                     leftColumn={{
                         entries: ['Total', '2023', '2022', '2021', '2020'],
                     }}
@@ -323,7 +323,7 @@ export const SportResultTile = () => {
                     ]}
                 />
                 <Typography type="h2" content="Hills" textAlign="center" />
-                <ActivityTile
+                <ColumnTable
                     leftColumn={{
                         entries: [
                             'Unique',
@@ -426,7 +426,7 @@ export const SportResultTile = () => {
                     ]}
                 />
                 <Typography type="h2" content="2023" textAlign="center" />
-                <ActivityTile
+                <ColumnTable
                     leftColumn={{
                         entries: compiledProjects.projects[2023].map(
                             ({ name }: any) => name as string
@@ -454,7 +454,7 @@ export const SportResultTile = () => {
                     ]}
                 />
                 <Typography type="h2" content="2022" textAlign="center" />
-                <ActivityTile
+                <ColumnTable
                     leftColumn={{
                         entries: compiledProjects.projects[2022].map(
                             ({ name }: any) => name as string
@@ -482,7 +482,7 @@ export const SportResultTile = () => {
                     ]}
                 />
                 <Typography type="h2" content="2021" textAlign="center" />
-                <ActivityTile
+                <ColumnTable
                     leftColumn={{
                         entries: compiledProjects.projects[2021].map(
                             ({ name }: any) => name as string
@@ -510,7 +510,7 @@ export const SportResultTile = () => {
                     ]}
                 />
                 <Typography type="h2" content="2020" textAlign="center" />
-                <ActivityTile
+                <ColumnTable
                     leftColumn={{
                         entries: compiledProjects.projects[2020].map(
                             ({ name }: any) => name as string
@@ -541,7 +541,7 @@ export const SportResultTile = () => {
             <Tile type="solid" dense={isMobile}>
                 <Typography type="h1" content="Miles" textAlign="center" />
                 <Typography type="h2" content="Miles" textAlign="center" />
-                <ActivityTile
+                <ColumnTable
                     leftColumn={{
                         entries: ['Total', '2023', '2022', '2021', '2020'],
                     }}
@@ -579,7 +579,7 @@ export const SportResultTile = () => {
                     ]}
                 />
                 <Typography type="h2" content="Routes" textAlign="center" />
-                <ActivityTile
+                <ColumnTable
                     leftColumn={{
                         entries: ['Total', '2023', '2022', '2021', '2020'],
                     }}
@@ -617,7 +617,7 @@ export const SportResultTile = () => {
                     ]}
                 />
                 <Typography type="h2" content="2023" textAlign="center" />
-                <ActivityTile
+                <ColumnTable
                     leftColumn={{
                         entries: compiledMiles.miles[2023].map(
                             ({ name }: any) => name as string
@@ -645,7 +645,7 @@ export const SportResultTile = () => {
                     ]}
                 />
                 <Typography type="h2" content="2022" textAlign="center" />
-                <ActivityTile
+                <ColumnTable
                     leftColumn={{
                         entries: compiledMiles.miles[2022].map(
                             ({ name }: any) => name as string
@@ -673,7 +673,7 @@ export const SportResultTile = () => {
                     ]}
                 />
                 <Typography type="h2" content="2021" textAlign="center" />
-                <ActivityTile
+                <ColumnTable
                     leftColumn={{
                         entries: compiledMiles.miles[2021].map(
                             ({ name }: any) => name as string
@@ -701,7 +701,7 @@ export const SportResultTile = () => {
                     ]}
                 />
                 <Typography type="h2" content="2020" textAlign="center" />
-                <ActivityTile
+                <ColumnTable
                     leftColumn={{
                         entries: compiledMiles.miles[2020].map(
                             ({ name }: any) => name as string

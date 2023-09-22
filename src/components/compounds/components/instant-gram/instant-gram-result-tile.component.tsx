@@ -1,5 +1,4 @@
 import {
-    ActivityTile,
     Article,
     ArticlePreface,
     Button,
@@ -9,6 +8,7 @@ import {
     Spacing,
     Tile,
     Typography,
+    RowTable,
 } from '../../../bash-blocks'
 import {
     compileEvent,
@@ -24,13 +24,16 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
     const event = props.event
     const sportEvent = props.sportEvent
     const showSportEvent = props.showSportEvent
+
     const { isMobile } = useScreenWidth()
+
     const { showElement: showDescription, setShowElement: setShowDescription } =
         useShowElement()
     const { showElement: showMatrix, setShowElement: setShowMatrix } =
         useShowElement()
     const { showElement: showModal, setShowElement: setShowModal } =
         useShowElement()
+
     const refactoredEvent = compileEvent({ event, sportEvent, showSportEvent })
 
     useEffect(() => {
@@ -118,41 +121,67 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                     mT={isMobile ? 7.5 : 15}
                     mB={isMobile ? 7.5 : 15}
                 >
-                    <ActivityTile
-                        leftColumn={{
-                            title: `${refactoredEvent.distance} | ${refactoredEvent.elevation}`,
-                            entries: [
-                                refactoredEvent.islands && 'Island(s)',
-                                refactoredEvent.munros && 'Munro(s)',
-                                refactoredEvent.munroTops && 'Munro Top(s)',
-                                refactoredEvent.corbetts && 'Corbett(s)',
-                                refactoredEvent.corbettTops && 'Corbett Top(s)',
-                                refactoredEvent.grahams && 'Graham(s)',
-                                refactoredEvent.subTwos && 'SubTwo(s)',
-                                refactoredEvent.donalds && 'Donald(s)',
-                            ],
+                    <RowTable
+                        titleRow={{
+                            leftItem: `${refactoredEvent.distance} | ${refactoredEvent.elevation}`,
+                            rightItem: refactoredEvent.time,
                         }}
-                        rightColumns={[
+                        rows={[
                             {
-                                title: refactoredEvent.time,
-                                entries: [
+                                leftItem:
+                                    refactoredEvent.islands && 'Island(s)',
+                                rightItem:
                                     refactoredEvent.islands &&
-                                        refactoredEvent.islands,
+                                    refactoredEvent.islands,
+                            },
+                            {
+                                leftItem: refactoredEvent.munros && 'Munro(s)',
+                                rightItem:
                                     refactoredEvent.munros &&
-                                        refactoredEvent.munros,
+                                    refactoredEvent.munros,
+                            },
+                            {
+                                leftItem:
+                                    refactoredEvent.munroTops && 'Munro Top(s)',
+                                rightItem:
                                     refactoredEvent.munroTops &&
-                                        refactoredEvent.munroTops,
+                                    refactoredEvent.munroTops,
+                            },
+                            {
+                                leftItem:
+                                    refactoredEvent.corbetts && 'Corbett(s)',
+                                rightItem:
                                     refactoredEvent.corbetts &&
-                                        refactoredEvent.corbetts,
+                                    refactoredEvent.corbetts,
+                            },
+                            {
+                                leftItem:
                                     refactoredEvent.corbettTops &&
-                                        refactoredEvent.corbettTops,
+                                    'Corbett Top(s)',
+                                rightItem:
+                                    refactoredEvent.corbettTops &&
+                                    refactoredEvent.corbettTops,
+                            },
+                            {
+                                leftItem:
+                                    refactoredEvent.grahams && 'Graham(s)',
+                                rightItem:
                                     refactoredEvent.grahams &&
-                                        refactoredEvent.grahams,
+                                    refactoredEvent.grahams,
+                            },
+                            {
+                                leftItem:
+                                    refactoredEvent.subTwos && 'SubTwo(s)',
+                                rightItem:
                                     refactoredEvent.subTwos &&
-                                        refactoredEvent.subTwos,
+                                    refactoredEvent.subTwos,
+                            },
+                            {
+                                leftItem:
+                                    refactoredEvent.donalds && 'Donald(s)',
+                                rightItem:
                                     refactoredEvent.donalds &&
-                                        refactoredEvent.donalds,
-                                ],
+                                    refactoredEvent.donalds,
                             },
                         ]}
                     />

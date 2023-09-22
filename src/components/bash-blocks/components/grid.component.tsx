@@ -2,12 +2,17 @@ import { GridProps } from '..'
 import styles from '../styles/grid.module.scss'
 
 export const Grid: React.FC<GridProps> = ({ ...props }: GridProps) => {
-    if (props.item) {
+    if (props.columnItem || props.rowItem) {
         return (
             <div
                 className={styles.gridItem}
                 style={{
-                    gridColumn: `${props.item[0]} / ${props.item[1]}`,
+                    gridColumn: `${props.columnItem ? [0] : undefined} / ${
+                        props.columnItem ? [1] : undefined
+                    }`,
+                    gridRow: `${props.rowItem ? [0] : undefined} / ${
+                        props.rowItem ? [1] : undefined
+                    }`,
                     textAlign: props.textAlign ? props.textAlign : undefined,
                 }}
             >
