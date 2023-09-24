@@ -2,6 +2,14 @@ export const sportData = {
     2023: {
         roadies: [
             {
+                id: 'R2023039',
+                name: 'Fenwick + Wind Farm',
+                dist: 30.15,
+                elev: 1739,
+                time: '1:42:10',
+                speed: 17.7,
+            },
+            {
                 id: 'R2023038',
                 name: 'Other',
                 dist: 9.35,
@@ -295,6 +303,37 @@ export const sportData = {
             },
         ],
         projects: [
+            {
+                id: 'P2023025',
+                name: 'Duvel Tripel Hop',
+                dist: 16.22,
+                elev: 4843,
+                time: '5:59:43',
+                companionship: 1,
+                munros: [
+                    'Beinn Liath Mhòr Fannaich',
+                    'Sgùrr Mòr',
+                    'Meall Gorm',
+                    'An Coileachan',
+                ],
+                munroTops: ['Meall nam Peithirean'],
+            },
+            {
+                id: 'P2023024',
+                name: 'Cherry CHOUFFE',
+                dist: 15.53,
+                elev: 6424,
+                time: '6:39:01',
+                companionship: 1,
+                munros: [
+                    'Meall a’ Chrasgaidh',
+                    'Sgùrr nan Clach Geala',
+                    'Sgùrr nan Each',
+                    'Sgùrr Breac',
+                    'A’ Chailleach (Fannichs)',
+                ],
+                munroTops: ['Tomman Coinnich'],
+            },
             {
                 id: 'P2023023',
                 name: 'Führer’s Thule',

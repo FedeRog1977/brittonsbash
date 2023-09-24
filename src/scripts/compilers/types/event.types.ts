@@ -15,6 +15,7 @@ type FeaturesProps = {
     gelaterias?: string[]
     restaurants?: string[]
     bars?: string[]
+    filmingLocations?: string[]
 }
 
 export type EventProps = {
@@ -186,6 +187,7 @@ export type RefactoredEventProps = {
         gelaterias?: string
         restaurants?: string
         bars?: string
+        filmingLocations?: string
     }
     description: EventProps['description']
     images: EventProps['images']

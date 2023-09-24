@@ -1,6 +1,23 @@
 export const eventData = {
     2023: [
         {
+            id: 'E2023039',
+            prefix: 'Clean-Up Job',
+            names: ['Cherry CHOUFFE', 'Duvel Tripel Hop'],
+            startDate: '22nd of September',
+            endDate: '24th of September',
+            features: {
+                youthHostels: ['Inverness'],
+            },
+            description: '...',
+            images: [
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/clean-up-job/1.jpg',
+                    alt: 'clean-up-job-1',
+                },
+            ],
+        },
+        {
             id: 'E2023038',
             names: ['Führer’s Thule'],
             startDate: '15th of September',
@@ -168,6 +185,7 @@ export const eventData = {
                     'LÜKS Kabab',
                 ],
                 bars: ['Little Red Door'],
+                filmingLocations: ['Emily in Paris'],
             },
             description: [
                 {

@@ -128,28 +128,27 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                         }}
                         rows={[
                             {
-                                leftItem:
-                                    refactoredEvent.islands && 'Island(s)',
+                                leftItem: refactoredEvent.islands && 'Islands',
                                 rightItem:
                                     refactoredEvent.islands &&
                                     refactoredEvent.islands,
                             },
                             {
-                                leftItem: refactoredEvent.munros && 'Munro(s)',
+                                leftItem: refactoredEvent.munros && 'Munros',
                                 rightItem:
                                     refactoredEvent.munros &&
                                     refactoredEvent.munros,
                             },
                             {
                                 leftItem:
-                                    refactoredEvent.munroTops && 'Munro Top(s)',
+                                    refactoredEvent.munroTops && 'Munro Tops',
                                 rightItem:
                                     refactoredEvent.munroTops &&
                                     refactoredEvent.munroTops,
                             },
                             {
                                 leftItem:
-                                    refactoredEvent.corbetts && 'Corbett(s)',
+                                    refactoredEvent.corbetts && 'Corbetts',
                                 rightItem:
                                     refactoredEvent.corbetts &&
                                     refactoredEvent.corbetts,
@@ -157,28 +156,25 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                             {
                                 leftItem:
                                     refactoredEvent.corbettTops &&
-                                    'Corbett Top(s)',
+                                    'Corbett Tops',
                                 rightItem:
                                     refactoredEvent.corbettTops &&
                                     refactoredEvent.corbettTops,
                             },
                             {
-                                leftItem:
-                                    refactoredEvent.grahams && 'Graham(s)',
+                                leftItem: refactoredEvent.grahams && 'Grahams',
                                 rightItem:
                                     refactoredEvent.grahams &&
                                     refactoredEvent.grahams,
                             },
                             {
-                                leftItem:
-                                    refactoredEvent.subTwos && 'SubTwo(s)',
+                                leftItem: refactoredEvent.subTwos && 'SubTwos',
                                 rightItem:
                                     refactoredEvent.subTwos &&
                                     refactoredEvent.subTwos,
                             },
                             {
-                                leftItem:
-                                    refactoredEvent.donalds && 'Donald(s)',
+                                leftItem: refactoredEvent.donalds && 'Donalds',
                                 rightItem:
                                     refactoredEvent.donalds &&
                                     refactoredEvent.donalds,
@@ -320,6 +316,17 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                                                   content:
                                                       refactoredEvent.features
                                                           .bars,
+                                              },
+                                          ]
+                                        : [{}]),
+                                    ...(refactoredEvent.features
+                                        .filmingLocations
+                                        ? [
+                                              {
+                                                  title: 'Filming Locations:',
+                                                  content:
+                                                      refactoredEvent.features
+                                                          .filmingLocations,
                                               },
                                           ]
                                         : [{}]),

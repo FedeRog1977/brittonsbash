@@ -92,6 +92,8 @@ export const compileEvent = ({ ...props }: CompiledEventProps) => {
             gelaterias: props.event.features?.gelaterias?.join(', '),
             restaurants: props.event.features?.restaurants?.join(', '),
             bars: props.event.features?.bars?.join(', '),
+            filmingLocations:
+                props.event.features?.filmingLocations?.join(', '),
         },
         description: props.event.description,
         images: props.event.images,
