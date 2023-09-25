@@ -1,35 +1,14 @@
-export const recipesData = {
-    "British And European": [
-
-    ],
-    "USA": [
-
-    ],
-    "South American": [
-
-    ],
-    "Mediterranean": [
-
-    ],
-    "Oriental": [
-
-    ],
-    "Middle Eastern": [
-
-    ],
-    "Sandwiches": [
-
-    ],
-    "Deserts And Sweets": [
-
-    ],
-    "Health": [
-
-    ],
-    "Cocktails": [
-
-    ],
-    "Appendices": [
-
-    ],
-};
+export const recipesData = [
+    {
+        title: '',
+        ingredients: ['', ''],
+        method: [],
+        images: [
+            {
+                url: '',
+                alt: '',
+            },
+        ],
+        tags: ['british'],
+    },
+]

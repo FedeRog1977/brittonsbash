@@ -468,6 +468,7 @@ export const communicationsData = {
         ],
         languages: {
             system: ['Bash (Shell)', 'Zsh (Shell)'],
+            configuration: ['YAML', 'XML', 'JSON'],
             typesetting: [
                 'TeX',
                 'LaTeX',
@@ -478,14 +479,8 @@ export const communicationsData = {
                 'GNU Troff',
                 'GNU Nroff',
             ],
-            markup: ['HTML', 'CSS', 'XML (Upcoming)', 'JSON'],
-            scripting: [
-                'PHP (Upcoming)',
-                'Java (Upcoming)',
-                'JavaScript',
-                'TypeScript',
-                'Python (Limited)',
-            ],
+            markup: ['HTML', 'CSS', 'SCSS (SASS)'],
+            scripting: ['PHP', 'Java', 'JavaScript', 'TypeScript', 'Python'],
             statistical: ['R', 'MATLAB', 'Gretl', 'GNU Octave'],
         },
         programs: {
@@ -567,7 +562,7 @@ export const communicationsData = {
                 'Atlassian Jira',
                 'Atlassian Confluence',
             ],
-            deployment: ['GitHub Pages', 'Amazon Web Services (Upcoming)'],
+            deployment: ['GitHub Pages', 'Amazon Web Services'],
             processing: ['Microsoft Word', 'Microsoft Excel'],
         },
         hardware: {
@@ -929,6 +924,10 @@ export const communicationsData = {
                     href: 'https://www.w3schools.com/cssref/pr_class_cursor.php',
                 },
                 {
+                    content: 'CSS Tricks',
+                    href: 'https://css-tricks.com/',
+                },
+                {
                     content: 'JavaScript Date Formatting',
                     href: 'https://www.freecodecamp.org/news/how-to-format-dates-in-javascript/',
                 },
@@ -1061,7 +1060,13 @@ export const communicationsData = {
                 products: [],
             },
             officeInteriors: {
-                manufacturers: ['Herman Miller', 'Vitra', 'Orangebox'],
+                providers: ['Tsumani Axis', 'Hunters'],
+                manufacturers: [
+                    'Herman Miller',
+                    'Vitra',
+                    'Orangebox',
+                    'Cassina',
+                ],
                 products: [],
             },
             twoThousandsDecor: [],
@@ -1119,6 +1124,16 @@ export const communicationsData = {
             ],
             eightiesFashion: [],
             twoThousandsFashion: [],
+            hypeAndGorpcoreFashion: [
+                'Dover Street Market',
+                'END. Clothing',
+                'Salomon SportStyle',
+                'Salomon XT Wings',
+                'ASICS SportStyle',
+                'ASICS Gel 1130',
+                'New Balance SportStyle',
+                'Arc’teryx SportStyle',
+            ],
         },
         stationery: {
             writingInstruments: [
@@ -1241,6 +1256,10 @@ export const communicationsData = {
                 {
                     context: 'Garnet Pots',
                     href: 'https://www.garnetpots.com/',
+                },
+                {
+                    context: 'What is Gorpcore?',
+                    href: 'https://www.grailed.com/drycleanonly/what-is-gorpcore',
                 },
             ],
             lego: [
