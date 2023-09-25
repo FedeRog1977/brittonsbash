@@ -26,7 +26,7 @@ export const SportResultTile = () => {
                     }}
                     rightColumns={[
                         {
-                            title: 'Occurences',
+                            title: 'Occurrences',
                             entries: [
                                 `${compiledRoadies.number.total}`,
                                 `${compiledRoadies.number[2023]}`,
@@ -163,6 +163,7 @@ export const SportResultTile = () => {
                             ),
                         },
                     ]}
+                    scroll
                 />
                 <Typography type="h2" content="2022" textAlign="center" />
                 <ColumnTable
@@ -202,6 +203,7 @@ export const SportResultTile = () => {
                             ),
                         },
                     ]}
+                    scroll
                 />
                 <Typography type="h2" content="2021" textAlign="center" />
                 <ColumnTable
@@ -241,6 +243,7 @@ export const SportResultTile = () => {
                             ),
                         },
                     ]}
+                    scroll
                 />
                 <Typography type="h2" content="2020" textAlign="center" />
                 <ColumnTable
@@ -280,6 +283,7 @@ export const SportResultTile = () => {
                             ),
                         },
                     ]}
+                    scroll
                 />
             </Tile>
             <Tile type="solid" dense={isMobile}>
@@ -291,7 +295,7 @@ export const SportResultTile = () => {
                     }}
                     rightColumns={[
                         {
-                            title: 'Occurences',
+                            title: 'Occurrences',
                             entries: [
                                 `${compiledProjects.number.total}`,
                                 `${compiledProjects.number[2023]}`,
@@ -452,6 +456,7 @@ export const SportResultTile = () => {
                             ),
                         },
                     ]}
+                    scroll
                 />
                 <Typography type="h2" content="2022" textAlign="center" />
                 <ColumnTable
@@ -480,6 +485,7 @@ export const SportResultTile = () => {
                             ),
                         },
                     ]}
+                    scroll
                 />
                 <Typography type="h2" content="2021" textAlign="center" />
                 <ColumnTable
@@ -508,6 +514,7 @@ export const SportResultTile = () => {
                             ),
                         },
                     ]}
+                    scroll
                 />
                 <Typography type="h2" content="2020" textAlign="center" />
                 <ColumnTable
@@ -536,6 +543,7 @@ export const SportResultTile = () => {
                             ),
                         },
                     ]}
+                    scroll
                 />
             </Tile>
             <Tile type="solid" dense={isMobile}>
@@ -547,7 +555,7 @@ export const SportResultTile = () => {
                     }}
                     rightColumns={[
                         {
-                            title: 'Occurences',
+                            title: 'Occurrences',
                             entries: [
                                 `${compiledMiles.number.total}`,
                                 `${compiledMiles.number[2023]}`,
@@ -643,6 +651,7 @@ export const SportResultTile = () => {
                             ),
                         },
                     ]}
+                    scroll
                 />
                 <Typography type="h2" content="2022" textAlign="center" />
                 <ColumnTable
@@ -671,6 +680,7 @@ export const SportResultTile = () => {
                             ),
                         },
                     ]}
+                    scroll
                 />
                 <Typography type="h2" content="2021" textAlign="center" />
                 <ColumnTable
@@ -699,6 +709,7 @@ export const SportResultTile = () => {
                             ),
                         },
                     ]}
+                    scroll
                 />
                 <Typography type="h2" content="2020" textAlign="center" />
                 <ColumnTable
@@ -727,6 +738,7 @@ export const SportResultTile = () => {
                             ),
                         },
                     ]}
+                    scroll
                 />
             </Tile>
         </>

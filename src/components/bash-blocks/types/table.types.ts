@@ -11,6 +11,7 @@ export type RowProps = {
 export type ColumnTableProps = {
     leftColumn: ColumnProps
     rightColumns: ColumnProps[]
+    scroll?: boolean
 }
 
 export type RowTableProps = {

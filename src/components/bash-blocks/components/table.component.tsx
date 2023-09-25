@@ -100,6 +100,13 @@ export const ColumnTable: React.FC<ColumnTableProps> = ({
         </Spacing>
     )
 
+    if (props.scroll)
+        return (
+            <div style={{ maxHeight: '200px', overflowY: 'scroll' }}>
+                {content}
+            </div>
+        )
+
     if (isMobile) return <div style={{ overflowX: 'scroll' }}>{content}</div>
 
     return content
