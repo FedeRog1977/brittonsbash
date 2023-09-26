@@ -129,7 +129,7 @@ export const communicationsData = {
             ],
         },
         tennis: {
-            brands: ['Wilson', 'Luxilon', 'Nike', 'K-Swiss'],
+            brands: ['Wilson', 'Luxilon', 'Nike', 'ASICS', 'K-Swiss'],
             racquets: [
                 'Wilson Pro Staff 85 6.0 Mid-Production',
                 'Wilson Hyper Pro Staff 6.1 (Pending)',
@@ -333,20 +333,20 @@ export const communicationsData = {
         film: {
             genres: [],
             artists: [],
-            topFilms: [],
-            allFilms: [],
+            favourites: [],
+            all: [],
         },
         television: {
             genres: [],
             artists: [],
-            topShows: [],
-            allShows: [],
+            favourites: [],
+            all: [],
         },
         audio: {
             genres: [],
             artists: [],
-            topSongs: [],
-            allSongs: [],
+            favourites: [],
+            all: [],
             manufacturers: [
                 'Audiolab',
                 'Allen & Heath',
@@ -416,8 +416,8 @@ export const communicationsData = {
             media: ['Vinyl', 'Compact Disc'],
         },
         videoGames: {
-            topGames: [],
-            allGames: [],
+            favourites: [],
+            all: [],
         },
         links: {
             audio: [
@@ -1060,7 +1060,7 @@ export const communicationsData = {
                 products: [],
             },
             officeInteriors: {
-                providers: ['Tsumani Axis', 'Hunters'],
+                dealers: ['Tsumani Axis', 'Hunters'],
                 manufacturers: [
                     'Herman Miller',
                     'Vitra',
@@ -1069,7 +1069,7 @@ export const communicationsData = {
                 ],
                 products: [],
             },
-            twoThousandsDecor: [],
+            themesAndEras: [],
         },
         style: {
             fragrances: {
@@ -1113,6 +1113,8 @@ export const communicationsData = {
                 'Carrera Endurance 65',
                 'Alpina Quattro Miami Vice Sunglasses 80’s',
                 'Linda Farrow 6031 Scarface Movie Glasses',
+                'Love from Skye Cuilin Ring',
+                'Chrome Hearts (Various)',
             ],
             cigarettes: [
                 'Marlboro Cigarettes',
@@ -1127,12 +1129,12 @@ export const communicationsData = {
             hypeAndGorpcoreFashion: [
                 'Dover Street Market',
                 'END. Clothing',
+                'Arc’teryx SportStyle',
                 'Salomon SportStyle',
                 'Salomon XT Wings',
                 'ASICS SportStyle',
                 'ASICS Gel 1130',
                 'New Balance SportStyle',
-                'Arc’teryx SportStyle',
             ],
         },
         stationery: {
@@ -1154,13 +1156,13 @@ export const communicationsData = {
         graphicDesign: [],
         computerAidedDesign: [],
         photoManipulation: [],
-        lego: [],
-        reading: [
-            'Herman Miller: A Way of Living',
+        lego: { sets: [], miniFigures: [] },
+        books: [
+            'The Atlas of Furniture Design',
             '1000 Design Classics',
+            'Herman Miller: A Way of Living',
             'The First Fifty Years 1913-1963 Arthur Andersen & Co',
             'IBM - Graphic Design Guide From 1969 To 1987',
-            'The Atlas of Furniture Design',
             'Magazine B (Various)',
         ],
         links: {
@@ -1496,10 +1498,39 @@ export const communicationsData = {
             ],
             appliances: [],
         },
-        bakeries: [],
-        restaurants: [],
-        barsMixology: [],
+        favourites: {
+            meals: [],
+            desserts: [],
+            snacks: [],
+            sweet: [],
+            beer: ['Cherry CHOUFFE', 'Duvel Tripel Hop'],
+            spirits: [
+                'Cazcebel Reposado',
+                'Cazcabel Honey',
+                'Cazcabel Coffee',
+                'Cazcabel Coconut',
+            ],
+            cocktails: ['Mojito'],
+            bakeries: [],
+            gelaterias: [],
+            restaurants: [],
+            bars: [],
+        },
         links: {
+            food: {
+                restaurants: [
+                    {
+                        content: 'Kanpai',
+                        href: 'http://kanpaisushiedinburgh.co.uk/#!/food',
+                    },
+                ],
+            },
+            drink: [
+                {
+                    content: 'Master of Malt',
+                    href: 'https://www.masterofmalt.com/',
+                },
+            ],
             kitchen: [
                 {
                     content: 'Pizza Dough Calculator',
@@ -1510,38 +1541,26 @@ export const communicationsData = {
                     href: 'https://www.enviropack.org.uk/',
                 },
             ],
-            restaurants: [
-                {
-                    content: 'Kanpai',
-                    href: 'http://kanpaisushiedinburgh.co.uk/#!/food',
-                },
-            ],
-            barsMixology: [
-                {
-                    content: 'Master of Malt',
-                    href: 'https://www.masterofmalt.com/',
-                },
-            ],
         },
     },
     automotive: {
         models: [
-            'Audi A3 A5 S3 (Pre-Facelift) (Pending)',
-            'Audi A3 A5 S3 (Facelift) (Pending)',
-            'Audi A3 A6 S3 (Pending)',
-            'Audi A4 B6 TDV allroad TDI quattro (Rare Facelift) (Pending)',
-            'Audi A6 C5 TDV allroad TDI quattro (Pending)',
+            'Audi A3 A5 S3 (Pre-Facelift)',
+            'Audi A3 A5 S3 (Facelift)',
+            'Audi A3 A6 S3',
+            'Audi A4 B6 TDV allroad TDI quattro (Rare Facelift)',
+            'Audi A6 C5 TDV allroad TDI quattro',
             'Audi A6 C6 TDV allroad TDI quattro',
-            'Audi A6 C5 RS6 (Pending)',
-            'Audi A6 C6 RS6 (Pending)',
-            'Audi A8 D3 (Pending)',
-            'Audi A8(L) D7 (Pending)',
-            'BMW M3 (E46 3rd Generation) (Pending)',
-            'Volvo XC70 (2007) (Pending)',
-            'Aston Martin DB9 (2007) (Pending)',
-            'Ferarri 365 GTB/4 GTS ‘Daytona Spyder’ (1972) (Pending)',
-            'Ferarri Testarossa (1984) (Pending)',
-            'Ford Crown Victoria (Pending)',
+            'Audi A6 C5 RS6',
+            'Audi A6 C6 RS6',
+            'Audi A8 D3',
+            'Audi A8(L) D7',
+            'BMW M3 (E46 3rd Generation)',
+            'Volvo XC70 (2007)',
+            'Aston Martin DB9 (2007)',
+            'Ferarri 365 GTB/4 GTS ‘Daytona Spyder’ (1972)',
+            'Ferarri Testarossa (1984)',
+            'Ford Crown Victoria',
         ],
         links: [
             {
