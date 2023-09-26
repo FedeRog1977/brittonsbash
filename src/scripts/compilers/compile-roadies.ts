@@ -39,8 +39,8 @@ export function compileRoadies() {
     var thorntonhalls2023: number = 0
 
     sportData[2023].roadies.forEach((event: any) => {
-        distance2023 = distance2023 + event.dist
-        elevation2023 = elevation2023 + event.elev
+        distance2023 = distance2023 + event.distance
+        elevation2023 = elevation2023 + event.elevation
 
         event.name === 'Century'
             ? (centuries2023 = centuries2023 + 1)
@@ -78,8 +78,8 @@ export function compileRoadies() {
     var thorntonhalls2022: number = 0
 
     sportData[2022].roadies.forEach((event: any) => {
-        distance2022 = distance2022 + event.dist
-        elevation2022 = elevation2022 + event.elev
+        distance2022 = distance2022 + event.distance
+        elevation2022 = elevation2022 + event.elevation
 
         event.name === 'Century'
             ? (centuries2022 = centuries2022 + 1)
@@ -117,8 +117,8 @@ export function compileRoadies() {
     var thorntonhalls2021: number = 0
 
     sportData[2021].roadies.forEach((event: any) => {
-        distance2021 = distance2021 + event.dist
-        elevation2021 = elevation2021 + event.elev
+        distance2021 = distance2021 + event.distance
+        elevation2021 = elevation2021 + event.elevation
 
         event.name === 'Century'
             ? (centuries2021 = centuries2021 + 1)
@@ -156,8 +156,8 @@ export function compileRoadies() {
     var thorntonhalls2020: number = 0
 
     sportData[2020].roadies.forEach((event: any) => {
-        distance2020 = distance2020 + event.dist
-        elevation2020 = elevation2020 + event.elev
+        distance2020 = distance2020 + event.distance
+        elevation2020 = elevation2020 + event.elevation
 
         event.name === 'Century'
             ? (centuries2020 = centuries2020 + 1)

@@ -14,8 +14,8 @@ export function useInstantGram() {
         {
             id: '',
             name: '',
-            dist: 0,
-            elev: 0,
+            distance: 0,
+            elevation: 0,
             time: '',
             companionship: 0,
             islands: [],

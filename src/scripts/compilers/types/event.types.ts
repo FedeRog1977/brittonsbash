@@ -32,8 +32,8 @@ export type EventProps = {
 export type RoadieProps = {
     id: string
     name: string
-    dist: number
-    elev: number
+    distance: number
+    elevation: number
     time: string
     speed?: number
 }
@@ -41,8 +41,8 @@ export type RoadieProps = {
 export type ProjectProps = {
     id: string
     name: string
-    dist: number
-    elev: number
+    distance: number
+    elevation: number
     time: string
     companionship: number
     islands?: string[]
@@ -58,8 +58,8 @@ export type ProjectProps = {
 export type MilesProps = {
     id: string
     name: string
-    dist: number
-    elev: number
+    distance: number
+    elevation: number
     time: string
 }
 

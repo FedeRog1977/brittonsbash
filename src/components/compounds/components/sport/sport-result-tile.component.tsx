@@ -136,13 +136,15 @@ export const SportResultTile = () => {
                         {
                             title: 'Distance',
                             entries: compiledRoadies.roadies[2023].map(
-                                ({ dist }: any) => toMiles(dist) as string
+                                ({ distance }: any) =>
+                                    toMiles(distance) as string
                             ),
                         },
                         {
                             title: 'Elevation',
                             entries: compiledRoadies.roadies[2023].map(
-                                ({ elev }: any) => toFeet(elev) as string
+                                ({ elevation }: any) =>
+                                    toFeet(elevation) as string
                             ),
                         },
                         {
@@ -176,13 +178,15 @@ export const SportResultTile = () => {
                         {
                             title: 'Distance',
                             entries: compiledRoadies.roadies[2022].map(
-                                ({ dist }: any) => toMiles(dist) as string
+                                ({ distance }: any) =>
+                                    toMiles(distance) as string
                             ),
                         },
                         {
                             title: 'Elevation',
                             entries: compiledRoadies.roadies[2022].map(
-                                ({ elev }: any) => toFeet(elev) as string
+                                ({ elevation }: any) =>
+                                    toFeet(elevation) as string
                             ),
                         },
                         {
@@ -216,13 +220,15 @@ export const SportResultTile = () => {
                         {
                             title: 'Distance',
                             entries: compiledRoadies.roadies[2021].map(
-                                ({ dist }: any) => toMiles(dist) as string
+                                ({ distance }: any) =>
+                                    toMiles(distance) as string
                             ),
                         },
                         {
                             title: 'Elevation',
                             entries: compiledRoadies.roadies[2021].map(
-                                ({ elev }: any) => toFeet(elev) as string
+                                ({ elevation }: any) =>
+                                    toFeet(elevation) as string
                             ),
                         },
                         {
@@ -256,13 +262,15 @@ export const SportResultTile = () => {
                         {
                             title: 'Distance',
                             entries: compiledRoadies.roadies[2020].map(
-                                ({ dist }: any) => toMiles(dist) as string
+                                ({ distance }: any) =>
+                                    toMiles(distance) as string
                             ),
                         },
                         {
                             title: 'Elevation',
                             entries: compiledRoadies.roadies[2020].map(
-                                ({ elev }: any) => toFeet(elev) as string
+                                ({ elevation }: any) =>
+                                    toFeet(elevation) as string
                             ),
                         },
                         {
@@ -440,13 +448,15 @@ export const SportResultTile = () => {
                         {
                             title: 'Distance',
                             entries: compiledProjects.projects[2023].map(
-                                ({ dist }: any) => toMiles(dist) as string
+                                ({ distance }: any) =>
+                                    toMiles(distance) as string
                             ),
                         },
                         {
                             title: 'Elevation',
                             entries: compiledProjects.projects[2023].map(
-                                ({ elev }: any) => toFeet(elev) as string
+                                ({ elevation }: any) =>
+                                    toFeet(elevation) as string
                             ),
                         },
                         {
@@ -469,13 +479,15 @@ export const SportResultTile = () => {
                         {
                             title: 'Distance',
                             entries: compiledProjects.projects[2022].map(
-                                ({ dist }: any) => toMiles(dist) as string
+                                ({ distance }: any) =>
+                                    toMiles(distance) as string
                             ),
                         },
                         {
                             title: 'Elevation',
                             entries: compiledProjects.projects[2022].map(
-                                ({ elev }: any) => toFeet(elev) as string
+                                ({ elevation }: any) =>
+                                    toFeet(elevation) as string
                             ),
                         },
                         {
@@ -498,13 +510,15 @@ export const SportResultTile = () => {
                         {
                             title: 'Distance',
                             entries: compiledProjects.projects[2021].map(
-                                ({ dist }: any) => toMiles(dist) as string
+                                ({ distance }: any) =>
+                                    toMiles(distance) as string
                             ),
                         },
                         {
                             title: 'Elevation',
                             entries: compiledProjects.projects[2021].map(
-                                ({ elev }: any) => toFeet(elev) as string
+                                ({ elevation }: any) =>
+                                    toFeet(elevation) as string
                             ),
                         },
                         {
@@ -527,13 +541,15 @@ export const SportResultTile = () => {
                         {
                             title: 'Distance',
                             entries: compiledProjects.projects[2020].map(
-                                ({ dist }: any) => toMiles(dist) as string
+                                ({ distance }: any) =>
+                                    toMiles(distance) as string
                             ),
                         },
                         {
                             title: 'Elevation',
                             entries: compiledProjects.projects[2020].map(
-                                ({ elev }: any) => toFeet(elev) as string
+                                ({ elevation }: any) =>
+                                    toFeet(elevation) as string
                             ),
                         },
                         {
@@ -635,13 +651,15 @@ export const SportResultTile = () => {
                         {
                             title: 'Distance',
                             entries: compiledMiles.miles[2023].map(
-                                ({ dist }: any) => toMiles(dist) as string
+                                ({ distance }: any) =>
+                                    toMiles(distance) as string
                             ),
                         },
                         {
                             title: 'Elevation',
                             entries: compiledMiles.miles[2023].map(
-                                ({ elev }: any) => toFeet(elev) as string
+                                ({ elevation }: any) =>
+                                    toFeet(elevation) as string
                             ),
                         },
                         {
@@ -664,13 +682,15 @@ export const SportResultTile = () => {
                         {
                             title: 'Distance',
                             entries: compiledMiles.miles[2022].map(
-                                ({ dist }: any) => toMiles(dist) as string
+                                ({ distance }: any) =>
+                                    toMiles(distance) as string
                             ),
                         },
                         {
                             title: 'Elevation',
                             entries: compiledMiles.miles[2022].map(
-                                ({ elev }: any) => toFeet(elev) as string
+                                ({ elevation }: any) =>
+                                    toFeet(elevation) as string
                             ),
                         },
                         {
@@ -693,13 +713,15 @@ export const SportResultTile = () => {
                         {
                             title: 'Distance',
                             entries: compiledMiles.miles[2021].map(
-                                ({ dist }: any) => toMiles(dist) as string
+                                ({ distance }: any) =>
+                                    toMiles(distance) as string
                             ),
                         },
                         {
                             title: 'Elevation',
                             entries: compiledMiles.miles[2021].map(
-                                ({ elev }: any) => toFeet(elev) as string
+                                ({ elevation }: any) =>
+                                    toFeet(elevation) as string
                             ),
                         },
                         {
@@ -722,13 +744,15 @@ export const SportResultTile = () => {
                         {
                             title: 'Distance',
                             entries: compiledMiles.miles[2020].map(
-                                ({ dist }: any) => toMiles(dist) as string
+                                ({ distance }: any) =>
+                                    toMiles(distance) as string
                             ),
                         },
                         {
                             title: 'Elevation',
                             entries: compiledMiles.miles[2020].map(
-                                ({ elev }: any) => toFeet(elev) as string
+                                ({ elevation }: any) =>
+                                    toFeet(elevation) as string
                             ),
                         },
                         {

@@ -43,8 +43,8 @@ export function compileProjects() {
     const donalds2023: any[] = []
 
     sportData[2023].projects.forEach((event: any) => {
-        distance2023 = distance2023 + event.dist
-        elevation2023 = elevation2023 + event.elev
+        distance2023 = distance2023 + event.distance
+        elevation2023 = elevation2023 + event.elevation
 
         event.islands?.forEach((island: any) => {
             islands2023.push(island)
@@ -110,8 +110,8 @@ export function compileProjects() {
     const donalds2022: any[] = []
 
     sportData[2022].projects.forEach((event: any) => {
-        distance2022 = distance2022 + event.dist
-        elevation2022 = elevation2022 + event.elev
+        distance2022 = distance2022 + event.distance
+        elevation2022 = elevation2022 + event.elevation
 
         event.islands?.forEach((island: any) => {
             islands2022.push(island)
@@ -177,8 +177,8 @@ export function compileProjects() {
     const donalds2021: any[] = []
 
     sportData[2021].projects.forEach((event: any) => {
-        distance2021 = distance2021 + event.dist
-        elevation2021 = elevation2021 + event.elev
+        distance2021 = distance2021 + event.distance
+        elevation2021 = elevation2021 + event.elevation
 
         event.islands?.forEach((island: any) => {
             islands2021.push(island)
@@ -244,8 +244,8 @@ export function compileProjects() {
     const donalds2020: any[] = []
 
     sportData[2020].projects.forEach((event: any) => {
-        distance2020 = distance2020 + event.dist
-        elevation2020 = elevation2020 + event.elev
+        distance2020 = distance2020 + event.distance
+        elevation2020 = elevation2020 + event.elevation
 
         event.islands?.forEach((island: any) => {
             islands2020.push(island)

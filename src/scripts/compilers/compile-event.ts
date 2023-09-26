@@ -46,8 +46,8 @@ export const compileEvent = ({ ...props }: CompiledEventProps) => {
     })
 
     props.sportEvent.forEach((sportEvent: ProjectProps) => {
-        distances.push(sportEvent.dist)
-        elevations.push(sportEvent.elev)
+        distances.push(sportEvent.distance)
+        elevations.push(sportEvent.elevation)
         times.push(sportEvent.time)
         sportEvent.islands?.forEach((islandSet: string) => {
             islandSetAggregate.push(islandSet)
