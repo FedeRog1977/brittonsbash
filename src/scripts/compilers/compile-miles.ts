@@ -1,5 +1,5 @@
 import { sportData } from '../../data'
-import { CompiledMilesProps, toFeet, toMiles } from '..'
+import { CompiledMilesProps, MilesProps, toFeet, toMiles } from '..'
 
 export function compileMiles() {
     const miles: CompiledMilesProps['miles'] = {
@@ -32,7 +32,7 @@ export function compileMiles() {
     var thorntonhalls2023: number = 0
     var waterfoots2023: number = 0
 
-    sportData[2023].miles.forEach((event: any) => {
+    sportData[2023].miles.forEach((event: MilesProps) => {
         distance2023 = distance2023 + event.distance
         elevation2023 = elevation2023 + event.elevation
 
@@ -56,7 +56,7 @@ export function compileMiles() {
     var thorntonhalls2022: number = 0
     var waterfoots2022: number = 0
 
-    sportData[2022].miles.forEach((event: any) => {
+    sportData[2022].miles.forEach((event: MilesProps) => {
         distance2022 = distance2022 + event.distance
         elevation2022 = elevation2022 + event.elevation
 
@@ -80,7 +80,7 @@ export function compileMiles() {
     var thorntonhalls2021: number = 0
     var waterfoots2021: number = 0
 
-    sportData[2021].miles.forEach((event: any) => {
+    sportData[2021].miles.forEach((event: MilesProps) => {
         distance2021 = distance2021 + event.distance
         elevation2021 = elevation2021 + event.elevation
 
@@ -104,7 +104,7 @@ export function compileMiles() {
     var thorntonhalls2020: number = 0
     var waterfoots2020: number = 0
 
-    sportData[2020].miles.forEach((event: any) => {
+    sportData[2020].miles.forEach((event: MilesProps) => {
         distance2020 = distance2020 + event.distance
         elevation2020 = elevation2020 + event.elevation
 

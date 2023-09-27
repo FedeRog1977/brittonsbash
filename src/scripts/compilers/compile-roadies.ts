@@ -1,5 +1,5 @@
 import { sportData } from '../../data'
-import { CompiledRoadieProps, toFeet, toMiles } from '..'
+import { CompiledRoadieProps, RoadieProps, toFeet, toMiles } from '..'
 
 export function compileRoadies() {
     const roadies: CompiledRoadieProps['roadies'] = {
@@ -38,7 +38,7 @@ export function compileRoadies() {
     var windfarms2023: number = 0
     var thorntonhalls2023: number = 0
 
-    sportData[2023].roadies.forEach((event: any) => {
+    sportData[2023].roadies.forEach((event: RoadieProps) => {
         distance2023 = distance2023 + event.distance
         elevation2023 = elevation2023 + event.elevation
 
@@ -77,7 +77,7 @@ export function compileRoadies() {
     var windfarms2022: number = 0
     var thorntonhalls2022: number = 0
 
-    sportData[2022].roadies.forEach((event: any) => {
+    sportData[2022].roadies.forEach((event: RoadieProps) => {
         distance2022 = distance2022 + event.distance
         elevation2022 = elevation2022 + event.elevation
 
@@ -116,7 +116,7 @@ export function compileRoadies() {
     var windfarms2021: number = 0
     var thorntonhalls2021: number = 0
 
-    sportData[2021].roadies.forEach((event: any) => {
+    sportData[2021].roadies.forEach((event: RoadieProps) => {
         distance2021 = distance2021 + event.distance
         elevation2021 = elevation2021 + event.elevation
 
@@ -155,7 +155,7 @@ export function compileRoadies() {
     var windfarms2020: number = 0
     var thorntonhalls2020: number = 0
 
-    sportData[2020].roadies.forEach((event: any) => {
+    sportData[2020].roadies.forEach((event: RoadieProps) => {
         distance2020 = distance2020 + event.distance
         elevation2020 = elevation2020 + event.elevation
 

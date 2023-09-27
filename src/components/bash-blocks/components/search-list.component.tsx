@@ -8,8 +8,8 @@ export const SearchList: React.FC<SearchListProps> = ({
         <option value="" disabled selected>
             Select {props.placeholder}
         </option>
-        {props.content.map(({ index, name }: any) => (
-            <option key={index} value={name}>
+        {props.content.map(({ name }: SearchListProps['content'][0]) => (
+            <option key={name} value={name}>
                 {name}
             </option>
         ))}

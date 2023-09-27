@@ -1,5 +1,11 @@
 import { sportData } from '../../data'
-import { CompiledProjectProps, removeDuplicates, toFeet, toMiles } from '..'
+import {
+    CompiledProjectProps,
+    ProjectProps,
+    removeDuplicates,
+    toFeet,
+    toMiles,
+} from '..'
 
 export function compileProjects() {
     const projects: CompiledProjectProps['projects'] = {
@@ -21,280 +27,280 @@ export function compileProjects() {
         2020: sportData[2020].projects.length,
     }
 
-    const islandsTotal: any[] = []
-    const munrosTotal: any[] = []
-    const munroTopsTotal: any[] = []
-    const corbettsTotal: any[] = []
-    const corbettTopsTotal: any[] = []
-    const grahamsTotal: any[] = []
-    const subTwosTotal: any[] = []
-    const donaldsTotal: any[] = []
+    const islandsTotal: string[] = []
+    const munrosTotal: string[] = []
+    const munroTopsTotal: string[] = []
+    const corbettsTotal: string[] = []
+    const corbettTopsTotal: string[] = []
+    const grahamsTotal: string[] = []
+    const subTwosTotal: string[] = []
+    const donaldsTotal: string[] = []
 
     var distance2023: number = 0
     var elevation2023: number = 0
 
-    const islands2023: any[] = []
-    const munros2023: any[] = []
-    const munroTops2023: any[] = []
-    const corbetts2023: any[] = []
-    const corbettTops2023: any[] = []
-    const grahams2023: any[] = []
-    const subTwos2023: any[] = []
-    const donalds2023: any[] = []
+    const islands2023: string[] = []
+    const munros2023: string[] = []
+    const munroTops2023: string[] = []
+    const corbetts2023: string[] = []
+    const corbettTops2023: string[] = []
+    const grahams2023: string[] = []
+    const subTwos2023: string[] = []
+    const donalds2023: string[] = []
 
-    sportData[2023].projects.forEach((event: any) => {
+    sportData[2023].projects.forEach((event: ProjectProps) => {
         distance2023 = distance2023 + event.distance
         elevation2023 = elevation2023 + event.elevation
 
-        event.islands?.forEach((island: any) => {
+        event.islands?.forEach((island: string) => {
             islands2023.push(island)
         })
-        event.munros?.forEach((munro: any) => {
+        event.munros?.forEach((munro: string) => {
             munros2023.push(munro)
         })
-        event.munroTops?.forEach((munroTop: any) => {
+        event.munroTops?.forEach((munroTop: string) => {
             munroTops2023.push(munroTop)
         })
-        event.corbetts?.forEach((corbett: any) => {
+        event.corbetts?.forEach((corbett: string) => {
             corbetts2023.push(corbett)
         })
-        event.corbettTops?.forEach((corbettTop: any) => {
+        event.corbettTops?.forEach((corbettTop: string) => {
             corbettTops2023.push(corbettTop)
         })
-        event.grahams?.forEach((graham: any) => {
+        event.grahams?.forEach((graham: string) => {
             grahams2023.push(graham)
         })
-        event.subTwos?.forEach((subTwo: any) => {
+        event.subTwos?.forEach((subTwo: string) => {
             subTwos2023.push(subTwo)
         })
-        event.donalds?.forEach((donald: any) => {
+        event.donalds?.forEach((donald: string) => {
             donalds2023.push(donald)
         })
     })
 
-    islands2023.forEach((island: any) => {
+    islands2023.forEach((island: string) => {
         islandsTotal.push(island)
     })
-    munros2023.forEach((munro: any) => {
+    munros2023.forEach((munro: string) => {
         munrosTotal.push(munro)
     })
-    munroTops2023.forEach((munroTop: any) => {
+    munroTops2023.forEach((munroTop: string) => {
         munroTopsTotal.push(munroTop)
     })
-    corbetts2023.forEach((corbett: any) => {
+    corbetts2023.forEach((corbett: string) => {
         corbettsTotal.push(corbett)
     })
-    corbettTops2023.forEach((corbettTop: any) => {
+    corbettTops2023.forEach((corbettTop: string) => {
         corbettTopsTotal.push(corbettTop)
     })
-    grahams2023.forEach((graham: any) => {
+    grahams2023.forEach((graham: string) => {
         grahamsTotal.push(graham)
     })
-    subTwos2023.forEach((subTwo: any) => {
+    subTwos2023.forEach((subTwo: string) => {
         subTwosTotal.push(subTwo)
     })
-    donalds2023.forEach((donald: any) => {
+    donalds2023.forEach((donald: string) => {
         donaldsTotal.push(donald)
     })
 
     var distance2022: number = 0
     var elevation2022: number = 0
 
-    const islands2022: any[] = []
-    const munros2022: any[] = []
-    const munroTops2022: any[] = []
-    const corbetts2022: any[] = []
-    const corbettTops2022: any[] = []
-    const grahams2022: any[] = []
-    const subTwos2022: any[] = []
-    const donalds2022: any[] = []
+    const islands2022: string[] = []
+    const munros2022: string[] = []
+    const munroTops2022: string[] = []
+    const corbetts2022: string[] = []
+    const corbettTops2022: string[] = []
+    const grahams2022: string[] = []
+    const subTwos2022: string[] = []
+    const donalds2022: string[] = []
 
-    sportData[2022].projects.forEach((event: any) => {
+    sportData[2022].projects.forEach((event: ProjectProps) => {
         distance2022 = distance2022 + event.distance
         elevation2022 = elevation2022 + event.elevation
 
-        event.islands?.forEach((island: any) => {
+        event.islands?.forEach((island: string) => {
             islands2022.push(island)
         })
-        event.munros?.forEach((munro: any) => {
+        event.munros?.forEach((munro: string) => {
             munros2022.push(munro)
         })
-        event.munroTops?.forEach((munroTop: any) => {
+        event.munroTops?.forEach((munroTop: string) => {
             munroTops2022.push(munroTop)
         })
-        event.corbetts?.forEach((corbett: any) => {
+        event.corbetts?.forEach((corbett: string) => {
             corbetts2022.push(corbett)
         })
-        event.corbettTops?.forEach((corbettTop: any) => {
+        event.corbettTops?.forEach((corbettTop: string) => {
             corbettTops2022.push(corbettTop)
         })
-        event.grahams?.forEach((graham: any) => {
+        event.grahams?.forEach((graham: string) => {
             grahams2022.push(graham)
         })
-        event.subTwos?.forEach((subTwo: any) => {
+        event.subTwos?.forEach((subTwo: string) => {
             subTwos2022.push(subTwo)
         })
-        event.donalds?.forEach((donald: any) => {
+        event.donalds?.forEach((donald: string) => {
             donalds2022.push(donald)
         })
     })
 
-    islands2022.forEach((island: any) => {
+    islands2022.forEach((island: string) => {
         islandsTotal.push(island)
     })
-    munros2022.forEach((munro: any) => {
+    munros2022.forEach((munro: string) => {
         munrosTotal.push(munro)
     })
-    munroTops2022.forEach((munroTop: any) => {
+    munroTops2022.forEach((munroTop: string) => {
         munroTopsTotal.push(munroTop)
     })
-    corbetts2022.forEach((corbett: any) => {
+    corbetts2022.forEach((corbett: string) => {
         corbettsTotal.push(corbett)
     })
-    corbettTops2022.forEach((corbettTop: any) => {
+    corbettTops2022.forEach((corbettTop: string) => {
         corbettTopsTotal.push(corbettTop)
     })
-    grahams2022.forEach((graham: any) => {
+    grahams2022.forEach((graham: string) => {
         grahamsTotal.push(graham)
     })
-    subTwos2022.forEach((subTwo: any) => {
+    subTwos2022.forEach((subTwo: string) => {
         subTwosTotal.push(subTwo)
     })
-    donalds2022.forEach((donald: any) => {
+    donalds2022.forEach((donald: string) => {
         donaldsTotal.push(donald)
     })
 
     var distance2021: number = 0
     var elevation2021: number = 0
 
-    const islands2021: any[] = []
-    const munros2021: any[] = []
-    const munroTops2021: any[] = []
-    const corbetts2021: any[] = []
-    const corbettTops2021: any[] = []
-    const grahams2021: any[] = []
-    const subTwos2021: any[] = []
-    const donalds2021: any[] = []
+    const islands2021: string[] = []
+    const munros2021: string[] = []
+    const munroTops2021: string[] = []
+    const corbetts2021: string[] = []
+    const corbettTops2021: string[] = []
+    const grahams2021: string[] = []
+    const subTwos2021: string[] = []
+    const donalds2021: string[] = []
 
-    sportData[2021].projects.forEach((event: any) => {
+    sportData[2021].projects.forEach((event: ProjectProps) => {
         distance2021 = distance2021 + event.distance
         elevation2021 = elevation2021 + event.elevation
 
-        event.islands?.forEach((island: any) => {
+        event.islands?.forEach((island: string) => {
             islands2021.push(island)
         })
-        event.munros?.forEach((munro: any) => {
+        event.munros?.forEach((munro: string) => {
             munros2021.push(munro)
         })
-        event.munroTops?.forEach((munroTop: any) => {
+        event.munroTops?.forEach((munroTop: string) => {
             munroTops2021.push(munroTop)
         })
-        event.corbetts?.forEach((corbett: any) => {
+        event.corbetts?.forEach((corbett: string) => {
             corbetts2021.push(corbett)
         })
-        event.corbettTops?.forEach((corbettTop: any) => {
+        event.corbettTops?.forEach((corbettTop: string) => {
             corbettTops2021.push(corbettTop)
         })
-        event.grahams?.forEach((graham: any) => {
+        event.grahams?.forEach((graham: string) => {
             grahams2021.push(graham)
         })
-        event.subTwos?.forEach((subTwo: any) => {
+        event.subTwos?.forEach((subTwo: string) => {
             subTwos2021.push(subTwo)
         })
-        event.donalds?.forEach((donald: any) => {
+        event.donalds?.forEach((donald: string) => {
             donalds2021.push(donald)
         })
     })
 
-    islands2021.forEach((island: any) => {
+    islands2021.forEach((island: string) => {
         islandsTotal.push(island)
     })
-    munros2021.forEach((munro: any) => {
+    munros2021.forEach((munro: string) => {
         munrosTotal.push(munro)
     })
-    munroTops2021.forEach((munroTop: any) => {
+    munroTops2021.forEach((munroTop: string) => {
         munroTopsTotal.push(munroTop)
     })
-    corbetts2021.forEach((corbett: any) => {
+    corbetts2021.forEach((corbett: string) => {
         corbettsTotal.push(corbett)
     })
-    corbettTops2021.forEach((corbettTop: any) => {
+    corbettTops2021.forEach((corbettTop: string) => {
         corbettTopsTotal.push(corbettTop)
     })
-    grahams2021.forEach((graham: any) => {
+    grahams2021.forEach((graham: string) => {
         grahamsTotal.push(graham)
     })
-    subTwos2021.forEach((subTwo: any) => {
+    subTwos2021.forEach((subTwo: string) => {
         subTwosTotal.push(subTwo)
     })
-    donalds2021.forEach((donald: any) => {
+    donalds2021.forEach((donald: string) => {
         donaldsTotal.push(donald)
     })
 
     var distance2020: number = 0
     var elevation2020: number = 0
 
-    const islands2020: any[] = []
-    const munros2020: any[] = []
-    const munroTops2020: any[] = []
-    const corbetts2020: any[] = []
-    const corbettTops2020: any[] = []
-    const grahams2020: any[] = []
-    const subTwos2020: any[] = []
-    const donalds2020: any[] = []
+    const islands2020: string[] = []
+    const munros2020: string[] = []
+    const munroTops2020: string[] = []
+    const corbetts2020: string[] = []
+    const corbettTops2020: string[] = []
+    const grahams2020: string[] = []
+    const subTwos2020: string[] = []
+    const donalds2020: string[] = []
 
-    sportData[2020].projects.forEach((event: any) => {
+    sportData[2020].projects.forEach((event: ProjectProps) => {
         distance2020 = distance2020 + event.distance
         elevation2020 = elevation2020 + event.elevation
 
-        event.islands?.forEach((island: any) => {
+        event.islands?.forEach((island: string) => {
             islands2020.push(island)
         })
-        event.munros?.forEach((munro: any) => {
+        event.munros?.forEach((munro: string) => {
             munros2020.push(munro)
         })
-        event.munroTops?.forEach((munroTop: any) => {
+        event.munroTops?.forEach((munroTop: string) => {
             munroTops2020.push(munroTop)
         })
-        event.corbetts?.forEach((corbett: any) => {
+        event.corbetts?.forEach((corbett: string) => {
             corbetts2020.push(corbett)
         })
-        event.corbettTops?.forEach((corbettTop: any) => {
+        event.corbettTops?.forEach((corbettTop: string) => {
             corbettTops2020.push(corbettTop)
         })
-        event.grahams?.forEach((graham: any) => {
+        event.grahams?.forEach((graham: string) => {
             grahams2020.push(graham)
         })
-        event.subTwos?.forEach((subTwo: any) => {
+        event.subTwos?.forEach((subTwo: string) => {
             subTwos2020.push(subTwo)
         })
-        event.donalds?.forEach((donald: any) => {
+        event.donalds?.forEach((donald: string) => {
             donalds2020.push(donald)
         })
     })
 
-    islands2020.forEach((island: any) => {
+    islands2020.forEach((island: string) => {
         islandsTotal.push(island)
     })
-    munros2020.forEach((munro: any) => {
+    munros2020.forEach((munro: string) => {
         munrosTotal.push(munro)
     })
-    munroTops2020.forEach((munroTop: any) => {
+    munroTops2020.forEach((munroTop: string) => {
         munroTopsTotal.push(munroTop)
     })
-    corbetts2020.forEach((corbett: any) => {
+    corbetts2020.forEach((corbett: string) => {
         corbettsTotal.push(corbett)
     })
-    corbettTops2020.forEach((corbettTop: any) => {
+    corbettTops2020.forEach((corbettTop: string) => {
         corbettTopsTotal.push(corbettTop)
     })
-    grahams2020.forEach((graham: any) => {
+    grahams2020.forEach((graham: string) => {
         grahamsTotal.push(graham)
     })
-    subTwos2020.forEach((subTwo: any) => {
+    subTwos2020.forEach((subTwo: string) => {
         subTwosTotal.push(subTwo)
     })
-    donalds2020.forEach((donald: any) => {
+    donalds2020.forEach((donald: string) => {
         donaldsTotal.push(donald)
     })
 

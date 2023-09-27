@@ -38,7 +38,7 @@ export const ColumnTable: React.FC<ColumnTableProps> = ({
                         {props.leftColumn.entries?.map(
                             (
                                 entry: ColumnTableProps['leftColumn']['entries'][0],
-                                index: number
+                                index
                             ) => {
                                 if (entry)
                                     return (
@@ -58,9 +58,12 @@ export const ColumnTable: React.FC<ColumnTableProps> = ({
                 </Grid>
                 <Grid columnItem={[2, 2]} textAlign="right">
                     {props.rightColumns.map(
-                        ({ index, title, entries }: any) => (
+                        ({
+                            title,
+                            entries,
+                        }: ColumnTableProps['rightColumns'][0]) => (
                             <div
-                                key={index}
+                                key={title as string}
                                 style={{
                                     width: 'fit-content',
                                     maxWidth: isMobile ? '250px' : '500px',
@@ -77,7 +80,7 @@ export const ColumnTable: React.FC<ColumnTableProps> = ({
                                 {entries?.map(
                                     (
                                         entry: ColumnTableProps['rightColumns'][0]['entries'][0],
-                                        index: number
+                                        index
                                     ) => {
                                         if (entry)
                                             return (
@@ -167,63 +170,68 @@ export const RowTable: React.FC<RowTableProps> = ({
                     </div>
                 </Grid>
                 <>
-                    {props.rows?.map(({ index, leftItem, rightItem }: any) => {
-                        if (Boolean(leftItem && rightItem)) {
-                            return (
-                                <>
-                                    <Grid
-                                        columnItem={[1, 2]}
-                                        rowItem={[
-                                            index + 2,
-                                            props.rows.length + 1,
-                                        ]}
-                                    >
-                                        <div
-                                            style={{
-                                                width: 'fit-content',
-                                                marginRight: '1rem',
-                                                display: 'inline-block',
-                                            }}
+                    {props.rows?.map(
+                        (
+                            { leftItem, rightItem }: RowTableProps['rows'][0],
+                            index
+                        ) => {
+                            if (Boolean(leftItem && rightItem)) {
+                                return (
+                                    <>
+                                        <Grid
+                                            columnItem={[1, 2]}
+                                            rowItem={[
+                                                index + 2,
+                                                props.rows.length + 1,
+                                            ]}
                                         >
-                                            <Typography
-                                                type="footnote"
-                                                content={leftItem}
-                                                boldFace
-                                                mT={isMobile ? 3.75 : 7.5}
-                                            />
-                                        </div>
-                                    </Grid>
-                                    <Grid
-                                        columnItem={[2, 2]}
-                                        rowItem={[
-                                            index + 2,
-                                            props.rows.length + 1,
-                                        ]}
-                                        textAlign="right"
-                                    >
-                                        <div
-                                            style={{
-                                                width: 'fit-content',
-                                                maxWidth: isMobile
-                                                    ? '250px'
-                                                    : '500px',
-                                                marginLeft: '1rem',
-                                                display: 'inline-block',
-                                            }}
+                                            <div
+                                                style={{
+                                                    width: 'fit-content',
+                                                    marginRight: '1rem',
+                                                    display: 'inline-block',
+                                                }}
+                                            >
+                                                <Typography
+                                                    type="footnote"
+                                                    content={leftItem}
+                                                    boldFace
+                                                    mT={isMobile ? 3.75 : 7.5}
+                                                />
+                                            </div>
+                                        </Grid>
+                                        <Grid
+                                            columnItem={[2, 2]}
+                                            rowItem={[
+                                                index + 2,
+                                                props.rows.length + 1,
+                                            ]}
+                                            textAlign="right"
                                         >
-                                            <Typography
-                                                type="footnote"
-                                                content={rightItem}
-                                                mT={isMobile ? 3.75 : 7.5}
-                                            />
-                                        </div>
-                                    </Grid>
-                                </>
-                            )
-                        }
+                                            <div
+                                                style={{
+                                                    width: 'fit-content',
+                                                    maxWidth: isMobile
+                                                        ? '250px'
+                                                        : '500px',
+                                                    marginLeft: '1rem',
+                                                    display: 'inline-block',
+                                                }}
+                                            >
+                                                <Typography
+                                                    type="footnote"
+                                                    content={rightItem}
+                                                    mT={isMobile ? 3.75 : 7.5}
+                                                />
+                                            </div>
+                                        </Grid>
+                                    </>
+                                )
+                            }
 
-                        return null
-                    })}
+                            return null
+                        }
+                    )}
                 </>
             </Grid>
         </Spacing>

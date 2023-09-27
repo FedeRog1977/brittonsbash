@@ -47,10 +47,10 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
                 className={styles.rightArrow}
                 onClick={nextSlide}
             />
-            {props.slides.map((slide: ImageProps, index: number) => {
+            {props.slides.map((slide: ImageProps, index) => {
                 if (index === current) {
                     return (
-                        <div key={index}>
+                        <div>
                             {slide.description && (
                                 <div className={styles.imageSliderCaption}>
                                     <Typography
@@ -77,9 +77,9 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
 
                 return null
             })}
-            {props.slides.map((slide: ImageProps, index: number) => (
+            {props.slides.map((slide: ImageProps, index) => (
                 <div
-                    key={index}
+                    key={slide.alt}
                     className={`${styles.imageSliderSlide} ${
                         index === current ? styles.imageSliderSlideActive : ''
                     }`}

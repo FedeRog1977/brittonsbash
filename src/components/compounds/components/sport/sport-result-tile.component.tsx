@@ -7,6 +7,9 @@ import {
     toFeet,
     toSpeed,
     useScreenWidth,
+    RoadieProps,
+    ProjectProps,
+    MilesProps,
 } from '../../../../scripts'
 
 export const SportResultTile = () => {
@@ -129,39 +132,34 @@ export const SportResultTile = () => {
                 <ColumnTable
                     leftColumn={{
                         entries: compiledRoadies.roadies[2023].map(
-                            ({ name }: any) => name as string
+                            ({ name }: RoadieProps) => name
                         ),
                     }}
                     rightColumns={[
                         {
                             title: 'Distance',
                             entries: compiledRoadies.roadies[2023].map(
-                                ({ distance }: any) =>
-                                    toMiles(distance) as string
+                                ({ distance }: RoadieProps) => toMiles(distance)
                             ),
                         },
                         {
                             title: 'Elevation',
                             entries: compiledRoadies.roadies[2023].map(
-                                ({ elevation }: any) =>
-                                    toFeet(elevation) as string
+                                ({ elevation }: RoadieProps) =>
+                                    toFeet(elevation)
                             ),
                         },
                         {
                             title: 'Time',
                             entries: compiledRoadies.roadies[2023].map(
-                                ({ time }: any) => time as string
+                                ({ time }: RoadieProps) => time
                             ),
                         },
                         {
                             title: 'Speed',
                             entries: compiledRoadies.roadies[2023].map(
-                                ({ speed }: any) =>
-                                    speed ? (
-                                        (toSpeed(speed, false) as string)
-                                    ) : (
-                                        <>&nbsp;</>
-                                    )
+                                ({ speed }: RoadieProps) =>
+                                    speed ? toSpeed(speed, false) : <>&nbsp;</>
                             ),
                         },
                     ]}
@@ -171,39 +169,34 @@ export const SportResultTile = () => {
                 <ColumnTable
                     leftColumn={{
                         entries: compiledRoadies.roadies[2022].map(
-                            ({ name }: any) => name as string
+                            ({ name }: RoadieProps) => name
                         ),
                     }}
                     rightColumns={[
                         {
                             title: 'Distance',
                             entries: compiledRoadies.roadies[2022].map(
-                                ({ distance }: any) =>
-                                    toMiles(distance) as string
+                                ({ distance }: RoadieProps) => toMiles(distance)
                             ),
                         },
                         {
                             title: 'Elevation',
                             entries: compiledRoadies.roadies[2022].map(
-                                ({ elevation }: any) =>
-                                    toFeet(elevation) as string
+                                ({ elevation }: RoadieProps) =>
+                                    toFeet(elevation)
                             ),
                         },
                         {
                             title: 'Time',
                             entries: compiledRoadies.roadies[2022].map(
-                                ({ time }: any) => time as string
+                                ({ time }: RoadieProps) => time
                             ),
                         },
                         {
                             title: 'Speed',
                             entries: compiledRoadies.roadies[2022].map(
-                                ({ speed }: any) =>
-                                    speed ? (
-                                        (toSpeed(speed, false) as string)
-                                    ) : (
-                                        <>&nbsp;</>
-                                    )
+                                ({ speed }: RoadieProps) =>
+                                    speed ? toSpeed(speed, false) : <>&nbsp;</>
                             ),
                         },
                     ]}
@@ -213,39 +206,34 @@ export const SportResultTile = () => {
                 <ColumnTable
                     leftColumn={{
                         entries: compiledRoadies.roadies[2021].map(
-                            ({ name }: any) => name as string
+                            ({ name }: RoadieProps) => name
                         ),
                     }}
                     rightColumns={[
                         {
                             title: 'Distance',
                             entries: compiledRoadies.roadies[2021].map(
-                                ({ distance }: any) =>
-                                    toMiles(distance) as string
+                                ({ distance }: RoadieProps) => toMiles(distance)
                             ),
                         },
                         {
                             title: 'Elevation',
                             entries: compiledRoadies.roadies[2021].map(
-                                ({ elevation }: any) =>
-                                    toFeet(elevation) as string
+                                ({ elevation }: RoadieProps) =>
+                                    toFeet(elevation)
                             ),
                         },
                         {
                             title: 'Time',
                             entries: compiledRoadies.roadies[2021].map(
-                                ({ time }: any) => time as string
+                                ({ time }: RoadieProps) => time
                             ),
                         },
                         {
                             title: 'Speed',
                             entries: compiledRoadies.roadies[2021].map(
-                                ({ speed }: any) =>
-                                    speed ? (
-                                        (toSpeed(speed, false) as string)
-                                    ) : (
-                                        <>&nbsp;</>
-                                    )
+                                ({ speed }: RoadieProps) =>
+                                    speed ? toSpeed(speed, false) : <>&nbsp;</>
                             ),
                         },
                     ]}
@@ -255,39 +243,34 @@ export const SportResultTile = () => {
                 <ColumnTable
                     leftColumn={{
                         entries: compiledRoadies.roadies[2020].map(
-                            ({ name }: any) => name as string
+                            ({ name }: RoadieProps) => name
                         ),
                     }}
                     rightColumns={[
                         {
                             title: 'Distance',
                             entries: compiledRoadies.roadies[2020].map(
-                                ({ distance }: any) =>
-                                    toMiles(distance) as string
+                                ({ distance }: RoadieProps) => toMiles(distance)
                             ),
                         },
                         {
                             title: 'Elevation',
                             entries: compiledRoadies.roadies[2020].map(
-                                ({ elevation }: any) =>
-                                    toFeet(elevation) as string
+                                ({ elevation }: RoadieProps) =>
+                                    toFeet(elevation)
                             ),
                         },
                         {
                             title: 'Time',
                             entries: compiledRoadies.roadies[2020].map(
-                                ({ time }: any) => time as string
+                                ({ time }: RoadieProps) => time
                             ),
                         },
                         {
                             title: 'Speed',
                             entries: compiledRoadies.roadies[2020].map(
-                                ({ speed }: any) =>
-                                    speed ? (
-                                        (toSpeed(speed, false) as string)
-                                    ) : (
-                                        <>&nbsp;</>
-                                    )
+                                ({ speed }: RoadieProps) =>
+                                    speed ? toSpeed(speed, false) : <>&nbsp;</>
                             ),
                         },
                     ]}
@@ -441,28 +424,28 @@ export const SportResultTile = () => {
                 <ColumnTable
                     leftColumn={{
                         entries: compiledProjects.projects[2023].map(
-                            ({ name }: any) => name as string
+                            ({ name }: ProjectProps) => name
                         ),
                     }}
                     rightColumns={[
                         {
                             title: 'Distance',
                             entries: compiledProjects.projects[2023].map(
-                                ({ distance }: any) =>
-                                    toMiles(distance) as string
+                                ({ distance }: ProjectProps) =>
+                                    toMiles(distance)
                             ),
                         },
                         {
                             title: 'Elevation',
                             entries: compiledProjects.projects[2023].map(
-                                ({ elevation }: any) =>
-                                    toFeet(elevation) as string
+                                ({ elevation }: ProjectProps) =>
+                                    toFeet(elevation)
                             ),
                         },
                         {
                             title: 'Time',
                             entries: compiledProjects.projects[2023].map(
-                                ({ time }: any) => time as string
+                                ({ time }: ProjectProps) => time
                             ),
                         },
                     ]}
@@ -472,28 +455,28 @@ export const SportResultTile = () => {
                 <ColumnTable
                     leftColumn={{
                         entries: compiledProjects.projects[2022].map(
-                            ({ name }: any) => name as string
+                            ({ name }: ProjectProps) => name
                         ),
                     }}
                     rightColumns={[
                         {
                             title: 'Distance',
                             entries: compiledProjects.projects[2022].map(
-                                ({ distance }: any) =>
-                                    toMiles(distance) as string
+                                ({ distance }: ProjectProps) =>
+                                    toMiles(distance)
                             ),
                         },
                         {
                             title: 'Elevation',
                             entries: compiledProjects.projects[2022].map(
-                                ({ elevation }: any) =>
-                                    toFeet(elevation) as string
+                                ({ elevation }: ProjectProps) =>
+                                    toFeet(elevation)
                             ),
                         },
                         {
                             title: 'Time',
                             entries: compiledProjects.projects[2022].map(
-                                ({ time }: any) => time as string
+                                ({ time }: ProjectProps) => time
                             ),
                         },
                     ]}
@@ -503,28 +486,28 @@ export const SportResultTile = () => {
                 <ColumnTable
                     leftColumn={{
                         entries: compiledProjects.projects[2021].map(
-                            ({ name }: any) => name as string
+                            ({ name }: ProjectProps) => name
                         ),
                     }}
                     rightColumns={[
                         {
                             title: 'Distance',
                             entries: compiledProjects.projects[2021].map(
-                                ({ distance }: any) =>
-                                    toMiles(distance) as string
+                                ({ distance }: ProjectProps) =>
+                                    toMiles(distance)
                             ),
                         },
                         {
                             title: 'Elevation',
                             entries: compiledProjects.projects[2021].map(
-                                ({ elevation }: any) =>
-                                    toFeet(elevation) as string
+                                ({ elevation }: ProjectProps) =>
+                                    toFeet(elevation)
                             ),
                         },
                         {
                             title: 'Time',
                             entries: compiledProjects.projects[2021].map(
-                                ({ time }: any) => time as string
+                                ({ time }: ProjectProps) => time
                             ),
                         },
                     ]}
@@ -534,28 +517,28 @@ export const SportResultTile = () => {
                 <ColumnTable
                     leftColumn={{
                         entries: compiledProjects.projects[2020].map(
-                            ({ name }: any) => name as string
+                            ({ name }: ProjectProps) => name
                         ),
                     }}
                     rightColumns={[
                         {
                             title: 'Distance',
                             entries: compiledProjects.projects[2020].map(
-                                ({ distance }: any) =>
-                                    toMiles(distance) as string
+                                ({ distance }: ProjectProps) =>
+                                    toMiles(distance)
                             ),
                         },
                         {
                             title: 'Elevation',
                             entries: compiledProjects.projects[2020].map(
-                                ({ elevation }: any) =>
-                                    toFeet(elevation) as string
+                                ({ elevation }: ProjectProps) =>
+                                    toFeet(elevation)
                             ),
                         },
                         {
                             title: 'Time',
                             entries: compiledProjects.projects[2020].map(
-                                ({ time }: any) => time as string
+                                ({ time }: ProjectProps) => time
                             ),
                         },
                     ]}
@@ -644,28 +627,26 @@ export const SportResultTile = () => {
                 <ColumnTable
                     leftColumn={{
                         entries: compiledMiles.miles[2023].map(
-                            ({ name }: any) => name as string
+                            ({ name }: MilesProps) => name
                         ),
                     }}
                     rightColumns={[
                         {
                             title: 'Distance',
                             entries: compiledMiles.miles[2023].map(
-                                ({ distance }: any) =>
-                                    toMiles(distance) as string
+                                ({ distance }: MilesProps) => toMiles(distance)
                             ),
                         },
                         {
                             title: 'Elevation',
                             entries: compiledMiles.miles[2023].map(
-                                ({ elevation }: any) =>
-                                    toFeet(elevation) as string
+                                ({ elevation }: MilesProps) => toFeet(elevation)
                             ),
                         },
                         {
                             title: 'Time',
                             entries: compiledMiles.miles[2023].map(
-                                ({ time }: any) => time as string
+                                ({ time }: MilesProps) => time
                             ),
                         },
                     ]}
@@ -675,28 +656,26 @@ export const SportResultTile = () => {
                 <ColumnTable
                     leftColumn={{
                         entries: compiledMiles.miles[2022].map(
-                            ({ name }: any) => name as string
+                            ({ name }: MilesProps) => name
                         ),
                     }}
                     rightColumns={[
                         {
                             title: 'Distance',
                             entries: compiledMiles.miles[2022].map(
-                                ({ distance }: any) =>
-                                    toMiles(distance) as string
+                                ({ distance }: MilesProps) => toMiles(distance)
                             ),
                         },
                         {
                             title: 'Elevation',
                             entries: compiledMiles.miles[2022].map(
-                                ({ elevation }: any) =>
-                                    toFeet(elevation) as string
+                                ({ elevation }: MilesProps) => toFeet(elevation)
                             ),
                         },
                         {
                             title: 'Time',
                             entries: compiledMiles.miles[2022].map(
-                                ({ time }: any) => time as string
+                                ({ time }: MilesProps) => time
                             ),
                         },
                     ]}
@@ -706,28 +685,26 @@ export const SportResultTile = () => {
                 <ColumnTable
                     leftColumn={{
                         entries: compiledMiles.miles[2021].map(
-                            ({ name }: any) => name as string
+                            ({ name }: MilesProps) => name
                         ),
                     }}
                     rightColumns={[
                         {
                             title: 'Distance',
                             entries: compiledMiles.miles[2021].map(
-                                ({ distance }: any) =>
-                                    toMiles(distance) as string
+                                ({ distance }: MilesProps) => toMiles(distance)
                             ),
                         },
                         {
                             title: 'Elevation',
                             entries: compiledMiles.miles[2021].map(
-                                ({ elevation }: any) =>
-                                    toFeet(elevation) as string
+                                ({ elevation }: MilesProps) => toFeet(elevation)
                             ),
                         },
                         {
                             title: 'Time',
                             entries: compiledMiles.miles[2021].map(
-                                ({ time }: any) => time as string
+                                ({ time }: MilesProps) => time
                             ),
                         },
                     ]}
@@ -737,28 +714,26 @@ export const SportResultTile = () => {
                 <ColumnTable
                     leftColumn={{
                         entries: compiledMiles.miles[2020].map(
-                            ({ name }: any) => name as string
+                            ({ name }: MilesProps) => name
                         ),
                     }}
                     rightColumns={[
                         {
                             title: 'Distance',
                             entries: compiledMiles.miles[2020].map(
-                                ({ distance }: any) =>
-                                    toMiles(distance) as string
+                                ({ distance }: MilesProps) => toMiles(distance)
                             ),
                         },
                         {
                             title: 'Elevation',
                             entries: compiledMiles.miles[2020].map(
-                                ({ elevation }: any) =>
-                                    toFeet(elevation) as string
+                                ({ elevation }: MilesProps) => toFeet(elevation)
                             ),
                         },
                         {
                             title: 'Time',
                             entries: compiledMiles.miles[2020].map(
-                                ({ time }: any) => time as string
+                                ({ time }: MilesProps) => time
                             ),
                         },
                     ]}

@@ -1,6 +1,8 @@
 export type SearchListProps = {
     className: string
     func: () => void
-    content: {}[]
+    content: {
+        name: string
+    }[]
     placeholder: string
 }

@@ -16,23 +16,20 @@ export const Article: React.FC<ArticleProps> = ({ ...props }: ArticleProps) => {
             {props.sections
                 .slice(0, sectionsFinal)
                 .map(
-                    (
-                        {
-                            type,
-                            content,
-                            imageContent,
-                            color,
-                            inline,
-                            boldFace,
-                            italicize,
-                            smallCaps,
-                            textDecoration,
-                            link,
-                        }: any,
-                        index: number
-                    ) => (
+                    ({
+                        type,
+                        content,
+                        imageContent,
+                        color,
+                        inline,
+                        boldFace,
+                        italicize,
+                        smallCaps,
+                        textDecoration,
+                        link,
+                    }: ArticleProps['sections'][0]) => (
                         <Typography
-                            key={index}
+                            key={type}
                             type={type}
                             content={content}
                             imageContent={imageContent}

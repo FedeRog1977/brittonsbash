@@ -14,8 +14,8 @@ export const ImageMatrix: React.FC<ImageMatrixProps> = ({
 
     return (
         <>
-            {formattedItems.map((row: ImageProps[], index: number) => (
-                <Flex key={index}>
+            {formattedItems.map((row: ImageProps[]) => (
+                <Flex>
                     {row.map((rowItem: ImageProps) => (
                         <Flex item key={rowItem.alt}>
                             <LazyLoadImage

@@ -14,6 +14,7 @@ import {
     compileEvent,
     useShowElement,
     useScreenWidth,
+    RefactoredEventNameProps,
 } from '../../../../scripts'
 import { InstantGramResultTileProps } from '../..'
 import { useEffect } from 'react'
@@ -56,33 +57,35 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                 )}
                 {refactoredEvent.names.length > 1 ? (
                     <>
-                        {refactoredEvent.names.map(({ name, refKey }: any) => (
-                            <Typography
-                                type="t2"
-                                content={
-                                    <>
-                                        <Typography
-                                            content={
-                                                <>
-                                                    Part&nbsp;
-                                                    {refKey}
-                                                    &nbsp;&#8212;&nbsp;
-                                                </>
-                                            }
-                                            color="mediumGrey"
-                                            inline
-                                            key={refKey}
-                                        />
-                                        <Typography
-                                            content={<>{name}</>}
-                                            inline
-                                            key={refKey}
-                                        />
-                                    </>
-                                }
-                                textAlign="left"
-                            />
-                        ))}
+                        {refactoredEvent.names.map(
+                            ({ name, refKey }: RefactoredEventNameProps) => (
+                                <Typography
+                                    type="t2"
+                                    content={
+                                        <>
+                                            <Typography
+                                                content={
+                                                    <>
+                                                        Part&nbsp;
+                                                        {refKey}
+                                                        &nbsp;&#8212;&nbsp;
+                                                    </>
+                                                }
+                                                color="mediumGrey"
+                                                inline
+                                                key={refKey}
+                                            />
+                                            <Typography
+                                                content={<>{name}</>}
+                                                inline
+                                                key={refKey}
+                                            />
+                                        </>
+                                    }
+                                    textAlign="left"
+                                />
+                            )
+                        )}
                     </>
                 ) : (
                     <Typography
