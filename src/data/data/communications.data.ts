@@ -1279,22 +1279,16 @@ export const communicationsData = {
     culinary: {
         kitchen: {
             brands: [
-                'Wusthof',
+                'Wüsthof',
                 'Zwilling',
-                'WMF',
                 'Le Creuset',
+                'WMF',
                 'Villeroy & Boch',
                 'Sant’ Andrea',
                 'Dartington Crystal',
                 'LSA',
                 'LocknLock',
                 'Pyrex',
-                'Marks & Spencer',
-                'Waitrose',
-                'Whole Foods Market',
-                'Lakeland',
-                'Cazcabel',
-                'Fever Tree',
             ],
             knives: [
                 'Peeling',
