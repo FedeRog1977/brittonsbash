@@ -39,7 +39,11 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                     color="white"
                 />
             </Spacing> */}
-            <Spacing mL={isMobile ? 0 : 70} mR={isMobile ? 0 : 70}>
+            <Spacing
+                mL={isMobile ? 0 : 70}
+                mR={isMobile ? 0 : 70}
+                textAlign="center"
+            >
                 <InstantGramSearchList
                     func={props.funcSelect}
                     items={eventData[2023]}
