@@ -8,9 +8,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useScreenWidth } from '../../../../scripts'
 import { Tile, Spacing, Button } from '../../../bash-blocks'
 
-type SportSearchTileProps = {}
+type SportSearchTileProps = {
+    funcSelect: (e: any) => void
+    isRoadies: boolean
+    isProjects: boolean
+    isMiles: boolean
+}
 
-export const SportSearchTile: React.FC<SportSearchTileProps> = () => {
+export const SportSearchTile: React.FC<SportSearchTileProps> = ({
+    ...props
+}: SportSearchTileProps) => {
     const { isMobile } = useScreenWidth()
 
     return (
@@ -23,8 +30,9 @@ export const SportSearchTile: React.FC<SportSearchTileProps> = () => {
                 <Button
                     typeType="t2"
                     buttonType="dense-clear"
-                    func={() => {}}
-                    funcResp={false}
+                    value="roadies"
+                    func={props.funcSelect}
+                    funcResp={props.isRoadies}
                     content={<FontAwesomeIcon icon={faBiking} />}
                     subContent="Roadies"
                     color="darkerGrey"
@@ -32,8 +40,9 @@ export const SportSearchTile: React.FC<SportSearchTileProps> = () => {
                 <Button
                     typeType="t2"
                     buttonType="dense-clear"
-                    func={() => {}}
-                    funcResp={false}
+                    value="projects"
+                    func={props.funcSelect}
+                    funcResp={props.isProjects}
                     content={<FontAwesomeIcon icon={faMountainSun} />}
                     subContent="Projects"
                     color="darkerGrey"
@@ -41,8 +50,9 @@ export const SportSearchTile: React.FC<SportSearchTileProps> = () => {
                 <Button
                     typeType="t2"
                     buttonType="dense-clear"
-                    func={() => {}}
-                    funcResp={false}
+                    value="miles"
+                    func={props.funcSelect}
+                    funcResp={props.isMiles}
                     content={<FontAwesomeIcon icon={faWalking} />}
                     subContent="Miles"
                     color="darkerGrey"
@@ -50,6 +60,7 @@ export const SportSearchTile: React.FC<SportSearchTileProps> = () => {
                 <Button
                     typeType="t2"
                     buttonType="dense-clear"
+                    value="tennis"
                     func={() => {}}
                     funcResp={false}
                     content={<FontAwesomeIcon icon={faTrophy} />}
