@@ -1,5 +1,5 @@
 import { Background } from '../../bash-blocks'
-import { SportResultTile } from '../../compounds'
+import { Sport as SportComponent } from '../../compounds'
 
 export const Sport = () => (
     <>
@@ -7,6 +7,6 @@ export const Sport = () => (
             content="Sport"
             className="background-text background-text-sport"
         />
-        <SportResultTile />
+        <SportComponent />
     </>
 )

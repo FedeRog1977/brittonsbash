@@ -1,6 +1,7 @@
+import React from 'react'
 import { InstantGramSearchTile, InstantGramResultTile, useInstantGram } from '.'
 
-export const InstantGram = () => {
+export const InstantGram: React.FC = () => {
     const {
         handleInput,
         executeInput,

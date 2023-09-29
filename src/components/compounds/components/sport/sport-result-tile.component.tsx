@@ -1,10 +1,4 @@
-import {
-    Typography,
-    Tile,
-    ColumnTable,
-    Spacing,
-    Button,
-} from '../../../bash-blocks'
+import { Typography, Tile, ColumnTable, Spacing } from '../../../bash-blocks'
 import {
     compileProjects,
     compileMiles,
@@ -17,15 +11,10 @@ import {
     ProjectProps,
     MilesProps,
 } from '../../../../scripts'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-    faBiking,
-    faMountainSun,
-    faWalking,
-    faTrophy,
-} from '@fortawesome/free-solid-svg-icons'
 
-export const SportResultTile = () => {
+type SportResultTileProps = {}
+
+export const SportResultTile: React.FC<SportResultTileProps> = () => {
     const { isMobile } = useScreenWidth()
     const compiledRoadies = compileRoadies()
     const compiledProjects = compileProjects()
@@ -33,50 +22,6 @@ export const SportResultTile = () => {
 
     return (
         <>
-            <Tile type="solid" top>
-                <Spacing
-                    mL={isMobile ? 0 : 70}
-                    mR={isMobile ? 0 : 70}
-                    textAlign="center"
-                >
-                    <Button
-                        typeType="t2"
-                        buttonType="dense-clear"
-                        func={() => {}}
-                        funcResp={false}
-                        content={<FontAwesomeIcon icon={faBiking} />}
-                        subContent="Roadies"
-                        color="darkerGrey"
-                    />
-                    <Button
-                        typeType="t2"
-                        buttonType="dense-clear"
-                        func={() => {}}
-                        funcResp={false}
-                        content={<FontAwesomeIcon icon={faMountainSun} />}
-                        subContent="Projects"
-                        color="darkerGrey"
-                    />
-                    <Button
-                        typeType="t2"
-                        buttonType="dense-clear"
-                        func={() => {}}
-                        funcResp={false}
-                        content={<FontAwesomeIcon icon={faWalking} />}
-                        subContent="Miles"
-                        color="darkerGrey"
-                    />
-                    <Button
-                        typeType="t2"
-                        buttonType="dense-clear"
-                        func={() => {}}
-                        funcResp={false}
-                        content={<FontAwesomeIcon icon={faTrophy} />}
-                        subContent="Tennis"
-                        color="darkerGrey"
-                    />
-                </Spacing>
-            </Tile>
             <Tile type="solid" dense={isMobile}>
                 <Spacing
                     mL={isMobile ? 15 : 70}
@@ -1107,5 +1052,3 @@ export const SportResultTile = () => {
         </>
     )
 }
-
-export default SportResultTile
