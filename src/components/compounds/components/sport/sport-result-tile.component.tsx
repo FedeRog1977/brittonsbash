@@ -520,8 +520,8 @@ export const SportResultTile = () => {
                     <Typography type="h2" content="Hills" textAlign="left" />
                 </Spacing>
                 <Spacing
-                    mL={isMobile ? 15 : 70}
-                    mR={isMobile ? 15 : 70}
+                    mL={isMobile ? 0 : 70}
+                    mR={isMobile ? 0 : 70}
                     mT={isMobile ? 7.5 : 15}
                     mB={isMobile ? 7.5 : 15}
                 >
@@ -933,8 +933,8 @@ export const SportResultTile = () => {
                     <Typography type="h2" content="2023" textAlign="left" />
                 </Spacing>
                 <Spacing
-                    mL={isMobile ? 15 : 70}
-                    mR={isMobile ? 15 : 70}
+                    mL={isMobile ? 0 : 70}
+                    mR={isMobile ? 0 : 70}
                     mT={isMobile ? 7.5 : 15}
                     mB={isMobile ? 7.5 : 15}
                 >
@@ -978,8 +978,8 @@ export const SportResultTile = () => {
                     <Typography type="h2" content="2022" textAlign="left" />
                 </Spacing>
                 <Spacing
-                    mL={isMobile ? 15 : 70}
-                    mR={isMobile ? 15 : 70}
+                    mL={isMobile ? 0 : 70}
+                    mR={isMobile ? 0 : 70}
                     mT={isMobile ? 7.5 : 15}
                     mB={isMobile ? 7.5 : 15}
                 >
