@@ -8,12 +8,13 @@
 }
 
 .header-logo {
-    font-family: Sans-Light;
+    font-family: IBM;
     font-size: 22px;
     color: var(--light-grey);
     vertical-align: center;
-    height: 75px;
+    // height: 75px;
     float: left;
+    margin-top: 5px;
 }
 
 .header-navigation {
