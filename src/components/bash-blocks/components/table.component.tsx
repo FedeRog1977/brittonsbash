@@ -105,7 +105,7 @@ export const ColumnTable: React.FC<ColumnTableProps> = ({
 
     if (props.scroll)
         return (
-            <div style={{ maxHeight: '200px', overflowY: 'scroll' }}>
+            <div style={{ maxHeight: '300px', overflowY: 'scroll' }}>
                 {content}
             </div>
         )
