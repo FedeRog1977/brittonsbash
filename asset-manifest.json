@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/brittonsbash/static/css/main.8257f587.css",
-    "main.js": "/brittonsbash/static/js/main.20c1d66f.js",
+    "main.css": "/brittonsbash/static/css/main.9931ce1a.css",
+    "main.js": "/brittonsbash/static/js/main.4959da98.js",
     "static/js/787.21a77f2f.chunk.js": "/brittonsbash/static/js/787.21a77f2f.chunk.js",
     "static/media/background.jpg": "/brittonsbash/static/media/background.cbc6a32ac60307059f07.jpg",
     "static/media/cmu-italic.ttf": "/brittonsbash/static/media/cmu-italic.242b10aa04f441336096.ttf",
@@ -20,15 +20,16 @@
     "static/media/open-sans-light.ttf": "/brittonsbash/static/media/open-sans-light.ba19b360bc99b580b45b.ttf",
     "static/media/grandista.ttf": "/brittonsbash/static/media/grandista.bec7f1e368edce800cdd.ttf",
     "static/media/nfs.ttf": "/brittonsbash/static/media/nfs.8723982ddbc7e3136bad.ttf",
+    "static/media/ibm.ttf": "/brittonsbash/static/media/ibm.ea9b8ea99532f40a5c49.ttf",
     "static/media/placeholder.webp": "/brittonsbash/static/media/placeholder.aadba29c0fa8fe2da964.webp",
     "static/media/xmr.svg": "/brittonsbash/static/media/xmr.45ccc83cb5c9bd7f5f6794df23a2ea69.svg",
     "index.html": "/brittonsbash/index.html",
-    "main.8257f587.css.map": "/brittonsbash/static/css/main.8257f587.css.map",
-    "main.20c1d66f.js.map": "/brittonsbash/static/js/main.20c1d66f.js.map",
+    "main.9931ce1a.css.map": "/brittonsbash/static/css/main.9931ce1a.css.map",
+    "main.4959da98.js.map": "/brittonsbash/static/js/main.4959da98.js.map",
     "787.21a77f2f.chunk.js.map": "/brittonsbash/static/js/787.21a77f2f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8257f587.css",
-    "static/js/main.20c1d66f.js"
+    "static/css/main.9931ce1a.css",
+    "static/js/main.4959da98.js"
   ]
 }
