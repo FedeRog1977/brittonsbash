@@ -9,7 +9,9 @@ export function useSport() {
     const compiledRoadies = compileRoadies()
     const compiledProjects = compileProjects()
     const compiledMiles = compileMiles()
+
     const [sportData, setSportData]: any = useState(compiledRoadies)
+
     const [isRoadies, setIsRoadies] = useState(true)
     const [isProjects, setIsProjects] = useState(false)
     const [isMiles, setIsMiles] = useState(false)
@@ -265,11 +267,7 @@ export function useSport() {
             setIsMiles(true)
         } else if (e.currentTarget.value === 'tennis') {
         }
-
-        setSportYearData(sport2023)
     }
-
-    console.log('Results\n\n', isRoadies, isProjects, isMiles, sportYearData)
 
     return {
         handleSelect,

@@ -35,10 +35,24 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
 }: SportResultTileProps) => {
     const { isMobile } = useScreenWidth()
 
-    const [sportYearData, setSportYearData] = useState(props.sportYearData)
+    const [sportYearData, setSportYearData] = useState(props.sport2023)
 
-    console.log(props.sport2023, props.sportYearData, sportYearData)
-    console.log(props.isRoadies, props.isProjects, props.isMiles)
+    console.log(
+        'Sport 2023:\n\n',
+        props.sport2023,
+        '\n\nSport Year Data (Props):\n\n',
+        props.sportYearData,
+        '\n\nSport Year Data:\n\n',
+        sportYearData
+    )
+    console.log(
+        'Is Roadies?',
+        props.isRoadies,
+        '\n\nIs Projects?',
+        props.isProjects,
+        '\n\nIs Miles?',
+        props.isMiles
+    )
 
     return (
         <Tile type="solid" dense={isMobile}>
