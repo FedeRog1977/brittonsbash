@@ -247,8 +247,6 @@ export function useSport() {
         ? sportData.miles[2020]
         : sportData.roadies[2020]
 
-    const [sportYearData, setSportYearData] = useState(sport2023)
-
     const handleSelect = (e: any) => {
         if (e.currentTarget.value === 'roadies') {
             setSportData(compiledRoadies)
@@ -266,13 +264,17 @@ export function useSport() {
             setIsProjects(false)
             setIsMiles(true)
         } else if (e.currentTarget.value === 'tennis') {
+        } else {
+            setSportData(compiledRoadies)
+            setIsRoadies(true)
+            setIsProjects(false)
+            setIsMiles(false)
         }
     }
 
     return {
         handleSelect,
         sportData,
-        sportYearData,
         sport2023,
         sport2022,
         sport2021,

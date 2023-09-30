@@ -52,7 +52,6 @@ export function useInstantGram() {
 
     const handleInput = (e: any) => {
         setSearchField(e.target.value.toLowerCase())
-        console.log('Input Target Value:', searchField)
 
         for (var i in allEvents) {
             const fullName = allEvents[i].names.join(' - ').toLowerCase()
@@ -91,8 +90,6 @@ export function useInstantGram() {
     }
 
     const handleSelect = (e: any) => {
-        console.log('Button Target Value:', e.currentTarget.value)
-
         for (var i in allEvents) {
             const fullName = allEvents[i].names.join(' - ')
 

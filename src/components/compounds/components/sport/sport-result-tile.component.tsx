@@ -4,6 +4,7 @@ import {
     ColumnTable,
     Spacing,
     Button,
+    ColumnProps,
 } from '../../../bash-blocks'
 import {
     toMiles,
@@ -13,35 +14,34 @@ import {
     RoadieProps,
     ProjectProps,
     MilesProps,
+    CompiledRoadieProps,
+    CompiledMilesProps,
+    CompiledProjectProps,
 } from '../../../../scripts'
 import { useState } from 'react'
 
 type SportResultTileProps = {
-    sportData: any
-    sportYearData: any
-    sport2023: any
-    sport2022: any
-    sport2021: any
-    sport2020: any
     title: React.ReactElement
-    routes: any
+    routes: ColumnProps[]
     isRoadies: boolean
     isProjects: boolean
     isMiles: boolean
+    sportData: CompiledRoadieProps | CompiledProjectProps | CompiledMilesProps
+    sport2023: RoadieProps[] | ProjectProps[] | MilesProps[]
+    sport2022: RoadieProps[] | ProjectProps[] | MilesProps[]
+    sport2021: RoadieProps[] | ProjectProps[] | MilesProps[]
+    sport2020: RoadieProps[] | ProjectProps[] | MilesProps[]
 }
 
 export const SportResultTile: React.FC<SportResultTileProps> = ({
     ...props
 }: SportResultTileProps) => {
     const { isMobile } = useScreenWidth()
-
     const [sportYearData, setSportYearData] = useState(props.sport2023)
 
     console.log(
         'Sport 2023:\n\n',
         props.sport2023,
-        '\n\nSport Year Data (Props):\n\n',
-        props.sportYearData,
         '\n\nSport Year Data:\n\n',
         sportYearData
     )
@@ -221,13 +221,21 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                                     time
                             ),
                         },
-                        {
-                            title: 'Speed',
-                            entries: sportYearData.map(
-                                ({ speed }: RoadieProps) =>
-                                    speed ? toSpeed(speed, false) : <>&nbsp;</>
-                            ),
-                        },
+                        ...(props.isRoadies
+                            ? [
+                                  {
+                                      title: 'Speed',
+                                      entries: sportYearData.map(
+                                          ({ speed }: RoadieProps) =>
+                                              speed ? (
+                                                  toSpeed(speed, false)
+                                              ) : (
+                                                  <>&nbsp;</>
+                                              )
+                                      ),
+                                  },
+                              ]
+                            : []),
                     ]}
                     scroll
                 />
