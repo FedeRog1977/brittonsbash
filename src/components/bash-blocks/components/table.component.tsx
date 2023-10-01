@@ -16,7 +16,7 @@ export const ColumnTable: React.FC<ColumnTableProps> = ({
             backgroundColor="var(--lighter-grey)"
             borderRadius={isMobile ? 'none' : 'var(--corners-small)'}
         >
-            <Grid align="auto auto">
+            <Grid alignColumns="auto auto">
                 <Grid columnItem={[1, 2]}>
                     <div
                         style={{
@@ -129,7 +129,7 @@ export const RowTable: React.FC<RowTableProps> = ({
             backgroundColor="var(--lighter-grey)"
             borderRadius={isMobile ? 'none' : 'var(--corners-small)'}
         >
-            <Grid align="auto auto">
+            <Grid alignColumns="auto auto">
                 <Grid columnItem={[1, 2]} rowItem={[1, props.rows.length + 1]}>
                     <div
                         style={{

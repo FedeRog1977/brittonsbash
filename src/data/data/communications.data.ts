@@ -928,6 +928,10 @@ export const communicationsData = {
                     href: 'https://css-tricks.com/',
                 },
                 {
+                    content: 'CSS Tricks Grid',
+                    href: 'https://css-tricks.com/snippets/css/complete-guide-grid/',
+                },
+                {
                     content: 'JavaScript Date Formatting',
                     href: 'https://www.freecodecamp.org/news/how-to-format-dates-in-javascript/',
                 },
@@ -1282,6 +1286,7 @@ export const communicationsData = {
                 'Wüsthof',
                 'Zwilling',
                 'Le Creuset',
+                'Staub',
                 'WMF',
                 'Villeroy & Boch',
                 'Sant’ Andrea',
@@ -1289,6 +1294,8 @@ export const communicationsData = {
                 'LSA',
                 'LocknLock',
                 'Pyrex',
+                'Vogue',
+                'Rubbermaid',
             ],
             knives: [
                 'Peeling',

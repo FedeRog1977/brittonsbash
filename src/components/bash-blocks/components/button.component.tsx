@@ -1,5 +1,5 @@
 import '../styles/button.styles.scss'
-import { ButtonProps, Typography } from '..'
+import { ButtonProps, Grid, Typography } from '..'
 import { useScreenWidth } from '../../../scripts'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
@@ -18,34 +18,31 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                 paddingBottom: props.removePadding ? '0px' : '5px',
             }}
         >
-            <div
-                style={{
-                    position: 'relative',
-                    display: isMobile
+            <Grid
+                displayOverwrite={
+                    isMobile
                         ? props.subContent
                             ? undefined
                             : 'grid'
                         : props.subContentTop
                         ? undefined
-                        : 'grid',
-                    gridTemplateColumns: 'auto auto',
-                    alignContent: 'center',
-                    justifyContent: Boolean(props.content)
-                        ? 'center'
-                        : undefined,
-                    alignItems: isMobile ? undefined : 'center',
-                }}
+                        : 'grid'
+                }
+                alignColumns="auto auto"
+                justifyContent={Boolean(props.content) ? 'center' : undefined}
+                alignContent="center"
+                alignItems={isMobile ? undefined : 'center'}
             >
                 {Boolean(props.subContent) && (
-                    <div
-                        style={{
-                            gridColumn: '1 / 2',
-                            textAlign: Boolean(isMobile && props.content)
+                    <Grid
+                        columnItem={[1, 2]}
+                        textAlign={
+                            Boolean(isMobile && props.content)
                                 ? 'center'
                                 : props.subContentTop
                                 ? 'center'
-                                : 'right',
-                        }}
+                                : 'right'
+                        }
                     >
                         <Typography
                             type="bodyLight"
@@ -57,17 +54,17 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                                 </>
                             }
                         />
-                    </div>
+                    </Grid>
                 )}
-                <div
-                    style={{
-                        gridColumn: `${props.subContent ? '2' : '1'} / 2`,
-                        textAlign: Boolean(isMobile && props.content)
+                <Grid
+                    columnItem={[props.subContent ? 2 : 1, 2]}
+                    textAlign={
+                        Boolean(isMobile && props.content)
                             ? 'center'
                             : props.subContentTop
                             ? 'center'
-                            : 'left',
-                    }}
+                            : 'left'
+                    }
                 >
                     <Typography
                         type={props.typeType ? props.typeType : 'body'}
@@ -83,22 +80,12 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                                 ? props.color
                                 : Boolean(props.funcResp === false)
                                 ? 'mediumGrey'
-                                : // : props.color
-                                  // ? props.color
-                                  'lightBlue'
+                                : 'lightBlue'
                         }
                     />
-                </div>
+                </Grid>
                 {Boolean(!props.content) && (
-                    <div
-                        style={{
-                            gridColumn: '2 / 2',
-                            textAlign: 'right',
-                            border: isMobile
-                                ? '1px solid var(--transparent)'
-                                : 'none',
-                        }}
-                    >
+                    <Grid columnItem={[2, 2]} textAlign="right">
                         <Typography
                             type="bodyLight"
                             content={
@@ -114,9 +101,9 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                                     : 'lightBlue'
                             }
                         />
-                    </div>
+                    </Grid>
                 )}
-            </div>
+            </Grid>
         </button>
     )
 }

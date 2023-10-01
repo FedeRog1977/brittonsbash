@@ -1,11 +1,11 @@
 import { GridProps } from '..'
-import styles from '../styles/grid.module.scss'
+
+// Reminder: https://css-tricks.com/snippets/css/complete-guide-grid/
 
 export const Grid: React.FC<GridProps> = ({ ...props }: GridProps) => {
     if (props.columnItem || props.rowItem) {
         return (
             <div
-                className={styles.gridItem}
                 style={{
                     gridColumn: `${props.columnItem ? [0] : undefined} / ${
                         props.columnItem ? [1] : undefined
@@ -23,9 +23,18 @@ export const Grid: React.FC<GridProps> = ({ ...props }: GridProps) => {
 
     return (
         <div
-            className={styles.gridContainer}
             style={{
-                gridTemplateColumns: props.align,
+                display: props.displayOverwrite
+                    ? props.displayOverwrite
+                    : 'grid',
+                gridTemplateColumns: props.alignColumns,
+                gridTemplateRows: props.alignRows,
+                columnGap: `${props.columnGap}px`,
+                rowGap: `${props.rowGap}px`,
+                justifyContent: props.justifyContent, // Grid x-axis
+                alignContent: props.alignContent, // Grid y-axis
+                justifyItems: props.justifyItems, // Item x-axis
+                alignItems: props.alignItems, // Item y-axis
             }}
         >
             {props.children}

@@ -1,9 +1,17 @@
-import { AlignProps } from '.'
+import { AlignProps, ItemsProps, ItemsPropsAdv } from '.'
 
 export type GridProps = {
-    children: React.ReactNode
+    displayOverwrite?: string
+    alignColumns?: string
+    alignRows?: string
+    columnGap?: number
+    rowGap?: number
+    justifyContent?: ItemsPropsAdv
+    alignContent?: ItemsPropsAdv
+    justifyItems?: ItemsProps
+    alignItems?: ItemsProps
     columnItem?: number[]
     rowItem?: number[]
-    align?: string
     textAlign?: AlignProps
+    children: React.ReactNode
 }
