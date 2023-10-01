@@ -14,6 +14,7 @@ export const Grid: React.FC<GridProps> = ({ ...props }: GridProps) => {
                         props.rowItem ? [1] : undefined
                     }`,
                     textAlign: props.textAlign ? props.textAlign : undefined,
+                    border: '1px solid black',
                 }}
             >
                 {props.children}
@@ -24,9 +25,7 @@ export const Grid: React.FC<GridProps> = ({ ...props }: GridProps) => {
     return (
         <div
             style={{
-                display: props.displayOverwrite
-                    ? props.displayOverwrite
-                    : 'grid',
+                display: 'grid',
                 gridTemplateColumns: props.alignColumns,
                 gridTemplateRows: props.alignRows,
                 columnGap: `${props.columnGap}px`,

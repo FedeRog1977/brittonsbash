@@ -17,6 +17,7 @@ export const InstantGramSearchList: React.FC<InstantGramSearchListProps> = ({
                 funcResp={showElement}
                 content={props.year}
                 subContent={`Season ${props.season}`}
+                subContentTop={isMobile}
                 color="darkerGrey"
             />
             {showElement && (
@@ -55,10 +56,10 @@ export const InstantGramSearchList: React.FC<InstantGramSearchListProps> = ({
                                                     )}
                                                 </>
                                             }
-                                            color="darkerGrey"
                                             subContent={id.slice(-2)}
                                             subContentTop
                                             removePadding
+                                            color="darkerGrey"
                                         />
                                     </Spacing>
                                 }

@@ -1,7 +1,6 @@
 import { AlignProps, ItemsProps, ItemsPropsAdv } from '.'
 
 export type GridProps = {
-    displayOverwrite?: string
     alignColumns?: string
     alignRows?: string
     columnGap?: number

@@ -19,23 +19,16 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
             }}
         >
             <Grid
-                displayOverwrite={
-                    isMobile
-                        ? props.subContent
-                            ? undefined
-                            : 'grid'
-                        : props.subContentTop
-                        ? undefined
-                        : 'grid'
-                }
-                alignColumns="auto auto"
+                alignColumns={props.subContentTop ? undefined : 'auto auto'}
+                alignRows={props.subContentTop ? 'auto auto' : undefined}
                 justifyContent={Boolean(props.content) ? 'center' : undefined}
                 alignContent="center"
                 alignItems={isMobile ? undefined : 'center'}
             >
                 {Boolean(props.subContent) && (
                     <Grid
-                        columnItem={[1, 2]}
+                        columnItem={props.subContentTop ? undefined : [1, 2]}
+                        rowItem={props.subContentTop ? [1, 2] : undefined}
                         textAlign={
                             Boolean(isMobile && props.content)
                                 ? 'center'
@@ -57,7 +50,16 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                     </Grid>
                 )}
                 <Grid
-                    columnItem={[props.subContent ? 2 : 1, 2]}
+                    columnItem={
+                        props.subContentTop
+                            ? undefined
+                            : [props.subContent ? 2 : 1, 2]
+                    }
+                    rowItem={
+                        props.subContentTop
+                            ? [props.subContent ? 2 : 1, 2]
+                            : undefined
+                    }
                     textAlign={
                         Boolean(isMobile && props.content)
                             ? 'center'
@@ -85,7 +87,11 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                     />
                 </Grid>
                 {Boolean(!props.content) && (
-                    <Grid columnItem={[2, 2]} textAlign="right">
+                    <Grid
+                        columnItem={props.subContentTop ? undefined : [2, 2]}
+                        rowItem={props.subContentTop ? [2, 2] : undefined}
+                        textAlign="right"
+                    >
                         <Typography
                             type="bodyLight"
                             content={
