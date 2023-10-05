@@ -215,6 +215,39 @@ Notes:
 
 -   [Video guide](https://www.youtube.com/watch?v=1wDzEjXbblM&t=319s)
 
+## Custom Domain
+
+In this example we'll be using this website `brittonsbash.com`.
+
+First, navigate to your domain provider. I use [Epik](https://registrar.epik.com/domain/portfolio), although this process will be almost identical no matter which one you use.
+
+From here, navigate to your purchased domain, 'SET DNS HOST RECORDS', and 'EXTERNAL HOSTS'. Delete the current records and add four new ones, leaving 'Host' blank, setting 'Type' to 'A (IPv4)', and 'TTL' to 300.
+
+In the 'Points to' field, add the four GitHub Pages IP addresses found in the [documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site). These are:
+
+-   185.199.108.153
+-   185.199.109.153
+-   185.199.110.153
+-   185.199.111.153
+
+Your job on your domain management service is done.
+
+Next, navigate to your [GitHub Pages settings](https://github.com/FedeRog1977/brittonsbash/settings/pages) and enter the new custom domain under 'Custom domain', and run the DNS check. Also check the 'Enforce HTTPS' box. At this point, the test will fail.
+
+You must now navigate back to your repository and make amendments to the code described above. In `package.json`, amend the `homepage` field from, e.g., `https://federog1977.github.io/brittonsbash` to `https://<custom-domain>`, i.e. `https://<brittonsbash.com>`.
+
+Now, in your `public` directory, add a file named `CNAME` and type one line: `<custom-domain>`, i.e., `brittonsbash.com`.
+
+Run the deployment:
+
+```
+npm run deploy
+```
+
+Navigate back to your GitHub Pages settings and re-run the DNS check. It should pass now. Leave this for a few minutes and your site should be available on the custom domain.
+
+-   [Video guide](https://www.youtube.com/watch?v=K5DTIf-jWhk)
+
 # Additional Packages
 
 ## Prettier

@@ -62,6 +62,16 @@ export const Footer = () => (
         <Spacing mY={40}>
             <Typography
                 type="body"
+                content={
+                    <>
+                        BrittonsBashRC at <code>brittonsbash.com</code>
+                    </>
+                }
+                color="lightGrey"
+                textAlign="center"
+            />
+            <Typography
+                type="body"
                 content={<>&#169; Lewis Britton 2020&mdash;2023</>}
                 color="lightGrey"
                 textAlign="center"
