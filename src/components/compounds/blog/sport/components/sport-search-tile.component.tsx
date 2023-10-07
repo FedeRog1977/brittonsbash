@@ -29,6 +29,7 @@ export const SportSearchTile: React.FC<SportSearchTileProps> = ({
                     funcResp={props.isRoadies}
                     content={<FontAwesomeIcon icon={faBiking} />}
                     subContent="Roadies"
+                    subContentTop={isMobile}
                     color="darkerGrey"
                 />
                 <Button
@@ -39,6 +40,7 @@ export const SportSearchTile: React.FC<SportSearchTileProps> = ({
                     funcResp={props.isProjects}
                     content={<FontAwesomeIcon icon={faMountainSun} />}
                     subContent="Projects"
+                    subContentTop={isMobile}
                     color="darkerGrey"
                 />
                 <Button
@@ -49,6 +51,7 @@ export const SportSearchTile: React.FC<SportSearchTileProps> = ({
                     funcResp={props.isMiles}
                     content={<FontAwesomeIcon icon={faWalking} />}
                     subContent="Miles"
+                    subContentTop={isMobile}
                     color="darkerGrey"
                 />
                 <Button
@@ -59,6 +62,7 @@ export const SportSearchTile: React.FC<SportSearchTileProps> = ({
                     funcResp={false}
                     content={<FontAwesomeIcon icon={faTrophy} />}
                     subContent="Tennis"
+                    subContentTop={isMobile}
                     color="darkerGrey"
                 />
             </Spacing>
