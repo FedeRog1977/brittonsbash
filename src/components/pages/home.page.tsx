@@ -5,8 +5,8 @@ import { Background } from '../bash-blocks'
 export const Home = () => (
     <>
         <Background
-            content="Home"
-            className="background-text background-text-standard"
+            content="BrittonsBashRC"
+            className="background-text background-text-logo"
         />
         <Tile type="solid" top>
             <Article
