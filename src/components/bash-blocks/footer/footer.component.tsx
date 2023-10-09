@@ -1,4 +1,5 @@
 import './footer.styles.scss'
+import logo from '../../../media/images/logo/logo-white.png'
 import xmr from '../../../media/images/monero/xmr.svg'
 import monero from '../../../media/images/monero/monero.png'
 import { Spacing, Typography } from '..'
@@ -64,7 +65,9 @@ export const Footer = () => (
                 type="body"
                 content={
                     <>
-                        BrittonsBashRC at <code>brittonsbash.com</code>
+                        <img src={logo} alt="logo" style={{ height: '15px' }} />
+                        &nbsp;BrittonsBashRC at&nbsp;
+                        <code>brittonsbash.com</code>
                     </>
                 }
                 color="lightGrey"
