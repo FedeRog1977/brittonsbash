@@ -24,7 +24,7 @@ export const Header = () => {
     return (
         <>
             <header className={styles.header}>
-                <Spacing pX={isMobile ? 40 : 300} pY={40}>
+                <Spacing pX={isMobile ? 40 : 300} pY={50}>
                     <Grid alignColumns="auto auto" alignItems="center">
                         <Grid columnItem={[1, 2]}>
                             {isMobile ? (
@@ -55,22 +55,21 @@ export const Header = () => {
                                         justifyContent="end"
                                         columnGap={10}
                                     >
-                                        <Grid columnItem={[1, 7]}>
+                                        <Grid columnItem={[1, 6]}>
                                             <Link to="/">Home</Link>
                                         </Grid>
-                                        <Grid columnItem={[2, 7]}>
+                                        <Grid columnItem={[2, 6]}>
                                             <Link to="/academia">Academia</Link>
                                         </Grid>
-                                        <Grid columnItem={[3, 7]}>
+                                        <Grid columnItem={[3, 6]}>
                                             <Link to="/employment">
                                                 Employment
                                             </Link>
                                         </Grid>
-                                        <Grid columnItem={[4, 7]}>
+                                        <Grid columnItem={[4, 6]}>
                                             <Link to="/library">Library</Link>
                                         </Grid>
-                                        <Grid columnItem={[5, 7]}>|</Grid>
-                                        <Grid columnItem={[6, 7]}>
+                                        <Grid columnItem={[5, 6]}>
                                             <Link
                                                 to="#"
                                                 onClick={() => {
@@ -81,7 +80,7 @@ export const Header = () => {
                                                 Blog
                                             </Link>
                                         </Grid>
-                                        <Grid columnItem={[7, 7]}>
+                                        <Grid columnItem={[6, 6]}>
                                             <Link
                                                 to="#"
                                                 onClick={() => {
