@@ -104,7 +104,7 @@ export const Header = () => {
                 <div className={styles.headerSub}>
                     <Spacing pX={isMobile ? 40 : 300} pY={40}>
                         <div className={styles.headerNavigation}>
-                            <Grid alignRows="auto">
+                            <Grid alignRows="auto" rowGap={10}>
                                 <Grid rowItem={[1, 2]}>
                                     <Grid
                                         alignColumns="auto auto auto auto"
