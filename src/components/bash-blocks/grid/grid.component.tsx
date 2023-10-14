@@ -14,6 +14,7 @@ export const Grid: React.FC<GridProps> = ({ ...props }: GridProps) => {
                         props.rowItem ? [1] : undefined
                     }`,
                     textAlign: props.textAlign ? props.textAlign : undefined,
+                    border: '1px solid white',
                 }}
             >
                 {props.children}
@@ -33,6 +34,7 @@ export const Grid: React.FC<GridProps> = ({ ...props }: GridProps) => {
                 alignContent: props.alignContent, // Grid y-axis
                 justifyItems: props.justifyItems, // Item x-axis
                 alignItems: props.alignItems, // Item y-axis
+                border: '1px solid white',
             }}
         >
             {props.children}

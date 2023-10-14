@@ -1,0 +1,36 @@
+.header {
+    background-color: var(--darker-grey);
+    display: grid;
+    align-items: center;
+    color: var(--light-grey);
+
+    &Sub {
+        background-color: var(--dark-grey);
+        display: grid;
+        align-items: center;
+    }
+
+    &Navigation {
+        font-family: Sans-Light;
+        color: var(--light-grey);
+
+        a {
+            text-decoration: none;
+            color: var(--light-grey);
+            transition: color var(--transition-long);
+        }
+
+        a:hover {
+            color: var(--light-blue);
+            transition: color var(--transition-long);
+            cursor: pointer;
+        }
+    }
+
+    &Logo {
+        font-family: IBM;
+        font-size: 22px;
+        line-height: -2px;
+        height: 22px;
+    }
+}
