@@ -3,10 +3,7 @@ import { Article, ArticleProps, Background, Tile } from '../../bash-blocks'
 
 export const ThinkFlow = () => (
     <>
-        <Background
-            content="ThinkFlow"
-            className="background-text background-text-standard"
-        />
+        <Background type="logo" content="ThinkFlow" />
         <Tile type="solid" top>
             <Article
                 sections={articleTestData as ArticleProps['sections']}

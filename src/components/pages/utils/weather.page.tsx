@@ -4,10 +4,7 @@ import { weatherContent } from '../../../data'
 
 export const Weather = () => (
     <>
-        <Background
-            content="Mountain Weather"
-            className="background-text background-text-standard"
-        />
+        <Background type="std" content="Mountain Weather" />
         <WeatherComponent />
         <Footnote content={weatherContent[0].content} />
     </>

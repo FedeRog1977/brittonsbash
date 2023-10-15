@@ -4,10 +4,7 @@ import { Background } from '../bash-blocks'
 
 export const Home = () => (
     <>
-        <Background
-            content="BrittonsBashRC"
-            className="background-text background-text-logo"
-        />
+        <Background type="logo" content="BrittonsBashRC" />
         <Tile type="solid" top>
             <Article
                 sections={articleTestData as ArticleProps['sections']}

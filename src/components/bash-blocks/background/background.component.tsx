@@ -1,10 +1,19 @@
 import { BackgroundProps } from '..'
-import './background.styles.scss'
+import { toUpperCase } from '../../../scripts'
+import styles from './background.module.scss'
+import cx from 'classnames'
 
 export const Background: React.FC<BackgroundProps> = ({
     ...props
-}: BackgroundProps) => (
-    <div className="background">
-        <span className={props.className}>{props.content}</span>
-    </div>
-)
+}: BackgroundProps) => {
+    const classNamesText = cx(
+        styles.backgroundText,
+        styles[`backgroundText${toUpperCase(props.type)}`]
+    )
+
+    return (
+        <div className={styles.background}>
+            <span className={classNamesText}>{props.content}</span>
+        </div>
+    )
+}

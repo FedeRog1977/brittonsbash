@@ -51,7 +51,7 @@ export const Header = () => {
                                     />
                                 ) : (
                                     <Grid
-                                        alignColumns="auto  auto  auto  auto  auto  auto  auto"
+                                        alignColumns="auto  auto  auto  auto  auto  auto"
                                         justifyContent="end"
                                         columnGap={10}
                                     >

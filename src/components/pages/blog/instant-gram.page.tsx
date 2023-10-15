@@ -4,10 +4,7 @@ import { Background, Footnote } from '../../bash-blocks'
 
 export const InstantGram = () => (
     <>
-        <Background
-            content="Instant Gram"
-            className="background-text background-text-instant-gram"
-        />
+        <Background type="ig" content="Instant Gram" />
         <InstantGramComponent />
         <Footnote content={instantGramContent[0].content} />
     </>

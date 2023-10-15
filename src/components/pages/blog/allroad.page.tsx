@@ -3,10 +3,7 @@ import { Article, ArticleProps, Background, Tile } from '../../bash-blocks'
 
 export const Allroad = () => (
     <>
-        <Background
-            content="allroad quattro"
-            className="background-text background-text-standard"
-        />
+        <Background type="audi" content="allroad quattro" />
         <Tile type="solid" top>
             <Article
                 sections={articleTestData as ArticleProps['sections']}

@@ -3,10 +3,7 @@ import { Sport as SportComponent } from '../../compounds'
 
 export const Sport = () => (
     <>
-        <Background
-            content="Sport"
-            className="background-text background-text-sport"
-        />
+        <Background type="sport" content="Sport" />
         <SportComponent />
     </>
 )

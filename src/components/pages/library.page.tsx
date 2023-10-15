@@ -3,10 +3,7 @@ import { Article, ArticleProps, Background, Tile } from '../bash-blocks'
 
 export const Library = () => (
     <>
-        <Background
-            content="Library"
-            className="background-text background-text-standard"
-        />
+        <Background type="std" content="Library" />
         <Tile type="solid" top>
             <Article
                 sections={articleTestData as ArticleProps['sections']}

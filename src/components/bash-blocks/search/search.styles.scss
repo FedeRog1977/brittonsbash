@@ -1,5 +1,3 @@
-/* Classes */
-
 input[type='text'].search,
 select.search {
     font-family: Sans-Regular;
@@ -18,8 +16,6 @@ input[type='text'].search {
 select.search {
     width: 50%;
 }
-
-/* Mobile */
 
 @media (max-width: 768px) {
     input[type='text'].search {

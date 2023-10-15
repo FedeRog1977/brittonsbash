@@ -7,14 +7,17 @@ export const Typography: React.FC<TypographyProps> = ({
     ...props
 }: TypographyProps) => {
     const { isMobile } = useScreenWidth()
+
     const classNamesImgContainer = cx(styles.imageContainer, {
         [styles.inline]: props.inline,
         [styles[`paragraphMargins${isMobile ? 'Mobile' : 'Desktop'}`]]:
             props.paragraphMargins,
     })
+
     const classNamesImage = cx(
         styles[`image${isMobile ? 'Mobile' : 'Desktop'}`]
     )
+
     const classNamesTextContainer = cx(
         ...(props.textAlign
             ? [styles[`align${toUpperCase(props.textAlign)}`]]
@@ -25,6 +28,7 @@ export const Typography: React.FC<TypographyProps> = ({
                 props.paragraphMargins,
         }
     )
+
     const classNamesText = cx(
         ...(props.fontFamily === 'serif'
             ? [styles[`serif${props.type ? toUpperCase(props.type) : ''}`]]
