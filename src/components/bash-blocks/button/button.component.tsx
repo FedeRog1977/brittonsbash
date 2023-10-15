@@ -1,15 +1,20 @@
-import './button.styles.scss'
+import styles from './button.module.scss'
 import { ButtonProps, Grid, Typography } from '..'
-import { useScreenWidth } from '../../../scripts'
+import { toUpperCase, useScreenWidth } from '../../../scripts'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
+import cx from 'classnames'
 
 export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
     const { isMobile } = useScreenWidth()
 
+    const classNames = cx({
+        [styles[`button${toUpperCase(props.type)}`]]: props.type,
+    })
+
     return (
         <button
-            className={props.buttonType}
+            className={classNames}
             onClick={props.func}
             value={props.value}
             style={{

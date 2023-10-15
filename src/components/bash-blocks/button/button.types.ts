@@ -2,7 +2,12 @@ import { ColorProps, LinkProps, TypographyProps } from '..'
 
 export type ButtonProps = {
     typeType?: TypographyProps['type']
-    buttonType: string
+    type:
+        | 'search'
+        | 'regularClear'
+        | 'regularSolid'
+        | 'denseClear'
+        | 'denseSolid'
     value?: string
     func: (() => void) | ((e: any) => void)
     funcResp?: boolean

@@ -24,13 +24,9 @@ export const WeatherSearchTile = ({
                 mR={isMobile ? 0 : 70}
                 mB={isMobile ? 7.5 : 15}
             >
-                <Search
-                    className="search"
-                    func={funcInput}
-                    placeholder="Search Hills"
-                />
+                <Search func={funcInput} placeholder="Search Hills" />
                 <Button
-                    buttonType="search"
+                    type="search"
                     func={funcButton}
                     funcResp={false}
                     content={
@@ -47,13 +43,11 @@ export const WeatherSearchTile = ({
             </Spacing>
             <Spacing mL={isMobile ? 0 : 70} mR={isMobile ? 0 : 70}>
                 <SearchList
-                    className="search"
                     func={funcSelect}
                     content={hillData.munros}
                     placeholder="Munro"
                 />
                 <SearchList
-                    className="search"
                     func={funcSelect}
                     content={hillData.corbetts}
                     placeholder="Corbett"

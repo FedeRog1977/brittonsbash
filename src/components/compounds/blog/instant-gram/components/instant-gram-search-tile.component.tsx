@@ -18,13 +18,9 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                 mR={isMobile ? 0 : 70}
                 mB={isMobile ? 7.5 : 15}
             >
-                <Search
-                    className="search"
-                    func={props.funcInput}
-                    placeholder="Search Events"
-                />
+                <Search func={props.funcInput} placeholder="Search Events" />
                 <Button
-                    buttonType="search"
+                    type="search"
                     func={props.funcButton}
                     funcResp={false}
                     content={

@@ -18,7 +18,7 @@ export const ButtonStories = () => {
             </Tile>
             <Tile type="solid">
                 <Button
-                    buttonType="regular-clear"
+                    type="regularClear"
                     func={() => setShowElement(!showElement)}
                     funcResp={showElement}
                 />

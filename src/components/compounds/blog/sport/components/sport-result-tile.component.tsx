@@ -4,7 +4,6 @@ import {
     ColumnTable,
     Spacing,
     Button,
-    ColumnProps,
 } from '../../../../bash-blocks'
 import {
     toMiles,
@@ -133,7 +132,7 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
             >
                 <Button
                     typeType="h2"
-                    buttonType="dense-clear"
+                    type="denseClear"
                     func={() => setSportYearData(props.sport2023)}
                     funcResp={Boolean(sportYearData === props.sport2023)}
                     content="2023"
@@ -141,7 +140,7 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                 />
                 <Button
                     typeType="h2"
-                    buttonType="dense-clear"
+                    type="denseClear"
                     func={() => setSportYearData(props.sport2022)}
                     funcResp={Boolean(sportYearData === props.sport2022)}
                     content="2022"
@@ -149,7 +148,7 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                 />
                 <Button
                     typeType="h2"
-                    buttonType="dense-clear"
+                    type="denseClear"
                     func={() => setSportYearData(props.sport2021)}
                     funcResp={Boolean(sportYearData === props.sport2021)}
                     content="2021"
@@ -157,7 +156,7 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                 />
                 <Button
                     typeType="h2"
-                    buttonType="dense-clear"
+                    type="denseClear"
                     func={() => setSportYearData(props.sport2020)}
                     funcResp={Boolean(sportYearData === props.sport2020)}
                     content="2020"

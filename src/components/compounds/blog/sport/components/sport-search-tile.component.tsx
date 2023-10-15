@@ -23,7 +23,7 @@ export const SportSearchTile: React.FC<SportSearchTileProps> = ({
             >
                 <Button
                     typeType="t2"
-                    buttonType="dense-clear"
+                    type="denseClear"
                     value="roadies"
                     func={props.funcSelect}
                     funcResp={props.isRoadies}
@@ -34,7 +34,7 @@ export const SportSearchTile: React.FC<SportSearchTileProps> = ({
                 />
                 <Button
                     typeType="t2"
-                    buttonType="dense-clear"
+                    type="denseClear"
                     value="projects"
                     func={props.funcSelect}
                     funcResp={props.isProjects}
@@ -45,7 +45,7 @@ export const SportSearchTile: React.FC<SportSearchTileProps> = ({
                 />
                 <Button
                     typeType="t2"
-                    buttonType="dense-clear"
+                    type="denseClear"
                     value="miles"
                     func={props.funcSelect}
                     funcResp={props.isMiles}
@@ -56,7 +56,7 @@ export const SportSearchTile: React.FC<SportSearchTileProps> = ({
                 />
                 <Button
                     typeType="t2"
-                    buttonType="dense-clear"
+                    type="denseClear"
                     value="tennis"
                     func={() => {}}
                     funcResp={false}

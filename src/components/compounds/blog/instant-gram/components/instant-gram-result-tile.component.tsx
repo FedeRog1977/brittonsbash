@@ -193,7 +193,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                 mB={isMobile ? 7.5 : 15}
             >
                 <Button
-                    buttonType="regular-clear"
+                    type="regularClear"
                     func={() => setShowDescription(!showDescription)}
                     funcResp={showDescription}
                 />
@@ -358,14 +358,14 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                 textAlign="center"
             >
                 <Button
-                    buttonType="regular-clear"
+                    type="regularClear"
                     func={() => setShowMatrix(!showMatrix)}
                     funcResp={showMatrix}
                     content="Image matrix"
                     dense
                 />
                 <Button
-                    buttonType="regular-clear"
+                    type="regularClear"
                     func={() => setShowModal(!showModal)}
                     funcResp={showModal}
                     content="Image slideshow"
