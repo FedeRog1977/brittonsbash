@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.074cbe70.css",
-    "main.js": "/static/js/main.9c8bf4a1.js",
+    "main.css": "/static/css/main.6d9e60cc.css",
+    "main.js": "/static/js/main.582b662e.js",
     "static/js/787.21a77f2f.chunk.js": "/static/js/787.21a77f2f.chunk.js",
     "static/media/background.jpg": "/static/media/background.cbc6a32ac60307059f07.jpg",
     "static/media/cmu-italic.ttf": "/static/media/cmu-italic.242b10aa04f441336096.ttf",
@@ -19,18 +19,19 @@
     "static/media/open-sans-regular.ttf": "/static/media/open-sans-regular.9a6cfa5890d7f3eef585.ttf",
     "static/media/open-sans-light.ttf": "/static/media/open-sans-light.ba19b360bc99b580b45b.ttf",
     "static/media/grandista.ttf": "/static/media/grandista.bec7f1e368edce800cdd.ttf",
+    "static/media/broadway-regular.ttf": "/static/media/broadway-regular.f86d1b2cbfa07b705cef.ttf",
     "static/media/logo-white.png": "/static/media/logo-white.6ae9cce11025ad36d941.png",
     "static/media/nfs.ttf": "/static/media/nfs.8723982ddbc7e3136bad.ttf",
     "static/media/ibm.ttf": "/static/media/ibm.ea9b8ea99532f40a5c49.ttf",
     "static/media/placeholder.webp": "/static/media/placeholder.aadba29c0fa8fe2da964.webp",
     "static/media/xmr.svg": "/static/media/xmr.45ccc83cb5c9bd7f5f6794df23a2ea69.svg",
     "index.html": "/index.html",
-    "main.074cbe70.css.map": "/static/css/main.074cbe70.css.map",
-    "main.9c8bf4a1.js.map": "/static/js/main.9c8bf4a1.js.map",
+    "main.6d9e60cc.css.map": "/static/css/main.6d9e60cc.css.map",
+    "main.582b662e.js.map": "/static/js/main.582b662e.js.map",
     "787.21a77f2f.chunk.js.map": "/static/js/787.21a77f2f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.074cbe70.css",
-    "static/js/main.9c8bf4a1.js"
+    "static/css/main.6d9e60cc.css",
+    "static/js/main.582b662e.js"
   ]
 }
