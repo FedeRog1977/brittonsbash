@@ -11,7 +11,7 @@ export const InstantGramSearchList: React.FC<InstantGramSearchListProps> = ({
     return (
         <>
             <Button
-                typeType="t2"
+                typeType={isMobile ? 't1' : 't2'}
                 type="denseClear"
                 func={() => setShowElement(!showElement)}
                 funcResp={showElement}

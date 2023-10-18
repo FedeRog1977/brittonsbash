@@ -4,7 +4,12 @@
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     text-align: left;
+    height: 100%;
+    overflow: hidden;
     margin: 0;
     padding: 175px 150px 25px 150px;
 
