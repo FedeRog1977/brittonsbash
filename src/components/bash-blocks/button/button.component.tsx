@@ -79,8 +79,8 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                             props.content
                                 ? props.content
                                 : Boolean(props.funcResp === false)
-                                ? 'Expand'
-                                : 'Contract'
+                                ? 'Read more'
+                                : 'Read less'
                         }
                         color={
                             Boolean(props.funcResp === false && props.color)

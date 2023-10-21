@@ -344,6 +344,15 @@ export const sportData = {
         ],
         projects: [
             {
+                id: 'P2023026',
+                name: 'Gulvain',
+                distance: 14.0,
+                elevation: 4610,
+                time: '4:47:49',
+                companionship: 0,
+                munros: ['Gulvain'],
+            },
+            {
                 id: 'P2023025',
                 name: 'Duvel Tripel Hop',
                 distance: 16.22,

@@ -38,7 +38,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
     const refactoredEvent = compileEvent({ event, sportEvent, showSportEvent })
 
     useEffect(() => {
-        setShowMatrix(true)
+        setShowMatrix(!isMobile && true)
     }, [])
 
     return (
@@ -351,27 +351,29 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                     )}
                 </Spacing>
             )}
-            <Spacing
-                mL={isMobile ? 15 : 70}
-                mR={isMobile ? 15 : 70}
-                mT={isMobile ? 7.5 : 15}
-                textAlign="center"
-            >
-                <Button
-                    type="regularClear"
-                    func={() => setShowMatrix(!showMatrix)}
-                    funcResp={showMatrix}
-                    content="Image matrix"
-                    dense
-                />
-                <Button
-                    type="regularClear"
-                    func={() => setShowModal(!showModal)}
-                    funcResp={showModal}
-                    content="Image slideshow"
-                    dense
-                />
-            </Spacing>
+            {!isMobile && (
+                <Spacing
+                    mL={isMobile ? 15 : 70}
+                    mR={isMobile ? 15 : 70}
+                    mT={isMobile ? 7.5 : 15}
+                    textAlign="center"
+                >
+                    <Button
+                        type="regularClear"
+                        func={() => setShowMatrix(!showMatrix)}
+                        funcResp={showMatrix}
+                        content="Image matrix"
+                        dense
+                    />
+                    <Button
+                        type="regularClear"
+                        func={() => setShowModal(!showModal)}
+                        funcResp={showModal}
+                        content="Image slideshow"
+                        dense
+                    />
+                </Spacing>
+            )}
             {showMatrix && (
                 <Spacing
                     mL={isMobile ? 0 : 70}
@@ -389,6 +391,16 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                 >
                     <ImageSlider slides={refactoredEvent.images} />
                 </Modal>
+            )}
+            {isMobile && (
+                <Spacing
+                    mL={isMobile ? 0 : 70}
+                    mR={isMobile ? 0 : 70}
+                    mT={isMobile ? 7.5 : 15}
+                    mB={isMobile ? 7.5 : 15}
+                >
+                    <ImageSlider slides={refactoredEvent.images} />
+                </Spacing>
             )}
         </Tile>
     )
