@@ -8,8 +8,8 @@ export const ColumnTable: React.FC<ColumnTableProps> = ({
 
     const content: React.ReactElement = (
         <Spacing
-            pL={isMobile ? 15 : 70}
-            pR={isMobile ? 15 : 70}
+            pL={isMobile ? 20 : 75}
+            pR={isMobile ? 20 : 75}
             pT={isMobile ? 7.5 : 15}
             pB={isMobile ? 7.5 : 15}
             backgroundColor="var(--lighter-grey)"
@@ -109,7 +109,12 @@ export const ColumnTable: React.FC<ColumnTableProps> = ({
             </div>
         )
 
-    if (isMobile) return <div style={{ overflowX: 'scroll' }}>{content}</div>
+    if (isMobile)
+        return (
+            <div style={{ overflowX: 'scroll', whiteSpace: 'nowrap' }}>
+                {content}
+            </div>
+        )
 
     return content
 }
@@ -121,8 +126,8 @@ export const RowTable: React.FC<RowTableProps> = ({
 
     const content: React.ReactElement = (
         <Spacing
-            pL={isMobile ? 15 : 70}
-            pR={isMobile ? 15 : 70}
+            pL={isMobile ? 20 : 75}
+            pR={isMobile ? 20 : 75}
             pT={isMobile ? 7.5 : 15}
             pB={isMobile ? 7.5 : 15}
             backgroundColor="var(--lighter-grey)"
@@ -236,7 +241,12 @@ export const RowTable: React.FC<RowTableProps> = ({
         </Spacing>
     )
 
-    if (isMobile) return <div style={{ overflowX: 'scroll' }}>{content}</div>
+    if (isMobile)
+        return (
+            <div style={{ overflowX: 'scroll', whiteSpace: 'nowrap' }}>
+                {content}
+            </div>
+        )
 
     return content
 }

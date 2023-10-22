@@ -15,7 +15,7 @@ export const ImageSliderStories = () => {
                     textAlign="center"
                 />
             </Tile>
-            <Tile type="solid" dense={isMobile}>
+            <Tile type="solid">
                 <ImageSlider slides={imageTestData} />
             </Tile>
         </>

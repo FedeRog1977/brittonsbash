@@ -43,7 +43,7 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                         }
                     >
                         <Typography
-                            type="bodyLight"
+                            type="body"
                             color="mediumGrey"
                             content={
                                 <>

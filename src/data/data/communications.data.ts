@@ -1168,6 +1168,7 @@ export const communicationsData = {
             'The First Fifty Years 1913-1963 Arthur Andersen & Co',
             'IBM - Graphic Design Guide From 1969 To 1987',
             'Magazine B (Various)',
+            'Bauhaus. Updated Edition',
         ],
         links: {
             graphicDesign: [
@@ -1552,8 +1553,9 @@ export const communicationsData = {
             'Audi A4 B6 TDV allroad TDI quattro (Rare Facelift)',
             'Audi A6 C5 TDV allroad TDI quattro',
             'Audi A6 C6 TDV allroad TDI quattro',
-            'Audi A6 C5 RS6',
-            'Audi A6 C6 RS6',
+            'Audi A6 C5 RS6 TSI quattro',
+            'Audi A6 C6 RS6 TFSI quattro',
+            'Audi A6 C7 RS6 TFSI quattro',
             'Audi A8 D3',
             'Audi A8(L) D7',
             'BMW M3 (E46 3rd Generation)',

@@ -24,7 +24,7 @@ export const Header = () => {
     return (
         <>
             <header className={styles.header}>
-                <Spacing pX={isMobile ? 40 : 300} pY={50}>
+                <Spacing pX={isMobile ? 40 : 150} pY={50}>
                     <Grid alignColumns="auto auto" alignItems="center">
                         <Grid columnItem={[1, 2]}>
                             {isMobile ? (
@@ -102,7 +102,7 @@ export const Header = () => {
             </header>
             {Boolean(showMobile && isMobile) && (
                 <div className={styles.headerSub}>
-                    <Spacing pX={isMobile ? 40 : 300} pY={40}>
+                    <Spacing pX={isMobile ? 40 : 150} pY={40}>
                         <div className={styles.headerNavigation}>
                             <Grid alignRows="auto" rowGap={10}>
                                 <Grid rowItem={[1, 2]}>
@@ -166,7 +166,7 @@ export const Header = () => {
             )}
             {showBlog && (
                 <div className={styles.headerSub}>
-                    <Spacing pX={isMobile ? 40 : 300} pY={40}>
+                    <Spacing pX={isMobile ? 40 : 150} pY={40}>
                         <div className={styles.headerNavigation}>
                             <Grid alignRows="auto" rowGap={10}>
                                 <Grid rowItem={[1, 4]}>
@@ -296,7 +296,7 @@ export const Header = () => {
             )}
             {showUtilities && (
                 <div className={styles.headerSub}>
-                    <Spacing pX={isMobile ? 40 : 300} pY={40}>
+                    <Spacing pX={isMobile ? 40 : 150} pY={40}>
                         <div className={styles.headerNavigation}>
                             <Grid alignRows="auto" rowGap={10}>
                                 <Grid rowItem={[1, 2]}>

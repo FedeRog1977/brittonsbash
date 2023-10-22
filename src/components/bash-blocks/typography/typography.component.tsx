@@ -79,11 +79,9 @@ export const Typography: React.FC<TypographyProps> = ({
                 className={classNamesImgContainer}
                 style={{
                     marginTop: props.mT ? props.mT : 0,
-                    marginBottom: props.paragraphMargins
-                        ? 30
-                        : props.mB
+                    marginBottom: Boolean(!props.paragraphMargins && props.mB)
                         ? props.mB
-                        : 0,
+                        : undefined,
                     marginLeft: props.mL ? props.mL : 0,
                     marginRight: props.mR ? props.mR : 0,
                 }}
@@ -110,11 +108,9 @@ export const Typography: React.FC<TypographyProps> = ({
             className={classNamesTextContainer}
             style={{
                 marginTop: props.mT ? props.mT : 0,
-                marginBottom: props.paragraphMargins
-                    ? 30
-                    : props.mB
+                marginBottom: Boolean(!props.paragraphMargins && props.mB)
                     ? props.mB
-                    : 0,
+                    : undefined,
                 marginLeft: props.mL ? props.mL : 0,
                 marginRight: props.mR ? props.mR : 0,
             }}

@@ -42,12 +42,8 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
     }, [])
 
     return (
-        <Tile type="solid" dense={isMobile}>
-            <Spacing
-                mL={isMobile ? 15 : 70}
-                mR={isMobile ? 15 : 70}
-                mB={isMobile ? 7.5 : 15}
-            >
+        <Tile type="solid">
+            <Spacing mB={isMobile ? 7.5 : 15}>
                 {refactoredEvent.prefix && (
                     <Typography
                         type="t1"
@@ -95,12 +91,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                     />
                 )}
             </Spacing>
-            <Spacing
-                mL={isMobile ? 15 : 70}
-                mR={isMobile ? 15 : 70}
-                mT={isMobile ? 7.5 : 15}
-                mB={isMobile ? 7.5 : 15}
-            >
+            <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                 <Typography
                     type="h4"
                     content={
@@ -119,8 +110,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
             </Spacing>
             {refactoredEvent.showSportEvent && (
                 <Spacing
-                    mL={isMobile ? 0 : 70}
-                    mR={isMobile ? 0 : 70}
+                    mX={isMobile ? -40 : 0}
                     mT={isMobile ? 7.5 : 15}
                     mB={isMobile ? 7.5 : 15}
                 >
@@ -186,12 +176,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                     />
                 </Spacing>
             )}
-            <Spacing
-                mL={isMobile ? 15 : 70}
-                mR={isMobile ? 15 : 70}
-                mT={isMobile ? 7.5 : 15}
-                mB={isMobile ? 7.5 : 15}
-            >
+            <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                 <Button
                     type="regularClear"
                     func={() => setShowDescription(!showDescription)}
@@ -199,12 +184,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                 />
             </Spacing>
             {showDescription && (
-                <Spacing
-                    mL={isMobile ? 15 : 70}
-                    mR={isMobile ? 15 : 70}
-                    mT={isMobile ? 7.5 : 15}
-                    mB={isMobile ? 7.5 : 15}
-                >
+                <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                     {refactoredEvent.features && (
                         <Spacing
                             mL={isMobile ? 0 : 280}
@@ -353,9 +333,8 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
             )}
             {!isMobile && (
                 <Spacing
-                    mL={isMobile ? 15 : 70}
-                    mR={isMobile ? 15 : 70}
                     mT={isMobile ? 7.5 : 15}
+                    mB={isMobile ? 7.5 : 15}
                     textAlign="center"
                 >
                     <Button
@@ -375,12 +354,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                 </Spacing>
             )}
             {showMatrix && (
-                <Spacing
-                    mL={isMobile ? 0 : 70}
-                    mR={isMobile ? 0 : 70}
-                    mT={isMobile ? 7.5 : 15}
-                    mB={isMobile ? 7.5 : 15}
-                >
+                <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                     <ImageMatrix items={refactoredEvent.images} columns={4} />
                 </Spacing>
             )}
@@ -394,8 +368,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
             )}
             {isMobile && (
                 <Spacing
-                    mL={isMobile ? 0 : 70}
-                    mR={isMobile ? 0 : 70}
+                    mX={isMobile ? -40 : 0}
                     mT={isMobile ? 7.5 : 15}
                     mB={isMobile ? 7.5 : 15}
                 >

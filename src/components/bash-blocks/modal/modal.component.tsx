@@ -28,20 +28,18 @@ export const Modal: React.FC<ModalProps> = ({ ...props }: ModalProps) => {
             isOpen={props.isOpen}
             onRequestClose={props.onClose}
         >
-            <Tile type={props.solid ? 'solid' : 'clear'} dense noShadow>
-                {props.solid ? (
-                    <Spacing
-                        pL={isMobile ? 0 : 70}
-                        pR={isMobile ? 0 : 70}
-                        pT={isMobile ? 7.5 : 15}
-                        pB={isMobile ? 7.5 : 15}
-                    >
-                        {content}
-                    </Spacing>
-                ) : (
-                    content
-                )}
-            </Tile>
+            {props.solid ? (
+                <Tile type="solid">{content}</Tile>
+            ) : (
+                <Spacing
+                    pL={isMobile ? 0 : 75}
+                    pR={isMobile ? 0 : 75}
+                    pT={24}
+                    pB={24}
+                >
+                    {content}
+                </Spacing>
+            )}
         </ReactModal>
     )
 }

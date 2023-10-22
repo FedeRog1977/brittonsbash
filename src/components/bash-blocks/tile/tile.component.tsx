@@ -12,9 +12,7 @@ export const Tile: React.FC<TileProps> = ({ ...props }: TileProps) => {
             [styles.clear]: props.type === 'clear',
             [styles.solid]: props.type === 'solid',
             [styles.top]: props.top,
-            [styles.dense]: props.dense,
             [styles.outline]: props.outline,
-            [styles.noShadow]: props.noShadow,
         }
     )
 

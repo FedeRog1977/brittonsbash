@@ -39,25 +39,15 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
     )
 
     return (
-        <Tile type="solid" dense={isMobile}>
-            <Spacing
-                mL={isMobile ? 15 : 70}
-                mR={isMobile ? 15 : 70}
-                mB={isMobile ? 7.5 : 15}
-            >
+        <Tile type="solid">
+            <Spacing mB={isMobile ? 7.5 : 15}>
                 <Typography type="h1" content={props.title} textAlign="left" />
             </Spacing>
-            <Spacing
-                mL={isMobile ? 15 : 70}
-                mR={isMobile ? 15 : 70}
-                mT={isMobile ? 7.5 : 15}
-                mB={isMobile ? 7.5 : 15}
-            >
+            <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                 <Typography type="h2" content="Summary" textAlign="left" />
             </Spacing>
             <Spacing
-                mL={isMobile ? 0 : 70}
-                mR={isMobile ? 0 : 70}
+                mX={isMobile ? -40 : 0}
                 mT={isMobile ? 7.5 : 15}
                 mB={isMobile ? 7.5 : 15}
             >
@@ -99,12 +89,7 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                     ]}
                 />
             </Spacing>
-            <Spacing
-                mL={isMobile ? 15 : 70}
-                mR={isMobile ? 15 : 70}
-                mT={isMobile ? 7.5 : 15}
-                mB={isMobile ? 7.5 : 15}
-            >
+            <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                 <Typography
                     type="h2"
                     content={props.isProjects ? 'Hills' : 'Routes'}
@@ -112,24 +97,25 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                 />
             </Spacing>
             <Spacing
-                mL={isMobile ? 0 : 70}
-                mR={isMobile ? 0 : 70}
+                mX={isMobile ? -40 : 0}
                 mT={isMobile ? 7.5 : 15}
                 mB={isMobile ? 7.5 : 15}
             >
                 <ColumnTable
                     leftColumn={{
-                        entries: ['Total', '2023', '2022', '2021', '2020'],
+                        entries: [
+                            props.isProjects ? 'Unique' : '',
+                            'Total',
+                            '2023',
+                            '2022',
+                            '2021',
+                            '2020',
+                        ],
                     }}
                     rightColumns={props.routes}
                 />
             </Spacing>
-            <Spacing
-                mL={isMobile ? 15 : 70}
-                mR={isMobile ? 15 : 70}
-                mT={isMobile ? 7.5 : 15}
-                mB={isMobile ? 7.5 : 15}
-            >
+            <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                 <Button
                     typeType="h2"
                     type="denseClear"
@@ -164,8 +150,7 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                 />
             </Spacing>
             <Spacing
-                mL={isMobile ? 0 : 70}
-                mR={isMobile ? 0 : 70}
+                mX={isMobile ? -40 : 0}
                 mT={isMobile ? 7.5 : 15}
                 mB={isMobile ? 7.5 : 15}
             >

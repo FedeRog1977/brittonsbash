@@ -52,27 +52,5 @@ export const TileStories = () => (
                 textAlign="center"
             />
         </Tile>
-        <Tile type="solid" dense>
-            <Typography
-                type="h1"
-                fontFamily="sansSerif"
-                content="Solid dense tile"
-                textAlign="center"
-            />
-            <Typography
-                type="body"
-                fontFamily="sansSerif"
-                content="Dense tiles are used to remove padding on the x-axis and y-axis on desktop view, and on the x-axis on mobile view"
-                textAlign="center"
-            />
-        </Tile>
-        <Tile type="solid" noShadow>
-            <Typography
-                type="h1"
-                fontFamily="sansSerif"
-                content="Solid no-shadow tile"
-                textAlign="center"
-            />
-        </Tile>
     </>
 )

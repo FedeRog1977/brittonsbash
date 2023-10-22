@@ -13,54 +13,46 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
 
     return (
         <Tile type="solid" top>
-            {/* <Spacing
-                mL={isMobile ? 0 : 70}
-                mR={isMobile ? 0 : 70}
-                mB={isMobile ? 7.5 : 15}
-            >
-                <Search func={props.funcInput} placeholder="Search Events" />
-                <Button
-                    type="search"
-                    func={props.funcButton}
-                    funcResp={false}
-                    content={
-                        <>
-                            {isMobile ? (
-                                <FontAwesomeIcon icon={faSearch} />
-                            ) : (
-                                'Search'
-                            )}
-                        </>
-                    }
-                    color="white"
-                />
-            </Spacing> */}
-            <Spacing mL={isMobile ? 0 : 70} mR={isMobile ? 0 : 70}>
-                <InstantGramSearchList
-                    func={props.funcSelect}
-                    items={eventData[2023]}
-                    year="2023"
-                    season="4"
-                />
-                <InstantGramSearchList
-                    func={props.funcSelect}
-                    items={eventData[2022]}
-                    year="2022"
-                    season="3"
-                />
-                <InstantGramSearchList
-                    func={props.funcSelect}
-                    items={eventData[2021]}
-                    year="2021"
-                    season="2"
-                />
-                <InstantGramSearchList
-                    func={props.funcSelect}
-                    items={eventData[2020]}
-                    year="2020"
-                    season="1"
-                />
-            </Spacing>
+            {/* <Search func={props.funcInput} placeholder="Search Events" />
+            <Button
+                type="search"
+                func={props.funcButton}
+                funcResp={false}
+                content={
+                    <>
+                        {isMobile ? (
+                            <FontAwesomeIcon icon={faSearch} />
+                        ) : (
+                            'Search'
+                        )}
+                    </>
+                }
+                color="white"
+            /> */}
+            <InstantGramSearchList
+                func={props.funcSelect}
+                items={eventData[2023]}
+                year="2023"
+                season="4"
+            />
+            <InstantGramSearchList
+                func={props.funcSelect}
+                items={eventData[2022]}
+                year="2022"
+                season="3"
+            />
+            <InstantGramSearchList
+                func={props.funcSelect}
+                items={eventData[2021]}
+                year="2021"
+                season="2"
+            />
+            <InstantGramSearchList
+                func={props.funcSelect}
+                items={eventData[2020]}
+                year="2020"
+                season="1"
+            />
         </Tile>
     )
 }

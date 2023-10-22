@@ -1,26 +1,19 @@
 .clear {
     background-color: var(--transparrent);
-    margin: 20px 150px 20px 150px;
-    padding: 50px 0px 50px 0px;
+    margin: 20px 0px 20px 0px;
+    padding: 50px 75px 50px 75px;
 
     @media (max-width: 768px) {
-        border-radius: 0;
-        box-shadow: none;
-        margin: 20px 0px 20px 0px;
         padding: 20px;
     }
 }
 
 .solid {
     background-color: var(--white);
-    border-radius: var(--corners-large);
-    margin: 20px 150px 20px 150px;
-    padding: 50px 30px 50px 30px;
+    margin: 20px 0px 20px 0px;
+    padding: 50px 75px 50px 75px;
 
     @media (max-width: 768px) {
-        border-radius: 0;
-        box-shadow: none;
-        margin: 20px 0px 20px 0px;
         padding: 20px;
     }
 }
@@ -28,14 +21,6 @@
 .top {
     @media (max-width: 768px) {
         margin-top: 0px;
-    }
-}
-
-.dense {
-    padding: 0px;
-
-    @media (max-width: 768px) {
-        padding: 20px 0px 20px 0px;
     }
 }
 

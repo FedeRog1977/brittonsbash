@@ -2,6 +2,14 @@ export const sportData = {
     2023: {
         roadies: [
             {
+                id: 'R2023045',
+                name: 'Strathaven',
+                distance: 36.7,
+                elevation: 2234,
+                time: '2:07:26',
+                speed: 17.3,
+            },
+            {
                 id: 'R2023044',
                 name: 'Fenwick + Wind Farm',
                 distance: 29.81,
