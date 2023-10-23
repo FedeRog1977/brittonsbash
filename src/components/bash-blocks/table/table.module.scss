@@ -1,0 +1,15 @@
+.table {
+    background-color: var(--lighter-grey);
+    border-radius: var(--corners-small);
+    padding: 15px 75px 15px 75px;
+
+    @media (max-width: 768px) {
+        border-radius: none;
+        padding: 7.5px 20px 7.5px 20px;
+    }
+}
+
+.scrollX {
+    overflow-x: scroll;
+    white-space: nowrap;
+}

@@ -1,5 +1,6 @@
-import { ColumnTableProps, RowTableProps, Grid, Spacing, Typography } from '..'
+import { ColumnTableProps, RowTableProps, Grid, Typography } from '..'
 import { useScreenWidth } from '../../../scripts'
+import styles from './table.module.scss'
 
 export const ColumnTable: React.FC<ColumnTableProps> = ({
     ...props
@@ -7,14 +8,7 @@ export const ColumnTable: React.FC<ColumnTableProps> = ({
     const { isMobile } = useScreenWidth()
 
     const content: React.ReactElement = (
-        <Spacing
-            pL={isMobile ? 20 : 75}
-            pR={isMobile ? 20 : 75}
-            pT={isMobile ? 7.5 : 15}
-            pB={isMobile ? 7.5 : 15}
-            backgroundColor="var(--lighter-grey)"
-            borderRadius={isMobile ? 'none' : 'var(--corners-small)'}
-        >
+        <div className={styles.table}>
             <Grid alignColumns="auto auto">
                 <Grid columnItem={[1, 2]}>
                     <div
@@ -99,7 +93,7 @@ export const ColumnTable: React.FC<ColumnTableProps> = ({
                     )}
                 </Grid>
             </Grid>
-        </Spacing>
+        </div>
     )
 
     if (props.scroll)
@@ -109,12 +103,7 @@ export const ColumnTable: React.FC<ColumnTableProps> = ({
             </div>
         )
 
-    if (isMobile)
-        return (
-            <div style={{ overflowX: 'scroll', whiteSpace: 'nowrap' }}>
-                {content}
-            </div>
-        )
+    if (isMobile) return <div className={styles.scrollX}>{content}</div>
 
     return content
 }
@@ -124,15 +113,8 @@ export const RowTable: React.FC<RowTableProps> = ({
 }: RowTableProps) => {
     const { isMobile } = useScreenWidth()
 
-    const content: React.ReactElement = (
-        <Spacing
-            pL={isMobile ? 20 : 75}
-            pR={isMobile ? 20 : 75}
-            pT={isMobile ? 7.5 : 15}
-            pB={isMobile ? 7.5 : 15}
-            backgroundColor="var(--lighter-grey)"
-            borderRadius={isMobile ? 'none' : 'var(--corners-small)'}
-        >
+    return (
+        <div className={styles.table}>
             <Grid alignColumns="auto auto">
                 <Grid columnItem={[1, 2]} rowItem={[1, props.rows.length + 1]}>
                     <div
@@ -238,15 +220,6 @@ export const RowTable: React.FC<RowTableProps> = ({
                     )}
                 </>
             </Grid>
-        </Spacing>
+        </div>
     )
-
-    if (isMobile)
-        return (
-            <div style={{ overflowX: 'scroll', whiteSpace: 'nowrap' }}>
-                {content}
-            </div>
-        )
-
-    return content
 }
