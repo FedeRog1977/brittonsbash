@@ -28,8 +28,10 @@
     border: 1px solid var(--darker-grey);
 }
 
-.noShadow {
-    box-shadow: none;
+.margins {
+    margin-left: 75px;
+    margin-right: 75px;
+    border-radius: var(--corners-large);
 }
 
 .align {

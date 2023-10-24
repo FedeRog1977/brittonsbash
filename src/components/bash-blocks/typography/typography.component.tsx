@@ -70,6 +70,7 @@ export const Typography: React.FC<TypographyProps> = ({
             [styles[
                 `color${props.color ? toUpperCase(props.color) : 'DarkerGrey'}`
             ]]: props.color,
+            [styles.shadow]: props.shadow,
         }
     )
 

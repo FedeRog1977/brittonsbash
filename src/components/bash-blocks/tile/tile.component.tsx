@@ -13,8 +13,19 @@ export const Tile: React.FC<TileProps> = ({ ...props }: TileProps) => {
             [styles.solid]: props.type === 'solid',
             [styles.top]: props.top,
             [styles.outline]: props.outline,
+            [styles.margins]: props.margins,
         }
     )
 
-    return <div className={classNames}>{props.children}</div>
+    return (
+        <div
+            className={classNames}
+            style={{
+                backgroundImage: `url(${props.img})`,
+                backgroundSize: '100%',
+            }}
+        >
+            {props.children}
+        </div>
+    )
 }

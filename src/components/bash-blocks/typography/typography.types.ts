@@ -24,6 +24,7 @@ export type TypographyTextProps = {
     smallCaps?: boolean
     textDecoration?: 'overline' | 'underline' | 'lineThrough'
     link?: LinkProps['link']
+    shadow?: boolean
 }
 
 export type TypographyStyleProps = {
