@@ -352,6 +352,15 @@ export const sportData = {
         ],
         projects: [
             {
+                id: 'P2023027',
+                name: 'Triad Firefight',
+                distance: 11.49,
+                elevation: 5745,
+                time: '4:22:34',
+                companionship: 0,
+                munros: ['Stob a’ Choire Mheadhoin', 'Stob Coire Easain'],
+            },
+            {
                 id: 'P2023026',
                 name: 'Gulvain',
                 distance: 14.0,
