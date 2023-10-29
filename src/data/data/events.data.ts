@@ -2931,7 +2931,7 @@ export const eventData = {
                 youthHostels: ['Cairngorm Lodge (Glenmore)'],
             },
             description:
-                'This project started with so much potential, so much hope. And on the Saturday, it did indeed deliver.',
+                'This project started with so much potential, so much hope. And on the Saturday, it did indeed deliver. This is a classic example of one of my favourite type of routes; long warm-up walk-in, a bunch of high level exposure, blue bird sunshine, some snow. Though on the subject of exposure, we soon realised it was that time of year when you have the crossover of ixe axes and suncream. Of course, I didn’t have either. Most of the route, as I said, was in the sunshine, on top of the hills, and the albedo effect was certainly out to harm on this day. Project itself was excellent but when we got back, it didn’t take long to feel the effects. So much for the cooking up a storm and getting wasted. The faces were not feeling it. Woke up on the Sunday to see a couple of red baloons on top of our torsos, so there went the plan for Sunday hills too. We had a quick depressing walk around Morlich and got on the road for some soup. YAH.',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/cairngorms-x/1.jpg',
@@ -3414,7 +3414,8 @@ export const eventData = {
             id: 'E2023013',
             names: ['Dementia'],
             startDate: '25th of March',
-            description: '...',
+            description:
+                'My turn to rock and roll the ALL up north again. It was back to the Black Mount four, though in this case, the Black Mount Most-Easterly Two for some dementia with McNeil. Was good to see some snow again, even if the route was a little boring. All good, was a good re-bag.',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/dementia/1.jpg',
@@ -3458,7 +3459,8 @@ export const eventData = {
             features: {
                 youthHostels: ['Glen Nevis'],
             },
-            description: '...',
+            description:
+                'It was time for the ALL to take to some roads it was designed for. Or at least Audi claim. We ran the classic steak and reduced Morrisons Fort Bill potatoes on the Firday, and I did develop a good hack to revive the potatoes, at last. Next morning was a great blue bird photo opportunity for the ALL along the ALLroad. This is one of many projects that highlight why March-April-May are the best project months. Just the perfect amount of snow to make the, already fairly easy, project doable, and the perfect amount of sunshine. The wak-in was a little boring but it’s always part of the excitement. The reason we weren’t doing all four of the Munros on-route was because we had the Admiral closing party to get to for our 7pm rezzie. But yeah, that went to hell when they said they weren’t serving food. Back to Griff’s for an 800 and debrief it was.',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/in-the-air-today/1.jpg',
@@ -3542,7 +3544,8 @@ export const eventData = {
             id: 'E2023011',
             names: ['Sunday Driver'],
             startDate: '26th of February',
-            description: '...',
+            description:
+                'These are just some sexi shots to be honest. Typical Sunday Waterfoot, followed by a quickie up to the wind farm to get some shots of the ALL. Worth it in that sunset.',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/sunday-driver/1.jpg',
@@ -3587,7 +3590,8 @@ export const eventData = {
             features: {
                 youthHostels: ['Glencoe Independent (Bunkhouse)'],
             },
-            description: '...',
+            description:
+                'It had been a while since McNeil joined on a proj’ and for the first time, it was a two bones solo trip. The perfect romantic weekend it was. Another loan of some washer fluid, a venison burger storm cooked up in the Indy, and the first outing of the new two-tones. What a perfect combo. It was a re-bag for me but also perfect weather for it. A touch of snow this time made the route a little more interesting. It was also short enough that we took a bit of time on the descent to piss about with the axe, Mark’s new micros, and scaring a family of basically all da’s. Tried to get a coffee in the ski centre but it was full of boomers who have no idea what a hill is. Unlucky.',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/glencoe-xii/1.jpg',
@@ -3652,7 +3656,8 @@ export const eventData = {
             features: {
                 youthHostels: ['Aviemore'],
             },
-            description: '...',
+            description:
+                'Finally time for the ALL to take to Aviemore. I was optimistic, sleeping in the Sugarbowl car park for the night for the anticipated Devil’s Dick the next day. But the foot of snow I woke up to was said otherwise. We had to re-evaluate. It only took about 10 lengths of the Glenmore road for me to finally park up at the Glenmore youth hostel to recompose, but also look up and realsie I was next to a fine, fine Corbett. Good god, am I glad I did this. Only 20 minutes or so into the walk I saw that promising sight. One of the greatest sights a man can see; the sun peeking through some thin cloud. This turned into the best route I’d had in a good while. Nowt like a fine Cairngorm inversion. Certainly a contract to Griff’s wasted on the Friday night, followed by a good drenching on a Corb’ on-route to The More. We made up for this though with a good crate and storm. Sunday however, reminded us never to go back to Route 7. Like £4 for a roll and lorne. Oh well, CG worked his off on a sub-two and I worked my coffee off by purchasing a pari of two tones. Yup, it finally happened. Successful day in my opinion, topped off by the Bruar soup.',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/cairngorms-ix/1.jpg',
