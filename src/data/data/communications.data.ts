@@ -1293,6 +1293,7 @@ export const communicationsData = {
                 'Le Creuset',
                 'Staub',
                 'WMF',
+                'All-Clad',
                 'Villeroy & Boch',
                 'Sant’ Andrea',
                 'Dartington Crystal',

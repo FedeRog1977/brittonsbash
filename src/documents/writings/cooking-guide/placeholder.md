@@ -165,6 +165,28 @@ The art is what you do, the science is how you do it.
 
 ## To Add
 
+### Stir Fry
+
+-   2 tbsp dark soy sauce
+-   1 tbsp oyster sauce
+-   1 tbsp sriracha sauce
+-   1 tbsp sesame oil
+-   1 tbsp rice vinegar
+-   3 cloves of garlic
+-   Ginger
+-   Palm sugar
+-   2 spring onions
+-   Fresh coriander
+
+-   1 tbsp sesame oil
+-   1 red onion
+-   1 red pepper
+-   Tender stem broccoli
+-   Chestnut mushrooms
+-   Chicken breast
+-   Corn flour
+-   Egg noodles
+
 ### Italian Stew
 
 -   Olive oil
