@@ -102,6 +102,7 @@ The art is what you do, the science is how you do it.
 
 -   Short-Crust Pastry
 -   Puff Pastry
+-   Choux Pastry (Pâte à Choux)
 
 ---
 

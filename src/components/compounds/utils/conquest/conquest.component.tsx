@@ -81,14 +81,14 @@ export const Conquest = () => {
                     .toLowerCase()
                     .includes(e.target.value.toLowerCase())
             ) {
-                console.log(hillData.landmasses[i].route)
+                console.log(hillData.landmasses[i].routes)
 
                 setShowRoutesList(true)
                 setRoutesList(
                     <RouteList
                         id={'searchRoute'}
                         func={routeSelect}
-                        landmassRoutes={hillData.landmasses[i].route}
+                        landmassRoutes={hillData.landmasses[i].routes}
                     />
                 )
             }
@@ -101,26 +101,30 @@ export const Conquest = () => {
         console.log('Select Route Name:\n', e.target.value)
 
         for (var i in hillData.landmasses) {
-            for (var k in hillData.landmasses[i].route) {
+            for (var k in hillData.landmasses[i].routes) {
                 if (
-                    hillData.landmasses[i].route[k].name
+                    hillData.landmasses[i].routes[k].name
                         .toLowerCase()
                         .includes(e.target.value.toLowerCase())
                 ) {
                     console.log(
                         'JSON Route Name:\n',
-                        hillData.landmasses[i].route[k].name
+                        hillData.landmasses[i].routes[k].name
                     )
 
                     setShowRouteMarker(true)
                     setRouteMarker(
                         <RouteMarker
-                            nameRoute={hillData.landmasses[i].route[k].name}
-                            dist={hillData.landmasses[i].route[k].distance}
-                            elev={hillData.landmasses[i].route[k].elevationgain}
-                            time={hillData.landmasses[i].route[k].stdtime}
-                            munrosIn={hillData.landmasses[i].route[k].munro}
-                            corbettsIn={hillData.landmasses[i].route[k].corbett}
+                            nameRoute={hillData.landmasses[i].routes[k].name}
+                            dist={hillData.landmasses[i].routes[k].distance}
+                            elev={
+                                hillData.landmasses[i].routes[k].elevationgain
+                            }
+                            time={hillData.landmasses[i].routes[k].stdtime}
+                            munrosIn={hillData.landmasses[i].routes[k].munros}
+                            corbettsIn={
+                                hillData.landmasses[i].routes[k].corbetts
+                            }
                             latIn={56.76}
                             lonIn={-5.87}
                         />

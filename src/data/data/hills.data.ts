@@ -469,7 +469,7 @@ export const hillData = {
             type: 'Mountain Range',
             subtype: 'Ridge',
             subsubtype: 'Arete',
-            route: [
+            routes: [
                 {
                     name: 'Cruachan Four',
                     distance: 16.66,
@@ -487,15 +487,19 @@ export const hillData = {
                         'smooth slab',
                     ],
                     gear: ['helmet'],
-                    munro: [
+                    munros: [
                         'Ben Cruchan',
                         'Stob Daimh',
                         'Beinn a Chochuill',
                         'Beinn Eunaich',
                     ],
-                    munrotop: ['Drochaid Ghlas', 'Stob Garbh', 'Meall Cuanail'],
-                    corbett: [],
-                    corbetttop: [],
+                    munroTops: [
+                        'Drochaid Ghlas',
+                        'Stob Garbh',
+                        'Meall Cuanail',
+                    ],
+                    corbetts: [],
+                    corbettTops: [],
                     GPX: 'cruachan_range/cruachan-four.gpx',
                 },
                 {
@@ -515,10 +519,10 @@ export const hillData = {
                         'smooth slab',
                     ],
                     gear: ['helmet'],
-                    munro: ['Ben Cruchan', 'Stob Daimh'],
-                    munrotop: ['Drochaid Ghlas', 'Stob Garbh'],
-                    corbett: [],
-                    corbetttop: [],
+                    munros: ['Ben Cruchan', 'Stob Daimh'],
+                    munroTops: ['Drochaid Ghlas', 'Stob Garbh'],
+                    corbetts: [],
+                    corbettTops: [],
                     GPX: 'cruachan_range/cruachan_daimh.gpx',
                 },
                 {
@@ -538,15 +542,15 @@ export const hillData = {
                         'smooth slab',
                     ],
                     gear: ['helmet'],
-                    munro: ['Ben Cruchan', 'Stob Daimh'],
-                    munrotop: [
+                    munros: ['Ben Cruchan', 'Stob Daimh'],
+                    munroTops: [
                         'Drochaid Ghlas',
                         'Stob Garbh',
                         'Sron An Isean',
                         'Meall Cuanail',
                     ],
-                    corbett: ['Beinn a Bhuiridh'],
-                    corbetttop: [],
+                    corbetts: ['Beinn a Bhuiridh'],
+                    corbettTops: [],
                     GPX: 'cruachan_range/cruachan-two_bhuiridh.gpx',
                 },
                 {
@@ -564,10 +568,10 @@ export const hillData = {
                         'grass with scattered rock',
                     ],
                     gear: [],
-                    munro: ['Beinn a Chochuill', 'Beinn Eunaich'],
-                    munrotop: [],
-                    corbett: [],
-                    corbetttop: [],
+                    munros: ['Beinn a Chochuill', 'Beinn Eunaich'],
+                    munroTops: [],
+                    corbetts: [],
+                    corbettTops: [],
                     GPX: 'cruachan_range/eunaich_chochuill.gpx',
                 },
                 {
@@ -585,14 +589,14 @@ export const hillData = {
                         'grass with scattered rock',
                     ],
                     gear: [],
-                    munro: [],
-                    munrotop: [],
-                    corbett: ['Beinn a Bhuiridh'],
-                    corbetttop: [],
+                    munros: [],
+                    munroTops: [],
+                    corbetts: ['Beinn a Bhuiridh'],
+                    corbettTops: [],
                     GPX: 'cruachan_range/bhuiridh.gpx',
                 },
             ],
-            munro: [
+            munros: [
                 {
                     name: 'Ben Cruachan',
                     lat: 56.4267,
@@ -638,7 +642,7 @@ export const hillData = {
                     image: 'Munros/chochuill.jpg',
                 },
             ],
-            munrotop: [
+            munroTops: [
                 {
                     name: 'Stob Dearg',
                     lat: 56.4289,
@@ -695,7 +699,7 @@ export const hillData = {
                     image: 'noimage.png',
                 },
             ],
-            corbett: [
+            corbetts: [
                 {
                     name: 'Beinn a Bhuiridh',
                     lat: 56.4089,
@@ -708,7 +712,7 @@ export const hillData = {
                     image: 'Corbetts/bhuiridhcorb.jpg',
                 },
             ],
-            corbetttop: [],
+            corbettTops: [],
             corrie: [
                 {
                     name: 'Coire Glas',
@@ -767,7 +771,7 @@ export const hillData = {
             type: 'Mountain',
             subtype: 'Stand-Alone',
             subsubtype: 'Whaleback',
-            route: [
+            routes: [
                 {
                     name: 'Beinn Udlaidh and Beinn Bhreac-liath',
                     distance: 7.5,
@@ -778,16 +782,16 @@ export const hillData = {
                     terraintype: ['forestry commission road', 'path'],
                     terraindiff: ['grass', 'grass with scattered rock'],
                     gear: [],
-                    munro: [],
-                    munrotop: [],
-                    corbett: ['Beinn Udlaidh', 'Beinn Bhreac-liath'],
-                    corbetttop: [],
+                    munros: [],
+                    munroTops: [],
+                    corbetts: ['Beinn Udlaidh', 'Beinn Bhreac-liath'],
+                    corbettTops: [],
                     GPX: 'udlaidh_bhreac-liath/udlaidh_bhreac-liath.gpx',
                 },
             ],
-            munro: [],
-            munrotop: [],
-            corbett: [
+            munros: [],
+            munroTops: [],
+            corbetts: [
                 {
                     name: 'Beinn Udlaidh',
                     lat: 56.4588,
@@ -811,7 +815,7 @@ export const hillData = {
                     image: 'Corbetts/bhreac-liath.jpg',
                 },
             ],
-            corbetttop: [],
+            corbettTops: [],
             corrie: [
                 {
                     name: 'Coire Sheileach',
@@ -847,7 +851,7 @@ export const hillData = {
             type: 'Mountain',
             subtype: 'Stand-Alone',
             subsubtype: 'Ridge',
-            route: [
+            routes: [
                 {
                     name: 'Beinn Mhic-Mhonaidh',
                     distance: 8.5,
@@ -858,16 +862,16 @@ export const hillData = {
                     terraintype: ['path', 'footpath erosion'],
                     terraindiff: ['grass', 'grass with scattered rock'],
                     gear: [],
-                    munro: [],
-                    munrotop: [],
-                    corbett: ['Beinn Mhic-Mhonaidh'],
-                    corbetttop: [],
+                    munros: [],
+                    munroTops: [],
+                    corbetts: ['Beinn Mhic-Mhonaidh'],
+                    corbettTops: [],
                     GPX: 'mhic-mhonaidh/mhic-mhonaidh.gpx',
                 },
             ],
-            munro: [],
-            munrotop: [],
-            corbett: [
+            munros: [],
+            munroTops: [],
+            corbetts: [
                 {
                     name: 'Beinn Mhic-Mhonaidh',
                     lat: 56.473,
@@ -880,7 +884,7 @@ export const hillData = {
                     image: 'Corbetts/mhic-mhonaidh.jpg',
                 },
             ],
-            corbetttop: [],
+            corbettTops: [],
             corrie: [
                 {
                     name: 'Coire Chailleach',
@@ -907,7 +911,7 @@ export const hillData = {
             type: 'Mountain',
             subtype: 'Stand-Alone',
             subsubtype: null,
-            route: [
+            routes: [
                 {
                     name: 'Creach Bheinn',
                     distance: 8.75,
@@ -922,16 +926,16 @@ export const hillData = {
                         'grass with scattered rock',
                     ],
                     gear: [],
-                    munro: [],
-                    munrotop: [],
-                    corbett: ['Creach Bheinn (Loch Creran)'],
-                    corbetttop: [],
+                    munros: [],
+                    munroTops: [],
+                    corbetts: ['Creach Bheinn (Loch Creran)'],
+                    corbettTops: [],
                     GPX: 'chreach-bheinn/creach-bheinn.gpx',
                 },
             ],
-            munro: [],
-            munrotop: [],
-            corbett: [
+            munros: [],
+            munroTops: [],
+            corbetts: [
                 {
                     name: 'Creach Bheinn (Loch Creran)',
                     lat: 56.5304,
@@ -944,7 +948,7 @@ export const hillData = {
                     image: 'Corbetts/creach-bheinn.jpg',
                 },
             ],
-            corbetttop: [],
+            corbettTops: [],
             corrie: [
                 {
                     name: 'Coire Creach Bheinn',
@@ -977,7 +981,7 @@ export const hillData = {
             type: 'Mountain Range',
             subtype: 'Ridge',
             subsubtype: 'Arete',
-            route: [
+            routes: [
                 {
                     name: 'Starav Eight',
                     distance: 34.85,
@@ -1002,7 +1006,7 @@ export const hillData = {
                         'talus (coarse scree)',
                     ],
                     gear: [],
-                    munro: [
+                    munros: [
                         'Ben Starav',
                         'Glas Bheinn Mhor',
                         'Stob Coir an Albannaich',
@@ -1012,7 +1016,7 @@ export const hillData = {
                         'Stob Ghabhar',
                         'Stob a Choire Odhair',
                     ],
-                    munrotop: [
+                    munroTops: [
                         'Stob Coire Dheirg',
                         'Meall Cruidh',
                         'Stob an Duine Ruaidh',
@@ -1024,8 +1028,8 @@ export const hillData = {
                         'Sron nan Giubhas',
                         'Stob a Bhruaich Leith',
                     ],
-                    corbett: [],
-                    corbetttop: ['Meall nan Tri Tighearnan', 'Meall Tarsuinn'],
+                    corbetts: [],
+                    corbettTops: ['Meall nan Tri Tighearnan', 'Meall Tarsuinn'],
                     GPX: 'starav_range/starav-eight.gpx',
                 },
                 {
@@ -1052,7 +1056,7 @@ export const hillData = {
                         'talus (coarse scree)',
                     ],
                     gear: [],
-                    munro: [
+                    munros: [
                         'Ben Starav',
                         'Beinn nan Aighenan',
                         'Glas Bheinn Mhor',
@@ -1061,14 +1065,14 @@ export const hillData = {
                         'Stob Ghabhar',
                         'Stob a Choire Odhair',
                     ],
-                    munrotop: [
+                    munroTops: [
                         'Stob Coire Dheirg',
                         'Aonach Eagach',
                         'Sron a Ghearrain',
                         'Stob a Bhruaich Leith',
                     ],
-                    corbett: [],
-                    corbetttop: ['Meall nan Tri Tighearnan', 'Meall Tarsuinn'],
+                    corbetts: [],
+                    corbettTops: ['Meall nan Tri Tighearnan', 'Meall Tarsuinn'],
                     GPX: 'starav_range/starav-seven.gpx',
                 },
                 {
@@ -1095,16 +1099,16 @@ export const hillData = {
                         'talus (coarse scree)',
                     ],
                     gear: [],
-                    munro: [
+                    munros: [
                         'Ben Starav',
                         'Beinn nan Aighenan',
                         'Glas Bheinn Mhor',
                         'Stob Coir an Albannaich',
                         'Meall nan Eun',
                     ],
-                    munrotop: ['Stob Coire Dheirg'],
-                    corbett: [],
-                    corbetttop: ['Meall nan Tri Tighearnan', 'Meall Tarsuinn'],
+                    munroTops: ['Stob Coire Dheirg'],
+                    corbetts: [],
+                    corbettTops: ['Meall nan Tri Tighearnan', 'Meall Tarsuinn'],
                     GPX: 'starav_range/starav-five.gpx',
                 },
                 {
@@ -1131,10 +1135,10 @@ export const hillData = {
                         'talus (coarse scree)',
                     ],
                     gear: [],
-                    munro: ['Ben Starav', 'Glas Bheinn Mhor'],
-                    munrotop: ['Stob Coire Dheirg'],
-                    corbett: [],
-                    corbetttop: ['Meall nan Tri Tighearnan'],
+                    munros: ['Ben Starav', 'Glas Bheinn Mhor'],
+                    munroTops: ['Stob Coire Dheirg'],
+                    corbetts: [],
+                    corbettTops: ['Meall nan Tri Tighearnan'],
                     GPX: 'starav_range/starav_mhor.gpx',
                 },
                 {
@@ -1158,10 +1162,10 @@ export const hillData = {
                         'grass with scattered rock',
                     ],
                     gear: [],
-                    munro: ['Stob Coir an Albannaich', 'Meall nan Eun'],
-                    munrotop: [],
-                    corbett: [],
-                    corbetttop: ['Meall Tarsuinn'],
+                    munros: ['Stob Coir an Albannaich', 'Meall nan Eun'],
+                    munroTops: [],
+                    corbetts: [],
+                    corbettTops: ['Meall Tarsuinn'],
                     GPX: 'starav_range/albannaich_nan-eun.gpx',
                 },
                 {
@@ -1185,14 +1189,14 @@ export const hillData = {
                         'grass with scattered rock',
                     ],
                     gear: [],
-                    munro: ['Beinn nan Aighenan'],
-                    munrotop: [],
-                    corbett: [],
-                    corbetttop: [],
+                    munros: ['Beinn nan Aighenan'],
+                    munroTops: [],
+                    corbetts: [],
+                    corbettTops: [],
                     GPX: 'starav_range/aighenan.gpx',
                 },
             ],
-            munro: [
+            munros: [
                 {
                     name: 'Ben Starav',
                     lat: 56.5389,
@@ -1249,7 +1253,7 @@ export const hillData = {
                     image: 'Munros/naneun.jpg',
                 },
             ],
-            munrotop: [
+            munroTops: [
                 {
                     name: 'Stob Coire Dheirg',
                     lat: 56.5387,
@@ -1284,8 +1288,8 @@ export const hillData = {
                     image: 'noimage.png',
                 },
             ],
-            corbett: [],
-            corbetttop: [
+            corbetts: [],
+            corbettTops: [
                 {
                     name: 'Meall nan Tri Tighearnan',
                     lat: 56.5383,
@@ -1431,7 +1435,7 @@ export const hillData = {
             type: 'Mountain',
             subtype: 'Stand-Alone',
             subsubtype: 'Whaleback',
-            route: [
+            routes: [
                 {
                     name: 'Beinn Trilleachan',
                     distance: 5.5,
@@ -1447,16 +1451,16 @@ export const hillData = {
                         'grass with scattered rock',
                     ],
                     gear: [],
-                    munro: [],
-                    munrotop: [],
-                    corbett: ['Beinn Trilleachan'],
-                    corbetttop: ['Beinn Trilleachan North-East Top'],
+                    munros: [],
+                    munroTops: [],
+                    corbetts: ['Beinn Trilleachan'],
+                    corbettTops: ['Beinn Trilleachan North-East Top'],
                     GPX: 'trilleachan/trilleachan.gpx',
                 },
             ],
-            munro: [],
-            munrotop: [],
-            corbett: [
+            munros: [],
+            munroTops: [],
+            corbetts: [
                 {
                     name: 'Beinn Trilleachan',
                     lat: 56.5479,
@@ -1469,7 +1473,7 @@ export const hillData = {
                     image: 'Corbetts/trill.jpg',
                 },
             ],
-            corbetttop: [
+            corbettTops: [
                 {
                     name: 'Beinn Trilleachan North-East Top',
                     lat: 56.5554,
@@ -1514,7 +1518,7 @@ export const hillData = {
             type: 'Mountain Range',
             subtype: null,
             subsubtype: null,
-            route: [
+            routes: [
                 {
                     name: 'Starav Eight',
                     distance: 34.85,
@@ -1539,7 +1543,7 @@ export const hillData = {
                         'talus (coarse scree)',
                     ],
                     gear: [],
-                    munro: [
+                    munros: [
                         'Ben Starav',
                         'Glas Bheinn Mhor',
                         'Stob Coir an Albannaich',
@@ -1549,7 +1553,7 @@ export const hillData = {
                         'Stob Ghabhar',
                         'Stob a Choire Odhair',
                     ],
-                    munrotop: [
+                    munroTops: [
                         'Stob Coire Dheirg',
                         'Meall Cruidh',
                         'Stob an Duine Ruaidh',
@@ -1561,8 +1565,8 @@ export const hillData = {
                         'Sron nan Giubhas',
                         'Stob a Bhruaich Leith',
                     ],
-                    corbett: [],
-                    corbetttop: ['Meall nan Tri Tighearnan', 'Meall Tarsuinn'],
+                    corbetts: [],
+                    corbettTops: ['Meall nan Tri Tighearnan', 'Meall Tarsuinn'],
                     GPX: 'starav_range/starav-eight.gpx',
                 },
                 {
@@ -1589,7 +1593,7 @@ export const hillData = {
                         'talus (coarse scree)',
                     ],
                     gear: [],
-                    munro: [
+                    munros: [
                         'Ben Starav',
                         'Beinn nan Aighenan',
                         'Glas Bheinn Mhor',
@@ -1598,14 +1602,14 @@ export const hillData = {
                         'Stob Ghabhar',
                         'Stob a Choire Odhair',
                     ],
-                    munrotop: [
+                    munroTops: [
                         'Stob Coire Dheirg',
                         'Aonach Eagach',
                         'Sron a Ghearrain',
                         'Stob a Bhruaich Leith',
                     ],
-                    corbett: [],
-                    corbetttop: ['Meall nan Tri Tighearnan', 'Meall Tarsuinn'],
+                    corbetts: [],
+                    corbettTops: ['Meall nan Tri Tighearnan', 'Meall Tarsuinn'],
                     GPX: 'starav_range/starav-seven.gpx',
                 },
                 {
@@ -1631,20 +1635,20 @@ export const hillData = {
                         'talus (coarse scree)',
                     ],
                     gear: [],
-                    munro: [
+                    munros: [
                         'Meall a Bhuiridh',
                         'Creise',
                         'Stob Ghabhar',
                         'Stob a Choire Odhair',
                     ],
-                    munrotop: [
+                    munroTops: [
                         'Clach Leathad',
                         'Mam Coire Easain',
                         'Aonach Eagach',
                         'Sron nan Giubhas',
                     ],
-                    corbett: [],
-                    corbetttop: ['Beinn Toaig'],
+                    corbetts: [],
+                    corbettTops: ['Beinn Toaig'],
                     GPX: 'black_mount_range/blackmount-four.gpx',
                 },
                 {
@@ -1670,10 +1674,10 @@ export const hillData = {
                         'talus (coarse scree)',
                     ],
                     gear: [],
-                    munro: ['Meall a Bhuiridh', 'Creise'],
-                    munrotop: ['Mam Coire Easain'],
-                    corbett: [],
-                    corbetttop: [],
+                    munros: ['Meall a Bhuiridh', 'Creise'],
+                    munroTops: ['Mam Coire Easain'],
+                    corbetts: [],
+                    corbettTops: [],
                     GPX: 'black_mount_range/creise_bhuiridh.gpx',
                 },
                 {
@@ -1699,10 +1703,10 @@ export const hillData = {
                         'talus (coarse scree)',
                     ],
                     gear: [],
-                    munro: ['Stob Ghabhar', 'Stob a Choire Odhair'],
-                    munrotop: ['Aonach Eagach', 'Sron nan Giubhas'],
-                    corbett: [],
-                    corbetttop: ['Beinn Toaig'],
+                    munros: ['Stob Ghabhar', 'Stob a Choire Odhair'],
+                    munroTops: ['Aonach Eagach', 'Sron nan Giubhas'],
+                    corbetts: [],
+                    corbettTops: ['Beinn Toaig'],
                     GPX: 'black_mount_range/ghabhar_odhair.gpx',
                 },
                 {
@@ -1720,10 +1724,10 @@ export const hillData = {
                         'grass with scattered rock',
                     ],
                     gear: [],
-                    munro: [],
-                    munrotop: [],
-                    corbett: ['Beinn Mhic Chasgaig', 'Stob Dubh'],
-                    corbetttop: [],
+                    munros: [],
+                    munroTops: [],
+                    corbetts: ['Beinn Mhic Chasgaig', 'Stob Dubh'],
+                    corbettTops: [],
                     GPX: 'black_mount_range/chasgaig_dubh.gpx',
                 },
                 {
@@ -1741,14 +1745,14 @@ export const hillData = {
                         'grass with scattered rock',
                     ],
                     gear: [],
-                    munro: [],
-                    munrotop: [],
-                    corbett: ['Beinn Mhic Chasgaig'],
-                    corbetttop: [],
+                    munros: [],
+                    munroTops: [],
+                    corbetts: ['Beinn Mhic Chasgaig'],
+                    corbettTops: [],
                     GPX: 'black_mount_range/chasgaig.gpx',
                 },
             ],
-            munro: [
+            munros: [
                 {
                     name: 'Meall a Bhuiridh',
                     lat: 56.6122,
@@ -1794,7 +1798,7 @@ export const hillData = {
                     image: 'Munros/chloeadair.jpg',
                 },
             ],
-            munrotop: [
+            munroTops: [
                 {
                     name: 'Clach Leathad',
                     lat: 56.6026,
@@ -1873,7 +1877,7 @@ export const hillData = {
                     image: 'noimage.png',
                 },
             ],
-            corbett: [
+            corbetts: [
                 {
                     name: 'Beinn Mhic Chasgaig',
                     lat: 56.61,
@@ -1886,7 +1890,7 @@ export const hillData = {
                     image: 'Corbetts/mhic-chasgaig.jpg',
                 },
             ],
-            corbetttop: [
+            corbettTops: [
                 {
                     name: 'Beinn Toaig',
                     lat: 56.5694,
@@ -1985,7 +1989,7 @@ export const hillData = {
             type: 'Mountain',
             subtype: 'Stand-Alone',
             subsubtype: 'Ridge',
-            route: [
+            routes: [
                 {
                     name: 'Beinn Sgulaird, Beinn Fhionnlaidh, Sgor na h-Ulaidh and Beinn Maol Chaluim',
                     distance: 19.88,
@@ -2007,14 +2011,14 @@ export const hillData = {
                         'talus (coarse scree)',
                     ],
                     gear: [],
-                    munro: [
+                    munros: [
                         'Beinn Sgulaird',
                         'Beinn Fhionnlaidh',
                         'Sgor na h-Ulaidh',
                     ],
-                    munrotop: ['Stob an Fhuarain'],
-                    corbett: ['Beinn Maol Chaluim'],
-                    corbetttop: ['Beinn Fhionnlaidh East Top'],
+                    munroTops: ['Stob an Fhuarain'],
+                    corbetts: ['Beinn Maol Chaluim'],
+                    corbettTops: ['Beinn Fhionnlaidh East Top'],
                     GPX: 'sgulaird/sgulaird_fhionnlaidh_h-ulaidh_chaluim.gpx',
                 },
                 {
@@ -2038,14 +2042,14 @@ export const hillData = {
                         'talus (coarse scree)',
                     ],
                     gear: [],
-                    munro: [
+                    munros: [
                         'Beinn Sgulaird',
                         'Beinn Fhionnlaidh',
                         'Sgor na h-Ulaidh',
                     ],
-                    munrotop: [],
-                    corbett: [],
-                    corbetttop: ['Beinn Fhionnlaidh East Top'],
+                    munroTops: [],
+                    corbetts: [],
+                    corbettTops: ['Beinn Fhionnlaidh East Top'],
                     GPX: 'sgulaird/sgulaird_fhionnlaidh_h-ulaidh_etive.gpx',
                 },
                 {
@@ -2069,10 +2073,10 @@ export const hillData = {
                         'talus (coarse scree)',
                     ],
                     gear: [],
-                    munro: ['Beinn Sgulaird', 'Beinn Fhionnlaidh'],
-                    munrotop: [],
-                    corbett: [],
-                    corbetttop: [],
+                    munros: ['Beinn Sgulaird', 'Beinn Fhionnlaidh'],
+                    munroTops: [],
+                    corbetts: [],
+                    corbettTops: [],
                     GPX: 'sgulaird/sgulaird_fhionnlaidh_etive.gpx',
                 },
                 {
@@ -2096,14 +2100,14 @@ export const hillData = {
                         'talus (coarse scree)',
                     ],
                     gear: [],
-                    munro: ['Beinn Sgulaird'],
-                    munrotop: [],
-                    corbett: [],
-                    corbetttop: ['Beinn Sgulaird South Top', 'Meall Garbh'],
+                    munros: ['Beinn Sgulaird'],
+                    munroTops: [],
+                    corbetts: [],
+                    corbettTops: ['Beinn Sgulaird South Top', 'Meall Garbh'],
                     GPX: 'sgulaird/sgulaird.gpx',
                 },
             ],
-            munro: [
+            munros: [
                 {
                     name: 'Beinn Sgulaird',
                     lat: 56.5662,
@@ -2116,9 +2120,9 @@ export const hillData = {
                     image: 'Munros/sgulaird.jpg',
                 },
             ],
-            munrotop: [],
-            corbett: [],
-            corbetttop: [
+            munroTops: [],
+            corbetts: [],
+            corbettTops: [
                 {
                     name: 'Beinn Sgulaird South Top',
                     lat: 56.5543,
@@ -2174,7 +2178,7 @@ export const hillData = {
             type: 'Mountain',
             subtype: 'Stand-Alone',
             subsubtype: 'Ridge',
-            route: [
+            routes: [
                 {
                     name: 'Fraochaidh from Ballachulish',
                     distance: 13,
@@ -2195,16 +2199,16 @@ export const hillData = {
                         'grass with scattered rock',
                     ],
                     gear: [],
-                    munro: [],
-                    munrotop: [],
-                    corbett: ['Fraochaidh'],
-                    corbetttop: [],
+                    munros: [],
+                    munroTops: [],
+                    corbetts: ['Fraochaidh'],
+                    corbettTops: [],
                     GPX: 'fraochaidh/fraochaidh.gpx',
                 },
             ],
-            munro: [],
-            munrotop: [],
-            corbett: [
+            munros: [],
+            munroTops: [],
+            corbetts: [
                 {
                     name: 'Fraochaidh',
                     lat: 56.6156,
@@ -2217,7 +2221,7 @@ export const hillData = {
                     image: 'Corbetts/fraochaidh.jpg',
                 },
             ],
-            corbetttop: [],
+            corbettTops: [],
             corrie: [
                 {
                     name: 'Coire Mulrooney',
@@ -2259,7 +2263,7 @@ export const hillData = {
             type: 'Mountain',
             subtype: 'Stand-Alone',
             subsubtype: 'Ridge',
-            route: [
+            routes: [
                 {
                     name: 'Beinn Sgulaird, Beinn Fhionnlaidh, Sgor na h-Ulaidh and Beinn Maol Chaluim',
                     distance: 19.88,
@@ -2281,14 +2285,14 @@ export const hillData = {
                         'talus (coarse scree)',
                     ],
                     gear: [],
-                    munro: [
+                    munros: [
                         'Beinn Sgulaird',
                         'Beinn Fhionnlaidh',
                         'Sgor na h-Ulaidh',
                     ],
-                    munrotop: ['Stob an Fhuarain'],
-                    corbett: ['Beinn Maol Chaluim'],
-                    corbetttop: ['Beinn Fhionnlaidh East Top'],
+                    munroTops: ['Stob an Fhuarain'],
+                    corbetts: ['Beinn Maol Chaluim'],
+                    corbettTops: ['Beinn Fhionnlaidh East Top'],
                     GPX: 'fhionnlaidh/sgulaird_fhionnlaidh_h-ulaidh_chaluim.gpx',
                 },
                 {
@@ -2312,14 +2316,14 @@ export const hillData = {
                         'talus (coarse scree)',
                     ],
                     gear: [],
-                    munro: [
+                    munros: [
                         'Beinn Sgulaird',
                         'Beinn Fhionnlaidh',
                         'Sgor na h-Ulaidh',
                     ],
-                    munrotop: [],
-                    corbett: [],
-                    corbetttop: ['Beinn Fhionnlaidh East Top'],
+                    munroTops: [],
+                    corbetts: [],
+                    corbettTops: ['Beinn Fhionnlaidh East Top'],
                     GPX: 'fhionnlaidh/sgulaird_fhionnlaidh_h-ulaidh_etive.gpx',
                 },
                 {
@@ -2343,10 +2347,10 @@ export const hillData = {
                         'talus (coarse scree)',
                     ],
                     gear: [],
-                    munro: ['Beinn Sgulaird', 'Beinn Fhionnlaidh'],
-                    munrotop: [],
-                    corbett: [],
-                    corbetttop: [],
+                    munros: ['Beinn Sgulaird', 'Beinn Fhionnlaidh'],
+                    munroTops: [],
+                    corbetts: [],
+                    corbettTops: [],
                     GPX: 'fhionnlaidh/sgulaird_fhionnlaidh_etive.gpx',
                 },
                 {
@@ -2368,14 +2372,14 @@ export const hillData = {
                         'grass with scattered rock',
                     ],
                     gear: [],
-                    munro: ['Beinn Fhionnlaidh'],
-                    munrotop: [],
-                    corbett: [],
-                    corbetttop: [],
+                    munros: ['Beinn Fhionnlaidh'],
+                    munroTops: [],
+                    corbetts: [],
+                    corbettTops: [],
                     GPX: 'fhionnlaidh/fhionnlaidh.gpx',
                 },
             ],
-            munro: [
+            munros: [
                 {
                     name: 'Beinn Fhionnlaidh',
                     lat: 56.601,
@@ -2388,9 +2392,9 @@ export const hillData = {
                     image: 'Munros/fhionnlaidh.jpg',
                 },
             ],
-            munrotop: [],
-            corbett: [],
-            corbetttop: [
+            munroTops: [],
+            corbetts: [],
+            corbettTops: [
                 {
                     name: 'Beinn Fhionnlaidh East Top',
                     lat: 56.6016,
@@ -2444,7 +2448,7 @@ export const hillData = {
             type: 'Mountain',
             subtype: 'Stand-Alone',
             subsubtype: 'Ridge',
-            route: [
+            routes: [
                 {
                     name: 'Beinn Sgulaird, Beinn Fhionnlaidh, Sgor na h-Ulaidh and Beinn Maol Chaluim',
                     distance: 19.88,
@@ -2466,14 +2470,14 @@ export const hillData = {
                         'talus (coarse scree)',
                     ],
                     gear: [],
-                    munro: [
+                    munros: [
                         'Beinn Sgulaird',
                         'Beinn Fhionnlaidh',
                         'Sgor na h-Ulaidh',
                     ],
-                    munrotop: ['Stob an Fhuarain'],
-                    corbett: ['Beinn Maol Chaluim'],
-                    corbetttop: ['Beinn Fhionnlaidh East Top'],
+                    munroTops: ['Stob an Fhuarain'],
+                    corbetts: ['Beinn Maol Chaluim'],
+                    corbettTops: ['Beinn Fhionnlaidh East Top'],
                     GPX: 'h-ulaidh/sgulaird_fhionnlaidh_h-ulaidh_chaluim.gpx',
                 },
                 {
@@ -2497,14 +2501,14 @@ export const hillData = {
                         'talus (coarse scree)',
                     ],
                     gear: [],
-                    munro: [
+                    munros: [
                         'Beinn Sgulaird',
                         'Beinn Fhionnlaidh',
                         'Sgor na h-Ulaidh',
                     ],
-                    munrotop: [],
-                    corbett: [],
-                    corbetttop: ['Beinn Fhionnlaidh East Top'],
+                    munroTops: [],
+                    corbetts: [],
+                    corbettTops: ['Beinn Fhionnlaidh East Top'],
                     GPX: 'h-ulaidh/sgulaird_fhionnlaidh_h-ulaidh_etive.gpx',
                 },
                 {
@@ -2527,14 +2531,14 @@ export const hillData = {
                         'rocky talus',
                     ],
                     gear: [],
-                    munro: ['Sgor na h-Ulaidh'],
-                    munrotop: ['Stob an Fhuarain'],
-                    corbett: ['Meall Lighiche'],
-                    corbetttop: [],
+                    munros: ['Sgor na h-Ulaidh'],
+                    munroTops: ['Stob an Fhuarain'],
+                    corbetts: ['Meall Lighiche'],
+                    corbettTops: [],
                     GPX: 'h-ulaidh/h-ulaidh_lighiche.gpx',
                 },
             ],
-            munro: [
+            munros: [
                 {
                     name: 'Sgor na h-Ulaidh',
                     lat: 56.6198,
@@ -2547,7 +2551,7 @@ export const hillData = {
                     image: 'Munros/h-ulaidh.jpg',
                 },
             ],
-            munrotop: [
+            munroTops: [
                 {
                     name: 'Stob an Fhuarain',
                     lat: 56.6247,
@@ -2560,7 +2564,7 @@ export const hillData = {
                     image: 'noimage.png',
                 },
             ],
-            corbett: [
+            corbetts: [
                 {
                     name: 'Meall Lighiche',
                     lat: 56.6284,
@@ -2573,7 +2577,7 @@ export const hillData = {
                     image: 'Corbetts/lighiche.jpg',
                 },
             ],
-            corbetttop: [
+            corbettTops: [
                 {
                     name: 'Aonach Dubh a Ghlinne',
                     lat: 56.6336,
@@ -2621,7 +2625,7 @@ export const hillData = {
             type: 'Mountain',
             subtype: 'Stand-Alone',
             subsubtype: 'Mound',
-            route: [
+            routes: [
                 {
                     name: 'Beinn Mhic Chasgaig and Stob Dubh',
                     distance: 9.63,
@@ -2637,10 +2641,10 @@ export const hillData = {
                         'grass with scattered rock',
                     ],
                     gear: [],
-                    munro: [],
-                    munrotop: [],
-                    corbett: ['Beinn Mhic Chasgaig', 'Stob Dubh'],
-                    corbetttop: [],
+                    munros: [],
+                    munroTops: [],
+                    corbetts: ['Beinn Mhic Chasgaig', 'Stob Dubh'],
+                    corbettTops: [],
                     GPX: 'dubh/chasgaig_dubh.gpx',
                 },
                 {
@@ -2658,16 +2662,16 @@ export const hillData = {
                         'grass with scattered rock',
                     ],
                     gear: [],
-                    munro: [],
-                    munrotop: [],
-                    corbett: ['Stob Dubh'],
-                    corbetttop: [],
+                    munros: [],
+                    munroTops: [],
+                    corbetts: ['Stob Dubh'],
+                    corbettTops: [],
                     GPX: 'dubh/dubh.gpx',
                 },
             ],
-            munro: [],
-            munrotop: [],
-            corbett: [
+            munros: [],
+            munroTops: [],
+            corbetts: [
                 {
                     name: 'Stob Dubh',
                     lat: 56.5954,
@@ -2680,7 +2684,7 @@ export const hillData = {
                     image: 'Corbetts/dubhcorb.jpg',
                 },
             ],
-            corbetttop: [
+            corbettTops: [
                 {
                     name: 'Beinn Ceitlein',
                     lat: null,
@@ -2761,7 +2765,7 @@ export const hillData = {
             type: 'Mountain',
             subtype: 'Ridge',
             subsubtype: 'Plateau',
-            route: [
+            routes: [
                 {
                     name: 'Bidean nam Bian, Buachaille Etive Beag and Buachaille Etive Mor',
                     distance: 18.01,
@@ -2780,7 +2784,7 @@ export const hillData = {
                         'notched slab',
                     ],
                     gear: [],
-                    munro: [
+                    munros: [
                         'Bidean nam Bian',
                         'Stob Coire Sgreamhach',
                         'Stob Dubh (Buachaille Etive Beag)',
@@ -2788,13 +2792,13 @@ export const hillData = {
                         'Stob na Broige (Buachaille Etive Mor)',
                         'Stob Dearg (Buachaille Etive Mor)',
                     ],
-                    munrotop: [
+                    munroTops: [
                         'Bidean nam Bian West Top',
                         'Stob Coire Altruim',
                         'Stob na Doire',
                     ],
-                    corbett: [],
-                    corbetttop: [],
+                    corbetts: [],
+                    corbettTops: [],
                     GPX: 'etive-mor/mor_beag_bidean.gpx',
                 },
                 {
@@ -2807,13 +2811,13 @@ export const hillData = {
                     terraintype: ['path', 'footpath erosion'],
                     terraindiff: ['grass', 'broken rock', 'rocky talus'],
                     gear: [],
-                    munro: [
+                    munros: [
                         'Stob Dearg (Buachaille Etive Mor)',
                         'Stob na Broige (Buachaille Etive Mor)',
                     ],
-                    munrotop: ['Stob na Doire', 'Stob Coire Altruim'],
-                    corbett: [],
-                    corbetttop: [],
+                    munroTops: ['Stob na Doire', 'Stob Coire Altruim'],
+                    corbetts: [],
+                    corbettTops: [],
                     GPX: 'etive-mor/ridge.gpx',
                 },
                 {
@@ -2833,17 +2837,17 @@ export const hillData = {
                         'notched slab (grade 2 (moderate))',
                     ],
                     gear: ['helmet'],
-                    munro: [
+                    munros: [
                         'Stob Dearg (Buachaille Etive Mor)',
                         'Stob na Broige (Buachaille Etive Mor)',
                     ],
-                    munrotop: [
+                    munroTops: [
                         'Bidean nam Bian West Top',
                         'Stob Coire Altruim',
                         'Stob na Doire',
                     ],
-                    corbett: [],
-                    corbetttop: [],
+                    corbetts: [],
+                    corbettTops: [],
                     GPX: 'etive-mor/ridge_curved-ridge.gpx',
                 },
                 {
@@ -2863,14 +2867,14 @@ export const hillData = {
                         'notched slab (grade 3 (moderate))',
                     ],
                     gear: ['helmet'],
-                    munro: ['Stob Dearg (Buachaille Etive Mor)'],
-                    munrotop: [],
-                    corbett: [],
-                    corbetttop: [],
+                    munros: ['Stob Dearg (Buachaille Etive Mor)'],
+                    munroTops: [],
+                    corbetts: [],
+                    corbettTops: [],
                     GPX: 'etive-mor/agags-groove.gpx',
                 },
             ],
-            munro: [
+            munros: [
                 {
                     name: 'Stob Dearg (Buachaille Etive Mor)',
                     lat: 56.6462,
@@ -2894,7 +2898,7 @@ export const hillData = {
                     image: 'Munros/nabroige.jpg',
                 },
             ],
-            munrotop: [
+            munroTops: [
                 {
                     name: 'Stob na Doire',
                     lat: 56.6367,
@@ -2918,8 +2922,8 @@ export const hillData = {
                     image: 'noimage.png',
                 },
             ],
-            corbett: [],
-            corbetttop: [
+            corbetts: [],
+            corbettTops: [
                 {
                     name: 'Stob Coire na Tulaich',
                     lat: 56.6455,
@@ -2967,7 +2971,7 @@ export const hillData = {
             type: 'Mountain',
             subtype: 'Ridge',
             subsubtype: 'Plateau',
-            route: [
+            routes: [
                 {
                     name: 'Bidean nam Bian, Buachaille Etive Beag and Buachaille Etive Mor',
                     distance: 18.01,
@@ -2986,7 +2990,7 @@ export const hillData = {
                         'notched slab',
                     ],
                     gear: [],
-                    munro: [
+                    munros: [
                         'Bidean nam Bian',
                         'Stob Coire Sgreamhach',
                         'Stob Dubh (Buachaille Etive Beag)',
@@ -2994,13 +2998,13 @@ export const hillData = {
                         'Stob na Broige (Buachaille Etive Mor)',
                         'Stob Dearg (Buachaille Etive Mor)',
                     ],
-                    munrotop: [
+                    munroTops: [
                         'Bidean nam Bian West Top',
                         'Stob Coire Altruim',
                         'Stob na Doire',
                     ],
-                    corbett: [],
-                    corbetttop: [],
+                    corbetts: [],
+                    corbettTops: [],
                     GPX: 'etive-beag/mor_beag_bidean.gpx',
                 },
                 {
@@ -3018,17 +3022,17 @@ export const hillData = {
                         'rocky talus',
                     ],
                     gear: [],
-                    munro: [
+                    munros: [
                         'Stob Dubh (Buachaille Etive Beag)',
                         'Stob Coire Raineach (Buachaille Etive Beag)',
                     ],
-                    munrotop: [],
-                    corbett: [],
-                    corbetttop: [],
+                    munroTops: [],
+                    corbetts: [],
+                    corbettTops: [],
                     GPX: 'etive-beag/ridge.gpx',
                 },
             ],
-            munro: [
+            munros: [
                 {
                     name: 'Stob Dubh (Buachaille Etive Beag)',
                     lat: 56.6381,
@@ -3052,9 +3056,9 @@ export const hillData = {
                     image: 'Munros/coireraineach.jpg',
                 },
             ],
-            munrotop: [],
-            corbett: [],
-            corbetttop: [
+            munroTops: [],
+            corbetts: [],
+            corbettTops: [
                 {
                     name: 'Stob Dubh North Top',
                     lat: 56.6439,
@@ -3093,7 +3097,7 @@ export const hillData = {
             type: 'Mountain',
             subtype: 'Massif',
             subsubtype: null,
-            route: [
+            routes: [
                 {
                     name: 'Bidean nam Bian, Buachaille Etive Beag and Buachaille Etive Mor',
                     distance: 18.01,
@@ -3112,7 +3116,7 @@ export const hillData = {
                         'notched slab',
                     ],
                     gear: [],
-                    munro: [
+                    munros: [
                         'Bidean nam Bian',
                         'Stob Coire Sgreamhach',
                         'Stob Dubh (Buachaille Etive Beag)',
@@ -3120,13 +3124,13 @@ export const hillData = {
                         'Stob na Broige (Buachaille Etive Mor)',
                         'Stob Dearg (Buachaille Etive Mor)',
                     ],
-                    munrotop: [
+                    munroTops: [
                         'Bidean nam Bian West Top',
                         'Stob Coire Altruim',
                         'Stob na Doire',
                     ],
-                    corbett: [],
-                    corbetttop: [],
+                    corbetts: [],
+                    corbettTops: [],
                     GPX: 'bidean_nam_bian/mor_beag_bidean.gpx',
                 },
                 {
@@ -3144,10 +3148,10 @@ export const hillData = {
                         'notched slab',
                     ],
                     gear: [],
-                    munro: ['Bidean nam Bian', 'Stob Coire Sgreamhach'],
-                    munrotop: ['Stob Coire nan Lochan'],
-                    corbett: [],
-                    corbetttop: [],
+                    munros: ['Bidean nam Bian', 'Stob Coire Sgreamhach'],
+                    munroTops: ['Stob Coire nan Lochan'],
+                    corbetts: [],
+                    corbettTops: [],
                     GPX: 'bidean_nam_bian/bidean_coire-sgreamhach.gpx',
                 },
                 {
@@ -3160,13 +3164,13 @@ export const hillData = {
                     terraintype: ['path', 'footpath erosion'],
                     terraindiff: ['grass', 'broken rock', 'crag'],
                     gear: [],
-                    munro: ['Bidean nam Bian'],
-                    munrotop: [
+                    munros: ['Bidean nam Bian'],
+                    munroTops: [
                         'Stob Coire nam Beith',
                         'Bidean nam Bian West Top',
                     ],
-                    corbett: [],
-                    corbetttop: [],
+                    corbetts: [],
+                    corbettTops: [],
                     GPX: 'bidean_nam_bian/bidean_central-gully.gpx',
                 },
                 {
@@ -3184,10 +3188,10 @@ export const hillData = {
                         'notched slab',
                     ],
                     gear: [],
-                    munro: [],
-                    munrotop: ['Stob Coire nan Lochan'],
-                    corbett: [],
-                    corbetttop: [],
+                    munros: [],
+                    munroTops: ['Stob Coire nan Lochan'],
+                    corbetts: [],
+                    corbettTops: [],
                     GPX: 'bidean_nam_bian/lochan_central-buttress.gpx',
                 },
                 {
@@ -3200,10 +3204,10 @@ export const hillData = {
                     terraintype: ['path', 'footpath erosion'],
                     terraindiff: ['grass', 'stone staircase', 'notched slab'],
                     gear: [],
-                    munro: [],
-                    munrotop: [],
-                    corbett: [],
-                    corbetttop: [],
+                    munros: [],
+                    munroTops: [],
+                    corbetts: [],
+                    corbettTops: [],
                     GPX: 'bidean_nam_bian/lost-valley.gpx',
                 },
                 {
@@ -3227,14 +3231,14 @@ export const hillData = {
                         'talus (coarse scree)',
                     ],
                     gear: [],
-                    munro: [
+                    munros: [
                         'Beinn Sgulaird',
                         'Beinn Fhionnlaidh',
                         'Sgor na h-Ulaidh',
                     ],
-                    munrotop: ['Stob an Fhuarain'],
-                    corbett: ['Beinn Maol Chaluim'],
-                    corbetttop: ['Beinn Fhionnlaidh East Top'],
+                    munroTops: ['Stob an Fhuarain'],
+                    corbetts: ['Beinn Maol Chaluim'],
+                    corbettTops: ['Beinn Fhionnlaidh East Top'],
                     GPX: 'bidean_nam_bian/sgulaird_fhionnlaidh_h-ulaidh_chaluim.gpx',
                 },
                 {
@@ -3247,14 +3251,14 @@ export const hillData = {
                     terraintype: ['road', 'path', 'footpath erosion'],
                     terraindiff: ['grass', 'grass with scattered rock'],
                     gear: [],
-                    munro: [],
-                    munrotop: [],
-                    corbett: ['Beinn Maol Chaluim'],
-                    corbetttop: [],
+                    munros: [],
+                    munroTops: [],
+                    corbetts: ['Beinn Maol Chaluim'],
+                    corbettTops: [],
                     GPX: 'bidean_nam_bian/.gpx',
                 },
             ],
-            munro: [
+            munros: [
                 {
                     name: 'Bidean nam Bian',
                     lat: 56.6413,
@@ -3278,7 +3282,7 @@ export const hillData = {
                     image: 'Munros/sgreamhach.jpg',
                 },
             ],
-            munrotop: [
+            munroTops: [
                 {
                     name: 'Bidean nam Bian West Top',
                     lat: 56.643,
@@ -3335,7 +3339,7 @@ export const hillData = {
                     image: 'noimage.png',
                 },
             ],
-            corbett: [
+            corbetts: [
                 {
                     name: 'Beinn Maol Chaluim',
                     lat: 56.6278,
@@ -3348,7 +3352,7 @@ export const hillData = {
                     image: 'Corbetts/maolchal.jpg',
                 },
             ],
-            corbetttop: [
+            corbettTops: [
                 {
                     name: 'Aonach Dubh',
                     lat: 56.6576,
@@ -3401,7 +3405,7 @@ export const hillData = {
             type: 'Mountain',
             subtype: 'Ridge',
             subsubtype: 'Arete',
-            route: [
+            routes: [
                 {
                     name: 'Beinn a Bheithir via Schoolhouse Ridge',
                     distance: 9.75,
@@ -3424,13 +3428,13 @@ export const hillData = {
                         'notched slab (grade 1 (easy))',
                     ],
                     gear: [],
-                    munro: [
+                    munros: [
                         'Sgorr Dhearg (Beinn a Bheithir)',
                         'Sgorr Dhonuill (Beinn a Bheithir)',
                     ],
-                    munrotop: ['Sgorr Bhan'],
-                    corbett: [],
-                    corbetttop: [],
+                    munroTops: ['Sgorr Bhan'],
+                    corbetts: [],
+                    corbettTops: [],
                     GPX: 'bheithir/schoolhouse.gpx',
                 },
                 {
@@ -3453,17 +3457,17 @@ export const hillData = {
                         'talus (coarse scree)',
                     ],
                     gear: [],
-                    munro: [
+                    munros: [
                         'Sgorr Dhearg (Beinn a Bheithir)',
                         'Sgorr Dhonuill (Beinn a Bheithir)',
                     ],
-                    munrotop: [],
-                    corbett: [],
-                    corbetttop: [],
+                    munroTops: [],
+                    corbetts: [],
+                    corbettTops: [],
                     GPX: 'bheithir/standard.gpx',
                 },
             ],
-            munro: [
+            munros: [
                 {
                     name: 'Sgorr Dhearg (Beinn a Bheithir)',
                     lat: 56.654,
@@ -3487,7 +3491,7 @@ export const hillData = {
                     image: 'Munros/dhonuillbheithir.jpg',
                 },
             ],
-            munrotop: [
+            munroTops: [
                 {
                     name: 'Sgorr Bhan',
                     lat: 56.656,
@@ -3500,8 +3504,8 @@ export const hillData = {
                     image: 'noimage.png',
                 },
             ],
-            corbett: [],
-            corbetttop: [],
+            corbetts: [],
+            corbettTops: [],
             corrie: [
                 {
                     name: 'Coire Dearg',
@@ -3534,7 +3538,7 @@ export const hillData = {
             type: 'Mountain',
             subtype: 'Stand-Alone',
             subsubtype: 'Whaleback',
-            route: [
+            routes: [
                 {
                     name: 'Beinn a Chrulaiste',
                     distance: 6.75,
@@ -3545,16 +3549,16 @@ export const hillData = {
                     terraintype: ['path', 'footpath erosion', 'off-path'],
                     terraindiff: ['grass', 'grass with scattered rock'],
                     gear: [],
-                    munro: [],
-                    munrotop: [],
-                    corbett: ['Beinn a Chrulaiste'],
-                    corbetttop: [],
+                    munros: [],
+                    munroTops: [],
+                    corbetts: ['Beinn a Chrulaiste'],
+                    corbettTops: [],
                     GPX: 'chrulaiste/chrulaiste.gpx',
                 },
             ],
-            munro: [],
-            munrotop: [],
-            corbett: [
+            munros: [],
+            munroTops: [],
+            corbetts: [
                 {
                     name: 'Beinn a Chrulaiste',
                     lat: 56.6689,
@@ -3567,7 +3571,7 @@ export const hillData = {
                     image: 'Corbetts/chrulaiste.jpg',
                 },
             ],
-            corbetttop: [],
+            corbettTops: [],
             corrie: [
                 {
                     name: 'Coire Bhalach',
@@ -3603,7 +3607,7 @@ export const hillData = {
             type: 'Mountain',
             subtype: 'Ridge',
             subsubtype: 'Arete',
-            route: [
+            routes: [
                 {
                     name: 'Aonach Eagach Full Traverse',
                     distance: 6,
@@ -3621,17 +3625,17 @@ export const hillData = {
                         'notched slab (grade 2 (moderate))',
                     ],
                     gear: ['helmet'],
-                    munro: [
+                    munros: [
                         'Sgorr nam Fiannaidh (Aonach Eagach)',
                         'Meall Dearg (Aonach Eagach)',
                     ],
-                    munrotop: [
+                    munroTops: [
                         'Am Bodach',
                         'Stob Coire Leith',
                         'Meall Dearg East Top',
                     ],
-                    corbett: [],
-                    corbetttop: [],
+                    corbetts: [],
+                    corbettTops: [],
                     GPX: 'aonach_eagach/ridge.gpx',
                 },
                 {
@@ -3651,17 +3655,17 @@ export const hillData = {
                         'notched slab (grade 2 (moderate))',
                     ],
                     gear: ['helmet'],
-                    munro: [
+                    munros: [
                         'Sgorr nam Fiannaidh (Aonach Eagach)',
                         'Meall Dearg (Aonach Eagach)',
                     ],
-                    munrotop: [
+                    munroTops: [
                         'Am Bodach',
                         'Stob Coire Leith',
                         'Meall Dearg East Top',
                     ],
-                    corbett: [],
-                    corbetttop: [],
+                    corbetts: [],
+                    corbettTops: [],
                     GPX: 'aonach_eagach/ridge_scree.gpx',
                 },
                 {
@@ -3679,14 +3683,14 @@ export const hillData = {
                         'crag',
                     ],
                     gear: [],
-                    munro: ['Meall Dearg (Aonach Eagach)'],
-                    munrotop: [],
-                    corbett: [],
-                    corbetttop: [],
+                    munros: ['Meall Dearg (Aonach Eagach)'],
+                    munroTops: [],
+                    corbetts: [],
+                    corbettTops: [],
                     GPX: 'aonach_eagach/meall_dearg_loch_leven.gpx',
                 },
             ],
-            munro: [
+            munros: [
                 {
                     name: 'Sgorr nam Fiannaidh (Aonach Eagach)',
                     lat: 56.6793,
@@ -3710,7 +3714,7 @@ export const hillData = {
                     image: 'Munros/deargeagach.jpg',
                 },
             ],
-            munrotop: [
+            munroTops: [
                 {
                     name: 'Am Bodach',
                     lat: 56.6779,
@@ -3745,8 +3749,8 @@ export const hillData = {
                     image: 'noimage.png',
                 },
             ],
-            corbett: [],
-            corbetttop: [
+            corbetts: [],
+            corbettTops: [
                 {
                     name: 'Aonach Eagach East Peak',
                     lat: 56.6798,

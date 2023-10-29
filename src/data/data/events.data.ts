@@ -3746,7 +3746,8 @@ export const eventData = {
             features: {
                 youthHostels: ['Glencoe'],
             },
-            description: '...',
+            description:
+                'Third time lucky maybe? I took to the Glencoe shared room for the first time with hopes of finally getting those two Munros that had defeated me twice. Had a good fuel-up with salmon and big-heap-veggies, and a very strange conversation with some hostel weapons, and got a classic supreme hostel sleep in. Well, only to be woken up by some old dude thanking me for not waking him up when I came to bed?!?! Okay, cool. Anyway, I actually wimped out this time and took the alternative ridge to the schoolhouse. Yeah, no scrambling. I wanted those Munros. It tunred out to be worth it, they’re a good burn and I met a good hill companion who had some fine reccies for the upcoming Wrocław trip. And sorry Mark, but the walk-out is not the most beautiful in Scotland. It’s just a bog slog.',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/glencoe-xi/1.jpg',
@@ -3802,7 +3803,8 @@ export const eventData = {
             id: 'E2023007',
             names: ['Troon'],
             startDate: '5th of February',
-            description: '...',
+            description:
+                'We clearly just needed some air this Sunday. I got some great shots of Griff certainly not in his physical prime, but we’ll keep those for ourselves. Also bagged quicte a good Peter Zha, which was quite unexpected.',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/troon/1.jpg',
@@ -3826,7 +3828,7 @@ export const eventData = {
             features: {
                 youthHostels: ['Glencoe'],
             },
-            description: '...',
+            description: '',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/review/1.jpg',
