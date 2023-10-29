@@ -1395,7 +1395,62 @@ export const eventData = {
             startDate: '13th of July',
             endDate: '19th of July',
             features: {
+                cities: ['London', 'Milan'],
+                districts: [
+                    'Kensington',
+                    'Wimbledon',
+                    'Chelsea',
+                    'Calvairate',
+                    'Zone 1',
+                    'Ticinese',
+                    'City Life',
+                ],
+                attractions: [
+                    'All England Lawn Tennis & Croquet Club',
+                    'The Design Museum',
+                    'Duomo di Milano',
+                    'Galleria Vittorio Emanuele II',
+                    'Sforzesco Castle',
+                ],
                 youthHostels: ['Astor Hyde Park', 'QUO Milano'],
+                supermarkets: ['Whole Foods Market Kensington', 'Carrefour'],
+                shops: [
+                    'The Wimbledon Museum',
+                    'The Japan House',
+                    'The Design Museum Gift Shop',
+                    'Rinascente Milano Piazza Duomo',
+                    'Samsonite',
+                    'CK Jeans',
+                    'Bialetti',
+                    'Mont Blanc',
+                    'Le Creuset',
+                    'Bang & Olufsen',
+                    'Pellegrini',
+                    'Molteni & C',
+                    'Cassina',
+                    'Febalcasa',
+                    'Villeroy & Boch',
+                    'Buscemi',
+                    'Fragrans',
+                    'Takeda Katsuya Design',
+                ],
+                foodstuffs: [
+                    'Whole Foods Salad Bar',
+                    'Bakery Pizza',
+                    'Cannoli',
+                    'Cappuccino',
+                    'Birra Moretti Filtrata a Freddo',
+                    'The Niko Special',
+                ],
+                bakeries: [
+                    'Orée Boulangerie',
+                    'Paris Baguette',
+                    'Daylesford Organic',
+                    'Farini Bakery',
+                ],
+                gelaterias: ['Amorino', 'Venchi'],
+                restaurants: ['Dishoom'],
+                bars: ['That Kensington Bar'],
             },
             description: [
                 {
@@ -3070,9 +3125,66 @@ export const eventData = {
             startDate: '5th of April',
             endDate: '9th of April',
             features: {
+                cities: ['Wrocław'],
+                attractions: ['Wrocław Market Square', 'Wrocław Stadium'],
                 youthHostels: ['Hostel Wratislavia'],
+                supermarkets: ['Żabka', 'Carrefour', 'Świezo Znawcy'],
+                shops: ['Geleria Dominikańska', 'Big Smoke Store'],
+                foodstuffs: ['Pierogi'],
+                bakeries: ['Popiół i Diament', 'Green Caffè Nero', 'Dickery'],
+                restaurants: [
+                    'Chopper Bar & Grill',
+                    'Poké Poké',
+                    'Pierogarnia Stary Młyn',
+                ],
+                bars: ['Nietota Bar'],
             },
-            description: '...',
+            description: [
+                {
+                    type: 'body',
+                    content: '',
+                },
+                {
+                    type: 'h2',
+                    content: 'Day 1',
+                },
+                {
+                    type: 'body',
+                    content: '',
+                },
+                {
+                    type: 'h2',
+                    content: 'Day 2',
+                },
+                {
+                    type: 'body',
+                    content: '',
+                },
+                {
+                    type: 'h2',
+                    content: 'Day 3',
+                },
+                {
+                    type: 'h2',
+                    content: '',
+                },
+                {
+                    type: 'h2',
+                    content: 'Day 4',
+                },
+                {
+                    type: 'body',
+                    content: '',
+                },
+                {
+                    type: 'h2',
+                    content: 'Day 5',
+                },
+                {
+                    type: 'body',
+                    content: '',
+                },
+            ],
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/le-toure-de-zabka/1.jpg',
@@ -3226,7 +3338,62 @@ export const eventData = {
             names: ['Neapolitan Dreams'],
             startDate: '30th of March',
             endDate: '2nd of April',
-            description: '...',
+            features: {
+                cities: ['Naples'],
+                attractions: ['Pompei'],
+                supermarkets: ['Carrefour'],
+                foodstuffs: [
+                    'Neapolitan Pizza',
+                    'Sfogliatella',
+                    'Peroni Traduzione',
+                    'Ichnuso non Filtrata',
+                    'Pistachio Cream Liqueur',
+                ],
+                restaurants: [
+                    'Lombardi a Santa Chiara',
+                    'Miza Sushi',
+                    'Ali Kebab',
+                ],
+                bars: ['Baylon Cafe'],
+            },
+            description: [
+                {
+                    type: 'body',
+                    content: '',
+                },
+                {
+                    type: 'h2',
+                    content: 'Day 1',
+                },
+                {
+                    type: 'body',
+                    content: '',
+                },
+                {
+                    type: 'h2',
+                    content: 'Day 2',
+                },
+                {
+                    type: 'body',
+                    content: '',
+                },
+                {
+                    type: 'h2',
+                    content: 'Day 3',
+                },
+                {
+                    type: 'h2',
+                    content: '',
+                },
+                {
+                    type: 'h2',
+                    content: 'Day 4',
+                },
+                {
+                    type: 'body',
+                    content: '',
+                },
+            ],
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/neapolitan-dreams/1.jpg',
@@ -4229,7 +4396,18 @@ export const eventData = {
             startDate: '17th of November',
             endDate: '21st of November',
             features: {
+                cities: ['Berlin'],
+                districts: [],
+                attractions: [],
                 youthHostels: ['acama Kreuzberg'],
+                supermarkets: [],
+                shops: [],
+                foodstuffs: [],
+                bakeries: [],
+                gelaterias: [],
+                restaurants: [],
+                bars: [],
+                filmingLocations: [],
             },
             description:
                 '‘twas time for the chamber city. Routine flight with the RyanAir cowboys, alright landing for them to be honest. Excellent first night in Berlers; a few curryvoorshts then gay smoking chamber for beers and reds. Up nice and fresh on Friday at midday for a treat out of the breakfast rouge dispenser and off to fishmarket south after some excellent coffware. Did some general strolling around some shops and Lime’ing, went in some questionable shops and ended up at a fine sushware dinner place. Then off to Bergers for two attempts. I’m sure you can figure how they went. Off to another smoking chamber then a cocktail chamber to roll-in the night. Once again, up at midday on the Saturday and off to Wilmers café for a bagers and coffee. Then a stroll down to the parlers but I got kb’d so I went a stroll around shops. Place called Lokal for dinner after like three down in some royal chamber bar, probably too wasted to enjoy it as much as it deserved. Onwards to some keeosks for some street beers. Then Pirers. Met a nice coke dealer and Crug got pretty wasted. I’ll keep those videos and pictures to ourselves. Even after dinner, chips and a burger at a Rate My Takeaway chamber, and three kebabs; CG was too wasted to get out of bed on the Sunday so Awaz and I went a stroll around the rich district, went to a choccy chamber, and Five Guys for lunch (aha). Finally met CG to go to the one Xmas market that was actually open and downed some mullers and eggers. Then to a beereria finally for a final cooryvoorsht. Early night for the Monday morning flight.',
@@ -4731,6 +4909,20 @@ export const eventData = {
             names: ['Four Different Kind Hol-e-day'],
             startDate: '7th of June',
             endDate: '14th of June',
+            features: {
+                cities: ['Manchester', 'Munich', 'Verona', 'Venice'],
+                districts: [],
+                attractions: [],
+                youthHostels: [''],
+                supermarkets: [],
+                shops: [],
+                foodstuffs: [],
+                bakeries: [],
+                gelaterias: [],
+                restaurants: [],
+                bars: [],
+                filmingLocations: [],
+            },
             description: [
                 {
                     type: 'h2',
@@ -4773,202 +4965,162 @@ export const eventData = {
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/1.jpg',
                     alt: 'four-different-kind-hol-e-day-1',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/2.jpg',
                     alt: 'four-different-kind-hol-e-day-2',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/3.jpg',
                     alt: 'four-different-kind-hol-e-day-3',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/4.jpg',
                     alt: 'four-different-kind-hol-e-day-4',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/5.jpg',
                     alt: 'four-different-kind-hol-e-day-5',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/6.jpg',
                     alt: 'four-different-kind-hol-e-day-6',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/7.jpg',
                     alt: 'four-different-kind-hol-e-day-7',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/8.jpg',
                     alt: 'four-different-kind-hol-e-day-8',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/9.jpg',
                     alt: 'four-different-kind-hol-e-day-9',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/10.jpg',
                     alt: 'four-different-kind-hol-e-day-10',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/11.jpg',
                     alt: 'four-different-kind-hol-e-day-11',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/12.jpg',
                     alt: 'four-different-kind-hol-e-day-12',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/13.jpg',
                     alt: 'four-different-kind-hol-e-day-13',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/14.jpg',
                     alt: 'four-different-kind-hol-e-day-14',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/15.jpg',
                     alt: 'four-different-kind-hol-e-day-15',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/16.jpg',
                     alt: 'four-different-kind-hol-e-day-16',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/17.jpg',
                     alt: 'four-different-kind-hol-e-day-17',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/18.jpg',
                     alt: 'four-different-kind-hol-e-day-18',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/19.jpg',
                     alt: 'four-different-kind-hol-e-day-19',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/20.jpg',
                     alt: 'four-different-kind-hol-e-day-20',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/21.jpg',
                     alt: 'four-different-kind-hol-e-day-21',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/22.jpg',
                     alt: 'four-different-kind-hol-e-day-22',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/23.jpg',
                     alt: 'four-different-kind-hol-e-day-23',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/24.jpg',
                     alt: 'four-different-kind-hol-e-day-24',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/25.jpg',
                     alt: 'four-different-kind-hol-e-day-25',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/26.jpg',
                     alt: 'four-different-kind-hol-e-day-26',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/27.jpg',
                     alt: 'four-different-kind-hol-e-day-27',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/28.jpg',
                     alt: 'four-different-kind-hol-e-day-28',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/29.jpg',
                     alt: 'four-different-kind-hol-e-day-29',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/30.jpg',
                     alt: 'four-different-kind-hol-e-day-30',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/31.jpg',
                     alt: 'four-different-kind-hol-e-day-31',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/32.jpg',
                     alt: 'four-different-kind-hol-e-day-32',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/33.jpg',
                     alt: 'four-different-kind-hol-e-day-33',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/34.jpg',
                     alt: 'four-different-kind-hol-e-day-34',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/35.jpg',
                     alt: 'four-different-kind-hol-e-day-35',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/36.jpg',
                     alt: 'four-different-kind-hol-e-day-36',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/37.jpg',
                     alt: 'four-different-kind-hol-e-day-37',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/38.jpg',
                     alt: 'four-different-kind-hol-e-day-38',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/39.jpg',
                     alt: 'four-different-kind-hol-e-day-39',
-                    description: '',
                 },
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2022/four-different-kind-hol-e-day/40.jpg',
                     alt: 'four-different-kind-hol-e-day-40',
-                    description: '',
                 },
             ],
         },

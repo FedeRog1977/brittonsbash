@@ -48,7 +48,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                     <Typography
                         type="t1"
                         content={`${refactoredEvent.prefix}:`}
-                        textAlign="left"
+                        textAlign="center"
                     />
                 )}
                 {refactoredEvent.names.length > 1 ? (
@@ -63,8 +63,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                                                 content={
                                                     <>
                                                         Part&nbsp;
-                                                        {refKey}
-                                                        &nbsp;&#8212;&nbsp;
+                                                        {refKey}&nbsp;
                                                     </>
                                                 }
                                                 color="mediumGrey"
@@ -78,7 +77,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                                             />
                                         </>
                                     }
-                                    textAlign="left"
+                                    textAlign="center"
                                 />
                             )
                         )}
@@ -87,7 +86,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                     <Typography
                         type={refactoredEvent.prefix ? 't2' : 't1'}
                         content={refactoredEvent.names[0].name}
-                        textAlign="left"
+                        textAlign="center"
                     />
                 )}
             </Spacing>
@@ -105,7 +104,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                         </>
                     }
                     color="mediumGrey"
-                    textAlign="left"
+                    textAlign="center"
                 />
             </Spacing>
             {refactoredEvent.showSportEvent && (

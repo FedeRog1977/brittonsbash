@@ -81,7 +81,7 @@ export const compileEvent = ({ ...props }: CompiledEventProps) => {
         startDate: props.event.startDate,
         endDate: props.event.endDate,
         features: {
-            cities: props.event.features?.cities?.join(),
+            cities: props.event.features?.cities?.join(', '),
             districts: props.event.features?.districts?.join(', '),
             attractions: props.event.features?.attractions?.join(', '),
             youthHostels: props.event.features?.youthHostels?.join(', '),
