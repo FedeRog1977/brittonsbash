@@ -127,6 +127,9 @@ export const communicationsData = {
                 'Vision Team 30 Wheels',
                 'Goodyear Eagle F1 Tyres',
             ],
+            tools: [],
+            accessories: [],
+            clothing: [],
         },
         tennis: {
             brands: ['Wilson', 'Luxilon', 'Nike', 'ASICS', 'K-Swiss'],
@@ -164,6 +167,7 @@ export const communicationsData = {
                 'Nike Zoom Vapor Air Jordon 3 (Pending)',
                 'THE ROGER Clubhouse Mid',
             ],
+            clothing: [],
         },
         miles: [],
         links: {

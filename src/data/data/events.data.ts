@@ -3828,7 +3828,8 @@ export const eventData = {
             features: {
                 youthHostels: ['Glencoe'],
             },
-            description: '',
+            description:
+                'This was another hopeful one. But hopeful in a different way. We went north as agreed in perpetuity, but were constantly hoping that the weather would stay good enough to actually do something. We ended up getting a decent Corbett in down Loch Leven. Winds were ridiculous and to be honest, pretty damn dangerous especially at the very exposed points. Hey ho, it’s us. The belting of Odyssey Live helped the recovery, and banished the fear. Aterwards, we rocked up at the climbing centre for a quick browse, I almost bought a jacket, as standard. I didn’t, not as standard. Then we tried to get a coffee but ran into the army of SUMC, so it was a quickie to the door after that. Ended up getting a decent one, alongside some gentleman’s chips, in a pub in Kinlochleven. Some electronic darts too. Not very gentlemanly.',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/review/1.jpg',
@@ -3868,7 +3869,8 @@ export const eventData = {
             features: {
                 youthHostels: ['Inverness'],
             },
-            description: '...',
+            description:
+                'This was the first sign not to take Ross on hill projects, but he was just teasing us in at this point. We had an awkward dinner, in Ross’ opinion, which was made by Davey and enchanced with beer. We then headed out for a big ol’ night on the Inverness town. This was goddamn dull. Music was quite good but bars were boring as hell. I cut off early and went to bed, but was then, actually to my delight, woken up by a shhteamin’ and kebab-filled Ross and Craig at about 1am, who challnged me to down the rest of the whisky. I did. This led to some excellent waterfighting and bed flipping. By the way, it was CG’s first time back on the drink since December, so messy he was. We probably got to bed around 3am, and it was one of those mornings I woke up thinking I’d only had a blink of sleep. It was 7am and Ross’ was ready to get rocking and rolling though. RIP. We cooked up a totally unnecessary Simon Howie spread and got off to the Munro half way between Inverness and Ullapool. Despite the stunning weather, the river crossing only a few miles in broke us and it was soon off to Ullapool for a coffee. Yeah, a lot of miles for nowt. We still managed to make it to Roon’s for the bash though. This was a bit of a slog given out conditions.',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/simulated-failed-project/1.jpg',
@@ -3928,7 +3930,8 @@ export const eventData = {
             features: {
                 youthHostels: ['Glen Nevis'],
             },
-            description: '...',
+            description:
+                'Another first for me this weekend in the Glen Nevis youth hostel. Also a first rounding up the trip with big L. Griffin in the crew. Some steaks for dinner and about 20 minutes of The Hangover before I needed my slumber. On the hill day, our hopes and dreams from On The Day were crushed a little in slushy ice and severely chilly winds but we powered on to use those ice axes in some waist deep snow and blozzard on top. Unfortunately it was a bail for me though after Munro number one. There was absolutely 0 fun in this route. The Griffs battled on but ended up rocking a Corbett top instead of the second Munro, so it was a bit of a fail for all of us. The Spean Bridge Spar vape treat made up for it though.',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/whatever-works/1.jpg',
@@ -3984,7 +3987,8 @@ export const eventData = {
             features: {
                 youthHostels: ['Inverness'],
             },
-            description: '...',
+            description:
+                'Here we f*cking go! Season 4 begins, and it’s a goddamn good one. We bagged Inverness youth hostel for the first time. Very industrial, very prison-like, but the perfect home to the first storm cooked of the year. Panang curry. We hit a crate of sugar free, caffeine free Diet Cokes over some Miami on the Friday night in the reception lounge. Was a little awkward. On the day, we hit a quick mothership Grain & Grind and got off further north to realise we could not have asked for better conditions to start the project season. It was from the moment we reached the snow line we agreed to make it the unspoken beta that we were always doing a project on Saturdays, given no blockers. So much hope, so many dreams from the season opener.',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/on-the-day/1.jpg',
@@ -4096,7 +4100,8 @@ export const eventData = {
             id: 'E2023002',
             names: ['Ballageich And Unnamed Cairn'],
             startDate: '8th of January',
-            description: '...',
+            description:
+                'It was one of those Sundays; doing some stuff around the residence, not the weather for a roadie, need a micro project kinda territory. Of course, the decision always goes with Ballageich, althought this time I mixed the route up a little and decided to go out to a couple of the points on the OS map. Wow, I had no idea there was such a great CAIRN to be found so locally!',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/ballageich-and-cairn/1.jpg',
@@ -4124,7 +4129,8 @@ export const eventData = {
             id: 'E2023001',
             names: ['Sunny Douglas'],
             startDate: '7th of January',
-            description: '...',
+            description:
+                'Please do not get the wrong idea. We are not calling this the first project of the year. It’s purely a release in the need for some proj’. The golden trio headed off down’t’t south a little to hit a random wind farm. But of course, to Craig this is probably a famous wind farm for its sheep or something. It was a nice day to be honest. Good to get our and blast some Tate Theme Song. Also excellent moon in’t’ sky.',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/strath-windfarm/1.jpg',
