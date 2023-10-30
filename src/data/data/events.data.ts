@@ -5442,39 +5442,8 @@ export const eventData = {
                 'Continuing the theme in the pre-summer summer stunner. Started with a not-so-typical three and a half hour drive-in which was made one-hundred-percent worth it by the M&S 3 for £10 BBQ deal and a couple’ Schiehallions. Another warm sleep after Suits and Wojak in the wagon and it was off to David Pap. I’ll let the pictures do the rest of the talking.',
             images: [
                 {
-                    url: 'https://lewisbritton.com/blog/instant-gram/2022/yee28.jpg',
-                    alt: 'test-alt',
-                    description: 'Test Description',
-                },
-                {
-                    url: 'https://lewisbritton.com/blog/instant-gram/2022/yee24.jpg',
-                    alt: 'test-alt',
-                    description: 'Test Description',
-                },
-                {
-                    url: 'https://lewisbritton.com/blog/instant-gram/2022/yee31.jpg',
-                    alt: 'test-alt',
-                    description: 'Test Description',
-                },
-                {
-                    url: 'https://lewisbritton.com/blog/instant-gram/2022/yee23.jpg',
-                    alt: 'test-alt',
-                    description: 'Test Description',
-                },
-                {
-                    url: 'https://lewisbritton.com/blog/instant-gram/2022/yee20.jpg',
-                    alt: 'test-alt',
-                    description: 'It’s Done, Gotham’s Safe',
-                },
-                {
-                    url: 'https://lewisbritton.com/blog/instant-gram/2022/yee18.jpg',
-                    alt: 'test-alt',
-                    description: 'Test Description',
-                },
-                {
-                    url: 'https://lewisbritton.com/blog/instant-gram/2022/yee10.jpg',
-                    alt: 'test-alt',
-                    description: 'Test Description',
+                    url: '',
+                    alt: '',
                 },
             ],
         },
