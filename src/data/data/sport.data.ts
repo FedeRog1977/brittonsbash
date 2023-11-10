@@ -1034,7 +1034,7 @@ export const sportData = {
                 time: '2:23:18',
             },
         ],
-        xkhs: [
+        xks: [
             {
                 id: 'R2023004',
                 name: '5k',
@@ -2327,7 +2327,7 @@ export const sportData = {
                 time: '36:15',
             },
         ],
-        xkhs: [],
+        xks: [],
     },
     2021: {
         roadies: [
@@ -3470,7 +3470,7 @@ export const sportData = {
                 time: '2:36:18',
             },
         ],
-        xkhs: [],
+        xks: [],
     },
     2020: {
         roadies: [
@@ -3907,6 +3907,6 @@ export const sportData = {
                 time: '1:08:32',
             },
         ],
-        xkhs: [],
+        xks: [],
     },
 }
