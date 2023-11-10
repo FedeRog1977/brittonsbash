@@ -656,6 +656,20 @@ export const sportData = {
         ],
         miles: [
             {
+                id: 'M2023054',
+                name: 'Other',
+                distance: 3.56,
+                elevation: 75,
+                time: '1:01:59',
+            },
+            {
+                id: 'M2023053',
+                name: 'Other',
+                distance: 11.72,
+                elevation: 558,
+                time: '3:59:28',
+            },
+            {
                 id: 'M2023052',
                 name: 'Waterfoot',
                 distance: 10.11,
@@ -1018,6 +1032,29 @@ export const sportData = {
                 distance: 10.03,
                 elevation: 571,
                 time: '2:23:18',
+            },
+        ],
+        xkhs: [
+            {
+                id: 'R2023003',
+                name: '5k',
+                distance: 3.14,
+                time: '00:21:43',
+                pace: '6:54',
+            },
+            {
+                id: 'R2023002',
+                name: '5k',
+                distance: 3.16,
+                time: '00:23:07',
+                pace: '7:18',
+            },
+            {
+                id: 'R2023001',
+                name: '5k',
+                distance: 3.17,
+                time: '00:22:54',
+                pace: '7:12',
             },
         ],
     },
@@ -2283,6 +2320,7 @@ export const sportData = {
                 time: '36:15',
             },
         ],
+        xkhs: [],
     },
     2021: {
         roadies: [
@@ -3425,6 +3463,7 @@ export const sportData = {
                 time: '2:36:18',
             },
         ],
+        xkhs: [],
     },
     2020: {
         roadies: [
@@ -3861,5 +3900,6 @@ export const sportData = {
                 time: '1:08:32',
             },
         ],
+        xkhs: [],
     },
 }
