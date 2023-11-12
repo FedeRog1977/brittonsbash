@@ -1036,6 +1036,13 @@ export const sportData = {
         ],
         xks: [
             {
+                id: 'R2023005',
+                name: '5k',
+                distance: 3.13,
+                time: '00:23:02',
+                pace: '7:21',
+            },
+            {
                 id: 'R2023004',
                 name: '5k',
                 distance: 3.15,
