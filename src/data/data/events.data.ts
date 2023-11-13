@@ -3,7 +3,7 @@ export const eventData = {
         {
             id: 'E2023045',
             prefix: 'Gentlemen Who Café Present',
-            names: ['Intriguing Possibilities'],
+            names: ['Cheshire 2023 — Intriguing Possibilities'],
             startDate: '10th of November',
             endDate: '12th of November',
             description: '',
@@ -132,6 +132,7 @@ export const eventData = {
             endDate: '6th of November',
             description: '',
             features: {
+                cities: ['Hamburg'],
                 districts: [
                     'Hauptbahnhof',
                     'Mönckebergstraße',
