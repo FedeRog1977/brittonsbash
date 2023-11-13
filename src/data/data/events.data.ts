@@ -2,7 +2,7 @@ export const eventData = {
     2023: [
         {
             id: 'E2023045',
-            prefix: 'Gentlemen Who Café Present',
+            prefix: 'The Gentlemen Who Café Present',
             names: ['Cheshire 2023 — Intriguing Possibilities'],
             startDate: '10th of November',
             endDate: '12th of November',
@@ -7051,7 +7051,7 @@ export const eventData = {
         },
         {
             id: 'E2020003',
-            prefix: 'Gentlemen Who Café Present',
+            prefix: 'The Gentlemen Who Café Present',
             names: ['Glasgow Adventures'],
             startDate: '13th of February',
             description:
@@ -7066,7 +7066,7 @@ export const eventData = {
         },
         {
             id: 'E2020002',
-            prefix: 'Gentlemen Who Café Present',
+            prefix: 'The Gentlemen Who Café Present',
             names: ['Cheshire 2020 — The Golden Triangle'],
             startDate: '24th of January',
             endDate: '26th of January',
