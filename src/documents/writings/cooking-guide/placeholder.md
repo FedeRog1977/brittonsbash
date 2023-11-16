@@ -80,6 +80,10 @@ The art is what you do, the science is how you do it.
 -   Gravy
 -   Demi Glace
 
+## Thickeners
+
+-   Slurry
+
 ## Condiments
 
 -   Mayonnaise
@@ -186,6 +190,10 @@ The art is what you do, the science is how you do it.
 -   Chicken breast
 -   Corn flour
 -   Egg noodles
+
+## Goulash
+
+...
 
 ### Italian Stew
 
