@@ -4,6 +4,7 @@ import {
     ColumnTable,
     Spacing,
     Button,
+    Grid,
 } from '../../../../bash-blocks'
 import {
     toMiles,
@@ -116,38 +117,56 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                 />
             </Spacing>
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
-                <Button
-                    typeType="h2"
-                    type="denseClear"
-                    func={() => setSportYearData(props.sport2023)}
-                    funcResp={Boolean(sportYearData === props.sport2023)}
-                    content="2023"
-                    color="darkerGrey"
-                />
-                <Button
-                    typeType="h2"
-                    type="denseClear"
-                    func={() => setSportYearData(props.sport2022)}
-                    funcResp={Boolean(sportYearData === props.sport2022)}
-                    content="2022"
-                    color="darkerGrey"
-                />
-                <Button
-                    typeType="h2"
-                    type="denseClear"
-                    func={() => setSportYearData(props.sport2021)}
-                    funcResp={Boolean(sportYearData === props.sport2021)}
-                    content="2021"
-                    color="darkerGrey"
-                />
-                <Button
-                    typeType="h2"
-                    type="denseClear"
-                    func={() => setSportYearData(props.sport2020)}
-                    funcResp={Boolean(sportYearData === props.sport2020)}
-                    content="2020"
-                    color="darkerGrey"
-                />
+                <Grid alignColumns="auto auto" justifyItems="center">
+                    <Grid columnItem={[1, 4]}>
+                        <Button
+                            typeType="h2"
+                            type="regularClear"
+                            func={() => setSportYearData(props.sport2023)}
+                            funcResp={Boolean(
+                                sportYearData === props.sport2023
+                            )}
+                            content="2023"
+                            color="darkerGrey"
+                        />
+                    </Grid>
+                    <Grid columnItem={[2, 4]}>
+                        <Button
+                            typeType="h2"
+                            type="regularClear"
+                            func={() => setSportYearData(props.sport2022)}
+                            funcResp={Boolean(
+                                sportYearData === props.sport2022
+                            )}
+                            content="2022"
+                            color="darkerGrey"
+                        />
+                    </Grid>
+                    <Grid columnItem={[3, 4]}>
+                        <Button
+                            typeType="h2"
+                            type="regularClear"
+                            func={() => setSportYearData(props.sport2021)}
+                            funcResp={Boolean(
+                                sportYearData === props.sport2021
+                            )}
+                            content="2021"
+                            color="darkerGrey"
+                        />
+                    </Grid>
+                    <Grid columnItem={[4, 4]}>
+                        <Button
+                            typeType="h2"
+                            type="regularClear"
+                            func={() => setSportYearData(props.sport2020)}
+                            funcResp={Boolean(
+                                sportYearData === props.sport2020
+                            )}
+                            content="2020"
+                            color="darkerGrey"
+                        />
+                    </Grid>
+                </Grid>
             </Spacing>
             <Spacing
                 mX={isMobile ? -40 : 0}

@@ -9,6 +9,7 @@ import {
     Tile,
     Typography,
     RowTable,
+    Grid,
 } from '../../../../bash-blocks'
 import {
     compileEvent,
@@ -178,6 +179,8 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                 <Button
                     type="regularClear"
+                    fill
+                    transition
                     func={() => setShowDescription(!showDescription)}
                     funcResp={showDescription}
                 />
@@ -331,25 +334,27 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                 </Spacing>
             )}
             {!isMobile && (
-                <Spacing
-                    mT={isMobile ? 7.5 : 15}
-                    mB={isMobile ? 7.5 : 15}
-                    textAlign="center"
-                >
-                    <Button
-                        type="regularClear"
-                        func={() => setShowMatrix(!showMatrix)}
-                        funcResp={showMatrix}
-                        content="Image matrix"
-                        dense
-                    />
-                    <Button
-                        type="regularClear"
-                        func={() => setShowModal(!showModal)}
-                        funcResp={showModal}
-                        content="Image slideshow"
-                        dense
-                    />
+                <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
+                    <Grid alignColumns="auto auto" justifyItems="center">
+                        <Grid columnItem={[1, 2]}>
+                            <Button
+                                type="regularClear"
+                                func={() => setShowMatrix(!showMatrix)}
+                                funcResp={showMatrix}
+                                content="Image matrix"
+                                dense
+                            />
+                        </Grid>
+                        <Grid columnItem={[2, 2]}>
+                            <Button
+                                type="regularClear"
+                                func={() => setShowModal(!showModal)}
+                                funcResp={showModal}
+                                content="Image slideshow"
+                                dense
+                            />
+                        </Grid>
+                    </Grid>
                 </Spacing>
             )}
             {showMatrix && (

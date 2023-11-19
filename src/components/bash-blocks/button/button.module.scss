@@ -1,7 +1,7 @@
 button {
     border: 0 none !important;
     margin: 0;
-    padding: 0;
+    padding: 15px;
 
     &::-moz-focus-inner {
         border: 0 none !important;
@@ -16,7 +16,6 @@ button {
 .button {
     &Search {
         border-radius: var(--corners-small);
-        float: right;
         background-color: var(--darker-grey);
         transition: transform var(--transition-short);
         width: 15%;
@@ -34,39 +33,12 @@ button {
     &RegularClear {
         background-color: var(--transparent);
         border-radius: var(--corners-small);
-        width: 100%;
-        padding-left: 0;
-        padding-right: 0;
         transition: background-color var(--transition-long),
-            transform var(--transition-short), padding var(--transition-long);
+            transform var(--transition-short);
 
         &:hover {
             background-color: var(--lighter-grey);
-            padding-left: 5px;
-            padding-right: 5px;
-            transition: background-color var(--transition-long),
-                padding var(--transition-long);
-        }
-
-        &:active {
-            transform: scale(0.995);
-            transition: transform var(--transition-short);
-        }
-    }
-
-    &DenseClear {
-        background-color: var(--transparent);
-        border-radius: var(--corners-small);
-        width: 25%;
-        padding-left: 15px;
-        padding-right: 15px;
-        transition: background-color var(--transition-long),
-            transform var(--transition-short), padding var(--transition-long);
-
-        &:hover {
-            background-color: var(--lighter-grey);
-            transition: background-color var(--transition-long),
-                padding var(--transition-long);
+            transition: background-color var(--transition-long);
         }
 
         &:active {
@@ -78,39 +50,12 @@ button {
     &RegularSolid {
         background-color: var(--lighter-grey);
         border-radius: var(--corners-small);
-        width: 100%;
-        padding-left: 0;
-        padding-right: 0;
         transition: background-color var(--transition-long),
-            transform var(--transition-short), padding var(--transition-long);
+            transform var(--transition-short);
 
         &:hover {
             background-color: var(--lighter-grey);
-            padding-left: 5px;
-            padding-right: 5px;
-            transition: background-color var(--transition-long),
-                padding var(--transition-long);
-        }
-
-        &:active {
-            transform: scale(0.995);
-            transition: transform var(--transition-short);
-        }
-    }
-
-    &DenseSolid {
-        background-color: var(--lighter-grey);
-        border-radius: var(--corners-small);
-        width: 25%;
-        padding-left: 15px;
-        padding-right: 15px;
-        transition: background-color var(--transition-long),
-            transform var(--transition-short), padding var(--transition-long);
-
-        &:hover {
-            background-color: var(--lighter-grey);
-            transition: background-color var(--transition-long),
-                padding var(--transition-long);
+            transition: background-color var(--transition-long);
         }
 
         &:active {
@@ -122,21 +67,35 @@ button {
     &Inverse {
         background-color: var(--transparent);
         border-radius: var(--corners-small);
-        width: 25%;
-        padding-left: 15px;
-        padding-right: 15px;
         transition: background-color var(--transition-long),
-            transform var(--transition-short), padding var(--transition-long);
+            transform var(--transition-short);
 
         &:hover {
             background-color: var(--darker-grey-70);
-            transition: background-color var(--transition-long),
-                padding var(--transition-long);
+            transition: background-color var(--transition-long);
         }
 
         &:active {
             transform: scale(0.995);
             transition: transform var(--transition-short);
         }
+    }
+}
+
+.fill {
+    width: 100%;
+}
+
+.transition {
+    padding-left: 0;
+    padding-right: 0;
+    transition: background-color var(--transition-long),
+        transform var(--transition-short), padding var(--transition-long);
+
+    &:hover {
+        padding-left: 15px;
+        padding-right: 15px;
+        transition: background-color var(--transition-long),
+            transform var(--transition-short), padding var(--transition-long);
     }
 }

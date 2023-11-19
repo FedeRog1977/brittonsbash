@@ -19,6 +19,8 @@ export const ButtonStories = () => {
             <Tile type="solid">
                 <Button
                     type="regularClear"
+                    fill
+                    transition
                     func={() => setShowElement(!showElement)}
                     funcResp={showElement}
                 />

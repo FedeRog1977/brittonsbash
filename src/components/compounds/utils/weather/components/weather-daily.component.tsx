@@ -43,6 +43,8 @@ export const WeatherDaily = ({ latIn, lonIn }: any) => {
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                 <Button
                     type="regularClear"
+                    fill
+                    transition
                     func={() => setShowElement(!showElement)}
                     funcResp={showElement}
                 />

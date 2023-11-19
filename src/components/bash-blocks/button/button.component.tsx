@@ -10,6 +10,8 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
 
     const classNames = cx({
         [styles[`button${toUpperCase(props.type)}`]]: props.type,
+        [styles.fill]: props.fill,
+        [styles.transition]: props.transition,
     })
 
     return (
@@ -18,7 +20,7 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
             onClick={props.func}
             value={props.value}
             style={{
-                width: props.dense ? '50%' : undefined,
+                width: props.forceWidth ? `${props.forceWidth}%` : undefined,
                 paddingTop: props.removePadding ? '0px' : '5px',
                 paddingBottom: props.removePadding ? '0px' : '5px',
             }}
@@ -99,7 +101,7 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                         textAlign="right"
                     >
                         <Typography
-                            type="body"
+                            type="footnote"
                             content={
                                 props.funcResp === false ? (
                                     <FontAwesomeIcon icon={faChevronDown} />

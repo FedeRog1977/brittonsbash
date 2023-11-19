@@ -12,7 +12,7 @@ export const InstantGramSearchList: React.FC<InstantGramSearchListProps> = ({
         <>
             <Button
                 typeType={isMobile ? 't1' : 't2'}
-                type="denseClear"
+                type="regularClear"
                 func={() => setShowElement(!showElement)}
                 funcResp={showElement}
                 content={props.year}
@@ -30,7 +30,8 @@ export const InstantGramSearchList: React.FC<InstantGramSearchListProps> = ({
                         }: InstantGramSearchListProps['items'][0]) => (
                             <Button
                                 key={id}
-                                type={`${isMobile ? 'regular' : 'dense'}Clear`}
+                                type="regularClear"
+                                forceWidth={!isMobile ? 25 : undefined}
                                 func={() => setShowElement(false)}
                                 funcResp={false}
                                 content={

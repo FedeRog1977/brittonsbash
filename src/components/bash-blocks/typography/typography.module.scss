@@ -258,15 +258,6 @@
         @media (max-width: 768px) {
             font-size: 12px;
         }
-
-        &Light {
-            font-family: Sans-Light;
-            font-size: 16px;
-
-            @media (max-width: 768px) {
-                font-size: 12px;
-            }
-        }
     }
 
     &Footnote {
@@ -452,7 +443,7 @@ a:hover {
 /* Shadow */
 
 .shadow {
-    text-shadow: 0px 0px 40px var(--darker-grey);
+    text-shadow: 0px 0px 10px var(--darker-grey);
 }
 
 /* Mobile */
