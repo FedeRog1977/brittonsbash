@@ -11,7 +11,6 @@ export type TypographyTextProps = {
         | 'h3'
         | 'h4'
         | 'body'
-        | 'bodyLight'
         | 'caption'
         | 'footnote'
         | 'tiny'
@@ -24,6 +23,7 @@ export type TypographyTextProps = {
     smallCaps?: boolean
     textDecoration?: 'overline' | 'underline' | 'lineThrough'
     link?: LinkProps['link']
+    light?: boolean
     shadow?: boolean
 }
 

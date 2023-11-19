@@ -136,6 +136,15 @@
         @media (max-width: 768px) {
             font-size: 24px;
         }
+
+        &Light {
+            font-family: Sans-Light;
+            font-size: 52px;
+
+            @media (max-width: 768px) {
+                font-size: 24px;
+            }
+        }
     }
 
     &T2 {
@@ -144,6 +153,15 @@
 
         @media (max-width: 768px) {
             font-size: 24px;
+        }
+
+        &Light {
+            font-family: Sans-Light;
+            font-size: 52px;
+
+            @media (max-width: 768px) {
+                font-size: 24px;
+            }
         }
     }
 
@@ -154,6 +172,15 @@
         @media (max-width: 768px) {
             font-size: 22px;
         }
+
+        &Light {
+            font-family: Sans-Light;
+            font-size: 46px;
+
+            @media (max-width: 768px) {
+                font-size: 22px;
+            }
+        }
     }
 
     &H2 {
@@ -163,14 +190,28 @@
         @media (max-width: 768px) {
             font-size: 20px;
         }
+
+        &Light {
+            font-family: Sans-Light;
+            font-size: 32px;
+
+            @media (max-width: 768px) {
+                font-size: 20px;
+            }
+        }
     }
 
     &H3 {
         font-family: Sans-Bold;
         font-size: 24px;
 
-        @media (max-width: 768px) {
-            font-size: 16px;
+        &Light {
+            font-family: Sans-Light;
+            font-size: 24px;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
         }
     }
 
@@ -181,6 +222,15 @@
         @media (max-width: 768px) {
             font-size: 16px;
         }
+
+        &Light {
+            font-family: Sans-Light;
+            font-size: 24px;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
+        }
     }
 
     &Body {
@@ -190,14 +240,14 @@
         @media (max-width: 768px) {
             font-size: 12px;
         }
-    }
 
-    &BodyLight {
-        font-family: Sans-Light;
-        font-size: 14px;
+        &Light {
+            font-family: Sans-Light;
+            font-size: 16px;
 
-        @media (max-width: 768px) {
-            font-size: 12px;
+            @media (max-width: 768px) {
+                font-size: 12px;
+            }
         }
     }
 
@@ -208,6 +258,15 @@
         @media (max-width: 768px) {
             font-size: 12px;
         }
+
+        &Light {
+            font-family: Sans-Light;
+            font-size: 16px;
+
+            @media (max-width: 768px) {
+                font-size: 12px;
+            }
+        }
     }
 
     &Footnote {
@@ -217,6 +276,15 @@
         @media (max-width: 768px) {
             font-size: 10px;
         }
+
+        &Light {
+            font-family: Sans-Light;
+            font-size: 14px;
+
+            @media (max-width: 768px) {
+                font-size: 10px;
+            }
+        }
     }
 
     &Tiny {
@@ -225,6 +293,15 @@
 
         @media (max-width: 768px) {
             font-size: 8px;
+        }
+
+        &Light {
+            font-family: Sans-Light;
+            font-size: 10px;
+
+            @media (max-width: 768px) {
+                font-size: 8px;
+            }
         }
     }
 

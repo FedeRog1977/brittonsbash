@@ -34,7 +34,12 @@ export const Typography: React.FC<TypographyProps> = ({
             ? [styles[`serif${props.type ? toUpperCase(props.type) : ''}`]]
             : [
                   styles[
-                      `sansSerif${props.type ? toUpperCase(props.type) : ''}`
+                      `sansSerif${
+                          props.type
+                              ? toUpperCase(props.type) +
+                                (props.light ? 'Light' : '')
+                              : ''
+                      }`
                   ],
               ]),
         ...(props.fontFamily === 'serif'

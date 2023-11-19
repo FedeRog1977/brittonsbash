@@ -307,11 +307,12 @@ export const TypographyStories = () => (
                 paragraphMargins
             />
             <Typography
-                type="bodyLight"
+                type="body"
                 fontFamily="sansSerif"
                 content="Typography body-light"
                 textAlign="left"
                 paragraphMargins
+                light
             />
             <Typography
                 type="caption"

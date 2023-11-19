@@ -24,9 +24,10 @@ export const ImageMatrix: React.FC<ImageMatrixProps> = ({
                             />
                             {rowItem.description && (
                                 <Typography
-                                    type="bodyLight"
+                                    type="body"
                                     content={rowItem.description}
                                     textAlign="center"
+                                    light
                                     mT={3.75}
                                 />
                             )}

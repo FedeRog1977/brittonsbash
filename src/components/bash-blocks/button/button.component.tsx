@@ -89,6 +89,7 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                                 ? 'mediumGrey'
                                 : 'lightBlue'
                         }
+                        light={props.light}
                     />
                 </Grid>
                 {Boolean(!props.content) && (
@@ -98,7 +99,7 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                         textAlign="right"
                     >
                         <Typography
-                            type="bodyLight"
+                            type="body"
                             content={
                                 props.funcResp === false ? (
                                     <FontAwesomeIcon icon={faChevronDown} />
@@ -111,6 +112,7 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                                     ? 'mediumGrey'
                                     : 'lightBlue'
                             }
+                            light
                         />
                     </Grid>
                 )}

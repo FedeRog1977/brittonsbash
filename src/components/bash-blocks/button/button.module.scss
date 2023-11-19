@@ -118,4 +118,25 @@ button {
             transition: transform var(--transition-short);
         }
     }
+
+    &Inverse {
+        background-color: var(--transparent);
+        border-radius: var(--corners-small);
+        width: 25%;
+        padding-left: 15px;
+        padding-right: 15px;
+        transition: background-color var(--transition-long),
+            transform var(--transition-short), padding var(--transition-long);
+
+        &:hover {
+            background-color: var(--darker-grey-70);
+            transition: background-color var(--transition-long),
+                padding var(--transition-long);
+        }
+
+        &:active {
+            transform: scale(0.995);
+            transition: transform var(--transition-short);
+        }
+    }
 }

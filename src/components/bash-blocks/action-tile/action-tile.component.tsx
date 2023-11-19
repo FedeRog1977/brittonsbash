@@ -6,20 +6,22 @@ export const ActionTile: React.FC<ActionTileProps> = ({
 }: ActionTileProps) => {
     return (
         <Tile type="solid" margins img={props.img}>
-            <Spacing mY={300}>
+            <Spacing mY={200}>
                 <Typography
                     type="t1"
                     content={props.heading}
-                    textAlign="center"
+                    textAlign="left"
                     color="white"
+                    light
                     shadow
                     paragraphMargins
                 />
                 <Typography
-                    type="body"
+                    type="h4"
                     content={props.body}
-                    textAlign="justify"
+                    textAlign="left"
                     color="white"
+                    light
                     shadow
                     paragraphMargins
                 />
