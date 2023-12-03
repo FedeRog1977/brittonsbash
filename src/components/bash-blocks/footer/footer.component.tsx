@@ -1,5 +1,5 @@
 import styles from './footer.module.scss'
-import logo from '../../../media/images/logo/logo-white.png'
+import logo from '../../../media/images/logo/bash-logo.png'
 import xmr from '../../../media/images/monero/xmr.svg'
 import monero from '../../../media/images/monero/monero.png'
 import { Grid, Spacing, Typography } from '..'
@@ -13,53 +13,51 @@ export const Footer = () => {
             <Spacing pY={60}>
                 <Grid alignRows="auto auto auto auto auto" rowGap={20}>
                     <Grid rowItem={[1, 5]}>
-                        <Typography
-                            type="h3"
-                            content={
-                                <span style={{ fontFamily: 'IBM' }}>
-                                    <img
-                                        src={logo}
-                                        alt="logo"
-                                        style={{
-                                            height: isMobile
-                                                ? '22.5px'
-                                                : '35px',
-                                        }}
-                                    />
-                                    &nbsp;BrittonsBashRC
-                                </span>
-                            }
-                            color="lightGrey"
-                            textAlign="center"
-                        />
+                        <Grid
+                            alignColumns="auto auto"
+                            columnGap={20}
+                            justifyContent="center"
+                            alignItems="center"
+                        >
+                            <Grid columnItem={[1, 2]}>
+                                <img
+                                    src={logo}
+                                    alt="logo"
+                                    style={{ height: '35px' }}
+                                />
+                            </Grid>
+                            <Grid columnItem={[2, 2]}>
+                                <div className={styles.footerLogo}>
+                                    BrittonsBashRC
+                                </div>
+                            </Grid>
+                        </Grid>
                         <Typography
                             type="h3"
                             content={<code>brittonsbash.com</code>}
-                            color="lightGrey"
-                            textAlign="center"
                         />
                     </Grid>
                     <Grid rowItem={[2, 5]}>
-                        <Typography
-                            type="body"
-                            content={
+                        <Grid
+                            alignColumns="auto auto"
+                            columnGap={10}
+                            justifyContent="center"
+                            alignItems="center"
+                        >
+                            <Grid columnItem={[1, 2]}>
                                 <img
                                     src={xmr}
                                     alt="xmr"
                                     style={{ height: '15px' }}
                                 />
-                            }
-                            color="lightGrey"
-                            textAlign="center"
-                            inline
-                        />{' '}
-                        <Typography
-                            type="body"
-                            content="Monero Donations"
-                            color="lightGrey"
-                            textAlign="center"
-                            inline
-                        />
+                            </Grid>
+                            <Grid columnItem={[2, 2]}>
+                                <Typography
+                                    type="body"
+                                    content="Monero Donations"
+                                />
+                            </Grid>
+                        </Grid>
                     </Grid>
                     <Grid rowItem={[3, 5]}>
                         <Typography
@@ -73,30 +71,19 @@ export const Footer = () => {
                                     ZMTJSSkB46V
                                 </code>
                             }
-                            color="lightGrey"
-                            textAlign="center"
                         />
                     </Grid>
                     <Grid rowItem={[4, 5]}>
-                        <Typography
-                            type="body"
-                            content={
-                                <img
-                                    src={monero}
-                                    alt="monero"
-                                    style={{ height: '100px' }}
-                                />
-                            }
-                            color="lightGrey"
-                            textAlign="center"
+                        <img
+                            src={monero}
+                            alt="monero"
+                            style={{ height: '100px' }}
                         />
                     </Grid>
                     <Grid rowItem={[5, 5]}>
                         <Typography
                             type="body"
                             content={<>&#169; Lewis Britton 2020&mdash;2023</>}
-                            color="lightGrey"
-                            textAlign="center"
                         />
                     </Grid>
                 </Grid>

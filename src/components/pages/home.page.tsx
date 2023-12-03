@@ -10,20 +10,12 @@ export const Home = () => (
         <ContentTile
             img={introTileImg}
             heading="Welcome to BrittonsBashRC"
-            subHeading="Where autism aligns at its finest, in more ways than you knew it could"
+            subHeading="Where autism aligns at its finest"
             body="Where autism aligns at its finest, in more ways than you knew it could. Now, choose where you start. Where autism aligns at its finest, in more ways than you knew it could. Now, choose where you start. Where autism aligns at its finest, in more ways than you knew it could. Now, choose where you start. Where autism aligns at its finest, in more ways than you knew it could. Now, choose where you start. Where autism aligns at its finest, in more ways than you knew it could. Now, choose where you start. Where autism aligns at its finest, in more ways than you knew it could. Now, choose where you start."
             textAlign="left"
         >
-            <Grid alignColumns="auto auto auto auto auto" justifyItems="start">
+            <Grid alignColumns="auto auto auto auto" justifyItems="center">
                 <Grid columnItem={[1, 4]}>
-                    <Typography
-                        type="h3"
-                        light
-                        color="white"
-                        content="Get browsing:"
-                    />
-                </Grid>
-                <Grid columnItem={[2, 4]}>
                     <Button
                         typeType="h3"
                         type="inverse"
@@ -36,7 +28,7 @@ export const Home = () => (
                         light
                     />
                 </Grid>
-                <Grid columnItem={[3, 4]}>
+                <Grid columnItem={[2, 4]}>
                     <Button
                         typeType="h3"
                         type="inverse"
@@ -47,7 +39,7 @@ export const Home = () => (
                         light
                     />
                 </Grid>
-                <Grid columnItem={[4, 4]}>
+                <Grid columnItem={[3, 4]}>
                     <Button
                         typeType="h3"
                         type="inverse"
@@ -56,6 +48,17 @@ export const Home = () => (
                         }
                         funcResp={false}
                         content="BritonsFoodRC"
+                        color="white"
+                        light
+                    />
+                </Grid>
+                <Grid columnItem={[4, 4]}>
+                    <Button
+                        typeType="h3"
+                        type="inverse"
+                        func={() => (window.location.href = '#/utils/conquest')}
+                        funcResp={false}
+                        content="Conquest"
                         color="white"
                         light
                     />

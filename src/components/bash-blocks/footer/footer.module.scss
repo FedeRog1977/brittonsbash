@@ -4,4 +4,12 @@
     display: grid;
     justify-content: center;
     align-items: center;
+    color: var(--light-grey);
+
+    &Logo {
+        font-family: IBM;
+        font-size: 22px;
+        line-height: -2px;
+        height: 22px;
+    }
 }

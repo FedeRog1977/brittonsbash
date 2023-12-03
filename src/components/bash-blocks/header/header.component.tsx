@@ -3,7 +3,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import styles from './header.module.scss'
 import { useShowElement, useScreenWidth } from '../../../scripts'
-import logo from '../../../media/images/logo/logo-white.png'
+import logo from '../../../media/images/logo/bash-logo.png'
 import { Grid } from '../grid'
 import { Spacing } from '../spacing'
 
@@ -34,9 +34,25 @@ export const Header = () => {
                                     style={{ height: '35px' }}
                                 />
                             ) : (
-                                <div className={styles.headerLogo}>
-                                    BrittonsBashRC
-                                </div>
+                                <Grid
+                                    alignColumns="auto auto"
+                                    columnGap={20}
+                                    justifyContent="start"
+                                    alignItems="center"
+                                >
+                                    <Grid columnItem={[1, 2]}>
+                                        <img
+                                            src={logo}
+                                            alt="logo"
+                                            style={{ height: '35px' }}
+                                        />
+                                    </Grid>
+                                    <Grid columnItem={[2, 2]}>
+                                        <div className={styles.headerLogo}>
+                                            BrittonsBashRC
+                                        </div>
+                                    </Grid>
+                                </Grid>
                             )}
                         </Grid>
                         <Grid columnItem={[2, 2]} textAlign="right">

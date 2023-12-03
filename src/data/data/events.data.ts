@@ -1,6 +1,23 @@
 export const eventData = {
     2023: [
         {
+            id: 'E2023046',
+            prefix: 'The Final Twoer III',
+            names: ['Home', 'Routine Farewell'],
+            startDate: '1st of December',
+            endDate: '3rd of December',
+            description: '',
+            features: {
+                youthHostels: ['Glen Nevis'],
+            },
+            images: [
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/final-twoer/1.jpg',
+                    alt: 'final-twoer-1',
+                },
+            ],
+        },
+        {
             id: 'E2023045',
             prefix: 'The Gentlemen Who Café Present',
             names: ['Cheshire 2023 — Intriguing Possibilities'],

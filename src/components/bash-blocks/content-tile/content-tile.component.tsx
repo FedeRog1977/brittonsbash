@@ -1,23 +1,30 @@
 import { ContentTileProps } from '.'
 import { Tile, Typography } from '..'
+import { useScreenWidth } from '../../../scripts'
 
 export const ContentTile: React.FC<ContentTileProps> = ({
     ...props
 }: ContentTileProps) => {
+    const { isMobile } = useScreenWidth()
+
     return (
-        <Tile type="solid" margins img={props.img} gradient={{ start: 'left' }}>
+        <Tile
+            type="solid"
+            margins={!isMobile}
+            img={props.img}
+            gradient={{ start: 'left' }}
+        >
             <Typography
-                type="t1"
-                content={props.heading}
+                type="h4"
+                content={props.subHeading}
                 textAlign={props.textAlign ? props.textAlign : 'center'}
                 color="white"
                 light
                 shadow
-                paragraphMargins
             />
             <Typography
-                type="h4"
-                content={props.subHeading}
+                type="t1"
+                content={props.heading}
                 textAlign={props.textAlign ? props.textAlign : 'center'}
                 color="white"
                 light

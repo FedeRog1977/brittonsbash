@@ -352,6 +352,15 @@ export const sportData = {
         ],
         projects: [
             {
+                id: 'P2023028',
+                name: 'Home',
+                distance: 12.1,
+                elevation: 4098,
+                time: '4:42:52	',
+                companionship: 1,
+                munros: ['Meall na Teanga', 'Sròn a’ Choire Ghairbh'],
+            },
+            {
                 id: 'P2023027',
                 name: 'Triad Firefight',
                 distance: 11.49,
@@ -655,6 +664,13 @@ export const sportData = {
             },
         ],
         miles: [
+            {
+                id: 'M2023064',
+                name: 'Other',
+                distance: 1.02,
+                elevation: 49,
+                time: '20:11',
+            },
             {
                 id: 'M2023063',
                 name: 'Waterfoot',
