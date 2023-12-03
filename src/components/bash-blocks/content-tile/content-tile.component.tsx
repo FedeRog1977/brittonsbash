@@ -9,7 +9,7 @@ export const ContentTile: React.FC<ContentTileProps> = ({
 
     return (
         <Tile
-            type="solid"
+            type="clear"
             margins={!isMobile}
             img={props.img}
             gradient={{ start: 'left' }}
