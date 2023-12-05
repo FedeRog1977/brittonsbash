@@ -160,7 +160,7 @@ export const eventData = {
                     alt: 'the-final-twoer-iii-37',
                 },
                 {
-                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-final-twoer-iii/38.jpg',
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-final-twoer-iii/38.JPG',
                     alt: 'the-final-twoer-iii-38',
                 },
                 {
