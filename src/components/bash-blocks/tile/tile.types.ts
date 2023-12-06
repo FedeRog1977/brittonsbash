@@ -11,4 +11,5 @@ export type TileProps = {
     }
     textAlign?: AlignProps
     children: React.ReactNode
+    anchor?: string
 }

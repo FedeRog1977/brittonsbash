@@ -16,5 +16,6 @@ export type ButtonProps = {
     subContentTop?: boolean
     color?: ColorProps
     dense?: boolean
+    coarsePadding?: boolean
     removePadding?: boolean
 }

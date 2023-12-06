@@ -27,6 +27,7 @@ export const Tile: React.FC<TileProps> = ({ ...props }: TileProps) => {
 
     return (
         <div
+            id={props.anchor}
             className={classNames}
             style={{
                 backgroundImage: `url(${props.img})`,

@@ -7,8 +7,6 @@ export type InstantGramSearchListProps = {
         prefix?: string
         names: string[]
     }[]
-    year: string
-    season: string
 }
 
 export type InstantGramSearchTileProps = {

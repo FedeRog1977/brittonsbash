@@ -10,19 +10,19 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
 
     const classNames = cx({
         [styles[`button${toUpperCase(props.type)}`]]: props.type,
+        [styles[`padded${toUpperCase(props.coarsePadding ? 'Coarse' : '')}`]]:
+            !props.removePadding,
         [styles.fill]: props.fill,
         [styles.transition]: props.transition,
     })
 
-    return (
+    const content = (
         <button
             className={classNames}
             onClick={props.func}
             value={props.value}
             style={{
                 width: props.forceWidth ? `${props.forceWidth}%` : undefined,
-                paddingTop: props.removePadding ? '0px' : '5px',
-                paddingBottom: props.removePadding ? '0px' : '5px',
             }}
         >
             <Grid
@@ -121,4 +121,16 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
             </Grid>
         </button>
     )
+
+    if (props.link?.url)
+        return (
+            <a
+                target={props.link.newTab ? '_blank' : undefined}
+                href={`#${props.link.url}`}
+            >
+                {content}
+            </a>
+        )
+
+    return content
 }

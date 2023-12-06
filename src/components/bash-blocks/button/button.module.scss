@@ -82,6 +82,16 @@ button {
     }
 }
 
+.padded {
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    &Coarse {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
 .fill {
     width: 100%;
 }
@@ -97,5 +107,10 @@ button {
         padding-right: 15px;
         transition: background-color var(--transition-long),
             transform var(--transition-short), padding var(--transition-long);
+
+        @media (max-width: 768px) {
+            padding-left: 7.5px;
+            padding-right: 7.5px;
+        }
     }
 }
