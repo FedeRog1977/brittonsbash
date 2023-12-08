@@ -126,7 +126,7 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
         return (
             <a
                 target={props.link.newTab ? '_blank' : undefined}
-                href={`#${props.link.url}`}
+                href={props.link.url}
             >
                 {content}
             </a>
