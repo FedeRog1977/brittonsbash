@@ -59,30 +59,6 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                                 { name, refKey }: RefactoredEventNameProps,
                                 index
                             ) => (
-                                // <Typography
-                                //     type="t2"
-                                //     content={
-                                //         <>
-                                //             <Typography
-                                //                 content={
-                                //                     <>
-                                //                         Part&nbsp;
-                                //                         {refKey}&nbsp;
-                                //                     </>
-                                //                 }
-                                //                 color="mediumGrey"
-                                //                 inline
-                                //                 key={refKey}
-                                //             />
-                                //             <Typography
-                                //                 content={<>{name}</>}
-                                //                 inline
-                                //                 key={refKey}
-                                //             />
-                                //         </>
-                                //     }
-                                //     textAlign="center"
-                                // />
                                 <>
                                     <Grid
                                         columnItem={[1, 2]}
