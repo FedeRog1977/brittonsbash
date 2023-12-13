@@ -53,36 +53,75 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                     />
                 )}
                 {refactoredEvent.names.length > 1 ? (
-                    <>
+                    <Grid alignColumns="auto auto">
                         {refactoredEvent.names.map(
-                            ({ name, refKey }: RefactoredEventNameProps) => (
-                                <Typography
-                                    type="t2"
-                                    content={
-                                        <>
-                                            <Typography
-                                                content={
-                                                    <>
-                                                        Part&nbsp;
-                                                        {refKey}&nbsp;
-                                                    </>
-                                                }
-                                                color="mediumGrey"
-                                                inline
-                                                key={refKey}
-                                            />
-                                            <Typography
-                                                content={<>{name}</>}
-                                                inline
-                                                key={refKey}
-                                            />
-                                        </>
-                                    }
-                                    textAlign="center"
-                                />
+                            (
+                                { name, refKey }: RefactoredEventNameProps,
+                                index
+                            ) => (
+                                // <Typography
+                                //     type="t2"
+                                //     content={
+                                //         <>
+                                //             <Typography
+                                //                 content={
+                                //                     <>
+                                //                         Part&nbsp;
+                                //                         {refKey}&nbsp;
+                                //                     </>
+                                //                 }
+                                //                 color="mediumGrey"
+                                //                 inline
+                                //                 key={refKey}
+                                //             />
+                                //             <Typography
+                                //                 content={<>{name}</>}
+                                //                 inline
+                                //                 key={refKey}
+                                //             />
+                                //         </>
+                                //     }
+                                //     textAlign="center"
+                                // />
+                                <>
+                                    <Grid
+                                        columnItem={[1, 2]}
+                                        rowItem={[
+                                            index + 1,
+                                            refactoredEvent.names.length + 1,
+                                        ]}
+                                        textAlign="right"
+                                    >
+                                        <Typography
+                                            type="t2"
+                                            content={
+                                                <>
+                                                    Part&nbsp;
+                                                    {refKey}&nbsp;
+                                                </>
+                                            }
+                                            color="mediumGrey"
+                                            key={refKey}
+                                        />
+                                    </Grid>
+                                    <Grid
+                                        columnItem={[2, 2]}
+                                        rowItem={[
+                                            index + 1,
+                                            refactoredEvent.names.length + 1,
+                                        ]}
+                                        textAlign="left"
+                                    >
+                                        <Typography
+                                            type="t2"
+                                            content={<>{name}</>}
+                                            key={refKey}
+                                        />
+                                    </Grid>
+                                </>
                             )
                         )}
-                    </>
+                    </Grid>
                 ) : (
                     <Typography
                         type={refactoredEvent.prefix ? 't2' : 't1'}

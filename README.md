@@ -248,6 +248,14 @@ Navigate back to your GitHub Pages settings and re-run the DNS check. It should 
 
 -   [Video guide](https://www.youtube.com/watch?v=K5DTIf-jWhk)
 
+# Application Servers
+
+It will frequently be the case, for example, that when you've made an update to a component you may need to update your **Typescript Server**. Or perhaps, for example, when a piece of code is changed which once did not satisfy your desired ES Lint rules but now does, you will have to reset your **ES Lint Server**. There may apply any other examples within these applications or other where this may be the case.
+
+To essentially hit a reset and restart these servers, select your control key + `Shift` + `P` and select the relevant server reset. This is assuming you use VS Code to develop.
+
+If you reset a simple application server, the disk data on the server is deleted, and the snapshots that were created before the reset are retained but cannot be used to roll back the disks of the server.
+
 # Additional Packages
 
 ## Prettier

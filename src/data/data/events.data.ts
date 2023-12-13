@@ -1,6 +1,206 @@
 export const eventData = {
     2023: [
         {
+            id: 'E2023048',
+            prefix: 'Twelfth Different Kind Hol-e-day',
+            names: ['The Hangover Part II'],
+            startDate: '9th of December',
+            endDate: '12th of December',
+            description: '',
+            features: {
+                cities: ['Tirana'],
+                youthHostels: ['Tirana Backpacker Hostel'],
+                supermarkets: ['Spar', 'Ronatyra MD'],
+                foodstuffs: [
+                    'Birra Peja',
+                    'Peroni Red',
+                    'La Trappe Blonde',
+                    'La Trappe Tripel',
+                    'La Trappe Quadrupel',
+                    'Paulaner Münchner Hell',
+                    'Open Doner',
+                    'Assorted Meats',
+                ],
+                bakeries: ['Mulliri Vjeter', 'Mon Chèri'],
+                gelaterias: [
+                    'La Nocciola Gelateria Italiana',
+                    'Cioccolatitaliani Bllok',
+                ],
+                restaurants: [
+                    'Salt Tirana',
+                    'The Bell Sushi Bar',
+                    'Smoke House Bar & Grill',
+                    'Fast Food Albania',
+                    'Kripë dhe Piper',
+                    'Tymi King Pils',
+                    'Zgara e Tironës 2 by Le NOIRs',
+                ],
+                bars: ['Cheers Irish Pub', "n'dashni"],
+            },
+            images: [
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/1.jpg',
+                    alt: 'the-hangover-ii-1',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/2.jpg',
+                    alt: 'the-hangover-ii-2',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/3.jpg',
+                    alt: 'the-hangover-ii-3',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/4.jpg',
+                    alt: 'the-hangover-ii-4',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/5.jpg',
+                    alt: 'the-hangover-ii-5',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/6.jpg',
+                    alt: 'the-hangover-ii-6',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/7.jpg',
+                    alt: 'the-hangover-ii-7',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/8.jpg',
+                    alt: 'the-hangover-ii-8',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/9.jpg',
+                    alt: 'the-hangover-ii-9',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/10.jpg',
+                    alt: 'the-hangover-ii-10',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/11.jpg',
+                    alt: 'the-hangover-ii-11',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/12.jpg',
+                    alt: 'the-hangover-ii-12',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/13.jpg',
+                    alt: 'the-hangover-ii-13',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/14.jpg',
+                    alt: 'the-hangover-ii-14',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/15.jpg',
+                    alt: 'the-hangover-ii-15',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/16.jpg',
+                    alt: 'the-hangover-ii-16',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/17.jpg',
+                    alt: 'the-hangover-ii-17',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/18.jpg',
+                    alt: 'the-hangover-ii-18',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/19.jpg',
+                    alt: 'the-hangover-ii-19',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/20.jpg',
+                    alt: 'the-hangover-ii-20',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/21.jpg',
+                    alt: 'the-hangover-ii-21',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/22.jpg',
+                    alt: 'the-hangover-ii-22',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/23.jpg',
+                    alt: 'the-hangover-ii-23',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/24.jpg',
+                    alt: 'the-hangover-ii-24',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/25.jpg',
+                    alt: 'the-hangover-ii-25',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/26.jpg',
+                    alt: 'the-hangover-ii-26',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/27.jpg',
+                    alt: 'the-hangover-ii-27',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/28.jpg',
+                    alt: 'the-hangover-ii-28',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/29.jpg',
+                    alt: 'the-hangover-ii-29',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/30.jpg',
+                    alt: 'the-hangover-ii-30',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/31.jpg',
+                    alt: 'the-hangover-ii-31',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/32.jpg',
+                    alt: 'the-hangover-ii-32',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/33.jpg',
+                    alt: 'the-hangover-ii-33',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/34.jpg',
+                    alt: 'the-hangover-ii-34',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/35.jpg',
+                    alt: 'the-hangover-ii-35',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/36.jpg',
+                    alt: 'the-hangover-ii-36',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/37.jpg',
+                    alt: 'the-hangover-ii-37',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/38.jpg',
+                    alt: 'the-hangover-ii-38',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/39.jpg',
+                    alt: 'the-hangover-ii-39',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/40.jpg',
+                    alt: 'the-hangover-ii-40',
+                },
+            ],
+        },
+        {
             id: 'E2023047',
             prefix: 'The Final Two’er III',
             names: ['Home', 'Routine Farewell'],

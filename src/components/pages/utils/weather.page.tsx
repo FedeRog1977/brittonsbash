@@ -1,6 +1,5 @@
-import { Weather as WeatherComponent } from '../../compounds'
+import { Weather as WeatherComponent, weatherContent } from '../../compounds'
 import { Background, Footnote } from '../../bash-blocks'
-import { weatherContent } from '../../../data'
 
 export const Weather = () => (
     <>

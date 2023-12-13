@@ -1,5 +1,7 @@
-import { InstantGram as InstantGramComponent } from '../../compounds'
-import { instantGramContent } from '../../../data'
+import {
+    InstantGram as InstantGramComponent,
+    instantGramContent,
+} from '../../compounds'
 import { Background, Footnote } from '../../bash-blocks'
 
 export const InstantGram = () => (
