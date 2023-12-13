@@ -348,7 +348,15 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                     )}
                 </Spacing>
             )}
-            {!isMobile && (
+            {isMobile ? (
+                <Spacing
+                    mX={isMobile ? -40 : 0}
+                    mT={isMobile ? 7.5 : 15}
+                    mB={isMobile ? 7.5 : 15}
+                >
+                    <ImageSlider slides={refactoredEvent.images} />
+                </Spacing>
+            ) : (
                 <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                     <Grid alignColumns="auto auto" justifyItems="center">
                         <Grid columnItem={[1, 2]}>
@@ -384,15 +392,6 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                 >
                     <ImageSlider slides={refactoredEvent.images} />
                 </Modal>
-            )}
-            {isMobile && (
-                <Spacing
-                    mX={isMobile ? -40 : 0}
-                    mT={isMobile ? 7.5 : 15}
-                    mB={isMobile ? 7.5 : 15}
-                >
-                    <ImageSlider slides={refactoredEvent.images} />
-                </Spacing>
             )}
         </Tile>
     )
