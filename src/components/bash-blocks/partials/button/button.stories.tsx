@@ -1,0 +1,37 @@
+import { Article, ArticleProps, Button } from '..'
+import { articleTestData } from '../../../../data'
+import { useShowElement } from '../../../../scripts'
+import { Tile, Typography } from '../../basics'
+
+export const ButtonStories = () => {
+    const { showElement, setShowElement } = useShowElement()
+
+    return (
+        <>
+            <Tile type="clear">
+                <Typography
+                    type="t1"
+                    fontFamily="sansSerif"
+                    content="Button"
+                    textAlign="center"
+                />
+            </Tile>
+            <Tile type="solid">
+                <Button
+                    type="regularClear"
+                    fill
+                    transition
+                    func={() => setShowElement(!showElement)}
+                    funcResp={showElement}
+                />
+                {showElement && (
+                    <Article
+                        sections={articleTestData as ArticleProps['sections']}
+                        fontFamily="serif"
+                        textAlign="justify"
+                    />
+                )}
+            </Tile>
+        </>
+    )
+}
