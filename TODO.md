@@ -25,7 +25,7 @@ author:
 -   Look into type narrowing
 -   Map grid parent align autos
 
-# Writings
+# Library
 
 -   LaTeX: The Definitive Guide
 -   Basics Of Cooking: The Definitive Guide
