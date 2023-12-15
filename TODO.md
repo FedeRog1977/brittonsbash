@@ -60,6 +60,20 @@ author:
 
 -   Add to router
 
+## BrittonsNYSERC
+
+-   Add to router
+-   Maybe python scripts for uni math/stats stuff
+
+## BlogBoat
+
+-   Add to router
+-   Add, for each JSON entry, new blog link
+-   Add gorpcore (Salomon, ASICS, Arcteryx)
+-   Add LaTeX selling points
+-   Add command line selling points
+-   Add Urban Dictionary page with "open doner" etc.
+
 # Utilities
 
 ## Weather
@@ -72,12 +86,3 @@ author:
 -   Add formatter to flatten Munros from routes
 -   Add features and work on existing
 -   Add "my hills" button
-
-## BlogBoat
-
--   Add to router
--   Add, for each JSON entry, new blog link
--   Add gorpcore (Salomon, ASICS, Arcteryx)
--   Add LaTeX selling points
--   Add command line selling points
--   Add Urban Dictionary page with "open doner" etc.
