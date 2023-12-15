@@ -168,9 +168,9 @@ The art is what you do, the science is how you do it.
 
 ---
 
-## To Add
+# To Add
 
-### Stir Fry
+## Stir Fry
 
 -   2 tbsp dark soy sauce
 -   1 tbsp oyster sauce
@@ -196,7 +196,7 @@ The art is what you do, the science is how you do it.
 
 ...
 
-### Italian Stew
+## Italian Stew
 
 -   Olive oil
 -   2 red onions

@@ -76,7 +76,7 @@ author:
 ## BlogBoat
 
 -   Add to router
-    -   Add, for each JSON entry, new blog link
+-   Add, for each JSON entry, new blog link
 -   Add gorpcore (Salomon, ASICS, Arcteryx)
 -   Add LaTeX selling points
 -   Add command line selling points
