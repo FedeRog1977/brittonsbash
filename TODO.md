@@ -7,11 +7,6 @@ author:
 
 # General
 
--   Write Xmas planning standard guide
-    -   Food buying
-    -   Card buying
-    -   Present buying
-    -   Truffle making
 -   Fix tile modules
 -   Fix tile gradient
 -   Fix table scroll background bug
@@ -20,8 +15,6 @@ author:
 -   Use SCSS reference files
 -   Discontinue index.scss in main directory
 -   Add onClicks to ImageMatrix images for single image, not slider
--   Align baking sheets with new desires in communications
--   Add Parafernalia Revolution Ballpoint to communications
 -   Look into type narrowing
 -   Map grid parent align autos
 
