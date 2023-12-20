@@ -5,6 +5,7 @@ export const Sport: React.FC = () => {
     const {
         handleSelect,
         title,
+        description,
         routes,
         isRoadies,
         isProjects,
@@ -26,6 +27,7 @@ export const Sport: React.FC = () => {
             />
             <SportResultTile
                 title={title}
+                description={description}
                 routes={routes}
                 isRoadies={isRoadies}
                 isProjects={isProjects}

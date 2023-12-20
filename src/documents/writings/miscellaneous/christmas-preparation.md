@@ -38,10 +38,12 @@ author:
 -   Chris Brennan
 -   Steve Burgess
 -   Matt Mabon
+-   Mark Alexander
 -   Iain Dobbin
 -   Murray Anderson
 -   Dale Barrie
 -   Craig Taylor
+-   Mark Haley
 -   Grant Macgregor
 -   Ivy Brazdeikyte
 -   Lucy Stevenson

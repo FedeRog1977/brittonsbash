@@ -17,6 +17,7 @@ export type SportSearchTileProps = {
 
 export type SportResultTileProps = {
     title: React.ReactElement
+    description: string
     routes: ColumnProps[]
     isRoadies: boolean
     isProjects: boolean

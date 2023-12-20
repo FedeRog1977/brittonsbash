@@ -26,6 +26,14 @@ export function useSport() {
         <>Unrecognized Sport</>
     )
 
+    const description: string = isRoadies
+        ? 'My Roadies hit all of the major rewards I look for in an activity: enjoyment, fitness, and calorie burn. Both of my major routes are more than thirty miles long which is what I look for in these things from a Roadie.'
+        : isProjects
+        ? 'My Projects hit all of the major rewards I look for in an activity: enjoyment, fitness, and calorie burn. As long as a Project is over ten miles long and has a decent amount of climbing, it delivers all of these things. Perhaps even more so that the other sports.'
+        : isMiles
+        ? 'My Miles, as of recently, hit all of the major rewards I look for in an activity: enjoyment, fitness, and calorie burn. My most frequent route is a Waterfoot, which I have just started segmenting into a half-walk, half-run. Before this they delivered all but fitness. Now that has changed.'
+        : 'This is not even a sport yet.'
+
     const routes = isRoadies
         ? [
               {
@@ -280,6 +288,7 @@ export function useSport() {
         sport2021,
         sport2020,
         title,
+        description,
         routes,
         isRoadies,
         isProjects,

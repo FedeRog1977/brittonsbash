@@ -44,6 +44,13 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
             <Spacing mB={isMobile ? 7.5 : 15}>
                 <Typography type="h1" content={props.title} textAlign="left" />
             </Spacing>
+            <Spacing mB={isMobile ? 7.5 : 15}>
+                <Typography
+                    type="body"
+                    content={props.description}
+                    textAlign="left"
+                />
+            </Spacing>
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                 <Typography type="h2" content="Summary" textAlign="left" />
             </Spacing>
