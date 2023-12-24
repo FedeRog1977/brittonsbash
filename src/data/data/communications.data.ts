@@ -977,6 +977,18 @@ export const communicationsData = {
                     content: 'OpenStreetMap Map Features',
                     href: 'https://en.wikipedia.org/wiki/Help:IPA/English',
                 },
+                {
+                    content: 'Strava',
+                    href: 'https://www.strava.com/settings/api',
+                },
+                {
+                    content: 'Strava Documentation',
+                    href: 'https://developers.strava.com/',
+                },
+                {
+                    content: 'Strava Swagger Playground',
+                    href: 'https://developers.strava.com/playground/#/Activities/getActivityById',
+                },
             ],
         },
     },
