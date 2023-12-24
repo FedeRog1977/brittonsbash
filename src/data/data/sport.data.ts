@@ -665,6 +665,13 @@ export const sportData = {
         ],
         miles: [
             {
+                id: 'M2023075',
+                name: 'Waterfoot',
+                distance: 10.0,
+                elevation: 669,
+                time: '1:53:49',
+            },
+            {
                 id: 'M2023074',
                 name: 'Waterfoot',
                 distance: 10.09,
@@ -2497,7 +2504,6 @@ export const sportData = {
                 time: '36:15',
             },
         ],
-        xks: [],
     },
     2021: {
         roadies: [
@@ -3640,7 +3646,6 @@ export const sportData = {
                 time: '2:36:18',
             },
         ],
-        xks: [],
     },
     2020: {
         roadies: [
@@ -4077,6 +4082,5 @@ export const sportData = {
                 time: '1:08:32',
             },
         ],
-        xks: [],
     },
 }
