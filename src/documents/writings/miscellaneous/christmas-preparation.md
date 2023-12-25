@@ -134,12 +134,12 @@ author:
 
 ### Salmon Rilettes
 
--   125g raw salmon
--   125g smoked salmon
+-   240g raw salmon
+-   120g smoked salmon
 -   2 shallots
--   30g cucumber
+-   100g cucumber
 -   100g creme fraiche
--   30g mayonnaise
+-   50g mayonnaise
 -   Lemon juice
 -   Lemon zest
 -   Tarragon
