@@ -190,7 +190,7 @@ author:
 
 ### Sage, Onion & Chestnut Stuffing
 
--   Sausage Meat
+-   454g Sausage Meat
 -   Olive Oil
 -   A White Onion
 -   Chestnuts
@@ -238,6 +238,7 @@ author:
 -   200g Canned Pears
 -   200g Canned Mango
 -   200g Canned Pineapple
+-   200g Canned Papaya
 -   500g Vanilla Custard
 -   300ml Whipping Cream
 -   2 tsp Vanilla Extract
