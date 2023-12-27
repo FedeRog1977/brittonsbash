@@ -38,8 +38,8 @@ export const Tile: React.FC<TileProps> = ({ ...props }: TileProps) => {
 
     const content = (
         <>
-            <img className={classNamesImage} src={props.img} />
-            <div className={classNamesGradient}></div>
+            {props.img && <img className={classNamesImage} src={props.img} />}
+            {props.gradient && <div className={classNamesGradient}></div>}
             <div className={classNamesText}>{props.children}</div>
         </>
     )

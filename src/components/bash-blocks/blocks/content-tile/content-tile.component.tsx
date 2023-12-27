@@ -1,6 +1,6 @@
 import { ContentTileProps } from '.'
 import { Grid, Tile, Typography } from '../../basics'
-import { Button } from '../../partials'
+import { Article, Button } from '../../partials'
 
 export const ContentTile: React.FC<ContentTileProps> = ({
     ...props
@@ -10,7 +10,7 @@ export const ContentTile: React.FC<ContentTileProps> = ({
         stacked
         margins
         img={props.img}
-        gradient={{ start: 'left' }}
+        // gradient={{ start: 'right' }}
     >
         <Typography
             type="h4"
@@ -18,22 +18,30 @@ export const ContentTile: React.FC<ContentTileProps> = ({
             textAlign={props.textAlign ? props.textAlign : 'center'}
             color="white"
             light
+            shadow
         />
         <Typography
             type="t1"
             content={props.heading}
             textAlign={props.textAlign ? props.textAlign : 'center'}
-            color="white"
+            color="darkerGrey90"
             light
             paragraphMargins
         />
-        {props.body && (
+        {Array.isArray(props.body) ? (
+            <Article
+                sections={props.body}
+                textAlign="justify"
+                extendParagraphMargins
+            />
+        ) : (
             <Typography
                 type="body"
                 content={props.body}
                 textAlign="justify"
                 color="white"
                 light
+                // shadow
                 paragraphMargins
             />
         )}

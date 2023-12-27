@@ -28,6 +28,8 @@ export const Article: React.FC<ArticleProps> = ({ ...props }: ArticleProps) => {
                         smallCaps,
                         textDecoration,
                         link,
+                        light,
+                        shadow,
                     }: ArticleProps['sections'][0]) => (
                         <Typography
                             key={type}
@@ -43,6 +45,8 @@ export const Article: React.FC<ArticleProps> = ({ ...props }: ArticleProps) => {
                             smallCaps={smallCaps}
                             textDecoration={textDecoration}
                             link={link}
+                            light={light}
+                            shadow={shadow}
                             paragraphMargins
                         />
                     )
@@ -60,6 +64,9 @@ export const Article: React.FC<ArticleProps> = ({ ...props }: ArticleProps) => {
                 smallCaps={props.sections[sectionsFinal].smallCaps}
                 textDecoration={props.sections[sectionsFinal].textDecoration}
                 link={props.sections[sectionsFinal].link}
+                light={props.sections[sectionsFinal].light}
+                shadow={props.sections[sectionsFinal].shadow}
+                paragraphMargins={props.extendParagraphMargins}
             />
         </div>
     )

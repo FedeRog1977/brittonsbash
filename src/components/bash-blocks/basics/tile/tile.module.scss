@@ -3,14 +3,12 @@
 
 .clear {
     background-color: colors.$transparent;
-    overflow: hidden;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .solid {
     background-color: colors.$white;
-    overflow: hidden;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -67,6 +65,7 @@
     display: grid;
     align-items: center;
     position: relative;
+    overflow: hidden;
 }
 
 .image {
@@ -88,20 +87,30 @@
     &Left {
         background: linear-gradient(
             90deg,
-            rgba(colors.$black, 0.5) 0%,
+            rgba(colors.$black, 0.4) 0%,
             rgba(colors.$black, 0.2) 40%,
             rgba(colors.$black, 0.1) 60%,
             rgba(colors.$black, 0) 100%
         );
     }
 
+    // &Right {
+    //     background: linear-gradient(
+    //         90deg,
+    //         rgba(colors.$white, 0.4) 0%,
+    //         rgba(colors.$white, 0.2) 40%,
+    //         rgba(colors.$white, 0.1) 60%,
+    //         rgba(colors.$white, 0) 100%
+    //     );
+    // }
+
     &Right {
         background: linear-gradient(
             90deg,
-            rgba(colors.$white, 0.5) 0%,
-            rgba(colors.$white, 0.2) 40%,
-            rgba(colors.$white, 0.1) 60%,
-            rgba(colors.$white, 0) 100%
+            rgba(colors.$white, 0) 0%,
+            rgba(colors.$white, 0.1) 40%,
+            rgba(colors.$white, 0.2) 60%,
+            rgba(colors.$white, 0.4) 100%
         );
     }
 }

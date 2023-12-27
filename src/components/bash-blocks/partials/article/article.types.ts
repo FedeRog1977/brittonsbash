@@ -5,4 +5,5 @@ export type ArticleProps = {
     sections: TypographyTextProps[]
     fontFamily?: TypographyProps['fontFamily']
     textAlign?: AlignProps
+    extendParagraphMargins?: boolean
 } & MarginProps
