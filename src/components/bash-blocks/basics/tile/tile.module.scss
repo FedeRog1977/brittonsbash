@@ -1,16 +1,21 @@
-.clear {
-    background-color: var(--transparrent);
-    margin: 20px 0px 20px 0px;
-    padding: 50px 75px 50px 75px;
+@use '../../reference/styles/colors' as colors;
+@use '../../reference/styles/corners' as corners;
 
-    @media (max-width: 768px) {
-        padding: 20px;
-    }
+.clear {
+    background-color: colors.$transparent;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .solid {
-    background-color: var(--white);
-    margin: 20px 0px 20px 0px;
+    background-color: colors.$white;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contain {
     padding: 50px 75px 50px 75px;
 
     @media (max-width: 768px) {
@@ -23,13 +28,17 @@
 }
 
 .outline {
-    border: 1px solid var(--darker-grey);
+    border: 1px solid colors.$darkerGrey;
 }
 
 .margins {
     margin-left: 75px;
     margin-right: 75px;
-    border-radius: var(--corners-large);
+    border-radius: corners.$large;
+
+    @media (max-width: 768px) {
+        border-radius: none;
+    }
 }
 
 .align {
@@ -54,15 +63,50 @@
     }
 }
 
+.stacked {
+    display: grid;
+    align-items: center;
+    position: relative;
+}
+
+.image {
+    display: block;
+    object-fit: fill;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
 .gradient {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     z-index: 500;
+    position: absolute;
 
     &Left {
         background: linear-gradient(
             90deg,
-            rgba(0, 0, 0, 1) 100%,
-            rgba(0, 0, 0, 0.5) 50%,
-            rgba(0, 0, 0, 1) 0%
+            rgba(colors.$black, 0.5) 0%,
+            rgba(colors.$black, 0.2) 40%,
+            rgba(colors.$black, 0.1) 60%,
+            rgba(colors.$black, 0) 100%
         );
     }
+
+    &Right {
+        background: linear-gradient(
+            90deg,
+            rgba(colors.$white, 0.5) 0%,
+            rgba(colors.$white, 0.2) 40%,
+            rgba(colors.$white, 0.1) 60%,
+            rgba(colors.$white, 0) 100%
+        );
+    }
+}
+
+.text {
+    z-index: 1000;
+    position: absolute;
 }

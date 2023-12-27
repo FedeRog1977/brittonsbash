@@ -5,6 +5,7 @@ export type TileProps = {
     top?: boolean
     outline?: boolean
     margins?: boolean
+    stacked?: boolean
     img?: string
     gradient?: {
         start: 'left' | 'right' | 'center'
