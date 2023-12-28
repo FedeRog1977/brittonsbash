@@ -10,7 +10,7 @@ export const ContentTile: React.FC<ContentTileProps> = ({
         stacked
         margins
         img={props.img}
-        // gradient={{ start: 'right' }}
+        gradient={{ start: 'left' }}
     >
         <Typography
             type="h4"
@@ -18,13 +18,12 @@ export const ContentTile: React.FC<ContentTileProps> = ({
             textAlign={props.textAlign ? props.textAlign : 'center'}
             color="white"
             light
-            shadow
         />
         <Typography
             type="t1"
             content={props.heading}
             textAlign={props.textAlign ? props.textAlign : 'center'}
-            color="darkerGrey90"
+            color="white"
             light
             paragraphMargins
         />
@@ -41,7 +40,6 @@ export const ContentTile: React.FC<ContentTileProps> = ({
                 textAlign="justify"
                 color="white"
                 light
-                // shadow
                 paragraphMargins
             />
         )}

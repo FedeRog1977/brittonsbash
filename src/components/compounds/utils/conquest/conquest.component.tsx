@@ -149,56 +149,39 @@ export const Conquest = () => {
 
     return (
         <>
-            <div className="subHeaderConquest">
-                <div className="subHeaderConquestNavigation">
-                    <nav>
-                        <ul>
-                            <li>
-                                <span
-                                    onClick={currLocClick}
-                                    className="currLoc"
-                                >
-                                    Location {locationToggle}
-                                    <span className="currLocHover">
-                                        <small>
-                                            Click map to pan to location
-                                        </small>
-                                    </span>
-                                </span>
-                            </li>
-                            {/* <li><a>Nearest Munro</a></li>
+            <ul>
+                <li>
+                    <span onClick={currLocClick} className="currLoc">
+                        Location {locationToggle}
+                        <span className="currLocHover">
+                            <small>Click map to pan to location</small>
+                        </span>
+                    </span>
+                </li>
+                {/* <li><a>Nearest Munro</a></li>
                             <li><a>Nearest Corbett</a></li> */}
-                            <li>|</li>
-                            <li>
-                                <span onClick={munroClick}>Munros</span>
-                            </li>
-                            <li>
-                                <span onClick={corbettClick}>Corbetts</span>
-                            </li>
-                            <li>|</li>
-                            <li>
-                                <span onClick={landmassesClick}>Routes</span>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+                <li>|</li>
+                <li>
+                    <span onClick={munroClick}>Munros</span>
+                </li>
+                <li>
+                    <span onClick={corbettClick}>Corbetts</span>
+                </li>
+                <li>|</li>
+                <li>
+                    <span onClick={landmassesClick}>Routes</span>
+                </li>
+            </ul>
             {showLandmasses && (
-                <div className="subHeaderConquest">
-                    <div className="subHeaderConquestNavigation">
-                        <nav>
-                            <ul>
-                                <li>
-                                    <LandmassList
-                                        id="searchRoute"
-                                        func={landmassesSelect}
-                                    />
-                                </li>
-                                {showRoutesList && <li>{routesList}</li>}
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
+                <ul>
+                    <li>
+                        <LandmassList
+                            id="searchRoute"
+                            func={landmassesSelect}
+                        />
+                    </li>
+                    {showRoutesList && <li>{routesList}</li>}
+                </ul>
             )}
             <MapContainer
                 // crs={crs}
