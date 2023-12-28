@@ -32,10 +32,14 @@
 .margins {
     margin-left: 75px;
     margin-right: 75px;
-    border-radius: corners.$large;
+
+    @media (min-width: 768px) {
+        border-radius: corners.$large;
+    }
 
     @media (max-width: 768px) {
         border-radius: none;
+        margin: 0px;
     }
 }
 
@@ -74,6 +78,10 @@
     height: 100%;
     width: 100%;
     z-index: -1;
+
+    @media (max-width: 768px) {
+        height: 90vh;
+    }
 }
 
 .gradient {
