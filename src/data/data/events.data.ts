@@ -2,6 +2,98 @@ export const eventData = {
     2023: [
         {
             id: 'E2023049',
+            names: ['Golden Hour – Meeting Your Heroes'],
+            startDate: '29th of December',
+            description: 'Murray Wilkie.',
+            images: [
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/golden-hour/1.jpg',
+                    alt: 'golden-hour-1',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/golden-hour/2.jpg',
+                    alt: 'golden-hour-2',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/golden-hour/3.jpg',
+                    alt: 'golden-hour-3',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/golden-hour/4.jpg',
+                    alt: 'golden-hour-4',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/golden-hour/5.jpg',
+                    alt: 'golden-hour-5',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/golden-hour/6.jpg',
+                    alt: 'golden-hour-6',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/golden-hour/7.jpg',
+                    alt: 'golden-hour-7',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/golden-hour/8.jpg',
+                    alt: 'golden-hour-8',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/golden-hour/9.jpg',
+                    alt: 'golden-hour-9',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/golden-hour/10.jpg',
+                    alt: 'golden-hour-10',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/golden-hour/11.jpg',
+                    alt: 'golden-hour-11',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/golden-hour/12.jpg',
+                    alt: 'golden-hour-12',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/golden-hour/13.jpg',
+                    alt: 'golden-hour-13',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/golden-hour/14.jpg',
+                    alt: 'golden-hour-14',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/golden-hour/15.jpg',
+                    alt: 'golden-hour-15',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/golden-hour/16.jpg',
+                    alt: 'golden-hour-16',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/golden-hour/17.jpg',
+                    alt: 'golden-hour-17',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/golden-hour/18.jpg',
+                    alt: 'golden-hour-18',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/golden-hour/19.jpg',
+                    alt: 'golden-hour-19',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/golden-hour/20.jpg',
+                    alt: 'golden-hour-20',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/golden-hour/21.jpg',
+                    alt: 'golden-hour-21',
+                },
+            ],
+        },
+        {
+            id: 'E2023049',
             names: ['Christmas 2023'],
             startDate: '22nd of December',
             endDate: '26th of December',

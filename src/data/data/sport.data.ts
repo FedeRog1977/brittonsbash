@@ -352,11 +352,21 @@ export const sportData = {
         ],
         projects: [
             {
+                id: 'P2023029',
+                name: 'Golden Hour – Meeting Your Heroes',
+                distance: 11.0,
+                elevation: 5230,
+                time: '5:21:49',
+                companionship: 2,
+                munros: ['Beinn Narnain', 'Beinn Ìme'],
+                corbetts: ['Ben Arthur (The Cobbler)'],
+            },
+            {
                 id: 'P2023028',
                 name: 'Home',
                 distance: 12.1,
                 elevation: 4098,
-                time: '4:42:52	',
+                time: '4:42:52',
                 companionship: 1,
                 munros: ['Meall na Teanga', 'Sròn a’ Choire Ghairbh'],
             },
@@ -520,7 +530,7 @@ export const sportData = {
                 distance: 14.5,
                 elevation: 5427,
                 time: '5:08:22',
-                companionship: 1,
+                companionship: 0,
                 munros: ['Beinn Narnain', 'Beinn Ìme'],
                 corbetts: ['Ben Arthur (The Cobbler)'],
             },
@@ -664,6 +674,13 @@ export const sportData = {
             },
         ],
         miles: [
+            {
+                id: 'M2023079',
+                name: 'Waterfoot',
+                distance: 10.11,
+                elevation: 686,
+                time: '1:54:44',
+            },
             {
                 id: 'M2023078',
                 name: 'Waterfoot',
