@@ -1,7 +1,7 @@
-import { TileProps } from '../..'
+import { Gradient, TileProps } from '../..'
 import cx from 'classnames'
 import styles from './tile.module.scss'
-import { toSentenceCase, toUpperCase } from '../../../../scripts'
+import { toSentenceCase } from '../../../../scripts'
 
 export const Tile: React.FC<TileProps> = ({ ...props }: TileProps) => {
     const classNames = cx(
@@ -23,14 +23,6 @@ export const Tile: React.FC<TileProps> = ({ ...props }: TileProps) => {
 
     const classNamesImage = cx({ [styles.image]: props.img })
 
-    const classNamesGradient = cx(styles.gradient, {
-        [styles[
-            `gradient${toUpperCase(
-                props.gradient?.start ? props.gradient.start : ''
-            )}`
-        ]]: props.gradient,
-    })
-
     const classNamesText = cx({
         [styles.text]: props.stacked,
         [styles.contain]: props.stacked,
@@ -39,7 +31,15 @@ export const Tile: React.FC<TileProps> = ({ ...props }: TileProps) => {
     const content = (
         <>
             {props.img && <img className={classNamesImage} src={props.img} />}
-            {props.gradient && <div className={classNamesGradient}></div>}
+            {props.gradient && (
+                <Gradient
+                    value={props.gradient.value}
+                    opacity={props.gradient.opacity}
+                    start={props.gradient.start}
+                    fill={props.gradient.fill}
+                    hide={props.gradient.hide}
+                />
+            )}
             <div className={classNamesText}>{props.children}</div>
         </>
     )

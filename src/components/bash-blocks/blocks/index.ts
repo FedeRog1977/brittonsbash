@@ -1,2 +1,2 @@
-export * from './content-tile'
+export * from './image-tile'
 export * from './modal'

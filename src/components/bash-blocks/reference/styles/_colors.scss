@@ -1,11 +1,53 @@
+@use 'opacity' as opacity;
+
+// Black
+
 $black: #000000;
-$darkerGrey: #282828;
-$darkerGrey90: #28282890;
-$darkerGrey50: #28282850;
-$darkGrey: #303030;
-$mediumGrey: #585858;
-$lightGrey: #a2a2a2;
-$lighterGrey: #f5f5f5;
-$lightBlue: #96b9ee;
+$black-60: rgba($black, opacity.$opacity-60);
+$black-40: rgba($black, opacity.$opacity-40);
+$black-20: rgba($black, opacity.$opacity-20);
+
+// Grey
+
+$darker-grey: #282828;
+$darker-grey-60: rgba($darker-grey, opacity.$opacity-60);
+$darker-grey-40: rgba($darker-grey, opacity.$opacity-40);
+$darker-grey-20: rgba($darker-grey, opacity.$opacity-20);
+
+$dark-grey: #303030;
+$dark-grey-60: rgba($dark-grey, opacity.$opacity-60);
+$dark-grey-40: rgba($dark-grey, opacity.$opacity-40);
+$dark-grey-20: rgba($dark-grey, opacity.$opacity-20);
+
+$medium-grey: #585858;
+$medium-grey-60: rgba($medium-grey, opacity.$opacity-60);
+$medium-grey-40: rgba($medium-grey, opacity.$opacity-40);
+$medium-grey-20: rgba($medium-grey, opacity.$opacity-20);
+
+$light-grey: #a2a2a2;
+$light-grey-60: rgba($light-grey, opacity.$opacity-60);
+$light-grey-40: rgba($light-grey, opacity.$opacity-40);
+$light-grey-20: rgba($light-grey, opacity.$opacity-20);
+
+$lighter-grey: #f5f5f5;
+$lighter-grey-60: rgba($lighter-grey, opacity.$opacity-60);
+$lighter-grey-40: rgba($lighter-grey, opacity.$opacity-40);
+$lighter-grey-20: rgba($lighter-grey, opacity.$opacity-20);
+
+// Blue
+
+$light-blue: #96b9ee;
+$light-blue-60: rgba($light-blue, opacity.$opacity-60);
+$light-blue-40: rgba($light-blue, opacity.$opacity-40);
+$light-blue-20: rgba($light-blue, opacity.$opacity-20);
+
+// White
+
 $white: #ffffff;
+$white-60: rgba($white, opacity.$opacity-60);
+$white-40: rgba($white, opacity.$opacity-40);
+$white-20: rgba($white, opacity.$opacity-20);
+
+// Transparent
+
 $transparent: #ffffff00;

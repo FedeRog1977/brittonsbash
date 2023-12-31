@@ -26,7 +26,7 @@
 }
 
 .outline {
-    border: 1px solid colors.$darkerGrey;
+    border: 1px solid colors.$darker-grey;
 }
 
 .margins {
@@ -81,45 +81,6 @@
 
     @media (max-width: 768px) {
         height: 90vh;
-    }
-}
-
-.gradient {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 500;
-    position: absolute;
-
-    &Left {
-        background: linear-gradient(
-            90deg,
-            rgba(colors.$darkerGrey, 0.6) 0%,
-            rgba(colors.$darkerGrey, 0.4) 40%,
-            rgba(colors.$darkerGrey, 0.2) 60%,
-            rgba(colors.$darkerGrey, 0) 100%
-        );
-    }
-
-    // &Right {
-    //     background: linear-gradient(
-    //         90deg,
-    //         rgba(colors.$white, 0.4) 0%,
-    //         rgba(colors.$white, 0.2) 40%,
-    //         rgba(colors.$white, 0.1) 60%,
-    //         rgba(colors.$white, 0) 100%
-    //     );
-    // }
-
-    &Right {
-        background: linear-gradient(
-            90deg,
-            rgba(colors.$white, 0) 0%,
-            rgba(colors.$white, 0.1) 40%,
-            rgba(colors.$white, 0.2) 60%,
-            rgba(colors.$white, 0.4) 100%
-        );
     }
 }
 

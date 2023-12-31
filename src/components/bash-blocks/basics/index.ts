@@ -1,5 +1,6 @@
 export * from './background'
 export * from './flex'
+export * from './gradient'
 export * from './grid'
 export * from './search'
 export * from './spacing'

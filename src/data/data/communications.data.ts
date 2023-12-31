@@ -18,6 +18,8 @@ export const communicationsData = {
                 'Oakley',
                 'Black Diamond',
                 'DMM Wales',
+                'Petzl',
+                'Grivel',
                 'Tiso',
                 'Cairngorm Mountain Sports',
                 'Nevisport',

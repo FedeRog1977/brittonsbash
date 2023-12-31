@@ -1,4 +1,5 @@
 import { AlignProps } from '../../reference'
+import { GradientProps } from '../gradient'
 
 export type TileProps = {
     type: 'clear' | 'solid'
@@ -7,9 +8,7 @@ export type TileProps = {
     margins?: boolean
     stacked?: boolean
     img?: string
-    gradient?: {
-        start: 'left' | 'right' | 'center'
-    }
+    gradient?: GradientProps
     textAlign?: AlignProps
     children: React.ReactNode
     anchor?: string

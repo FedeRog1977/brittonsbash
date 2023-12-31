@@ -1,11 +1,11 @@
 import { Background, Tile, Typography } from '../bash-blocks'
-import { ContentTile } from '../bash-blocks'
+import { ImageTile } from '../bash-blocks'
 import introTileImg from '../../media/images/pages/intro-tile.jpg'
 
 export const Home = () => (
     <>
         <Background type="logo" content="BrittonsBashRC" />
-        <ContentTile
+        <ImageTile
             img={introTileImg}
             heading="Welcome to BrittonsBashRC"
             subHeading="Where autism aligns at its finest"
@@ -25,7 +25,6 @@ export const Home = () => (
                     light: true,
                 },
             ]}
-            textAlign="left"
             ctas={[
                 { content: 'Instant Gram', href: '#/blog/instant-gram' },
                 { content: 'Sport', href: '#/blog/sport' },
