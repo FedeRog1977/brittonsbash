@@ -5,6 +5,9 @@ export function useOpenWeatherCall(latIn: number, lonIn: number) {
     const [dailyResult, setDailyResult] = useState<DailyProps[]>([])
     const [hourlyResult, setHourlyResult] = useState<HourlyProps[]>([])
 
+    // Sample URL
+    // https://api.openweathermap.org/data/3.0/onecall?lat=50.5&lon=4.5&appid=6008c47adda4d19b4055c7058a622879&units=metric&lang=en
+
     useEffect(() => {
         const url = 'https://api.openweathermap.org/data/3.0/onecall?'
         const lat = `${latIn}`
