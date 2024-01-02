@@ -7,17 +7,23 @@ author:
 
 # General
 
+-   Add 2024 support to anywhere necessary
 -   Scotland's Mountains API for routes
--   Fix tile modules
--   Fix tile gradient
 -   Fix table scroll background bug
--   Add travel key in communications
+-   Finish travel key in communications
 -   Add dynamic variables in modules
 -   Use SCSS reference files
 -   Discontinue index.scss in main directory
 -   Add onClicks to ImageMatrix images for single image, not slider
 -   Look into type narrowing
 -   Map grid parent align autos
+
+# BashBlocks
+
+-   Drawer partial component
+-   Drawer column block component
+-   Drawer array block component
+-   Tidy-up prop imports and conditionals on functional components
 
 # Library
 
