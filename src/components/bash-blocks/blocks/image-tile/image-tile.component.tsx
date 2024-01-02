@@ -18,6 +18,13 @@ export const ImageTile: React.FC<ImageTileProps> = ({
     const handleGridText = [textAlign === 'left' ? 1 : 2, ctas ? 2 : 1]
     const handleGridCtas = [textAlign === 'left' ? 2 : 1, 2]
 
+    const handleGridCtasAlign =
+        textAlign === 'left'
+            ? 'end'
+            : textAlign === 'right'
+            ? 'start'
+            : 'center'
+
     return (
         <Tile type="clear" stacked margins img={img} gradient={gradient}>
             <Grid alignColumns="auto auto" columnGap={80} alignItems="center">
@@ -61,7 +68,7 @@ export const ImageTile: React.FC<ImageTileProps> = ({
                         <Grid
                             alignRows="auto"
                             rowGap={20}
-                            justifyItems="center"
+                            justifyItems={handleGridCtasAlign}
                         >
                             {ctas?.map(({ content, href }: CtaProps, index) => (
                                 <Grid rowItem={[index, ctas.length]}>

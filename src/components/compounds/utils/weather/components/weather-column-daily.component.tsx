@@ -1,20 +1,15 @@
 import {
-    faCloudRain,
-    faMoon,
-    faSun,
     faTemperatureHigh,
     faTemperatureLow,
 } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     toDate,
-    toTemperature,
     toPrecipitation,
     toBearing,
     toSpeed,
     toSentenceCase,
 } from '../../../../../scripts'
-import { Flex, Spacing, Typography } from '../../../../bash-blocks'
+import { Flex, Grid, Spacing, Typography } from '../../../../bash-blocks'
 import { WeatherIcon, WeatherTemperature } from '.'
 
 export const WeatherColumnDaily = ({
@@ -25,8 +20,8 @@ export const WeatherColumnDaily = ({
     desc,
     tempMax,
     tempMin,
-    tempFlDay,
-    tempFlNight,
+    // tempFlDay,
+    // tempFlNight,
     windDeg,
     windSpd,
     pressure,
@@ -37,7 +32,6 @@ export const WeatherColumnDaily = ({
     ss,
 }: any) => {
     const { weekday, dayOfMonth } = toDate(dt)
-    const temperature = toTemperature(temp)
     const precipitation = toPrecipitation(pop)
     const { time: sunrise } = toDate(sr)
     const { time: sunset } = toDate(ss)
@@ -49,93 +43,69 @@ export const WeatherColumnDaily = ({
     const speed = toSpeed(windSpd, true)
 
     return (
-        <Spacing mX={5}>
-            <Spacing
-                pX={20}
-                pY={20}
-                backgroundColor="var(--lighter-grey)"
-                textAlign="center"
-            >
+        <>
+            <Spacing pX={20} pY={20} textAlign="center">
                 <Typography type="h4" content={weekday} />
-                <Typography type="body" content={dayOfMonth} />
-                <Typography type="h3" content={<WeatherIcon icon={icon} />} />
-                <Typography type="h4" content={temperature} />
+                <Typography type="body" content={dayOfMonth} paragraphMargins />
+                <Typography
+                    type="h1"
+                    content={<WeatherIcon icon={icon} />}
+                    paragraphMargins
+                />
+                <Typography type="body" content={precipitation} />
                 <Typography
                     type="body"
-                    content={
-                        <>
-                            <FontAwesomeIcon icon={faCloudRain} />
-                            &nbsp;{precipitation}
-                        </>
-                    }
-                />
-                <Typography
-                    type="footnote"
                     content={toSentenceCase(desc)}
-                    inline
+                    paragraphMargins
                 />
-                <Flex>
-                    <Flex item>
-                        <Spacing textAlign="center">
-                            <Typography
-                                type="footnote"
-                                content="Sunrise:"
-                                boldFace
-                            />
-                            <Typography type="footnote" content={sunrise} />
-                        </Spacing>
-                    </Flex>
-                    <Flex item>
-                        <Spacing textAlign="center">
-                            <Typography
-                                type="footnote"
-                                content="Sunset:"
-                                boldFace
-                            />
-                            <Typography type="footnote" content={sunset} />
-                        </Spacing>
-                    </Flex>
-                </Flex>
+                <Grid alignColumns="auto">
+                    <Grid columnItem={[1, 2]}>
+                        <Typography
+                            type="footnote"
+                            content="Sunrise:"
+                            boldFace
+                        />
+                        <Typography type="footnote" content={sunrise} />
+                    </Grid>
+                    <Grid columnItem={[2, 2]}>
+                        <Typography
+                            type="footnote"
+                            content="Sunset:"
+                            boldFace
+                        />
+                        <Typography type="footnote" content={sunset} />
+                    </Grid>
+                </Grid>
             </Spacing>
-            <Spacing pY={20} backgroundColor="var(--lighter-grey)">
-                <Flex>
-                    <Flex item>
+            <Spacing pY={20}>
+                <Grid alignColumns="auto">
+                    <Grid columnItem={[1, 3]}>
+                        <WeatherTemperature
+                            icon={faTemperatureHigh}
+                            temp={temp}
+                        />
+                    </Grid>
+                    <Grid columnItem={[2, 3]}>
                         <WeatherTemperature
                             icon={faTemperatureHigh}
                             temp={tempMax}
                         />
-                    </Flex>
-                    <Flex item>
+                    </Grid>
+                    <Grid columnItem={[3, 3]}>
                         <WeatherTemperature
                             icon={faTemperatureLow}
                             temp={tempMin}
                         />
-                    </Flex>
-                    <Flex item>
-                        <WeatherTemperature icon={faSun} temp={tempFlDay} />
-                    </Flex>
-                    <Flex item>
-                        <WeatherTemperature icon={faMoon} temp={tempFlNight} />
-                    </Flex>
-                </Flex>
+                    </Grid>
+                </Grid>
             </Spacing>
-            <Spacing
-                pX={20}
-                pY={20}
-                backgroundColor="var(--lighter-grey)"
-                textAlign="center"
-            >
+            <Spacing pX={20} pY={20} textAlign="center">
                 <Typography type="body" content={bearingCompass} />
                 <Typography type="body" content={bearingArrow} />
                 <Typography type="footnote" content={bearing} />
                 <Typography type="footnote" content={speed} boldFace />
             </Spacing>
-            <Spacing
-                pX={20}
-                pY={20}
-                backgroundColor="var(--lighter-grey)"
-                textAlign="center"
-            >
+            <Spacing pX={20} pY={20} textAlign="center">
                 <Flex>
                     <Flex item>
                         <Spacing textAlign="center" mR={2.5}>
@@ -191,6 +161,6 @@ export const WeatherColumnDaily = ({
                     </Flex>
                 </Flex>
             </Spacing>
-        </Spacing>
+        </>
     )
 }

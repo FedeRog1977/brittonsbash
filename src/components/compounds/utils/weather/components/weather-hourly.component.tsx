@@ -1,17 +1,16 @@
 import { WeatherColumnHourly } from '.'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { useOpenWeatherCall } from '../../../../../scripts'
-import { Flex } from '../../../../bash-blocks'
+import { Flex, Grid } from '../../../../bash-blocks'
 
 export const WeatherHourly = ({ latIn, lonIn }: any) => {
     const { hourlyResult } = useOpenWeatherCall(latIn, lonIn)
 
     return (
-        <Flex>
-            {hourlyResult.slice(0, 7).map((value, idx) => (
-                <Flex item>
+        <Grid alignColumns="auto">
+            {hourlyResult.slice(0, 7).map((value, index) => (
+                <Grid columnItem={[index, 7]} key={index}>
                     <WeatherColumnHourly
-                        key={idx}
                         dt={value.dt}
                         icon={value.weather[0].icon}
                         temp={value.temp}
@@ -26,8 +25,8 @@ export const WeatherHourly = ({ latIn, lonIn }: any) => {
                         vb={value.visibility}
                         uvi={value.uvi}
                     />
-                </Flex>
+                </Grid>
             ))}
-        </Flex>
+        </Grid>
     )
 }

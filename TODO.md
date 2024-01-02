@@ -80,7 +80,11 @@ author:
 
 ## Weather
 
--   Refactor page styling
+-   Fix GeoLocation default
+-   Fix search component formatting
+-   Match reformatting of hourly column to daily column
+-   Refactor look of desktop components
+-   Add completely new components for mobile
 
 ## Conquest
 

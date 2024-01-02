@@ -1,6 +1,6 @@
 import { WeatherColumnDaily, WeatherHourly } from '.'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
-import { Button, Flex, Spacing } from '../../../../bash-blocks'
+import { Button, Flex, Grid, Spacing } from '../../../../bash-blocks'
 import {
     useShowElement,
     useOpenWeatherCall,
@@ -14,11 +14,10 @@ export const WeatherDaily = ({ latIn, lonIn }: any) => {
 
     return (
         <>
-            <Flex>
-                {dailyResult.slice(0, 7).map((value, idx) => (
-                    <Flex item>
+            <Grid alignColumns="auto" columnGap={10}>
+                {dailyResult.slice(0, 7).map((value, index) => (
+                    <Grid columnItem={[1, 7]} key={index}>
                         <WeatherColumnDaily
-                            key={idx}
                             dt={value.dt}
                             icon={value.weather[0].icon}
                             temp={value.temp.day}
@@ -37,9 +36,9 @@ export const WeatherDaily = ({ latIn, lonIn }: any) => {
                             dp={value.dew_point}
                             uvi={value.uvi}
                         />
-                    </Flex>
+                    </Grid>
                 ))}
-            </Flex>
+            </Grid>
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                 <Button
                     type="regularClear"

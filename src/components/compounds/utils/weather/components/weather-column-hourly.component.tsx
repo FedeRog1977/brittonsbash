@@ -38,13 +38,8 @@ export const WeatherColumnHourly = ({
     const gusts = toSpeed(windGst, true)
 
     return (
-        <Spacing mX={5}>
-            <Spacing
-                pX={20}
-                pY={20}
-                backgroundColor="var(--lighter-grey)"
-                textAlign="center"
-            >
+        <>
+            <Spacing pX={20} pY={20} textAlign="center">
                 <Typography type="h4" content={hour} />
                 <Typography type="h3" content={<WeatherIcon icon={icon} />} />
                 <Typography type="h4" content={temperature} />
@@ -59,12 +54,7 @@ export const WeatherColumnHourly = ({
                     }
                 />
             </Spacing>
-            <Spacing
-                pX={20}
-                pY={20}
-                backgroundColor="var(--lighter-grey)"
-                textAlign="center"
-            >
+            <Spacing pX={20} pY={20} textAlign="center">
                 <Typography type="body" content={bearingCompass} />
                 <Typography type="body" content={bearingArrow} />
                 <Typography type="footnote" content={bearing} />
@@ -75,12 +65,7 @@ export const WeatherColumnHourly = ({
                     boldFace
                 />
             </Spacing>
-            <Spacing
-                pX={20}
-                pY={20}
-                backgroundColor="var(--lighter-grey)"
-                textAlign="center"
-            >
+            <Spacing pX={20} pY={20} textAlign="center">
                 <Flex>
                     <Flex item>
                         <Spacing textAlign="center" mR={2.5}>
@@ -147,6 +132,6 @@ export const WeatherColumnHourly = ({
                     </Flex>
                 </Flex>
             </Spacing>
-        </Spacing>
+        </>
     )
 }
