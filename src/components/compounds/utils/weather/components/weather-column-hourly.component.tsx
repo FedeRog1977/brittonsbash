@@ -39,7 +39,7 @@ export const WeatherColumnHourly = ({
 
     return (
         <>
-            <Spacing pX={20} pY={20} textAlign="center">
+            <Spacing pY={20} textAlign="center">
                 <Typography type="h4" content={hour} />
                 <Typography type="h3" content={<WeatherIcon icon={icon} />} />
                 <Typography type="h4" content={temperature} />
@@ -54,7 +54,7 @@ export const WeatherColumnHourly = ({
                     }
                 />
             </Spacing>
-            <Spacing pX={20} pY={20} textAlign="center">
+            <Spacing pY={20} textAlign="center">
                 <Typography type="body" content={bearingCompass} />
                 <Typography type="body" content={bearingArrow} />
                 <Typography type="footnote" content={bearing} />
@@ -65,7 +65,7 @@ export const WeatherColumnHourly = ({
                     boldFace
                 />
             </Spacing>
-            <Spacing pX={20} pY={20} textAlign="center">
+            <Spacing pY={20} textAlign="center">
                 <Flex>
                     <Flex item>
                         <Spacing textAlign="center" mR={2.5}>

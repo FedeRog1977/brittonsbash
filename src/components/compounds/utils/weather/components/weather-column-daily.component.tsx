@@ -44,7 +44,7 @@ export const WeatherColumnDaily = ({
 
     return (
         <>
-            <Spacing pX={20} pY={20} textAlign="center">
+            <Spacing pY={20} textAlign="center">
                 <Typography type="h4" content={weekday} />
                 <Typography type="body" content={dayOfMonth} paragraphMargins />
                 <Typography
@@ -99,13 +99,13 @@ export const WeatherColumnDaily = ({
                     </Grid>
                 </Grid>
             </Spacing>
-            <Spacing pX={20} pY={20} textAlign="center">
+            <Spacing pY={20} textAlign="center">
                 <Typography type="body" content={bearingCompass} />
                 <Typography type="body" content={bearingArrow} />
                 <Typography type="footnote" content={bearing} />
                 <Typography type="footnote" content={speed} boldFace />
             </Spacing>
-            <Spacing pX={20} pY={20} textAlign="center">
+            <Spacing pY={20} textAlign="center">
                 <Flex>
                     <Flex item>
                         <Spacing textAlign="center" mR={2.5}>
