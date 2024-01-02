@@ -60,20 +60,12 @@ export const WeatherColumnDaily = ({
                 />
                 <Grid alignColumns="auto">
                     <Grid columnItem={[1, 2]}>
-                        <Typography
-                            type="footnote"
-                            content="Sunrise:"
-                            boldFace
-                        />
-                        <Typography type="footnote" content={sunrise} />
+                        <Typography type="body" content="Sunrise:" boldFace />
+                        <Typography type="body" content={sunrise} />
                     </Grid>
                     <Grid columnItem={[2, 2]}>
-                        <Typography
-                            type="footnote"
-                            content="Sunset:"
-                            boldFace
-                        />
-                        <Typography type="footnote" content={sunset} />
+                        <Typography type="body" content="Sunset:" boldFace />
+                        <Typography type="body" content={sunset} />
                     </Grid>
                 </Grid>
             </Spacing>
