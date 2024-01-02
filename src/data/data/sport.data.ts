@@ -1,4 +1,44 @@
 export const sportData = {
+    2024: {
+        roadies: [
+            {
+                id: 'R2024001',
+                name: '',
+                distance: 0,
+                elevation: 0,
+                time: '',
+                speed: 0,
+            },
+        ],
+        projects: [
+            {
+                id: 'P2024001',
+                name: '',
+                distance: 0,
+                elevation: 0,
+                time: '',
+                companionship: 0,
+            },
+        ],
+        miles: [
+            {
+                id: 'M2024001',
+                name: 'Waterfoot',
+                distance: 10.1,
+                elevation: 545,
+                time: '1:57:32',
+            },
+        ],
+        xks: [
+            {
+                id: 'R2024001',
+                name: '',
+                distance: 0,
+                time: '',
+                pace: '',
+            },
+        ],
+    },
     2023: {
         roadies: [
             {
@@ -674,6 +714,13 @@ export const sportData = {
             },
         ],
         miles: [
+            {
+                id: 'M2023080',
+                name: 'Waterfoot',
+                distance: 10.01,
+                elevation: 541,
+                time: '1:54:52',
+            },
             {
                 id: 'M2023079',
                 name: 'Waterfoot',

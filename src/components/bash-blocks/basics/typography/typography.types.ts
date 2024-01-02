@@ -1,5 +1,10 @@
-import { ImageProps } from '../../partials'
-import { AlignProps, ColorProps, LinkProps, MarginProps } from '../../reference'
+import {
+    AlignProps,
+    ColorProps,
+    ImageProps,
+    LinkProps,
+    MarginProps,
+} from '../../reference'
 
 export type TypographyTextProps = {
     type?:

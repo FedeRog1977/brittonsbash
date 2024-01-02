@@ -1,12 +1,14 @@
+import { GradientProps } from '../../basics'
 import { ArticleProps } from '../../partials'
-import { AlignProps } from '../../reference'
-import { CtaProps } from '../../reference/types/cta.types'
+import { AlignProps, CtaProps, ImageProps } from '../../reference'
 
 export type ImageTileProps = {
-    img?: string
+    img?: ImageProps
+    gradient?: GradientProps
     heading: string
     subHeading?: string
     body?: string | ArticleProps['sections']
-    ctas: CtaProps[]
+    ctas?: CtaProps[]
     textAlign?: AlignProps
+    invert?: boolean
 }

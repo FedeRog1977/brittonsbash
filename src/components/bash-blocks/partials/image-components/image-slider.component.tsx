@@ -6,10 +6,11 @@ import {
     faEject,
     faExchange,
 } from '@fortawesome/free-solid-svg-icons'
-import styles from './image.module.scss'
+import styles from './image-components.module.scss'
 import { useScreenWidth } from '../../../../scripts'
 import { Typography } from '../../basics'
-import { ImageSliderProps, ImageProps } from './image.types'
+import { ImageSliderProps } from './image-components.types'
+import { ImageProps } from '../../reference'
 
 export const ImageSlider: React.FC<ImageSliderProps> = ({
     ...props

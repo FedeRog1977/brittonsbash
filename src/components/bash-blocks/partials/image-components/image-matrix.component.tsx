@@ -1,8 +1,9 @@
 import { formatItems } from '../../../../scripts'
-import styles from './image.module.scss'
+import styles from './image-components.module.scss'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { Flex, Typography } from '../../basics'
-import { ImageMatrixProps, ImageProps } from '.'
+import { ImageMatrixProps } from '.'
+import { ImageProps } from '../../reference'
 
 export const ImageMatrix: React.FC<ImageMatrixProps> = ({
     ...props

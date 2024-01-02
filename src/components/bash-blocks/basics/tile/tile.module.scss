@@ -72,18 +72,6 @@
     overflow: hidden;
 }
 
-.image {
-    display: block;
-    object-fit: fill;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-
-    @media (max-width: 768px) {
-        height: 90vh;
-    }
-}
-
 .text {
     z-index: 1000;
     position: absolute;

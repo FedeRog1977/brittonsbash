@@ -1,4 +1,4 @@
-import { AlignProps } from '../../reference'
+import { AlignProps, ImageProps } from '../../reference'
 import { GradientProps } from '../gradient'
 
 export type TileProps = {
@@ -7,7 +7,7 @@ export type TileProps = {
     outline?: boolean
     margins?: boolean
     stacked?: boolean
-    img?: string
+    img?: ImageProps
     gradient?: GradientProps
     textAlign?: AlignProps
     children: React.ReactNode

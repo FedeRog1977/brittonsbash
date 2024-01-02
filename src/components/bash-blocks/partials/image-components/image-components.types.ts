@@ -1,8 +1,4 @@
-export type ImageProps = {
-    url: string
-    alt: string
-    description?: string
-}
+import { ImageProps } from '../../reference'
 
 export type ImageMatrixProps = {
     items: ImageProps[]

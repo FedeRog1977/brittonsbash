@@ -1,4 +1,4 @@
-@use '../../reference/styles' as styles;
+@use '../../reference' as styles;
 
 .gradient {
     width: 100%;
@@ -8,8 +8,6 @@
     left: 0;
     z-index: 500;
 }
-
-// TODO: Make these responsive
 
 .dark {
     &20 {
