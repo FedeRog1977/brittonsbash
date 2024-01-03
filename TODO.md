@@ -20,8 +20,9 @@ author:
 
 # BashBlocks
 
--   Merge article block and library block
--   Fix positioning conditional of ctas on image block
+-   Add link functionality to title tile
+-   Merge article block and library tile
+-   Fix positioning conditional of ctas on image tile
 -   Tidy-up prop imports and conditionals on functional components
 
 # Library
