@@ -30,12 +30,29 @@ export const WeatherTemperature: React.FC<WeatherTemperatureProps> = ({
     return (
         <div style={{ background: backgroundColor }}>
             <Spacing pY={10} textAlign="center">
-                <FontAwesomeIcon icon={props.icon as IconProp} size="2xs" />
                 <Typography
                     type="footnote"
                     content={toTemperature(props.temp)}
                     color={fontColor}
+                    inline
                 />
+                {props.suffix && (
+                    <Typography
+                        type="footnote"
+                        content={<>&nbsp;{props.suffix}</>}
+                        color={fontColor}
+                        inline
+                    />
+                )}
+                {props.icon && (
+                    <>
+                        &nbsp;
+                        <FontAwesomeIcon
+                            icon={props.icon as IconProp}
+                            size="2xs"
+                        />
+                    </>
+                )}
             </Spacing>
         </div>
     )

@@ -1,6 +1,5 @@
 import { WeatherColumnDaily, WeatherHourly } from '.'
-import 'react-responsive-carousel/lib/styles/carousel.min.css'
-import { Button, Flex, Grid, Spacing } from '../../../../bash-blocks'
+import { Button, Grid, Spacing } from '../../../../bash-blocks'
 import {
     useShowElement,
     useOpenWeatherCall,

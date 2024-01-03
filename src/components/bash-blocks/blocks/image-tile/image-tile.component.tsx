@@ -1,4 +1,5 @@
 import { ImageTileProps } from '.'
+import { formatArticle } from '../../../../scripts'
 import { Grid, Tile, Typography } from '../../basics'
 import { Article, Button } from '../../partials'
 import { CtaProps } from '../../reference'
@@ -46,9 +47,17 @@ export const ImageTile: React.FC<ImageTileProps> = ({
                     />
                     {Array.isArray(body) ? (
                         <Article
-                            // TODO: properly deconstruct
-                            // sections={{...body, textAlign: "justify", color: handleInverseColor, light: true }}
-                            sections={body}
+                            sections={formatArticle(
+                                body,
+                                'body',
+                                handleInverseColor,
+                                false,
+                                false,
+                                false,
+                                'none',
+                                true,
+                                false
+                            )}
                             textAlign="justify"
                             extendParagraphMargins
                         />

@@ -1,4 +1,7 @@
 import {
+    faTemperature2,
+    faTemperatureArrowUp,
+    faTemperatureArrowDown,
     faTemperatureHigh,
     faTemperatureLow,
 } from '@fortawesome/free-solid-svg-icons'
@@ -72,22 +75,13 @@ export const WeatherColumnDaily = ({
             <Spacing pY={20}>
                 <Grid alignColumns="auto">
                     <Grid columnItem={[1, 3]}>
-                        <WeatherTemperature
-                            icon={faTemperatureHigh}
-                            temp={temp}
-                        />
+                        <WeatherTemperature temp={temp} />
                     </Grid>
                     <Grid columnItem={[2, 3]}>
-                        <WeatherTemperature
-                            icon={faTemperatureHigh}
-                            temp={tempMax}
-                        />
+                        <WeatherTemperature temp={tempMax} suffix="(H)" />
                     </Grid>
                     <Grid columnItem={[3, 3]}>
-                        <WeatherTemperature
-                            icon={faTemperatureLow}
-                            temp={tempMin}
-                        />
+                        <WeatherTemperature temp={tempMin} suffix="(L)" />
                     </Grid>
                 </Grid>
             </Spacing>

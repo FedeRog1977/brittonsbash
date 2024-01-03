@@ -1,4 +1,4 @@
-import { useScreenWidth } from '../../../../scripts'
+import { formatArticle, useScreenWidth } from '../../../../scripts'
 import { Spacing, Tile, Typography } from '../../basics'
 import { Article, ImageMatrix } from '../../partials'
 import { ArticleTileImageProps, ArticleTileProps } from './article-tile.types'
@@ -33,9 +33,17 @@ export const ArticleTile: React.FC<ArticleTileProps> = ({
             />
             {Array.isArray(body) ? (
                 <Article
-                    // TODO: properly deconstruct
-                    // sections={{...body, textAlign: "justify", color: handleInverseColor, light: true }}
-                    sections={body}
+                    sections={formatArticle(
+                        body,
+                        'body',
+                        'darkerGrey',
+                        false,
+                        false,
+                        false,
+                        'none',
+                        true,
+                        false
+                    )}
                     textAlign="justify"
                     extendParagraphMargins
                 />
@@ -65,9 +73,17 @@ export const ArticleTile: React.FC<ArticleTileProps> = ({
                         )}
                         {bodyOne && Array.isArray(bodyOne) ? (
                             <Article
-                                // TODO: properly deconstruct
-                                // sections={{...body, textAlign: "justify", color: handleInverseColor, light: true }}
-                                sections={bodyOne}
+                                sections={formatArticle(
+                                    bodyOne,
+                                    'body',
+                                    'darkerGrey',
+                                    false,
+                                    false,
+                                    false,
+                                    'none',
+                                    true,
+                                    false
+                                )}
                                 textAlign="justify"
                                 extendParagraphMargins
                             />
@@ -84,10 +100,21 @@ export const ArticleTile: React.FC<ArticleTileProps> = ({
                         <Spacing mY={isMobile && bodyTwo ? 15 : 30} />
                         {bodyTwo && Array.isArray(bodyTwo) ? (
                             <Article
-                                // TODO: properly deconstruct
-                                // sections={{...body, textAlign: "justify", color: handleInverseColor, light: true }}
-                                sections={bodyTwo}
+                                sections={formatArticle(
+                                    bodyTwo,
+                                    'body',
+                                    'darkerGrey',
+                                    false,
+                                    false,
+                                    false,
+                                    'none',
+                                    true,
+                                    false
+                                )}
                                 textAlign="justify"
+                                extendParagraphMargins={
+                                    !Boolean(index + 1 === imageMatrices.length)
+                                }
                             />
                         ) : (
                             <Typography
@@ -95,6 +122,9 @@ export const ArticleTile: React.FC<ArticleTileProps> = ({
                                 content={bodyTwo}
                                 textAlign="justify"
                                 light
+                                paragraphMargins={
+                                    !Boolean(index + 1 === imageMatrices.length)
+                                }
                             />
                         )}
                     </div>

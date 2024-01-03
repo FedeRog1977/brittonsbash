@@ -1,14 +1,11 @@
-import { faCloudRain } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     toDate,
-    toTemperature,
     toPrecipitation,
     toBearing,
     toSpeed,
 } from '../../../../../scripts'
-import { Flex, Spacing, Typography } from '../../../../bash-blocks'
-import { WeatherIcon } from '..'
+import { Flex, Grid, Spacing, Typography } from '../../../../bash-blocks'
+import { WeatherIcon, WeatherTemperature } from '..'
 
 export const WeatherColumnHourly = ({
     dt,
@@ -26,8 +23,6 @@ export const WeatherColumnHourly = ({
     uvi,
 }: any) => {
     const { hour } = toDate(dt)
-    const temperature = toTemperature(temp)
-    const temperatureFl = toTemperature(tempFl)
     const precipitation = toPrecipitation(pop)
     const {
         bearingFormatted: bearing,
@@ -40,19 +35,23 @@ export const WeatherColumnHourly = ({
     return (
         <>
             <Spacing pY={20} textAlign="center">
-                <Typography type="h4" content={hour} />
-                <Typography type="h3" content={<WeatherIcon icon={icon} />} />
-                <Typography type="h4" content={temperature} />
-                <Typography type="h4" content={temperatureFl + '(FL)'} />
+                <Typography type="h4" content={hour} paragraphMargins />
                 <Typography
-                    type="body"
-                    content={
-                        <>
-                            <FontAwesomeIcon icon={faCloudRain} />
-                            &nbsp;{precipitation}
-                        </>
-                    }
+                    type="h1"
+                    content={<WeatherIcon icon={icon} />}
+                    paragraphMargins
                 />
+                <Typography type="body" content={precipitation} />
+            </Spacing>
+            <Spacing pY={20}>
+                <Grid alignColumns="auto">
+                    <Grid columnItem={[1, 2]}>
+                        <WeatherTemperature temp={temp} />
+                    </Grid>
+                    <Grid columnItem={[1, 2]}>
+                        <WeatherTemperature temp={tempFl} suffix="(FL)" />
+                    </Grid>
+                </Grid>
             </Spacing>
             <Spacing pY={20} textAlign="center">
                 <Typography type="body" content={bearingCompass} />

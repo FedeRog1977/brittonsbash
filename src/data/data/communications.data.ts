@@ -20,6 +20,7 @@ export const communicationsData = {
                 'DMM Wales',
                 'Petzl',
                 'Grivel',
+                'Schōffel',
                 'Tiso',
                 'Cairngorm Mountain Sports',
                 'Nevisport',
