@@ -2,6 +2,7 @@ import { ArticleTile, Background } from '../bash-blocks'
 import { ImageTile } from '../bash-blocks'
 import { imageTestData } from '../../data'
 import introTileImg from '../../media/images/pages/intro-tile.jpg'
+import { LibraryTile } from '../bash-blocks/blocks/library-block/library-tile.component'
 
 export const Home = () => (
     <>
@@ -38,6 +39,29 @@ export const Home = () => (
                     items: imageTestData.slice(0, 3),
                     bodyTwo:
                         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                },
+            ]}
+        />
+        <LibraryTile
+            type="solid"
+            heading="Quick links"
+            bookShelves={[
+                {
+                    heading: 'My pages',
+                    items: [
+                        {
+                            content: 'Lewis Britton',
+                            url: 'https://lewisbritton.com/',
+                        },
+                        {
+                            content: 'Lewis Britton',
+                            url: 'https://lewisbritton.com/',
+                        },
+                        {
+                            content: 'Lewis Britton',
+                            url: 'https://lewisbritton.com/',
+                        },
+                    ],
                 },
             ]}
         />

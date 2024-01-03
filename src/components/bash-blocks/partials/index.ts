@@ -1,5 +1,6 @@
 export * from './article'
 export * from './article-preface'
+export * from './bookshelf'
 export * from './button'
 export * from './footer'
 export * from './footnote'

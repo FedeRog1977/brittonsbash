@@ -8,14 +8,14 @@ import { ImageProps } from '../../reference'
 export const ImageMatrix: React.FC<ImageMatrixProps> = ({
     ...props
 }: ImageMatrixProps) => {
-    const formattedItems = formatItems(
-        props.items,
-        props.columns ? props.columns : 3
+    const { formattedImageItems } = formatItems(
+        props.columns ? props.columns : 3,
+        props.items
     )
 
     return (
         <>
-            {formattedItems.map((row: ImageProps[]) => (
+            {formattedImageItems.map((row: ImageProps[]) => (
                 <Flex>
                     {row.map((rowItem: ImageProps) => (
                         <Flex item key={rowItem.alt}>

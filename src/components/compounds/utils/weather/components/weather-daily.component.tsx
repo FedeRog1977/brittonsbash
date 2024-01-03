@@ -45,6 +45,11 @@ export const WeatherDaily = ({ latIn, lonIn }: any) => {
                     transition
                     func={() => setShowElement(!showElement)}
                     funcResp={showElement}
+                    content={
+                        showElement
+                            ? 'Hide hourly forecast'
+                            : 'See hourly forecast'
+                    }
                 />
             </Spacing>
             {showElement && <WeatherHourly latIn={latIn} lonIn={lonIn} />}
