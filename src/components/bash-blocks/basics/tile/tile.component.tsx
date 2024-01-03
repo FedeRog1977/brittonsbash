@@ -11,7 +11,7 @@ export const Tile: React.FC<TileProps> = ({ ...props }: TileProps) => {
         {
             [styles.clear]: props.type === 'clear',
             [styles.solid]: props.type === 'solid',
-            [styles.contain]: !props.stacked,
+            [styles[`contain${props.dense ? 'Dense' : ''}`]]: !props.stacked,
             [styles.top]: props.top,
             [styles.stacked]: props.stacked,
             [styles.outline]: props.outline,

@@ -20,9 +20,8 @@ author:
 
 # BashBlocks
 
--   Drawer partial component
--   Drawer column block component
--   Drawer array block component
+-   Merge article block and library block
+-   Fix positioning conditional of ctas on image block
 -   Tidy-up prop imports and conditionals on functional components
 
 # Library

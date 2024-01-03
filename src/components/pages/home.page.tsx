@@ -1,4 +1,4 @@
-import { ArticleTile, Background, LibraryTile, TitleTile } from '../bash-blocks'
+import { ArticleTile, Background, LibraryTile } from '../bash-blocks'
 import { ImageTile } from '../bash-blocks'
 import { imageTestData } from '../../data'
 import introTileImg from '../../media/images/pages/intro-tile.jpg'
@@ -6,29 +6,6 @@ import introTileImg from '../../media/images/pages/intro-tile.jpg'
 export const Home = () => (
     <>
         <Background type="logo" content="BrittonsBashRC" />
-        <TitleTile
-            heading="Testing title block"
-            titleItems={[
-                {
-                    content: 'M.Sc. Software Development',
-                    subContent: 'Distinction 2021–2022',
-                },
-                {
-                    content: 'B.A. Finance (Honours)',
-                    subContent: 'First Class 2017–2021',
-                },
-            ]}
-            bodyItems={[
-                {
-                    content: 'M.Sc. Software Development',
-                    subContent: 'Distinction 2021–2022',
-                },
-                {
-                    content: 'B.A. Finance (Honours)',
-                    subContent: 'First Class 2017–2021',
-                },
-            ]}
-        />
         <ImageTile
             img={{ url: introTileImg, alt: 'intro-tile-image' }}
             gradient={{

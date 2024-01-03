@@ -15,15 +15,17 @@ export function formatArticle(
 
     sections.forEach((section: ArticleProps['sections'][0]) => {
         formattedSections.push({
-            type: type,
+            type: section.type ? section.type : type,
             content: section.content,
-            color: color,
-            boldFace: boldFace,
-            italicize: italicize,
-            smallCaps: smallCaps,
-            textDecoration: textDecoration,
-            light: light,
-            shadow: shadow,
+            color: section.color ? section.color : color,
+            boldFace: section.boldFace ? section.boldFace : boldFace,
+            italicize: section.italicize ? section.italicize : italicize,
+            smallCaps: section.smallCaps ? section.smallCaps : smallCaps,
+            textDecoration: section.textDecoration
+                ? section.textDecoration
+                : textDecoration,
+            light: section.light ? section.light : light,
+            shadow: section.shadow ? section.shadow : shadow,
         })
     })
 

@@ -6,7 +6,7 @@ export const TitleTile: React.FC<TitleTileProps> = ({
     titleItems,
     bodyItems,
 }: TitleTileProps) => (
-    <Tile type="clear">
+    <Tile type="clear" dense>
         {heading && (
             <>
                 <Typography
@@ -51,9 +51,9 @@ export const TitleTile: React.FC<TitleTileProps> = ({
                         </>
                     )
                 )}
-                <Spacing mY={10} />
             </Grid>
         )}
+        {Boolean(titleItems && bodyItems) && <Spacing mY={10} />}
         {bodyItems && (
             <Grid alignColumns="auto auto" rowGap={10}>
                 {bodyItems?.map(

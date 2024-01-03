@@ -4,6 +4,8 @@ import { GradientProps } from '../gradient'
 export type TileProps = {
     type: 'clear' | 'solid'
     top?: boolean
+    bottom?: boolean
+    dense?: boolean
     outline?: boolean
     margins?: boolean
     stacked?: boolean

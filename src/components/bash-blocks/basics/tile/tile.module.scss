@@ -16,6 +16,10 @@
 .contain {
     padding: 50px 75px 50px 75px;
 
+    &Dense {
+        padding: 25px 75px 25px 75px;
+    }
+
     @media (max-width: 768px) {
         padding: 20px;
     }
@@ -39,7 +43,10 @@
 
     @media (max-width: 768px) {
         border-radius: none;
-        margin: 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 }
 

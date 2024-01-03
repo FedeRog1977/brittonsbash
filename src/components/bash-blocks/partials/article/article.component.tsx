@@ -18,10 +18,10 @@ export const Article: React.FC<ArticleProps> = ({ ...props }: ArticleProps) => {
                 .slice(0, sectionsFinal)
                 .map(
                     ({
-                        type,
+                        type = 'body',
                         content,
                         imageContent,
-                        color,
+                        color = 'darkerGrey',
                         inline,
                         boldFace,
                         italicize,
