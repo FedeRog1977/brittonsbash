@@ -1,7 +1,7 @@
 import {
     ArticleStories,
     ButtonStories,
-    FootnoteStories,
+    FootnoteTileStories,
     ImageMatrixStories,
     ImageSliderStories,
     ImageStories,
@@ -15,7 +15,7 @@ export const BashBlocks = () => (
         <Background type="logo" content="BashBlocks" />
         <TypographyStories />
         <hr />
-        <FootnoteStories />
+        <FootnoteTileStories />
         <hr />
         <ImageStories />
         <hr />

@@ -1,11 +1,4 @@
 import {
-    faTemperature2,
-    faTemperatureArrowUp,
-    faTemperatureArrowDown,
-    faTemperatureHigh,
-    faTemperatureLow,
-} from '@fortawesome/free-solid-svg-icons'
-import {
     toDate,
     toPrecipitation,
     toBearing,

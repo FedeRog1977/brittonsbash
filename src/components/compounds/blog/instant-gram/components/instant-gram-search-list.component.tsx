@@ -1,4 +1,4 @@
-import { Button, Spacing } from '../../../../bash-blocks'
+import { Button } from '../../../../bash-blocks'
 import { useScreenWidth } from '../../../../../scripts'
 import { InstantGramSearchListProps } from '..'
 

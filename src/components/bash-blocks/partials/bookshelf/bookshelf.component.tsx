@@ -11,6 +11,8 @@ export const Bookshelf: React.FC<BookshelfProps> = ({
     return (
         <>
             <Button
+                typeType="h3"
+                light
                 type="regularClear"
                 fill
                 transition

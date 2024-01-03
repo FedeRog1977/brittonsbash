@@ -1,3 +1,3 @@
-export type FootnoteProps = {
+export type FootnoteTileProps = {
     content: string | React.ReactElement
 }
