@@ -1,5 +1,5 @@
 import { TileProps } from '../../basics'
-import { ImageMatrixProps, ArticleProps } from '../../partials'
+import { ImageMatrixProps, ArticleProps, BookshelfProps } from '../../partials'
 import { AlignProps } from '../../reference'
 
 export type ArticleTileImageProps = {
@@ -11,10 +11,11 @@ export type ArticleTileImageProps = {
 
 export type ArticleTileProps = {
     type?: TileProps['type']
-    heading: string
+    heading?: string
     subHeading?: string
     body?: string | ArticleProps['sections']
     imageMatrices?: ArticleTileImageProps[]
+    bookShelves?: BookshelfProps[]
     textAlign?: AlignProps
     margins?: boolean
 }

@@ -25,10 +25,6 @@
     }
 }
 
-.top {
-    margin-top: 0px;
-}
-
 .outline {
     border: 1px solid colors.$darker-grey;
 }
@@ -48,6 +44,10 @@
         margin-left: 0px;
         margin-right: 0px;
     }
+}
+
+.top {
+    margin-top: 0px;
 }
 
 .align {

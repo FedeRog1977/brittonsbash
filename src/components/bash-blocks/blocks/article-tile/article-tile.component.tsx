@@ -1,6 +1,6 @@
-import { formatArticle, useScreenWidth } from '../../../../scripts'
-import { Spacing, Tile, Typography } from '../../basics'
-import { Article, ImageMatrix } from '../../partials'
+import { formatArticle, formatItems, useScreenWidth } from '../../../../scripts'
+import { Flex, Spacing, Tile, Typography } from '../../basics'
+import { Article, Bookshelf, BookshelfProps, ImageMatrix } from '../../partials'
 import { ArticleTileImageProps, ArticleTileProps } from './article-tile.types'
 
 export const ArticleTile: React.FC<ArticleTileProps> = ({
@@ -9,10 +9,17 @@ export const ArticleTile: React.FC<ArticleTileProps> = ({
     subHeading,
     body,
     imageMatrices,
+    bookShelves,
     textAlign = 'center',
     margins = false,
 }: ArticleTileProps) => {
     const { isMobile } = useScreenWidth()
+
+    const { formattedBookItems } = formatItems(
+        3,
+        undefined,
+        bookShelves ? bookShelves : []
+    )
 
     return (
         <Tile type={type} margins={margins}>
@@ -24,13 +31,15 @@ export const ArticleTile: React.FC<ArticleTileProps> = ({
                     light
                 />
             )}
-            <Typography
-                type="h1"
-                textAlign={textAlign}
-                content={heading}
-                light
-                paragraphMargins
-            />
+            {heading && (
+                <Typography
+                    type="h1"
+                    textAlign={textAlign}
+                    content={heading}
+                    light
+                    paragraphMargins
+                />
+            )}
             {Array.isArray(body) ? (
                 <Article
                     sections={formatArticle(
@@ -130,6 +139,18 @@ export const ArticleTile: React.FC<ArticleTileProps> = ({
                     </div>
                 )
             )}
+            {Boolean(imageMatrices && bookShelves) && (
+                <Spacing mY={isMobile ? 15 : 30} />
+            )}
+            {formattedBookItems.map((row: BookshelfProps[]) => (
+                <Flex>
+                    {row.map(({ heading, items }: BookshelfProps, index) => (
+                        <Flex item key={index}>
+                            <Bookshelf heading={heading} items={items} />
+                        </Flex>
+                    ))}
+                </Flex>
+            ))}
         </Tile>
     )
 }

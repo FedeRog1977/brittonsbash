@@ -3,7 +3,7 @@ import {
     //  Button,
     Grid,
     //  Search,
-    //  Spacing,
+    Spacing,
     Tile,
 } from '../../../../bash-blocks'
 import { InstantGramSearchList } from '.'
@@ -54,8 +54,25 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                 color="white"
             />
             <Spacing mY={30} /> */}
-            <Grid alignColumns="auto auto auto auto" justifyItems="center">
-                <Grid columnItem={[1, 4]}>
+            <Grid alignColumns="auto" justifyItems="center">
+                <Grid columnItem={[1, 3]}>
+                    <Button
+                        typeType={isMobile ? 't1' : 't2'}
+                        type="regularClear"
+                        func={() => {
+                            setShowElement(!showElement)
+                            setParsedEventData(eventData[2023])
+                        }}
+                        funcResp={
+                            showElement && parsedEventData === eventData[2023]
+                        }
+                        content="2024"
+                        subContent="Season 5"
+                        subContentTop={isMobile}
+                        color="darkerGrey"
+                    />
+                </Grid>
+                <Grid columnItem={[2, 3]}>
                     <Button
                         typeType={isMobile ? 't1' : 't2'}
                         type="regularClear"
@@ -72,7 +89,7 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                         color="darkerGrey"
                     />
                 </Grid>
-                <Grid columnItem={[2, 4]}>
+                <Grid columnItem={[3, 3]}>
                     <Button
                         typeType={isMobile ? 't1' : 't2'}
                         type="regularClear"
@@ -89,7 +106,10 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                         color="darkerGrey"
                     />
                 </Grid>
-                <Grid columnItem={[3, 4]}>
+            </Grid>
+            <Spacing mY={30} />
+            <Grid alignColumns="auto" justifyItems="center">
+                <Grid columnItem={[1, 2]}>
                     <Button
                         typeType={isMobile ? 't1' : 't2'}
                         type="regularClear"
@@ -106,7 +126,7 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                         color="darkerGrey"
                     />
                 </Grid>
-                <Grid columnItem={[4, 4]}>
+                <Grid columnItem={[2, 2]}>
                     <Button
                         typeType={isMobile ? 't1' : 't2'}
                         type="regularClear"
