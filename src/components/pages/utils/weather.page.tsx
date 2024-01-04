@@ -5,6 +5,6 @@ export const Weather = () => (
     <>
         <Background type="std" content="Mountain Weather" />
         <WeatherComponent />
-        <FootnoteTile content={weatherContent[0].content} />
+        <FootnoteTile {...weatherContent.blockOne} />
     </>
 )
