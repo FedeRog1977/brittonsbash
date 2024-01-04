@@ -1,7 +1,11 @@
-import { ArticleTileProps, TitleTileProps } from '../../../bash-blocks'
-import { imageTestData } from '../../../../data'
+import {
+    ArticleTileProps,
+    BackgroundProps,
+    TitleTileProps,
+} from '../../../bash-blocks'
 
 type AcademiaProps = {
+    background: BackgroundProps
     tileOne: TitleTileProps
     tileTwo: ArticleTileProps
     tileThree: ArticleTileProps
@@ -10,6 +14,7 @@ type AcademiaProps = {
 }
 
 export const academiaContent: AcademiaProps = {
+    background: { type: 'logo', content: 'Academia' },
     tileOne: {
         titleItems: [
             {

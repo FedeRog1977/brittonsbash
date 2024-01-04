@@ -1,14 +1,20 @@
-import { ArticleTileProps, ImageTileProps } from '../../../bash-blocks'
+import {
+    ArticleTileProps,
+    BackgroundProps,
+    ImageTileProps,
+} from '../../../bash-blocks'
 import { imageTestData } from '../../../../data'
 import introTileImg from '../../../../media/images/pages/intro-tile.jpg'
 
 type HomeProps = {
+    background: BackgroundProps
     tileOne: ImageTileProps
     tileTwo: ArticleTileProps
     tileThree: ArticleTileProps
 }
 
 export const homeContent: HomeProps = {
+    background: { type: 'logo', content: 'BrittonsBashRC' },
     tileOne: {
         img: { url: introTileImg, alt: 'intro-tile-image' },
         gradient: {

@@ -20,6 +20,7 @@ author:
 
 # BashBlocks
 
+-   Abstract page-specific blocks to mapped blocks in a `Layout` component
 -   Add link functionality to title tile
 -   Merge article block and library tile
 -   Fix positioning conditional of ctas on image tile

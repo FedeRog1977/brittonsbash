@@ -20,7 +20,6 @@ import {
     GraphicDesign,
     Weather,
     Conquest,
-    BashBlocks,
 } from './components'
 import { Footer, Header } from './components/bash-blocks'
 import { reportWebVitals } from './react'
@@ -54,7 +53,6 @@ root.render(
             <Route path="/utils">
                 <Route path="weather" element={<Weather />} />
                 <Route path="conquest" element={<Conquest />} />
-                <Route path="bash-blocks" element={<BashBlocks />} />
             </Route>
             <Route path="*" element={<ErrorPage />} />
         </Routes>

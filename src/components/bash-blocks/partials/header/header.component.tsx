@@ -313,46 +313,26 @@ export const Header = () => {
                 <div className={styles.headerSub}>
                     <Spacing pX={isMobile ? 40 : 150} pY={40}>
                         <div className={styles.headerNavigation}>
-                            <Grid alignRows="auto" rowGap={10}>
-                                <Grid rowItem={[1, 2]}>
-                                    <Grid
-                                        alignColumns="auto auto"
-                                        justifyContent="end"
-                                        columnGap={10}
+                            <Grid
+                                alignColumns="auto auto"
+                                justifyContent="end"
+                                columnGap={10}
+                            >
+                                <Grid columnItem={[1, 2]}>
+                                    <Link
+                                        to="/utils/weather"
+                                        onClick={resetHeader}
                                     >
-                                        <Grid columnItem={[1, 2]}>
-                                            <Link
-                                                to="/utils/weather"
-                                                onClick={resetHeader}
-                                            >
-                                                Weather
-                                            </Link>
-                                        </Grid>
-                                        <Grid columnItem={[2, 2]}>
-                                            <Link
-                                                to="/utils/conquest"
-                                                onClick={resetHeader}
-                                            >
-                                                Conquest
-                                            </Link>
-                                        </Grid>
-                                    </Grid>
+                                        Weather
+                                    </Link>
                                 </Grid>
-                                <Grid rowItem={[2, 2]}>
-                                    <Grid
-                                        alignColumns="auto"
-                                        justifyContent="end"
-                                        columnGap={10}
+                                <Grid columnItem={[2, 2]}>
+                                    <Link
+                                        to="/utils/conquest"
+                                        onClick={resetHeader}
                                     >
-                                        <Grid columnItem={[1, 1]}>
-                                            <Link
-                                                to="/utils/bash-blocks"
-                                                onClick={resetHeader}
-                                            >
-                                                BashBlocks
-                                            </Link>
-                                        </Grid>
-                                    </Grid>
+                                        Conquest
+                                    </Link>
                                 </Grid>
                             </Grid>
                         </div>

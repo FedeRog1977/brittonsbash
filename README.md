@@ -11,6 +11,7 @@ author:
 -   Atomic Design
 -   React
 -   React Router
+-   Storybook
 -   React Testing Library
 -   Cypress
 -   Deployment
@@ -103,6 +104,26 @@ Notes:
 -   [Guide](https://reactrouter.com/en/6.6.1/start/overview)
 -   [Practice guide](https://www.techomoro.com/how-to-create-a-multi-page-website-with-react-in-5-minutes/)
 -   [Video tutorial](https://www.youtube.com/watch?v=Ul3y1LXxzdU)
+
+# Storybook
+
+Storybook is a frontend workshop environment tool for UI/UX development which allows you to sample and interact with the properties of functional components, out of context.
+
+Install Storybook:
+
+```
+npx storybook@latest init
+```
+
+Run Storybook:
+
+```
+npm run storybook
+```
+
+Notes:
+
+-   [Guide](https://storybook.js.org/docs/get-started/install)
 
 # React Testing Library
 
@@ -256,7 +277,19 @@ To essentially hit a reset and restart these servers, select your control key + 
 
 If you reset a simple application server, the disk data on the server is deleted, and the snapshots that were created before the reset are retained but cannot be used to roll back the disks of the server.
 
-# Additional Packages
+# Additional Packages and Dependencies
+
+## Classnames
+
+Classnames allows you to format SCSS module classnames, etc.
+
+Install classnames:
+
+```
+npm install classnames
+```
+
+-   [Guide](https://www.npmjs.com/package/classnames)
 
 ## Prettier
 

@@ -3,7 +3,7 @@ import { Background, FootnoteTile } from '../../bash-blocks'
 
 export const Weather = () => (
     <>
-        <Background type="std" content="Mountain Weather" />
+        <Background {...weatherContent.background} />
         <WeatherComponent />
         <FootnoteTile {...weatherContent.blockOne} />
     </>

@@ -3,7 +3,7 @@ import { academiaContent } from '../compounds'
 
 export const Academia = () => (
     <>
-        <Background type="logo" content="Academia" />
+        <Background {...academiaContent.background} />
         <TitleTile {...academiaContent.tileOne} />
         <ArticleTile {...academiaContent.tileTwo} />
         <ArticleTile {...academiaContent.tileThree} />
