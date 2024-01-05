@@ -7,13 +7,6 @@ import {
     // useMapEvents
 } from 'react-leaflet'
 import { useState } from 'react'
-import {
-    ConquestLocationMarker,
-    ConquestHillMarkers,
-    LandmassList,
-    RouteList,
-    RouteMarker,
-} from '.'
 import { hillData } from '../../../../data'
 import {
     fromBritishGridProjection,
@@ -21,6 +14,13 @@ import {
 } from '../../../../scripts'
 // import L from 'leaflet'
 import * as L from 'leaflet'
+import {
+    RouteList,
+    RouteMarker,
+    LandmassList,
+    ConquestLocationMarker,
+    ConquestHillMarkers,
+} from './components'
 
 export const Conquest = () => {
     const apiUrl = ordnanceSurveyCall()

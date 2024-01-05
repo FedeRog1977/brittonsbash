@@ -6,13 +6,13 @@ import {
     Spacing,
     Tile,
 } from '../../../../bash-blocks'
-import { InstantGramSearchList } from '.'
 import { eventData } from '../../../../../data'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { useScreenWidth, useShowElement } from '../../../../../scripts'
-import { InstantGramSearchTileProps } from '..'
 import { useState } from 'react'
+import { InstantGramSearchTileProps } from '../types'
+import { InstantGramSearchList } from './instant-gram-search-list.component'
 
 export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
     ...props

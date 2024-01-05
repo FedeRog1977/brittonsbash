@@ -1,7 +1,7 @@
 import { toUpperCase, useScreenWidth } from '../../../../scripts'
-import { TypographyProps } from '..'
 import cx from 'classnames'
 import styles from './typography.module.scss'
+import { TypographyProps } from './typography.types'
 
 export const Typography: React.FC<TypographyProps> = ({
     ...props

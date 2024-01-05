@@ -1,8 +1,8 @@
 import { Marker, Popup } from 'react-leaflet'
-import { ConquestHillMarkerArrayProps } from '..'
 import { toCoords, toFeet } from '../../../../../scripts'
 import { Spacing, Typography } from '../../../../bash-blocks'
 import imagePlaceholder from '../../../../../media/images/pages/placeholder.webp'
+import { ConquestHillMarkerArrayProps } from '../types'
 
 export const ConquestMarkerArray: React.FC<ConquestHillMarkerArrayProps> = ({
     ...props

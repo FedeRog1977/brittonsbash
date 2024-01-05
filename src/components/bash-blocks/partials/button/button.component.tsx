@@ -4,7 +4,7 @@ import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import cx from 'classnames'
 import { useScreenWidth, toUpperCase } from '../../../../scripts'
 import { Grid, Typography } from '../../basics'
-import { ButtonProps } from '.'
+import { ButtonProps } from './button.types'
 
 export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
     const { isMobile } = useScreenWidth()

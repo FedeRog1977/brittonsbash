@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { DailyProps, HourlyProps } from '.'
+import { DailyProps, HourlyProps } from './types'
 
 export function useOpenWeatherCall(latIn: number, lonIn: number) {
     const [dailyResult, setDailyResult] = useState<DailyProps[]>([])

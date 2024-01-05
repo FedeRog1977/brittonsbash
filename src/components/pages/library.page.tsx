@@ -1,9 +1,9 @@
 import { articleTestData } from '../../data'
-import { Article, ArticleProps, Background, Tile } from '../bash-blocks'
+import { Article, ArticleProps, Tile } from '../bash-blocks'
+import { PageLayout } from '../bash-blocks/templates'
 
 export const Library = () => (
-    <>
-        <Background type="logo" content="Library" />
+    <PageLayout background={{ content: 'Library' }}>
         <Tile type="solid" top>
             <Article
                 sections={articleTestData as ArticleProps['sections']}
@@ -11,5 +11,5 @@ export const Library = () => (
                 textAlign="justify"
             />
         </Tile>
-    </>
+    </PageLayout>
 )

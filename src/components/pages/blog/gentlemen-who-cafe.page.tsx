@@ -1,9 +1,9 @@
 import { articleTestData } from '../../../data'
-import { Article, ArticleProps, Background, Tile } from '../../bash-blocks'
+import { Article, ArticleProps, Tile } from '../../bash-blocks'
+import { PageLayout } from '../../bash-blocks/templates'
 
 export const GentlemenWhoCafe = () => (
-    <>
-        <Background type="std" content="Gentlemen Who Café" />
+    <PageLayout background={{ content: 'Gentlemen Who Café' }}>
         <Tile type="solid" top>
             <Article
                 sections={articleTestData as ArticleProps['sections']}
@@ -11,5 +11,5 @@ export const GentlemenWhoCafe = () => (
                 textAlign="justify"
             />
         </Tile>
-    </>
+    </PageLayout>
 )

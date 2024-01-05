@@ -1,7 +1,7 @@
 import { useScreenWidth } from '../../../../scripts'
 import { Grid, Typography } from '../../basics'
 import styles from './table.module.scss'
-import { ColumnTableProps, RowTableProps } from '.'
+import { ColumnTableProps, RowTableProps } from './table.types'
 
 export const ColumnTable: React.FC<ColumnTableProps> = ({
     ...props

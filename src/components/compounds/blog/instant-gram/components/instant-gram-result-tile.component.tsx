@@ -17,8 +17,8 @@ import {
     useScreenWidth,
     RefactoredEventNameProps,
 } from '../../../../../scripts'
-import { InstantGramResultTileProps } from '..'
 import { useEffect } from 'react'
+import { InstantGramResultTileProps } from '../types'
 
 export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
     ...props

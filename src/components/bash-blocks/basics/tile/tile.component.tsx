@@ -1,7 +1,9 @@
-import { Gradient, TileProps, Image } from '../..'
 import cx from 'classnames'
 import styles from './tile.module.scss'
 import { toSentenceCase } from '../../../../scripts'
+import { Gradient } from '../gradient'
+import { TileProps } from './tile.types'
+import { Image } from '../image'
 
 export const Tile: React.FC<TileProps> = ({ ...props }: TileProps) => {
     const classNames = cx(

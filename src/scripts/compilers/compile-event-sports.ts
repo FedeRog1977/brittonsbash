@@ -1,5 +1,5 @@
-import { ProjectProps } from '.'
 import { sportData } from '../../data'
+import { ProjectProps } from './types'
 
 export function compileEventSports() {
     const allSport: ProjectProps[] = []

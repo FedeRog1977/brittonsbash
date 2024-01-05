@@ -1,5 +1,5 @@
 import { Typography } from '../../basics'
-import { ArticlePrefaceProps } from '.'
+import { ArticlePrefaceProps } from './article-preface.types'
 
 export const ArticlePreface: React.FC<ArticlePrefaceProps> = ({
     ...props

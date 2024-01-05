@@ -2,12 +2,12 @@ import {
     InstantGram as InstantGramComponent,
     instantGramContent,
 } from '../../compounds'
-import { Background, FootnoteTile } from '../../bash-blocks'
+import { FootnoteTile } from '../../bash-blocks'
+import { PageLayout } from '../../bash-blocks/templates'
 
 export const InstantGram = () => (
-    <>
-        <Background {...instantGramContent.background} />
+    <PageLayout background={instantGramContent.background}>
         <InstantGramComponent />
         <FootnoteTile {...instantGramContent.blockOne} />
-    </>
+    </PageLayout>
 )

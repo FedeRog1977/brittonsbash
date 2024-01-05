@@ -2,9 +2,9 @@ import ReactModal from 'react-modal'
 import styles from './modal.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
-import { ModalProps } from '.'
 import { useScreenWidth } from '../../../../scripts'
 import { Tile, Spacing } from '../../basics'
+import { ModalProps } from './modal.types'
 
 export const Modal: React.FC<ModalProps> = ({ ...props }: ModalProps) => {
     const { isMobile } = useScreenWidth()

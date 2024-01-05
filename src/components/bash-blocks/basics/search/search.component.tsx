@@ -1,5 +1,5 @@
 import styles from './search.module.scss'
-import { SearchProps } from '.'
+import { SearchProps } from './search.types'
 
 export const Search: React.FC<SearchProps> = ({ ...props }: SearchProps) => (
     <input

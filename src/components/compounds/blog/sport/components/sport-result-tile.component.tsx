@@ -19,10 +19,10 @@ import {
     useShowElement,
 } from '../../../../../scripts'
 import { useState } from 'react'
-import { SportResultTileProps } from '..'
 import { MapContainer, TileLayer } from 'react-leaflet'
 import L from 'leaflet'
 import { ConquestHillMarkers } from '../../../utils'
+import { SportResultTileProps } from '../types'
 
 export const SportResultTile: React.FC<SportResultTileProps> = ({
     ...props

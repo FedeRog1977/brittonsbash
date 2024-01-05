@@ -1,5 +1,6 @@
 import { sportData } from '../../data'
-import { CompiledRoadieProps, RoadieProps, toFeet, toMiles } from '..'
+import { toMiles, toFeet } from '../formatters'
+import { CompiledRoadieProps, RoadieProps } from './types'
 
 export function compileRoadies() {
     const roadies: CompiledRoadieProps['roadies'] = {

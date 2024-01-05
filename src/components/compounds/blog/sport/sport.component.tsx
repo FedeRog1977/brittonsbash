@@ -1,4 +1,4 @@
-import { SportSearchTile, SportResultTile } from '.'
+import { SportSearchTile, SportResultTile } from './components'
 import { useSport } from './hooks/use-sport.hook'
 
 export const Sport: React.FC = () => {

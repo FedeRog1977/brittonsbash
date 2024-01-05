@@ -1,11 +1,6 @@
 import { sportData } from '../../data'
-import {
-    CompiledProjectProps,
-    ProjectProps,
-    removeDuplicates,
-    toFeet,
-    toMiles,
-} from '..'
+import { removeDuplicates, toMiles, toFeet } from '../formatters'
+import { CompiledProjectProps, ProjectProps } from './types'
 
 export function compileProjects() {
     const projects: CompiledProjectProps['projects'] = {

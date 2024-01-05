@@ -14,7 +14,7 @@ type HomeProps = {
 }
 
 export const homeContent: HomeProps = {
-    background: { type: 'logo', content: 'BrittonsBashRC' },
+    background: { content: 'BrittonsBashRC' },
     tileOne: {
         img: { url: introTileImg, alt: 'intro-tile-image' },
         gradient: {

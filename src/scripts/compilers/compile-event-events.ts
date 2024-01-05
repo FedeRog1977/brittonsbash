@@ -1,5 +1,5 @@
 import { eventData } from '../../data'
-import { EventProps } from '.'
+import { EventProps } from './types'
 
 export function compileEventEvents() {
     const allEvents: EventProps[] = []

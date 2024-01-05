@@ -14,7 +14,7 @@ type AcademiaProps = {
 }
 
 export const academiaContent: AcademiaProps = {
-    background: { type: 'logo', content: 'Academia' },
+    background: { content: 'Academia' },
     tileOne: {
         titleItems: [
             {

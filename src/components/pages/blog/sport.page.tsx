@@ -1,9 +1,8 @@
-import { Background } from '../../bash-blocks'
+import { PageLayout } from '../../bash-blocks/templates'
 import { Sport as SportComponent } from '../../compounds'
 
 export const Sport = () => (
-    <>
-        <Background type="sport" content="Sport" />
+    <PageLayout background={{ type: 'sport', content: 'Sport' }}>
         <SportComponent />
-    </>
+    </PageLayout>
 )

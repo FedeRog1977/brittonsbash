@@ -1,5 +1,5 @@
 import { Typography } from '../../basics'
-import { ArticleProps } from '.'
+import { ArticleProps } from './article.types'
 
 export const Article: React.FC<ArticleProps> = ({ ...props }: ArticleProps) => {
     const sectionsFinal = props.sections.length - 1

@@ -1,4 +1,4 @@
-import { GridProps } from '.'
+import { GridProps } from './grid.types'
 
 // Reminder: https://css-tricks.com/snippets/css/complete-guide-grid/
 

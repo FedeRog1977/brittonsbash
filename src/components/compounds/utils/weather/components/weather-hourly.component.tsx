@@ -1,6 +1,6 @@
-import { WeatherColumnHourly } from '.'
 import { useOpenWeatherCall } from '../../../../../scripts'
 import { Grid } from '../../../../bash-blocks'
+import { WeatherColumnHourly } from './weather-column-hourly.component'
 
 export const WeatherHourly = ({ latIn, lonIn }: any) => {
     const { hourlyResult } = useOpenWeatherCall(latIn, lonIn)

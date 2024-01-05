@@ -1,12 +1,10 @@
+import { sum, toFeet, toMiles } from '../formatters'
 import {
     CompiledEventProps,
-    ProjectProps,
     RefactoredEventNameProps,
+    ProjectProps,
     RefactoredEventProps,
-    sum,
-    toFeet,
-    toMiles,
-} from '..'
+} from './types'
 
 export const compileEvent = ({ ...props }: CompiledEventProps) => {
     const names: RefactoredEventNameProps[] = []

@@ -1,4 +1,4 @@
-import { SpacingProps } from '.'
+import { SpacingProps } from './spacing.types'
 
 export const Spacing: React.FC<SpacingProps> = ({ ...props }: SpacingProps) => (
     <div

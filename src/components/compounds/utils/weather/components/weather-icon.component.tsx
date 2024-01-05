@@ -12,7 +12,7 @@ import {
     faSmog,
     faCloudMoonRain,
 } from '@fortawesome/free-solid-svg-icons'
-import { WeatherIconProps } from '..'
+import { WeatherIconProps } from '../types'
 
 export const WeatherIcon: React.FC<WeatherIconProps> = ({
     ...props

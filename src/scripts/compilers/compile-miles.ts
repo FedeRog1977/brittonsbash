@@ -1,5 +1,6 @@
 import { sportData } from '../../data'
-import { CompiledMilesProps, MilesProps, toFeet, toMiles } from '..'
+import { toFeet, toMiles } from '../formatters'
+import { CompiledMilesProps, MilesProps } from './types'
 
 export function compileMiles() {
     const miles: CompiledMilesProps['miles'] = {

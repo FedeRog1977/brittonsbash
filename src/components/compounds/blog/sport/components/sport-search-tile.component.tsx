@@ -5,9 +5,9 @@ import {
     faTrophy,
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { SportSearchTileProps } from '..'
 import { useScreenWidth } from '../../../../../scripts'
 import { Tile, Button, Grid } from '../../../../bash-blocks'
+import { SportSearchTileProps } from '../types'
 
 export const SportSearchTile: React.FC<SportSearchTileProps> = ({
     ...props

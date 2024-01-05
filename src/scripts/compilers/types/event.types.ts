@@ -1,5 +1,8 @@
 import { ArticleProps, ImageProps } from '../../../components/bash-blocks'
-import { AggregationAlphabeticalProps, AggregationNumericalProps } from '.'
+import {
+    AggregationNumericalProps,
+    AggregationAlphabeticalProps,
+} from './aggregation.types'
 
 // Base Props
 

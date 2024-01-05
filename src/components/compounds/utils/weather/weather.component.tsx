@@ -1,4 +1,5 @@
-import { WeatherSearchTile, WeatherResultTitle, useWeather } from '.'
+import { WeatherResultTitle, WeatherSearchTile } from './components'
+import { useWeather } from './hooks'
 
 export const Weather = () => {
     const {

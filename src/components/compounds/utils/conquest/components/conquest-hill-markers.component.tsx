@@ -1,6 +1,6 @@
-import { ConquestMarkerArray } from '.'
 import { hillData } from '../../../../../data'
-import { ConquestHillMarkersProps } from '..'
+import { ConquestHillMarkersProps } from '../types'
+import { ConquestMarkerArray } from './conquest-hill-marker-array.component'
 
 export const ConquestHillMarkers: React.FC<ConquestHillMarkersProps> = ({
     ...props

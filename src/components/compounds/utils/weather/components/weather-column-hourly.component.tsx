@@ -5,7 +5,8 @@ import {
     toSpeed,
 } from '../../../../../scripts'
 import { Flex, Grid, Spacing, Typography } from '../../../../bash-blocks'
-import { WeatherIcon, WeatherTemperature } from '..'
+import { WeatherIcon } from './weather-icon.component'
+import { WeatherTemperature } from './weather-temperature.component'
 
 export const WeatherColumnHourly = ({
     dt,

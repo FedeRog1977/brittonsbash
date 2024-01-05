@@ -6,7 +6,7 @@ type WeatherProps = {
 }
 
 export const weatherContent: WeatherProps = {
-    background: { type: 'std', content: 'Mountain Weather' },
+    background: { content: 'Mountain Weather' },
     blockOne: {
         content:
             'All weather data is provided by OpenWeather® One Call API 3.0',

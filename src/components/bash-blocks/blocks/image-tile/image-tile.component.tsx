@@ -1,8 +1,8 @@
-import { ImageTileProps } from '.'
 import { formatArticle } from '../../../../scripts'
 import { Grid, Tile, Typography } from '../../basics'
 import { Article, Button } from '../../partials'
 import { CtaProps } from '../../reference'
+import { ImageTileProps } from './image-tile.types'
 
 export const ImageTile: React.FC<ImageTileProps> = ({
     img,
