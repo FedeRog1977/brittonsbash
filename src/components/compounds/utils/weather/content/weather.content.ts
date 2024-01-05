@@ -2,12 +2,12 @@ import { BackgroundProps, FootnoteTileProps } from '../../../../bash-blocks'
 
 type WeatherProps = {
     background: BackgroundProps
-    blockOne: FootnoteTileProps
+    tileOne: FootnoteTileProps
 }
 
 export const weatherContent: WeatherProps = {
     background: { content: 'Mountain Weather' },
-    blockOne: {
+    tileOne: {
         content:
             'All weather data is provided by OpenWeather® One Call API 3.0',
     },

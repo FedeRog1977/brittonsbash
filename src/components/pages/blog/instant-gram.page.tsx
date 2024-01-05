@@ -8,6 +8,6 @@ import { PageLayout } from '../../bash-blocks/templates'
 export const InstantGram = () => (
     <PageLayout background={instantGramContent.background}>
         <InstantGramComponent />
-        <FootnoteTile {...instantGramContent.blockOne} />
+        <FootnoteTile {...instantGramContent.tileOne} />
     </PageLayout>
 )

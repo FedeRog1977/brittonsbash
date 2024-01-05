@@ -5,6 +5,6 @@ import { PageLayout } from '../../bash-blocks/templates'
 export const Weather = () => (
     <PageLayout background={weatherContent.background}>
         <WeatherComponent />
-        <FootnoteTile {...weatherContent.blockOne} />
+        <FootnoteTile {...weatherContent.tileOne} />
     </PageLayout>
 )

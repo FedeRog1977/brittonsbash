@@ -26,9 +26,36 @@ export const ImageTile: React.FC<ImageTileProps> = ({
             ? 'start'
             : 'center'
 
+    const handleCtas: React.ReactElement = (
+        <Grid columnItem={handleGridCtas}>
+            <Grid
+                alignRows="auto"
+                rowGap={20}
+                justifyItems={handleGridCtasAlign}
+            >
+                {ctas?.map(({ content, href }: CtaProps, index) => (
+                    <Grid rowItem={[index, ctas.length]}>
+                        <Button
+                            typeType="h3"
+                            type="inverse"
+                            func={() => (window.location.href = href)}
+                            funcResp={false}
+                            content={content}
+                            color="white"
+                            light
+                        />
+                    </Grid>
+                ))}
+            </Grid>
+        </Grid>
+    )
+
+    const handleJustifyBodyText = textAlign === 'right' ? 'right' : 'justify'
+
     return (
         <Tile type="clear" stacked margins img={img} gradient={gradient}>
-            <Grid alignColumns="auto auto" columnGap={80} alignItems="center">
+            <Grid alignColumns="auto" columnGap={80} alignItems="center">
+                {Boolean(ctas && textAlign === 'right') && handleCtas}
                 <Grid columnItem={handleGridText}>
                     <Typography
                         type="h4"
@@ -58,45 +85,21 @@ export const ImageTile: React.FC<ImageTileProps> = ({
                                 true,
                                 false
                             )}
-                            textAlign="justify"
+                            textAlign={handleJustifyBodyText}
                             extendParagraphMargins
                         />
                     ) : (
                         <Typography
                             type="body"
                             content={body}
-                            textAlign="justify"
+                            textAlign={handleJustifyBodyText}
                             color={handleInverseColor}
                             light
                             paragraphMargins
                         />
                     )}
                 </Grid>
-                {ctas && (
-                    <Grid columnItem={handleGridCtas}>
-                        <Grid
-                            alignRows="auto"
-                            rowGap={20}
-                            justifyItems={handleGridCtasAlign}
-                        >
-                            {ctas?.map(({ content, href }: CtaProps, index) => (
-                                <Grid rowItem={[index, ctas.length]}>
-                                    <Button
-                                        typeType="h3"
-                                        type="inverse"
-                                        func={() =>
-                                            (window.location.href = href)
-                                        }
-                                        funcResp={false}
-                                        content={content}
-                                        color="white"
-                                        light
-                                    />
-                                </Grid>
-                            ))}
-                        </Grid>
-                    </Grid>
-                )}
+                {Boolean(ctas && textAlign === 'left') && handleCtas}
             </Grid>
         </Tile>
     )

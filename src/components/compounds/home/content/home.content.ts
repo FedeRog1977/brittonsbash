@@ -18,9 +18,7 @@ export const homeContent: HomeProps = {
     tileOne: {
         img: { url: introTileImg, alt: 'intro-tile-image' },
         gradient: {
-            value: 'dark',
             opacity: 40,
-            start: 'left',
         },
         heading: 'Welcome to BrittonsBashRC',
         subHeading: 'Where autism aligns at its finest',
