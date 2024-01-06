@@ -13,11 +13,12 @@ export const sportData = {
         projects: [
             {
                 id: 'P2024001',
-                name: '',
-                distance: 0,
-                elevation: 0,
-                time: '',
-                companionship: 0,
+                name: 'The Orchy',
+                distance: 8.6,
+                elevation: 3169,
+                time: '3:33:02',
+                companionship: 2,
+                corbetts: ['Beinn Udlaidh', 'Beinn Bhreac-liath'],
             },
         ],
         miles: [

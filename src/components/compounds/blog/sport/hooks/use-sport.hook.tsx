@@ -16,15 +16,21 @@ export function useSport() {
     const [isProjects, setIsProjects] = useState(false)
     const [isMiles, setIsMiles] = useState(false)
 
-    const title: React.ReactElement = isRoadies ? (
-        <>Road Cycling &nbsp;&#8212;&nbsp; Roadies</>
-    ) : isProjects ? (
-        <>Hiking &nbsp;&#8212;&nbsp; Projects</>
-    ) : isMiles ? (
-        <>Walking &nbsp;&#8212;&nbsp; Miles</>
-    ) : (
-        <>Unrecognized Sport</>
-    )
+    const title: string = isRoadies
+        ? 'Roadies'
+        : isProjects
+        ? 'Projects'
+        : isMiles
+        ? 'Miles'
+        : 'Unrecognised Sport'
+
+    const subTitle: string = isRoadies
+        ? 'Road Cycling'
+        : isProjects
+        ? 'Hiking / Fell Running'
+        : isMiles
+        ? 'Walking / Running'
+        : 'Unrecognised Sport'
 
     const description: string = isRoadies
         ? 'My Roadies hit all of the major rewards I look for in an activity: enjoyment, fitness, and calorie burn. Both of my major routes are more than thirty miles long which is what I look for in these things from a Roadie.'
@@ -288,6 +294,7 @@ export function useSport() {
         sport2021,
         sport2020,
         title,
+        subTitle,
         description,
         routes,
         isRoadies,

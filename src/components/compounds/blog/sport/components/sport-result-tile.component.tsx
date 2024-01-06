@@ -38,9 +38,21 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
     return (
         <Tile type="solid">
             <Spacing mB={isMobile ? 7.5 : 15}>
-                <Typography type="h1" content={props.title} textAlign="left" />
+                <Typography
+                    type="t1"
+                    content={props.title}
+                    textAlign="center"
+                />
             </Spacing>
-            <Spacing mB={isMobile ? 7.5 : 15}>
+            <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
+                <Typography
+                    type="h4"
+                    content={props.subTitle}
+                    color="mediumGrey"
+                    textAlign="center"
+                />
+            </Spacing>
+            <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                 <Typography
                     type="body"
                     content={props.description}
@@ -183,6 +195,7 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                                 name,
                             }: RoadieProps | ProjectProps | MilesProps) => (
                                 <a
+                                    href="#"
                                     onClick={() => {
                                         setShowMunros(!showMunros)
                                     }}

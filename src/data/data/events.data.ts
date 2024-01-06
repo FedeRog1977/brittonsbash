@@ -1,4 +1,18 @@
 export const eventData = {
+    2024: [
+        {
+            id: 'E2024001',
+            names: ['The Orchy'],
+            startDate: '6th of January',
+            description: '',
+            images: [
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-orchy/1.jpg',
+                    alt: 'the-orchy-1',
+                },
+            ],
+        },
+    ],
     2023: [
         {
             id: 'E2023049',
