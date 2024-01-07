@@ -1,3 +1,5 @@
+@use '../../reference' as reference;
+
 img {
     vertical-align: bottom;
 }
@@ -40,7 +42,7 @@ img {
 .imageSliderCaption {
     position: absolute;
     z-index: 10;
-    text-shadow: 0px 0px 5px var(--darker-grey);
+    text-shadow: 0px 0px 5px reference.$darker-grey;
     bottom: 24px;
     left: 24px;
     max-width: 75%;
@@ -55,7 +57,7 @@ img {
 .imageSliderIndex {
     position: absolute;
     z-index: 10;
-    text-shadow: 0px 0px 5px var(--darker-grey);
+    text-shadow: 0px 0px 5px reference.$darker-grey;
     bottom: 24px;
     right: 24px;
     max-width: 25%;
@@ -70,12 +72,12 @@ img {
 .leftArrow,
 .rightArrow,
 .refresh {
-    color: var(--darker-grey-90);
+    color: reference.$darker-grey-60;
     position: absolute;
     z-index: 10;
     cursor: pointer;
     user-select: none;
-    transition: color var(--transition-long);
+    transition: color reference.$transition-long;
 }
 
 .leftArrow {
@@ -85,7 +87,7 @@ img {
 
     @media (max-width: 768px) {
         font-size: 24px;
-        color: var(--darker-grey-50);
+        color: reference.$darker-grey-60;
         top: 45%;
         left: 12px;
     }
@@ -98,7 +100,7 @@ img {
 
     @media (max-width: 768px) {
         font-size: 24px;
-        color: var(--darker-grey-50);
+        color: reference.$darker-grey-60;
         top: 45%;
         right: 12px;
     }
@@ -113,20 +115,20 @@ img {
         font-size: 16px;
         top: 16px;
         right: 12px;
-        color: var(--darker-grey-50);
+        color: reference.$darker-grey-60;
     }
 }
 
 .leftArrow:hover,
 .rightArrow:hover,
 .refresh:hover {
-    color: var(--light-grey);
-    transition: color var(--transition-long);
+    color: reference.$light-grey;
+    transition: color reference.$transition-long;
 }
 
 .leftArrow:active,
 .rightArrow:active,
 .refresh:active {
     transform: scale(0.99);
-    transition: transform var(--transition-short);
+    transition: transform reference.$transition-short;
 }

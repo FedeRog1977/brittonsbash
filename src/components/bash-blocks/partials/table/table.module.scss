@@ -1,6 +1,8 @@
+@use '../../reference' as reference;
+
 .table {
-    background-color: var(--lighter-grey);
-    border-radius: var(--corners-small);
+    background-color: reference.$lighter-grey;
+    border-radius: reference.$corners-small;
     padding: 15px 75px 15px 75px;
 
     @media (max-width: 768px) {

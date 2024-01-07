@@ -1,28 +1,30 @@
+@use '../../reference' as reference;
+
 .header {
-    background-color: var(--darker-grey);
+    background-color: reference.$darker-grey;
     display: grid;
     align-items: center;
-    color: var(--light-grey);
+    color: reference.$light-grey;
 
     &Sub {
-        background-color: var(--dark-grey);
+        background-color: reference.$dark-grey;
         display: grid;
         align-items: center;
     }
 
     &Navigation {
         font-family: Sans-Light;
-        color: var(--light-grey);
+        color: reference.$light-grey;
 
         a {
             text-decoration: none;
-            color: var(--light-grey);
-            transition: color var(--transition-long);
+            color: reference.$light-grey;
+            transition: color reference.$transition-long;
         }
 
         a:hover {
-            color: var(--light-blue);
-            transition: color var(--transition-long);
+            color: reference.$light-blue;
+            transition: color reference.$transition-long;
             cursor: pointer;
         }
     }

@@ -1,14 +1,13 @@
-@use '../../reference/styles/colors' as colors;
-@use '../../reference/styles/corners' as corners;
+@use '../../reference' as reference;
 
 .clear {
-    background-color: colors.$transparent;
+    background-color: reference.$transparent;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .solid {
-    background-color: colors.$white;
+    background-color: reference.$white;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -27,7 +26,7 @@
 }
 
 .outline {
-    border: 1px solid colors.$darker-grey;
+    border: 1px solid reference.$darker-grey;
 }
 
 .margins {
@@ -35,7 +34,7 @@
     margin-right: 75px;
 
     @media (min-width: 768px) {
-        border-radius: corners.$large;
+        border-radius: reference.$corners-large;
     }
 
     @media (max-width: 768px) {

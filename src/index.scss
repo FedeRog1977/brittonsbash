@@ -1,3 +1,5 @@
+@use './components/bash-blocks/reference' as reference;
+
 /* Computer Modern Serif */
 
 @font-face {
@@ -96,41 +98,11 @@
     src: url(./fonts/broadway/broadway-regular.ttf);
 }
 
-/* Colors */
-
-:root {
-    --black: #000000;
-    --darker-grey: #282828;
-    --darker-grey-90: #28282890;
-    --darker-grey-70: #28282870;
-    --darker-grey-50: #28282850;
-    --darker-grey-30: #28282830;
-    --darker-grey-10: #28282810;
-    --dark-grey: #303030;
-    --medium-grey: #585858;
-    --light-grey: #a2a2a2;
-    --lighter-grey: #f5f5f5;
-    --light-blue: #96b9ee;
-    --pale-blue: #f5fbff;
-    --white: #ffffff;
-    --transparent: #ffffff00;
-}
-
-/* Standards */
-
-:root {
-    --shadow-1: 0px 0px 10px var(--light-grey);
-    --corners-large: 0.25em;
-    --corners-small: 0.125em;
-    --transition-short: 0.25s;
-    --transition-long: 0.5s;
-}
-
 /* Body */
 
 body {
     margin: 0;
-    background-color: var(--lighter-grey);
+    background-color: reference.$lighter-grey;
 }
 
 /* Code */
@@ -160,7 +132,6 @@ ul {
 .currLoc .currLocHover {
     visibility: hidden;
     width: 240px;
-    background-image: var(--header-footer);
     color: #fff;
     text-align: center;
     padding: 0;

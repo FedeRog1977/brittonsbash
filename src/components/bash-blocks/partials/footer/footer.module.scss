@@ -1,10 +1,12 @@
+@use '../../reference' as reference;
+
 .footer {
-    background-color: var(--darker-grey);
+    background-color: reference.$darker-grey;
     text-align: center;
     display: grid;
     justify-content: center;
     align-items: center;
-    color: var(--light-grey);
+    color: reference.$light-grey;
 
     &Logo {
         font-family: IBM;

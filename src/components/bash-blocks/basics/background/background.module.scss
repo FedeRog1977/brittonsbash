@@ -1,3 +1,5 @@
+@use '../../reference' as reference;
+
 .background {
     text-align: left;
 
@@ -22,10 +24,10 @@
     }
 }
 
-.backgroundText {
+.text {
     font-size: 64px;
-    color: var(--lighter-grey);
-    text-shadow: 0px 0px 20px var(--medium-grey);
+    color: reference.$lighter-grey;
+    text-shadow: 0px 0px 20px reference.$medium-grey;
     padding: 0px 25px 0px 0px;
 
     @media (max-width: 768px) {
@@ -52,11 +54,6 @@
             #a13cc2 -50%,
             #9f1b7f 25%,
             #ff971d 100%
-        ); */
-        /* background: -webkit-linear-gradient(
-            0deg,
-            #282828 0%,
-            var(--light-grey) 200%
         ); */
         /* background-clip: text;
         -webkit-background-clip: text;

@@ -1,12 +1,14 @@
+@use '../../reference' as reference;
+
 input[type='text'] {
     &.search {
         font-family: Sans-Regular;
         font-size: 16px;
-        color: var(--medium-grey);
-        background-color: var(--lighter-grey);
+        color: reference.$medium-grey;
+        background-color: reference.$lighter-grey;
         width: 83.75%;
         border: none;
-        border-radius: var(--corners-small);
+        border-radius: reference.$corners-small;
         padding: 5px;
 
         @media (max-width: 768px) {
@@ -20,11 +22,11 @@ select {
     &.search {
         font-family: Sans-Regular;
         font-size: 16px;
-        color: var(--medium-grey);
-        background-color: var(--lighter-grey);
+        color: reference.$medium-grey;
+        background-color: reference.$lighter-grey;
         width: 50%;
         border: none;
-        border-radius: var(--corners-small);
+        border-radius: reference.$corners-small;
         padding: 5px;
     }
 }

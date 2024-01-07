@@ -4,6 +4,8 @@ import styles from './typography.module.scss'
 import { TypographyProps } from './typography.types'
 
 export const Typography: React.FC<TypographyProps> = ({
+    type = 'body',
+    color = 'darkGrey',
     ...props
 }: TypographyProps) => {
     const { isMobile } = useScreenWidth()
@@ -31,13 +33,12 @@ export const Typography: React.FC<TypographyProps> = ({
 
     const classNamesText = cx(
         ...(props.fontFamily === 'serif'
-            ? [styles[`serif${props.type ? toUpperCase(props.type) : ''}`]]
+            ? [styles[`serif${type ? toUpperCase(type) : ''}`]]
             : [
                   styles[
                       `sansSerif${
-                          props.type
-                              ? toUpperCase(props.type) +
-                                (props.light ? 'Light' : '')
+                          type
+                              ? toUpperCase(type) + (props.light ? 'Light' : '')
                               : ''
                       }`
                   ],
@@ -72,9 +73,8 @@ export const Typography: React.FC<TypographyProps> = ({
                         : 'None'
                 }`
             ]]: props.textDecoration,
-            [styles[
-                `color${props.color ? toUpperCase(props.color) : 'DarkerGrey'}`
-            ]]: props.color,
+            [styles[`color${color ? toUpperCase(color) : 'DarkerGrey'}`]]:
+                color,
             [styles.shadow]: props.shadow,
         }
     )

@@ -7,12 +7,8 @@ export const Spacing: React.FC<SpacingProps> = ({ ...props }: SpacingProps) => (
             backgroundColor: props.backgroundColor,
             width: `${props.width}px`,
             border: props.border,
-            borderTop: props.ruleTop
-                ? '1.5px solid var(--darker-grey)'
-                : undefined,
-            borderBottom: props.ruleBottom
-                ? '1.5px solid var(--darker-grey)'
-                : undefined,
+            borderTop: props.ruleTop ? '1.5px solid black' : undefined,
+            borderBottom: props.ruleBottom ? '1.5px solid black' : undefined,
             borderRadius: props.borderRadius,
             position: props.position ? props.position : undefined,
             marginTop: props.mY

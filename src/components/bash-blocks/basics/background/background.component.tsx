@@ -7,10 +7,7 @@ export const Background: React.FC<BackgroundProps> = ({
     type = 'logo',
     content,
 }: BackgroundProps) => {
-    const classNamesText = cx(
-        styles.backgroundText,
-        styles[`backgroundText${toUpperCase(type)}`]
-    )
+    const classNamesText = cx(styles.text, styles[`text${toUpperCase(type)}`])
 
     return (
         <div className={styles.background}>

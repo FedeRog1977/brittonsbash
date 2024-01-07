@@ -31,6 +31,7 @@ export const Footer = () => (
                     <Typography
                         type="h3"
                         content={<code>brittonsbash.com</code>}
+                        color="lightGrey"
                     />
                 </Grid>
                 <Grid rowItem={[2, 5]}>
@@ -51,6 +52,7 @@ export const Footer = () => (
                             <Typography
                                 type="body"
                                 content="Monero Donations"
+                                color="lightGrey"
                             />
                         </Grid>
                     </Grid>
@@ -67,6 +69,7 @@ export const Footer = () => (
                                 ZMTJSSkB46V
                             </code>
                         }
+                        color="lightGrey"
                     />
                 </Grid>
                 <Grid rowItem={[4, 5]}>
@@ -80,6 +83,7 @@ export const Footer = () => (
                     <Typography
                         type="body"
                         content={<>&#169; Lewis Britton 2020&mdash;2023</>}
+                        color="lightGrey"
                     />
                 </Grid>
             </Grid>

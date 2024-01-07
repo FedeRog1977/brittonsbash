@@ -9,20 +9,18 @@ author:
 
 -   Add 2024 support to anywhere necessary
 -   Scotland's Mountains API for routes
--   Fix table scroll background bug
 -   Finish travel key in communications
--   Add dynamic variables in modules
--   Use SCSS reference files
--   Discontinue index.scss in main directory
--   Add onClicks to ImageMatrix images for single image, not slider
 -   Look into type narrowing
--   Map grid parent align autos
 
 # BashBlocks
 
+-   Add responsive classes where necessary
+-   Discontinue index.scss in main directory
 -   Add link functionality to title tile
 -   Add mobile functionality for image tile
 -   Tidy-up prop imports and conditionals on functional components
+-   Add onClicks to ImageMatrix images for single image, not slider
+-   Fix table scroll background bug
 
 # Library
 
@@ -34,6 +32,7 @@ author:
 
 ## Instant Gram
 
+-   Add _The Orchy_
 -   Add _Golden Hour - Meeting Your Heroes_
 -   Add _Christmas 2023_
 -   Add _The Hangover Part II_
@@ -64,7 +63,7 @@ author:
 ## BrittonsNYSERC
 
 -   Add to router
--   Maybe python scripts for uni math/stats stuff
+-   Maybe python scripts for uni math/stats stuff like portfolio optimization
 
 ## BlogBoat
 

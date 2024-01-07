@@ -1,3 +1,5 @@
+@use '../../reference' as reference;
+
 button {
     border: 0 none !important;
     margin: 0;
@@ -15,9 +17,9 @@ button {
 
 .button {
     &Search {
-        border-radius: var(--corners-small);
-        background-color: var(--darker-grey);
-        transition: transform var(--transition-short);
+        border-radius: reference.$corners-small;
+        background-color: reference.$darker-grey;
+        transition: transform reference.$transition-short;
         width: 15%;
 
         @media (max-width: 768px) {
@@ -26,58 +28,58 @@ button {
 
         &:active {
             transform: scale(0.995);
-            transition: transform var(--transition-short);
+            transition: transform reference.$transition-short;
         }
     }
 
     &RegularClear {
-        background-color: var(--transparent);
-        border-radius: var(--corners-small);
-        transition: background-color var(--transition-long),
-            transform var(--transition-short);
+        background-color: reference.$transparent;
+        border-radius: reference.$corners-small;
+        transition: background-color reference.$transition-long,
+            transform reference.$transition-short;
 
         &:hover {
-            background-color: var(--lighter-grey);
-            transition: background-color var(--transition-long);
+            background-color: reference.$lighter-grey;
+            transition: background-color reference.$transition-long;
         }
 
         &:active {
             transform: scale(0.995);
-            transition: transform var(--transition-short);
+            transition: transform reference.$transition-short;
         }
     }
 
     &RegularSolid {
-        background-color: var(--lighter-grey);
-        border-radius: var(--corners-small);
-        transition: background-color var(--transition-long),
-            transform var(--transition-short);
+        background-color: reference.$lighter-grey;
+        border-radius: reference.$corners-small;
+        transition: background-color reference.$transition-long,
+            transform reference.$transition-short;
 
         &:hover {
-            background-color: var(--lighter-grey);
-            transition: background-color var(--transition-long);
+            background-color: reference.$lighter-grey;
+            transition: background-color reference.$transition-long;
         }
 
         &:active {
             transform: scale(0.995);
-            transition: transform var(--transition-short);
+            transition: transform reference.$transition-short;
         }
     }
 
     &Inverse {
-        background-color: var(--transparent);
-        border-radius: var(--corners-small);
-        transition: background-color var(--transition-long),
-            transform var(--transition-short);
+        background-color: reference.$transparent;
+        border-radius: reference.$corners-small;
+        transition: background-color reference.$transition-long,
+            transform reference.$transition-short;
 
         &:hover {
-            background-color: var(--darker-grey-70);
-            transition: background-color var(--transition-long);
+            background-color: reference.$darker-grey-60;
+            transition: background-color reference.$transition-long;
         }
 
         &:active {
             transform: scale(0.995);
-            transition: transform var(--transition-short);
+            transition: transform reference.$transition-short;
         }
     }
 }
@@ -99,14 +101,16 @@ button {
 .transition {
     padding-left: 0;
     padding-right: 0;
-    transition: background-color var(--transition-long),
-        transform var(--transition-short), padding var(--transition-long);
+    transition: background-color reference.$transition-long,
+        transform reference.$transition-short,
+        padding reference.$transition-long;
 
     &:hover {
         padding-left: 15px;
         padding-right: 15px;
-        transition: background-color var(--transition-long),
-            transform var(--transition-short), padding var(--transition-long);
+        transition: background-color reference.$transition-long,
+            transform reference.$transition-short,
+            padding reference.$transition-long;
 
         @media (max-width: 768px) {
             padding-left: 7.5px;

@@ -1,4 +1,6 @@
-/* Image */
+@use '../../reference' as reference;
+
+// Image
 
 .image {
     &Container {
@@ -15,7 +17,7 @@
     }
 }
 
-/* Serif */
+// Serif
 
 .serif {
     padding: 0;
@@ -123,10 +125,9 @@
     }
 }
 
-/* Sans-Serif */
+// Sans-Serif
 
 .sansSerif {
-    color: var(--darker-grey);
     padding: 0;
 
     &T1 {
@@ -314,13 +315,13 @@
     }
 }
 
-/* Small-Caps */
+// Small-Caps
 
 .smallCaps {
     font-variant: small-caps;
 }
 
-/* Text Decoration */
+// Text Decoration
 
 .textDecoration {
     &None {
@@ -340,21 +341,21 @@
     }
 }
 
-/* Links */
+// Links
 
 a {
-    color: var(--darker-grey);
+    color: reference.$darker-grey;
     text-decoration: none;
-    transition: color var(--transition-long);
+    transition: color reference.$transition-long;
 }
 
 a:hover {
-    color: var(--light-blue);
-    transition: color var(--transition-long);
+    color: reference.$light-blue;
+    transition: color reference.$transition-long;
     cursor: pointer;
 }
 
-/* Align */
+// Align
 
 .align {
     &Inherit {
@@ -378,61 +379,53 @@ a:hover {
     }
 }
 
-/* Inline */
+// Inline
 
 .inline {
     display: inline;
 }
 
-/* Color */
+// Color
 
 .color {
     &Black {
-        color: var(--black);
+        color: reference.$black;
     }
 
     &DarkerGrey {
-        color: var(--darker-grey);
-    }
-
-    &DarkerGrey90 {
-        color: var(--darker-grey-90);
-    }
-
-    &DarkerGrey50 {
-        color: var(--darker-grey-50);
+        color: reference.$darker-grey;
     }
 
     &DarkGrey {
-        color: var(--dark-grey);
+        color: reference.$dark-grey;
     }
 
     &MediumGrey {
-        color: var(--medium-grey);
+        color: reference.$medium-grey;
     }
 
     &LightGrey {
-        color: var(--light-grey);
+        color: reference.$light-grey;
     }
 
     &LighterGrey {
-        color: var(--lighter-grey);
+        color: reference.$lighter-grey;
     }
 
     &LightBlue {
-        color: var(--light-blue);
+        color: reference.$light-blue;
     }
 
     &White {
-        color: var(--white);
+        color: reference.$white;
     }
 
     &Transparent {
-        color: var(--transparent);
+        color: reference.$transparent;
     }
 }
 
-/* Paragraph Margins */
+// Paragraph Margins
 
 .paragraphMargins {
     &Desktop {
@@ -444,8 +437,8 @@ a:hover {
     }
 }
 
-/* Shadow */
+// Shadow
 
 .shadow {
-    text-shadow: 0px 0px 5px var(--darker-grey);
+    text-shadow: 0px 0px 5px reference.$darker-grey;
 }
