@@ -17,7 +17,8 @@
     padding: 50px 75px 50px 75px;
 
     &Dense {
-        padding: 25px 75px 25px 75px;
+        padding-top: 12.5px;
+        padding-bottom: 12.5px;
     }
 
     @media (max-width: 768px) {

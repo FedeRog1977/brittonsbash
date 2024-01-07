@@ -1,15 +1,10 @@
-import { articleTestData } from '../../data'
-import { Article, ArticleProps, Tile } from '../bash-blocks'
+import { ArticleTile, TitleTile } from '../bash-blocks'
 import { PageLayout } from '../bash-blocks/templates'
+import { employmentContent } from '../compounds/employment'
 
 export const Employment = () => (
-    <PageLayout background={{ content: 'Employment' }}>
-        <Tile type="solid" top>
-            <Article
-                sections={articleTestData as ArticleProps['sections']}
-                fontFamily="serif"
-                textAlign="justify"
-            />
-        </Tile>
+    <PageLayout background={employmentContent.background}>
+        <TitleTile {...employmentContent.tileOne} />
+        <ArticleTile {...employmentContent.tileTwo} />
     </PageLayout>
 )
