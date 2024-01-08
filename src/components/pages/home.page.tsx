@@ -6,6 +6,5 @@ export const Home = () => (
     <PageLayout background={homeContent.background}>
         <ImageTile {...homeContent.tileOne} />
         <ArticleTile {...homeContent.tileTwo} />
-        <ArticleTile {...homeContent.tileThree} />
     </PageLayout>
 )
