@@ -1,13 +1,25 @@
 export const eventData = {
     2024: [
         {
+            id: 'E2024002',
+            names: ['An Old Enemy, A New Friend'],
+            startDate: '13th of January',
+            description: '',
+            images: [
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/old-enemy-new-friend/1.jpg',
+                    alt: 'old-enemy-new-friend-1',
+                },
+            ],
+        },
+        {
             id: 'E2024001',
             names: ['The Orchy'],
             startDate: '6th of January',
             description: '',
             images: [
                 {
-                    url: 'https://lewisbritton.com/blog/instant-gram/2023/the-orchy/1.jpg',
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/the-orchy/1.jpg',
                     alt: 'the-orchy-1',
                 },
             ],

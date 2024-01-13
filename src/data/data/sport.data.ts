@@ -12,6 +12,15 @@ export const sportData = {
         ],
         projects: [
             {
+                id: 'P2024002',
+                name: 'An Old Enemy, A New Friend',
+                distance: 8.83,
+                elevation: 3428,
+                time: '3:31:34',
+                companionship: 2,
+                munros: ['Beinn Challuim'],
+            },
+            {
                 id: 'P2024001',
                 name: 'The Orchy',
                 distance: 8.6,
@@ -22,6 +31,13 @@ export const sportData = {
             },
         ],
         miles: [
+            {
+                id: 'M2024009',
+                name: 'Waterfoot',
+                distance: 10.01,
+                elevation: 548,
+                time: '1:55:33',
+            },
             {
                 id: 'M2024008',
                 name: 'Waterfoot',
