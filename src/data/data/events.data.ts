@@ -10,6 +10,62 @@ export const eventData = {
                     url: 'https://lewisbritton.com/blog/instant-gram/2024/old-enemy-new-friend/1.jpg',
                     alt: 'old-enemy-new-friend-1',
                 },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/old-enemy-new-friend/2.jpg',
+                    alt: 'old-enemy-new-friend-2',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/old-enemy-new-friend/3.jpg',
+                    alt: 'old-enemy-new-friend-3',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/old-enemy-new-friend/4.jpg',
+                    alt: 'old-enemy-new-friend-4',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/old-enemy-new-friend/5.jpg',
+                    alt: 'old-enemy-new-friend-5',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/old-enemy-new-friend/6.jpg',
+                    alt: 'old-enemy-new-friend-6',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/old-enemy-new-friend/7.jpg',
+                    alt: 'old-enemy-new-friend-7',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/old-enemy-new-friend/8.jpg',
+                    alt: 'old-enemy-new-friend-8',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/old-enemy-new-friend/9.jpg',
+                    alt: 'old-enemy-new-friend-9',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/old-enemy-new-friend/10.jpg',
+                    alt: 'old-enemy-new-friend-10',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/old-enemy-new-friend/11.jpg',
+                    alt: 'old-enemy-new-friend-11',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/old-enemy-new-friend/12.jpg',
+                    alt: 'old-enemy-new-friend-12',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/old-enemy-new-friend/13.jpg',
+                    alt: 'old-enemy-new-friend-13',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/old-enemy-new-friend/14.jpg',
+                    alt: 'old-enemy-new-friend-14',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/old-enemy-new-friend/15.jpg',
+                    alt: 'old-enemy-new-friend-15',
+                },
             ],
         },
         {
@@ -21,6 +77,66 @@ export const eventData = {
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2024/the-orchy/1.jpg',
                     alt: 'the-orchy-1',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/the-orchy/2.jpg',
+                    alt: 'the-orchy-2',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/the-orchy/3.jpg',
+                    alt: 'the-orchy-3',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/the-orchy/4.jpg',
+                    alt: 'the-orchy-4',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/the-orchy/5.jpg',
+                    alt: 'the-orchy-5',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/the-orchy/6.jpg',
+                    alt: 'the-orchy-6',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/the-orchy/7.jpg',
+                    alt: 'the-orchy-7',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/the-orchy/8.jpg',
+                    alt: 'the-orchy-8',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/the-orchy/9.jpg',
+                    alt: 'the-orchy-9',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/the-orchy/10.jpg',
+                    alt: 'the-orchy-10',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/the-orchy/11.jpg',
+                    alt: 'the-orchy-11',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/the-orchy/12.jpg',
+                    alt: 'the-orchy-12',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/the-orchy/13.jpg',
+                    alt: 'the-orchy-13',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/the-orchy/14.jpg',
+                    alt: 'the-orchy-14',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/the-orchy/15.jpg',
+                    alt: 'the-orchy-15',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/the-orchy/16.jpg',
+                    alt: 'the-orchy-16',
                 },
             ],
         },
