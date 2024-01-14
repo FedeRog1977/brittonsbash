@@ -12,6 +12,15 @@ export const sportData = {
         ],
         projects: [
             {
+                id: 'P2024003',
+                name: 'Squad Arrest',
+                distance: 13.78,
+                elevation: 3757,
+                time: '4:46:15',
+                companionship: 5,
+                corbetts: ['Creag Mac Ranaich', 'Meall an t-Seallaidh'],
+            },
+            {
                 id: 'P2024002',
                 name: 'An Old Enemy, A New Friend',
                 distance: 8.83,

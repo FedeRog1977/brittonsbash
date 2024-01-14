@@ -1,6 +1,70 @@
 export const eventData = {
     2024: [
         {
+            id: 'E2024003',
+            names: ['Squad Arrest'],
+            startDate: '14th of January',
+            description: '',
+            images: [
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/squad-arrest/1.jpg',
+                    alt: 'squad-arrest-1',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/squad-arrest/2.jpg',
+                    alt: 'squad-arrest-2',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/squad-arrest/3.jpg',
+                    alt: 'squad-arrest-3',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/squad-arrest/4.jpg',
+                    alt: 'squad-arrest-4',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/squad-arrest/5.jpg',
+                    alt: 'squad-arrest-5',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/squad-arrest/6.jpg',
+                    alt: 'squad-arrest-6',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/squad-arrest/7.jpg',
+                    alt: 'squad-arrest-7',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/squad-arrest/8.jpg',
+                    alt: 'squad-arrest-8',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/squad-arrest/9.jpg',
+                    alt: 'squad-arrest-9',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/squad-arrest/10.jpg',
+                    alt: 'squad-arrest-10',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/squad-arrest/11.jpg',
+                    alt: 'squad-arrest-11',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/squad-arrest/12.jpg',
+                    alt: 'squad-arrest-12',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/squad-arrest/13.jpg',
+                    alt: 'squad-arrest-13',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/squad-arrest/14.jpg',
+                    alt: 'squad-arrest-14',
+                },
+            ],
+        },
+        {
             id: 'E2024002',
             names: ['An Old Enemy, A New Friend'],
             startDate: '13th of January',
