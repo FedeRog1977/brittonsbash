@@ -4,11 +4,10 @@ export const communicationsData = {
             brands: [
                 'Rab',
                 'Mountain Equipment',
-                'Patagonia',
                 'Montane',
-                'Arc’teryx',
-                'Helly Hansen',
                 'Mammut',
+                'Jottnar',
+                'Helly Hansen',
                 'Haglöfs',
                 'Bridgedale',
                 'Scarpa',

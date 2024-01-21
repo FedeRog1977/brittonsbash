@@ -1,15 +1,9 @@
-import { articleTestData } from '../../../data'
-import { Article, ArticleProps, Tile } from '../../bash-blocks'
+import { ArticleTile } from '../../bash-blocks'
 import { PageLayout } from '../../bash-blocks/templates'
+import { thinkFlowContent } from '../../compounds/blog/think-flow'
 
 export const ThinkFlow = () => (
-    <PageLayout background={{ content: 'ThinkFlow' }}>
-        <Tile type="solid" top>
-            <Article
-                sections={articleTestData as ArticleProps['sections']}
-                fontFamily="serif"
-                textAlign="justify"
-            />
-        </Tile>
+    <PageLayout background={thinkFlowContent.background}>
+        <ArticleTile {...thinkFlowContent.tileOne} />
     </PageLayout>
 )

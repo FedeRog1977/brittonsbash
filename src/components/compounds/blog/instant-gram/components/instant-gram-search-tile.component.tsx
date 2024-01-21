@@ -35,7 +35,7 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
     const [parsedEventData, setParsedEventData] = useState(emptyEventData)
 
     return (
-        <Tile type="solid" top>
+        <Tile type="solid">
             {/* <Search func={props.funcInput} placeholder="Search Events" />
             <Button
                 type="search"

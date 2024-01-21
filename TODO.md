@@ -15,6 +15,8 @@ author:
 
 # BashBlocks
 
+-   Add ReactElement option to Article body for links (e.g. in ThinkFlow, for guides)
+-   Add _CaveatTile_ for ThinkFlow footnotes
 -   Add responsive classes where necessary
 -   Discontinue index.scss in main directory
 -   Add link functionality to title tile

@@ -18,7 +18,7 @@ export const WeatherSearchTile = ({
     const { isMobile } = useScreenWidth()
 
     return (
-        <Tile type="solid" top>
+        <Tile type="solid">
             <Spacing
                 mL={isMobile ? 0 : 70}
                 mR={isMobile ? 0 : 70}
