@@ -12,6 +12,16 @@ export const sportData = {
         ],
         projects: [
             {
+                id: 'P2024004',
+                name: 'White Box',
+                distance: 11.2,
+                elevation: 3114,
+                time: '4:35:44',
+                companionship: 1,
+                munros: ['Ben Chonzie'],
+                corbettTops: ['Meall na Seide'],
+            },
+            {
                 id: 'P2024003',
                 name: 'Squad Arrest',
                 distance: 13.78,
@@ -40,6 +50,34 @@ export const sportData = {
             },
         ],
         miles: [
+            {
+                id: 'M2024013',
+                name: 'Waterfoot',
+                distance: 10.11,
+                elevation: 942,
+                time: '2:01:55',
+            },
+            {
+                id: 'M2024012',
+                name: 'Waterfoot',
+                distance: 10.04,
+                elevation: 531,
+                time: '1:56:58',
+            },
+            {
+                id: 'M2024011',
+                name: 'Waterfoot',
+                distance: 10.01,
+                elevation: 548,
+                time: '1:54:20',
+            },
+            {
+                id: 'M2024010',
+                name: 'Waterfoot',
+                distance: 10.01,
+                elevation: 538,
+                time: '1:58:22',
+            },
             {
                 id: 'M2024009',
                 name: 'Waterfoot',

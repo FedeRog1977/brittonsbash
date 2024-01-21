@@ -1,6 +1,42 @@
 export const eventData = {
     2024: [
         {
+            id: 'E2024004',
+            names: ['White Box'],
+            startDate: '21st of January',
+            description: '',
+            images: [
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/white-box/1.jpg',
+                    alt: 'white-box-1',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/white-box/2.jpg',
+                    alt: 'white-box-2',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/white-box/3.jpg',
+                    alt: 'white-box-3',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/white-box/4.jpg',
+                    alt: 'white-box-4',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/white-box/5.jpg',
+                    alt: 'white-box-5',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/white-box/6.jpg',
+                    alt: 'white-box-6',
+                },
+                {
+                    url: 'https://lewisbritton.com/blog/instant-gram/2024/white-box/7.jpg',
+                    alt: 'white-box-7',
+                },
+            ],
+        },
+        {
             id: 'E2024003',
             names: ['Squad Arrest'],
             startDate: '14th of January',

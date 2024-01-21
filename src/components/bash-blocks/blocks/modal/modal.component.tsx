@@ -33,8 +33,8 @@ export const Modal: React.FC<ModalProps> = ({ ...props }: ModalProps) => {
                 <Tile type="solid">{content}</Tile>
             ) : (
                 <Spacing
-                    pL={isMobile ? 0 : 75}
-                    pR={isMobile ? 0 : 75}
+                    pL={isMobile ? 0 : 150}
+                    pR={isMobile ? 0 : 150}
                     pT={24}
                     pB={24}
                 >

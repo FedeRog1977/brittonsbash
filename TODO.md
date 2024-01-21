@@ -7,6 +7,7 @@ author:
 
 # General
 
+-   Add (my) media of the year(s), songs etc.
 -   Add 2024 support to anywhere necessary
 -   Scotland's Mountains API for routes
 -   Finish travel key in communications
@@ -14,6 +15,8 @@ author:
 
 # BashBlocks
 
+-   Rename blocks to include "BashBlock"
+-   Add WidgetBashBlock (for Miami Vice, etc.)
 -   Add responsive classes where necessary
 -   Discontinue index.scss in main directory
 -   Add link functionality to title tile
@@ -32,6 +35,8 @@ author:
 
 ## Instant Gram
 
+-   Add _White Box_
+-   Add _An Old Enemy, A New Friend_ and _Squad Arrest_
 -   Add _The Orchy_
 -   Add _Golden Hour - Meeting Your Heroes_
 -   Add _Christmas 2023_

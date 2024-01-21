@@ -13,11 +13,10 @@
 }
 
 .contain {
-    padding: 50px 75px 50px 75px;
+    padding: 50px 150px 50px 150px;
 
     &Dense {
-        padding-top: 12.5px;
-        padding-bottom: 12.5px;
+        padding: 12.5px 150px 12.5px 150px;
     }
 
     @media (max-width: 768px) {
@@ -30,12 +29,12 @@
 }
 
 .margins {
-    margin-left: 75px;
-    margin-right: 75px;
+    margin-left: 150px;
+    margin-right: 150px;
 
-    @media (min-width: 768px) {
-        border-radius: reference.$corners-large;
-    }
+    // @media (min-width: 768px) {
+    //     border-radius: reference.$corners-large;
+    // }
 
     @media (max-width: 768px) {
         border-radius: none;
