@@ -15,7 +15,6 @@ author:
 
 # BashBlocks
 
--   Rename blocks to include "BashBlock"
 -   Add WidgetBashBlock (for Miami Vice, etc.)
 -   Add responsive classes where necessary
 -   Discontinue index.scss in main directory
