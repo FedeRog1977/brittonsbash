@@ -1,9 +1,6 @@
 # Disc 1 - 80s Pop
 
 -   Invisible Touch
-
-# Disc 2 - Scottish Pop
-
 -   ...
 -   Espresso Love
 -   So Far Away
@@ -12,11 +9,18 @@
 -   Private Investigations
 -   Sultans Of Swing
 
+# Disc 2 - Scottish Pop
+
+-   ...
+-   Wild Theme
+
 ...
 
-# Disc ... - 2006 PMB Disco
+# Disc ... - 2008 PMB Disco
 
 # Disc ... - Memes
+
+# Disc ... - Ballads
 
 # Disc ... - Nostalgia
 
