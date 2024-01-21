@@ -1,31 +1,10 @@
 import { useState } from 'react'
+import { compileMiamiVice } from '../../../../../scripts'
 import { VideoTileProps } from '../../../../bash-blocks'
 import { miamiViceContent } from '../content'
 
 export function useMiamiVice() {
-    // ---
-    // compileMiamiViceVideos():
-    const compiledVideos: VideoTileProps[] = []
-
-    miamiViceContent.tileOne.season1.forEach((video) => {
-        compiledVideos.push(video)
-    })
-    miamiViceContent.tileOne.season2.forEach((video) => {
-        compiledVideos.push(video)
-    })
-    miamiViceContent.tileOne.season3.forEach((video) => {
-        compiledVideos.push(video)
-    })
-    miamiViceContent.tileOne.season4.forEach((video) => {
-        compiledVideos.push(video)
-    })
-    miamiViceContent.tileOne.season5.forEach((video) => {
-        compiledVideos.push(video)
-    })
-    // ---
-
-    const allVideos = compiledVideos
-
+    const allVideos = compileMiamiVice()
     const [video, setVideo] = useState(allVideos[0])
 
     const handleSelect = (e: any) => {
