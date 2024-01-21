@@ -4,6 +4,7 @@ import { VideoTileProps } from './video-tile.types'
 
 export const VideoTile: React.FC<VideoTileProps> = ({
     type = 'clear',
+    anchor,
     heading,
     subHeading,
     video,
@@ -13,7 +14,7 @@ export const VideoTile: React.FC<VideoTileProps> = ({
     const { isMobile } = useScreenWidth()
 
     return (
-        <Tile type={type} margins={margins} textAlign="center">
+        <Tile type={type} anchor={anchor} margins={margins} textAlign="center">
             {subHeading && <Typography type="h2" content={subHeading} light />}
             {heading && (
                 <Typography

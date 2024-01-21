@@ -15,7 +15,6 @@ author:
 
 # BashBlocks
 
--   Add WidgetBashBlock (for Miami Vice, etc.)
 -   Add responsive classes where necessary
 -   Discontinue index.scss in main directory
 -   Add link functionality to title tile
