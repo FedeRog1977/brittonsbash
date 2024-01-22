@@ -1,7 +1,5 @@
 import { useState } from 'react'
 import { compileMiamiVice } from '../../../../../scripts'
-import { VideoTileProps } from '../../../../bash-blocks'
-import { miamiViceContent } from '../content'
 
 export function useMiamiVice() {
     const allVideos = compileMiamiVice()
