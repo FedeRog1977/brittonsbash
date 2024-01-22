@@ -11,7 +11,6 @@ export const thinkFlowContent: ThinkFlowProps = {
         type: 'solid',
         heading: 'ThinkFlow (Patent Pending)',
         subHeading: 'My ThinkPads',
-        body: '',
         imageMatrices: [
             {
                 heading: 'Showcase',
