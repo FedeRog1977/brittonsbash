@@ -14,6 +14,7 @@ export const thinkFlowContent: ThinkFlowProps = {
         body: '',
         imageMatrices: [
             {
+                heading: 'Showcase',
                 items: [
                     {
                         url: 'https://lewisbritton.com/blog/think-flow/t420.jpeg',
@@ -44,6 +45,16 @@ export const thinkFlowContent: ThinkFlowProps = {
                         url: 'https://lewisbritton.com/blog/think-flow/t23.jpeg',
                         alt: 'T23',
                         description: 'IBM ThinkPad T23',
+                    },
+                ],
+            },
+            {
+                heading: 'ThinkFlow',
+                items: [
+                    {
+                        url: 'https://lewisbritton.com/blog/think-flow/flow.png',
+                        alt: 'T420',
+                        description: 'ThinkFLow (Patent Pending)',
                     },
                 ],
             },
