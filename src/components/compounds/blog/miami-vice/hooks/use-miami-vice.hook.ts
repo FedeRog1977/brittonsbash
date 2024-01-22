@@ -11,7 +11,7 @@ export function useMiamiVice() {
         for (var i in allVideos) {
             const fullName = allVideos[i].heading
 
-            if (fullName?.includes(e.currentTarget.value)) {
+            if (fullName === e.currentTarget.value) {
                 setVideo(allVideos[i])
             }
         }
