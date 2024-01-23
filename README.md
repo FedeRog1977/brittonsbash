@@ -89,6 +89,7 @@ Typescript notes:
 -   [Adding TypeScript to React App](https://create-react-app.dev/docs/adding-typescript/)
 -   ['Cheat Sheet'](https://react-typescript-cheatsheet.netlify.app/docs/basic/setup)
 -   [Solo Let's Play Walkthrough](https://2ality.com/2018/04/type-notation-typescript.html)
+-   [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html)
 
 # React Router
 
@@ -325,6 +326,16 @@ npx prettier --write .
 ```
 
 -   [Guide](https://prettier.io/docs/en/install.html)
+
+## Markdown To JSX
+
+Install:
+
+```
+npm i markdown-to-jsx
+```
+
+-   [Guide](https://www.npmjs.com/package/markdown-to-jsx)
 
 ## React Lazy Load Image Component
 

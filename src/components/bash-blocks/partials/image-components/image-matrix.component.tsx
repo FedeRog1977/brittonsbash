@@ -4,6 +4,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { Flex, Typography } from '../../basics'
 import { ImageProps } from '../../reference'
 import { ImageMatrixProps } from './image-components.types'
+import Markdown from 'markdown-to-jsx'
 
 export const ImageMatrix: React.FC<ImageMatrixProps> = ({
     ...props

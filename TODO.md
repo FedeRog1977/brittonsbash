@@ -15,9 +15,9 @@ author:
 
 # BashBlocks
 
--   Add ReactElement option to Article body for links (e.g. in ThinkFlow, for guides)
--   Add _CaveatTile_ for ThinkFlow footnotes
--   Add responsive classes where necessary
+-   Add _CaveatTile_
+-   Add _generateUniqueKey_
+-   Add responsive classes where necessary, _Spacing_ etc.
 -   Discontinue index.scss in main directory
 -   Add link functionality to title tile
 -   Add mobile functionality for image tile
@@ -92,5 +92,6 @@ author:
 
 -   Refactor Munros back into routes
 -   Add formatter to flatten Munros from routes
+-   Get distances and other stats from GPX's
 -   Add features and work on existing
 -   Add "my hills" button

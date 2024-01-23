@@ -2,6 +2,7 @@ import { toUpperCase, useScreenWidth } from '../../../../scripts'
 import cx from 'classnames'
 import styles from './typography.module.scss'
 import { TypographyProps } from './typography.types'
+import Markdown from 'markdown-to-jsx'
 
 export const Typography: React.FC<TypographyProps> = ({
     type = 'body',
@@ -109,6 +110,13 @@ export const Typography: React.FC<TypographyProps> = ({
         )
     }
 
+    const content =
+        typeof props.content === 'string' ? (
+            <Markdown>{props.content}</Markdown>
+        ) : (
+            props.content
+        )
+
     return (
         <div
             className={classNamesTextContainer}
@@ -128,10 +136,10 @@ export const Typography: React.FC<TypographyProps> = ({
                         target={props.link.newTab ? '_blank' : undefined}
                         rel={props.link.newTab ? 'noreferrer' : undefined}
                     >
-                        <>{props.content}</>
+                        <>{content}</>
                     </a>
                 ) : (
-                    <>{props.content}</>
+                    <>{content}</>
                 )}
             </span>
         </div>

@@ -874,6 +874,10 @@ export const communicationsData = {
             ],
             web: [
                 {
+                    content: 'Bible',
+                    href: 'https://developer.mozilla.org/en-US/',
+                },
+                {
                     content: 'GitHub',
                     href: 'https://github.com/',
                 },
@@ -956,6 +960,14 @@ export const communicationsData = {
                 {
                     content: 'KT-companion Hiking App',
                     href: 'https://github.com/jamealg/KT-companion',
+                },
+                {
+                    content: 'npmjs',
+                    href: 'https://www.npmjs.com/',
+                },
+                {
+                    content: 'TypeScript.org',
+                    href: 'https://www.typescriptlang.org/',
                 },
             ],
             apis: [
@@ -1189,6 +1201,7 @@ export const communicationsData = {
         lego: { sets: [], miniFigures: [] },
         books: [
             'The Atlas of Furniture Design',
+            'Eames & Vitra',
             '1000 Design Classics',
             'Herman Miller: A Way of Living',
             'The First Fifty Years 1913-1963 Arthur Andersen & Co',
@@ -1199,13 +1212,17 @@ export const communicationsData = {
         links: {
             graphicDesign: [
                 {
-                    context: 'Miami Vice Color Palette',
+                    content: 'Miami Vice Color Palette',
                     href: 'https://www.color-hex.com/color-palette/45581',
                 },
             ],
             interiors: [
                 {
-                    context: 'Vinterior',
+                    content: 'Vitra Design Museum Shop',
+                    href: 'https://www.design-museum.de/en/information.html',
+                },
+                {
+                    content: 'Vinterior',
                     href: 'https://www.vinterior.co/',
                 },
             ],
