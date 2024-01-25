@@ -11,7 +11,7 @@ author:
 -   Add 2024 support to anywhere necessary
 -   Scotland's Mountains API for routes
 -   Finish travel key in communications
--   Look into type narrowing
+-   Look into narrowing
 
 # BashBlocks
 

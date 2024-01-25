@@ -19,8 +19,20 @@ export const libraryContent: LibraryProps = {
                 heading: 'LaTeX and Markdown',
                 items: [
                     {
-                        content: 'Lewis Britton',
-                        url: 'https://lewisbritton.com/',
+                        content: 'Symbols & Logic Syntax (TeX)',
+                        url: '',
+                    },
+                    {
+                        content: 'Symbols & Logic Syntax (PDF)',
+                        url: '',
+                    },
+                    {
+                        content: 'Basic Syntax Templates (TeX)',
+                        url: '',
+                    },
+                    {
+                        content: 'Basic Syntax Templates (PDF)',
+                        url: '',
                     },
                 ],
             },
@@ -28,8 +40,8 @@ export const libraryContent: LibraryProps = {
                 heading: 'HTML, CSS, and JavaScript',
                 items: [
                     {
-                        content: 'Lewis Britton',
-                        url: 'https://lewisbritton.com/',
+                        content: 'TBW',
+                        url: '',
                     },
                 ],
             },
@@ -37,8 +49,8 @@ export const libraryContent: LibraryProps = {
                 heading: 'React and Typescript',
                 items: [
                     {
-                        content: 'Lewis Britton',
-                        url: 'https://lewisbritton.com/',
+                        content: 'TBW',
+                        url: '',
                     },
                 ],
             },
@@ -54,8 +66,8 @@ export const libraryContent: LibraryProps = {
                 heading: 'CS958 (Project)',
                 items: [
                     {
-                        content: 'Lewis Britton',
-                        url: 'https://lewisbritton.com/',
+                        content: 'Assignment',
+                        url: '',
                     },
                 ],
             },
@@ -63,8 +75,8 @@ export const libraryContent: LibraryProps = {
                 heading: 'CS995',
                 items: [
                     {
-                        content: 'Lewis Britton',
-                        url: 'https://lewisbritton.com/',
+                        content: 'Assignment (Code)',
+                        url: '',
                     },
                 ],
             },
@@ -72,8 +84,8 @@ export const libraryContent: LibraryProps = {
                 heading: 'CS994',
                 items: [
                     {
-                        content: 'Lewis Britton',
-                        url: 'https://lewisbritton.com/',
+                        content: 'Assignment (Code)',
+                        url: '',
                     },
                 ],
             },
@@ -81,8 +93,16 @@ export const libraryContent: LibraryProps = {
                 heading: 'CS993',
                 items: [
                     {
-                        content: 'Lewis Britton',
-                        url: 'https://lewisbritton.com/',
+                        content: 'Assignment I',
+                        url: '',
+                    },
+                    {
+                        content: 'Assignment I (Code)',
+                        url: '',
+                    },
+                    {
+                        content: 'Assignment II',
+                        url: '',
                     },
                 ],
             },
@@ -90,8 +110,12 @@ export const libraryContent: LibraryProps = {
                 heading: 'CS992',
                 items: [
                     {
-                        content: 'Lewis Britton',
-                        url: 'https://lewisbritton.com/',
+                        content: 'Assignment',
+                        url: '',
+                    },
+                    {
+                        content: 'Labs',
+                        url: '',
                     },
                 ],
             },
@@ -99,8 +123,16 @@ export const libraryContent: LibraryProps = {
                 heading: 'CS991',
                 items: [
                     {
-                        content: 'Lewis Britton',
-                        url: 'https://lewisbritton.com/',
+                        content: 'Assignment I',
+                        url: '',
+                    },
+                    {
+                        content: 'Assignment I (Code)',
+                        url: '',
+                    },
+                    {
+                        content: 'Assignment II (Code)',
+                        url: '',
                     },
                 ],
             },
@@ -108,8 +140,24 @@ export const libraryContent: LibraryProps = {
                 heading: 'CS990',
                 items: [
                     {
-                        content: 'Lewis Britton',
-                        url: 'https://lewisbritton.com/',
+                        content: 'Assignment I',
+                        url: '',
+                    },
+                    {
+                        content: 'Assignment II',
+                        url: '',
+                    },
+                    {
+                        content: 'Assignment II (Code)',
+                        url: '',
+                    },
+                    {
+                        content: 'Labs',
+                        url: '',
+                    },
+                    {
+                        content: 'Lectures',
+                        url: '',
                     },
                 ],
             },
@@ -117,8 +165,8 @@ export const libraryContent: LibraryProps = {
                 heading: 'CS978',
                 items: [
                     {
-                        content: 'Lewis Britton',
-                        url: 'https://lewisbritton.com/',
+                        content: 'Assignment',
+                        url: '',
                     },
                 ],
             },
@@ -126,8 +174,16 @@ export const libraryContent: LibraryProps = {
                 heading: 'CS808',
                 items: [
                     {
-                        content: 'Lewis Britton',
-                        url: 'https://lewisbritton.com/',
+                        content: 'Assignment',
+                        url: '',
+                    },
+                    {
+                        content: 'Assignment (Code)',
+                        url: '',
+                    },
+                    {
+                        content: 'Examination',
+                        url: '',
                     },
                 ],
             },
@@ -143,8 +199,8 @@ export const libraryContent: LibraryProps = {
                 heading: 'AG436 (Dissertation)',
                 items: [
                     {
-                        content: 'Lewis Britton',
-                        url: 'https://lewisbritton.com/',
+                        content: 'Assignment',
+                        url: '',
                     },
                 ],
             },
@@ -152,8 +208,12 @@ export const libraryContent: LibraryProps = {
                 heading: 'AG432',
                 items: [
                     {
-                        content: 'Lewis Britton',
-                        url: 'https://lewisbritton.com/',
+                        content: 'Assignment',
+                        url: '',
+                    },
+                    {
+                        content: 'Test',
+                        url: '',
                     },
                 ],
             },
@@ -161,8 +221,12 @@ export const libraryContent: LibraryProps = {
                 heading: 'AG431',
                 items: [
                     {
-                        content: 'Lewis Britton',
-                        url: 'https://lewisbritton.com/',
+                        content: 'Assignment',
+                        url: '',
+                    },
+                    {
+                        content: 'Examination',
+                        url: '',
                     },
                 ],
             },
@@ -170,8 +234,8 @@ export const libraryContent: LibraryProps = {
                 heading: 'AG430',
                 items: [
                     {
-                        content: 'Lewis Britton',
-                        url: 'https://lewisbritton.com/',
+                        content: 'Examination',
+                        url: '',
                     },
                 ],
             },
@@ -179,8 +243,12 @@ export const libraryContent: LibraryProps = {
                 heading: 'AG428',
                 items: [
                     {
-                        content: 'Lewis Britton',
-                        url: 'https://lewisbritton.com/',
+                        content: 'Assignment',
+                        url: '',
+                    },
+                    {
+                        content: 'Examination',
+                        url: '',
                     },
                 ],
             },
@@ -188,8 +256,12 @@ export const libraryContent: LibraryProps = {
                 heading: 'AG313',
                 items: [
                     {
-                        content: 'Lewis Britton',
-                        url: 'https://lewisbritton.com/',
+                        content: 'Summary',
+                        url: '',
+                    },
+                    {
+                        content: 'Examination',
+                        url: '',
                     },
                 ],
             },
@@ -197,8 +269,12 @@ export const libraryContent: LibraryProps = {
                 heading: 'AG312',
                 items: [
                     {
-                        content: 'Lewis Britton',
-                        url: 'https://lewisbritton.com/',
+                        content: 'Summary',
+                        url: '',
+                    },
+                    {
+                        content: 'Assignment',
+                        url: '',
                     },
                 ],
             },
@@ -206,8 +282,12 @@ export const libraryContent: LibraryProps = {
                 heading: 'AG217',
                 items: [
                     {
-                        content: 'Lewis Britton',
-                        url: 'https://lewisbritton.com/',
+                        content: 'Summary',
+                        url: '',
+                    },
+                    {
+                        content: 'Assignment',
+                        url: '',
                     },
                 ],
             },
@@ -215,8 +295,12 @@ export const libraryContent: LibraryProps = {
                 heading: 'AG215',
                 items: [
                     {
-                        content: 'Lewis Britton',
-                        url: 'https://lewisbritton.com/',
+                        content: 'Summary',
+                        url: '',
+                    },
+                    {
+                        content: 'Assignment',
+                        url: '',
                     },
                 ],
             },
@@ -224,8 +308,12 @@ export const libraryContent: LibraryProps = {
                 heading: 'EC315',
                 items: [
                     {
-                        content: 'Lewis Britton',
-                        url: 'https://lewisbritton.com/',
+                        content: 'Summary',
+                        url: '',
+                    },
+                    {
+                        content: 'Assignment',
+                        url: '',
                     },
                 ],
             },
@@ -233,8 +321,8 @@ export const libraryContent: LibraryProps = {
                 heading: 'EC216',
                 items: [
                     {
-                        content: 'Lewis Britton',
-                        url: 'https://lewisbritton.com/',
+                        content: 'Summary',
+                        url: '',
                     },
                 ],
             },
@@ -242,8 +330,12 @@ export const libraryContent: LibraryProps = {
                 heading: 'BF303 and BF201',
                 items: [
                     {
-                        content: 'Lewis Britton',
-                        url: 'https://lewisbritton.com/',
+                        content: 'Assignment (BF303)',
+                        url: '',
+                    },
+                    {
+                        content: 'Assignment (BF201)',
+                        url: '',
                     },
                 ],
             },

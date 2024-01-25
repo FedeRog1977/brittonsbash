@@ -19,7 +19,7 @@ export const thinkFlowContent: ThinkFlowProps = {
                         url: 'https://lewisbritton.com/blog/think-flow/t420.jpeg',
                         alt: 'T420',
                         description:
-                            '[Lenovo ThinkPad T420](https://download.lenovo.com/ibmdl/pub/pc/pccbbs/thinkcentre_pdf/0b03687.pdf)&nbsp;<sup>([1](https://lewisbritton.com/))</sup>',
+                            '[Lenovo ThinkPad T420](https://download.lenovo.com/ibmdl/pub/pc/pccbbs/thinkcentre_pdf/0b03687.pdf)&nbsp;<sup>[[1](https://lewisbritton.com/)]</sup>',
                     },
                     {
                         url: 'https://lewisbritton.com/blog/think-flow/x220.jpeg',
@@ -31,7 +31,7 @@ export const thinkFlowContent: ThinkFlowProps = {
                         url: 'https://lewisbritton.com/blog/think-flow/r50e.jpeg',
                         alt: 'r50e',
                         description:
-                            '[IBM ThinkPad R50E](https://download.lenovo.com/ibmdl/pub/pc/pccbbs/mobiles_pdf/39t2462.pdf)',
+                            '[IBM ThinkPad R50e](https://download.lenovo.com/ibmdl/pub/pc/pccbbs/mobiles_pdf/39t2462.pdf)',
                     },
                     {
                         url: 'https://lewisbritton.com/blog/think-flow/t42.jpeg',
