@@ -9,21 +9,35 @@ author:
 
 -   Add (my) media of the year(s), songs etc.
 -   Add 2024 support to anywhere necessary
--   Scotland's Mountains API for routes
 -   Finish travel key in communications
 -   Look into narrowing
+
+# APIs
+
+-   Scotland's Mountains
+-   Events
+-   Sport
 
 # BashBlocks
 
 -   Add _CaveatTile_
 -   Add _generateUniqueKey_
+-   Add breakpoints
 -   Add responsive classes where necessary, _Spacing_ etc.
+-   Add @mixins for responsive classes
 -   Discontinue index.scss in main directory
--   Add link functionality to title tile
 -   Add mobile functionality for image tile
 -   Tidy-up prop imports and conditionals on functional components
 -   Add onClicks to ImageMatrix images for single image, not slider
 -   Fix table scroll background bug
+
+# Academia
+
+-   Refactor content
+
+# Employment
+
+-   Refactor content
 
 # Library
 
@@ -63,7 +77,7 @@ author:
 
 ## BrittonsFilmRC
 
--   Add to router
+-   Add to router to replace Media
 
 ## BrittonsNYSERC
 
