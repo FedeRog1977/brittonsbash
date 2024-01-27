@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.da0fe6be.css",
-    "main.js": "/static/js/main.ddc26ed9.js",
+    "main.js": "/static/js/main.e51d9d9d.js",
     "static/js/787.15aa4678.chunk.js": "/static/js/787.15aa4678.chunk.js",
     "static/media/background.jpg": "/static/media/background.cbc6a32ac60307059f07.jpg",
     "static/media/background-mobile.jpg": "/static/media/background-mobile.3a3baecb95651c61d642.jpg",
@@ -14,6 +14,7 @@
     "static/media/audi-extended-bold.ttf": "/static/media/audi-extended-bold.447d44339e756daf66b8.ttf",
     "static/media/audi-bold.ttf": "/static/media/audi-bold.1e7581aa8a44cf53f5c2.ttf",
     "static/media/audi-italic.ttf": "/static/media/audi-italic.4fbfd0471518fbe9d64f.ttf",
+    "static/media/intro-tile-mobile.jpg": "/static/media/intro-tile-mobile.7923c15d0a32fd2ea6b0.jpg",
     "static/media/open-sans-light-italic.ttf": "/static/media/open-sans-light-italic.0ce71e4f901a265e51a4.ttf",
     "static/media/open-sans-semi-bold-italic.ttf": "/static/media/open-sans-semi-bold-italic.b503364ab4f154d7cccc.ttf",
     "static/media/open-sans-italic.ttf": "/static/media/open-sans-italic.910cef950734e8b2d263.ttf",
@@ -29,11 +30,11 @@
     "static/media/xmr.svg": "/static/media/xmr.45ccc83cb5c9bd7f5f6794df23a2ea69.svg",
     "index.html": "/index.html",
     "main.da0fe6be.css.map": "/static/css/main.da0fe6be.css.map",
-    "main.ddc26ed9.js.map": "/static/js/main.ddc26ed9.js.map",
+    "main.e51d9d9d.js.map": "/static/js/main.e51d9d9d.js.map",
     "787.15aa4678.chunk.js.map": "/static/js/787.15aa4678.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.da0fe6be.css",
-    "static/js/main.ddc26ed9.js"
+    "static/js/main.e51d9d9d.js"
   ]
 }
