@@ -5,6 +5,7 @@ import {
 } from '../../../bash-blocks'
 import { imageTestData } from '../../../../data'
 import introTileImg from '../../../../media/images/pages/intro-tile.jpg'
+import introTileMobileImg from '../../../../media/images/pages/intro-tile-mobile.jpg'
 
 type HomeProps = {
     background: BackgroundProps
@@ -15,7 +16,8 @@ type HomeProps = {
 export const homeContent: HomeProps = {
     background: { content: 'BrittonsBashRC' },
     tileOne: {
-        img: { url: introTileImg, alt: 'intro-tile-image' },
+        imgDesktop: { url: introTileImg, alt: 'intro-tile-image' },
+        imgMobile: { url: introTileMobileImg, alt: 'intro-tile-mobile-image' },
         gradient: {
             opacity: 40,
         },
@@ -30,6 +32,7 @@ export const homeContent: HomeProps = {
             { content: 'Conquest', href: '#/utils/conquest' },
         ],
         invert: true,
+        textAlign: 'left',
     },
     tileTwo: {
         heading: 'Those who know, those who fear',

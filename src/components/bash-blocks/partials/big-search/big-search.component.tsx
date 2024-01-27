@@ -1,6 +1,6 @@
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { handleGridAlign, useScreenWidth } from '../../../../scripts'
+import { getGridAlign, useScreenWidth } from '../../../../scripts'
 import { Grid, Search, SearchList, Spacing } from '../../basics'
 import { Button } from '../button'
 import { BigSearchProps } from './big-search.types'
@@ -12,7 +12,7 @@ export const BigSearch: React.FC<BigSearchProps> = ({
     selects,
 }: BigSearchProps) => {
     const { isMobile } = useScreenWidth()
-    const handleAlign = handleGridAlign(selects ?? [])
+    const handleAlign = getGridAlign(selects ?? [])
 
     return (
         <>

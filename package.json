@@ -23,6 +23,7 @@
         "react-lazy-load-image-component": "^1.6.0",
         "react-leaflet": "^4.2.1",
         "react-modal": "^3.16.1",
+        "react-pdf": "^7.7.0",
         "react-router-dom": "^6.5.0",
         "react-scripts": "5.0.1",
         "sass": "^1.64.1",

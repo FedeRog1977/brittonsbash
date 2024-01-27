@@ -21,8 +21,8 @@ export const MiamiViceSearchTile: React.FC<MiamiViceSearchTileProps> = ({
     const [parsedVideoData, setParsedEventData] = useState(emptyVideoData)
 
     return (
-        <Tile type="solid">
-            <Grid alignColumns="auto" justifyItems="center">
+        <Tile type="solid" top>
+            <Grid alignColumns="1fr 1fr 1fr 1fr 1fr" justifyItems="center">
                 <Grid columnItem={[1, 5]}>
                     <Button
                         typeType={isMobile ? 't1' : 't2'}

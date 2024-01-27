@@ -10,20 +10,23 @@ import { Tile, Button, Grid } from '../../../../bash-blocks'
 import { SportSearchTileProps } from '../types'
 
 export const SportSearchTile: React.FC<SportSearchTileProps> = ({
-    ...props
+    funcSelect,
+    isRoadies,
+    isProjects,
+    isMiles,
 }: SportSearchTileProps) => {
     const { isMobile } = useScreenWidth()
 
     return (
-        <Tile type="solid">
-            <Grid alignColumns="auto auto" justifyItems="center">
+        <Tile type="solid" top>
+            <Grid alignColumns="1fr 1fr 1fr 1fr" justifyItems="center">
                 <Grid columnItem={[1, 4]}>
                     <Button
                         typeType="t2"
                         type="regularClear"
                         value="roadies"
-                        func={props.funcSelect}
-                        funcResp={props.isRoadies}
+                        func={funcSelect}
+                        funcResp={isRoadies}
                         content={<FontAwesomeIcon icon={faBiking} />}
                         subContent="Roadies"
                         subContentTop={isMobile}
@@ -35,8 +38,8 @@ export const SportSearchTile: React.FC<SportSearchTileProps> = ({
                         typeType="t2"
                         type="regularClear"
                         value="projects"
-                        func={props.funcSelect}
-                        funcResp={props.isProjects}
+                        func={funcSelect}
+                        funcResp={isProjects}
                         content={<FontAwesomeIcon icon={faMountainSun} />}
                         subContent="Projects"
                         subContentTop={isMobile}
@@ -48,8 +51,8 @@ export const SportSearchTile: React.FC<SportSearchTileProps> = ({
                         typeType="t2"
                         type="regularClear"
                         value="miles"
-                        func={props.funcSelect}
-                        funcResp={props.isMiles}
+                        func={funcSelect}
+                        funcResp={isMiles}
                         content={<FontAwesomeIcon icon={faWalking} />}
                         subContent="Miles"
                         subContentTop={isMobile}

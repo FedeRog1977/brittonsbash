@@ -1,12 +1,14 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
 import { ImageTile as ImageTileComponent } from './image-tile.component'
 import introTileImg from '../../../../media/images/pages/intro-tile.jpg'
+import introTileMobileImg from '../../../../media/images/pages/intro-tile.jpg'
 
 const meta: ComponentMeta<typeof ImageTileComponent> = {
     title: 'BashBlocks / ImageTile',
     component: ImageTileComponent,
     args: {
-        img: { url: introTileImg, alt: 'intro-tile-image' },
+        imgDesktop: { url: introTileImg, alt: 'intro-tile-image' },
+        imgMobile: { url: introTileMobileImg, alt: 'intro-tile-mobile-image' },
         gradient: {
             value: 'dark',
             opacity: 40,

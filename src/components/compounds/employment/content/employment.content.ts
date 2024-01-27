@@ -8,6 +8,7 @@ type EmploymentProps = {
     background: BackgroundProps
     tileOne: TitleTileProps
     tileTwo: ArticleTileProps
+    tileThree: ArticleTileProps
 }
 
 export const employmentContent: EmploymentProps = {
@@ -18,12 +19,20 @@ export const employmentContent: EmploymentProps = {
                 content: 'View / Download',
                 subContent: {
                     content: 'Curriculum Vitæ',
-                    link: { url: 'https://lewisbritton.com/', newTab: true },
+                    link: {
+                        url: 'https://lewisbritton.com/documents/employment/cv.pdf',
+                        newTab: true,
+                    },
                 },
             },
         ],
     },
     tileTwo: {
+        type: 'solid',
+        heading: 'Overview',
+        body: 'To be written ...',
+    },
+    tileThree: {
         type: 'solid',
         margins: true,
         heading: 'Employment',
