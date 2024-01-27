@@ -20,11 +20,7 @@ button {
         border-radius: reference.$corners-small;
         background-color: reference.$darker-grey;
         transition: transform reference.$transition-short;
-        width: 15%;
-
-        @media (max-width: 768px) {
-            width: 20%;
-        }
+        width: 100%;
 
         &:active {
             transform: scale(0.995);

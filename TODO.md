@@ -21,9 +21,9 @@ author:
 # BashBlocks
 
 -   Add _CaveatTile_
--   Add _generateUniqueKey_
+-   Add _generateUniqueKey_ and replace all keys
 -   Add breakpoints
--   Add responsive classes where necessary, _Spacing_ etc.
+-   Add responsive classes where necessary, _Spacing_, type and typeType (instead of type={isMobile ? 'h1' : 't1'}) etc.
 -   Add @mixins for responsive classes
 -   Discontinue index.scss in main directory
 -   Add mobile functionality for image tile

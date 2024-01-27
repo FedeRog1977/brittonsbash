@@ -6,14 +6,14 @@ input[type='text'] {
         font-size: 16px;
         color: reference.$medium-grey;
         background-color: reference.$lighter-grey;
-        width: 83.75%;
+        width: 99%;
         border: none;
         border-radius: reference.$corners-small;
-        padding: 5px;
+        padding: 15px 5px 15px 5px;
 
         @media (max-width: 768px) {
             font-size: 12px;
-            width: 76%;
+            padding: 5px;
         }
     }
 }
@@ -24,7 +24,7 @@ select {
         font-size: 16px;
         color: reference.$medium-grey;
         background-color: reference.$lighter-grey;
-        width: 50%;
+        width: 100%;
         border: none;
         border-radius: reference.$corners-small;
         padding: 5px;

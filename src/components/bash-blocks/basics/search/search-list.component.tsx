@@ -2,14 +2,16 @@ import { SearchListProps } from './search-list.types'
 import styles from './search.module.scss'
 
 export const SearchList: React.FC<SearchListProps> = ({
-    ...props
+    func,
+    content,
+    placeholder,
 }: SearchListProps) => (
-    <select className={styles.search} onChange={props.func}>
+    <select className={styles.search} onChange={func}>
         <option value="" disabled selected>
-            Select {props.placeholder}
+            {placeholder}
         </option>
-        {props.content.map(({ name }: SearchListProps['content'][0]) => (
-            <option key={name} value={name}>
+        {content.map(({ name }, index) => (
+            <option key={index} value={name}>
                 {name}
             </option>
         ))}

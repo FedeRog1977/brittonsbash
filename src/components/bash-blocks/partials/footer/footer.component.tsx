@@ -82,7 +82,7 @@ export const Footer = () => (
                 <Grid rowItem={[5, 5]}>
                     <Typography
                         type="body"
-                        content={<>&#169; Lewis Britton 2020&mdash;2023</>}
+                        content={<>&#169; Lewis Britton 2020&mdash;2024</>}
                         color="lightGrey"
                     />
                 </Grid>

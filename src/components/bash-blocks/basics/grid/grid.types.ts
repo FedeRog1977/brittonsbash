@@ -9,6 +9,7 @@ export type GridProps = {
     alignContent?: ItemsPropsAdv
     justifyItems?: ItemsProps
     alignItems?: ItemsProps
+
     columnItem?: number[]
     rowItem?: number[]
     textAlign?: AlignProps
