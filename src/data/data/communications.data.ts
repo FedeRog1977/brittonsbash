@@ -336,22 +336,10 @@ export const communicationsData = {
         },
     },
     media: {
-        film: {
-            genres: [],
-            artists: [],
-            favourites: [],
-            all: [],
-        },
-        television: {
-            genres: [],
-            artists: [],
-            favourites: [],
-            all: [],
-        },
         audio: {
-            genres: [],
-            artists: [],
-            favourites: [],
+            top: [],
+            topArtists: [],
+            topSongs: [],
             all: [],
             manufacturers: [
                 'Audiolab',
@@ -419,10 +407,23 @@ export const communicationsData = {
                     quantity: 1,
                 },
             ],
-            media: ['Vinyl', 'Compact Disc'],
+        },
+        television: {
+            genres: [],
+            topArtists: [],
+            topShows: [],
+            all: [],
+        },
+        film: {
+            genres: [],
+            topArtists: [],
+            topFilms: [],
+            all: [],
         },
         videoGames: {
-            favourites: [],
+            genres: ['Interactive Film'],
+            topDevelopers: [],
+            topGames: [],
             all: [],
         },
         links: {

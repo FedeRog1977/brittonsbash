@@ -49,7 +49,6 @@ author:
 
 ## Instant Gram
 
--   Add _Christmas 2023_
 -   Add _The Hangover Part II_
 -   Add _The Final Two’er III_
 -   Add _Romantic Getaway_

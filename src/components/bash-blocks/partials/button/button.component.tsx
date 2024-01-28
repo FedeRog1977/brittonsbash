@@ -43,7 +43,7 @@ export const Button: React.FC<ButtonProps> = ({
             }}
         >
             <Grid
-                alignColumns={subContentTop ? undefined : 'auto auto'}
+                alignColumns={subContentTop ? 'auto' : 'auto auto'}
                 alignRows={subContentTop ? 'auto auto' : undefined}
                 justifyContent={Boolean(content) ? 'center' : undefined}
                 alignContent="center"
@@ -51,7 +51,7 @@ export const Button: React.FC<ButtonProps> = ({
             >
                 {Boolean(subContent) && (
                     <Grid
-                        columnItem={subContentTop ? undefined : [1, 2]}
+                        columnItem={subContentTop ? [1, 1] : [1, 2]}
                         rowItem={subContentTop ? [1, 2] : undefined}
                         textAlign={
                             Boolean(isMobile && content)
@@ -75,7 +75,7 @@ export const Button: React.FC<ButtonProps> = ({
                 )}
                 <Grid
                     columnItem={
-                        subContentTop ? undefined : [subContent ? 2 : 1, 2]
+                        subContentTop ? [1, 1] : [subContent ? 2 : 1, 2]
                     }
                     rowItem={
                         subContentTop ? [subContent ? 2 : 1, 2] : undefined
