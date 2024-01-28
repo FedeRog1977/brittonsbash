@@ -114,7 +114,7 @@ export const Button: React.FC<ButtonProps> = ({
                         textAlign="right"
                     >
                         <Typography
-                            type="body"
+                            type="footnote"
                             content={
                                 funcResp === false ? (
                                     <FontAwesomeIcon icon={faChevronDown} />

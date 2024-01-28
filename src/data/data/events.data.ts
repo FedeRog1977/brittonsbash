@@ -4,7 +4,8 @@ export const eventData = {
             id: 'E2024004',
             names: ['White Box'],
             startDate: '21st of January',
-            description: '',
+            description:
+                'Jack shit. Really the only way this one could be described. Of course, in hindsight, still worth it because it’s a project and it’s a Saturday. I also finally managed to check that annoying red blip off the Munro map. We didn’t take the conventional route, we set out aiming to take the SE approach to get the circular of the Munro and the Corb’ in. Not the finest approach, in waist deep snow and 50mph winds, but we made it. Through a slight white-out pre-summit too. Well I bailed on the lochan path after Chonzie but whatever. Worth it.',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2024/white-box/1.jpg',
@@ -40,7 +41,8 @@ export const eventData = {
             id: 'E2024003',
             names: ['Squad Arrest'],
             startDate: '14th of January',
-            description: '',
+            description:
+                'This was a good little one for a couple of Corb’s at Lochearnhead. We got the full extended squad out for some more testing of the microspikes, poles and axe. Even with some opening of the skies for some excellent views on the first summit.',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2024/squad-arrest/1.jpg',
@@ -104,7 +106,8 @@ export const eventData = {
             id: 'E2024002',
             names: ['An Old Enemy, A New Friend'],
             startDate: '13th of January',
-            description: '',
+            description:
+                'If you’d told me in November 2020 that not only I’d be back on this hill but, I’d have as good a day as this, I would’ve thrown a smashed crate of Amstel at you. We were still in an omega high so desperately needed to take the advantage and get McN up Ulluhm at last. We had some pretty intense winds up-top but that’s pretty much the beta at the moment. Views were amazing. Pf course the weather wasn’t bad enough to prevent some hilarious ice axe arrest practice on the down. Sadly the arteeeeshean caff’ post-proj was once again written-off though. God knows what op’s are going on in there.',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2024/old-enemy-new-friend/1.jpg',
@@ -172,7 +175,8 @@ export const eventData = {
             id: 'E2024001',
             names: ['The Orchy'],
             startDate: '6th of January',
-            description: '',
+            description:
+                'Ahh the first project of the year. An early one this year, straight after the famous meeting of Murray. Sadly this wasn’t as good a season opener as *On The Day* last year, but it still delivered big-time. We were still in the omega high that Murray blessed us with the week before so some minor inversions were to be seen. The daylight also makes projects at this time of year feel rewarding in a different way. Even the short ones like this feel like a nine-to-five with the entire thing being contained withing the limited sunshine time.',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2024/the-orchy/1.jpg',
@@ -246,7 +250,8 @@ export const eventData = {
             id: 'E2023049',
             names: ['Golden Hour – Meeting Your Heroes'],
             startDate: '29th of December',
-            description: 'Murray Wilkie.',
+            description:
+                'Well GOOD LORD, it finally happened. I’d say I was the lucky one on this day, but I have to say the lucky ones were probably Girff and Griff Jr. They got to see my hysterical response to meeting my heroes. Something which I’m sure will give them perpetual comic value. This was a project I was almost not even doing. The original plan was a wasted with McN on the Thursday, then a slow day on Friday. But no. No no no. Omega high leads to project. We took back to one of my favourite local routes: The Playground Jr. (Narnain, Ìme, and The Cobbler), and had an amazing routine round on the route up to the descent on Ìme, where I spotted someone familiar. Was it... Gerry?! After a brief introduction and handshake, there he was emerging from the horizon. Murray Wilkie. Life had been made. I could die any day now happily. What a way to close the year. We got a pic, took care of some formalities, and got on our way over The Cobbler and down in the dark. A full day of sunshine, omega high, snow, Gerry, Murray, and the last summer house of the year to top it off. What a day. What a year.',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/golden-hour/1.jpg',
