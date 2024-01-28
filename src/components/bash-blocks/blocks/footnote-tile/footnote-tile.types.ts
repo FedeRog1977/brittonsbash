@@ -1,3 +1,5 @@
+import { ArticleProps } from '../../partials'
+
 export type FootnoteTileProps = {
-    content: string | React.ReactElement
+    content: string | ArticleProps['sections']
 }

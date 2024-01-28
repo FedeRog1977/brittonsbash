@@ -114,7 +114,9 @@ code {
 /* Unordered Lists */
 
 ul {
-    padding: 0px;
+    padding-left: 15px;
+    list-style-type: square;
+    list-style-position: outside;
 }
 
 /* TO BE REMOVED */
