@@ -41,7 +41,6 @@ export const WeatherDaily = ({ latIn, lonIn }: any) => {
             </Grid>
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                 <Button
-                    type="regularClear"
                     fill
                     transition
                     func={() => setShowElement(!showElement)}

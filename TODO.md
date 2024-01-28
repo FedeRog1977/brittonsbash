@@ -9,7 +9,6 @@ author:
 
 -   Fix top tile use in schema for some pages
 -   Add (my) media of the year(s), songs etc.
--   Add 2024 support to anywhere necessary
 -   Finish travel key in communications
 -   Look into narrowing
 

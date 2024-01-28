@@ -4,6 +4,7 @@ import { CompiledProjectProps, ProjectProps } from './types'
 
 export function compileProjects() {
     const projects: CompiledProjectProps['projects'] = {
+        2024: sportData[2024].projects,
         2023: sportData[2023].projects,
         2022: sportData[2022].projects,
         2021: sportData[2021].projects,
@@ -12,10 +13,12 @@ export function compileProjects() {
 
     const number: CompiledProjectProps['number'] = {
         total:
+            sportData[2024].projects.length +
             sportData[2023].projects.length +
             sportData[2022].projects.length +
             sportData[2021].projects.length +
             sportData[2020].projects.length,
+        2024: sportData[2024].projects.length,
         2023: sportData[2023].projects.length,
         2022: sportData[2022].projects.length,
         2021: sportData[2021].projects.length,
@@ -30,6 +33,73 @@ export function compileProjects() {
     const grahamsTotal: string[] = []
     const subTwosTotal: string[] = []
     const donaldsTotal: string[] = []
+
+    var distance2024: number = 0
+    var elevation2024: number = 0
+
+    const islands2024: string[] = []
+    const munros2024: string[] = []
+    const munroTops2024: string[] = []
+    const corbetts2024: string[] = []
+    const corbettTops2024: string[] = []
+    const grahams2024: string[] = []
+    const subTwos2024: string[] = []
+    const donalds2024: string[] = []
+
+    sportData[2024].projects.forEach((event: ProjectProps) => {
+        distance2024 = distance2024 + event.distance
+        elevation2024 = elevation2024 + event.elevation
+
+        event.islands?.forEach((island: string) => {
+            islands2024.push(island)
+        })
+        event.munros?.forEach((munro: string) => {
+            munros2024.push(munro)
+        })
+        event.munroTops?.forEach((munroTop: string) => {
+            munroTops2024.push(munroTop)
+        })
+        event.corbetts?.forEach((corbett: string) => {
+            corbetts2024.push(corbett)
+        })
+        event.corbettTops?.forEach((corbettTop: string) => {
+            corbettTops2024.push(corbettTop)
+        })
+        event.grahams?.forEach((graham: string) => {
+            grahams2024.push(graham)
+        })
+        event.subTwos?.forEach((subTwo: string) => {
+            subTwos2024.push(subTwo)
+        })
+        event.donalds?.forEach((donald: string) => {
+            donalds2024.push(donald)
+        })
+    })
+
+    islands2024.forEach((island: string) => {
+        islandsTotal.push(island)
+    })
+    munros2024.forEach((munro: string) => {
+        munrosTotal.push(munro)
+    })
+    munroTops2024.forEach((munroTop: string) => {
+        munroTopsTotal.push(munroTop)
+    })
+    corbetts2024.forEach((corbett: string) => {
+        corbettsTotal.push(corbett)
+    })
+    corbettTops2024.forEach((corbettTop: string) => {
+        corbettTopsTotal.push(corbettTop)
+    })
+    grahams2024.forEach((graham: string) => {
+        grahamsTotal.push(graham)
+    })
+    subTwos2024.forEach((subTwo: string) => {
+        subTwosTotal.push(subTwo)
+    })
+    donalds2024.forEach((donald: string) => {
+        donaldsTotal.push(donald)
+    })
 
     var distance2023: number = 0
     var elevation2023: number = 0
@@ -303,6 +373,7 @@ export function compileProjects() {
         names: {
             total: islandsTotal.sort(),
             unique: removeDuplicates(islandsTotal).sort(),
+            2024: islands2024.sort(),
             2023: islands2023.sort(),
             2022: islands2022.sort(),
             2021: islands2021.sort(),
@@ -311,6 +382,7 @@ export function compileProjects() {
         number: {
             total: islandsTotal.length,
             unique: removeDuplicates(islandsTotal).length,
+            2024: islands2024.length,
             2023: islands2023.length,
             2022: islands2022.length,
             2021: islands2021.length,
@@ -322,6 +394,7 @@ export function compileProjects() {
         names: {
             total: munrosTotal.sort(),
             unique: removeDuplicates(munrosTotal).sort(),
+            2024: munros2024.sort(),
             2023: munros2023.sort(),
             2022: munros2022.sort(),
             2021: munros2021.sort(),
@@ -330,6 +403,7 @@ export function compileProjects() {
         number: {
             total: munrosTotal.length,
             unique: removeDuplicates(munrosTotal).length,
+            2024: munros2024.length,
             2023: munros2023.length,
             2022: munros2022.length,
             2021: munros2021.length,
@@ -341,6 +415,7 @@ export function compileProjects() {
         names: {
             total: munroTopsTotal.sort(),
             unique: removeDuplicates(munroTopsTotal).sort(),
+            2024: munroTops2024.sort(),
             2023: munroTops2023.sort(),
             2022: munroTops2022.sort(),
             2021: munroTops2021.sort(),
@@ -349,6 +424,7 @@ export function compileProjects() {
         number: {
             total: munroTopsTotal.length,
             unique: removeDuplicates(munroTopsTotal).length,
+            2024: munroTops2024.length,
             2023: munroTops2023.length,
             2022: munroTops2022.length,
             2021: munroTops2021.length,
@@ -360,6 +436,7 @@ export function compileProjects() {
         names: {
             total: corbettsTotal.sort(),
             unique: removeDuplicates(corbettsTotal).sort(),
+            2024: corbetts2024.sort(),
             2023: corbetts2023.sort(),
             2022: corbetts2022.sort(),
             2021: corbetts2021.sort(),
@@ -368,6 +445,7 @@ export function compileProjects() {
         number: {
             total: corbettsTotal.length,
             unique: removeDuplicates(corbettsTotal).length,
+            2024: corbetts2024.length,
             2023: corbetts2023.length,
             2022: corbetts2022.length,
             2021: corbetts2021.length,
@@ -379,6 +457,7 @@ export function compileProjects() {
         names: {
             total: corbettTopsTotal.sort(),
             unique: removeDuplicates(corbettTopsTotal).sort(),
+            2024: corbettTops2024.sort(),
             2023: corbettTops2023.sort(),
             2022: corbettTops2022.sort(),
             2021: corbettTops2021.sort(),
@@ -387,6 +466,7 @@ export function compileProjects() {
         number: {
             total: corbettTopsTotal.length,
             unique: removeDuplicates(corbettTopsTotal).length,
+            2024: corbettTops2024.length,
             2023: corbettTops2023.length,
             2022: corbettTops2022.length,
             2021: corbettTops2021.length,
@@ -398,6 +478,7 @@ export function compileProjects() {
         names: {
             total: grahamsTotal.sort(),
             unique: removeDuplicates(grahamsTotal).sort(),
+            2024: grahams2024.sort(),
             2023: grahams2023.sort(),
             2022: grahams2022.sort(),
             2021: grahams2021.sort(),
@@ -406,6 +487,7 @@ export function compileProjects() {
         number: {
             total: grahamsTotal.length,
             unique: removeDuplicates(grahamsTotal).length,
+            2024: grahams2024.length,
             2023: grahams2023.length,
             2022: grahams2022.length,
             2021: grahams2021.length,
@@ -417,6 +499,7 @@ export function compileProjects() {
         names: {
             total: subTwosTotal.sort(),
             unique: removeDuplicates(subTwosTotal).sort(),
+            2024: subTwos2024.sort(),
             2023: subTwos2023.sort(),
             2022: subTwos2022.sort(),
             2021: subTwos2021.sort(),
@@ -425,6 +508,7 @@ export function compileProjects() {
         number: {
             total: subTwosTotal.length,
             unique: removeDuplicates(subTwosTotal).length,
+            2024: subTwos2024.length,
             2023: subTwos2023.length,
             2022: subTwos2022.length,
             2021: subTwos2021.length,
@@ -436,6 +520,7 @@ export function compileProjects() {
         names: {
             total: donaldsTotal.sort(),
             unique: removeDuplicates(donaldsTotal).sort(),
+            2024: donalds2024.sort(),
             2023: donalds2023.sort(),
             2022: donalds2022.sort(),
             2021: donalds2021.sort(),
@@ -444,6 +529,7 @@ export function compileProjects() {
         number: {
             total: donaldsTotal.length,
             unique: removeDuplicates(donaldsTotal).length,
+            2024: donalds2024.length,
             2023: donalds2023.length,
             2022: donalds2022.length,
             2021: donalds2021.length,
@@ -453,8 +539,13 @@ export function compileProjects() {
 
     const distance: CompiledProjectProps['distance'] = {
         total: toMiles(
-            distance2023 + distance2022 + distance2021 + distance2020
+            distance2024 +
+                distance2023 +
+                distance2022 +
+                distance2021 +
+                distance2020
         ),
+        2024: toMiles(distance2024),
         2023: toMiles(distance2023),
         2022: toMiles(distance2022),
         2021: toMiles(distance2021),
@@ -463,8 +554,13 @@ export function compileProjects() {
 
     const elevation: CompiledProjectProps['elevation'] = {
         total: toFeet(
-            elevation2023 + elevation2022 + elevation2021 + elevation2020
+            elevation2024 +
+                elevation2023 +
+                elevation2022 +
+                elevation2021 +
+                elevation2020
         ),
+        2024: toFeet(elevation2024),
         2023: toFeet(elevation2023),
         2022: toFeet(elevation2022),
         2021: toFeet(elevation2021),

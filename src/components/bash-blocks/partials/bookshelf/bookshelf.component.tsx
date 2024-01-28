@@ -13,7 +13,6 @@ export const Bookshelf: React.FC<BookshelfProps> = ({
             <Button
                 typeType="h3"
                 light
-                type="regularClear"
                 fill
                 transition
                 func={() => setShowElement(!showElement)}

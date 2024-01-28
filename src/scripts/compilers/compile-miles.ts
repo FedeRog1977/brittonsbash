@@ -4,6 +4,7 @@ import { CompiledMilesProps, MilesProps } from './types'
 
 export function compileMiles() {
     const miles: CompiledMilesProps['miles'] = {
+        2024: sportData[2024].miles,
         2023: sportData[2023].miles,
         2022: sportData[2022].miles,
         2021: sportData[2021].miles,
@@ -12,10 +13,12 @@ export function compileMiles() {
 
     const number: CompiledMilesProps['number'] = {
         total:
+            sportData[2024].miles.length +
             sportData[2023].miles.length +
             sportData[2022].miles.length +
             sportData[2021].miles.length +
             sportData[2020].miles.length,
+        2024: sportData[2024].miles.length,
         2023: sportData[2023].miles.length,
         2022: sportData[2022].miles.length,
         2021: sportData[2021].miles.length,
@@ -25,6 +28,30 @@ export function compileMiles() {
     var windfarmsTotal: number = 0
     var thorntonhallsTotal: number = 0
     var waterfootsTotal: number = 0
+
+    var distance2024: number = 0
+    var elevation2024: number = 0
+
+    var windfarms2024: number = 0
+    var thorntonhalls2024: number = 0
+    var waterfoots2024: number = 0
+
+    sportData[2024].miles.forEach((event: MilesProps) => {
+        distance2024 = distance2024 + event.distance
+        elevation2024 = elevation2024 + event.elevation
+
+        event.name === 'Wind Farm'
+            ? (windfarms2024 = windfarms2024 + 1)
+            : (windfarms2024 = windfarms2024 + 0)
+
+        event.name === 'Thorntonhall'
+            ? (thorntonhalls2024 = thorntonhalls2024 + 1)
+            : (thorntonhalls2024 = thorntonhalls2024 + 0)
+
+        event.name === 'Waterfoot'
+            ? (waterfoots2024 = waterfoots2024 + 1)
+            : (waterfoots2024 = waterfoots2024 + 0)
+    })
 
     var distance2023: number = 0
     var elevation2023: number = 0
@@ -123,17 +150,27 @@ export function compileMiles() {
     })
 
     windfarmsTotal =
-        windfarms2023 + windfarms2022 + windfarms2021 + windfarms2020
+        windfarms2024 +
+        windfarms2023 +
+        windfarms2022 +
+        windfarms2021 +
+        windfarms2020
     thorntonhallsTotal =
+        thorntonhalls2024 +
         thorntonhalls2023 +
         thorntonhalls2022 +
         thorntonhalls2021 +
         thorntonhalls2020
     waterfootsTotal =
-        waterfoots2023 + waterfoots2022 + waterfoots2021 + waterfoots2020
+        waterfoots2024 +
+        waterfoots2023 +
+        waterfoots2022 +
+        waterfoots2021 +
+        waterfoots2020
 
     const windfarms: CompiledMilesProps['windfarms'] = {
         total: windfarmsTotal,
+        2024: windfarms2024,
         2023: windfarms2023,
         2022: windfarms2022,
         2021: windfarms2021,
@@ -142,6 +179,7 @@ export function compileMiles() {
 
     const thorntonhalls: CompiledMilesProps['thorntonhalls'] = {
         total: thorntonhallsTotal,
+        2024: thorntonhalls2024,
         2023: thorntonhalls2023,
         2022: thorntonhalls2022,
         2021: thorntonhalls2021,
@@ -150,6 +188,7 @@ export function compileMiles() {
 
     const waterfoots: CompiledMilesProps['waterfoots'] = {
         total: waterfootsTotal,
+        2024: waterfoots2024,
         2023: waterfoots2023,
         2022: waterfoots2022,
         2021: waterfoots2021,
@@ -158,8 +197,13 @@ export function compileMiles() {
 
     const distance: CompiledMilesProps['distance'] = {
         total: toMiles(
-            distance2023 + distance2022 + distance2021 + distance2020
+            distance2024 +
+                distance2023 +
+                distance2022 +
+                distance2021 +
+                distance2020
         ),
+        2024: toMiles(distance2024),
         2023: toMiles(distance2023),
         2022: toMiles(distance2022),
         2021: toMiles(distance2021),
@@ -168,8 +212,13 @@ export function compileMiles() {
 
     const elevation: CompiledMilesProps['elevation'] = {
         total: toFeet(
-            elevation2023 + elevation2022 + elevation2021 + elevation2020
+            elevation2024 +
+                elevation2023 +
+                elevation2022 +
+                elevation2021 +
+                elevation2020
         ),
+        2024: toFeet(elevation2024),
         2023: toFeet(elevation2023),
         2022: toFeet(elevation2022),
         2021: toFeet(elevation2021),

@@ -13,7 +13,6 @@ export const MiamiViceSearchList: React.FC<MiamiViceSearchListProps> = ({
                 <Button
                     key={index}
                     typeType={isMobile ? 'h4' : 'body'}
-                    type="regularClear"
                     forceWidth={!isMobile ? 25 : 100}
                     value={heading}
                     link={{ url: '#/blog/miami-vice/#miamiViceResult' }}

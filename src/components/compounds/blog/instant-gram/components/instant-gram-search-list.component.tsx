@@ -18,7 +18,6 @@ export const InstantGramSearchList: React.FC<InstantGramSearchListProps> = ({
                     <Button
                         key={id}
                         typeType={isMobile ? 'h4' : 'body'}
-                        type="regularClear"
                         forceWidth={!isMobile ? 25 : 100}
                         value={names.join(' - ')}
                         link={{ url: '#/blog/instant-gram/#instantGramResult' }}

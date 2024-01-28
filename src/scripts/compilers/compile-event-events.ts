@@ -4,6 +4,10 @@ import { EventProps } from './types'
 export function compileEventEvents() {
     const allEvents: EventProps[] = []
 
+    eventData[2024].forEach((event: any) => {
+        allEvents.push(event)
+    })
+
     eventData[2023].forEach((event: any) => {
         allEvents.push(event)
     })

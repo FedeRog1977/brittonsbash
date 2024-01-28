@@ -24,6 +24,7 @@ export type SportResultTileProps = {
     isProjects: boolean
     isMiles: boolean
     sportData: CompiledRoadieProps | CompiledProjectProps | CompiledMilesProps
+    sport2024: RoadieProps[] | ProjectProps[] | MilesProps[]
     sport2023: RoadieProps[] | ProjectProps[] | MilesProps[]
     sport2022: RoadieProps[] | ProjectProps[] | MilesProps[]
     sport2021: RoadieProps[] | ProjectProps[] | MilesProps[]

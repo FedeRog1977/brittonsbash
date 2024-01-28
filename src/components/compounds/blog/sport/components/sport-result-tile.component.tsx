@@ -28,7 +28,7 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
     ...props
 }: SportResultTileProps) => {
     const { isMobile } = useScreenWidth()
-    const [sportYearData, setSportYearData] = useState(props.sport2023)
+    const [sportYearData, setSportYearData] = useState(props.sport2024)
 
     const apiUrl = ordnanceSurveyCall()
 
@@ -69,13 +69,21 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
             >
                 <ColumnTable
                     leftColumn={{
-                        entries: ['Total', '2023', '2022', '2021', '2020'],
+                        entries: [
+                            'Total',
+                            '2024',
+                            '2023',
+                            '2022',
+                            '2021',
+                            '2020',
+                        ],
                     }}
                     rightColumns={[
                         {
                             title: 'Occurrences',
                             entries: [
                                 `${props.sportData.number.total}`,
+                                `${props.sportData.number[2024]}`,
                                 `${props.sportData.number[2023]}`,
                                 `${props.sportData.number[2022]}`,
                                 `${props.sportData.number[2021]}`,
@@ -86,6 +94,7 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                             title: 'Distance',
                             entries: [
                                 props.sportData.distance.total as string,
+                                props.sportData.distance[2024] as string,
                                 props.sportData.distance[2023] as string,
                                 props.sportData.distance[2022] as string,
                                 props.sportData.distance[2021] as string,
@@ -96,6 +105,7 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                             title: 'Elevation',
                             entries: [
                                 props.sportData.elevation.total as string,
+                                props.sportData.elevation[2024] as string,
                                 props.sportData.elevation[2023] as string,
                                 props.sportData.elevation[2022] as string,
                                 props.sportData.elevation[2021] as string,
@@ -122,6 +132,7 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                         entries: [
                             props.isProjects ? 'Unique' : '',
                             'Total',
+                            '2024',
                             '2023',
                             '2022',
                             '2021',
@@ -132,11 +143,21 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                 />
             </Spacing>
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
-                <Grid alignColumns="auto auto" justifyItems="center">
-                    <Grid columnItem={[1, 4]}>
+                <Grid alignColumns="1fr 1fr 1fr 1fr 1fr" justifyItems="center">
+                    <Grid columnItem={[1, 5]}>
                         <Button
                             typeType="h2"
-                            type="regularClear"
+                            func={() => setSportYearData(props.sport2024)}
+                            funcResp={Boolean(
+                                sportYearData === props.sport2024
+                            )}
+                            content="2024"
+                            color="darkerGrey"
+                        />
+                    </Grid>
+                    <Grid columnItem={[2, 5]}>
+                        <Button
+                            typeType="h2"
                             func={() => setSportYearData(props.sport2023)}
                             funcResp={Boolean(
                                 sportYearData === props.sport2023
@@ -145,10 +166,9 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                             color="darkerGrey"
                         />
                     </Grid>
-                    <Grid columnItem={[2, 4]}>
+                    <Grid columnItem={[3, 5]}>
                         <Button
                             typeType="h2"
-                            type="regularClear"
                             func={() => setSportYearData(props.sport2022)}
                             funcResp={Boolean(
                                 sportYearData === props.sport2022
@@ -157,10 +177,9 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                             color="darkerGrey"
                         />
                     </Grid>
-                    <Grid columnItem={[3, 4]}>
+                    <Grid columnItem={[4, 5]}>
                         <Button
                             typeType="h2"
-                            type="regularClear"
                             func={() => setSportYearData(props.sport2021)}
                             funcResp={Boolean(
                                 sportYearData === props.sport2021
@@ -169,10 +188,9 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                             color="darkerGrey"
                         />
                     </Grid>
-                    <Grid columnItem={[4, 4]}>
+                    <Grid columnItem={[5, 5]}>
                         <Button
                             typeType="h2"
-                            type="regularClear"
                             func={() => setSportYearData(props.sport2020)}
                             funcResp={Boolean(
                                 sportYearData === props.sport2020

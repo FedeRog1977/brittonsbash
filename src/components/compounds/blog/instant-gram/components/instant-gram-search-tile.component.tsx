@@ -45,13 +45,12 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                 <Grid columnItem={[1, 3]} rowItem={[1, 2]}>
                     <Button
                         typeType={isMobile ? 't1' : 't2'}
-                        type="regularClear"
                         func={() => {
                             setShowElement(!showElement)
-                            setParsedEventData(eventData[2023])
+                            setParsedEventData(eventData[2024])
                         }}
                         funcResp={
-                            showElement && parsedEventData === eventData[2023]
+                            showElement && parsedEventData === eventData[2024]
                         }
                         content="2024"
                         subContent="Season 5"
@@ -62,7 +61,6 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                 <Grid columnItem={[2, 3]} rowItem={[1, 2]}>
                     <Button
                         typeType={isMobile ? 't1' : 't2'}
-                        type="regularClear"
                         func={() => {
                             setShowElement(!showElement)
                             setParsedEventData(eventData[2023])
@@ -79,7 +77,6 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                 <Grid columnItem={[3, 3]} rowItem={[1, 2]}>
                     <Button
                         typeType={isMobile ? 't1' : 't2'}
-                        type="regularClear"
                         func={() => {
                             setShowElement(!showElement)
                             setParsedEventData(eventData[2022])
@@ -96,7 +93,6 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                 <Grid columnItem={[1, 3]} rowItem={[2, 2]}>
                     <Button
                         typeType={isMobile ? 't1' : 't2'}
-                        type="regularClear"
                         func={() => {
                             setShowElement(!showElement)
                             setParsedEventData(eventData[2021])
@@ -113,7 +109,6 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                 <Grid columnItem={[2, 3]} rowItem={[2, 2]}>
                     <Button
                         typeType={isMobile ? 't1' : 't2'}
-                        type="regularClear"
                         func={() => {
                             setShowElement(!showElement)
                             setParsedEventData(eventData[2020])

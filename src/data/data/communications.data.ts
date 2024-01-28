@@ -1115,7 +1115,7 @@ export const communicationsData = {
                     'Eau d’Hermes Hermès',
                     'Eau de Narcisse Bleu Hermès',
                     'Eau de Citron Noir Hermès',
-                    'Boss Bottled',
+                    'HUGO BOSS Boss Bottled Eau de Toilette',
                     'Czech & Speake Cuba Cologne',
                     'Czech & Speake Cuba Parfum',
                     'Czech & Speake Citrus Paradisi Cologne',
@@ -1143,6 +1143,12 @@ export const communicationsData = {
                     'Forbidden Rose Avril Lavigne',
                 ],
             },
+            scents: [
+                'HUGO BOSS Boss Bottled Eau de Toilette',
+                'Body Shop Maca Root for Skin Shave Cream',
+                'L’Oréal Paris Men Expert 24hr Hydrating Post-Shave Balm',
+                'Fairy Platinum Washing Up Liquid',
+            ],
             accessories: [
                 'Rolex Datejust',
                 'Rolex Skydweller',

@@ -4,6 +4,7 @@ import { CompiledRoadieProps, RoadieProps } from './types'
 
 export function compileRoadies() {
     const roadies: CompiledRoadieProps['roadies'] = {
+        2024: sportData[2024].roadies,
         2023: sportData[2023].roadies,
         2022: sportData[2022].roadies,
         2021: sportData[2021].roadies,
@@ -16,6 +17,7 @@ export function compileRoadies() {
             sportData[2022].roadies.length +
             sportData[2021].roadies.length +
             sportData[2020].roadies.length,
+        2024: sportData[2024].roadies.length,
         2023: sportData[2023].roadies.length,
         2022: sportData[2022].roadies.length,
         2021: sportData[2021].roadies.length,
@@ -28,6 +30,45 @@ export function compileRoadies() {
     var fenwicksTotal: number = 0
     var windfarmsTotal: number = 0
     var thorntonhallsTotal: number = 0
+
+    var distance2024: number = 0
+    var elevation2024: number = 0
+
+    var centuries2024: number = 0
+    var strathavens2024: number = 0
+    var fenwickWindfarms2024: number = 0
+    var fenwicks2024: number = 0
+    var windfarms2024: number = 0
+    var thorntonhalls2024: number = 0
+
+    sportData[2024].roadies.forEach((event: RoadieProps) => {
+        distance2024 = distance2024 + event.distance
+        elevation2024 = elevation2024 + event.elevation
+
+        event.name === 'Century'
+            ? (centuries2024 = centuries2024 + 1)
+            : (centuries2024 = centuries2024 + 0)
+
+        event.name === 'Strathaven'
+            ? (strathavens2024 = strathavens2024 + 1)
+            : (strathavens2024 = strathavens2024 + 0)
+
+        event.name === 'Fenwick + Wind Farm'
+            ? (fenwickWindfarms2024 = fenwickWindfarms2024 + 1)
+            : (fenwickWindfarms2024 = fenwickWindfarms2024 + 0)
+
+        event.name === 'Fenwick'
+            ? (fenwicks2024 = fenwicks2024 + 1)
+            : (fenwicks2024 = fenwicks2024 + 0)
+
+        event.name === 'Wind Farm'
+            ? (windfarms2024 = windfarms2024 + 1)
+            : (windfarms2024 = windfarms2024 + 0)
+
+        event.name === 'Thorntonhall'
+            ? (thorntonhalls2024 = thorntonhalls2024 + 1)
+            : (thorntonhalls2024 = thorntonhalls2024 + 0)
+    })
 
     var distance2023: number = 0
     var elevation2023: number = 0
@@ -186,18 +227,33 @@ export function compileRoadies() {
     })
 
     centuriesTotal =
-        centuries2023 + centuries2022 + centuries2021 + centuries2020
+        centuries2024 +
+        centuries2023 +
+        centuries2022 +
+        centuries2021 +
+        centuries2020
     strathavensTotal =
-        strathavens2023 + strathavens2022 + strathavens2021 + strathavens2020
+        strathavens2024 +
+        strathavens2023 +
+        strathavens2022 +
+        strathavens2021 +
+        strathavens2020
     fenwickWindfarmsTotal =
+        fenwickWindfarms2024 +
         fenwickWindfarms2023 +
         fenwickWindfarms2022 +
         fenwickWindfarms2021 +
         fenwickWindfarms2020
-    fenwicksTotal = fenwicks2023 + fenwicks2022 + fenwicks2021 + fenwicks2020
+    fenwicksTotal =
+        fenwicks2024 + fenwicks2023 + fenwicks2022 + fenwicks2021 + fenwicks2020
     windfarmsTotal =
-        windfarms2023 + windfarms2022 + windfarms2021 + windfarms2020
+        windfarms2024 +
+        windfarms2023 +
+        windfarms2022 +
+        windfarms2021 +
+        windfarms2020
     thorntonhallsTotal =
+        thorntonhalls2024 +
         thorntonhalls2023 +
         thorntonhalls2022 +
         thorntonhalls2021 +
@@ -205,6 +261,7 @@ export function compileRoadies() {
 
     const centuries: CompiledRoadieProps['centuries'] = {
         total: centuriesTotal,
+        2024: centuries2024,
         2023: centuries2023,
         2022: centuries2022,
         2021: centuries2021,
@@ -213,6 +270,7 @@ export function compileRoadies() {
 
     const strathavens: CompiledRoadieProps['strathavens'] = {
         total: strathavensTotal,
+        2024: strathavens2024,
         2023: strathavens2023,
         2022: strathavens2022,
         2021: strathavens2021,
@@ -221,6 +279,7 @@ export function compileRoadies() {
 
     const fenwickWindfarms: CompiledRoadieProps['fenwickWindfarms'] = {
         total: fenwickWindfarmsTotal,
+        2024: fenwickWindfarms2024,
         2023: fenwickWindfarms2023,
         2022: fenwickWindfarms2022,
         2021: fenwickWindfarms2021,
@@ -229,6 +288,7 @@ export function compileRoadies() {
 
     const fenwicks: CompiledRoadieProps['fenwicks'] = {
         total: fenwicksTotal,
+        2024: fenwicks2024,
         2023: fenwicks2023,
         2022: fenwicks2022,
         2021: fenwicks2021,
@@ -237,6 +297,7 @@ export function compileRoadies() {
 
     const windfarms: CompiledRoadieProps['windfarms'] = {
         total: windfarmsTotal,
+        2024: windfarms2024,
         2023: windfarms2023,
         2022: windfarms2022,
         2021: windfarms2021,
@@ -245,6 +306,7 @@ export function compileRoadies() {
 
     const thorntonhalls: CompiledRoadieProps['thorntonhalls'] = {
         total: thorntonhallsTotal,
+        2024: thorntonhalls2024,
         2023: thorntonhalls2023,
         2022: thorntonhalls2022,
         2021: thorntonhalls2021,
@@ -253,8 +315,13 @@ export function compileRoadies() {
 
     const distance: CompiledRoadieProps['distance'] = {
         total: toMiles(
-            distance2023 + distance2022 + distance2021 + distance2020
+            distance2024 +
+                distance2023 +
+                distance2022 +
+                distance2021 +
+                distance2020
         ),
+        2024: toMiles(distance2024),
         2023: toMiles(distance2023),
         2022: toMiles(distance2022),
         2021: toMiles(distance2021),
@@ -263,8 +330,13 @@ export function compileRoadies() {
 
     const elevation: CompiledRoadieProps['elevation'] = {
         total: toFeet(
-            elevation2023 + elevation2022 + elevation2021 + elevation2020
+            elevation2024 +
+                elevation2023 +
+                elevation2022 +
+                elevation2021 +
+                elevation2020
         ),
+        2024: toFeet(elevation2024),
         2023: toFeet(elevation2023),
         2022: toFeet(elevation2022),
         2021: toFeet(elevation2021),

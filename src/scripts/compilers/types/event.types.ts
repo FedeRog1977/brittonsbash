@@ -79,6 +79,7 @@ export type SportProps = {
     2021: AggregateSportProps
     2022: AggregateSportProps
     2023: AggregateSportProps
+    2024: AggregateSportProps
 }
 
 // Compiled Props
@@ -95,6 +96,7 @@ export type CompiledRoadieProps = {
         2021: RoadieProps[]
         2022: RoadieProps[]
         2023: RoadieProps[]
+        2024: RoadieProps[]
     }
     number: AggregationNumericalProps
     distance: AggregationAlphabeticalProps
@@ -113,6 +115,7 @@ export type CompiledProjectProps = {
         2021: ProjectProps[]
         2022: ProjectProps[]
         2023: ProjectProps[]
+        2024: ProjectProps[]
     }
     number: AggregationNumericalProps
     distance: AggregationAlphabeticalProps
@@ -157,6 +160,7 @@ export type CompiledMilesProps = {
         2021: MilesProps[]
         2022: MilesProps[]
         2023: MilesProps[]
+        2024: MilesProps[]
     }
     number: AggregationNumericalProps
     distance: AggregationAlphabeticalProps

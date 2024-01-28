@@ -26,7 +26,6 @@ export const MiamiViceSearchTile: React.FC<MiamiViceSearchTileProps> = ({
                 <Grid columnItem={[1, 5]}>
                     <Button
                         typeType={isMobile ? 't1' : 't2'}
-                        type="regularClear"
                         func={() => {
                             setShowElement(!showElement)
                             setParsedEventData(miamiViceContent.tileOne.season1)
@@ -44,7 +43,6 @@ export const MiamiViceSearchTile: React.FC<MiamiViceSearchTileProps> = ({
                 <Grid columnItem={[2, 5]}>
                     <Button
                         typeType={isMobile ? 't1' : 't2'}
-                        type="regularClear"
                         func={() => {
                             setShowElement(!showElement)
                             setParsedEventData(miamiViceContent.tileOne.season2)
@@ -62,7 +60,6 @@ export const MiamiViceSearchTile: React.FC<MiamiViceSearchTileProps> = ({
                 <Grid columnItem={[3, 5]}>
                     <Button
                         typeType={isMobile ? 't1' : 't2'}
-                        type="regularClear"
                         func={() => {
                             setShowElement(!showElement)
                             setParsedEventData(miamiViceContent.tileOne.season3)
@@ -80,7 +77,6 @@ export const MiamiViceSearchTile: React.FC<MiamiViceSearchTileProps> = ({
                 <Grid columnItem={[4, 5]}>
                     <Button
                         typeType={isMobile ? 't1' : 't2'}
-                        type="regularClear"
                         func={() => {
                             setShowElement(!showElement)
                             setParsedEventData(miamiViceContent.tileOne.season4)
@@ -98,7 +94,6 @@ export const MiamiViceSearchTile: React.FC<MiamiViceSearchTileProps> = ({
                 <Grid columnItem={[5, 5]}>
                     <Button
                         typeType={isMobile ? 't1' : 't2'}
-                        type="regularClear"
                         func={() => {
                             setShowElement(!showElement)
                             setParsedEventData(miamiViceContent.tileOne.season5)

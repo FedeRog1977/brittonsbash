@@ -6,41 +6,57 @@ import { useScreenWidth, toUpperCase } from '../../../../scripts'
 import { Grid, Typography } from '../../basics'
 import { ButtonProps } from './button.types'
 
-export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
+export const Button: React.FC<ButtonProps> = ({
+    typeType = 'body',
+    light,
+    type = 'regularClear',
+    fill,
+    forceWidth,
+    transition,
+    value,
+    func,
+    funcResp,
+    link,
+    content,
+    subContent,
+    subContentTop,
+    color,
+    coarsePadding,
+    removePadding,
+}: ButtonProps) => {
     const { isMobile } = useScreenWidth()
 
-    const classNames = cx({
-        [styles[`button${toUpperCase(props.type)}`]]: props.type,
-        [styles[`padded${toUpperCase(props.coarsePadding ? 'Coarse' : '')}`]]:
-            !props.removePadding,
-        [styles.fill]: props.fill,
-        [styles.transition]: props.transition,
+    const classNames = cx(styles[`button${toUpperCase(type)}`], {
+        [styles[`padded${toUpperCase(coarsePadding ? 'Coarse' : '')}`]]:
+            !removePadding,
+        [styles.fill]: fill,
+        [styles.transition]: transition,
     })
 
-    const content = (
+    const buttonContent: React.ReactElement = (
         <button
             className={classNames}
-            onClick={props.func}
-            value={props.value}
+            onClick={func}
+            value={value}
             style={{
-                width: props.forceWidth ? `${props.forceWidth}%` : undefined,
+                width: forceWidth ? `${forceWidth}%` : undefined,
             }}
         >
             <Grid
-                alignColumns={props.subContentTop ? undefined : 'auto auto'}
-                alignRows={props.subContentTop ? 'auto auto' : undefined}
-                justifyContent={Boolean(props.content) ? 'center' : undefined}
+                alignColumns={subContentTop ? undefined : 'auto auto'}
+                alignRows={subContentTop ? 'auto auto' : undefined}
+                justifyContent={Boolean(content) ? 'center' : undefined}
                 alignContent="center"
                 alignItems={isMobile ? undefined : 'center'}
             >
-                {Boolean(props.subContent) && (
+                {Boolean(subContent) && (
                     <Grid
-                        columnItem={props.subContentTop ? undefined : [1, 2]}
-                        rowItem={props.subContentTop ? [1, 2] : undefined}
+                        columnItem={subContentTop ? undefined : [1, 2]}
+                        rowItem={subContentTop ? [1, 2] : undefined}
                         textAlign={
-                            Boolean(isMobile && props.content)
+                            Boolean(isMobile && content)
                                 ? 'center'
-                                : props.subContentTop
+                                : subContentTop
                                 ? 'center'
                                 : 'right'
                         }
@@ -50,7 +66,7 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                             color="mediumGrey"
                             content={
                                 <>
-                                    {props.subContent}
+                                    {subContent}
                                     {!isMobile && <>&nbsp;&nbsp;</>}
                                 </>
                             }
@@ -59,61 +75,55 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
                 )}
                 <Grid
                     columnItem={
-                        props.subContentTop
-                            ? undefined
-                            : [props.subContent ? 2 : 1, 2]
+                        subContentTop ? undefined : [subContent ? 2 : 1, 2]
                     }
                     rowItem={
-                        props.subContentTop
-                            ? [props.subContent ? 2 : 1, 2]
-                            : undefined
+                        subContentTop ? [subContent ? 2 : 1, 2] : undefined
                     }
                     textAlign={
-                        Boolean(isMobile && props.content)
+                        Boolean(isMobile && content)
                             ? 'center'
-                            : props.subContentTop
+                            : subContentTop
                             ? 'center'
                             : 'left'
                     }
                 >
                     <Typography
-                        type={props.typeType ? props.typeType : 'body'}
+                        type={typeType}
                         content={
-                            props.content
-                                ? props.content
-                                : Boolean(props.funcResp === false)
+                            content
+                                ? content
+                                : Boolean(funcResp === false)
                                 ? 'Read more'
                                 : 'Read less'
                         }
                         color={
-                            Boolean(props.funcResp === false && props.color)
-                                ? props.color
-                                : Boolean(props.funcResp === false)
+                            Boolean(funcResp === false && color)
+                                ? color
+                                : Boolean(funcResp === false)
                                 ? 'mediumGrey'
                                 : 'lightBlue'
                         }
-                        light={props.light}
+                        light={light}
                     />
                 </Grid>
-                {Boolean(!props.content) && (
+                {Boolean(!content) && (
                     <Grid
-                        columnItem={props.subContentTop ? undefined : [2, 2]}
-                        rowItem={props.subContentTop ? [2, 2] : undefined}
+                        columnItem={subContentTop ? undefined : [2, 2]}
+                        rowItem={subContentTop ? [2, 2] : undefined}
                         textAlign="right"
                     >
                         <Typography
-                            type="footnote"
+                            type="body"
                             content={
-                                props.funcResp === false ? (
+                                funcResp === false ? (
                                     <FontAwesomeIcon icon={faChevronDown} />
                                 ) : (
                                     <FontAwesomeIcon icon={faChevronUp} />
                                 )
                             }
                             color={
-                                props.funcResp === false
-                                    ? 'mediumGrey'
-                                    : 'lightBlue'
+                                funcResp === false ? 'mediumGrey' : 'lightBlue'
                             }
                             light
                         />
@@ -123,15 +133,12 @@ export const Button: React.FC<ButtonProps> = ({ ...props }: ButtonProps) => {
         </button>
     )
 
-    if (props.link?.url)
+    if (link?.url)
         return (
-            <a
-                target={props.link.newTab ? '_blank' : undefined}
-                href={props.link.url}
-            >
-                {content}
+            <a target={link.newTab ? '_blank' : undefined} href={link.url}>
+                {buttonContent}
             </a>
         )
 
-    return content
+    return buttonContent
 }

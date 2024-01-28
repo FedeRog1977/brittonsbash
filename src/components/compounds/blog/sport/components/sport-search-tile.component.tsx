@@ -23,7 +23,6 @@ export const SportSearchTile: React.FC<SportSearchTileProps> = ({
                 <Grid columnItem={[1, 4]}>
                     <Button
                         typeType="t2"
-                        type="regularClear"
                         value="roadies"
                         func={funcSelect}
                         funcResp={isRoadies}
@@ -36,7 +35,6 @@ export const SportSearchTile: React.FC<SportSearchTileProps> = ({
                 <Grid columnItem={[2, 4]}>
                     <Button
                         typeType="t2"
-                        type="regularClear"
                         value="projects"
                         func={funcSelect}
                         funcResp={isProjects}
@@ -49,7 +47,6 @@ export const SportSearchTile: React.FC<SportSearchTileProps> = ({
                 <Grid columnItem={[3, 4]}>
                     <Button
                         typeType="t2"
-                        type="regularClear"
                         value="miles"
                         func={funcSelect}
                         funcResp={isMiles}
@@ -62,7 +59,6 @@ export const SportSearchTile: React.FC<SportSearchTileProps> = ({
                 <Grid columnItem={[4, 4]}>
                     <Button
                         typeType="t2"
-                        type="regularClear"
                         value="tennis"
                         func={() => {}}
                         funcResp={false}

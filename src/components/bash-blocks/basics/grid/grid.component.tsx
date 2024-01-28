@@ -1,5 +1,6 @@
 import { GridProps } from './grid.types'
 
+// Reminder: https://developer.mozilla.org/en-US/docs/Web/CSS/grid
 // Reminder: https://css-tricks.com/snippets/css/complete-guide-grid/
 
 export const Grid: React.FC<GridProps> = ({ ...props }: GridProps) => {

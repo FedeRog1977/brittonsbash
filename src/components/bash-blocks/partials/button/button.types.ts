@@ -4,7 +4,7 @@ import { ColorProps, LinkProps } from '../../reference'
 export type ButtonProps = {
     typeType?: TypographyProps['type']
     light?: boolean
-    type: 'regularClear' | 'regularSolid' | 'search' | 'inverse'
+    type?: 'regularClear' | 'regularSolid' | 'search' | 'inverse'
     fill?: boolean
     forceWidth?: number
     transition?: boolean
@@ -16,7 +16,6 @@ export type ButtonProps = {
     subContent?: string | React.ReactElement
     subContentTop?: boolean
     color?: ColorProps
-    dense?: boolean
     coarsePadding?: boolean
     removePadding?: boolean
 }

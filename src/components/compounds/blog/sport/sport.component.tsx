@@ -12,6 +12,7 @@ export const Sport: React.FC = () => {
         isProjects,
         isMiles,
         sportData,
+        sport2024,
         sport2023,
         sport2022,
         sport2021,
@@ -35,6 +36,7 @@ export const Sport: React.FC = () => {
                 isProjects={isProjects}
                 isMiles={isMiles}
                 sportData={sportData}
+                sport2024={sport2024}
                 sport2023={sport2023}
                 sport2022={sport2022}
                 sport2021={sport2021}

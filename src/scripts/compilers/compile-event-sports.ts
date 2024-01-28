@@ -4,6 +4,10 @@ import { ProjectProps } from './types'
 export function compileEventSports() {
     const allSport: ProjectProps[] = []
 
+    sportData[2024].projects.forEach((event: ProjectProps) => {
+        allSport.push(event)
+    })
+
     sportData[2023].projects.forEach((event: ProjectProps) => {
         allSport.push(event)
     })
