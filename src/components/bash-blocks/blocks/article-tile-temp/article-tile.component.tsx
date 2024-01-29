@@ -1,4 +1,3 @@
-import { Attributes, createElement } from 'react'
 import { Tile, Typography } from '../../basics'
 import { ArticleTileProps } from './article-tile.types'
 

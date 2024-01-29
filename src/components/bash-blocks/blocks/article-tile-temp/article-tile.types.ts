@@ -1,4 +1,4 @@
-import React, { ElementType } from 'react'
+import React from 'react'
 import { TileProps } from '../../basics'
 import { ImageMatrixProps, ArticleProps, BookshelfProps } from '../../partials'
 import { AlignProps } from '../../reference'
