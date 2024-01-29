@@ -1,4 +1,8 @@
-import { ArticleTile, ImageTile } from '../bash-blocks'
+import {
+    // ArticleTile,
+    ImageTile,
+} from '../bash-blocks'
+import { ArticleTile } from '../bash-blocks/blocks/article-tile-temp'
 import { PageLayout } from '../bash-blocks/templates'
 import { homeContent } from '../compounds'
 

@@ -52,9 +52,7 @@ author:
 
 -   Add _The Hangover Part II_
 -   Add _The Final Two’er III_
--   Add _Romantic Getaway_
 -   Add _Intriguing Possibilities_
--   Add _On Every Street_
 -   Add _The Hangover_
 -   Add filter for series’
 -   Add descriptions to Naples and Poland

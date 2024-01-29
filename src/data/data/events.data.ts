@@ -495,7 +495,6 @@ export const eventData = {
             names: ['The Hangover Part II'],
             startDate: '9th of December',
             endDate: '12th of December',
-            description: '',
             features: {
                 cities: ['Tirana'],
                 youthHostels: ['Tirana Backpacker Hostel'],
@@ -526,6 +525,7 @@ export const eventData = {
                 ],
                 bars: ['Cheers Irish Pub', "n'dashni"],
             },
+            description: '',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover-ii/1.jpg',
@@ -695,10 +695,10 @@ export const eventData = {
             names: ['Home', 'Routine Farewell'],
             startDate: '1st of December',
             endDate: '3rd of December',
-            description: '',
             features: {
                 youthHostels: ['Glen Nevis'],
             },
+            description: '',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/the-final-twoer-iii/1.jpg',
@@ -907,10 +907,11 @@ export const eventData = {
             names: ['Romantic Getaway'],
             startDate: '25th of November',
             endDate: '26th of November',
-            description: '',
             features: {
                 attractions: ['The McNeilage Caravan'],
             },
+            description:
+                'This may have been the start of the Aviemore cancellation sprint but it was certainly still a good’n. Amid my Thursday and Saturday drinking period, I actually managed to hold off until Saturday this week, so it was a full clean week of no alcohol and Waterfoots. Then came Saturday. Got a foot in in the morning, along with the vital stop for some Desperados 440’s and a Triple Mango. Quick routine stop in M&S somewhere on the MWhatever passing Edinburgh for our kilo, some loaf, and more supplies. Then wasted. We hit a half kilo pre-fucked, a fucked in a couple of the locals, a post-locals fucked watching some Spanish city tours on YouTube, then a post-fucked half kilo. Was good. Safe to say nothing more than a short stroll and scone the next day.',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/romantic-getaway/1.jpg',
@@ -952,7 +953,6 @@ export const eventData = {
             names: ['Cheshire 2023 — Intriguing Possibilities'],
             startDate: '10th of November',
             endDate: '12th of November',
-            description: '',
             features: {
                 cities: [''],
                 districts: [''],
@@ -967,6 +967,7 @@ export const eventData = {
                 bars: [''],
                 filmingLocations: [''],
             },
+            description: '',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/intriguing-possibilities/1.jpg',
@@ -1039,10 +1040,11 @@ export const eventData = {
             prefix: 'ScottishPower Digital Presents',
             names: ['On Every Street'],
             startDate: '8th of November',
-            description: '',
             features: {
                 bars: ['Drygate Brewing Co.'],
             },
+            description:
+                'The day had come at last. Lewis and his bitches, as labelled by one of the ‘bitches’. I must say, the final week’s worth of work paid off. This was the greatest away day, China have nothing on this away day. Great success of an autistically interactive day, followed by one of the most successful wasteds of the year. Especially after discovering Drygate sell Double Disco Mango Smoothie 7.5% by the 440. Also nowt like a stumble to Shawarma King to sober up afterwards.',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/on-every-street/1.jpg',
@@ -1076,7 +1078,6 @@ export const eventData = {
             names: ['The Hangover'],
             startDate: '3rd of November',
             endDate: '6th of November',
-            description: '',
             features: {
                 cities: ['Hamburg'],
                 districts: [
@@ -1185,6 +1186,7 @@ export const eventData = {
                 ],
                 bars: ['Hofbräu Hamburg'],
             },
+            description: '',
             images: [
                 {
                     url: 'https://lewisbritton.com/blog/instant-gram/2023/the-hangover/1.jpg',
