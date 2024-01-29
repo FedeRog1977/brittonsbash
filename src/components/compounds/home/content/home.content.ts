@@ -1,15 +1,12 @@
+import { BackgroundProps, ImageTileProps } from '../../../bash-blocks'
 import {
-    // ArticleTileProps,
-    BackgroundProps,
-    ImageMatrix,
-    ImageTileProps,
-} from '../../../bash-blocks'
-import { ArticleTileProps } from '../../../bash-blocks/blocks/article-tile-temp'
+    ArticleTileBody,
+    ArticleTileImageMatrix,
+    ArticleTileProps,
+} from '../../../bash-blocks/blocks/article-tile-temp'
 import { imageTestData } from '../../../../data'
 import introTileImg from '../../../../media/images/pages/intro-tile.jpg'
 import introTileMobileImg from '../../../../media/images/pages/intro-tile-mobile.jpg'
-import { ArticleTileBody } from '../../../bash-blocks/blocks/article-tile-temp/components/article-tile-body.component'
-import { ArticleTileImageMatrix } from '../../../bash-blocks/blocks/article-tile-temp/components/article-tile-image-matrix.component'
 
 type HomeProps = {
     background: BackgroundProps
