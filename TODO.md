@@ -7,6 +7,7 @@ author:
 
 # General
 
+-   Move the remaining media from this repo to `brittonsbash-content`
 -   Refactor communications into segmented pieces
 -   Fix top tile use in schema for some pages
 -   Add (my) media of the year(s), songs etc.
