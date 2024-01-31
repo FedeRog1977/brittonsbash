@@ -1,21 +1,23 @@
+import React from 'react'
 import { TileProps } from '../../basics'
 import { ImageMatrixProps, ArticleProps, BookshelfProps } from '../../partials'
 import { AlignProps } from '../../reference'
 
-export type ArticleTileImageProps = {
-    heading?: string
-    bodyOne?: string | ArticleProps['sections']
-    items: ImageMatrixProps['items']
-    bodyTwo?: string | ArticleProps['sections']
-}
+export type ArticleTileBodyProps = { body: string | ArticleProps['sections'] }
+export type ArticleTileBookShelfProps = { items: BookshelfProps[] }
+export type ArticleTileImageMatrixProps = { items: ImageMatrixProps['items'] }
 
 export type ArticleTileProps = {
     type?: TileProps['type']
     heading?: string
     subHeading?: string
-    body?: string | ArticleProps['sections']
-    imageMatrices?: ArticleTileImageProps[]
-    bookShelves?: BookshelfProps[]
     textAlign?: AlignProps
     margins?: boolean
+    sections: {
+        Component: React.ComponentType<any>
+        content:
+            | ArticleTileBodyProps
+            | ArticleTileBookShelfProps
+            | ArticleTileImageMatrixProps
+    }[]
 }

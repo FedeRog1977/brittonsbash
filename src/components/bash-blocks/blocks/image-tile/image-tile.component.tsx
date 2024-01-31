@@ -89,7 +89,7 @@ export const ImageTile: React.FC<ImageTileProps> = ({
                 justifyItems={handleGridCtasAlignX}
             >
                 {ctas?.map(({ content, href }: CtaProps, index) => (
-                    <Grid rowItem={[index + 1, ctas.length + 1]}>
+                    <Grid key={index} rowItem={[index + 1, ctas.length + 1]}>
                         <Button
                             typeType="h3"
                             type="inverse"

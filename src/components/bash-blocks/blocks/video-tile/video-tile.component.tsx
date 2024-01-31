@@ -31,7 +31,7 @@ export const VideoTile: React.FC<VideoTileProps> = ({
                 src={`https://www.youtube.com/embed/${video}${
                     controls ? '' : '?controls=0'
                 }`}
-            ></iframe>
+            />
         </Tile>
     )
 }

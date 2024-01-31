@@ -1,9 +1,10 @@
-import { BackgroundProps, ImageTileProps } from '../../../bash-blocks'
 import {
     ArticleTileBody,
     ArticleTileImageMatrix,
     ArticleTileProps,
-} from '../../../bash-blocks/blocks/article-tile-temp'
+    BackgroundProps,
+    ImageTileProps,
+} from '../../../bash-blocks'
 import { imageTestData } from '../../../../data'
 import introTileImg from '../../../../media/images/pages/intro-tile.jpg'
 import introTileMobileImg from '../../../../media/images/pages/intro-tile-mobile.jpg'
@@ -11,7 +12,7 @@ import introTileMobileImg from '../../../../media/images/pages/intro-tile-mobile
 type HomeProps = {
     background: BackgroundProps
     tileOne: ImageTileProps
-    tileTwo: ArticleTileProps
+    // tileTwo: ArticleTileProps
 }
 
 export const homeContent: HomeProps = {
@@ -35,20 +36,20 @@ export const homeContent: HomeProps = {
         invert: true,
         textAlign: 'left',
     },
-    tileTwo: {
-        heading: 'Those who know, those who fear',
-        subHeading: 'Let us begin',
-        sections: [
-            {
-                Component: ArticleTileBody,
-                content: {
-                    body: 'Those who know me know there’s a bunch of random nonsense I could start spewing out here already, but let’s keep it high level right now and you can dive into the l’autisme as much as you want at your leisure. There are eight focuses of this website really, meaning there are eight things that sum up my effed-up personality: sport, exploration and travel, computers, academic crap, cooking, design, automotive interests, and other media. I have some trademarks, too many to get into here but you will be seeing a lot of hill Projects, including my greatest achievement of The Playground, and many more around my greatest love: the Scottish Highlands; Roadie Miles, including my century and various Strathavens and Fenwick + Wind Farms; Miles Miles, which these days tends to only extend to my never-ending Waterfoot streak; and, my (unfortunately) decaying obsession with Roger Federer’s tennis game. You can also browse all of my travel and explorations, shall we call them, on my rebellion against Instagram: Instant Gram. And feel free to steal any of the recipes you find in BrittonsFoodRC too. You may at some point find yourself caught in some obscure exploration of interiors, design, typography, stationery, classic goods collection, and media collection, etc. There’s also plenty of v-gin dev stuff in Linux, LaTeX, and web development. Also, not to forget the ThinkPads. If you are to venture into the unknown, check out Conquest (Burning Roots) and get a proj on the go in my experimental Ordnance-Survey-based mapping app. So yeah, good luck, have fun.',
-                },
-            },
-            {
-                Component: ArticleTileImageMatrix,
-                content: { items: imageTestData.slice(0, 3) },
-            },
-        ],
-    },
+    // tileTwo: {
+    //     heading: 'Those who know, those who fear',
+    //     subHeading: 'Let us begin',
+    //     sections: [
+    //         {
+    //             Component: ArticleTileBody,
+    //             content: {
+    //                 body: 'Those who know me know there’s a bunch of random nonsense I could start spewing out here already, but let’s keep it high level right now and you can dive into the l’autisme as much as you want at your leisure. There are eight focuses of this website really, meaning there are eight things that sum up my effed-up personality: sport, exploration and travel, computers, academic crap, cooking, design, automotive interests, and other media. I have some trademarks, too many to get into here but you will be seeing a lot of hill Projects, including my greatest achievement of The Playground, and many more around my greatest love: the Scottish Highlands; Roadie Miles, including my century and various Strathavens and Fenwick + Wind Farms; Miles Miles, which these days tends to only extend to my never-ending Waterfoot streak; and, my (unfortunately) decaying obsession with Roger Federer’s tennis game. You can also browse all of my travel and explorations, shall we call them, on my rebellion against Instagram: Instant Gram. And feel free to steal any of the recipes you find in BrittonsFoodRC too. You may at some point find yourself caught in some obscure exploration of interiors, design, typography, stationery, classic goods collection, and media collection, etc. There’s also plenty of v-gin dev stuff in Linux, LaTeX, and web development. Also, not to forget the ThinkPads. If you are to venture into the unknown, check out Conquest (Burning Roots) and get a proj on the go in my experimental Ordnance-Survey-based mapping app. So yeah, good luck, have fun.',
+    //             },
+    //         },
+    //         {
+    //             Component: ArticleTileImageMatrix,
+    //             content: { items: imageTestData.slice(0, 3) },
+    //         },
+    //     ],
+    // },
 }

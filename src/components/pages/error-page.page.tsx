@@ -1,4 +1,4 @@
-import { PageLayout } from '../bash-blocks/templates'
+import { PageLayout } from '../bash-blocks'
 
 export const ErrorPage = () => (
     <PageLayout background={{ content: 'Error' }}>

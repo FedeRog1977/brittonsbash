@@ -1,4 +1,4 @@
-import { PageLayout } from '../../bash-blocks/templates'
+import { PageLayout } from '../../bash-blocks'
 import { Sport as SportComponent } from '../../compounds'
 
 export const Sport = () => (

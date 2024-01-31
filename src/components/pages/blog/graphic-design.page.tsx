@@ -1,6 +1,5 @@
 import { articleTestData } from '../../../data'
-import { Article, ArticleProps, Tile } from '../../bash-blocks'
-import { PageLayout } from '../../bash-blocks/templates'
+import { Article, ArticleProps, PageLayout, Tile } from '../../bash-blocks'
 
 export const GraphicDesign = () => (
     <PageLayout background={{ content: 'Graphic Design' }}>

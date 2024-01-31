@@ -1,9 +1,8 @@
-import { ArticleTile } from '../../bash-blocks'
-import { PageLayout } from '../../bash-blocks/templates'
+import { ArticleTile, PageLayout } from '../../bash-blocks'
 import { thinkFlowContent } from '../../compounds/blog/think-flow'
 
 export const ThinkFlow = () => (
     <PageLayout background={thinkFlowContent.background}>
-        <ArticleTile {...thinkFlowContent.tileOne} />
+        {/* <ArticleTile {...thinkFlowContent.tileOne} /> */}
     </PageLayout>
 )

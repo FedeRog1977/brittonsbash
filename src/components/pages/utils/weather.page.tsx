@@ -1,6 +1,5 @@
 import { Weather as WeatherComponent, weatherContent } from '../../compounds'
-import { FootnoteTile } from '../../bash-blocks'
-import { PageLayout } from '../../bash-blocks/templates'
+import { FootnoteTile, PageLayout } from '../../bash-blocks'
 
 export const Weather = () => (
     <PageLayout background={weatherContent.background}>
