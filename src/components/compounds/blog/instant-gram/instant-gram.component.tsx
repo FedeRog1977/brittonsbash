@@ -4,6 +4,7 @@ import { useInstantGram } from './hooks'
 
 export const InstantGram: React.FC = () => {
     const {
+        url,
         handleInput,
         executeInput,
         handleSelect,
@@ -15,11 +16,13 @@ export const InstantGram: React.FC = () => {
     return (
         <>
             <InstantGramSearchTile
+                url={url}
                 funcInput={handleInput}
                 funcButton={executeInput}
                 funcSelect={handleSelect}
             />
             <InstantGramResultTile
+                url={url}
                 event={event}
                 sportEvent={sportEvent}
                 showSportEvent={showSportOnEvent}

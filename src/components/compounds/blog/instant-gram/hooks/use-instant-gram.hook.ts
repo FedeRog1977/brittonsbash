@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useLocation, useSearchParams } from 'react-router-dom'
 import {
     compileEventEvents,
     compileEventSports,
@@ -6,6 +7,11 @@ import {
 } from '../../../../../scripts'
 
 export function useInstantGram() {
+    const location = useLocation()
+    const [searchParamsPlaceholder, setSearchParamsPlaceholder] = useState('')
+    const [searchParams, setSearchParams] = useSearchParams()
+    const [url, setUrl] = useState('')
+
     const allEvents = compileEventEvents()
     const allSport = compileEventSports()
 
@@ -34,11 +40,35 @@ export function useInstantGram() {
     const [showSportOnEvent, setShowSportEvent] = useState(false)
 
     useEffect(() => {
-        for (var j in allSport) {
-            if (allEvents[0].names.includes(allSport[j].name)) {
-                sportOnEvent.push(allSport[j])
-                setSportEvent(sportOnEvent)
-                setShowSportEvent(true)
+        if (location.search !== '') {
+            setUrl(`${location.pathname}${location.search}`)
+
+            for (var i in allEvents) {
+                if (location.search === `?${allEvents[i].id?.toLowerCase()}=`) {
+                    setEvent(allEvents[i])
+                    setSportEvent(emptySportOnEvent)
+                    setShowSportEvent(false)
+
+                    for (var j in allSport) {
+                        if (allEvents[i].names.includes(allSport[j].name)) {
+                            sportOnEvent.push(allSport[j])
+                            setSportEvent(sportOnEvent)
+                            setShowSportEvent(true)
+                        }
+                    }
+                }
+            }
+        }
+    }, [searchParams])
+
+    useEffect(() => {
+        if (location.search === '') {
+            for (var j in allSport) {
+                if (allEvents[0].names.includes(allSport[j].name)) {
+                    sportOnEvent.push(allSport[j])
+                    setSportEvent(sportOnEvent)
+                    setShowSportEvent(true)
+                }
             }
         }
     }, [])
@@ -54,17 +84,21 @@ export function useInstantGram() {
         setSearchField(e.target.value.toLowerCase())
 
         for (var i in allEvents) {
-            const fullName = allEvents[i].names.join(' - ').toLowerCase()
-
             if (searchField === '') {
                 setEventPlaceholder(event)
                 setSportEventPlaceholder(sportEvent)
                 setShowSportEventPlaceholder(showSportOnEvent)
-            } else if (fullName.includes(searchField)) {
-                console.log('Event JSON Value:', fullName)
+            } else if (
+                allEvents[i].names
+                    .join(' - ')
+                    .toLowerCase()
+                    .includes(searchField)
+            ) {
                 setEventPlaceholder(allEvents[i])
                 setSportEventPlaceholder(emptySportOnEvent)
                 setShowSportEventPlaceholder(false)
+
+                setSearchParamsPlaceholder(allEvents[i].id?.toLowerCase() ?? '')
 
                 for (var j in allSport) {
                     if (allEvents[i].names.includes(allSport[j].name)) {
@@ -86,19 +120,20 @@ export function useInstantGram() {
             setEvent(eventPlaceholder)
             setSportEvent(sportEventPlaceholder)
             setShowSportEvent(showSportEventPlaceholder)
+            setSearchParams(searchParamsPlaceholder)
         }
     }
 
     const handleSelect = (e: any) => {
         for (var i in allEvents) {
-            const fullName = allEvents[i].names.join(' - ')
-
-            if (fullName.includes(e.currentTarget.value)) {
-                console.log('Event JSON Value:', fullName)
-
+            if (
+                allEvents[i].names.join(' - ').includes(e.currentTarget.value)
+            ) {
                 setEvent(allEvents[i])
                 setSportEvent(emptySportOnEvent)
                 setShowSportEvent(false)
+
+                setSearchParams(allEvents[i].id?.toLowerCase())
 
                 for (var j in allSport) {
                     if (allEvents[i].names.includes(allSport[j].name)) {
@@ -109,9 +144,13 @@ export function useInstantGram() {
                 }
             }
         }
+
+        setUrl(`${location.pathname}${location.search}`)
+        console.log(url)
     }
 
     return {
+        url,
         handleInput,
         executeInput,
         handleSelect,

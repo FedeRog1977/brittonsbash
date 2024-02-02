@@ -166,6 +166,7 @@ export const RowTable: React.FC<RowTableProps> = ({
                                 return (
                                     <>
                                         <Grid
+                                            key={index}
                                             columnItem={[1, 2]}
                                             rowItem={[
                                                 index + 2,

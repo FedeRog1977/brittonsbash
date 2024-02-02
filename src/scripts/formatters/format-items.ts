@@ -18,9 +18,9 @@ export function formatItems(
         }
     }
 
-    console.log('Unformatted Image Items:\n\n', imageItems)
-    console.log('Unformatted Book Items:\n\n', bookItems)
-    console.log('Formatted Image Items:\n\n', formattedImageItems)
-    console.log('Formatted Book Items:\n\n', formattedBookItems)
+    // console.log('Unformatted Image Items:\n\n', imageItems)
+    // console.log('Unformatted Book Items:\n\n', bookItems)
+    // console.log('Formatted Image Items:\n\n', formattedImageItems)
+    // console.log('Formatted Book Items:\n\n', formattedBookItems)
     return { formattedImageItems, formattedBookItems }
 }

@@ -247,7 +247,7 @@ export const eventData = {
     ],
     2023: [
         {
-            id: 'E2023049',
+            id: 'E2023050',
             names: ['Golden Hour – Meeting Your Heroes'],
             startDate: '29th of December',
             description:

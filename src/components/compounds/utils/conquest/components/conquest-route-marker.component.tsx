@@ -19,15 +19,11 @@ export const RouteMarker = ({
     //     });
     // }
 
-    console.log(munrosIn)
-
     const array = ['Ben More', 'Stob Binnein', 'Ben Starav', 'Creise']
 
     munros = array.map((x, index) => {
         return <li key={index}>{x}</li>
     })
-
-    console.log(munros)
 
     // for (var i in corbettsIn) {
     //     corbetts = corbettsIn.map(() => (

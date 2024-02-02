@@ -81,8 +81,6 @@ export const Conquest = () => {
                     .toLowerCase()
                     .includes(e.target.value.toLowerCase())
             ) {
-                console.log(hillData.landmasses[i].routes)
-
                 setShowRoutesList(true)
                 setRoutesList(
                     <RouteList
@@ -98,8 +96,6 @@ export const Conquest = () => {
     const routeSelect = (e: any) => {
         setShowRouteMarker(false)
 
-        console.log('Select Route Name:\n', e.target.value)
-
         for (var i in hillData.landmasses) {
             for (var k in hillData.landmasses[i].routes) {
                 if (
@@ -107,11 +103,6 @@ export const Conquest = () => {
                         .toLowerCase()
                         .includes(e.target.value.toLowerCase())
                 ) {
-                    console.log(
-                        'JSON Route Name:\n',
-                        hillData.landmasses[i].routes[k].name
-                    )
-
                     setShowRouteMarker(true)
                     setRouteMarker(
                         <RouteMarker

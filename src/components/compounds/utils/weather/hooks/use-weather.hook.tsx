@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Typography } from '../../../../bash-blocks'
 import { hillData } from '../../../../../data'
-import { toCoords, toSentenceCase, toFeet } from '../../../../../scripts'
+import { toCoords, toFeet } from '../../../../../scripts'
 import { WeatherDaily } from '../components'
 
 export function useWeather() {
@@ -23,8 +23,6 @@ export function useWeather() {
     //     getCurrLocation();
     // }, []);
 
-    // console.log("Coords:", lat, lon);
-
     const [searchField, setSearchField] = useState('')
     const [name, setName] = useState('')
 
@@ -44,20 +42,12 @@ export function useWeather() {
     )
 
     const handleSelect = (e: any) => {
-        console.log('---\nSelect New Munro:\n', e.target.value)
-
         for (var i in hillData.munros) {
             if (
                 hillData.munros[i].name
                     .toLowerCase()
                     .includes(e.target.value.toLowerCase())
             ) {
-                console.log(
-                    'Match Selected Munro To JSON:\n',
-                    `${hillData.munros[i].name}\n`,
-                    `${hillData.munros[i].lat}`,
-                    `${hillData.munros[i].lon}\n---`
-                )
                 setName(hillData.munros[i].name.toLowerCase())
                 setLat(hillData.munros[i].lat)
                 setLon(hillData.munros[i].lon)
@@ -69,8 +59,6 @@ export function useWeather() {
     }
 
     const handleInput = (e: any) => {
-        console.log('---\nInput New Munro:\n', e.target.value)
-
         setSearchField(e.target.value)
 
         for (var i in hillData.munros) {
@@ -88,12 +76,6 @@ export function useWeather() {
                     .toLowerCase()
                     .includes(searchField.toLowerCase())
             ) {
-                console.log(
-                    'Match Inputted Munro To JSON:\n',
-                    `${hillData.munros[i].name}\n`,
-                    `${hillData.munros[i].lat}`,
-                    `${hillData.munros[i].lon}\n---`
-                )
                 setName(hillData.munros[i].name.toLowerCase())
                 setLat(hillData.munros[i].lat)
                 setLon(hillData.munros[i].lon)
@@ -105,17 +87,6 @@ export function useWeather() {
     }
 
     const executeInput = () => {
-        console.log(
-            // searchField will only work for the input search bar
-            'Results:\n',
-            `Search Field: ${searchField}\n`,
-            `JSON Matched Name: ${toSentenceCase(name)}\n`,
-            `JSON Matched Elevation: ${weatherElevation.toLocaleString()}\n`,
-            `JSON Matched Latitude: ${lat}\n`,
-            `JSON Matched Longitude: ${lon}\n`,
-            `JSON Matched Summit Mark: ${weatherMark}`
-        )
-
         setWeatherTitle(weatherTitleLocation)
 
         // If the input search bar is not empty

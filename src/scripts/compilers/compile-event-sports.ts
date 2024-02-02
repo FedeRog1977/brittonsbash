@@ -24,6 +24,6 @@ export function compileEventSports() {
         allSport.push(event)
     })
 
-    console.log('All Event Sports:\n\n', allSport)
+    // console.log('All Event Sports:\n\n', allSport)
     return allSport
 }

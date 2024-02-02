@@ -110,6 +110,6 @@ export const compileEvent = ({ ...props }: CompiledEventProps) => {
         showSportEvent: props.showSportEvent,
     }
 
-    console.log('Refactored Event:\n\n', refactoredEvent)
+    // console.log('Refactored Event:\n\n', refactoredEvent)
     return refactoredEvent
 }

@@ -356,6 +356,6 @@ export function compileRoadies() {
         thorntonhalls,
     }
 
-    console.log('All Roadies:\n\n', compiledRoadies)
+    // console.log('All Roadies:\n\n', compiledRoadies)
     return compiledRoadies
 }

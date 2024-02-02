@@ -235,6 +235,6 @@ export function compileMiles() {
         waterfoots,
     }
 
-    console.log('All Miles:\n\n', compiledMiles)
+    // console.log('All Miles:\n\n', compiledMiles)
     return compiledMiles
 }

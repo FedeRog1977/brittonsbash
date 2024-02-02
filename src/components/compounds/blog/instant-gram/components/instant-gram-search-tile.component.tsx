@@ -7,6 +7,7 @@ import { InstantGramSearchList } from './instant-gram-search-list.component'
 import { BigSearch } from '../../../../bash-blocks'
 
 export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
+    url,
     funcInput,
     funcButton,
     funcSelect,
@@ -127,6 +128,7 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                 <>
                     <Spacing mY={30} />
                     <InstantGramSearchList
+                        url={url}
                         func={funcSelect}
                         items={parsedEventData}
                     />

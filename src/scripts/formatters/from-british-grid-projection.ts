@@ -21,6 +21,6 @@ export function fromBritishGridProjection(coords: any) {
         coords
     ).reverse()
 
-    console.log('X:', coordsFormatted[0], 'Y:', coordsFormatted[1])
+    // console.log('X:', coordsFormatted[0], 'Y:', coordsFormatted[1])
     return coordsFormatted
 }

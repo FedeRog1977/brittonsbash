@@ -24,6 +24,6 @@ export function compileEventEvents() {
         allEvents.push(event)
     })
 
-    console.log('All Events:\n\n', allEvents)
+    // console.log('All Events:\n\n', allEvents)
     return allEvents
 }

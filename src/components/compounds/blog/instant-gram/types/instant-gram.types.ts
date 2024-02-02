@@ -1,6 +1,7 @@
 import { CompiledEventProps } from '../../../../../scripts'
 
 export type InstantGramSearchListProps = {
+    url?: string
     func: (() => void) | ((e: any) => void)
     items: {
         id: string
@@ -10,9 +11,12 @@ export type InstantGramSearchListProps = {
 }
 
 export type InstantGramSearchTileProps = {
+    url?: string
     funcInput: (e: any) => void
     funcButton: () => void
     funcSelect: (e: any) => void
 }
 
-export type InstantGramResultTileProps = CompiledEventProps
+export interface InstantGramResultTileProps extends CompiledEventProps {
+    url: string
+}

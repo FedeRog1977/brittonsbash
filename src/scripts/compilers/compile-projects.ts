@@ -582,6 +582,6 @@ export function compileProjects() {
         donalds,
     }
 
-    console.log('All Projects:\n\n', compiledProjects)
+    // console.log('All Projects:\n\n', compiledProjects)
     return compiledProjects
 }
