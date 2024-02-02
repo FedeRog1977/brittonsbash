@@ -7,10 +7,10 @@ import {
 } from '../../../../../scripts'
 
 export function useInstantGram() {
+    const [url, setUrl] = useState('')
     const location = useLocation()
     const [searchParamsPlaceholder, setSearchParamsPlaceholder] = useState('')
     const [searchParams, setSearchParams] = useSearchParams()
-    const [url, setUrl] = useState('')
 
     const allEvents = compileEventEvents()
     const allSport = compileEventSports()
