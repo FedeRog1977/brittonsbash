@@ -12,6 +12,23 @@ export const sportData = {
         ],
         projects: [
             {
+                id: 'P2024005',
+                name: 'Sewing The Law',
+                distance: 16.1,
+                elevation: 4970,
+                time: '5:22:05',
+                companionship: 1,
+                corbetts: ['Broad Law'],
+                corbettTops: ['Porridge Cairn'],
+                donalds: [
+                    'Talla Cleuch Head',
+                    'Broad Law',
+                    'Cramalt Craig',
+                    'Dollar Law',
+                    'Greenside Law',
+                ],
+            },
+            {
                 id: 'P2024004',
                 name: 'White Box',
                 distance: 11.2,
@@ -50,6 +67,20 @@ export const sportData = {
             },
         ],
         miles: [
+            {
+                id: 'M2024021',
+                name: 'Waterfoot',
+                distance: 10.13,
+                elevation: 610,
+                time: '2:00:24',
+            },
+            {
+                id: 'M2024020',
+                name: 'Waterfoot',
+                distance: 10.07,
+                elevation: 892,
+                time: '2:00:21',
+            },
             {
                 id: 'M2024019',
                 name: 'Waterfoot',

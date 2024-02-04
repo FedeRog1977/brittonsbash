@@ -19,63 +19,39 @@ button {
     &Search {
         border-radius: reference.$corners-small;
         background-color: reference.$darker-grey;
-        transition: transform reference.$transition-short;
         width: 100%;
-
-        &:active {
-            transform: scale(0.995);
-            transition: transform reference.$transition-short;
-        }
     }
 
     &RegularClear {
         background-color: reference.$transparent;
-        border-radius: reference.$corners-small;
-        transition: background-color reference.$transition-long,
-            transform reference.$transition-short;
+        border-radius: reference.$corners-large;
+        transition: background-color reference.$transition-long;
 
         &:hover {
             background-color: reference.$lighter-grey;
             transition: background-color reference.$transition-long;
-        }
-
-        &:active {
-            transform: scale(0.995);
-            transition: transform reference.$transition-short;
         }
     }
 
     &RegularSolid {
         background-color: reference.$lighter-grey;
-        border-radius: reference.$corners-small;
-        transition: background-color reference.$transition-long,
-            transform reference.$transition-short;
+        border-radius: reference.$corners-large;
+        transition: background-color reference.$transition-long;
 
         &:hover {
             background-color: reference.$lighter-grey;
             transition: background-color reference.$transition-long;
         }
-
-        &:active {
-            transform: scale(0.995);
-            transition: transform reference.$transition-short;
-        }
     }
 
     &Inverse {
         background-color: reference.$transparent;
-        border-radius: reference.$corners-small;
-        transition: background-color reference.$transition-long,
-            transform reference.$transition-short;
+        border-radius: reference.$corners-large;
+        transition: background-color reference.$transition-long;
 
         &:hover {
             background-color: reference.$darker-grey-60;
             transition: background-color reference.$transition-long;
-        }
-
-        &:active {
-            transform: scale(0.995);
-            transition: transform reference.$transition-short;
         }
     }
 }
@@ -98,14 +74,12 @@ button {
     padding-left: 0;
     padding-right: 0;
     transition: background-color reference.$transition-long,
-        transform reference.$transition-short,
         padding reference.$transition-long;
 
     &:hover {
         padding-left: 15px;
         padding-right: 15px;
         transition: background-color reference.$transition-long,
-            transform reference.$transition-short,
             padding reference.$transition-long;
 
         @media (max-width: 768px) {

@@ -19,7 +19,7 @@ export const useInstantGram = () => {
     const [searchField, setSearchField] = useState('')
 
     const [event, setEvent] = useState(allEvents[0])
-    const [sport, setSport] = useState([] as ProjectProps[])
+    const [sport, setSport] = useState<ProjectProps[]>([])
     const [showSport, setShowSport] = useState(false)
 
     const [eventHandler, setEventHandler] = useState(event)
@@ -50,9 +50,9 @@ export const useInstantGram = () => {
 
     useEffect(() => {
         if (location.search === '') {
-            for (var j in allSport) {
-                if (allEvents[0].names.includes(allSport[j].name)) {
-                    sportOnEvent.push(allSport[j])
+            for (var i in allSport) {
+                if (allEvents[0].names.includes(allSport[i].name)) {
+                    sportOnEvent.push(allSport[i])
                     setSport(sportOnEvent)
                     setShowSport(true)
                 }

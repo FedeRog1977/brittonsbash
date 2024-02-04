@@ -12,7 +12,6 @@ export const communicationsData = {
                 'Bridgedale',
                 'Scarpa',
                 'Salewa',
-                'La Sportiva',
                 'Osprey',
                 'Oakley',
                 'Black Diamond',
