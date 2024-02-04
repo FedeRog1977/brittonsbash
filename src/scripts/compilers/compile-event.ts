@@ -6,7 +6,11 @@ import {
     RefactoredEventProps,
 } from './types'
 
-export const compileEvent = ({ ...props }: CompiledEventProps) => {
+export const compileEvent = ({
+    event,
+    sport,
+    showSport,
+}: CompiledEventProps) => {
     const names: RefactoredEventNameProps[] = []
     const distances: number[] = []
     const elevations: number[] = []
@@ -35,7 +39,7 @@ export const compileEvent = ({ ...props }: CompiledEventProps) => {
 
     var refKey = 0
 
-    props.event.names.forEach((name: string) => {
+    event.names.forEach((name: string) => {
         refKey = refKey + 1
         names.push({
             name: name,
@@ -43,59 +47,78 @@ export const compileEvent = ({ ...props }: CompiledEventProps) => {
         })
     })
 
-    props.sportEvent.forEach((sportEvent: ProjectProps) => {
-        distances.push(sportEvent.distance)
-        elevations.push(sportEvent.elevation)
-        times.push(sportEvent.time)
-        sportEvent.islands?.forEach((islandSet: string) => {
+    if (sport.length === 0) {
+        sport.push({
+            id: '',
+            name: '',
+            distance: 0,
+            elevation: 0,
+            time: '',
+            companionship: 0,
+            islands: [],
+            munros: [],
+            munroTops: [],
+            corbetts: [],
+            corbettTops: [],
+            grahams: [],
+            subTwos: [],
+            donalds: [],
+        })
+    }
+
+    sport.forEach((sport: ProjectProps) => {
+        distances.push(sport.distance)
+        elevations.push(sport.elevation)
+        times.push(sport.time)
+        sport.islands?.forEach((islandSet: string) => {
             islandSetAggregate.push(islandSet)
         })
-        sportEvent.munros?.forEach((munroSet: string) => {
+        sport.munros?.forEach((munroSet: string) => {
             munroSetAggregate.push(munroSet)
         })
-        sportEvent.munroTops?.forEach((munroTopSet: string) => {
+        sport.munroTops?.forEach((munroTopSet: string) => {
             munroTopSetAggregate.push(munroTopSet)
         })
-        sportEvent.corbetts?.forEach((corbettSet: string) => {
+        sport.corbetts?.forEach((corbettSet: string) => {
             corbettSetAggregate.push(corbettSet)
         })
-        sportEvent.corbettTops?.forEach((corbettTopSet: string) => {
+        sport.corbettTops?.forEach((corbettTopSet: string) => {
             corbettTopSetAggregate.push(corbettTopSet)
         })
-        sportEvent.grahams?.forEach((grahamSet: string) => {
+        sport.grahams?.forEach((grahamSet: string) => {
             grahamSetAggregate.push(grahamSet)
         })
-        sportEvent.subTwos?.forEach((subTwoSet: string) => {
+        sport.subTwos?.forEach((subTwoSet: string) => {
             subTwoSetAggregate.push(subTwoSet)
         })
-        sportEvent.donalds?.forEach((donaldSet: string) => {
+        sport.donalds?.forEach((donaldSet: string) => {
             donaldSetAggregate.push(donaldSet)
         })
     })
 
     const refactoredEvent: RefactoredEventProps = {
-        prefix: props.event.prefix,
+        prefix: event.prefix,
         names,
-        startDate: props.event.startDate,
-        endDate: props.event.endDate,
+        startDate: event.startDate,
+        endDate: event.endDate,
         features: {
-            cities: props.event.features?.cities?.sort().join(', '),
-            districts: props.event.features?.districts?.sort().join(', '),
-            attractions: props.event.features?.attractions?.sort().join(', '),
-            youthHostels: props.event.features?.youthHostels?.sort().join(', '),
-            supermarkets: props.event.features?.supermarkets?.sort().join(', '),
-            shops: props.event.features?.shops?.sort().join(', '),
-            foodstuffs: props.event.features?.foodstuffs?.sort().join(', '),
-            bakeries: props.event.features?.bakeries?.sort().join(', '),
-            gelaterias: props.event.features?.gelaterias?.sort().join(', '),
-            restaurants: props.event.features?.restaurants?.sort().join(', '),
-            bars: props.event.features?.bars?.sort().join(', '),
-            filmingLocations: props.event.features?.filmingLocations
+            cities: event.features?.cities?.sort().join(', '),
+            districts: event.features?.districts?.sort().join(', '),
+            attractions: event.features?.attractions?.sort().join(', '),
+            youthHostels: event.features?.youthHostels?.sort().join(', '),
+            supermarkets: event.features?.supermarkets?.sort().join(', '),
+            shops: event.features?.shops?.sort().join(', '),
+            foodstuffs: event.features?.foodstuffs?.sort().join(', '),
+            bakeries: event.features?.bakeries?.sort().join(', '),
+            gelaterias: event.features?.gelaterias?.sort().join(', '),
+            restaurants: event.features?.restaurants?.sort().join(', '),
+            bars: event.features?.bars?.sort().join(', '),
+            filmingLocations: event.features?.filmingLocations
                 ?.sort()
                 .join(', '),
         },
-        description: props.event.description,
-        images: props.event.images,
+        description: event.description,
+        images: event.images,
         distance: toMiles(distances.reduce(sum)),
         elevation: toFeet(elevations.reduce(sum)),
         time: times.join(', '),
@@ -107,7 +130,7 @@ export const compileEvent = ({ ...props }: CompiledEventProps) => {
         grahams: grahamSetAggregate.join(', '),
         subTwos: subTwoSetAggregate.join(', '),
         donalds: donaldSetAggregate.join(', '),
-        showSportEvent: props.showSportEvent,
+        showSport: showSport,
     }
 
     // console.log('Refactored Event:\n\n', refactoredEvent)

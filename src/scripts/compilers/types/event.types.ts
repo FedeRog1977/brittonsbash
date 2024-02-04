@@ -86,8 +86,8 @@ export type SportProps = {
 
 export type CompiledEventProps = {
     event: EventProps
-    sportEvent: ProjectProps[]
-    showSportEvent: boolean
+    sport: ProjectProps[]
+    showSport: boolean
 }
 
 export type CompiledRoadieProps = {
@@ -209,5 +209,5 @@ export type RefactoredEventProps = {
     grahams?: string
     subTwos?: string
     donalds?: string
-    showSportEvent: CompiledEventProps['showSportEvent']
+    showSport: CompiledEventProps['showSport']
 }

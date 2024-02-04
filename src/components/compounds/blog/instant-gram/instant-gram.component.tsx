@@ -9,8 +9,8 @@ export const InstantGram: React.FC = () => {
         executeInput,
         handleSelect,
         event,
-        sportEvent,
-        showSportOnEvent,
+        sport,
+        showSport,
     } = useInstantGram()
 
     return (
@@ -24,8 +24,8 @@ export const InstantGram: React.FC = () => {
             <InstantGramResultTile
                 url={url}
                 event={event}
-                sportEvent={sportEvent}
-                showSportEvent={showSportOnEvent}
+                sport={sport}
+                showSport={showSport}
             />
         </>
     )

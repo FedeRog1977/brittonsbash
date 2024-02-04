@@ -24,8 +24,8 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
     ...props
 }: InstantGramResultTileProps) => {
     const event = props.event
-    const sportEvent = props.sportEvent
-    const showSportEvent = props.showSportEvent
+    const sport = props.sport
+    const showSport = props.showSport
 
     const { isMobile } = useScreenWidth()
 
@@ -36,17 +36,14 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
     const { showElement: showModal, setShowElement: setShowModal } =
         useShowElement()
 
-    const refactoredEvent = compileEvent({ event, sportEvent, showSportEvent })
+    const refactoredEvent = compileEvent({ event, sport, showSport })
 
     useEffect(() => {
         setShowMatrix(!isMobile && true)
     }, [])
 
     return (
-        <Tile
-            type="solid"
-            // anchor={`${props.url}/#instantGramResult`}
-        >
+        <Tile type="solid" anchor={`${props.url}#result`}>
             <Spacing mB={isMobile ? 7.5 : 15}>
                 {refactoredEvent.prefix && (
                     <Typography
@@ -126,7 +123,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                     textAlign="center"
                 />
             </Spacing>
-            {refactoredEvent.showSportEvent && (
+            {refactoredEvent.showSport && (
                 <Spacing
                     mX={isMobile ? -40 : 0}
                     mT={isMobile ? 7.5 : 15}

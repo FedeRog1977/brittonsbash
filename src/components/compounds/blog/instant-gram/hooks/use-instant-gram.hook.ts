@@ -6,38 +6,25 @@ import {
     ProjectProps,
 } from '../../../../../scripts'
 
-export function useInstantGram() {
-    const [url, setUrl] = useState('')
+export const useInstantGram = () => {
     const location = useLocation()
-    const [searchParamsPlaceholder, setSearchParamsPlaceholder] = useState('')
+    const [url, setUrl] = useState('')
+    const [searchParamsHandler, setSearchParamsHandler] = useState('')
     const [searchParams, setSearchParams] = useSearchParams()
 
     const allEvents = compileEventEvents()
     const allSport = compileEventSports()
-
     const sportOnEvent: ProjectProps[] = []
-    const emptySportOnEvent: ProjectProps[] = [
-        {
-            id: '',
-            name: '',
-            distance: 0,
-            elevation: 0,
-            time: '',
-            companionship: 0,
-            islands: [],
-            munros: [],
-            munroTops: [],
-            corbetts: [],
-            corbettTops: [],
-            grahams: [],
-            subTwos: [],
-            donalds: [],
-        },
-    ]
+
+    const [searchField, setSearchField] = useState('')
 
     const [event, setEvent] = useState(allEvents[0])
-    const [sportEvent, setSportEvent] = useState(emptySportOnEvent)
-    const [showSportOnEvent, setShowSportEvent] = useState(false)
+    const [sport, setSport] = useState([] as ProjectProps[])
+    const [showSport, setShowSport] = useState(false)
+
+    const [eventHandler, setEventHandler] = useState(event)
+    const [sportHandler, setSportHandler] = useState(sport)
+    const [showSportHandler, setShowSportHandler] = useState(showSport)
 
     useEffect(() => {
         if (location.search !== '') {
@@ -46,14 +33,14 @@ export function useInstantGram() {
             for (var i in allEvents) {
                 if (location.search === `?${allEvents[i].id?.toLowerCase()}=`) {
                     setEvent(allEvents[i])
-                    setSportEvent(emptySportOnEvent)
-                    setShowSportEvent(false)
+                    setSport([] as ProjectProps[])
+                    setShowSport(false)
 
                     for (var j in allSport) {
                         if (allEvents[i].names.includes(allSport[j].name)) {
                             sportOnEvent.push(allSport[j])
-                            setSportEvent(sportOnEvent)
-                            setShowSportEvent(true)
+                            setSport(sportOnEvent)
+                            setShowSport(true)
                         }
                     }
                 }
@@ -66,45 +53,38 @@ export function useInstantGram() {
             for (var j in allSport) {
                 if (allEvents[0].names.includes(allSport[j].name)) {
                     sportOnEvent.push(allSport[j])
-                    setSportEvent(sportOnEvent)
-                    setShowSportEvent(true)
+                    setSport(sportOnEvent)
+                    setShowSport(true)
                 }
             }
         }
     }, [])
-
-    const [searchField, setSearchField] = useState('')
-    const [eventPlaceholder, setEventPlaceholder] = useState(event)
-    const [sportEventPlaceholder, setSportEventPlaceholder] =
-        useState(sportEvent)
-    const [showSportEventPlaceholder, setShowSportEventPlaceholder] =
-        useState(showSportOnEvent)
 
     const handleInput = (e: any) => {
         setSearchField(e.target.value.toLowerCase())
 
         for (var i in allEvents) {
             if (searchField === '') {
-                setEventPlaceholder(event)
-                setSportEventPlaceholder(sportEvent)
-                setShowSportEventPlaceholder(showSportOnEvent)
+                setEventHandler(event)
+                setSportHandler(sport)
+                setShowSportHandler(showSport)
             } else if (
                 allEvents[i].names
                     .join(' - ')
                     .toLowerCase()
                     .includes(searchField)
             ) {
-                setEventPlaceholder(allEvents[i])
-                setSportEventPlaceholder(emptySportOnEvent)
-                setShowSportEventPlaceholder(false)
+                setSearchParamsHandler(allEvents[i].id?.toLowerCase() ?? '')
 
-                setSearchParamsPlaceholder(allEvents[i].id?.toLowerCase() ?? '')
+                setEventHandler(allEvents[i])
+                setSportHandler([] as ProjectProps[])
+                setShowSportHandler(false)
 
                 for (var j in allSport) {
                     if (allEvents[i].names.includes(allSport[j].name)) {
                         sportOnEvent.push(allSport[j])
-                        setSportEventPlaceholder(sportOnEvent)
-                        setShowSportEventPlaceholder(true)
+                        setSportHandler(sportOnEvent)
+                        setShowSportHandler(true)
                     }
                 }
             }
@@ -114,13 +94,13 @@ export function useInstantGram() {
     const executeInput = () => {
         if (searchField === '') {
             setEvent(event)
-            setSportEvent(sportEvent)
-            setShowSportEvent(showSportOnEvent)
+            setSport(sport)
+            setShowSport(showSport)
         } else {
-            setEvent(eventPlaceholder)
-            setSportEvent(sportEventPlaceholder)
-            setShowSportEvent(showSportEventPlaceholder)
-            setSearchParams(searchParamsPlaceholder)
+            setSearchParams(searchParamsHandler)
+            setEvent(eventHandler)
+            setSport(sportHandler)
+            setShowSport(showSportHandler)
         }
     }
 
@@ -130,23 +110,22 @@ export function useInstantGram() {
                 allEvents[i].names.join(' - ').includes(e.currentTarget.value)
             ) {
                 setEvent(allEvents[i])
-                setSportEvent(emptySportOnEvent)
-                setShowSportEvent(false)
+                setSport([] as ProjectProps[])
+                setShowSport(false)
 
+                const search = `?${allEvents[i].id?.toLowerCase()}=`
+                setUrl(`${location.pathname}${search}`)
                 setSearchParams(allEvents[i].id?.toLowerCase())
 
                 for (var j in allSport) {
                     if (allEvents[i].names.includes(allSport[j].name)) {
                         sportOnEvent.push(allSport[j])
-                        setSportEvent(sportOnEvent)
-                        setShowSportEvent(true)
+                        setSport(sportOnEvent)
+                        setShowSport(true)
                     }
                 }
             }
         }
-
-        setUrl(`${location.pathname}${location.search}`)
-        console.log(url)
     }
 
     return {
@@ -155,7 +134,7 @@ export function useInstantGram() {
         executeInput,
         handleSelect,
         event,
-        sportEvent,
-        showSportOnEvent,
+        sport,
+        showSport,
     }
 }

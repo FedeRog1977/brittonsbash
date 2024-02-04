@@ -10,7 +10,7 @@ export const MiamiVice: React.FC = () => {
             <MiamiViceSearchTile funcSelect={handleSelect} />
             <VideoTile
                 type="solid"
-                anchor="/blog/miami-vice/#miamiViceResult"
+                anchor="/blog/miami-vice/#result"
                 heading={video.heading}
                 subHeading={video.subHeading}
                 video={video.video}
