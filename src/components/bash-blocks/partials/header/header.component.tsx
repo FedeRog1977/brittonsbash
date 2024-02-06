@@ -3,7 +3,6 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import styles from './header.module.scss'
 import { useShowElement, useScreenWidth } from '../../../../scripts'
-import logo from '../../../../media/images/logo/bash-logo.png'
 import { Grid, Spacing } from '../../basics'
 
 export const Header = () => {
@@ -28,7 +27,7 @@ export const Header = () => {
                         <Grid columnItem={[1, 2]}>
                             {isMobile ? (
                                 <img
-                                    src={logo}
+                                    src="https://lewisbritton.com/images/logo/bash-logo.png"
                                     alt="logo"
                                     style={{ height: '35px' }}
                                 />
@@ -41,7 +40,7 @@ export const Header = () => {
                                 >
                                     <Grid columnItem={[1, 2]}>
                                         <img
-                                            src={logo}
+                                            src="https://lewisbritton.com/images/logo/bash-logo.png"
                                             alt="logo"
                                             style={{ height: '35px' }}
                                         />

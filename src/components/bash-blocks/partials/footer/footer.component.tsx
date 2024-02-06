@@ -1,7 +1,4 @@
 import styles from './footer.module.scss'
-import logo from '../../../../media/images/logo/bash-logo.png'
-import xmr from '../../../../media/images/monero/xmr.svg'
-import monero from '../../../../media/images/monero/monero.png'
 import { Spacing, Grid, Typography } from '../../basics'
 
 export const Footer = () => (
@@ -17,7 +14,7 @@ export const Footer = () => (
                     >
                         <Grid columnItem={[1, 2]}>
                             <img
-                                src={logo}
+                                src="https://lewisbritton.com/images/logo/bash-logo.png"
                                 alt="logo"
                                 style={{ height: '35px' }}
                             />
@@ -43,7 +40,7 @@ export const Footer = () => (
                     >
                         <Grid columnItem={[1, 2]}>
                             <img
-                                src={xmr}
+                                src="https://lewisbritton.com/images/monero/xmr.svg"
                                 alt="xmr"
                                 style={{ height: '15px' }}
                             />
@@ -74,8 +71,8 @@ export const Footer = () => (
                 </Grid>
                 <Grid rowItem={[4, 5]}>
                     <img
-                        src={monero}
-                        alt="monero"
+                        src="https://lewisbritton.com/images/monero/xmr-code.png"
+                        alt="xmr-code"
                         style={{ height: '100px' }}
                     />
                 </Grid>

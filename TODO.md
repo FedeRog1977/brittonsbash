@@ -7,15 +7,19 @@ author:
 
 # General
 
--   Move the remaining media from this repo to `brittonsbash-content`
--   Refactor communications into segmented pieces
--   Fix top tile use in schema for some pages
--   Add (my) media of the year(s), songs etc.
--   Finish travel key in communications
--   Look into narrowing
+-   Fix static rendering of:
+    -   _Home_
+    -   _Academia_
+    -   _Employment_
+    -   _Library_
+    -   _ThinkFlow_
+-   Move EventTypes etc. from `scripts` to some generic `types`
+-   Fix `top` tile use in schema for some pages
 
 # APIs
 
+-   Add generic `api` script to move JSON response to session
+    -   https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
 -   Scotland's Mountains
 -   Events
 -   Sport

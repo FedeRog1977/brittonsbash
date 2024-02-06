@@ -6,8 +6,6 @@ import {
     ImageTileProps,
 } from '../../../bash-blocks'
 import { imageTestData } from '../../../../data'
-import introTileImg from '../../../../media/images/pages/intro-tile.jpg'
-import introTileMobileImg from '../../../../media/images/pages/intro-tile-mobile.jpg'
 
 type HomeProps = {
     background: BackgroundProps
@@ -18,8 +16,14 @@ type HomeProps = {
 export const homeContent: HomeProps = {
     background: { content: 'BrittonsBashRC' },
     tileOne: {
-        imgDesktop: { url: introTileImg, alt: 'intro-tile-image' },
-        imgMobile: { url: introTileMobileImg, alt: 'intro-tile-mobile-image' },
+        imgDesktop: {
+            url: 'https://lewisbritton.com/images/pages/home.jpg',
+            alt: 'intro-tile-image',
+        },
+        imgMobile: {
+            url: 'https://lewisbritton.com/images/pages/home-mobile.jpg',
+            alt: 'intro-tile-mobile-image',
+        },
         gradient: {
             opacity: 40,
         },

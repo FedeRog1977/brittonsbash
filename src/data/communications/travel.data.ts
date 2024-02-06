@@ -1,0 +1,15 @@
+export const travelData = {
+    cities: [],
+    districts: [],
+    attractions: [],
+    youthHostels: [],
+    supermarkets: [],
+    shops: [],
+    foodstuffs: [],
+    bakeries: [],
+    gelaterias: [],
+    restaurants: [],
+    bars: [],
+    filmingLocations: [],
+    links: {},
+}
