@@ -7,22 +7,18 @@ author:
 
 # General
 
--   Fix static rendering of:
-    -   _Home_
-    -   _Academia_
-    -   _Employment_
-    -   _Library_
-    -   _ThinkFlow_
 -   Move EventTypes etc. from `scripts` to some generic `types`
--   Fix `top` tile use in schema for some pages
 
 # APIs
 
 -   Add generic `api` script to move JSON response to session
     -   https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
--   Scotland's Mountains
--   Events
--   Sport
+-   Add APIs, API calls, session storage logic for:
+    -   Events
+    -   Sport
+    -   Food
+    -   Scotland's Mountains / Routes
+    -   Scotland's Regions
 
 # BashBlocks
 
