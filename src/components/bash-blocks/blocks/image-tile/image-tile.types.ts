@@ -3,6 +3,7 @@ import { ArticleProps } from '../../partials'
 import { AlignProps, CtaProps, ImageProps } from '../../reference'
 
 export type ImageTileProps = {
+    top?: boolean
     imgDesktop?: ImageProps
     imgMobile?: ImageProps
     gradient?: GradientProps

@@ -3,6 +3,6 @@ import { thinkFlowContent } from '../../compounds/blog/think-flow'
 
 export const ThinkFlow = () => (
     <PageLayout background={thinkFlowContent.background}>
-        {/* <ArticleTile {...thinkFlowContent.tileOne} /> */}
+        <ArticleTile {...thinkFlowContent.tileOne} />
     </PageLayout>
 )

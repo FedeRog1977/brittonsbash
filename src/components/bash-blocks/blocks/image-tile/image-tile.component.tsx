@@ -9,6 +9,7 @@ import { CtaProps } from '../../reference'
 import { ImageTileProps } from './image-tile.types'
 
 export const ImageTile: React.FC<ImageTileProps> = ({
+    top = false,
     imgDesktop,
     imgMobile,
     gradient,
@@ -115,6 +116,7 @@ export const ImageTile: React.FC<ImageTileProps> = ({
     return (
         <Tile
             type="clear"
+            top={top}
             stacked
             margins
             img={isMobile ? imgMobile : imgDesktop}
