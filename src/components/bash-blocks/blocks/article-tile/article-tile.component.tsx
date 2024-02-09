@@ -1,35 +1,6 @@
 import { Tile, Typography } from '../../basics'
-import {
-    ArticleTileBodyProps,
-    ArticleTileBookShelfProps,
-    ArticleTileImageMatrixProps,
-    ArticleTileProps,
-    Section,
-} from './article-tile.types'
-import {
-    ArticleTileBody,
-    ArticleTileBookShelf,
-    ArticleTileImageMatrix,
-} from './components'
-
-const getContent = (
-    component: Section['component'],
-    content: Section['content']
-) => (
-    <>
-        {component === 'body' && (
-            <ArticleTileBody {...(content as ArticleTileBodyProps)} />
-        )}
-        {component === 'bookShelf' && (
-            <ArticleTileBookShelf {...(content as ArticleTileBookShelfProps)} />
-        )}
-        {component === 'imageMatrix' && (
-            <ArticleTileImageMatrix
-                {...(content as ArticleTileImageMatrixProps)}
-            />
-        )}
-    </>
-)
+import { ArticleTileProps, Section } from './article-tile.types'
+import { getContent } from './formatters'
 
 export const ArticleTile: React.FC<ArticleTileProps> = ({
     type = 'clear',
@@ -58,8 +29,6 @@ export const ArticleTile: React.FC<ArticleTileProps> = ({
                 paragraphMargins
             />
         )}
-        {sections.map(({ component, content }, index) =>
-            getContent(component, content)
-        )}
+        {sections.map((section: Section) => getContent(section))}
     </Tile>
 )
