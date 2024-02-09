@@ -23,7 +23,6 @@ author:
 # BashBlocks
 
 -   Refine types - such as `Omit`, `extends`, etc. especially between Tile uses
--   Update ArticleTile mapping to `keyof` type
 -   Add _CaveatTile_
 -   Add _generateUniqueKey_ and replace all keys
 -   Add breakpoints
