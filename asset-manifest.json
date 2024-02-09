@@ -1,11 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.0dba6599.css",
-    "main.js": "/static/js/main.ec45dc04.js",
+    "main.css": "/static/css/main.d76486b8.css",
+    "main.js": "/static/js/main.f9df0cd7.js",
     "static/js/787.15aa4678.chunk.js": "/static/js/787.15aa4678.chunk.js",
-    "static/media/background.jpg": "/static/media/background.cbc6a32ac60307059f07.jpg",
-    "static/media/background-mobile.jpg": "/static/media/background-mobile.3a3baecb95651c61d642.jpg",
-    "static/media/intro-tile.jpg": "/static/media/intro-tile.0cfc3b5dd53441585084.jpg",
     "static/media/cmu-italic.ttf": "/static/media/cmu-italic.242b10aa04f441336096.ttf",
     "static/media/cmu-bold-italic.ttf": "/static/media/cmu-bold-italic.00d0acb64afdc41fb234.ttf",
     "static/media/cmu-serif.ttf": "/static/media/cmu-serif.8ff5cee913df84291549.ttf",
@@ -14,27 +11,23 @@
     "static/media/audi-extended-bold.ttf": "/static/media/audi-extended-bold.447d44339e756daf66b8.ttf",
     "static/media/audi-bold.ttf": "/static/media/audi-bold.1e7581aa8a44cf53f5c2.ttf",
     "static/media/audi-italic.ttf": "/static/media/audi-italic.4fbfd0471518fbe9d64f.ttf",
-    "static/media/intro-tile-mobile.jpg": "/static/media/intro-tile-mobile.7923c15d0a32fd2ea6b0.jpg",
     "static/media/open-sans-light-italic.ttf": "/static/media/open-sans-light-italic.0ce71e4f901a265e51a4.ttf",
     "static/media/open-sans-semi-bold-italic.ttf": "/static/media/open-sans-semi-bold-italic.b503364ab4f154d7cccc.ttf",
     "static/media/open-sans-italic.ttf": "/static/media/open-sans-italic.910cef950734e8b2d263.ttf",
     "static/media/open-sans-medium.ttf": "/static/media/open-sans-medium.5b0a682fe3717764627e.ttf",
     "static/media/open-sans-regular.ttf": "/static/media/open-sans-regular.9a6cfa5890d7f3eef585.ttf",
     "static/media/open-sans-light.ttf": "/static/media/open-sans-light.ba19b360bc99b580b45b.ttf",
-    "static/media/bash-logo.png": "/static/media/bash-logo.c8dfb1563816a3e8781a.png",
     "static/media/grandista.ttf": "/static/media/grandista.bec7f1e368edce800cdd.ttf",
     "static/media/broadway-regular.ttf": "/static/media/broadway-regular.f86d1b2cbfa07b705cef.ttf",
     "static/media/nfs.ttf": "/static/media/nfs.8723982ddbc7e3136bad.ttf",
     "static/media/ibm.ttf": "/static/media/ibm.ea9b8ea99532f40a5c49.ttf",
-    "static/media/placeholder.webp": "/static/media/placeholder.aadba29c0fa8fe2da964.webp",
-    "static/media/xmr.svg": "/static/media/xmr.45ccc83cb5c9bd7f5f6794df23a2ea69.svg",
     "index.html": "/index.html",
-    "main.0dba6599.css.map": "/static/css/main.0dba6599.css.map",
-    "main.ec45dc04.js.map": "/static/js/main.ec45dc04.js.map",
+    "main.d76486b8.css.map": "/static/css/main.d76486b8.css.map",
+    "main.f9df0cd7.js.map": "/static/js/main.f9df0cd7.js.map",
     "787.15aa4678.chunk.js.map": "/static/js/787.15aa4678.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0dba6599.css",
-    "static/js/main.ec45dc04.js"
+    "static/css/main.d76486b8.css",
+    "static/js/main.f9df0cd7.js"
   ]
 }
