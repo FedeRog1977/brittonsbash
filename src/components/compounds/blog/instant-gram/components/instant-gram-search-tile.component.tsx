@@ -1,10 +1,10 @@
 import { Button, Grid, Spacing, Tile } from '../../../../bash-blocks'
-import { eventData } from '../../../../../data'
 import { useScreenWidth, useShowElement } from '../../../../../scripts'
 import { useState } from 'react'
 import { InstantGramSearchTileProps } from '../types'
 import { InstantGramSearchList } from './instant-gram-search-list.component'
 import { BigSearch } from '../../../../bash-blocks'
+import { eventData } from '../../../../../data'
 
 export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
     url,

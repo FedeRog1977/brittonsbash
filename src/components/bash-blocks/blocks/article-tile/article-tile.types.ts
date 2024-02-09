@@ -1,4 +1,3 @@
-// import React from 'react'
 import { TileProps } from '../../basics'
 import { ImageMatrixProps, ArticleProps, BookshelfProps } from '../../partials'
 import { AlignProps } from '../../reference'
@@ -7,13 +6,15 @@ export type ArticleTileBodyProps = { body: string | ArticleProps['sections'] }
 export type ArticleTileBookShelfProps = { items: BookshelfProps[] }
 export type ArticleTileImageMatrixProps = { items: ImageMatrixProps['items'] }
 
-// Move this to some form of `keyof` map
+type OrderedSection<T extends string, P extends object> = {
+    component: T
+    content: P
+}
 
-// const components: {
-//     body: ArticleTileBody
-//     bookShelf: ArticleTileBookShelf
-//     imageMatrix: ArticleTileImageMatrix
-// }
+export type Section =
+    | OrderedSection<'body', ArticleTileBodyProps>
+    | OrderedSection<'bookShelf', ArticleTileBookShelfProps>
+    | OrderedSection<'imageMatrix', ArticleTileImageMatrixProps>
 
 export type ArticleTileProps = {
     type?: TileProps['type']
@@ -22,12 +23,5 @@ export type ArticleTileProps = {
     subHeading?: string
     textAlign?: AlignProps
     margins?: boolean
-    sections: {
-        component: 'body' | 'bookShelf' | 'imageMatrix'
-        // Component: React.ComponentType<any>
-        content:
-            | ArticleTileBodyProps
-            | ArticleTileBookShelfProps
-            | ArticleTileImageMatrixProps
-    }[]
+    sections: Section[]
 }

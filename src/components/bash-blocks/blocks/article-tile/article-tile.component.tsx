@@ -4,12 +4,32 @@ import {
     ArticleTileBookShelfProps,
     ArticleTileImageMatrixProps,
     ArticleTileProps,
+    Section,
 } from './article-tile.types'
 import {
     ArticleTileBody,
     ArticleTileBookShelf,
     ArticleTileImageMatrix,
 } from './components'
+
+const getContent = (
+    component: Section['component'],
+    content: Section['content']
+) => (
+    <>
+        {component === 'body' && (
+            <ArticleTileBody {...(content as ArticleTileBodyProps)} />
+        )}
+        {component === 'bookShelf' && (
+            <ArticleTileBookShelf {...(content as ArticleTileBookShelfProps)} />
+        )}
+        {component === 'imageMatrix' && (
+            <ArticleTileImageMatrix
+                {...(content as ArticleTileImageMatrixProps)}
+            />
+        )}
+    </>
+)
 
 export const ArticleTile: React.FC<ArticleTileProps> = ({
     type = 'clear',
@@ -38,30 +58,8 @@ export const ArticleTile: React.FC<ArticleTileProps> = ({
                 paragraphMargins
             />
         )}
-        {/* {sections.map(({ Component, content }, index) => (
-            <Component key={index} {...content} />
-        ))} */}
-        {sections.map(({ component, content }, index) => (
-            <>
-                {component === 'body' && (
-                    <ArticleTileBody
-                        key={index}
-                        {...(content as ArticleTileBodyProps)}
-                    />
-                )}
-                {component === 'bookShelf' && (
-                    <ArticleTileBookShelf
-                        key={index}
-                        {...(content as ArticleTileBookShelfProps)}
-                    />
-                )}
-                {component === 'imageMatrix' && (
-                    <ArticleTileImageMatrix
-                        key={index}
-                        {...(content as ArticleTileImageMatrixProps)}
-                    />
-                )}
-            </>
-        ))}
+        {sections.map(({ component, content }, index) =>
+            getContent(component, content)
+        )}
     </Tile>
 )
