@@ -8,13 +8,15 @@ export function compileProjects() {
     const years = Object.keys(sportData)
 
     const Projects = Object.keys(sportData).reduce((object, key) => {
+        // Move count into here like under other keys
+
         return {
             ...object,
             [key]: sportData[key].projects,
         }
     }, {})
 
-    const Number = Object.keys(sportData).reduce((object, key) => {
+    const Count = Object.keys(sportData).reduce((object, key) => {
         let total = 0
 
         years.forEach((year) => {
@@ -276,7 +278,7 @@ export function compileProjects() {
 
     console.log({
         Projects,
-        Number,
+        Count,
         Distance,
         Elevation,
         Islands,
