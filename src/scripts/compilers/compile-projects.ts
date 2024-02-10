@@ -1,9 +1,15 @@
 import { sportData } from '../../data'
+import { getResponse } from '../api/get-response'
 import { removeDuplicates, toMiles, toFeet, sum } from '../formatters'
 import { CompiledProjectProps, ProjectProps } from './types'
 
 export function compileProjects() {
     // --- Start of Refactor ---
+
+    getResponse(
+        'https://raw.githubusercontent.com/FedeRog1977/brittonsbash/master/src/data/api/sport.data-test.json',
+        'GET'
+    )
 
     const years = Object.keys(sportData)
 
