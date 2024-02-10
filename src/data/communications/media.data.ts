@@ -1,3 +1,13 @@
+const allFilms = {
+    2009: [
+        {
+            name: 'Adventureland',
+            href: '',
+            tags: ['british'],
+        },
+    ],
+}
+
 export const mediaData = {
     audio: {
         top: [],
@@ -81,7 +91,7 @@ export const mediaData = {
         genres: [],
         topArtists: [],
         topFilms: [],
-        all: { 2009: ['Adventureland'] },
+        all: allFilms,
     },
     videoGames: {
         genres: ['Interactive Film'],
