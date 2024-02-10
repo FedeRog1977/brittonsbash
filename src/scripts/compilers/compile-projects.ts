@@ -1,8 +1,296 @@
 import { sportData } from '../../data'
-import { removeDuplicates, toMiles, toFeet } from '../formatters'
+import { removeDuplicates, toMiles, toFeet, sum } from '../formatters'
 import { CompiledProjectProps, ProjectProps } from './types'
 
 export function compileProjects() {
+    // --- Start of Refactor ---
+
+    const years = Object.keys(sportData)
+
+    const Projects = Object.keys(sportData).reduce((object, key) => {
+        return {
+            ...object,
+            [key]: sportData[key].projects,
+        }
+    }, {})
+
+    const Number = Object.keys(sportData).reduce((object, key) => {
+        let total = 0
+
+        years.forEach((year) => {
+            total += sportData[year].projects.length
+        })
+
+        return {
+            ...object,
+            total: total,
+            [key]: sportData[key].projects.length,
+        }
+    }, {})
+
+    const Distance = Object.keys(sportData).reduce((object, key) => {
+        let total = 0
+        let yearTotal = 0
+
+        years.forEach((year) => {
+            sportData[year].projects.forEach(
+                (project: ProjectProps) => (total += project.distance)
+            )
+        })
+
+        sportData[key].projects.forEach(
+            (project: ProjectProps) => (yearTotal += project.distance)
+        )
+
+        return {
+            ...object,
+            total: toMiles(total),
+            [key]: toMiles(yearTotal),
+        }
+    }, {})
+
+    const Elevation = Object.keys(sportData).reduce((object, key) => {
+        let total = 0
+        let yearTotal = 0
+
+        years.forEach((year) => {
+            sportData[year].projects.forEach(
+                (project: ProjectProps) => (total += project.elevation)
+            )
+        })
+
+        sportData[key].projects.forEach(
+            (project: ProjectProps) => (yearTotal += project.elevation)
+        )
+
+        return {
+            ...object,
+            total: toFeet(total),
+            [key]: toFeet(yearTotal),
+        }
+    }, {})
+
+    const Islands = Object.keys(sportData).reduce((object, key) => {
+        let total: string[] = []
+        let yearTotal: string[] = []
+
+        years.forEach((year) => {
+            sportData[year].projects.forEach((project: ProjectProps) =>
+                project.islands?.forEach((island) => total.push(island))
+            )
+        })
+
+        sportData[key].projects.forEach((project: ProjectProps) =>
+            project.islands?.forEach((island) => yearTotal.push(island))
+        )
+
+        return {
+            ...object,
+            total: total.sort(),
+            unique: removeDuplicates(total).sort(),
+            [key]: yearTotal.sort(),
+            totalCount: total.length,
+            uniqueCount: removeDuplicates(total).length,
+            [key + 'Count']: yearTotal.length,
+        }
+    }, {})
+
+    const Munros = Object.keys(sportData).reduce((object, key) => {
+        let total: string[] = []
+        let yearTotal: string[] = []
+
+        years.forEach((year) => {
+            sportData[year].projects.forEach((project: ProjectProps) =>
+                project.munros?.forEach((munro) => total.push(munro))
+            )
+        })
+
+        sportData[key].projects.forEach((project: ProjectProps) =>
+            project.munros?.forEach((munro) => yearTotal.push(munro))
+        )
+
+        return {
+            ...object,
+            total: total.sort(),
+            unique: removeDuplicates(total).sort(),
+            [key]: yearTotal.sort(),
+            totalCount: total.length,
+            uniqueCount: removeDuplicates(total).length,
+            [key + 'Count']: yearTotal.length,
+        }
+    }, {})
+
+    const MunroTops = Object.keys(sportData).reduce((object, key) => {
+        let total: string[] = []
+        let yearTotal: string[] = []
+
+        years.forEach((year) => {
+            sportData[year].projects.forEach((project: ProjectProps) =>
+                project.munroTops?.forEach((munroTop) => total.push(munroTop))
+            )
+        })
+
+        sportData[key].projects.forEach((project: ProjectProps) =>
+            project.munroTops?.forEach((munroTop) => yearTotal.push(munroTop))
+        )
+
+        return {
+            ...object,
+            total: total.sort(),
+            unique: removeDuplicates(total).sort(),
+            [key]: yearTotal.sort(),
+            totalCount: total.length,
+            uniqueCount: removeDuplicates(total).length,
+            [key + 'Count']: yearTotal.length,
+        }
+    }, {})
+
+    const Corbetts = Object.keys(sportData).reduce((object, key) => {
+        let total: string[] = []
+        let yearTotal: string[] = []
+
+        years.forEach((year) => {
+            sportData[year].projects.forEach((project: ProjectProps) =>
+                project.corbetts?.forEach((corbett) => total.push(corbett))
+            )
+        })
+
+        sportData[key].projects.forEach((project: ProjectProps) =>
+            project.corbetts?.forEach((corbett) => yearTotal.push(corbett))
+        )
+
+        return {
+            ...object,
+            total: total.sort(),
+            unique: removeDuplicates(total).sort(),
+            [key]: yearTotal.sort(),
+            totalCount: total.length,
+            uniqueCount: removeDuplicates(total).length,
+            [key + 'Count']: yearTotal.length,
+        }
+    }, {})
+
+    const CorbettTops = Object.keys(sportData).reduce((object, key) => {
+        let total: string[] = []
+        let yearTotal: string[] = []
+
+        years.forEach((year) => {
+            sportData[year].projects.forEach((project: ProjectProps) =>
+                project.corbettTops?.forEach((corbettTop) =>
+                    total.push(corbettTop)
+                )
+            )
+        })
+
+        sportData[key].projects.forEach((project: ProjectProps) =>
+            project.corbettTops?.forEach((corbettTop) =>
+                yearTotal.push(corbettTop)
+            )
+        )
+
+        return {
+            ...object,
+            total: total.sort(),
+            unique: removeDuplicates(total).sort(),
+            [key]: yearTotal.sort(),
+            totalCount: total.length,
+            uniqueCount: removeDuplicates(total).length,
+            [key + 'Count']: yearTotal.length,
+        }
+    }, {})
+
+    const Grahams = Object.keys(sportData).reduce((object, key) => {
+        let total: string[] = []
+        let yearTotal: string[] = []
+
+        years.forEach((year) => {
+            sportData[year].projects.forEach((project: ProjectProps) =>
+                project.grahams?.forEach((graham) => total.push(graham))
+            )
+        })
+
+        sportData[key].projects.forEach((project: ProjectProps) =>
+            project.grahams?.forEach((graham) => yearTotal.push(graham))
+        )
+
+        return {
+            ...object,
+            total: total.sort(),
+            unique: removeDuplicates(total).sort(),
+            [key]: yearTotal.sort(),
+            totalCount: total.length,
+            uniqueCount: removeDuplicates(total).length,
+            [key + 'Count']: yearTotal.length,
+        }
+    }, {})
+
+    const SubTwos = Object.keys(sportData).reduce((object, key) => {
+        let total: string[] = []
+        let yearTotal: string[] = []
+
+        years.forEach((year) => {
+            sportData[year].projects.forEach((project: ProjectProps) =>
+                project.subTwos?.forEach((subTwo) => total.push(subTwo))
+            )
+        })
+
+        sportData[key].projects.forEach((project: ProjectProps) =>
+            project.subTwos?.forEach((subTwo) => yearTotal.push(subTwo))
+        )
+
+        return {
+            ...object,
+            total: total.sort(),
+            unique: removeDuplicates(total).sort(),
+            [key]: yearTotal.sort(),
+            totalCount: total.length,
+            uniqueCount: removeDuplicates(total).length,
+            [key + 'Count']: yearTotal.length,
+        }
+    }, {})
+
+    const Donalds = Object.keys(sportData).reduce((object, key) => {
+        let total: string[] = []
+        let yearTotal: string[] = []
+
+        years.forEach((year) => {
+            sportData[year].projects.forEach((project: ProjectProps) =>
+                project.donalds?.forEach((donald) => total.push(donald))
+            )
+        })
+
+        sportData[key].projects.forEach((project: ProjectProps) =>
+            project.donalds?.forEach((donald) => yearTotal.push(donald))
+        )
+
+        return {
+            ...object,
+            total: total.sort(),
+            unique: removeDuplicates(total).sort(),
+            [key]: yearTotal.sort(),
+            totalCount: total.length,
+            uniqueCount: removeDuplicates(total).length,
+            [key + 'Count']: yearTotal.length,
+        }
+    }, {})
+
+    console.log({
+        Projects,
+        Number,
+        Distance,
+        Elevation,
+        Islands,
+        Munros,
+        MunroTops,
+        Corbetts,
+        CorbettTops,
+        Grahams,
+        SubTwos,
+        Donalds,
+    })
+
+    // --- End of Refactor ---
+
     const projects: CompiledProjectProps['projects'] = {
         2024: sportData[2024].projects,
         2023: sportData[2023].projects,
@@ -582,6 +870,6 @@ export function compileProjects() {
         donalds,
     }
 
-    // console.log('All Projects:\n\n', compiledProjects)
+    console.log('All Projects:\n\n', compiledProjects)
     return compiledProjects
 }
