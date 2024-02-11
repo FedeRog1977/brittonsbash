@@ -42,6 +42,7 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                 alignColumns="auto auto auto"
                 alignRows="auto auto"
                 justifyItems="center"
+                rowGap={15}
             >
                 <Grid columnItem={[1, 3]} rowItem={[1, 2]}>
                     <Button
