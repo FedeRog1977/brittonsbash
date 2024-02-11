@@ -1,5 +1,6 @@
 import { sportData } from '../../data'
 import { getResponse } from '../api/get-response'
+import { getSessionItem } from '../api/get-session-item'
 import { removeDuplicates, toMiles, toFeet, sum } from '../formatters'
 import { CompiledProjectProps, ProjectProps } from './types'
 
@@ -10,6 +11,16 @@ export function compileProjects() {
         'https://raw.githubusercontent.com/FedeRog1977/brittonsbash/master/src/data/api/sport.data-test.json',
         'GET'
     )
+
+    const sportDataTest = {
+        2024: getSessionItem('response-2024'),
+        2023: getSessionItem('response-2023'),
+        2022: getSessionItem('response-2022'),
+        2021: getSessionItem('response-2021'),
+        2020: getSessionItem('response-2020'),
+    }
+
+    console.log(sportData, sportDataTest)
 
     const years = Object.keys(sportData)
 
