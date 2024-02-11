@@ -13,11 +13,18 @@ export const WeatherDaily = ({ latIn, lonIn }: any) => {
     const { showElement, setShowElement } = useShowElement()
     const { dailyResult } = useOpenWeatherCall(latIn, lonIn)
 
+    const handleGridColumns = isMobile
+        ? '1fr 1fr 1fr 1fr 1fr'
+        : '1fr 1fr 1fr 1fr 1fr 1fr 1fr'
+
     return (
         <>
-            <Grid alignColumns="1fr 1fr 1fr 1fr 1fr 1fr 1fr" columnGap={10}>
-                {dailyResult.slice(0, isMobile ? 4 : 7).map((value, index) => (
-                    <Grid columnItem={[1, 7]} key={index}>
+            <Grid alignColumns={handleGridColumns} columnGap={10}>
+                {dailyResult.slice(0, isMobile ? 5 : 7).map((value, index) => (
+                    <Grid
+                        columnItem={[index + 1, isMobile ? 5 : 7]}
+                        key={index}
+                    >
                         {isMobile ? (
                             <WeatherColumnDailyDense
                                 dt={value.dt}

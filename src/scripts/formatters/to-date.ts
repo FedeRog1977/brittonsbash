@@ -16,6 +16,10 @@ export function toDate(dt: number) {
         weekday: 'long',
     })
 
+    const weekdayPartial = new Date(dt * 1000).toLocaleDateString('en-uk', {
+        weekday: 'short',
+    })
+
     var daySuffix = ''
 
     // st: 1, 21, 31
@@ -50,5 +54,16 @@ export function toDate(dt: number) {
 
     const dayOfMonth = `${day}${daySuffix} of ${month}`
 
-    return { hour, time, day, weekday, month, dayOfMonth }
+    const dayOfMonthPartial = `${day}${daySuffix}`
+
+    return {
+        hour,
+        time,
+        day,
+        weekday,
+        weekdayPartial,
+        month,
+        dayOfMonth,
+        dayOfMonthPartial,
+    }
 }
