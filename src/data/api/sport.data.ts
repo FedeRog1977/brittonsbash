@@ -68,6 +68,27 @@ export const sportData = {
         ],
         miles: [
             {
+                id: 'M2024027',
+                name: 'Waterfoot',
+                distance: 10.05,
+                elevation: 554,
+                time: '1:56:21',
+            },
+            {
+                id: 'M2024026',
+                name: 'Waterfoot',
+                distance: 10.08,
+                elevation: 755,
+                time: '1:56:24',
+            },
+            {
+                id: 'M2024025',
+                name: 'Waterfoot',
+                distance: 10.07,
+                elevation: 597,
+                time: '1:57:28',
+            },
+            {
                 id: 'M2024024',
                 name: 'Waterfoot',
                 distance: 10.02,
@@ -239,10 +260,10 @@ export const sportData = {
         xks: [
             {
                 id: 'R2024001',
-                name: '',
-                distance: 0,
-                time: '',
-                pace: '',
+                name: 'Other',
+                distance: 4.3,
+                time: '33:44',
+                pace: '7:51',
             },
         ],
     },

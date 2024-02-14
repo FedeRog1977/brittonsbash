@@ -1,8 +1,4 @@
 import { ArticleProps, ImageProps } from '../../../components/bash-blocks'
-import {
-    AggregationNumericalProps,
-    AggregationAlphabeticalProps,
-} from './aggregation.types'
 
 // Base Props
 
@@ -90,6 +86,26 @@ export type CompiledEventProps = {
     showSport: boolean
 }
 
+export type AggregationNumericalProps = {
+    2020: number
+    2021: number
+    2022: number
+    2023: number
+    2024: number
+    total: number
+    unique?: number
+}
+
+export type AggregationAlphabeticalProps = {
+    2020: string | string[]
+    2021: string | string[]
+    2022: string | string[]
+    2023: string | string[]
+    2024: string | string[]
+    total: string | string[]
+    unique?: string[]
+}
+
 export type CompiledRoadieProps = {
     roadies: {
         2020: RoadieProps[]
@@ -108,6 +124,48 @@ export type CompiledRoadieProps = {
     windfarms: AggregationNumericalProps
     thorntonhalls: AggregationNumericalProps
 }
+
+// START OF TEMP REFACTOR OF Compiled Props
+
+export type AggregationProps = {
+    2024: string | string[]
+    '2024Occurrences': number
+    2023: string | string[]
+    '2023Occurrences': number
+    2022: string | string[]
+    '2022Occurrences': number
+    2021: string | string[]
+    '2021Occurrences': number
+    2020: string | string[]
+    '2020Occurrences': number
+    total: string | string[]
+    totalOccurrences: number
+    unique?: string[]
+    uniqueOccurrences?: number
+}
+
+export type CompiledProjectPropsTemp = {
+    projects: {
+        2024: ProjectProps[]
+        2023: ProjectProps[]
+        2022: ProjectProps[]
+        2021: ProjectProps[]
+        2020: ProjectProps[]
+    }
+    number: AggregationNumericalProps
+    distance: AggregationAlphabeticalProps
+    elevation: AggregationAlphabeticalProps
+    islands: AggregationProps
+    munros: AggregationProps
+    munroTops: AggregationProps
+    corbetts: AggregationProps
+    corbettTops: AggregationProps
+    grahams: AggregationProps
+    subTwos: AggregationProps
+    donalds: AggregationProps
+}
+
+// END OF TEMP REFACTOR OF Compiled Props
 
 export type CompiledProjectProps = {
     projects: {

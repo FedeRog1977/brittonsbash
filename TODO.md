@@ -11,8 +11,6 @@ author:
 
 # APIs
 
--   Add generic `api` script to move JSON response to session
-    -   https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
 -   Add APIs, API calls, session storage logic for:
     -   Events
     -   Sport

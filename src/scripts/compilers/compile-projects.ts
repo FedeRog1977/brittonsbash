@@ -1,7 +1,11 @@
 import { sportData } from '../../data'
 import { getResponse } from '../api/get-response'
 import { removeDuplicates, toMiles, toFeet, sum } from '../formatters'
-import { CompiledProjectProps, ProjectProps, SportProps } from './types'
+import {
+    CompiledProjectProps,
+    CompiledProjectPropsTemp,
+    ProjectProps,
+} from './types'
 
 type SportDataKeys = keyof typeof sportData
 
@@ -103,7 +107,7 @@ export function compileProjects() {
             [key]: yearTotal.sort(),
             totalCount: total.length,
             uniqueCount: removeDuplicates(total).length,
-            [key + 'Count']: yearTotal.length,
+            [key + 'Occurrences']: yearTotal.length,
         }
     }, {})
 
@@ -130,7 +134,7 @@ export function compileProjects() {
             [key]: yearTotal.sort(),
             totalCount: total.length,
             uniqueCount: removeDuplicates(total).length,
-            [key + 'Count']: yearTotal.length,
+            [key + 'Occurrences']: yearTotal.length,
         }
     }, {})
 
@@ -161,7 +165,7 @@ export function compileProjects() {
             [key]: yearTotal.sort(),
             totalCount: total.length,
             uniqueCount: removeDuplicates(total).length,
-            [key + 'Count']: yearTotal.length,
+            [key + 'Occurrences']: yearTotal.length,
         }
     }, {})
 
@@ -188,7 +192,7 @@ export function compileProjects() {
             [key]: yearTotal.sort(),
             totalCount: total.length,
             uniqueCount: removeDuplicates(total).length,
-            [key + 'Count']: yearTotal.length,
+            [key + 'Occurrences']: yearTotal.length,
         }
     }, {})
 
@@ -219,7 +223,7 @@ export function compileProjects() {
             [key]: yearTotal.sort(),
             totalCount: total.length,
             uniqueCount: removeDuplicates(total).length,
-            [key + 'Count']: yearTotal.length,
+            [key + 'Occurrences']: yearTotal.length,
         }
     }, {})
 
@@ -246,7 +250,7 @@ export function compileProjects() {
             [key]: yearTotal.sort(),
             totalCount: total.length,
             uniqueCount: removeDuplicates(total).length,
-            [key + 'Count']: yearTotal.length,
+            [key + 'Occurrences']: yearTotal.length,
         }
     }, {})
 
@@ -273,7 +277,7 @@ export function compileProjects() {
             [key]: yearTotal.sort(),
             totalCount: total.length,
             uniqueCount: removeDuplicates(total).length,
-            [key + 'Count']: yearTotal.length,
+            [key + 'Occurrences']: yearTotal.length,
         }
     }, {})
 
@@ -300,7 +304,7 @@ export function compileProjects() {
             [key]: yearTotal.sort(),
             totalCount: total.length,
             uniqueCount: removeDuplicates(total).length,
-            [key + 'Count']: yearTotal.length,
+            [key + 'Occurrences']: yearTotal.length,
         }
     }, {})
 
@@ -318,6 +322,21 @@ export function compileProjects() {
         SubTwos,
         Donalds,
     })
+
+    // const compiledProjectsTemp: CompiledProjectPropsTemp = {
+    //     Projects,
+    //     Occurrences,
+    //     Distance,
+    //     Elevation,
+    //     Islands,
+    //     Munros,
+    //     MunroTops,
+    //     Corbetts,
+    //     CorbettTops,
+    //     Grahams,
+    //     SubTwos,
+    //     Donalds,
+    // }
 
     // --- End of Refactor ---
 
