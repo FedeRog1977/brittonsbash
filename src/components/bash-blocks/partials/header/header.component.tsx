@@ -7,6 +7,7 @@ import { Grid, Spacing } from '../../basics'
 
 export const Header = () => {
     const { isMobile } = useScreenWidth()
+
     const { showElement: showMobile, setShowElement: setShowMobile } =
         useShowElement()
     const { showElement: showBlog, setShowElement: setShowBlog } =

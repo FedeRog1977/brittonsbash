@@ -11,7 +11,7 @@ export const Background: React.FC<BackgroundProps> = ({
 
     return (
         <div className={styles.background}>
-            <span className={classNamesText}>{content}</span>
+            <div className={classNamesText}>{content}</div>
         </div>
     )
 }

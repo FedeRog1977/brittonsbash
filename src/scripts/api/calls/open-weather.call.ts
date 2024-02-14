@@ -13,12 +13,16 @@ export function useOpenWeatherCall(latIn: number, lonIn: number) {
     const lang = 'en'
 
     useEffect(() => {
+        const setResults = () => {
+            setDailyResult(getSessionItem('response-daily') as DailyProps[])
+            setHourlyResult(getSessionItem('response-hourly') as HourlyProps[])
+        }
+
         getResponse(
             `${base}lat=${latIn}&lon=${lonIn}&appid=${appid}&units=${units}&lang=${lang}`,
-            'GET'
+            'GET',
+            setResults
         )
-        setDailyResult(getSessionItem('response-daily') as DailyProps[])
-        setHourlyResult(getSessionItem('response-hourly') as HourlyProps[])
     }, [latIn, lonIn])
 
     return { dailyResult, hourlyResult }

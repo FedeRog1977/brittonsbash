@@ -3,19 +3,24 @@ import { setSessionItem } from './set-session-item'
 export const getResponse = async (
     url: string,
     method: string,
-    arrayKey?: string
+    callback?: () => void,
+    groupKey?: string,
+    groupObjects?: boolean
 ) => {
-    fetch(url, { method: method }).then((response) => {
+    await fetch(url, { method: method }).then((response) => {
         response
             .json()
             .then((data) => {
                 Array.isArray(data)
-                    ? setSessionItem(`response-${arrayKey}`, data)
+                    ? setSessionItem(`response-${groupKey}`, data)
+                    : groupObjects
+                    ? setSessionItem(`response-${groupKey}`, data)
                     : Object.keys(data).filter((key) => {
                           setSessionItem(`response-${key}`, data[key])
                       })
-
-                console.log(data)
+            })
+            .then(() => {
+                callback ? callback() : () => {}
             })
             .catch((error: Error) => {
                 console.log(error)

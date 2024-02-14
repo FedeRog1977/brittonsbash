@@ -1,8 +1,9 @@
 import { sportData } from '../../data'
 import { getResponse } from '../api/get-response'
-import { getSessionItem } from '../api/get-session-item'
 import { removeDuplicates, toMiles, toFeet, sum } from '../formatters'
 import { CompiledProjectProps, ProjectProps } from './types'
+
+type SportDataKeys = keyof typeof sportData
 
 export function compileProjects() {
     // --- Start of Refactor ---
@@ -12,38 +13,30 @@ export function compileProjects() {
         'GET'
     )
 
-    const sportDataTest = {
-        2024: getSessionItem('response-2024'),
-        2023: getSessionItem('response-2023'),
-        2022: getSessionItem('response-2022'),
-        2021: getSessionItem('response-2021'),
-        2020: getSessionItem('response-2020'),
-    }
-
-    console.log(sportData, sportDataTest)
+    console.log(sportData)
 
     const years = Object.keys(sportData)
 
     const Projects = Object.keys(sportData).reduce((object, key) => {
-        // Move count into here like under other keys
-
         return {
             ...object,
-            [key]: sportData[key as unknown as keyof typeof sportData].projects,
+            [key]: sportData[key as unknown as SportDataKeys].projects,
         }
     }, {})
 
-    const Count = Object.keys(sportData).reduce((object, key) => {
+    const Occurrences = Object.keys(sportData).reduce((object, key) => {
         let total = 0
 
         years.forEach((year) => {
-            total += sportData[year].projects.length
+            total +=
+                sportData[year as unknown as unknown as SportDataKeys].projects
+                    .length
         })
 
         return {
             ...object,
             total: total,
-            [key]: sportData[key].projects.length,
+            [key]: sportData[key as unknown as SportDataKeys].projects.length,
         }
     }, {})
 
@@ -52,12 +45,12 @@ export function compileProjects() {
         let yearTotal = 0
 
         years.forEach((year) => {
-            sportData[year].projects.forEach(
+            sportData[year as unknown as SportDataKeys].projects.forEach(
                 (project: ProjectProps) => (total += project.distance)
             )
         })
 
-        sportData[key].projects.forEach(
+        sportData[key as unknown as SportDataKeys].projects.forEach(
             (project: ProjectProps) => (yearTotal += project.distance)
         )
 
@@ -73,12 +66,12 @@ export function compileProjects() {
         let yearTotal = 0
 
         years.forEach((year) => {
-            sportData[year].projects.forEach(
+            sportData[year as unknown as SportDataKeys].projects.forEach(
                 (project: ProjectProps) => (total += project.elevation)
             )
         })
 
-        sportData[key].projects.forEach(
+        sportData[key as unknown as SportDataKeys].projects.forEach(
             (project: ProjectProps) => (yearTotal += project.elevation)
         )
 
@@ -94,13 +87,15 @@ export function compileProjects() {
         let yearTotal: string[] = []
 
         years.forEach((year) => {
-            sportData[year].projects.forEach((project: ProjectProps) =>
-                project.islands?.forEach((island) => total.push(island))
+            sportData[year as unknown as SportDataKeys].projects.forEach(
+                (project: ProjectProps) =>
+                    project.islands?.forEach((island) => total.push(island))
             )
         })
 
-        sportData[key].projects.forEach((project: ProjectProps) =>
-            project.islands?.forEach((island) => yearTotal.push(island))
+        sportData[key as unknown as SportDataKeys].projects.forEach(
+            (project: ProjectProps) =>
+                project.islands?.forEach((island) => yearTotal.push(island))
         )
 
         return {
@@ -119,13 +114,15 @@ export function compileProjects() {
         let yearTotal: string[] = []
 
         years.forEach((year) => {
-            sportData[year].projects.forEach((project: ProjectProps) =>
-                project.munros?.forEach((munro) => total.push(munro))
+            sportData[year as unknown as SportDataKeys].projects.forEach(
+                (project: ProjectProps) =>
+                    project.munros?.forEach((munro) => total.push(munro))
             )
         })
 
-        sportData[key].projects.forEach((project: ProjectProps) =>
-            project.munros?.forEach((munro) => yearTotal.push(munro))
+        sportData[key as unknown as SportDataKeys].projects.forEach(
+            (project: ProjectProps) =>
+                project.munros?.forEach((munro) => yearTotal.push(munro))
         )
 
         return {
@@ -144,13 +141,19 @@ export function compileProjects() {
         let yearTotal: string[] = []
 
         years.forEach((year) => {
-            sportData[year].projects.forEach((project: ProjectProps) =>
-                project.munroTops?.forEach((munroTop) => total.push(munroTop))
+            sportData[year as unknown as SportDataKeys].projects.forEach(
+                (project: ProjectProps) =>
+                    project.munroTops?.forEach((munroTop) =>
+                        total.push(munroTop)
+                    )
             )
         })
 
-        sportData[key].projects.forEach((project: ProjectProps) =>
-            project.munroTops?.forEach((munroTop) => yearTotal.push(munroTop))
+        sportData[key as unknown as SportDataKeys].projects.forEach(
+            (project: ProjectProps) =>
+                project.munroTops?.forEach((munroTop) =>
+                    yearTotal.push(munroTop)
+                )
         )
 
         return {
@@ -169,13 +172,15 @@ export function compileProjects() {
         let yearTotal: string[] = []
 
         years.forEach((year) => {
-            sportData[year].projects.forEach((project: ProjectProps) =>
-                project.corbetts?.forEach((corbett) => total.push(corbett))
+            sportData[year as unknown as SportDataKeys].projects.forEach(
+                (project: ProjectProps) =>
+                    project.corbetts?.forEach((corbett) => total.push(corbett))
             )
         })
 
-        sportData[key].projects.forEach((project: ProjectProps) =>
-            project.corbetts?.forEach((corbett) => yearTotal.push(corbett))
+        sportData[key as unknown as SportDataKeys].projects.forEach(
+            (project: ProjectProps) =>
+                project.corbetts?.forEach((corbett) => yearTotal.push(corbett))
         )
 
         return {
@@ -194,17 +199,19 @@ export function compileProjects() {
         let yearTotal: string[] = []
 
         years.forEach((year) => {
-            sportData[year].projects.forEach((project: ProjectProps) =>
-                project.corbettTops?.forEach((corbettTop) =>
-                    total.push(corbettTop)
-                )
+            sportData[year as unknown as SportDataKeys].projects.forEach(
+                (project: ProjectProps) =>
+                    project.corbettTops?.forEach((corbettTop) =>
+                        total.push(corbettTop)
+                    )
             )
         })
 
-        sportData[key].projects.forEach((project: ProjectProps) =>
-            project.corbettTops?.forEach((corbettTop) =>
-                yearTotal.push(corbettTop)
-            )
+        sportData[key as unknown as SportDataKeys].projects.forEach(
+            (project: ProjectProps) =>
+                project.corbettTops?.forEach((corbettTop) =>
+                    yearTotal.push(corbettTop)
+                )
         )
 
         return {
@@ -223,13 +230,15 @@ export function compileProjects() {
         let yearTotal: string[] = []
 
         years.forEach((year) => {
-            sportData[year].projects.forEach((project: ProjectProps) =>
-                project.grahams?.forEach((graham) => total.push(graham))
+            sportData[year as unknown as SportDataKeys].projects.forEach(
+                (project: ProjectProps) =>
+                    project.grahams?.forEach((graham) => total.push(graham))
             )
         })
 
-        sportData[key].projects.forEach((project: ProjectProps) =>
-            project.grahams?.forEach((graham) => yearTotal.push(graham))
+        sportData[key as unknown as SportDataKeys].projects.forEach(
+            (project: ProjectProps) =>
+                project.grahams?.forEach((graham) => yearTotal.push(graham))
         )
 
         return {
@@ -248,13 +257,15 @@ export function compileProjects() {
         let yearTotal: string[] = []
 
         years.forEach((year) => {
-            sportData[year].projects.forEach((project: ProjectProps) =>
-                project.subTwos?.forEach((subTwo) => total.push(subTwo))
+            sportData[year as unknown as SportDataKeys].projects.forEach(
+                (project: ProjectProps) =>
+                    project.subTwos?.forEach((subTwo) => total.push(subTwo))
             )
         })
 
-        sportData[key].projects.forEach((project: ProjectProps) =>
-            project.subTwos?.forEach((subTwo) => yearTotal.push(subTwo))
+        sportData[key as unknown as SportDataKeys].projects.forEach(
+            (project: ProjectProps) =>
+                project.subTwos?.forEach((subTwo) => yearTotal.push(subTwo))
         )
 
         return {
@@ -273,13 +284,15 @@ export function compileProjects() {
         let yearTotal: string[] = []
 
         years.forEach((year) => {
-            sportData[year].projects.forEach((project: ProjectProps) =>
-                project.donalds?.forEach((donald) => total.push(donald))
+            sportData[year as unknown as SportDataKeys].projects.forEach(
+                (project: ProjectProps) =>
+                    project.donalds?.forEach((donald) => total.push(donald))
             )
         })
 
-        sportData[key].projects.forEach((project: ProjectProps) =>
-            project.donalds?.forEach((donald) => yearTotal.push(donald))
+        sportData[key as unknown as SportDataKeys].projects.forEach(
+            (project: ProjectProps) =>
+                project.donalds?.forEach((donald) => yearTotal.push(donald))
         )
 
         return {
@@ -295,7 +308,7 @@ export function compileProjects() {
 
     console.log({
         Projects,
-        Count,
+        Occurrences,
         Distance,
         Elevation,
         Islands,

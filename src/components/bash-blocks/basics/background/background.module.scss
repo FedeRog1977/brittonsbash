@@ -14,25 +14,26 @@
         -o-background-size: cover;
         height: 100%;
         overflow: hidden;
-        padding: 175px 75px 25px 75px;
+        padding: 0px 0px 0px 0px;
     }
 
     @media (max-width: 768px) {
         background-image: url('https://lewisbritton.com/images/pages/background-mobile.jpg');
         background-size: 100% auto;
-        padding: 50px 20px 5px 20px;
+        padding: 50px 0px 0px 0px;
     }
 }
 
 .text {
     font-size: 64px;
     color: reference.$lighter-grey;
-    text-shadow: reference.$shadow-x-bold;
-    padding: 0px 25px 0px 0px;
+    width: 100%;
+    background-image: reference.$gradient-dark-60-bottom-top;
+    padding: 225px 75px 25px 75px;
 
     @media (max-width: 768px) {
         font-size: 32px;
-        padding: 0;
+        padding: 0px 20px 0px 20px;
     }
 
     &Std {
