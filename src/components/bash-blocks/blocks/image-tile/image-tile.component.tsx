@@ -118,7 +118,6 @@ export const ImageTile: React.FC<ImageTileProps> = ({
             type="clear"
             top={top}
             stacked
-            margins
             img={isMobile ? imgMobile : imgDesktop}
             gradient={gradient}
         >

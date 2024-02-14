@@ -7,5 +7,4 @@ export type VideoTileProps = {
     subHeading?: string
     video: string
     controls?: boolean
-    margins?: boolean
 }

@@ -5,42 +5,50 @@ import { Gradient } from '../gradient'
 import { TileProps } from './tile.types'
 import { Image } from '../image'
 
-export const Tile: React.FC<TileProps> = ({ ...props }: TileProps) => {
+export const Tile: React.FC<TileProps> = ({
+    type,
+    top,
+    dense,
+    stacked,
+    img,
+    gradient,
+    textAlign,
+    children,
+    anchor,
+}: TileProps) => {
     const classNames = cx(
-        ...(props.textAlign
-            ? [styles[`align${toSentenceCase(props.textAlign)}`]]
-            : []),
+        ...(textAlign ? [styles[`align${toSentenceCase(textAlign)}`]] : []),
         {
-            [styles.clear]: props.type === 'clear',
-            [styles.solid]: props.type === 'solid',
-            [styles[`contain${props.dense ? 'Dense' : ''}`]]: !props.stacked,
-            [styles.top]: props.top,
-            [styles.stacked]: props.stacked,
-            [styles.outline]: props.outline,
-            [styles.margins]: props.margins,
+            [styles.clear]: type === 'clear',
+            [styles.solid]: type === 'solid',
+            [styles[`marginsY${dense ? 'Dense' : ''}`]]: !stacked,
+            [styles.top]: top,
+            [styles.stacked]: stacked,
         }
     )
 
     const classNamesText = cx({
-        [styles.text]: props.stacked,
-        [styles.contain]: props.stacked,
+        [styles.text]: stacked,
+        [styles.marginsX]: stacked,
     })
 
     const content = (
         <>
-            {props.img && <Image {...props.img} />}
-            {props.gradient && <Gradient {...props.gradient} />}
-            <div className={classNamesText}>{props.children}</div>
+            {img && <Image {...img} />}
+            {gradient && <Gradient {...gradient} />}
+            <div className={classNamesText}>{children}</div>
         </>
     )
 
     return (
-        <div id={props.anchor} className={classNames}>
-            {props.stacked ? (
-                <div className={styles.stacked}>{content}</div>
-            ) : (
-                content
-            )}
+        <div id={anchor} className={classNames}>
+            <div className={styles.constrain}>
+                {stacked ? (
+                    <div className={styles.stacked}>{content}</div>
+                ) : (
+                    content
+                )}
+            </div>
         </div>
     )
 }

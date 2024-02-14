@@ -41,7 +41,6 @@ export const academiaContent: AcademiaProps = {
     },
     tileThree: {
         type: 'solid',
-        margins: true,
         heading: 'M.Sc. in Software Development',
         subHeading: 'Masters',
         sections: [
@@ -96,7 +95,6 @@ export const academiaContent: AcademiaProps = {
     },
     tileFour: {
         type: 'solid',
-        margins: true,
         heading: 'B.A. in Finance',
         subHeading: 'Bachelors',
         sections: [
@@ -153,7 +151,6 @@ export const academiaContent: AcademiaProps = {
     },
     tileFive: {
         type: 'solid',
-        margins: true,
         heading: 'University Roles',
         subHeading: 'Extra-curricular',
         sections: [

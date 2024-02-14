@@ -12,36 +12,31 @@
     margin-bottom: 20px;
 }
 
-.contain {
-    padding: 50px 150px 50px 150px;
+.constrain {
+    max-width: 1440px;
+    margin: auto;
+}
 
-    &Dense {
-        padding: 12.5px 150px 12.5px 150px;
-    }
+.marginsX {
+    padding-left: 75px;
+    padding-right: 75px;
 
     @media (max-width: 768px) {
         padding: 20px;
     }
 }
 
-.outline {
-    border: 1px solid reference.$darker-grey;
-}
+.marginsY {
+    padding-top: 50px;
+    padding-bottom: 50px;
 
-.margins {
-    margin-left: 150px;
-    margin-right: 150px;
-
-    // @media (min-width: 768px) {
-    //     border-radius: reference.$corners-large;
-    // }
+    &Dense {
+        padding-top: 12.5px;
+        padding-bottom: 12.5px;
+    }
 
     @media (max-width: 768px) {
-        border-radius: none;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        margin-left: 0px;
-        margin-right: 0px;
+        padding: 20px;
     }
 }
 

@@ -22,6 +22,5 @@ export type ArticleTileProps = {
     heading?: string
     subHeading?: string
     textAlign?: AlignProps
-    margins?: boolean
     sections: Section[]
 }

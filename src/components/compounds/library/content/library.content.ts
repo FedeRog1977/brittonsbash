@@ -11,7 +11,7 @@ export const libraryContent: LibraryProps = {
     background: { content: 'Library' },
     tileOne: {
         type: 'solid',
-        margins: true,
+        top: true,
         heading: 'Computer Science and Mathematics',
         subHeading: 'Writings',
         sections: [
@@ -65,7 +65,6 @@ export const libraryContent: LibraryProps = {
     },
     tileTwo: {
         type: 'solid',
-        margins: true,
         heading: 'M.Sc. Software Development',
         subHeading: 'Writings',
         sections: [
@@ -205,7 +204,6 @@ export const libraryContent: LibraryProps = {
     },
     tileThree: {
         type: 'solid',
-        margins: true,
         heading: 'B.A. Finance',
         subHeading: 'Writings',
         sections: [

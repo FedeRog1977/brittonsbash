@@ -8,10 +8,9 @@ export const ArticleTile: React.FC<ArticleTileProps> = ({
     heading,
     subHeading,
     textAlign = 'center',
-    margins = false,
     sections,
 }: ArticleTileProps) => (
-    <Tile type={type} margins={margins} top={top}>
+    <Tile type={type} top={top}>
         {subHeading && (
             <Typography
                 type="h2"

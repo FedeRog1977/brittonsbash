@@ -1,7 +1,7 @@
 import { sportData } from '../../data'
 import { getResponse } from '../api/get-response'
 import { removeDuplicates, toMiles, toFeet, sum } from '../formatters'
-import { CompiledProjectProps, ProjectProps } from './types'
+import { CompiledProjectProps, ProjectProps, SportProps } from './types'
 
 type SportDataKeys = keyof typeof sportData
 
@@ -12,8 +12,6 @@ export function compileProjects() {
         'https://raw.githubusercontent.com/FedeRog1977/brittonsbash/master/src/data/api/sport.data-test.json',
         'GET'
     )
-
-    console.log(sportData)
 
     const years = Object.keys(sportData)
 

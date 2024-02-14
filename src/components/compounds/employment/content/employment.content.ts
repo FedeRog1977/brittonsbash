@@ -39,7 +39,6 @@ export const employmentContent: EmploymentProps = {
     },
     tileThree: {
         type: 'solid',
-        margins: true,
         heading: 'Employment',
         subHeading: 'All the wage’ing',
         sections: [

@@ -7,14 +7,6 @@ export const PageLayout: React.FC<PageLayoutProps> = ({
 }: PageLayoutProps) => (
     <>
         <Background {...background} />
-        {/* <div
-            style={{
-                maxWidth: '1600px',
-                margin: 'auto',
-                alignContent: 'center',
-            }}
-        > */}
         {children}
-        {/* </div> */}
     </>
 )
