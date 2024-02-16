@@ -18,7 +18,7 @@ export const SportSearchTile: React.FC<SportSearchTileProps> = ({
     const { isMobile } = useScreenWidth()
 
     return (
-        <Tile type="solid" top>
+        <Tile type="solid">
             <Grid alignColumns="1fr 1fr 1fr 1fr" justifyItems="center">
                 <Grid columnItem={[1, 4]}>
                     <Button

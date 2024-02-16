@@ -11,7 +11,6 @@ export const libraryContent: LibraryProps = {
     background: { content: 'Library' },
     tileOne: {
         type: 'solid',
-        top: true,
         heading: 'Computer Science and Mathematics',
         subHeading: 'Writings',
         sections: [

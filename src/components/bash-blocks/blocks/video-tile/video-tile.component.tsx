@@ -13,7 +13,7 @@ export const VideoTile: React.FC<VideoTileProps> = ({
     const { isMobile } = useScreenWidth()
 
     return (
-        <Tile type={type} anchor={anchor} textAlign="center">
+        <Tile type={type} anchor={anchor}>
             {subHeading && <Typography type="h2" content={subHeading} light />}
             {heading && (
                 <Typography

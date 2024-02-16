@@ -6,7 +6,7 @@ export const WeatherSearchTile = ({
     funcInput,
     funcButton,
 }: any) => (
-    <Tile type="solid" top>
+    <Tile type="solid">
         <BigSearch
             funcInput={funcInput}
             funcButton={funcButton}

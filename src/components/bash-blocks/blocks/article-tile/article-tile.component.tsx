@@ -4,13 +4,12 @@ import { getContent } from './formatters'
 
 export const ArticleTile: React.FC<ArticleTileProps> = ({
     type = 'clear',
-    top = false,
     heading,
     subHeading,
     textAlign = 'center',
     sections,
 }: ArticleTileProps) => (
-    <Tile type={type} top={top}>
+    <Tile type={type}>
         {subHeading && (
             <Typography
                 type="h2"

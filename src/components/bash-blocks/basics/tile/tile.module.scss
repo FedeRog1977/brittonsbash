@@ -1,25 +1,34 @@
 @use '../../reference' as reference;
 
-.clear {
-    background-color: reference.$transparent;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
+.tile {
+    margin-bottom: 48px;
 
-.solid {
-    background-color: reference.$white;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    &Clear {
+        background-color: reference.$transparent;
+    }
+
+    &Solid {
+        background-color: reference.$white;
+    }
+
+    &NoGap {
+        margin-top: 0px;
+    }
+
+    &Gap {
+        margin-top: 48px;
+    }
 }
 
 .constrain {
     max-width: 1440px;
     margin: auto;
+    border-radius: reference.$corners-medium;
 }
 
 .marginsX {
-    padding-left: 75px;
-    padding-right: 75px;
+    padding-left: 76px;
+    padding-right: 76px;
 
     @media (max-width: 768px) {
         padding: 20px;
@@ -27,42 +36,20 @@
 }
 
 .marginsY {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    &Regular {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
 
     &Dense {
-        padding-top: 12.5px;
-        padding-bottom: 12.5px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 24px;
+        padding-bottom: 24px;
     }
 
     @media (max-width: 768px) {
         padding: 20px;
-    }
-}
-
-.top {
-    margin-top: 0px;
-}
-
-.align {
-    &Inherit {
-        text-align: inherit;
-    }
-
-    &Left {
-        text-align: left;
-    }
-
-    &Center {
-        text-align: center;
-    }
-
-    &Right {
-        text-align: right;
-    }
-
-    &Justify {
-        text-align: justify;
     }
 }
 

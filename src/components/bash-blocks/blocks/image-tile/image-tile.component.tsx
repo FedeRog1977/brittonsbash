@@ -116,7 +116,7 @@ export const ImageTile: React.FC<ImageTileProps> = ({
     return (
         <Tile
             type="clear"
-            top={top}
+            gap
             stacked
             img={isMobile ? imgMobile : imgDesktop}
             gradient={gradient}

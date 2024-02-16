@@ -3,7 +3,7 @@ import { Article, ArticleProps, PageLayout, Tile } from '../../bash-blocks'
 
 export const Allroad = () => (
     <PageLayout background={{ type: 'audi', content: 'allroad quattro' }}>
-        <Tile type="solid" top>
+        <Tile type="solid">
             <Article
                 sections={articleTestData as ArticleProps['sections']}
                 fontFamily="serif"

@@ -18,7 +18,6 @@ export type Section =
 
 export type ArticleTileProps = {
     type?: TileProps['type']
-    top?: boolean
     heading?: string
     subHeading?: string
     textAlign?: AlignProps
