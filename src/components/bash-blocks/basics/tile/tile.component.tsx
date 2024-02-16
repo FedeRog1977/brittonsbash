@@ -20,6 +20,7 @@ export const Tile: React.FC<TileProps> = ({
         [styles[`tile${toUpperCase(type)}`]],
         [styles[`tile${gap ? 'Gap' : 'NoGap'}`]],
         {
+            [styles.marginsXDense]: !stacked,
             [styles[`marginsY${dense ? 'Dense' : 'Regular'}`]]: !stacked,
         }
     )
@@ -30,7 +31,7 @@ export const Tile: React.FC<TileProps> = ({
 
     const classNamesText = cx({
         [styles.text]: stacked,
-        [styles.marginsX]: stacked,
+        [styles.marginsXRegular]: stacked,
     })
 
     return (

@@ -6,10 +6,10 @@ input[type='text'] {
         font-size: 16px;
         color: reference.$medium-grey;
         background-color: reference.$lighter-grey;
-        width: 99%;
+        width: 98%;
         border: none;
         border-radius: reference.$corners-small;
-        padding: 15px 5px 15px 5px;
+        padding: 15px;
 
         @media (max-width: 768px) {
             font-size: 12px;

@@ -1,7 +1,13 @@
 @use '../../reference' as reference;
 
 .tile {
-    margin-bottom: 48px;
+    @media (min-width: 768px) {
+        margin-bottom: 48px;
+    }
+
+    @media (max-width: 768px) {
+        margin-bottom: 24px;
+    }
 
     &Clear {
         background-color: reference.$transparent;
@@ -23,15 +29,35 @@
 .constrain {
     max-width: 1440px;
     margin: auto;
-    border-radius: reference.$corners-medium;
+
+    @media (min-width: 768px) {
+        border-radius: reference.$corners-medium;
+    }
+
+    @media (max-width: 768px) {
+        border-radius: none;
+    }
 }
 
 .marginsX {
-    padding-left: 76px;
-    padding-right: 76px;
+    &Regular {
+        padding-left: 76px;
+        padding-right: 76px;
 
-    @media (max-width: 768px) {
-        padding: 20px;
+        @media (max-width: 768px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    &Dense {
+        padding-left: 0px;
+        padding-right: 0px;
+
+        @media (max-width: 768px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
 }
 
@@ -39,6 +65,11 @@
     &Regular {
         padding-top: 48px;
         padding-bottom: 48px;
+
+        @media (max-width: 768px) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
     }
 
     &Dense {
@@ -46,10 +77,11 @@
         margin-bottom: 0px;
         padding-top: 24px;
         padding-bottom: 24px;
-    }
 
-    @media (max-width: 768px) {
-        padding: 20px;
+        @media (max-width: 768px) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
     }
 }
 
