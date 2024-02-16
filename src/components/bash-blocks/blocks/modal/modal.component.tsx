@@ -2,45 +2,28 @@ import ReactModal from 'react-modal'
 import styles from './modal.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
-import { useScreenWidth } from '../../../../scripts'
-import { Tile, Spacing } from '../../basics'
 import { ModalProps } from './modal.types'
+import cx from 'classnames'
 
-export const Modal: React.FC<ModalProps> = ({ ...props }: ModalProps) => {
-    const { isMobile } = useScreenWidth()
-
-    const content: React.ReactElement = (
-        <>
-            <div className={styles.closeContainer}>
-                <FontAwesomeIcon
-                    icon={faTimes}
-                    className={styles.close}
-                    onClick={props.onClose}
-                />
-            </div>
-            {props.children}
-        </>
-    )
-
-    return (
-        <ReactModal
-            className={styles.modal}
-            overlayClassName={styles.overlay}
-            isOpen={props.isOpen}
-            onRequestClose={props.onClose}
-        >
-            {props.solid ? (
-                <Tile type="solid">{content}</Tile>
-            ) : (
-                <Spacing
-                    pL={isMobile ? 0 : 150}
-                    pR={isMobile ? 0 : 150}
-                    pT={24}
-                    pB={24}
-                >
-                    {content}
-                </Spacing>
-            )}
-        </ReactModal>
-    )
-}
+export const Modal: React.FC<ModalProps> = ({
+    isOpen,
+    onClose,
+    solid,
+    children,
+}: ModalProps) => (
+    <ReactModal
+        className={cx(styles.modal, { [styles.modalSolid]: solid })}
+        overlayClassName={styles.overlay}
+        isOpen={isOpen}
+        onRequestClose={onClose}
+    >
+        <div className={styles.closeContainer}>
+            <FontAwesomeIcon
+                icon={faTimes}
+                className={styles.closeIcon}
+                onClick={onClose}
+            />
+        </div>
+        {children}
+    </ReactModal>
+)
