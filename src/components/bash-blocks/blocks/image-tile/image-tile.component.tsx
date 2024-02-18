@@ -33,6 +33,7 @@ export const ImageTile: React.FC<ImageTileProps> = ({
                 textAlign={textAlign}
                 color={handleInverseColor}
                 light
+                italicize
             />
             <Typography
                 type="t1"

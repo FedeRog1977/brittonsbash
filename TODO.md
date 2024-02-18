@@ -49,6 +49,7 @@ author:
 
 ## Instant Gram
 
+-   Add single-image modal on image select
 -   Add _The Hangover Part II_
 -   Add _The Hangover_
 -   Add descriptions to Naples and Poland

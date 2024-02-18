@@ -30,7 +30,7 @@ export const Header = () => {
                                 <img
                                     src="https://lewisbritton.com/images/logo/bash-logo.png"
                                     alt="logo"
-                                    style={{ height: '35px' }}
+                                    style={{ height: '32px' }}
                                 />
                             ) : (
                                 <Grid
@@ -43,7 +43,7 @@ export const Header = () => {
                                         <img
                                             src="https://lewisbritton.com/images/logo/bash-logo.png"
                                             alt="logo"
-                                            style={{ height: '35px' }}
+                                            style={{ height: '32px' }}
                                         />
                                     </Grid>
                                     <Grid columnItem={[2, 2]}>
@@ -68,7 +68,7 @@ export const Header = () => {
                                     <Grid
                                         alignColumns="auto  auto  auto  auto  auto  auto"
                                         justifyContent="end"
-                                        columnGap={10}
+                                        columnGap={15}
                                     >
                                         <Grid columnItem={[1, 6]}>
                                             <Link to="/">Home</Link>

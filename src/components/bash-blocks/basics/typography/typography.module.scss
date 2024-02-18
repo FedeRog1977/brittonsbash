@@ -127,11 +127,17 @@
 
 // Sans-Serif
 
+$sans-regular: Audi-Regular;
+$sans-light: Audi-Light;
+$sans-bold: Audi-Bold;
+$sans-italic: Audi-Italic;
+$sans-bold-italic: Audi-Bold-Italic;
+
 .sansSerif {
     padding: 0;
 
     &T1 {
-        font-family: Sans-Bold;
+        font-family: $sans-bold;
         font-size: 52px;
 
         @media (max-width: 768px) {
@@ -139,7 +145,7 @@
         }
 
         &Light {
-            font-family: Sans-Light;
+            font-family: $sans-light;
             font-size: 52px;
 
             @media (max-width: 768px) {
@@ -149,7 +155,7 @@
     }
 
     &T2 {
-        font-family: Sans-Regular;
+        font-family: $sans-regular;
         font-size: 52px;
 
         @media (max-width: 768px) {
@@ -157,7 +163,7 @@
         }
 
         &Light {
-            font-family: Sans-Light;
+            font-family: $sans-light;
             font-size: 52px;
 
             @media (max-width: 768px) {
@@ -167,7 +173,7 @@
     }
 
     &H1 {
-        font-family: Sans-Bold;
+        font-family: $sans-bold;
         font-size: 46px;
 
         @media (max-width: 768px) {
@@ -175,7 +181,7 @@
         }
 
         &Light {
-            font-family: Sans-Light;
+            font-family: $sans-light;
             font-size: 46px;
 
             @media (max-width: 768px) {
@@ -185,7 +191,7 @@
     }
 
     &H2 {
-        font-family: Sans-Bold;
+        font-family: $sans-bold;
         font-size: 32px;
 
         @media (max-width: 768px) {
@@ -193,7 +199,7 @@
         }
 
         &Light {
-            font-family: Sans-Light;
+            font-family: $sans-light;
             font-size: 32px;
 
             @media (max-width: 768px) {
@@ -203,7 +209,7 @@
     }
 
     &H3 {
-        font-family: Sans-Bold;
+        font-family: $sans-bold;
         font-size: 24px;
 
         @media (max-width: 768px) {
@@ -211,7 +217,7 @@
         }
 
         &Light {
-            font-family: Sans-Light;
+            font-family: $sans-light;
             font-size: 24px;
 
             @media (max-width: 768px) {
@@ -221,7 +227,7 @@
     }
 
     &H4 {
-        font-family: Sans-Regular;
+        font-family: $sans-regular;
         font-size: 24px;
 
         @media (max-width: 768px) {
@@ -229,7 +235,7 @@
         }
 
         &Light {
-            font-family: Sans-Light;
+            font-family: $sans-light;
             font-size: 24px;
 
             @media (max-width: 768px) {
@@ -239,7 +245,7 @@
     }
 
     &Body {
-        font-family: Sans-Regular;
+        font-family: $sans-regular;
         font-size: 16px;
 
         @media (max-width: 768px) {
@@ -247,7 +253,7 @@
         }
 
         &Light {
-            font-family: Sans-Light;
+            font-family: $sans-light;
             font-size: 16px;
 
             @media (max-width: 768px) {
@@ -257,7 +263,7 @@
     }
 
     &Caption {
-        font-family: Sans-Bold;
+        font-family: $sans-bold;
         font-size: 16px;
 
         @media (max-width: 768px) {
@@ -266,7 +272,7 @@
     }
 
     &Footnote {
-        font-family: Sans-Regular;
+        font-family: $sans-regular;
         font-size: 14px;
 
         @media (max-width: 768px) {
@@ -274,7 +280,7 @@
         }
 
         &Light {
-            font-family: Sans-Light;
+            font-family: $sans-light;
             font-size: 14px;
 
             @media (max-width: 768px) {
@@ -284,7 +290,7 @@
     }
 
     &Tiny {
-        font-family: Sans-Regular;
+        font-family: $sans-regular;
         font-size: 10px;
 
         @media (max-width: 768px) {
@@ -292,7 +298,7 @@
         }
 
         &Light {
-            font-family: Sans-Light;
+            font-family: $sans-light;
             font-size: 10px;
 
             @media (max-width: 768px) {
@@ -302,16 +308,16 @@
     }
 
     &Bold {
-        font-family: Sans-Bold;
+        font-family: $sans-bold;
         letter-spacing: 0.25px;
     }
 
     &Italic {
-        font-family: Sans-Italic;
+        font-family: $sans-italic;
     }
 
     &BoldItalic {
-        font-family: Sans-Bold-Italic;
+        font-family: $sans-bold-italic;
     }
 }
 
