@@ -8,7 +8,7 @@ export const Footer = () => (
                 <Grid rowItem={[1, 5]}>
                     <Grid
                         alignColumns="auto auto"
-                        columnGap={20}
+                        columnGap={15}
                         justifyContent="center"
                         alignItems="center"
                     >
@@ -16,20 +16,22 @@ export const Footer = () => (
                             <img
                                 src="https://lewisbritton.com/images/logo/bash-logo.png"
                                 alt="logo"
-                                style={{ height: '35px' }}
+                                style={{ height: '48px' }}
                             />
                         </Grid>
                         <Grid columnItem={[2, 2]}>
-                            <div className={styles.footerLogo}>
-                                BrittonsBashRC
-                            </div>
+                            <Grid alignRows="auto auto" justifyItems="start">
+                                <div className={styles.footerLogo}>
+                                    BrittonsBashRC
+                                </div>
+                                <Typography
+                                    type="body"
+                                    content={<code>brittonsbash.com</code>}
+                                    color="lightGrey"
+                                />
+                            </Grid>
                         </Grid>
                     </Grid>
-                    <Typography
-                        type="h3"
-                        content={<code>brittonsbash.com</code>}
-                        color="lightGrey"
-                    />
                 </Grid>
                 <Grid rowItem={[2, 5]}>
                     <Grid
