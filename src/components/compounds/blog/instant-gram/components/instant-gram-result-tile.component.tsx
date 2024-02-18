@@ -55,10 +55,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                 {refactoredEvent.names.length > 1 ? (
                     <Grid alignColumns="auto auto">
                         {refactoredEvent.names.map(
-                            (
-                                { name, refKey }: RefactoredEventNameProps,
-                                index
-                            ) => (
+                            ({ name, refKey }, index) => (
                                 <>
                                     <Grid
                                         columnItem={[1, 2]}
@@ -121,6 +118,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                     }
                     color="mediumGrey"
                     textAlign="center"
+                    paragraphMargins
                 />
             </Spacing>
             {refactoredEvent.showSport && (

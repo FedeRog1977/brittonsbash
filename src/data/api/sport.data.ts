@@ -12,6 +12,21 @@ export const sportData = {
         ],
         projects: [
             {
+                id: 'P2024006',
+                name: 'Laying The Law',
+                distance: 13.12,
+                elevation: 6152,
+                time: '5:27:55',
+                companionship: 0,
+                munros: [
+                    'Meall Greigh',
+                    'Meall Garbh (Ben Lawers)',
+                    'An Stùc',
+                    'Ben Lawers',
+                ],
+                munroTops: ['Creag An Fhithich'],
+            },
+            {
                 id: 'P2024005',
                 name: 'Sewing The Law',
                 distance: 16.1,

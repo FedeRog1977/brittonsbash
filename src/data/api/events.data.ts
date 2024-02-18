@@ -1,6 +1,79 @@
 export const eventData = {
     2024: [
         {
+            id: 'E2024006',
+            names: ['Laying The Law'],
+            startDate: '16th of February',
+            endDate: '17th of February',
+            description: '',
+            images: [
+                {
+                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/laying-the-law/1.jpg',
+                    alt: 'laying-the-law-1',
+                },
+                {
+                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/laying-the-law/2.jpg',
+                    alt: 'laying-the-law-2',
+                },
+                {
+                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/laying-the-law/3.jpg',
+                    alt: 'laying-the-law-3',
+                },
+                {
+                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/laying-the-law/4.jpg',
+                    alt: 'laying-the-law-4',
+                },
+                {
+                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/laying-the-law/5.jpg',
+                    alt: 'laying-the-law-5',
+                },
+                {
+                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/laying-the-law/6.jpg',
+                    alt: 'laying-the-law-6',
+                },
+                {
+                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/laying-the-law/7.jpg',
+                    alt: 'laying-the-law-7',
+                },
+                {
+                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/laying-the-law/8.jpg',
+                    alt: 'laying-the-law-8',
+                },
+                {
+                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/laying-the-law/9.jpg',
+                    alt: 'laying-the-law-9',
+                },
+                {
+                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/laying-the-law/10.jpg',
+                    alt: 'laying-the-law-10',
+                },
+                {
+                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/laying-the-law/11.jpg',
+                    alt: 'laying-the-law-11',
+                },
+                {
+                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/laying-the-law/12.jpg',
+                    alt: 'laying-the-law-12',
+                },
+                {
+                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/laying-the-law/13.jpg',
+                    alt: 'laying-the-law-13',
+                },
+                {
+                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/laying-the-law/14.jpg',
+                    alt: 'laying-the-law-14',
+                },
+                {
+                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/laying-the-law/15.jpg',
+                    alt: 'laying-the-law-15',
+                },
+                {
+                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/laying-the-law/16.jpg',
+                    alt: 'laying-the-law-16',
+                },
+            ],
+        },
+        {
             id: 'E2024005',
             names: ['Sewing The Law'],
             startDate: '3rd of February',

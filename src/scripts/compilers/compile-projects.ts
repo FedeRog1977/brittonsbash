@@ -1,5 +1,4 @@
 import { sportData } from '../../data'
-import { getResponse } from '../api/get-response'
 import { removeDuplicates, toMiles, toFeet, sum } from '../formatters'
 import {
     CompiledProjectProps,
@@ -9,14 +8,7 @@ import {
 
 type SportDataKeys = keyof typeof sportData
 
-export function compileProjects() {
-    // --- Start of Refactor ---
-
-    getResponse(
-        'https://raw.githubusercontent.com/FedeRog1977/brittonsbash/master/src/data/api/sport.data-test.json',
-        'GET'
-    )
-
+export const compileProjects = () => {
     const years = Object.keys(sportData)
 
     const Projects = Object.keys(sportData).reduce((object, key) => {
@@ -337,8 +329,6 @@ export function compileProjects() {
     //     SubTwos,
     //     Donalds,
     // }
-
-    // --- End of Refactor ---
 
     const projects: CompiledProjectProps['projects'] = {
         2024: sportData[2024].projects,

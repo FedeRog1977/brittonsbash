@@ -1,6 +1,6 @@
 import { ArticleProps, ImageProps } from '../../../components/bash-blocks'
 
-// Base Props
+// Event Input Props
 
 type FeaturesProps = {
     cities?: string[]
@@ -27,6 +27,10 @@ export type EventProps = {
     description: string | ArticleProps['sections']
     images: ImageProps[]
 }
+
+// ---
+
+// Sport Props
 
 export type RoadieProps = {
     id: string
@@ -62,21 +66,7 @@ export type MilesProps = {
     time: string
 }
 
-// Intermediary Props
-
-type AggregateSportProps = {
-    roadies: RoadieProps[]
-    projects: RoadieProps[]
-    miles: MilesProps[]
-}
-
-export type SportProps = {
-    2020: AggregateSportProps
-    2021: AggregateSportProps
-    2022: AggregateSportProps
-    2023: AggregateSportProps
-    2024: AggregateSportProps
-}
+// ---
 
 // Compiled Props
 
@@ -152,7 +142,7 @@ export type CompiledProjectPropsTemp = {
         2021: ProjectProps[]
         2020: ProjectProps[]
     }
-    number: AggregationNumericalProps
+    occurrences: AggregationNumericalProps
     distance: AggregationAlphabeticalProps
     elevation: AggregationAlphabeticalProps
     islands: AggregationProps
@@ -228,7 +218,9 @@ export type CompiledMilesProps = {
     waterfoots: AggregationNumericalProps
 }
 
-// Refactored Props
+// ---
+
+// Event Output Props
 
 export type RefactoredEventNameProps = {
     refKey: number
@@ -269,3 +261,5 @@ export type RefactoredEventProps = {
     donalds?: string
     showSport: CompiledEventProps['showSport']
 }
+
+// ---
