@@ -8,10 +8,7 @@ import {
 } from 'react-leaflet'
 import { useState } from 'react'
 import { hillData } from '../../../../data'
-import {
-    fromBritishGridProjection,
-    ordnanceSurveyCall,
-} from '../../../../scripts'
+import { fromBritishGridProjection } from '../../../../scripts'
 // import L from 'leaflet'
 import * as L from 'leaflet'
 import {
@@ -21,9 +18,10 @@ import {
     ConquestLocationMarker,
     ConquestHillMarkers,
 } from './components'
+import { useOrdnanceSurveyCall } from './calls'
 
 export const Conquest = () => {
-    const apiUrl = ordnanceSurveyCall()
+    const apiUrl = useOrdnanceSurveyCall()
 
     const [showCurrLoc, setShowCurrLoc] = useState(false)
     const [locationToggle, setLocationToggle] = useState('Off')

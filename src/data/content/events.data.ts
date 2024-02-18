@@ -652,7 +652,7 @@ export const eventData = {
                 ],
                 bars: ['Cheers Irish Pub', "n'dashni"],
             },
-            description: '',
+            description: 'TBW.',
             images: [
                 {
                     url: 'https://lewisbritton.com/images/blog/instant-gram/2023/different-kind-hol-e-day-xii/1.jpg',
@@ -1308,7 +1308,8 @@ export const eventData = {
                 ],
                 bars: ['Hofbräu Hamburg'],
             },
-            description: '',
+            description:
+                'This was possibly the most minimalist solo holiday I rocked this year. Although it did feel like a very suitable end to the solo season. TBC.',
             images: [
                 {
                     url: 'https://lewisbritton.com/images/blog/instant-gram/2023/different-kind-hol-e-day-xi/1.jpg',

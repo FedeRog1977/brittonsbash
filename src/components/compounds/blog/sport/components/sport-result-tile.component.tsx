@@ -15,13 +15,9 @@ import {
     ProjectProps,
     MilesProps,
     fromBritishGridProjection,
-    ordnanceSurveyCall,
     useShowElement,
 } from '../../../../../scripts'
 import { useState } from 'react'
-import { MapContainer, TileLayer } from 'react-leaflet'
-import L from 'leaflet'
-import { ConquestHillMarkers } from '../../../utils'
 import { SportResultTileProps } from '../types'
 
 export const SportResultTile: React.FC<SportResultTileProps> = ({
@@ -29,8 +25,6 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
 }: SportResultTileProps) => {
     const { isMobile } = useScreenWidth()
     const [sportYearData, setSportYearData] = useState(props.sport2024)
-
-    const apiUrl = ordnanceSurveyCall()
 
     const { showElement: showMunros, setShowElement: setShowMunros } =
         useShowElement()
@@ -269,25 +263,6 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                     ]}
                     scroll
                 />
-            </Spacing>
-            <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
-                <MapContainer
-                    // crs={crs}
-                    crs={L.CRS.EPSG3857}
-                    center={fromBritishGridProjection([205685, 755842])}
-                    minZoom={5}
-                    maxZoom={20}
-                    maxBounds={[
-                        fromBritishGridProjection([-238375, 0]),
-                        fromBritishGridProjection([900000, 1376256]),
-                    ]}
-                    attributionControl={false}
-                    zoom={10}
-                    scrollWheelZoom={true}
-                >
-                    <TileLayer url={apiUrl} />
-                    {showMunros && <ConquestHillMarkers type="Munro" />}
-                </MapContainer>
             </Spacing>
         </Tile>
     )

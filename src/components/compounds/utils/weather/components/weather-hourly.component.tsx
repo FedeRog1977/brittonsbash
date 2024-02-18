@@ -1,5 +1,6 @@
-import { useOpenWeatherCall, useScreenWidth } from '../../../../../scripts'
+import { useScreenWidth } from '../../../../../scripts'
 import { Grid } from '../../../../bash-blocks'
+import { useOpenWeatherCall } from '../calls'
 import { WeatherColumnHourlyDense } from './weather-column-hourly-dense.component'
 import { WeatherColumnHourly } from './weather-column-hourly.component'
 

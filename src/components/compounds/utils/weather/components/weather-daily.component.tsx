@@ -1,12 +1,9 @@
 import { Button, Grid, Spacing } from '../../../../bash-blocks'
-import {
-    useShowElement,
-    useOpenWeatherCall,
-    useScreenWidth,
-} from '../../../../../scripts'
+import { useShowElement, useScreenWidth } from '../../../../../scripts'
 import { WeatherColumnDaily } from './weather-column-daily.component'
 import { WeatherHourly } from './weather-hourly.component'
 import { WeatherColumnDailyDense } from './weather-column-daily-dense.component'
+import { useOpenWeatherCall } from '../calls'
 
 export const WeatherDaily = ({ latIn, lonIn }: any) => {
     const { isMobile } = useScreenWidth()

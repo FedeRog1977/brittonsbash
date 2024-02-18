@@ -1,26 +1,18 @@
-const allFilms = {
-    2021: [
-        {
-            name: 'The Little Things',
-            href: '',
-            tags: ['crine', 'thriller'],
-        },
-    ],
-    2009: [
-        {
-            name: 'Adventureland',
-            href: '',
-            tags: ['comedy'],
-        },
-    ],
-}
-
 export const mediaData = {
+    film: {
+        genres: [],
+        topArtists: [],
+        topFilms: [],
+    },
+    television: {
+        genres: [],
+        topArtists: [],
+        topShows: [],
+    },
     audio: {
         top: [],
         topArtists: [],
         topSongs: [],
-        all: [],
         manufacturers: [
             'Audiolab',
             'Allen & Heath',
@@ -87,18 +79,6 @@ export const mediaData = {
                 quantity: 1,
             },
         ],
-    },
-    television: {
-        genres: [],
-        topArtists: [],
-        topShows: [],
-        all: [],
-    },
-    film: {
-        genres: [],
-        topArtists: [],
-        topFilms: [],
-        all: allFilms,
     },
     videoGames: {
         genres: ['Interactive Film'],
