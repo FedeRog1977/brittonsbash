@@ -7,8 +7,8 @@ import {
 } from './types'
 
 export const compileProjects = () => {
-    const { sport: sportDataTwo } = useSport()
-    console.log('CALL::::', sportDataTwo)
+    // const { sport: sportDataTwo } = useSport()
+    // console.log('CALL::::', sportDataTwo)
 
     type SportDataKeys = keyof typeof sportData
 
