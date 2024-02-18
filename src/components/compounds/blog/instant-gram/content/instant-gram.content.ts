@@ -15,7 +15,7 @@ export const instantGramContent: InstantGramProps = {
             },
             {
                 content:
-                    'This collection includes four major series’:\n\n* *Glencoe*\n\n* *Cairngorms*\n\n* *The Final Two’er*\n\n* *Different Kind Hol-e-day*',
+                    'This collection includes a few series’ / collections of events, These including:\n\n* *Glencoe*\n\n* *Cairngorms*\n\n* *Fort William And Mallaig*\n\n* *Lui*\n\n* *Dùran Dùran*\n\n* *Turning 30*\n\n* *The Big Four-O*\n\n* *Beinn England*\n\n* *Duncarnock*\n\n* *Simulated Failed Project*\n\n* *The Final Two’er*\n\n* *The Gentlemen Who Café Present*\n\n* *Different Kind Hol-e-day*',
             },
         ],
     },

@@ -50,12 +50,7 @@ author:
 
 ## Instant Gram
 
--   Change folder names to "different-kind-holeday-..."
--   Remove ":" from some events and replace with "-"
--   Correct casing to all upper-case titles
 -   Add _The Hangover Part II_
--   Add _The Final Two’er III_
--   Add _Intriguing Possibilities_
 -   Add _The Hangover_
 -   Add descriptions to Naples and Poland
 -   Add features list to Europe and Berlin
@@ -63,7 +58,6 @@ author:
 
 ## Sport
 
--   Add runs key, props, and elements
 -   Fix 2023 auto populate bug
 
 ## BrittonsFoodRC

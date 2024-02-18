@@ -54,7 +54,7 @@ export const employmentContent: EmploymentProps = {
                         { content: 'To be written ...' },
                         {
                             type: 'h3',
-                            content: '2021 | Costa Coffee | Barista',
+                            content: 'Costa Coffee | Barista | 2021',
                         },
                         {
                             content:

@@ -1,5 +1,5 @@
 import { sportData } from '../../data'
-import { removeDuplicates, toMiles, toFeet, sum } from '../formatters'
+import { removeDuplicates, toMiles, toFeet } from '../formatters'
 import {
     CompiledProjectProps,
     CompiledProjectPropsTemp,

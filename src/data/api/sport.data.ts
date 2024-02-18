@@ -279,15 +279,6 @@ export const sportData = {
                 time: '1:57:32',
             },
         ],
-        xks: [
-            {
-                id: 'R2024001',
-                name: 'Other',
-                distance: 4.3,
-                time: '33:44',
-                pace: '7:51',
-            },
-        ],
     },
     2023: {
         roadies: [
@@ -1525,57 +1516,6 @@ export const sportData = {
                 time: '2:23:18',
             },
         ],
-        xks: [
-            {
-                id: 'R2023007',
-                name: '5k',
-                distance: 3.12,
-                time: '00:22:30',
-                pace: '7:12',
-            },
-            {
-                id: 'R2023006',
-                name: '5k',
-                distance: 3.16,
-                time: '00:23:16',
-                pace: '7:21',
-            },
-            {
-                id: 'R2023005',
-                name: '5k',
-                distance: 3.13,
-                time: '00:23:02',
-                pace: '7:21',
-            },
-            {
-                id: 'R2023004',
-                name: '5k',
-                distance: 3.15,
-                time: '00:22:43',
-                pace: '7:13',
-            },
-            {
-                id: 'R2023003',
-                name: '5k',
-                distance: 3.14,
-                time: '00:21:43',
-                pace: '6:54',
-            },
-            {
-                id: 'R2023002',
-                name: '5k',
-                distance: 3.16,
-                time: '00:23:07',
-                pace: '7:18',
-            },
-            {
-                id: 'R2023001',
-                name: '5k',
-                distance: 3.17,
-                time: '00:22:54',
-                pace: '7:12',
-            },
-        ],
     },
     2022: {
         roadies: [
@@ -1934,7 +1874,7 @@ export const sportData = {
             },
             {
                 id: 'P2022023',
-                name: 'Beinn Last of Drumochter',
+                name: 'Beinn Last Of Drumochter',
                 distance: 7.45,
                 elevation: 2474,
                 time: '2:44:41',
@@ -2126,7 +2066,7 @@ export const sportData = {
             },
             {
                 id: 'P2022006',
-                name: 'The Bipass – Ride Across the River',
+                name: 'The Bipass — Ride Across The River',
                 distance: 15.22,
                 elevation: 3117,
                 time: '5:00:44',
@@ -2135,7 +2075,7 @@ export const sportData = {
             },
             {
                 id: 'P2022005',
-                name: 'Fort of Bogs',
+                name: 'Fort Of Bogs',
                 distance: 18.29,
                 elevation: 5036,
                 time: '7:08:26',
@@ -2161,7 +2101,7 @@ export const sportData = {
             },
             {
                 id: 'P2022002',
-                name: 'Beinn Shariq Malik',
+                name: 'Beinn Shariq Malik — Riders On The Storm',
                 distance: 7.45,
                 elevation: 2851,
                 time: '2:42:06',
@@ -3436,7 +3376,7 @@ export const sportData = {
             },
             {
                 id: 'P2021031',
-                name: 'Back on the Horse',
+                name: 'Back On The Horse',
                 distance: 11.25,
                 elevation: 5003,
                 time: '4:46:21',
@@ -3509,7 +3449,7 @@ export const sportData = {
             },
             {
                 id: 'P2021024',
-                name: 'Last Day of Summer?',
+                name: 'Last Day Of Summer?',
                 distance: 15.38,
                 elevation: 5384,
                 time: '5:56:02',
@@ -3555,7 +3495,7 @@ export const sportData = {
             },
             {
                 id: 'P2021020',
-                name: 'Race Against the Thunderstorm',
+                name: 'Race Against The Thunderstorm',
                 distance: 9.02,
                 elevation: 3811,
                 time: '3:34:01',
@@ -3635,7 +3575,7 @@ export const sportData = {
             },
             {
                 id: 'P2021013',
-                name: 'Turning 30',
+                name: 'Drams At The Readee',
                 distance: 14.5,
                 elevation: 5894,
                 time: '5:56:46',
