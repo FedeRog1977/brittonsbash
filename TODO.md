@@ -14,7 +14,6 @@ author:
 -   Add APIs, API calls, session storage logic for:
     -   Events
     -   Sport
-    -   Food
     -   Scotland's Mountains / Routes
     -   Scotland's Regions
 

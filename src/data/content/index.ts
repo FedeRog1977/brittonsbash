@@ -1,4 +1,6 @@
 export * from './events.data'
+export * from './events.data.call'
 export * from './hills.data'
 export * from './regions.data'
 export * from './sport.data'
+export * from './sport.data.call'

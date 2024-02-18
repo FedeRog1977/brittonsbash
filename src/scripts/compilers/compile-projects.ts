@@ -1,4 +1,4 @@
-import { sportData } from '../../data'
+import { sportData, useSport } from '../../data'
 import { removeDuplicates, toMiles, toFeet } from '../formatters'
 import {
     CompiledProjectProps,
@@ -6,9 +6,12 @@ import {
     ProjectProps,
 } from './types'
 
-type SportDataKeys = keyof typeof sportData
-
 export const compileProjects = () => {
+    const { sport: sportDataTwo } = useSport()
+    console.log('CALL::::', sportDataTwo)
+
+    type SportDataKeys = keyof typeof sportData
+
     const years = Object.keys(sportData)
 
     const Projects = Object.keys(sportData).reduce((object, key) => {
