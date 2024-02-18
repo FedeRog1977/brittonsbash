@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.05b3a3bd.css",
-    "main.js": "/static/js/main.20dc145e.js",
+    "main.css": "/static/css/main.c3212d97.css",
+    "main.js": "/static/js/main.4d57c7e3.js",
     "static/js/787.15aa4678.chunk.js": "/static/js/787.15aa4678.chunk.js",
     "static/media/cmu-italic.ttf": "/static/media/cmu-italic.242b10aa04f441336096.ttf",
     "static/media/cmu-bold-italic.ttf": "/static/media/cmu-bold-italic.00d0acb64afdc41fb234.ttf",
@@ -9,8 +9,10 @@
     "static/media/cmu-bold.ttf": "/static/media/cmu-bold.c97a73040fda7e3cb554.ttf",
     "static/media/audi-normal.ttf": "/static/media/audi-normal.4dc6ba67c7575f45c1f4.ttf",
     "static/media/audi-extended-bold.ttf": "/static/media/audi-extended-bold.447d44339e756daf66b8.ttf",
+    "static/media/audi-bold-italic.ttf": "/static/media/audi-bold-italic.f553b12f541c11eb3426.ttf",
     "static/media/audi-bold.ttf": "/static/media/audi-bold.1e7581aa8a44cf53f5c2.ttf",
     "static/media/audi-italic.ttf": "/static/media/audi-italic.4fbfd0471518fbe9d64f.ttf",
+    "static/media/audi-wide-light.ttf": "/static/media/audi-wide-light.68cd36c7b1cd54e01ce5.ttf",
     "static/media/open-sans-light-italic.ttf": "/static/media/open-sans-light-italic.0ce71e4f901a265e51a4.ttf",
     "static/media/open-sans-semi-bold-italic.ttf": "/static/media/open-sans-semi-bold-italic.b503364ab4f154d7cccc.ttf",
     "static/media/open-sans-italic.ttf": "/static/media/open-sans-italic.910cef950734e8b2d263.ttf",
@@ -22,12 +24,12 @@
     "static/media/nfs.ttf": "/static/media/nfs.8723982ddbc7e3136bad.ttf",
     "static/media/ibm.ttf": "/static/media/ibm.ea9b8ea99532f40a5c49.ttf",
     "index.html": "/index.html",
-    "main.05b3a3bd.css.map": "/static/css/main.05b3a3bd.css.map",
-    "main.20dc145e.js.map": "/static/js/main.20dc145e.js.map",
+    "main.c3212d97.css.map": "/static/css/main.c3212d97.css.map",
+    "main.4d57c7e3.js.map": "/static/js/main.4d57c7e3.js.map",
     "787.15aa4678.chunk.js.map": "/static/js/787.15aa4678.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.05b3a3bd.css",
-    "static/js/main.20dc145e.js"
+    "static/css/main.c3212d97.css",
+    "static/js/main.4d57c7e3.js"
   ]
 }
