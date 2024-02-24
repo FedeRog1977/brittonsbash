@@ -12,6 +12,24 @@ export const sportData = {
         ],
         projects: [
             {
+                id: 'P2024008',
+                name: 'Simulated Failed Project III',
+                distance: 3.4,
+                elevation: 2559,
+                time: '1:53:39',
+                companionship: 0,
+                munroTops: ['Am Bodach'],
+            },
+            {
+                id: 'P2024007',
+                name: 'Neck Deep',
+                distance: 6.11,
+                elevation: 3307,
+                time: '2:47:02',
+                companionship: 0,
+                munros: ['Sgòrr nam Fiannaidh (Aonach Eagach)'],
+            },
+            {
                 id: 'P2024006',
                 name: 'Laying The Law',
                 distance: 13.12,
