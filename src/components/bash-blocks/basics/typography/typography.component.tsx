@@ -7,7 +7,7 @@ import Markdown from 'markdown-to-jsx'
 export const Typography: React.FC<TypographyProps> = ({
     type = 'body',
     color = 'darkGrey',
-    textAlign = 'center',
+    textAlign,
     ...props
 }: TypographyProps) => {
     const { isMobile } = useScreenWidth()
