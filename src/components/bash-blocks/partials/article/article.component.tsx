@@ -1,20 +1,27 @@
 import { Typography } from '../../basics'
 import { ArticleProps } from './article.types'
 
-export const Article: React.FC<ArticleProps> = ({ ...props }: ArticleProps) => {
-    const sectionsFinal = props.sections.length - 1
+export const Article: React.FC<ArticleProps> = ({
+    sections,
+    fontFamily,
+    textAlign,
+    extendParagraphMargins,
+    mT,
+    mB,
+}: ArticleProps) => {
+    const sectionsFinal = sections.length - 1
 
     return (
         <div
             style={{
-                marginTop: props.mT,
-                marginBottom: props.mB,
+                marginTop: mT,
+                marginBottom: mB,
                 marginLeft: 0,
                 marginRight: 0,
                 padding: 0,
             }}
         >
-            {props.sections
+            {sections
                 .slice(0, sectionsFinal)
                 .map(
                     ({
@@ -36,9 +43,9 @@ export const Article: React.FC<ArticleProps> = ({ ...props }: ArticleProps) => {
                             type={type}
                             content={content}
                             imageContent={imageContent}
-                            fontFamily={props.fontFamily}
+                            fontFamily={fontFamily}
                             color={color}
-                            textAlign={props.textAlign}
+                            textAlign={textAlign}
                             inline={inline}
                             boldFace={boldFace}
                             italicize={italicize}
@@ -52,21 +59,21 @@ export const Article: React.FC<ArticleProps> = ({ ...props }: ArticleProps) => {
                     )
                 )}
             <Typography
-                type={props.sections[sectionsFinal].type}
-                content={props.sections[sectionsFinal].content}
-                imageContent={props.sections[sectionsFinal].imageContent}
-                fontFamily={props.fontFamily}
-                color={props.sections[sectionsFinal].color}
-                textAlign={props.textAlign}
-                inline={props.sections[sectionsFinal].inline}
-                boldFace={props.sections[sectionsFinal].boldFace}
-                italicize={props.sections[sectionsFinal].italicize}
-                smallCaps={props.sections[sectionsFinal].smallCaps}
-                textDecoration={props.sections[sectionsFinal].textDecoration}
-                link={props.sections[sectionsFinal].link}
-                light={props.sections[sectionsFinal].light}
-                shadow={props.sections[sectionsFinal].shadow}
-                paragraphMargins={props.extendParagraphMargins}
+                type={sections[sectionsFinal].type}
+                content={sections[sectionsFinal].content}
+                imageContent={sections[sectionsFinal].imageContent}
+                fontFamily={fontFamily}
+                color={sections[sectionsFinal].color}
+                textAlign={textAlign}
+                inline={sections[sectionsFinal].inline}
+                boldFace={sections[sectionsFinal].boldFace}
+                italicize={sections[sectionsFinal].italicize}
+                smallCaps={sections[sectionsFinal].smallCaps}
+                textDecoration={sections[sectionsFinal].textDecoration}
+                link={sections[sectionsFinal].link}
+                light={sections[sectionsFinal].light}
+                shadow={sections[sectionsFinal].shadow}
+                paragraphMargins={extendParagraphMargins}
             />
         </div>
     )
