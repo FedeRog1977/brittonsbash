@@ -24,6 +24,27 @@ export const miscellaneousData = {
         'Russ Abbot - Atmosphere',
         'Do They Know Its Christmas - Band Aid',
     ],
+    tunnelOfLove: [
+        'Tunnel Of Love',
+        'Tunnel Of Love - Radio Edit',
+        'Tunnel Of Love - Live At Rockpop In Concert - 1980 (Unmastered - Televised Version)',
+        'Tunnel Of Love - Live At Hammersmith Odeon - London / 1983',
+        'Tunnel Of Love - Live At Hammersmith Odeon - London / 1983 (Pre-Master - DVD Version)',
+        'Tunnel Of Love / Extract From “The Carousel” - Live At Hammersmith Odeon - London / 1983 - Remastered 2023',
+        'Tunnel Of Love - Live At Wembley - London / 1985',
+        'Tunnel Of Love - Live At Wembley - London / 1985 (Pre-Master - Televised Version)',
+        'Tunnel Of Love - Live At Majestic Theatre - San Antonio / 1985 (Unmastered - Televised Version)',
+        'Tunnel Of Love - Live In Stuttgart - Stuttgart / 1985 (Unmastered - Televised Version)',
+        'Tunnel Of Love - Live In Boston - Boston / 1985 (Unmastered - Televised Version)',
+        'Tunnel Of Love - Live In Uniondale - New York / 1985 (Unmastered - Televised Version)',
+        'Tunnel Of Love - Live In Sydney - Sydney / 1986 (Unmastered - Televised Version)',
+        'Tunnel Of Love - Live On The Night - Brussels / 1991 (Unmastered - Televised Version)',
+        'Tunnel Of Love - Live On The Night - Los Angeles / 1992 (Unmastered - Televised Version)',
+        'Tunnel Of Love - Live On The Night - Nimes / 1993 - Mixed / Remastered 2023',
+        'Tunnel Of Love - Live On The Night - Nimes / 1993 (Unmastered - Televised Version)',
+        'Tunnel Of Love - Alchemy Live Version - Cover by HERES',
+        'Tunnel Of Love - Alchemy Live Version - Cover by DylanGuitar',
+    ],
     links: {
         entertainment: [
             {

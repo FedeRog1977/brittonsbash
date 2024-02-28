@@ -4,7 +4,9 @@ import styles from './table.module.scss'
 import { ColumnTableProps, RowTableProps } from './table.types'
 
 export const ColumnTable: React.FC<ColumnTableProps> = ({
-    ...props
+    leftColumn,
+    rightColumns,
+    scroll,
 }: ColumnTableProps) => {
     const { isMobile } = useScreenWidth()
 
@@ -19,17 +21,17 @@ export const ColumnTable: React.FC<ColumnTableProps> = ({
                             display: 'inline-block',
                         }}
                     >
-                        {props.leftColumn.title != null ? (
+                        {leftColumn.title != null ? (
                             <Typography
                                 type="footnote"
-                                content={props.leftColumn.title}
+                                content={leftColumn.title}
                                 boldFace
                                 inline
                             />
                         ) : (
                             <Typography type="footnote" content={<>&nbsp;</>} />
                         )}
-                        {props.leftColumn.entries?.map(
+                        {leftColumn.entries?.map(
                             (
                                 entry: ColumnTableProps['leftColumn']['entries'][0],
                                 index
@@ -51,7 +53,7 @@ export const ColumnTable: React.FC<ColumnTableProps> = ({
                     </div>
                 </Grid>
                 <Grid columnItem={[2, 2]} textAlign="right">
-                    {props.rightColumns.map(
+                    {rightColumns.map(
                         ({
                             title,
                             entries,
@@ -97,7 +99,7 @@ export const ColumnTable: React.FC<ColumnTableProps> = ({
         </div>
     )
 
-    if (props.scroll)
+    if (scroll)
         return (
             <div style={{ maxHeight: '300px', overflowY: 'scroll' }}>
                 {content}
@@ -110,14 +112,15 @@ export const ColumnTable: React.FC<ColumnTableProps> = ({
 }
 
 export const RowTable: React.FC<RowTableProps> = ({
-    ...props
+    titleRow,
+    rows,
 }: RowTableProps) => {
     const { isMobile } = useScreenWidth()
 
     return (
         <div className={styles.table}>
             <Grid alignColumns="auto auto">
-                <Grid columnItem={[1, 2]} rowItem={[1, props.rows.length + 1]}>
+                <Grid columnItem={[1, 2]} rowItem={[1, rows.length + 1]}>
                     <div
                         style={{
                             width: 'fit-content',
@@ -125,10 +128,10 @@ export const RowTable: React.FC<RowTableProps> = ({
                             display: 'inline-block',
                         }}
                     >
-                        {props.titleRow.leftItem != null ? (
+                        {titleRow.leftItem != null ? (
                             <Typography
                                 type="footnote"
-                                content={props.titleRow.leftItem}
+                                content={titleRow.leftItem}
                                 boldFace
                             />
                         ) : (
@@ -138,7 +141,7 @@ export const RowTable: React.FC<RowTableProps> = ({
                 </Grid>
                 <Grid
                     columnItem={[2, 2]}
-                    rowItem={[1, props.rows.length + 1]}
+                    rowItem={[1, rows.length + 1]}
                     textAlign="right"
                 >
                     <div
@@ -151,13 +154,13 @@ export const RowTable: React.FC<RowTableProps> = ({
                     >
                         <Typography
                             type="footnote"
-                            content={props.titleRow.rightItem}
+                            content={titleRow.rightItem}
                             boldFace
                         />
                     </div>
                 </Grid>
                 <>
-                    {props.rows?.map(
+                    {rows?.map(
                         (
                             { leftItem, rightItem }: RowTableProps['rows'][0],
                             index
@@ -170,7 +173,7 @@ export const RowTable: React.FC<RowTableProps> = ({
                                             columnItem={[1, 2]}
                                             rowItem={[
                                                 index + 2,
-                                                props.rows.length + 1,
+                                                rows.length + 1,
                                             ]}
                                         >
                                             <div
@@ -192,7 +195,7 @@ export const RowTable: React.FC<RowTableProps> = ({
                                             columnItem={[2, 2]}
                                             rowItem={[
                                                 index + 2,
-                                                props.rows.length + 1,
+                                                rows.length + 1,
                                             ]}
                                             textAlign="right"
                                         >

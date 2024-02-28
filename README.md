@@ -60,6 +60,16 @@ Notes:
 
 Essentially, a method of file arrangement in a repository.
 
+To ensure the finest of code structure, it is recommended that you install the following extensions if you are using Visual Studio Code (VSCode) rather than Vim:
+
+-   ES7+ React/Redux/React-Native
+-   ESLint
+-   Prettier
+-   Code Spell Checker
+-   Vim
+
+Then, configure your **User** `settings.json` to your desired standard. You can shortcut to this file using `shift` + `ctrl/cmd` + `P` from VSCode.
+
 -   [File Structure](https://atomicdesign.bradfrost.com/chapter-2/)
 
 # React

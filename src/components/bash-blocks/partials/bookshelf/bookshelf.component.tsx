@@ -4,7 +4,8 @@ import { Button } from '../button'
 import { BookProps, BookshelfProps } from './bookshelf.types'
 
 export const Bookshelf: React.FC<BookshelfProps> = ({
-    ...props
+    heading,
+    items,
 }: BookshelfProps) => {
     const { showElement, setShowElement } = useShowElement()
 
@@ -17,10 +18,10 @@ export const Bookshelf: React.FC<BookshelfProps> = ({
                 transition
                 func={() => setShowElement(!showElement)}
                 funcResp={showElement}
-                content={props.heading}
+                content={heading}
             />
             {showElement &&
-                props.items.map(({ content, url }: BookProps, index) => (
+                items.map(({ content, url }: BookProps, index) => (
                     <>
                         <Spacing mY={20} />
                         <Typography

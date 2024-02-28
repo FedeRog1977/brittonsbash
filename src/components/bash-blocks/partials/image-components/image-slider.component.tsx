@@ -13,12 +13,12 @@ import { ImageSliderProps } from './image-components.types'
 import { ImageProps } from '../../reference'
 
 export const ImageSlider: React.FC<ImageSliderProps> = ({
-    ...props
+    slides,
 }: ImageSliderProps) => {
     const { isMobile } = useScreenWidth()
 
     const [current, setCurrent] = useState(0)
-    const length = props.slides.length
+    const length = slides.length
 
     const nextSlide = () => {
         setCurrent(current === length - 1 ? 0 : current + 1)
@@ -28,7 +28,7 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
         setCurrent(current === 0 ? length - 1 : current - 1)
     }
 
-    if (!Array.isArray(props.slides) || props.slides.length <= 0) {
+    if (!Array.isArray(slides) || slides.length <= 0) {
         return null
     }
 
@@ -49,7 +49,7 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
                 className={styles.rightArrow}
                 onClick={nextSlide}
             />
-            {props.slides.map((slide: ImageProps, index) => {
+            {slides.map((slide: ImageProps, index) => {
                 if (index === current) {
                     return (
                         <div>
@@ -67,9 +67,7 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
                             <div className={styles.imageSliderIndex}>
                                 <Typography
                                     type={isMobile ? 'footnote' : 'body'}
-                                    content={`${current + 1}/${
-                                        props.slides.length
-                                    }`}
+                                    content={`${current + 1}/${slides.length}`}
                                     color="white"
                                 />
                             </div>
@@ -79,7 +77,7 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
 
                 return null
             })}
-            {props.slides.map((slide: ImageProps, index) => (
+            {slides.map((slide: ImageProps, index) => (
                 <div
                     key={slide.alt}
                     className={`${styles.imageSliderSlide} ${

@@ -3,16 +3,14 @@ import { ConquestHillMarkersProps } from '../types'
 import { ConquestMarkerArray } from './conquest-hill-marker-array.component'
 
 export const ConquestHillMarkers: React.FC<ConquestHillMarkersProps> = ({
-    ...props
+    type,
 }: ConquestHillMarkersProps) => {
-    if (props.type === 'Munro') {
-        return <ConquestMarkerArray type={props.type} hills={hillData.munros} />
+    if (type === 'Munro') {
+        return <ConquestMarkerArray type={type} hills={hillData.munros} />
     }
 
-    if (props.type === 'Corbett') {
-        return (
-            <ConquestMarkerArray type={props.type} hills={hillData.corbetts} />
-        )
+    if (type === 'Corbett') {
+        return <ConquestMarkerArray type={type} hills={hillData.corbetts} />
     }
 
     return <></>

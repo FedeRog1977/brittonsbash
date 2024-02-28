@@ -3,21 +3,34 @@ import { GridProps } from './grid.types'
 // Reminder: https://developer.mozilla.org/en-US/docs/Web/CSS/grid
 // Reminder: https://css-tricks.com/snippets/css/complete-guide-grid/
 
-export const Grid: React.FC<GridProps> = ({ ...props }: GridProps) => {
-    if (props.columnItem || props.rowItem) {
+export const Grid: React.FC<GridProps> = ({
+    alignColumns,
+    alignRows,
+    columnGap,
+    rowGap,
+    justifyContent,
+    alignContent,
+    justifyItems,
+    alignItems,
+    columnItem,
+    rowItem,
+    textAlign,
+    children,
+}: GridProps) => {
+    if (columnItem || rowItem) {
         return (
             <div
                 style={{
-                    gridColumn: `${props.columnItem ? [0] : undefined} / ${
-                        props.columnItem ? [1] : undefined
+                    gridColumn: `${columnItem ? [0] : undefined} / ${
+                        columnItem ? [1] : undefined
                     }`,
-                    gridRow: `${props.rowItem ? [0] : undefined} / ${
-                        props.rowItem ? [1] : undefined
+                    gridRow: `${rowItem ? [0] : undefined} / ${
+                        rowItem ? [1] : undefined
                     }`,
-                    textAlign: props.textAlign ? props.textAlign : undefined,
+                    textAlign: textAlign ? textAlign : undefined,
                 }}
             >
-                {props.children}
+                {children}
             </div>
         )
     }
@@ -26,17 +39,17 @@ export const Grid: React.FC<GridProps> = ({ ...props }: GridProps) => {
         <div
             style={{
                 display: 'grid',
-                gridTemplateColumns: props.alignColumns,
-                gridTemplateRows: props.alignRows,
-                columnGap: `${props.columnGap}px`,
-                rowGap: `${props.rowGap}px`,
-                justifyContent: props.justifyContent, // Grid x-axis
-                alignContent: props.alignContent, // Grid y-axis
-                justifyItems: props.justifyItems, // Item x-axis
-                alignItems: props.alignItems, // Item y-axis
+                gridTemplateColumns: alignColumns,
+                gridTemplateRows: alignRows,
+                columnGap: `${columnGap}px`,
+                rowGap: `${rowGap}px`,
+                justifyContent: justifyContent, // Grid x-axis
+                alignContent: alignContent, // Grid y-axis
+                justifyItems: justifyItems, // Item x-axis
+                alignItems: alignItems, // Item y-axis
             }}
         >
-            {props.children}
+            {children}
         </div>
     )
 }

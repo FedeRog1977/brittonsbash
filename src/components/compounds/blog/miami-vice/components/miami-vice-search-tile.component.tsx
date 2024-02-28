@@ -6,7 +6,7 @@ import { MiamiViceSearchList } from './miami-vice-search-list.component'
 import { miamiViceContent } from '../content'
 
 export const MiamiViceSearchTile: React.FC<MiamiViceSearchTileProps> = ({
-    ...props
+    funcSelect,
 }: MiamiViceSearchTileProps) => {
     const { isMobile } = useScreenWidth()
     const { showElement, setShowElement } = useShowElement()
@@ -111,7 +111,7 @@ export const MiamiViceSearchTile: React.FC<MiamiViceSearchTileProps> = ({
             </Grid>
             {showElement && (
                 <MiamiViceSearchList
-                    func={props.funcSelect}
+                    func={funcSelect}
                     items={parsedVideoData}
                 />
             )}

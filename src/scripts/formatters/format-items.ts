@@ -1,26 +1,13 @@
-import { BookshelfProps, ImageProps } from '../../components/bash-blocks'
+export function formatItems(columns: number, items: unknown[]) {
+    const formattedItems = []
 
-export function formatItems(
-    columns: number,
-    imageItems?: ImageProps[],
-    bookItems?: BookshelfProps[]
-) {
-    const formattedImageItems: ImageProps[][] = []
-    const formattedBookItems: BookshelfProps[][] = []
+    for (let index = 0; index < items.length; index += columns) {
+        const chunk = items.slice(index, index + columns)
 
-    if (imageItems) {
-        for (let i = 0; i < imageItems.length; i += columns) {
-            formattedImageItems.push(imageItems.slice(i, i + columns))
-        }
-    } else if (bookItems) {
-        for (let i = 0; i < bookItems.length; i += columns) {
-            formattedBookItems.push(bookItems.slice(i, i + columns))
-        }
+        formattedItems.push(chunk)
     }
 
-    // console.log('Unformatted Image Items:\n\n', imageItems)
-    // console.log('Unformatted Book Items:\n\n', bookItems)
-    // console.log('Formatted Image Items:\n\n', formattedImageItems)
-    // console.log('Formatted Book Items:\n\n', formattedBookItems)
-    return { formattedImageItems, formattedBookItems }
+    // console.log('Unformatted Items:\n\n', items)
+    // console.log('Formatted Items:\n\n', formattedItems)
+    return formattedItems
 }

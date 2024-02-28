@@ -1,5 +1,7 @@
 @use 'opacity' as opacity;
 
+// Good reference: https://www.colorhexa.com/
+
 // Black
 
 $black: #000000;
@@ -45,6 +47,9 @@ $miami-blue: #4fd0ff;
 $miami-blue-60: rgba($miami-blue, opacity.$opacity-60);
 $miami-blue-40: rgba($miami-blue, opacity.$opacity-40);
 $miami-blue-20: rgba($miami-blue, opacity.$opacity-20);
+
+// Green
+$lime-green: #00f865;
 
 // Orange
 

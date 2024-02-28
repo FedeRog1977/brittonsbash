@@ -7,6 +7,7 @@ import Markdown from 'markdown-to-jsx'
 export const Typography: React.FC<TypographyProps> = ({
     type = 'body',
     color = 'darkGrey',
+    textAlign = 'center',
     ...props
 }: TypographyProps) => {
     const { isMobile } = useScreenWidth()
@@ -22,9 +23,7 @@ export const Typography: React.FC<TypographyProps> = ({
     )
 
     const classNamesTextContainer = cx(
-        ...(props.textAlign
-            ? [styles[`align${toUpperCase(props.textAlign)}`]]
-            : []),
+        ...(textAlign ? [styles[`align${toUpperCase(textAlign)}`]] : []),
         {
             [styles.inline]: props.inline,
             [styles[`paragraphMargins${isMobile ? 'Mobile' : 'Desktop'}`]]:

@@ -60,6 +60,7 @@ author:
 ## Sport
 
 -   Fix 2023 auto populate bug
+-   Fill in roadie speeds for 2023--2020
 
 ## BrittonsFoodRC
 

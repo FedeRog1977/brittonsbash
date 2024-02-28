@@ -1,6 +1,56 @@
 export const eventData = {
     2024: [
         {
+            id: 'E2024009',
+            names: ['Reunited With RoGeR'],
+            startDate: '26th of February',
+            description:
+                'I’d waited four hard months for this return. It was a hard one, but if I’ve learned anything from the last few years of roadie’ing, it’s that winter cycles are not worth it. The hours of defrosting and raisin d*ck do not, okay sometimes do, make the stats worth it. It was hard being away from a loved one for so long, but wow it’s good to be back.',
+            images: [
+                {
+                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/reunited-with-roger/1.jpg',
+                    alt: 'reunited-with-roger-1',
+                },
+                {
+                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/reunited-with-roger/2.jpg',
+                    alt: 'reunited-with-roger-2',
+                },
+                {
+                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/reunited-with-roger/3.jpg',
+                    alt: 'reunited-with-roger-3',
+                },
+                {
+                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/reunited-with-roger/4.jpg',
+                    alt: 'reunited-with-roger-4',
+                },
+            ],
+        },
+        {
+            id: 'E2024008',
+            names: ['Rolling Back The Years II'],
+            startDate: '25th of February',
+            description:
+                'Only a small two years later, it was once again time to return to 2008–2012 with the D&W crew. This time in Troon.',
+            images: [
+                {
+                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/rolling-back-the-years-ii/1.jpg',
+                    alt: 'rolling-back-the-years-ii-1',
+                },
+                {
+                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/rolling-back-the-years-ii/2.jpg',
+                    alt: 'rolling-back-the-years-ii-2',
+                },
+                {
+                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/rolling-back-the-years-ii/3.jpg',
+                    alt: 'rolling-back-the-years-ii-3',
+                },
+                {
+                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/rolling-back-the-years-ii/4.jpg',
+                    alt: 'rolling-back-the-years-ii-4',
+                },
+            ],
+        },
+        {
             id: 'E2024007',
             prefix: 'Unty Fakeout',
             names: ['Neck Deep', 'Simulated Failed Project III'],

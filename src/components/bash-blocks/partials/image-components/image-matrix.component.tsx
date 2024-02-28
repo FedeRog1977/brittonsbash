@@ -6,29 +6,29 @@ import { ImageProps } from '../../reference'
 import { ImageMatrixProps } from './image-components.types'
 
 export const ImageMatrix: React.FC<ImageMatrixProps> = ({
-    ...props
+    items,
+    columns,
 }: ImageMatrixProps) => {
-    const { formattedImageItems } = formatItems(
-        props.columns ? props.columns : 3,
-        props.items
-    )
+    const formattedItems = formatItems(
+        columns ? columns : 3,
+        items
+    ) as ImageProps[][]
 
     return (
         <>
-            {formattedImageItems.map((row: ImageProps[]) => (
+            {formattedItems.map((row) => (
                 <Flex>
-                    {row.map((rowItem: ImageProps) => (
-                        <Flex item key={rowItem.alt}>
+                    {row.map(({ url, alt, description }) => (
+                        <Flex item key={alt}>
                             <LazyLoadImage
                                 className={styles.image}
-                                src={rowItem.url}
-                                alt={rowItem.alt}
+                                src={url}
+                                alt={alt}
                             />
-                            {rowItem.description && (
+                            {description && (
                                 <Typography
                                     type="body"
-                                    content={rowItem.description}
-                                    textAlign="left"
+                                    content={description}
                                     mT={3.75}
                                     mB={7.5}
                                 />

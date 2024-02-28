@@ -21,12 +21,11 @@ import { useEffect } from 'react'
 import { InstantGramResultTileProps } from '../types'
 
 export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
-    ...props
+    event,
+    sport,
+    showSport,
+    url,
 }: InstantGramResultTileProps) => {
-    const event = props.event
-    const sport = props.sport
-    const showSport = props.showSport
-
     const { isMobile } = useScreenWidth()
 
     const { showElement: showDescription, setShowElement: setShowDescription } =
@@ -43,7 +42,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
     }, [])
 
     return (
-        <Tile type="solid" anchor={`${props.url}#result`}>
+        <Tile type="solid" anchor={`${url}#result`}>
             <Spacing mB={isMobile ? 7.5 : 15}>
                 {refactoredEvent.prefix && (
                     <Typography

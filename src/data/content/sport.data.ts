@@ -3,11 +3,11 @@ export const sportData = {
         roadies: [
             {
                 id: 'R2024001',
-                name: '',
-                distance: 0,
-                elevation: 0,
-                time: '',
-                speed: 0,
+                name: 'Fenwick + Wind Farm',
+                distance: 30.11,
+                elevation: 1608,
+                time: '1:45:18',
+                speed: 17.2,
             },
         ],
         projects: [
@@ -100,6 +100,20 @@ export const sportData = {
             },
         ],
         miles: [
+            {
+                id: 'M2024032',
+                name: 'Waterfoot',
+                distance: 10.1,
+                elevation: 591,
+                time: '1:57:46',
+            },
+            {
+                id: 'M2024031',
+                name: 'Waterfoot',
+                distance: 10.03,
+                elevation: 581,
+                time: '1:56:00',
+            },
             {
                 id: 'M2024030',
                 name: 'Waterfoot',

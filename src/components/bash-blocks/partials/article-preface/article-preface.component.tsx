@@ -2,11 +2,11 @@ import { Typography } from '../../basics'
 import { ArticlePrefaceProps } from './article-preface.types'
 
 export const ArticlePreface: React.FC<ArticlePrefaceProps> = ({
-    ...props
+    entries,
 }: ArticlePrefaceProps) => {
     return (
         <>
-            {props.entries.map(
+            {entries.map(
                 ({ title, content }: ArticlePrefaceProps['entries'][0]) => {
                     if (Boolean(title && content)) {
                         return (

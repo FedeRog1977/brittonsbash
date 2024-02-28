@@ -21,10 +21,22 @@ import { useState } from 'react'
 import { SportResultTileProps } from '../types'
 
 export const SportResultTile: React.FC<SportResultTileProps> = ({
-    ...props
+    title,
+    subTitle,
+    description,
+    routes,
+    isRoadies,
+    isProjects,
+    isMiles,
+    sportData,
+    sport2024,
+    sport2023,
+    sport2022,
+    sport2021,
+    sport2020,
 }: SportResultTileProps) => {
     const { isMobile } = useScreenWidth()
-    const [sportYearData, setSportYearData] = useState(props.sport2024)
+    const [sportYearData, setSportYearData] = useState(sport2024)
 
     const { showElement: showMunros, setShowElement: setShowMunros } =
         useShowElement()
@@ -32,16 +44,12 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
     return (
         <Tile type="solid">
             <Spacing mB={isMobile ? 7.5 : 15}>
-                <Typography
-                    type="t1"
-                    content={props.title}
-                    textAlign="center"
-                />
+                <Typography type="t1" content={title} textAlign="center" />
             </Spacing>
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                 <Typography
                     type="h4"
-                    content={props.subTitle}
+                    content={subTitle}
                     color="mediumGrey"
                     textAlign="center"
                 />
@@ -49,7 +57,7 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                 <Typography
                     type="body"
-                    content={props.description}
+                    content={description}
                     textAlign="left"
                 />
             </Spacing>
@@ -76,34 +84,34 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                         {
                             title: 'Occurrences',
                             entries: [
-                                `${props.sportData.number.total}`,
-                                `${props.sportData.number[2024]}`,
-                                `${props.sportData.number[2023]}`,
-                                `${props.sportData.number[2022]}`,
-                                `${props.sportData.number[2021]}`,
-                                `${props.sportData.number[2020]}`,
+                                `${sportData.number.total}`,
+                                `${sportData.number[2024]}`,
+                                `${sportData.number[2023]}`,
+                                `${sportData.number[2022]}`,
+                                `${sportData.number[2021]}`,
+                                `${sportData.number[2020]}`,
                             ],
                         },
                         {
                             title: 'Distance',
                             entries: [
-                                props.sportData.distance.total as string,
-                                props.sportData.distance[2024] as string,
-                                props.sportData.distance[2023] as string,
-                                props.sportData.distance[2022] as string,
-                                props.sportData.distance[2021] as string,
-                                props.sportData.distance[2020] as string,
+                                sportData.distance.total as string,
+                                sportData.distance[2024] as string,
+                                sportData.distance[2023] as string,
+                                sportData.distance[2022] as string,
+                                sportData.distance[2021] as string,
+                                sportData.distance[2020] as string,
                             ],
                         },
                         {
                             title: 'Elevation',
                             entries: [
-                                props.sportData.elevation.total as string,
-                                props.sportData.elevation[2024] as string,
-                                props.sportData.elevation[2023] as string,
-                                props.sportData.elevation[2022] as string,
-                                props.sportData.elevation[2021] as string,
-                                props.sportData.elevation[2020] as string,
+                                sportData.elevation.total as string,
+                                sportData.elevation[2024] as string,
+                                sportData.elevation[2023] as string,
+                                sportData.elevation[2022] as string,
+                                sportData.elevation[2021] as string,
+                                sportData.elevation[2020] as string,
                             ],
                         },
                     ]}
@@ -112,7 +120,7 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                 <Typography
                     type="h2"
-                    content={props.isProjects ? 'Hills' : 'Routes'}
+                    content={isProjects ? 'Hills' : 'Routes'}
                     textAlign="left"
                 />
             </Spacing>
@@ -124,7 +132,7 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                 <ColumnTable
                     leftColumn={{
                         entries: [
-                            props.isProjects ? 'Unique' : '',
+                            isProjects ? 'Unique' : '',
                             'Total',
                             '2024',
                             '2023',
@@ -133,7 +141,7 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                             '2020',
                         ],
                     }}
-                    rightColumns={props.routes}
+                    rightColumns={routes}
                 />
             </Spacing>
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
@@ -141,10 +149,8 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                     <Grid columnItem={[1, 5]}>
                         <Button
                             typeType="h2"
-                            func={() => setSportYearData(props.sport2024)}
-                            funcResp={Boolean(
-                                sportYearData === props.sport2024
-                            )}
+                            func={() => setSportYearData(sport2024)}
+                            funcResp={Boolean(sportYearData === sport2024)}
                             content="2024"
                             color="darkerGrey"
                         />
@@ -152,10 +158,8 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                     <Grid columnItem={[2, 5]}>
                         <Button
                             typeType="h2"
-                            func={() => setSportYearData(props.sport2023)}
-                            funcResp={Boolean(
-                                sportYearData === props.sport2023
-                            )}
+                            func={() => setSportYearData(sport2023)}
+                            funcResp={Boolean(sportYearData === sport2023)}
                             content="2023"
                             color="darkerGrey"
                         />
@@ -163,10 +167,8 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                     <Grid columnItem={[3, 5]}>
                         <Button
                             typeType="h2"
-                            func={() => setSportYearData(props.sport2022)}
-                            funcResp={Boolean(
-                                sportYearData === props.sport2022
-                            )}
+                            func={() => setSportYearData(sport2022)}
+                            funcResp={Boolean(sportYearData === sport2022)}
                             content="2022"
                             color="darkerGrey"
                         />
@@ -174,10 +176,8 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                     <Grid columnItem={[4, 5]}>
                         <Button
                             typeType="h2"
-                            func={() => setSportYearData(props.sport2021)}
-                            funcResp={Boolean(
-                                sportYearData === props.sport2021
-                            )}
+                            func={() => setSportYearData(sport2021)}
+                            funcResp={Boolean(sportYearData === sport2021)}
                             content="2021"
                             color="darkerGrey"
                         />
@@ -185,10 +185,8 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                     <Grid columnItem={[5, 5]}>
                         <Button
                             typeType="h2"
-                            func={() => setSportYearData(props.sport2020)}
-                            funcResp={Boolean(
-                                sportYearData === props.sport2020
-                            )}
+                            func={() => setSportYearData(sport2020)}
+                            funcResp={Boolean(sportYearData === sport2020)}
                             content="2020"
                             color="darkerGrey"
                         />
@@ -245,7 +243,7 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                                     time
                             ),
                         },
-                        ...(props.isRoadies
+                        ...(isRoadies
                             ? [
                                   {
                                       title: 'Speed',

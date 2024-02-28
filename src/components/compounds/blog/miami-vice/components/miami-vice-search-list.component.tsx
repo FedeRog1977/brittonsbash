@@ -3,20 +3,21 @@ import { useScreenWidth } from '../../../../../scripts'
 import { MiamiViceSearchListProps } from '../types'
 
 export const MiamiViceSearchList: React.FC<MiamiViceSearchListProps> = ({
-    ...props
+    func,
+    items,
 }: MiamiViceSearchListProps) => {
     const { isMobile } = useScreenWidth()
 
     return (
         <>
-            {props.items.map(({ heading, subHeading }, index) => (
+            {items.map(({ heading, subHeading }, index) => (
                 <Button
                     key={index}
                     typeType={isMobile ? 'h4' : 'body'}
                     forceWidth={!isMobile ? 25 : 100}
                     value={heading}
                     link={{ url: '#/blog/miami-vice/#result' }}
-                    func={props.func}
+                    func={func}
                     funcResp={false}
                     content={heading}
                     subContent={subHeading}

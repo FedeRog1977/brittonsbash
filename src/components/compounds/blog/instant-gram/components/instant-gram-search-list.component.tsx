@@ -3,13 +3,15 @@ import { useScreenWidth } from '../../../../../scripts'
 import { InstantGramSearchListProps } from '../types'
 
 export const InstantGramSearchList: React.FC<InstantGramSearchListProps> = ({
-    ...props
+    url,
+    func,
+    items,
 }: InstantGramSearchListProps) => {
     const { isMobile } = useScreenWidth()
 
     return (
         <>
-            {props.items.map(
+            {items.map(
                 ({
                     id,
                     prefix,
@@ -20,8 +22,8 @@ export const InstantGramSearchList: React.FC<InstantGramSearchListProps> = ({
                         typeType={isMobile ? 'h4' : 'body'}
                         forceWidth={!isMobile ? 25 : 100}
                         value={names.join(' - ')}
-                        link={{ url: `#${props.url}#result` }}
-                        func={props.func}
+                        link={{ url: `#${url}#result` }}
+                        func={func}
                         funcResp={false}
                         content={
                             <>
