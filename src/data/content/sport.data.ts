@@ -12,6 +12,15 @@ export const sportData = {
         ],
         projects: [
             {
+                id: 'P2024009',
+                name: 'Schiehallion',
+                distance: 6.63,
+                elevation: 2500,
+                time: '3:04:47	',
+                companionship: 1,
+                munros: ['Schiehallion'],
+            },
+            {
                 id: 'P2024008',
                 name: 'Simulated Failed Project III',
                 distance: 3.4,
