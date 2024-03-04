@@ -13,79 +13,75 @@ export const eventData = {
                 },
                 {
                     url: 'https://lewisbritton.com/images/blog/instant-gram/2024/schiehallion/2.jpg',
-                    alt: 'schiehallion-1',
+                    alt: 'schiehallion-2',
                 },
                 {
                     url: 'https://lewisbritton.com/images/blog/instant-gram/2024/schiehallion/3.jpg',
-                    alt: 'schiehallion-1',
+                    alt: 'schiehallion-3',
                 },
                 {
                     url: 'https://lewisbritton.com/images/blog/instant-gram/2024/schiehallion/4.jpg',
-                    alt: 'schiehallion-1',
+                    alt: 'schiehallion-4',
                 },
                 {
                     url: 'https://lewisbritton.com/images/blog/instant-gram/2024/schiehallion/5.jpg',
-                    alt: 'schiehallion-1',
+                    alt: 'schiehallion-5',
                 },
                 {
                     url: 'https://lewisbritton.com/images/blog/instant-gram/2024/schiehallion/6.jpg',
-                    alt: 'schiehallion-1',
+                    alt: 'schiehallion-6',
                 },
                 {
                     url: 'https://lewisbritton.com/images/blog/instant-gram/2024/schiehallion/7.jpg',
-                    alt: 'schiehallion-1',
+                    alt: 'schiehallion-7',
                 },
                 {
                     url: 'https://lewisbritton.com/images/blog/instant-gram/2024/schiehallion/8.jpg',
-                    alt: 'schiehallion-1',
+                    alt: 'schiehallion-8',
                 },
                 {
                     url: 'https://lewisbritton.com/images/blog/instant-gram/2024/schiehallion/9.jpg',
-                    alt: 'schiehallion-1',
+                    alt: 'schiehallion-9',
                 },
                 {
                     url: 'https://lewisbritton.com/images/blog/instant-gram/2024/schiehallion/10.jpg',
-                    alt: 'schiehallion-1',
+                    alt: 'schiehallion-10',
                 },
                 {
                     url: 'https://lewisbritton.com/images/blog/instant-gram/2024/schiehallion/11.jpg',
-                    alt: 'schiehallion-1',
+                    alt: 'schiehallion-11',
                 },
                 {
                     url: 'https://lewisbritton.com/images/blog/instant-gram/2024/schiehallion/12.jpg',
-                    alt: 'schiehallion-1',
+                    alt: 'schiehallion-12',
                 },
                 {
                     url: 'https://lewisbritton.com/images/blog/instant-gram/2024/schiehallion/13.jpg',
-                    alt: 'schiehallion-1',
+                    alt: 'schiehallion-13',
                 },
                 {
                     url: 'https://lewisbritton.com/images/blog/instant-gram/2024/schiehallion/14.jpg',
-                    alt: 'schiehallion-1',
+                    alt: 'schiehallion-14',
                 },
                 {
                     url: 'https://lewisbritton.com/images/blog/instant-gram/2024/schiehallion/15.jpg',
-                    alt: 'schiehallion-1',
+                    alt: 'schiehallion-15',
                 },
                 {
                     url: 'https://lewisbritton.com/images/blog/instant-gram/2024/schiehallion/16.jpg',
-                    alt: 'schiehallion-1',
+                    alt: 'schiehallion-16',
                 },
                 {
                     url: 'https://lewisbritton.com/images/blog/instant-gram/2024/schiehallion/17.jpg',
-                    alt: 'schiehallion-1',
+                    alt: 'schiehallion-17',
                 },
                 {
                     url: 'https://lewisbritton.com/images/blog/instant-gram/2024/schiehallion/18.jpg',
-                    alt: 'schiehallion-1',
+                    alt: 'schiehallion-18',
                 },
                 {
                     url: 'https://lewisbritton.com/images/blog/instant-gram/2024/schiehallion/19.jpg',
-                    alt: 'schiehallion-1',
-                },
-                {
-                    url: 'https://lewisbritton.com/images/blog/instant-gram/2024/schiehallion/20.jpg',
-                    alt: 'schiehallion-20',
+                    alt: 'schiehallion-19',
                 },
             ],
         },
