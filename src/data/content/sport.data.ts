@@ -2,6 +2,30 @@ export const sportData = {
     2024: {
         roadies: [
             {
+                id: 'R2024004',
+                name: 'Fenwick + Wind Farm',
+                distance: 29.15,
+                elevation: 1581,
+                time: '1:53:45',
+                speed: 15.4,
+            },
+            {
+                id: 'R2024003',
+                name: 'Strathaven',
+                distance: 36.89,
+                elevation: 2280,
+                time: '2:09:55',
+                speed: 17.0,
+            },
+            {
+                id: 'R2024002',
+                name: 'Strathaven',
+                distance: 36.88,
+                elevation: 2346,
+                time: '2:07:57',
+                speed: 17.3,
+            },
+            {
                 id: 'R2024001',
                 name: 'Fenwick + Wind Farm',
                 distance: 30.11,
@@ -12,11 +36,25 @@ export const sportData = {
         ],
         projects: [
             {
+                id: 'P2024010',
+                name: 'Mullardoch Negotiations',
+                distance: 19.2,
+                elevation: 9370,
+                time: '7:36:59',
+                companionship: 1,
+                munros: [
+                    'Càrn nan Gobhar (Loch Mullardoch)',
+                    'Sgùrr na Lapaich',
+                    'An Riabhachan',
+                    'An Socach (Mullardoch)',
+                ],
+            },
+            {
                 id: 'P2024009',
                 name: 'Schiehallion',
                 distance: 6.63,
                 elevation: 2500,
-                time: '3:04:47	',
+                time: '3:04:47',
                 companionship: 1,
                 munros: ['Schiehallion'],
             },
@@ -109,6 +147,13 @@ export const sportData = {
             },
         ],
         miles: [
+            {
+                id: 'M2024034',
+                name: 'Waterfoot',
+                distance: 10.02,
+                elevation: 548,
+                time: '2:00:12',
+            },
             {
                 id: 'M2024033',
                 name: 'Waterfoot',
