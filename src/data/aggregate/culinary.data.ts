@@ -223,22 +223,29 @@ export const culinaryData = {
         ],
         appliances: [],
     },
-    favourites: {
+    food: {
         meals: [],
         desserts: [],
         snacks: [],
         sweet: [],
+        bakeries: [],
+        gelaterias: [],
+        restaurants: [],
+    },
+    drink: {
         beer: [
             'Drygate Double Disco Mango Smoothie',
-            'Drygate Disco Forklift Truck',
             'Cherry CHOUFFE',
-            'Desperados Mojito',
+            'Paulaner Weissbier Dunkel',
+            'Paulaner Munchner Hell',
+            'La Trappe Quadrupel',
+            'Peroni Gran Riserva Doppio Malto',
             'Brooklyn Lager',
-            'Hofbräu Original',
             'Birra Moretti Filtrata a Freddo',
             'Kronenbourg 1664 Bière Blonde',
             'Duvel Tripel Hop Citra',
             'Cairngorm Black Gold',
+            'Desperados Mojito',
         ],
         spirits: [
             'Cazcebel Reposado',
@@ -247,12 +254,19 @@ export const culinaryData = {
             'Cazcabel Coconut',
         ],
         cocktails: ['Mojito'],
-        bakeries: [],
-        gelaterias: [],
-        restaurants: [],
         bars: [],
     },
     links: {
+        kitchen: [
+            {
+                content: 'Pizza Dough Calculator',
+                href: 'https://www.stadlermade.com/pizza-calculator/',
+            },
+            {
+                content: 'Packing Containers',
+                href: 'https://www.enviropack.org.uk/',
+            },
+        ],
         food: {
             restaurants: [
                 {
@@ -266,15 +280,9 @@ export const culinaryData = {
                 content: 'Master of Malt',
                 href: 'https://www.masterofmalt.com/',
             },
-        ],
-        kitchen: [
             {
-                content: 'Pizza Dough Calculator',
-                href: 'https://www.stadlermade.com/pizza-calculator/',
-            },
-            {
-                content: 'Packing Containers',
-                href: 'https://www.enviropack.org.uk/',
+                content: 'The Belgian Beer Company',
+                href: 'https://www.thebelgianbeercompany.com/',
             },
         ],
     },
