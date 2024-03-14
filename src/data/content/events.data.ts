@@ -5,6 +5,9 @@ export const eventData = {
             names: ['Mullardoch Negotiations'],
             startDate: '8th of March',
             endDate: '10th of March',
+            features: {
+                youthHostels: ['Inverness'],
+            },
             description:
                 'The time had finally come. The time to get the full loop: A82 up to Inverness and A9 down home. We were tucked away under the dam wall at Loch Mullardoch for the night before the first biggie of the year. It was all-in a good proj. Beinn two perhaps gave us our first ever small glimpse into real mountaineering. As we approached the summit, there was an obstacle course of light scrambling, cornice crossing, and neck deep exposed ascent, all while being obliterated by 60+mph winds. It was truly exhilarating. The rest of the route was fairly routine, in and out of micro spike mode. Although the winds did not give up. The fort of hags walk-out wasn’t the most pleasant but the replacement of Landy track with grassy terrain was certainly easier on the knees, if not the mind. Quick stop at a newly discovered Tesco Extra in Inverness for Cherry CHOUFFE, some Dunkel, and some Hell, then off to the hostel for we set out to make a fine night of drinking. My severe undernourishment throughout the day however led to a slight hiccup placing me in bed from about 8pm. All good though, CG got wasted. Sunday was hard, I was sick, could only consume Lucozade, and I may not remember it but I did get us home in one piece.',
             images: [
@@ -1008,7 +1011,7 @@ export const eventData = {
                 supermarkets: ['Spar', 'Ronatyra MD'],
                 foodstuffs: [
                     'Birra Peja',
-                    'Peroni Red',
+                    'Peroni Gran Riserva Birra Doppio Malto',
                     'La Trappe Blonde',
                     'La Trappe Tripel',
                     'La Trappe Quadrupel',
@@ -1032,7 +1035,8 @@ export const eventData = {
                 ],
                 bars: ['Cheers Irish Pub', "n'dashni"],
             },
-            description: 'TBW.',
+            description:
+                'As I said, it was a tradition. This time PMB, McN, CG, and I were joined by two other unlikely guests but just like last time, it made for some great education. About the open doner we didn’t know was incoming, that was, of course. Thankfully we had a slightly later flight this time than my Hamburg one, but it was still in Edinburgh. I was very excited actually, I downloaded Shutter Island to watch for the first time on the way out too. We got to the third world quite late actually so it was straight to somewhere for some meat various different kinds of ways, some beers, some doner in Fast Food Albania (yes that’s what it’s called), then some more beer in a stunning Northern Irish themed bar. We capped the first night with some amazing crepes which definitely filled a hole that shouldn’t have existed. In all honesty, this is quite a short one. the rest of the holiday was pretty much a rinse and repeat. We hit some great bars, especially that place that put up with us for twelve rounds after our fine Italian meal the next day, and of course Duff. Although we definitely did favour that Irish bar. And we got about a bit. Probably had far too many open doners, but who’s counting when you’re at Fast Food Albania. Safe to say we stopped for a lot of coffee too. The chains felt very fancy. A lot felt out of place, we were definitely missing something. The hostel was strange. It was some weird ass vegan, blue hair place that didn’t allow meat in the kitchen or even have goddamn locks on the doors. All good though, we got to sleep on our respective rags without duvets, being kissed by the beautiful Albanian air through that broken window. Also I Watched Fight Club again on the flight home because it was the only film I had downloaded, and jesus it’s so bad. Sorry Rydo.',
             images: [
                 {
                     url: 'https://lewisbritton.com/images/blog/instant-gram/2023/different-kind-hol-e-day-xii/1.jpg',
@@ -1689,7 +1693,7 @@ export const eventData = {
                 bars: ['Hofbräu Hamburg'],
             },
             description:
-                'This was possibly the most minimalist solo holiday I rocked this year. Although it did feel like a very suitable end to the solo season. TBC.',
+                'This was possibly the most minimalist solo holiday I rocked this year. Although it did feel like a very suitable end to the solo season, and it certainly did not have a very PG13 beginning. In fact we could say this hol-e-day started in the OP with PMB, McN, and CG. What a spread, and a start to a great tradition. I don’t really remember much but it was pretty much a very short perpendicular trip to bed followed by a difficult effort to the bus station to make the Edinburgh flight to the minute. I arrived in once piece though, and it was stright out to the streets to map out my running route and get some street beers. And of course map out the best grocery store bakeries for the morning. The first full day, as it usually is anywhere I solo (before the storm), was the most functional. It started with a nice clean and fairly fast introduction to street running, some bakery breakfast, then onto the days explorations. Some very fine locations were hit this day, indeed. With the best of course being WMF. Had a nice dinner in the Bavaria Brauhaus of Hamburg and a very pleasant long walk back to the DEGENERATOR via a pit stop for Desperados Mojito. Sadly I sobered up quite a bit on the way home and managed to get up for another run the next day. Even if it was broken up by a slightly worrying tailbone injury. It was a slow stroll north on this rainy day to see the suburbs. Nice, but basically just Cheshire to be honest. I did stop for some absolutely stunning Poke though. As stunning as throwing some raw ingredients in a bowl can be, that is. It was also a great, unexpected, opportunity to listen to the Dire Straits Live 1978-1992 drop that had just taken the world by storm. I also finally saw the Hamburg tennis stadium irl. Was just as good as it was in Top Spin 3. Also got a hamburger for dinner when I got back to town this night to keep Alvaro happy. The last day was another brief stroll, some bakeries, and off home. Stunning walk-in to the airport actually. And very nice airport. But always good to be back in Her Majesty’s Kingdom.',
             images: [
                 {
                     url: 'https://lewisbritton.com/images/blog/instant-gram/2023/different-kind-hol-e-day-xi/1.jpg',

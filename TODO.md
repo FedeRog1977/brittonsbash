@@ -51,7 +51,6 @@ author:
 
 -   Fix Simulated Failed Project event and sport logic
 -   Add _The Hangover Part II_
--   Add _The Hangover_
 -   Add descriptions to Naples and Poland
 -   Add features list to Europe and Berlin
 -   Add images to 2020–2022

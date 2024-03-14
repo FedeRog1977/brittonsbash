@@ -237,7 +237,7 @@ export const culinaryData = {
             'Drygate Double Disco Mango Smoothie',
             'Cherry CHOUFFE',
             'Paulaner Weissbier Dunkel',
-            'Paulaner Munchner Hell',
+            'Paulaner Münchner Hell',
             'La Trappe Quadrupel',
             'Peroni Gran Riserva Doppio Malto',
             'Brooklyn Lager',
