@@ -36,6 +36,15 @@ export const sportData = {
         ],
         projects: [
             {
+                id: 'P2024011',
+                name: 'The Accountant',
+                distance: 13.15,
+                elevation: 4177,
+                time: '5:16:41',
+                companionship: 1,
+                munros: ['Toll Creagach', 'Tom a’ Chòinich'],
+            },
+            {
                 id: 'P2024010',
                 name: 'Mullardoch Negotiations',
                 distance: 19.2,

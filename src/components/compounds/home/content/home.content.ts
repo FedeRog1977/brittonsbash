@@ -3,7 +3,6 @@ import {
     BackgroundProps,
     ImageTileProps,
 } from '../../../bash-blocks'
-import { imageTestData } from '../../../../data'
 
 type HomeProps = {
     background: BackgroundProps
@@ -39,8 +38,8 @@ export const homeContent: HomeProps = {
         textAlign: 'left',
     },
     tileTwo: {
-        heading: 'Those who know, those who fear',
-        subHeading: 'Let us begin',
+        heading: 'Year to date highlights',
+        subHeading: 'The spectrum',
         sections: [
             {
                 component: 'body',
@@ -50,7 +49,35 @@ export const homeContent: HomeProps = {
             },
             {
                 component: 'imageMatrix',
-                content: { items: imageTestData.slice(0, 3) },
+                content: {
+                    items: [
+                        {
+                            url: 'https://lewisbritton.com/images/blog/instant-gram/2024/the-accountant/17.jpg',
+                            alt: 'glen-affric',
+                            description: 'Glen Affric 03/2024',
+                        },
+                        {
+                            url: 'https://lewisbritton.com/images/blog/instant-gram/2024/schiehallion/18.jpg',
+                            alt: 'shiehallion',
+                            description: 'Shiehallion 03/2024',
+                        },
+                        {
+                            url: 'https://lewisbritton.com/images/blog/instant-gram/2024/reunited-with-roger/2.jpg',
+                            alt: 'whitelee',
+                            description: 'Whitelee Wind Farm 02/2024',
+                        },
+                        {
+                            url: 'https://lewisbritton.com/images/blog/instant-gram/2024/unty-fakeout/26.jpg',
+                            alt: 'glencoe-2',
+                            description: 'Glen Coe 02/2024',
+                        },
+                        {
+                            url: 'https://lewisbritton.com/images/blog/instant-gram/2024/unty-fakeout/34.jpg',
+                            alt: 'glencoe-1',
+                            description: 'Glen Coe 02/2024',
+                        },
+                    ],
+                },
             },
         ],
     },
