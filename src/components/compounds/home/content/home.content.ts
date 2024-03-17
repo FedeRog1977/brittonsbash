@@ -38,8 +38,8 @@ export const homeContent: HomeProps = {
         textAlign: 'left',
     },
     tileTwo: {
-        heading: 'Year to date highlights',
-        subHeading: 'The spectrum',
+        heading: 'A short introduction',
+        subHeading: 'The whole spectrum',
         sections: [
             {
                 component: 'body',

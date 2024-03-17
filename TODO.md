@@ -1,10 +1,3 @@
----
-title:
-    - To-Do
-author:
-    - Lewis Britton
----
-
 # General
 
 -   Move EventTypes etc. from `scripts` to some generic `types`
@@ -49,7 +42,6 @@ author:
 
 ## Instant Gram
 
--   Fix Simulated Failed Project event and sport logic
 -   Add descriptions to Naples and Poland
 -   Add features list to Europe and Berlin
 -   Add images to 2020–2022

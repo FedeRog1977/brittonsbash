@@ -1,7 +1,7 @@
 import { formatItems, useShowElement } from '../../../../scripts'
 import styles from './image-components.module.scss'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
-import { Flex, Image, Typography } from '../../basics'
+import { Flex, Image, Spacing, Typography } from '../../basics'
 import { ImageProps } from '../../reference'
 import { ImageMatrixProps } from './image-components.types'
 import { Modal } from '../../blocks'
@@ -40,12 +40,9 @@ export const ImageMatrix: React.FC<ImageMatrixProps> = ({
                                 />
                             </a>
                             {description && (
-                                <Typography
-                                    type="body"
-                                    content={description}
-                                    mT={3.75}
-                                    mB={7.5}
-                                />
+                                <Spacing mY={15}>
+                                    <Typography content={description} />
+                                </Spacing>
                             )}
                         </Flex>
                     ))}

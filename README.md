@@ -1,10 +1,3 @@
----
-title:
-    - React Notes
-author:
-    - Lewis Britton
----
-
 # Subject Areas
 
 -   Bible
