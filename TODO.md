@@ -1,16 +1,27 @@
-# General
+# Dotfiles `dotfiles`
 
--   Move EventTypes etc. from `scripts` to some generic `types`
+-   Reorganize root `/` and home `~` directory structure
+-   Finish configuring dotfiles
+-   Update `dotfiles` repository with changes
+-   Finish dotfiles `README`
+-   Finish `git-guide`
+-   Write auto-ricing script
 
-# APIs
+# Web APIs `brittonsbash-services`
 
--   Add APIs, API calls, session storage logic for:
-    -   Events
-    -   Sport
-    -   Scotland's Mountains / Routes
-    -   Scotland's Regions
+-   Events
+-   Sport
+-   Scotland's Mountains / Routes
+-   Scotland's Regions
 
-# BashBlocks
+# Web Content `brittonsbash-content`
+
+-   Clean-up repository structure
+-   Finish organizing Instant Gram photo directory structure
+-   Finish low-CSS text-only website (lewisbritton.com)
+-   Discontinue old web pages
+
+# Web Structure `brittonsbash`
 
 -   Refine types - such as `Omit`, `extends`, etc. especially between Tile uses
 -   Add _CaveatTile_
@@ -24,21 +35,19 @@
 -   Add onClicks to ImageMatrix images for single image, not slider
 -   Fix table scroll background bug
 
-# Academia
+## Academia
 
 -   Refactor content
 
-# Employment
+## Employment
 
 -   Refactor content
 
-# Library
+## Library
 
--   LaTeX: The Definitive Guide
--   Basics Of Cooking: The Definitive Guide
--   Introduction to Mathematics and Statistics: The Definitive Guide
-
-# Blog
+-   Write _LaTeX: Skill, Art, Technique_
+-   Write _Basics Of Cooking_
+-   Write _Introduction to Mathematics and Statistics_
 
 ## Instant Gram
 
@@ -74,7 +83,7 @@
 -   Add command line selling points
 -   Add Urban Dictionary page with "open doner" etc.
 
-# Utilities
+## Utilities
 
 ## Weather
 
