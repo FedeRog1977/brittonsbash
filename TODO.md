@@ -62,8 +62,7 @@
 
 ## BrittonsFoodRC
 
-    Add Xmas dinner recipe
-    Add usePage page with category tags
+-   Add usePage page with category tags
 
 ## BrittonsFilmRC
 
