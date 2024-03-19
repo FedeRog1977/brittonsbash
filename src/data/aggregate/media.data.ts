@@ -87,6 +87,12 @@ export const mediaData = {
         all: [],
     },
     links: {
+        film: [
+            {
+                content: 'Panavision Variants',
+                href: 'https://logo-timeline.fandom.com/wiki/Panavision/Credits_Variants',
+            },
+        ],
         audio: [
             {
                 content: 'Richer Sounds',

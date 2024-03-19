@@ -248,6 +248,14 @@ export const miscellaneousData = {
                 context: 'Berlin U-Bahn RumPaPum',
                 href: 'https://www.youtube.com/watch?v=gjUXEzGvBFM&t=25s',
             },
+            {
+                context: 'Gerald W. McGarry',
+                href: 'https://www.emedevents.com/speaker-profile/gerald-w-mcgarry',
+            },
+            {
+                content: 'Inversion News Article',
+                href: 'https://www.bbc.co.uk/news/uk-scotland-highlands-islands-59727407',
+            },
         ],
     },
 }

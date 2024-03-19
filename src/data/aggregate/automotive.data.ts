@@ -20,27 +20,27 @@ export const automotiveData = {
     ],
     links: [
         {
-            context: 'Audi A6 Allroad Specs',
+            content: 'Audi A6 Allroad Specs',
             href: 'https://www.autoevolution.com/cars/audi-allroad-2006.html#aeng_audi-allroad-2006-30-tfsi-v6',
         },
         {
-            context: 'Quattro Daily',
+            content: 'Quattro Daily',
             href: 'https://www.quattrodaily.com/',
         },
         {
-            context: 'C5 Allroad Power',
+            content: 'C5 Allroad Power',
             href: 'https://www.youtube.com/watch?v=r4kZQVB-mwE',
         },
         {
-            context: 'Classic Trader',
+            content: 'Classic Trader',
             href: 'https://www.classic-trader.com/uk/cars',
         },
         {
-            context: 'Romans International',
+            content: 'Romans International',
             href: 'https://www.romansinternational.com/',
         },
         {
-            context: 'Geometry Comparison',
+            content: 'Geometry Comparison',
             href: 'https://www.carsized.com/en/',
         },
     ],

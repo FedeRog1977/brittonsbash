@@ -117,6 +117,7 @@ export const designData = {
         'IBM - Graphic Design Guide From 1969 To 1987',
         'Magazine B (Various)',
         'Bauhaus. Updated Edition',
+        'Audi Design (engl.) Auto Union GmbH',
     ],
     links: {
         graphicDesign: [

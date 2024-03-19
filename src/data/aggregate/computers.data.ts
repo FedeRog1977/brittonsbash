@@ -49,7 +49,8 @@ export const computersData = {
         configurationUtilities: ['xrandr'],
         networkManagers: ['nmcli'],
         statusBars: ['i3status', 'Polybar'],
-        notificationManagers: ['dunst'],
+        notificationDaemons: ['dunst'],
+        notificationPrograms: ['notify-send'],
         textEditors: [
             'Vi (Limited)',
             'Vim (Vi Improved)',
@@ -58,6 +59,7 @@ export const computersData = {
         ],
         csvEnvironments: ['SC-IM'],
         directoryManagers: ['ls', 'lsd'],
+        fileArchiveManagers: ['tar'],
         dataModifiers: ['shred'],
         applicationLaunchers: ['dmenu'],
         terminalUserInterfaces: ['LF', 'Ranger'],
@@ -283,6 +285,10 @@ export const computersData = {
                 content: 'nerdfonts',
                 href: 'https://www.nerdfonts.com/cheat-sheet',
             },
+            {
+                content: 'Create Pacman Shortcut',
+                href: 'https://www.geeksforgeeks.org/how-to-install-postman-on-arch-based-linux-distributionsmanjaro/',
+            },
         ],
         typography: [
             {
@@ -394,6 +400,10 @@ export const computersData = {
                 href: 'https://www.markdownguide.org/',
             },
             {
+                content: 'Markdown Calendar Converter',
+                href: 'https://mdcal.io/',
+            },
+            {
                 content: 'Markdown Live Preview',
                 href: 'https://markdownlivepreview.com/',
             },
@@ -404,6 +414,10 @@ export const computersData = {
             {
                 content: 'Pandoc Guide',
                 href: 'https://pandoc.org/MANUAL.html',
+            },
+            {
+                content: 'Beamer Guide',
+                href: 'https://ctan.org/pkg/beamer?lang=en',
             },
             {
                 content: 'Phonetic Symbols',
@@ -420,7 +434,7 @@ export const computersData = {
         ],
         web: [
             {
-                content: 'Bible',
+                content: 'MDN Web Docs (Bible)',
                 href: 'https://developer.mozilla.org/en-US/',
             },
             {
@@ -514,6 +528,10 @@ export const computersData = {
             {
                 content: 'TypeScript.org',
                 href: 'https://www.typescriptlang.org/',
+            },
+            {
+                content: 'Old School Fonts',
+                href: 'https://int10h.org/oldschool-pc-fonts/fontlist/?2#att',
             },
         ],
         apis: [
