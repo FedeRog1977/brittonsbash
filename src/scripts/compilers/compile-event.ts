@@ -109,6 +109,7 @@ export const compileEvent = ({
             supermarkets: event.features?.supermarkets?.sort().join(', '),
             shops: event.features?.shops?.sort().join(', '),
             foodstuffs: event.features?.foodstuffs?.sort().join(', '),
+            cafes: event.features?.cafes?.sort().join(', '),
             bakeries: event.features?.bakeries?.sort().join(', '),
             gelaterias: event.features?.gelaterias?.sort().join(', '),
             restaurants: event.features?.restaurants?.sort().join(', '),

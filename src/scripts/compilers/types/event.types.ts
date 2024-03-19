@@ -10,6 +10,7 @@ type FeaturesProps = {
     supermarkets?: string[]
     shops?: string[]
     foodstuffs?: string[]
+    cafes?: string[]
     bakeries?: string[]
     gelaterias?: string[]
     restaurants?: string[]
@@ -240,6 +241,7 @@ export type RefactoredEventProps = {
         supermarkets?: string
         shops?: string
         foodstuffs?: string
+        cafes?: string
         bakeries?: string
         gelaterias?: string
         restaurants?: string

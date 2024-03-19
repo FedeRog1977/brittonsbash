@@ -1,5 +1,6 @@
 # Dotfiles `dotfiles`
 
+-   Finish dotfiles backup shell script
 -   Reorganize root `/` and home `~` directory structure
 -   Finish configuring dotfiles
 -   Update `dotfiles` repository with changes

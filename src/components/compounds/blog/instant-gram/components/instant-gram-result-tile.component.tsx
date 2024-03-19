@@ -275,6 +275,16 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                                               },
                                           ]
                                         : [{}]),
+                                    ...(refactoredEvent.features.cafes
+                                        ? [
+                                              {
+                                                  title: 'Cafés:',
+                                                  content:
+                                                      refactoredEvent.features
+                                                          .cafes,
+                                              },
+                                          ]
+                                        : [{}]),
                                     ...(refactoredEvent.features.bakeries
                                         ? [
                                               {

@@ -6,6 +6,7 @@ export const travelData = {
     supermarkets: [],
     shops: [],
     foodstuffs: [],
+    cafes: [],
     bakeries: [],
     gelaterias: [],
     restaurants: [],
