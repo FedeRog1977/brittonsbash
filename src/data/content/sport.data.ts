@@ -157,6 +157,13 @@ export const sportData = {
         ],
         miles: [
             {
+                id: 'M2024038',
+                name: 'Waterfoot',
+                distance: 10.01,
+                elevation: 636,
+                time: '1:58:49',
+            },
+            {
                 id: 'M2024037',
                 name: 'Waterfoot',
                 distance: 10.01,
