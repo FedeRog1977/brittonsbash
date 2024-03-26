@@ -30,6 +30,7 @@
 -   Add breakpoints
 -   Add responsive classes where necessary, _Spacing_, type and typeType (instead of type={isMobile ? 'h1' : 't1'}) etc.
 -   Add @mixins for responsive classes
+-   Add responsive `<Flex />` component, like I added to `sp-digital-web`
 -   Discontinue index.scss in main directory
 -   Add mobile functionality for image tile
 -   Tidy-up prop imports and conditionals on functional components
