@@ -1563,7 +1563,7 @@ export const eventData = {
         },
         {
             id: 'E2023045',
-            prefix: 'The Gentlemen Who Café Present',
+            prefix: 'The Gentlemen Who Café Present III',
             names: ['Cheshire 2023 — Intriguing Possibilities'],
             startDate: '10th of November',
             endDate: '12th of November',
@@ -7811,7 +7811,7 @@ export const eventData = {
         },
         {
             id: 'E2022001',
-            names: ['Some Stuff'],
+            names: ['Some Stuff III'],
             startDate: 'January',
             description: 'Some highlights from the year so far.',
             images: [
@@ -8604,7 +8604,7 @@ export const eventData = {
     2020: [
         {
             id: 'E2020011',
-            names: ['Some Stuff'],
+            names: ['Some Stuff II'],
             startDate: 'December',
             description:
                 'Some normie happenings after the first project season came to an end.',
@@ -8710,7 +8710,7 @@ export const eventData = {
         },
         {
             id: 'E2020004',
-            names: ['Some Stuff'],
+            names: ['Some Stuff I'],
             startDate: 'April',
             endDate: 'July',
             description:
@@ -8725,7 +8725,7 @@ export const eventData = {
         },
         {
             id: 'E2020003',
-            prefix: 'The Gentlemen Who Café Present',
+            prefix: 'The Gentlemen Who Café Present II',
             names: ['Glasgow Adventures'],
             startDate: '13th of February',
             description:
@@ -8740,7 +8740,7 @@ export const eventData = {
         },
         {
             id: 'E2020002',
-            prefix: 'The Gentlemen Who Café Present',
+            prefix: 'The Gentlemen Who Café Present I',
             names: ['Cheshire 2020 — The Golden Triangle'],
             startDate: '24th of January',
             endDate: '26th of January',
