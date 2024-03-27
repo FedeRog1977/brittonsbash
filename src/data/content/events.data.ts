@@ -6432,7 +6432,7 @@ export const eventData = {
         },
         {
             id: 'E2022055',
-            names: ['Strathaven Sunners'],
+            names: ['Strathaven Stunners IV'],
             startDate: '27th of November',
             description:
                 'Back on’t’ road again at last. Finally got that new tubeless on and got straight back on the road. You know where.',
@@ -7622,7 +7622,7 @@ export const eventData = {
         },
         {
             id: 'E2022014',
-            names: ['Strathaven Stunners'],
+            names: ['Strathaven Stunners III'],
             startDate: '23rd of March',
             description:
                 'I don’t usually stop on the old loop but the stunning hazy 17° blue sky got me thinking about a time when this landscape might no longer exist, after the boomer developers get their hands on it. So, here’s some shots.',
@@ -8012,7 +8012,7 @@ export const eventData = {
         },
         {
             id: 'E2021040',
-            names: ['Strathaven Stunners'],
+            names: ['Strathaven Stunners II'],
             startDate: '3rd of November',
             description:
                 'Yet again, attempting to preserve some stunning scenery in the least appropriate and authentic form imaginable. Although these were taking in waiting for a taxi to come pick up me, RoGeR and our flattened tyre. My relationship with inner tubes is horrific.',
@@ -8205,7 +8205,7 @@ export const eventData = {
         },
         {
             id: 'E2021027',
-            names: ['Strathaven Stunners'],
+            names: ['Strathaven Stunners I'],
             startDate: '25th of August',
             description:
                 'Preserving some stunning scenery in the least appropriate and authentic form imaginable. But it’ll have to do.',
