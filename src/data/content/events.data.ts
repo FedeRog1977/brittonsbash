@@ -6853,7 +6853,7 @@ export const eventData = {
         },
         {
             id: 'E2022038',
-            names: ['Fenwick + Wind Farm Loop'],
+            names: ['Fenwick + Wind Farm II'],
             startDate: '12th of August',
             description:
                 'After a week of having RoGeR back, and his survival of five rounds on the classic route, the closing act called for some updated stills.',
