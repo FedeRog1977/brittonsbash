@@ -8205,7 +8205,7 @@ export const eventData = {
         },
         {
             id: 'E2021027',
-            names: ['Strathaven Stunners I'],
+            names: ['Strathaven Stunners'],
             startDate: '25th of August',
             description:
                 'Preserving some stunning scenery in the least appropriate and authentic form imaginable. But it’ll have to do.',
@@ -8710,7 +8710,7 @@ export const eventData = {
         },
         {
             id: 'E2020004',
-            names: ['Some Stuff I'],
+            names: ['Some Stuff'],
             startDate: 'April',
             endDate: 'July',
             description:
@@ -8740,7 +8740,7 @@ export const eventData = {
         },
         {
             id: 'E2020002',
-            prefix: 'The Gentlemen Who Café Present I',
+            prefix: 'The Gentlemen Who Café Present',
             names: ['Cheshire 2020 — The Golden Triangle'],
             startDate: '24th of January',
             endDate: '26th of January',
