@@ -125,6 +125,10 @@ export const designData = {
                 content: 'Miami Vice Color Palette',
                 href: 'https://www.color-hex.com/color-palette/45581',
             },
+            {
+                content: 'Fandom - Logos',
+                href: 'https://logos.fandom.com/wiki/AT%26T_Mobility#2000%E2%80%932007',
+            },
         ],
         interiors: [
             {

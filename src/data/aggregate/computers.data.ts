@@ -181,7 +181,9 @@ export const computersData = {
         telecommunications: [
             'AT&T Merlin 10-Button (Pending)',
             'Cisco CP-7962G-CH1',
+            'Plantronics Voyager 510',
             'Polycom Conferencing',
+            'Cingular Wireless',
         ],
         storage: ['SanDisk 256GB Ultra Flair USB 3.0 Flash Drive'],
     },
