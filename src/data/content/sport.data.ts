@@ -36,6 +36,15 @@ export const sportData = {
         ],
         projects: [
             {
+                id: 'P2024012',
+                name: 'Wrath Of The triads',
+                distance: 9.01,
+                elevation: 3291,
+                time: '3:28:59',
+                companionship: 0,
+                munros: ['Stob Coire Sgriodain', 'Chno Dearg'],
+            },
+            {
                 id: 'P2024011',
                 name: 'The Accountant',
                 distance: 13.15,
