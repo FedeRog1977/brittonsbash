@@ -36,8 +36,17 @@ export const sportData = {
         ],
         projects: [
             {
+                id: 'P2024013',
+                name: 'The Observer',
+                distance: 8.86,
+                elevation: 3222,
+                time: '3:18:41',
+                companionship: 3,
+                munros: ['Ben Vorlich (Loch Lomond)'],
+            },
+            {
                 id: 'P2024012',
-                name: 'Wrath Of The triads',
+                name: 'Wrath Of The Triads',
                 distance: 9.01,
                 elevation: 3291,
                 time: '3:28:59',

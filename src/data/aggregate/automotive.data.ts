@@ -43,5 +43,9 @@ export const automotiveData = {
             content: 'Geometry Comparison',
             href: 'https://www.carsized.com/en/',
         },
+        {
+            content: 'Ross Tech VCDS',
+            href: 'https://www.ross-tech.com/vag-com/VCDS.php',
+        },
     ],
 }

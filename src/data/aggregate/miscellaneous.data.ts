@@ -158,7 +158,7 @@ export const miscellaneousData = {
                 href: 'https://www.youtube.com/watch?v=_GxCdcFYUQY',
             },
         ],
-        avrilLavigne: [{ content: 'MTV Diaries 2003', href: 'TBC' }],
+        avril: [{ content: 'MTV Diaries 2003', href: 'TBC' }],
         miscellaneous: [
             {
                 content: 'East Renfrewshire Bins',

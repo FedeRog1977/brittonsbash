@@ -225,6 +225,10 @@ export const designData = {
                 context: 'What is Gorpcore?',
                 href: 'https://www.grailed.com/drycleanonly/what-is-gorpcore',
             },
+            {
+                context: 'Kraft, Power, Strength',
+                href: 'https://www.youtube.com/watch?v=lKjw3oWrMrI',
+            },
         ],
         lego: [
             {
