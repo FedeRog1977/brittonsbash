@@ -1,10 +1,13 @@
 import { Button, Grid, Spacing, Tile } from '../../../../bash-blocks'
-import { useScreenWidth, useShowElement } from '../../../../../scripts'
+import {
+    compileEvents,
+    useScreenWidth,
+    useShowElement,
+} from '../../../../../scripts'
 import { useState } from 'react'
 import { InstantGramSearchTileProps } from '../types'
 import { InstantGramSearchList } from './instant-gram-search-list.component'
 import { BigSearch } from '../../../../bash-blocks'
-import { eventData } from '../../../../../data'
 
 export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
     url,
@@ -14,6 +17,8 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
 }: InstantGramSearchTileProps) => {
     const { isMobile } = useScreenWidth()
     const { showElement, setShowElement } = useShowElement()
+
+    const { events } = compileEvents()
 
     const emptyEventData = [
         {
@@ -49,10 +54,10 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                         typeType={isMobile ? 't1' : 't2'}
                         func={() => {
                             setShowElement(!showElement)
-                            setParsedEventData(eventData[2024])
+                            setParsedEventData(events[2024])
                         }}
                         funcResp={
-                            showElement && parsedEventData === eventData[2024]
+                            showElement && parsedEventData === events[2024]
                         }
                         content="2024"
                         subContent="Season 5"
@@ -65,10 +70,10 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                         typeType={isMobile ? 't1' : 't2'}
                         func={() => {
                             setShowElement(!showElement)
-                            setParsedEventData(eventData[2023])
+                            setParsedEventData(events[2023])
                         }}
                         funcResp={
-                            showElement && parsedEventData === eventData[2023]
+                            showElement && parsedEventData === events[2023]
                         }
                         content="2023"
                         subContent="Season 4"
@@ -81,10 +86,10 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                         typeType={isMobile ? 't1' : 't2'}
                         func={() => {
                             setShowElement(!showElement)
-                            setParsedEventData(eventData[2022])
+                            setParsedEventData(events[2022])
                         }}
                         funcResp={
-                            showElement && parsedEventData === eventData[2022]
+                            showElement && parsedEventData === events[2022]
                         }
                         content="2022"
                         subContent="Season 3"
@@ -97,10 +102,10 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                         typeType={isMobile ? 't1' : 't2'}
                         func={() => {
                             setShowElement(!showElement)
-                            setParsedEventData(eventData[2021])
+                            setParsedEventData(events[2021])
                         }}
                         funcResp={
-                            showElement && parsedEventData === eventData[2021]
+                            showElement && parsedEventData === events[2021]
                         }
                         content="2021"
                         subContent="Season 2"
@@ -113,10 +118,10 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                         typeType={isMobile ? 't1' : 't2'}
                         func={() => {
                             setShowElement(!showElement)
-                            setParsedEventData(eventData[2020])
+                            setParsedEventData(events[2020])
                         }}
                         funcResp={
-                            showElement && parsedEventData === eventData[2020]
+                            showElement && parsedEventData === events[2020]
                         }
                         content="2020"
                         subContent="Season 1"

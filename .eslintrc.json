@@ -8,5 +8,28 @@
         "sourceType": "module"
     },
     "plugins": ["react"],
-    "rules": {}
+    "rules": {
+        "import/order": [
+            "error",
+            {
+                "groups": [
+                    "index",
+                    "sibling",
+                    "parent",
+                    "internal",
+                    "external",
+                    "builtin",
+                    "object",
+                    "type"
+                ]
+            }
+        ],
+        "sort-imports": [
+            "error",
+            {
+                "ignoreCase": true,
+                "ignoreDeclarationSort": true
+            }
+        ]
+    }
 }

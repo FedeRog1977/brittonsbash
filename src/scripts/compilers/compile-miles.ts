@@ -1,4 +1,4 @@
-import { sportData } from '../../data'
+import { sportData } from '../../api'
 import { toFeet, toMiles } from '../formatters'
 import { CompiledMilesProps, MilesProps } from './types'
 

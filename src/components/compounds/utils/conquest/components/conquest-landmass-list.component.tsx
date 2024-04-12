@@ -1,11 +1,15 @@
-import { hillData } from '../../../../../data'
+import { compileHills } from '../../../../../scripts'
 
 export const LandmassList = ({ id, func }: any) => {
-    const routes = hillData.landmasses.map(({ name, subtype, subsubtype }) => (
-        <option key={name} value={name}>
-            {name}
-        </option>
-    ))
+    const hills = compileHills()
+
+    const routes = hills.landmasses.map(
+        ({ name, subtype, subsubtype }: any) => (
+            <option key={name} value={name}>
+                {name}
+            </option>
+        )
+    )
 
     return (
         <select id={id} onChange={func}>

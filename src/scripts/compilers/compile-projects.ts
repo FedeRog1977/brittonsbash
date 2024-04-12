@@ -1,4 +1,4 @@
-import { sportData, useSport } from '../../data'
+import { sportData } from '../../api'
 import { removeDuplicates, toMiles, toFeet } from '../formatters'
 import {
     CompiledProjectProps,
@@ -7,7 +7,7 @@ import {
 } from './types'
 
 export const compileProjects = () => {
-    // const { sport: sportDataTwo } = useSport()
+    // const sport = getSessionItem('response-sport')
     // console.log('CALL::::', sportDataTwo)
 
     type SportDataKeys = keyof typeof sportData

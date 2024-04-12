@@ -6,9 +6,9 @@ import {
     // useMap,
     // useMapEvents
 } from 'react-leaflet'
+import './styles/styles-temp.scss'
 import { useState } from 'react'
-import { hillData } from '../../../../data'
-import { fromBritishGridProjection } from '../../../../scripts'
+import { compileHills, fromBritishGridProjection } from '../../../../scripts'
 // import L from 'leaflet'
 import * as L from 'leaflet'
 import {
@@ -21,6 +21,8 @@ import {
 import { useOrdnanceSurveyCall } from './calls'
 
 export const Conquest = () => {
+    const hills = compileHills()
+
     const apiUrl = useOrdnanceSurveyCall()
 
     const [showCurrLoc, setShowCurrLoc] = useState(false)
@@ -73,9 +75,9 @@ export const Conquest = () => {
     const landmassesSelect = (e: any) => {
         setShowRouteMarker(false)
 
-        for (var i in hillData.landmasses) {
+        for (var i in hills.landmasses) {
             if (
-                hillData.landmasses[i].name
+                hills.landmasses[i].name
                     .toLowerCase()
                     .includes(e.target.value.toLowerCase())
             ) {
@@ -84,7 +86,7 @@ export const Conquest = () => {
                     <RouteList
                         id="searchRoute"
                         func={routeSelect}
-                        landmassRoutes={hillData.landmasses[i].routes}
+                        landmassRoutes={hills.landmasses[i].routes}
                     />
                 )
             }
@@ -94,26 +96,22 @@ export const Conquest = () => {
     const routeSelect = (e: any) => {
         setShowRouteMarker(false)
 
-        for (var i in hillData.landmasses) {
-            for (var k in hillData.landmasses[i].routes) {
+        for (var i in hills.landmasses) {
+            for (var k in hills.landmasses[i].routes) {
                 if (
-                    hillData.landmasses[i].routes[k].name
+                    hills.landmasses[i].routes[k].name
                         .toLowerCase()
                         .includes(e.target.value.toLowerCase())
                 ) {
                     setShowRouteMarker(true)
                     setRouteMarker(
                         <RouteMarker
-                            nameRoute={hillData.landmasses[i].routes[k].name}
-                            dist={hillData.landmasses[i].routes[k].distance}
-                            elev={
-                                hillData.landmasses[i].routes[k].elevationgain
-                            }
-                            time={hillData.landmasses[i].routes[k].stdtime}
-                            munrosIn={hillData.landmasses[i].routes[k].munros}
-                            corbettsIn={
-                                hillData.landmasses[i].routes[k].corbetts
-                            }
+                            nameRoute={hills.landmasses[i].routes[k].name}
+                            dist={hills.landmasses[i].routes[k].distance}
+                            elev={hills.landmasses[i].routes[k].elevationgain}
+                            time={hills.landmasses[i].routes[k].stdtime}
+                            munrosIn={hills.landmasses[i].routes[k].munros}
+                            corbettsIn={hills.landmasses[i].routes[k].corbetts}
                             latIn={56.76}
                             lonIn={-5.87}
                         />

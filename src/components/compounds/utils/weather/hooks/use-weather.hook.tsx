@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { Typography } from '../../../../bash-blocks'
-import { hillData } from '../../../../../data'
-import { toCoords, toFeet } from '../../../../../scripts'
+import { compileHills, toCoords, toFeet } from '../../../../../scripts'
 import { WeatherDaily } from '../components'
 
 export function useWeather() {
+    const hills = compileHills()
+
     var [lat, setLat] = useState(56.6826)
     var [lon, setLon] = useState(5.1023)
 
@@ -42,18 +43,18 @@ export function useWeather() {
     )
 
     const handleSelect = (e: any) => {
-        for (var i in hillData.munros) {
+        for (var i in hills.munros) {
             if (
-                hillData.munros[i].name
+                hills.munros[i].name
                     .toLowerCase()
                     .includes(e.target.value.toLowerCase())
             ) {
-                setName(hillData.munros[i].name.toLowerCase())
-                setLat(hillData.munros[i].lat)
-                setLon(hillData.munros[i].lon)
-                setWeatherTitleLocation(`${hillData.munros[i].name}`)
-                setWeatherElevation(hillData.munros[i].elevation)
-                setWeatherMark(hillData.munros[i].summit)
+                setName(hills.munros[i].name.toLowerCase())
+                setLat(hills.munros[i].lat)
+                setLon(hills.munros[i].lon)
+                setWeatherTitleLocation(`${hills.munros[i].name}`)
+                setWeatherElevation(hills.munros[i].elevation)
+                setWeatherMark(hills.munros[i].summit)
             }
         }
     }
@@ -61,7 +62,7 @@ export function useWeather() {
     const handleInput = (e: any) => {
         setSearchField(e.target.value)
 
-        for (var i in hillData.munros) {
+        for (var i in hills.munros) {
             if (searchField === '') {
                 setLat(lat)
                 setLon(lon)
@@ -72,16 +73,16 @@ export function useWeather() {
                     </>
                 )
             } else if (
-                hillData.munros[i].name
+                hills.munros[i].name
                     .toLowerCase()
                     .includes(searchField.toLowerCase())
             ) {
-                setName(hillData.munros[i].name.toLowerCase())
-                setLat(hillData.munros[i].lat)
-                setLon(hillData.munros[i].lon)
-                setWeatherTitleLocation(`${hillData.munros[i].name}`)
-                setWeatherElevation(hillData.munros[i].elevation)
-                setWeatherMark(hillData.munros[i].summit)
+                setName(hills.munros[i].name.toLowerCase())
+                setLat(hills.munros[i].lat)
+                setLon(hills.munros[i].lon)
+                setWeatherTitleLocation(`${hills.munros[i].name}`)
+                setWeatherElevation(hills.munros[i].elevation)
+                setWeatherMark(hills.munros[i].summit)
             }
         }
     }

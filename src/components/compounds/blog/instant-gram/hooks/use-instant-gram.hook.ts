@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useLocation, useSearchParams } from 'react-router-dom'
 import {
-    compileEventEvents,
+    compileEvents,
     compileEventSports,
     ProjectProps,
 } from '../../../../../scripts'
@@ -12,13 +12,13 @@ export const useInstantGram = () => {
     const [searchParamsHandler, setSearchParamsHandler] = useState('')
     const [searchParams, setSearchParams] = useSearchParams()
 
-    const allEvents = compileEventEvents()
+    const { eventsParsed } = compileEvents()
     const allSport = compileEventSports()
     const sportOnEvent: ProjectProps[] = []
 
     const [searchField, setSearchField] = useState('')
 
-    const [event, setEvent] = useState(allEvents[0])
+    const [event, setEvent] = useState(eventsParsed[0])
     const [sport, setSport] = useState<ProjectProps[]>([])
     const [showSport, setShowSport] = useState(false)
 
@@ -30,14 +30,16 @@ export const useInstantGram = () => {
         if (location.search !== '') {
             setUrl(`${location.pathname}${location.search}`)
 
-            for (var i in allEvents) {
-                if (location.search === `?${allEvents[i].id?.toLowerCase()}=`) {
-                    setEvent(allEvents[i])
+            for (var i in eventsParsed) {
+                if (
+                    location.search === `?${eventsParsed[i].id?.toLowerCase()}=`
+                ) {
+                    setEvent(eventsParsed[i])
                     setSport([] as ProjectProps[])
                     setShowSport(false)
 
                     for (var j in allSport) {
-                        if (allEvents[i].names.includes(allSport[j].name)) {
+                        if (eventsParsed[i].names.includes(allSport[j].name)) {
                             sportOnEvent.push(allSport[j])
                             setSport(sportOnEvent)
                             setShowSport(true)
@@ -51,7 +53,7 @@ export const useInstantGram = () => {
     useEffect(() => {
         if (location.search === '') {
             for (var i in allSport) {
-                if (allEvents[0].names.includes(allSport[i].name)) {
+                if (eventsParsed[0].names.includes(allSport[i].name)) {
                     sportOnEvent.push(allSport[i])
                     setSport(sportOnEvent)
                     setShowSport(true)
@@ -63,25 +65,25 @@ export const useInstantGram = () => {
     const handleInput = (e: any) => {
         setSearchField(e.target.value.toLowerCase())
 
-        for (var i in allEvents) {
+        for (var i in eventsParsed) {
             if (searchField === '') {
                 setEventHandler(event)
                 setSportHandler(sport)
                 setShowSportHandler(showSport)
             } else if (
-                allEvents[i].names
+                eventsParsed[i].names
                     .join(' - ')
                     .toLowerCase()
                     .includes(searchField)
             ) {
-                setSearchParamsHandler(allEvents[i].id?.toLowerCase() ?? '')
+                setSearchParamsHandler(eventsParsed[i].id?.toLowerCase() ?? '')
 
-                setEventHandler(allEvents[i])
+                setEventHandler(eventsParsed[i])
                 setSportHandler([] as ProjectProps[])
                 setShowSportHandler(false)
 
                 for (var j in allSport) {
-                    if (allEvents[i].names.includes(allSport[j].name)) {
+                    if (eventsParsed[i].names.includes(allSport[j].name)) {
                         sportOnEvent.push(allSport[j])
                         setSportHandler(sportOnEvent)
                         setShowSportHandler(true)
@@ -105,20 +107,22 @@ export const useInstantGram = () => {
     }
 
     const handleSelect = (e: any) => {
-        for (var i in allEvents) {
+        for (var i in eventsParsed) {
             if (
-                allEvents[i].names.join(' - ').includes(e.currentTarget.value)
+                eventsParsed[i].names
+                    .join(' - ')
+                    .includes(e.currentTarget.value)
             ) {
-                setEvent(allEvents[i])
+                setEvent(eventsParsed[i])
                 setSport([] as ProjectProps[])
                 setShowSport(false)
 
-                const search = `?${allEvents[i].id?.toLowerCase()}=`
+                const search = `?${eventsParsed[i].id?.toLowerCase()}=`
                 setUrl(`${location.pathname}${search}`)
-                setSearchParams(allEvents[i].id?.toLowerCase())
+                setSearchParams(eventsParsed[i].id?.toLowerCase())
 
                 for (var j in allSport) {
-                    if (allEvents[i].names.includes(allSport[j].name)) {
+                    if (eventsParsed[i].names.includes(allSport[j].name)) {
                         sportOnEvent.push(allSport[j])
                         setSport(sportOnEvent)
                         setShowSport(true)

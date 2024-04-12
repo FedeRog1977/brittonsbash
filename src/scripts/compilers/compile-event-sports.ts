@@ -1,4 +1,4 @@
-import { sportData } from '../../data'
+import { sportData } from '../../api'
 import { ProjectProps } from './types'
 
 export function compileEventSports() {
@@ -24,6 +24,5 @@ export function compileEventSports() {
         allSport.push(event)
     })
 
-    // console.log('All Event Sports:\n\n', allSport)
     return allSport
 }

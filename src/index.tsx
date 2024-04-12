@@ -1,4 +1,4 @@
-import './index.scss'
+import './components/bash-blocks/reference/index.scss'
 import ReactDOM from 'react-dom/client'
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import {
@@ -22,7 +22,16 @@ import {
     Conquest,
 } from './components'
 import { Footer, Header } from './components/bash-blocks'
-import { reportWebVitals } from './react'
+import { reportWebVitals } from './scripts/react'
+import { useEvents, useHills, useRegions } from './api'
+// import { useSport } from './components/compounds'
+
+const triggerSession = () => {
+    useEvents()
+    useHills()
+    useRegions()
+    // useSport()
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
@@ -60,4 +69,5 @@ root.render(
     </HashRouter>
 )
 
+triggerSession()
 reportWebVitals()
