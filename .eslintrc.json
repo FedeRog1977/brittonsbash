@@ -1,35 +1,173 @@
+// {
+//     "env": {
+//         "browser": true,
+//         "es2021": true
+//     },
+//     "parserOptions": {
+//         "ecmaVersion": "latest",
+//         "sourceType": "module"
+//     },
+//     "plugins": ["react"],
+//     "rules": {
+//         "sort-imports": [
+//             "error",
+//             {
+//                 "ignoreCase": false,
+//                 "ignoreDeclarationSort": false,
+//                 "ignoreMemberSort": false,
+//                 "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+//                 "allowSeparatedGroups": false
+//             }
+//         ]
+//     }
+// }
+
 {
+    "root": true,
     "env": {
         "browser": true,
-        "es2021": true
+        "es6": true,
+        "node": true
     },
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "plugins": ["react"],
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "plugin:cypress/recommended",
+        "kentcdodds",
+        "kentcdodds/jest",
+        "kentcdodds/jsx-a11y",
+        "kentcdodds/react",
+        "prettier"
+    ],
+    "plugins": ["cypress", "testing-library"], // For some reason this needs to be explicitly included
     "rules": {
+        // Core
+        "arrow-body-style": ["error", "as-needed"],
+        "arrow-parens": "error",
+        "camelcase": "error", // We may hit issues with this but let's see how we go
+        "default-case": "off",
+        "default-param-last": "error",
+        "eqeqeq": "error",
+        "func-style": "error",
+        "no-else-return": "error",
+        "no-eq-null": "error",
+        "no-extra-boolean-cast": "error",
+        "no-implicit-coercion": "error", // Controversial - disallows !!foo, requires Boolean(foo)
+        "no-misleading-character-class": "error",
+        "no-nested-ternary": "error",
+        "no-param-reassign": "error",
+        "no-plusplus": "error",
+        "no-prototype-builtins": "error",
+        "no-unused-expressions": "error",
+        "no-void": "error",
+        "no-with": "error",
+        "one-var": "off",
+        "padding-line-between-statements": [
+            "error",
+            { "blankLine": "always", "prev": "*", "next": "return" }
+        ],
+        "prefer-regex-literals": "error",
+        "require-atomic-updates": "error",
+        "spaced-comment": "error",
+        // Imports
+        "import/namespace": ["error", { "allowComputed": true }],
         "import/order": [
             "error",
             {
                 "groups": [
-                    "index",
-                    "sibling",
-                    "parent",
-                    "internal",
-                    "external",
                     "builtin",
-                    "object",
-                    "type"
-                ]
+                    "external",
+                    "internal",
+                    "parent",
+                    "sibling",
+                    "index"
+                ],
+                "alphabetize": { "order": "asc" }
             }
         ],
-        "sort-imports": [
+        // React
+        "react/button-has-type": "off",
+        "react/function-component-definition": [
             "error",
             {
-                "ignoreCase": true,
-                "ignoreDeclarationSort": true
+                "namedComponents": "arrow-function",
+                "unnamedComponents": "arrow-function"
             }
-        ]
-    }
+        ],
+        "react/hook-use-state": "error", // [foo, setFoo] = useState();
+        "react/jsx-boolean-value": "error", // Use <element attribute /> rather than <element attribute={true} />
+        "react/jsx-fragments": "error", // Use <> rather than <React.Fragment>, except when adding a key
+        "react/jsx-handler-names": "error", // Prop: onFoo, handler function: handleFoo
+        "react/jsx-no-constructed-context-values": "error", // Performance improvement, see how we get on with it
+        "react/jsx-no-leaked-render": "off", // Incorrectly reporting as of 21/06
+        "react/jsx-props-no-spreading": "error",
+        "react/no-children-prop": "error",
+        "react/react-in-jsx-scope": "off", // No need to import React in v17+
+        // JSX a11y
+        "jsx-a11y/no-autofocus": "error",
+        "jsx-a11y/no-noninteractive-tabindex": "error",
+        "jsx-a11y/no-static-element-interactions": "error"
+    },
+    "overrides": [
+        {
+            "files": ["**/*.ts?(x)"],
+            "rules": {
+                // Core
+                "default-param-last": "off",
+                // Typescript
+                "@typescript-eslint/default-param-last": "error",
+                "@typescript-eslint/no-confusing-void-expression": "error",
+                "@typescript-eslint/no-inferrable-types": "error",
+                "@typescript-eslint/no-unsafe-return": "error",
+                "@typescript-eslint/prefer-for-of": "error",
+                "@typescript-eslint/prefer-nullish-coalescing": "off",
+                "@typescript-eslint/promise-function-async": "error",
+                "@typescript-eslint/require-array-sort-compare": [
+                    "error",
+                    { "ignoreStringArrays": true }
+                ],
+                "@typescript-eslint/restrict-template-expressions": "error"
+            }
+        },
+        {
+            "files": [
+                "**/__tests__/**/*.+(js|ts)?(x)",
+                "**/*.{spec,test}.+(js|ts)?(x)"
+            ],
+            "rules": {
+                // React
+                "react/jsx-props-no-spreading": "off",
+                // Typescript
+                "@typescript-eslint/no-confusing-void-expression": "off",
+                // JSX a11y
+                "jsx-a11y/anchor-is-valid": "off",
+                // Jest
+                "jest/no-alias-methods": "error",
+                "jest/no-duplicate-hooks": "error",
+                "jest/no-jasmine-globals": "error",
+                "jest/no-standalone-expect": "error",
+                "jest/no-test-return-statement": "error",
+                "jest/prefer-called-with": "off",
+                "jest/prefer-spy-on": "error",
+                "jest/prefer-to-be": "error",
+                "jest/require-hook": "off",
+                "jest/require-top-level-describe": "error",
+                "jest/valid-title": "off",
+                // Testing library
+                "testing-library/no-await-sync-events": [
+                    "error",
+                    { "eventModules": ["fire-event"] }
+                ],
+                "testing-library/prefer-explicit-assert": "error"
+            }
+        },
+        {
+            "files": ["**/*.stories.+(js|ts)?(x)"],
+            "rules": {
+                // React
+                "react/jsx-props-no-spreading": "off",
+                // JSX a11y
+                "jsx-a11y/anchor-is-valid": "off"
+            }
+        }
+    ]
 }

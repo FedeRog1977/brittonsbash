@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react'
-import { getResponse, getSessionItem } from '../scripts'
+import { getResponse } from '../scripts'
 
 export const useSport = () => {
     getResponse(
