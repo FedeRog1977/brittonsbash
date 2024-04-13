@@ -1,0 +1,16 @@
+@use './_index.scss' as reference;
+
+body {
+    margin: 0;
+    background-color: reference.$lighter-grey;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ul {
+    padding: 0px 0px 0px 15px;
+    list-style-type: square;
+    list-style-position: outside;
+}
