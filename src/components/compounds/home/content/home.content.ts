@@ -14,11 +14,11 @@ export const homeContent: HomeProps = {
     background: { content: 'BrittonsBashRC' },
     tileOne: {
         imgDesktop: {
-            url: 'https://lewisbritton.com/images/pages/home.jpg',
+            url: 'https://lewisbritton.com/images/general/home.jpg',
             alt: 'intro-tile-image',
         },
         imgMobile: {
-            url: 'https://lewisbritton.com/images/pages/home-mobile.jpg',
+            url: 'https://lewisbritton.com/images/general/home-mobile.jpg',
             alt: 'intro-tile-mobile-image',
         },
         gradient: {

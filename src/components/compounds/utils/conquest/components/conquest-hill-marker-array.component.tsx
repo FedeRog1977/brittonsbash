@@ -35,7 +35,7 @@ export const ConquestMarkerArray: React.FC<ConquestHillMarkerArrayProps> = ({
                                 style={{
                                     width: '250px',
                                 }}
-                                src="https://lewisbritton.com/images/pages/placeholder.webp"
+                                src="https://lewisbritton.com/images/general/placeholder.webp"
                                 alt="placeholder"
                             />
                         </Spacing>
