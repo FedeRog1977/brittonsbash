@@ -1,28 +1,29 @@
-import { sportData } from '../../api'
+import { getSessionItem } from '../api'
 import { ProjectProps } from './types'
 
 export function compileEventSports() {
-    const allSport: ProjectProps[] = []
+    const sport = getSessionItem('response-sport')
+    const sportParsed: ProjectProps[] = []
 
-    sportData[2024].projects.forEach((event: ProjectProps) => {
-        allSport.push(event)
+    sport[2024].projects.forEach((event: ProjectProps) => {
+        sportParsed.push(event)
     })
 
-    sportData[2023].projects.forEach((event: ProjectProps) => {
-        allSport.push(event)
+    sport[2023].projects.forEach((event: ProjectProps) => {
+        sportParsed.push(event)
     })
 
-    sportData[2022].projects.forEach((event: ProjectProps) => {
-        allSport.push(event)
+    sport[2022].projects.forEach((event: ProjectProps) => {
+        sportParsed.push(event)
     })
 
-    sportData[2021].projects.forEach((event: ProjectProps) => {
-        allSport.push(event)
+    sport[2021].projects.forEach((event: ProjectProps) => {
+        sportParsed.push(event)
     })
 
-    sportData[2020].projects.forEach((event: ProjectProps) => {
-        allSport.push(event)
+    sport[2020].projects.forEach((event: ProjectProps) => {
+        sportParsed.push(event)
     })
 
-    return allSport
+    return sportParsed
 }

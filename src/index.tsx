@@ -24,14 +24,13 @@ import {
 } from './components'
 import { Footer, Header } from './components/bash-blocks'
 import { reportWebVitals } from './scripts/react'
-import { useEvents, useHills, useRegions } from './api'
-// import { useSport } from './components/compounds'
+import { useEvents, useHills, useRegions, useSport } from './api'
 
 const triggerSession = () => {
     useEvents()
     useHills()
     useRegions()
-    // useSport()
+    useSport()
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)

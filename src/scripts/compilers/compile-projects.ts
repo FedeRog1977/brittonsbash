@@ -1,324 +1,362 @@
-import { sportData } from '../../api'
+import { getSessionItem } from '../api'
 import { removeDuplicates, toMiles, toFeet } from '../formatters'
 import {
+    AggregationAlphabeticalProps,
+    AggregationNumericalProps,
+    AggregationProps,
     CompiledProjectProps,
-    CompiledProjectPropsTemp,
     ProjectProps,
 } from './types'
 
+type CompiledProjects = {
+    projects: {
+        2024: ProjectProps[]
+        2023: ProjectProps[]
+        2022: ProjectProps[]
+        2021: ProjectProps[]
+        2020: ProjectProps[]
+    }
+    occurrences: AggregationNumericalProps
+    distance: AggregationAlphabeticalProps
+    elevation: AggregationAlphabeticalProps
+    islands: AggregationProps
+    munros: AggregationProps
+    munroTops: AggregationProps
+    corbetts: AggregationProps
+    corbettTops: AggregationProps
+    grahams: AggregationProps
+    subTwos: AggregationProps
+    donalds: AggregationProps
+}
+
 export const compileProjects = () => {
-    // const sport = getSessionItem('response-sport')
-    // console.log('CALL::::', sportDataTwo)
+    const sport = getSessionItem('response-sport')
 
-    type SportDataKeys = keyof typeof sportData
+    // type SportDataKeys = keyof typeof sport
 
-    const years = Object.keys(sportData)
+    // const years = Object.keys(sport)
 
-    const Projects = Object.keys(sportData).reduce((object, key) => {
-        return {
-            ...object,
-            [key]: sportData[key as unknown as SportDataKeys].projects,
-        }
-    }, {})
+    // const Projects: CompiledProjects['projects'] = Object.keys(sport).reduce(
+    //     (object, key) => {
+    //         return {
+    //             ...object,
+    //             [key]: sport[key].projects,
+    //         }
+    //     },
+    //     {}
+    // )
 
-    const Occurrences = Object.keys(sportData).reduce((object, key) => {
-        let total = 0
+    // const Occurrences: CompiledProjects['occurrences'] = Object.keys(
+    //     sport
+    // ).reduce((object, key) => {
+    //     let total = 0
 
-        years.forEach((year) => {
-            total +=
-                sportData[year as unknown as unknown as SportDataKeys].projects
-                    .length
-        })
+    //     years.forEach((year) => {
+    //         total += sport[year].projects.length
+    //     })
 
-        return {
-            ...object,
-            total: total,
-            [key]: sportData[key as unknown as SportDataKeys].projects.length,
-        }
-    }, {})
+    //     return {
+    //         ...object,
+    //         total: total,
+    //         [key]: sport[key].projects.length,
+    //     }
+    // }, {})
 
-    const Distance = Object.keys(sportData).reduce((object, key) => {
-        let total = 0
-        let yearTotal = 0
+    // const Distance: CompiledProjects['distance'] = Object.keys(sport).reduce(
+    //     (object, key) => {
+    //         let total = 0
+    //         let yearTotal = 0
 
-        years.forEach((year) => {
-            sportData[year as unknown as SportDataKeys].projects.forEach(
-                (project: ProjectProps) => (total += project.distance)
-            )
-        })
+    //         years.forEach((year) => {
+    //             sport[year].projects.forEach(
+    //                 (project: ProjectProps) => (total += project.distance)
+    //             )
+    //         })
 
-        sportData[key as unknown as SportDataKeys].projects.forEach(
-            (project: ProjectProps) => (yearTotal += project.distance)
-        )
+    //         sport[key].projects.forEach(
+    //             (project: ProjectProps) => (yearTotal += project.distance)
+    //         )
 
-        return {
-            ...object,
-            total: toMiles(total),
-            [key]: toMiles(yearTotal),
-        }
-    }, {})
+    //         return {
+    //             ...object,
+    //             total: toMiles(total),
+    //             [key]: toMiles(yearTotal),
+    //         }
+    //     },
+    //     {}
+    // )
 
-    const Elevation = Object.keys(sportData).reduce((object, key) => {
-        let total = 0
-        let yearTotal = 0
+    // const Elevation: CompiledProjects['elevation'] = Object.keys(sport).reduce(
+    //     (object, key) => {
+    //         let total = 0
+    //         let yearTotal = 0
 
-        years.forEach((year) => {
-            sportData[year as unknown as SportDataKeys].projects.forEach(
-                (project: ProjectProps) => (total += project.elevation)
-            )
-        })
+    //         years.forEach((year) => {
+    //             sport[year].projects.forEach(
+    //                 (project: ProjectProps) => (total += project.elevation)
+    //             )
+    //         })
 
-        sportData[key as unknown as SportDataKeys].projects.forEach(
-            (project: ProjectProps) => (yearTotal += project.elevation)
-        )
+    //         sport[key].projects.forEach(
+    //             (project: ProjectProps) => (yearTotal += project.elevation)
+    //         )
 
-        return {
-            ...object,
-            total: toFeet(total),
-            [key]: toFeet(yearTotal),
-        }
-    }, {})
+    //         return {
+    //             ...object,
+    //             total: toFeet(total),
+    //             [key]: toFeet(yearTotal),
+    //         }
+    //     },
+    //     {}
+    // )
 
-    const Islands = Object.keys(sportData).reduce((object, key) => {
-        let total: string[] = []
-        let yearTotal: string[] = []
+    // const Islands: CompiledProjects['islands'] = Object.keys(sport).reduce(
+    //     (object, key) => {
+    //         let total: string[] = []
+    //         let yearTotal: string[] = []
 
-        years.forEach((year) => {
-            sportData[year as unknown as SportDataKeys].projects.forEach(
-                (project: ProjectProps) =>
-                    project.islands?.forEach((island) => total.push(island))
-            )
-        })
+    //         years.forEach((year) => {
+    //             sport[year].projects.forEach((project: ProjectProps) =>
+    //                 project.islands?.forEach((island) => total.push(island))
+    //             )
+    //         })
 
-        sportData[key as unknown as SportDataKeys].projects.forEach(
-            (project: ProjectProps) =>
-                project.islands?.forEach((island) => yearTotal.push(island))
-        )
+    //         sport[key].projects.forEach((project: ProjectProps) =>
+    //             project.islands?.forEach((island) => yearTotal.push(island))
+    //         )
 
-        return {
-            ...object,
-            total: total.sort(),
-            unique: removeDuplicates(total).sort(),
-            [key]: yearTotal.sort(),
-            totalCount: total.length,
-            uniqueCount: removeDuplicates(total).length,
-            [key + 'Occurrences']: yearTotal.length,
-        }
-    }, {})
+    //         return {
+    //             ...object,
+    //             total: total.sort(),
+    //             unique: removeDuplicates(total).sort(),
+    //             [key]: yearTotal.sort(),
+    //             totalCount: total.length,
+    //             uniqueCount: removeDuplicates(total).length,
+    //             [key + 'Occurrences']: yearTotal.length,
+    //         }
+    //     },
+    //     {}
+    // )
 
-    const Munros = Object.keys(sportData).reduce((object, key) => {
-        let total: string[] = []
-        let yearTotal: string[] = []
+    // const Munros: CompiledProjects['munros'] = Object.keys(sport).reduce(
+    //     (object, key) => {
+    //         let total: string[] = []
+    //         let yearTotal: string[] = []
 
-        years.forEach((year) => {
-            sportData[year as unknown as SportDataKeys].projects.forEach(
-                (project: ProjectProps) =>
-                    project.munros?.forEach((munro) => total.push(munro))
-            )
-        })
+    //         years.forEach((year) => {
+    //             sport[year].projects.forEach((project: ProjectProps) =>
+    //                 project.munros?.forEach((munro) => total.push(munro))
+    //             )
+    //         })
 
-        sportData[key as unknown as SportDataKeys].projects.forEach(
-            (project: ProjectProps) =>
-                project.munros?.forEach((munro) => yearTotal.push(munro))
-        )
+    //         sport[key].projects.forEach((project: ProjectProps) =>
+    //             project.munros?.forEach((munro) => yearTotal.push(munro))
+    //         )
 
-        return {
-            ...object,
-            total: total.sort(),
-            unique: removeDuplicates(total).sort(),
-            [key]: yearTotal.sort(),
-            totalCount: total.length,
-            uniqueCount: removeDuplicates(total).length,
-            [key + 'Occurrences']: yearTotal.length,
-        }
-    }, {})
+    //         return {
+    //             ...object,
+    //             total: total.sort(),
+    //             unique: removeDuplicates(total).sort(),
+    //             [key]: yearTotal.sort(),
+    //             totalCount: total.length,
+    //             uniqueCount: removeDuplicates(total).length,
+    //             [key + 'Occurrences']: yearTotal.length,
+    //         }
+    //     },
+    //     {}
+    // )
 
-    const MunroTops = Object.keys(sportData).reduce((object, key) => {
-        let total: string[] = []
-        let yearTotal: string[] = []
+    // const MunroTops: CompiledProjects['munroTops'] = Object.keys(sport).reduce(
+    //     (object, key) => {
+    //         let total: string[] = []
+    //         let yearTotal: string[] = []
 
-        years.forEach((year) => {
-            sportData[year as unknown as SportDataKeys].projects.forEach(
-                (project: ProjectProps) =>
-                    project.munroTops?.forEach((munroTop) =>
-                        total.push(munroTop)
-                    )
-            )
-        })
+    //         years.forEach((year) => {
+    //             sport[year].projects.forEach((project: ProjectProps) =>
+    //                 project.munroTops?.forEach((munroTop) =>
+    //                     total.push(munroTop)
+    //                 )
+    //             )
+    //         })
 
-        sportData[key as unknown as SportDataKeys].projects.forEach(
-            (project: ProjectProps) =>
-                project.munroTops?.forEach((munroTop) =>
-                    yearTotal.push(munroTop)
-                )
-        )
+    //         sport[key].projects.forEach((project: ProjectProps) =>
+    //             project.munroTops?.forEach((munroTop) =>
+    //                 yearTotal.push(munroTop)
+    //             )
+    //         )
 
-        return {
-            ...object,
-            total: total.sort(),
-            unique: removeDuplicates(total).sort(),
-            [key]: yearTotal.sort(),
-            totalCount: total.length,
-            uniqueCount: removeDuplicates(total).length,
-            [key + 'Occurrences']: yearTotal.length,
-        }
-    }, {})
+    //         return {
+    //             ...object,
+    //             total: total.sort(),
+    //             unique: removeDuplicates(total).sort(),
+    //             [key]: yearTotal.sort(),
+    //             totalCount: total.length,
+    //             uniqueCount: removeDuplicates(total).length,
+    //             [key + 'Occurrences']: yearTotal.length,
+    //         }
+    //     },
+    //     {}
+    // )
 
-    const Corbetts = Object.keys(sportData).reduce((object, key) => {
-        let total: string[] = []
-        let yearTotal: string[] = []
+    // const Corbetts: CompiledProjects['corbetts'] = Object.keys(sport).reduce(
+    //     (object, key) => {
+    //         let total: string[] = []
+    //         let yearTotal: string[] = []
 
-        years.forEach((year) => {
-            sportData[year as unknown as SportDataKeys].projects.forEach(
-                (project: ProjectProps) =>
-                    project.corbetts?.forEach((corbett) => total.push(corbett))
-            )
-        })
+    //         years.forEach((year) => {
+    //             sport[year].projects.forEach((project: ProjectProps) =>
+    //                 project.corbetts?.forEach((corbett) => total.push(corbett))
+    //             )
+    //         })
 
-        sportData[key as unknown as SportDataKeys].projects.forEach(
-            (project: ProjectProps) =>
-                project.corbetts?.forEach((corbett) => yearTotal.push(corbett))
-        )
+    //         sport[key].projects.forEach((project: ProjectProps) =>
+    //             project.corbetts?.forEach((corbett) => yearTotal.push(corbett))
+    //         )
 
-        return {
-            ...object,
-            total: total.sort(),
-            unique: removeDuplicates(total).sort(),
-            [key]: yearTotal.sort(),
-            totalCount: total.length,
-            uniqueCount: removeDuplicates(total).length,
-            [key + 'Occurrences']: yearTotal.length,
-        }
-    }, {})
+    //         return {
+    //             ...object,
+    //             total: total.sort(),
+    //             unique: removeDuplicates(total).sort(),
+    //             [key]: yearTotal.sort(),
+    //             totalCount: total.length,
+    //             uniqueCount: removeDuplicates(total).length,
+    //             [key + 'Occurrences']: yearTotal.length,
+    //         }
+    //     },
+    //     {}
+    // )
 
-    const CorbettTops = Object.keys(sportData).reduce((object, key) => {
-        let total: string[] = []
-        let yearTotal: string[] = []
+    // const CorbettTops: CompiledProjects['corbettTops'] = Object.keys(
+    //     sport
+    // ).reduce((object, key) => {
+    //     let total: string[] = []
+    //     let yearTotal: string[] = []
 
-        years.forEach((year) => {
-            sportData[year as unknown as SportDataKeys].projects.forEach(
-                (project: ProjectProps) =>
-                    project.corbettTops?.forEach((corbettTop) =>
-                        total.push(corbettTop)
-                    )
-            )
-        })
+    //     years.forEach((year) => {
+    //         sport[year].projects.forEach((project: ProjectProps) =>
+    //             project.corbettTops?.forEach((corbettTop) =>
+    //                 total.push(corbettTop)
+    //             )
+    //         )
+    //     })
 
-        sportData[key as unknown as SportDataKeys].projects.forEach(
-            (project: ProjectProps) =>
-                project.corbettTops?.forEach((corbettTop) =>
-                    yearTotal.push(corbettTop)
-                )
-        )
+    //     sport[key].projects.forEach((project: ProjectProps) =>
+    //         project.corbettTops?.forEach((corbettTop) =>
+    //             yearTotal.push(corbettTop)
+    //         )
+    //     )
 
-        return {
-            ...object,
-            total: total.sort(),
-            unique: removeDuplicates(total).sort(),
-            [key]: yearTotal.sort(),
-            totalCount: total.length,
-            uniqueCount: removeDuplicates(total).length,
-            [key + 'Occurrences']: yearTotal.length,
-        }
-    }, {})
+    //     return {
+    //         ...object,
+    //         total: total.sort(),
+    //         unique: removeDuplicates(total).sort(),
+    //         [key]: yearTotal.sort(),
+    //         totalCount: total.length,
+    //         uniqueCount: removeDuplicates(total).length,
+    //         [key + 'Occurrences']: yearTotal.length,
+    //     }
+    // }, {})
 
-    const Grahams = Object.keys(sportData).reduce((object, key) => {
-        let total: string[] = []
-        let yearTotal: string[] = []
+    // const Grahams: CompiledProjects['grahams'] = Object.keys(sport).reduce(
+    //     (object, key) => {
+    //         let total: string[] = []
+    //         let yearTotal: string[] = []
 
-        years.forEach((year) => {
-            sportData[year as unknown as SportDataKeys].projects.forEach(
-                (project: ProjectProps) =>
-                    project.grahams?.forEach((graham) => total.push(graham))
-            )
-        })
+    //         years.forEach((year) => {
+    //             sport[year].projects.forEach((project: ProjectProps) =>
+    //                 project.grahams?.forEach((graham) => total.push(graham))
+    //             )
+    //         })
 
-        sportData[key as unknown as SportDataKeys].projects.forEach(
-            (project: ProjectProps) =>
-                project.grahams?.forEach((graham) => yearTotal.push(graham))
-        )
+    //         sport[key].projects.forEach((project: ProjectProps) =>
+    //             project.grahams?.forEach((graham) => yearTotal.push(graham))
+    //         )
 
-        return {
-            ...object,
-            total: total.sort(),
-            unique: removeDuplicates(total).sort(),
-            [key]: yearTotal.sort(),
-            totalCount: total.length,
-            uniqueCount: removeDuplicates(total).length,
-            [key + 'Occurrences']: yearTotal.length,
-        }
-    }, {})
+    //         return {
+    //             ...object,
+    //             total: total.sort(),
+    //             unique: removeDuplicates(total).sort(),
+    //             [key]: yearTotal.sort(),
+    //             totalCount: total.length,
+    //             uniqueCount: removeDuplicates(total).length,
+    //             [key + 'Occurrences']: yearTotal.length,
+    //         }
+    //     },
+    //     {}
+    // )
 
-    const SubTwos = Object.keys(sportData).reduce((object, key) => {
-        let total: string[] = []
-        let yearTotal: string[] = []
+    // const SubTwos: CompiledProjects['subTwos'] = Object.keys(sport).reduce(
+    //     (object, key) => {
+    //         let total: string[] = []
+    //         let yearTotal: string[] = []
 
-        years.forEach((year) => {
-            sportData[year as unknown as SportDataKeys].projects.forEach(
-                (project: ProjectProps) =>
-                    project.subTwos?.forEach((subTwo) => total.push(subTwo))
-            )
-        })
+    //         years.forEach((year) => {
+    //             sport[year].projects.forEach((project: ProjectProps) =>
+    //                 project.subTwos?.forEach((subTwo) => total.push(subTwo))
+    //             )
+    //         })
 
-        sportData[key as unknown as SportDataKeys].projects.forEach(
-            (project: ProjectProps) =>
-                project.subTwos?.forEach((subTwo) => yearTotal.push(subTwo))
-        )
+    //         sport[key].projects.forEach((project: ProjectProps) =>
+    //             project.subTwos?.forEach((subTwo) => yearTotal.push(subTwo))
+    //         )
 
-        return {
-            ...object,
-            total: total.sort(),
-            unique: removeDuplicates(total).sort(),
-            [key]: yearTotal.sort(),
-            totalCount: total.length,
-            uniqueCount: removeDuplicates(total).length,
-            [key + 'Occurrences']: yearTotal.length,
-        }
-    }, {})
+    //         return {
+    //             ...object,
+    //             total: total.sort(),
+    //             unique: removeDuplicates(total).sort(),
+    //             [key]: yearTotal.sort(),
+    //             totalCount: total.length,
+    //             uniqueCount: removeDuplicates(total).length,
+    //             [key + 'Occurrences']: yearTotal.length,
+    //         }
+    //     },
+    //     {}
+    // )
 
-    const Donalds = Object.keys(sportData).reduce((object, key) => {
-        let total: string[] = []
-        let yearTotal: string[] = []
+    // const Donalds: CompiledProjects['donalds'] = Object.keys(sport).reduce(
+    //     (object, key) => {
+    //         let total: string[] = []
+    //         let yearTotal: string[] = []
 
-        years.forEach((year) => {
-            sportData[year as unknown as SportDataKeys].projects.forEach(
-                (project: ProjectProps) =>
-                    project.donalds?.forEach((donald) => total.push(donald))
-            )
-        })
+    //         years.forEach((year) => {
+    //             sport[year].projects.forEach((project: ProjectProps) =>
+    //                 project.donalds?.forEach((donald) => total.push(donald))
+    //             )
+    //         })
 
-        sportData[key as unknown as SportDataKeys].projects.forEach(
-            (project: ProjectProps) =>
-                project.donalds?.forEach((donald) => yearTotal.push(donald))
-        )
+    //         sport[key].projects.forEach((project: ProjectProps) =>
+    //             project.donalds?.forEach((donald) => yearTotal.push(donald))
+    //         )
 
-        return {
-            ...object,
-            total: total.sort(),
-            unique: removeDuplicates(total).sort(),
-            [key]: yearTotal.sort(),
-            totalCount: total.length,
-            uniqueCount: removeDuplicates(total).length,
-            [key + 'Occurrences']: yearTotal.length,
-        }
-    }, {})
+    //         return {
+    //             ...object,
+    //             total: total.sort(),
+    //             unique: removeDuplicates(total).sort(),
+    //             [key]: yearTotal.sort(),
+    //             totalCount: total.length,
+    //             uniqueCount: removeDuplicates(total).length,
+    //             [key + 'Occurrences']: yearTotal.length,
+    //         }
+    //     },
+    //     {}
+    // )
 
-    console.log({
-        Projects,
-        Occurrences,
-        Distance,
-        Elevation,
-        Islands,
-        Munros,
-        MunroTops,
-        Corbetts,
-        CorbettTops,
-        Grahams,
-        SubTwos,
-        Donalds,
-    })
+    // console.log({
+    //     Projects,
+    //     Occurrences,
+    //     Distance,
+    //     Elevation,
+    //     Islands,
+    //     Munros,
+    //     MunroTops,
+    //     Corbetts,
+    //     CorbettTops,
+    //     Grahams,
+    //     SubTwos,
+    //     Donalds,
+    // })
 
-    // const compiledProjectsTemp: CompiledProjectPropsTemp = {
+    // const compiledProjectsTemp: CompiledProjects = {
     //     Projects,
     //     Occurrences,
     //     Distance,
@@ -333,26 +371,28 @@ export const compileProjects = () => {
     //     Donalds,
     // }
 
+    // Old gen:
+
     const projects: CompiledProjectProps['projects'] = {
-        2024: sportData[2024].projects,
-        2023: sportData[2023].projects,
-        2022: sportData[2022].projects,
-        2021: sportData[2021].projects,
-        2020: sportData[2020].projects,
+        2024: sport[2024].projects,
+        2023: sport[2023].projects,
+        2022: sport[2022].projects,
+        2021: sport[2021].projects,
+        2020: sport[2020].projects,
     }
 
     const number: CompiledProjectProps['number'] = {
         total:
-            sportData[2024].projects.length +
-            sportData[2023].projects.length +
-            sportData[2022].projects.length +
-            sportData[2021].projects.length +
-            sportData[2020].projects.length,
-        2024: sportData[2024].projects.length,
-        2023: sportData[2023].projects.length,
-        2022: sportData[2022].projects.length,
-        2021: sportData[2021].projects.length,
-        2020: sportData[2020].projects.length,
+            sport[2024].projects.length +
+            sport[2023].projects.length +
+            sport[2022].projects.length +
+            sport[2021].projects.length +
+            sport[2020].projects.length,
+        2024: sport[2024].projects.length,
+        2023: sport[2023].projects.length,
+        2022: sport[2022].projects.length,
+        2021: sport[2021].projects.length,
+        2020: sport[2020].projects.length,
     }
 
     const islandsTotal: string[] = []
@@ -376,7 +416,7 @@ export const compileProjects = () => {
     const subTwos2024: string[] = []
     const donalds2024: string[] = []
 
-    sportData[2024].projects.forEach((event: ProjectProps) => {
+    sport[2024].projects.forEach((event: ProjectProps) => {
         distance2024 = distance2024 + event.distance
         elevation2024 = elevation2024 + event.elevation
 
@@ -443,7 +483,7 @@ export const compileProjects = () => {
     const subTwos2023: string[] = []
     const donalds2023: string[] = []
 
-    sportData[2023].projects.forEach((event: ProjectProps) => {
+    sport[2023].projects.forEach((event: ProjectProps) => {
         distance2023 = distance2023 + event.distance
         elevation2023 = elevation2023 + event.elevation
 
@@ -510,7 +550,7 @@ export const compileProjects = () => {
     const subTwos2022: string[] = []
     const donalds2022: string[] = []
 
-    sportData[2022].projects.forEach((event: ProjectProps) => {
+    sport[2022].projects.forEach((event: ProjectProps) => {
         distance2022 = distance2022 + event.distance
         elevation2022 = elevation2022 + event.elevation
 
@@ -577,7 +617,7 @@ export const compileProjects = () => {
     const subTwos2021: string[] = []
     const donalds2021: string[] = []
 
-    sportData[2021].projects.forEach((event: ProjectProps) => {
+    sport[2021].projects.forEach((event: ProjectProps) => {
         distance2021 = distance2021 + event.distance
         elevation2021 = elevation2021 + event.elevation
 
@@ -644,7 +684,7 @@ export const compileProjects = () => {
     const subTwos2020: string[] = []
     const donalds2020: string[] = []
 
-    sportData[2020].projects.forEach((event: ProjectProps) => {
+    sport[2020].projects.forEach((event: ProjectProps) => {
         distance2020 = distance2020 + event.distance
         elevation2020 = elevation2020 + event.elevation
 
@@ -912,6 +952,5 @@ export const compileProjects = () => {
         donalds,
     }
 
-    console.log('All Projects:\n\n', compiledProjects)
     return compiledProjects
 }

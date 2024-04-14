@@ -1,28 +1,30 @@
-import { sportData } from '../../api'
+import { getSessionItem } from '../api'
 import { toFeet, toMiles } from '../formatters'
 import { CompiledMilesProps, MilesProps } from './types'
 
 export function compileMiles() {
+    const sport = getSessionItem('response-sport')
+
     const miles: CompiledMilesProps['miles'] = {
-        2024: sportData[2024].miles,
-        2023: sportData[2023].miles,
-        2022: sportData[2022].miles,
-        2021: sportData[2021].miles,
-        2020: sportData[2020].miles,
+        2024: sport[2024].miles,
+        2023: sport[2023].miles,
+        2022: sport[2022].miles,
+        2021: sport[2021].miles,
+        2020: sport[2020].miles,
     }
 
     const number: CompiledMilesProps['number'] = {
         total:
-            sportData[2024].miles.length +
-            sportData[2023].miles.length +
-            sportData[2022].miles.length +
-            sportData[2021].miles.length +
-            sportData[2020].miles.length,
-        2024: sportData[2024].miles.length,
-        2023: sportData[2023].miles.length,
-        2022: sportData[2022].miles.length,
-        2021: sportData[2021].miles.length,
-        2020: sportData[2020].miles.length,
+            sport[2024].miles.length +
+            sport[2023].miles.length +
+            sport[2022].miles.length +
+            sport[2021].miles.length +
+            sport[2020].miles.length,
+        2024: sport[2024].miles.length,
+        2023: sport[2023].miles.length,
+        2022: sport[2022].miles.length,
+        2021: sport[2021].miles.length,
+        2020: sport[2020].miles.length,
     }
 
     var windfarmsTotal: number = 0
@@ -36,7 +38,7 @@ export function compileMiles() {
     var thorntonhalls2024: number = 0
     var waterfoots2024: number = 0
 
-    sportData[2024].miles.forEach((event: MilesProps) => {
+    sport[2024].miles.forEach((event: MilesProps) => {
         distance2024 = distance2024 + event.distance
         elevation2024 = elevation2024 + event.elevation
 
@@ -60,7 +62,7 @@ export function compileMiles() {
     var thorntonhalls2023: number = 0
     var waterfoots2023: number = 0
 
-    sportData[2023].miles.forEach((event: MilesProps) => {
+    sport[2023].miles.forEach((event: MilesProps) => {
         distance2023 = distance2023 + event.distance
         elevation2023 = elevation2023 + event.elevation
 
@@ -84,7 +86,7 @@ export function compileMiles() {
     var thorntonhalls2022: number = 0
     var waterfoots2022: number = 0
 
-    sportData[2022].miles.forEach((event: MilesProps) => {
+    sport[2022].miles.forEach((event: MilesProps) => {
         distance2022 = distance2022 + event.distance
         elevation2022 = elevation2022 + event.elevation
 
@@ -108,7 +110,7 @@ export function compileMiles() {
     var thorntonhalls2021: number = 0
     var waterfoots2021: number = 0
 
-    sportData[2021].miles.forEach((event: MilesProps) => {
+    sport[2021].miles.forEach((event: MilesProps) => {
         distance2021 = distance2021 + event.distance
         elevation2021 = elevation2021 + event.elevation
 
@@ -132,7 +134,7 @@ export function compileMiles() {
     var thorntonhalls2020: number = 0
     var waterfoots2020: number = 0
 
-    sportData[2020].miles.forEach((event: MilesProps) => {
+    sport[2020].miles.forEach((event: MilesProps) => {
         distance2020 = distance2020 + event.distance
         elevation2020 = elevation2020 + event.elevation
 

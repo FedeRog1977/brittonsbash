@@ -133,31 +133,6 @@ export type CompiledRoadieProps = {
     thorntonhalls: AggregationNumericalProps
 }
 
-// START OF TEMP REFACTOR OF Compiled Props
-
-export type CompiledProjectPropsTemp = {
-    projects: {
-        2024: ProjectProps[]
-        2023: ProjectProps[]
-        2022: ProjectProps[]
-        2021: ProjectProps[]
-        2020: ProjectProps[]
-    }
-    occurrences: AggregationNumericalProps
-    distance: AggregationAlphabeticalProps
-    elevation: AggregationAlphabeticalProps
-    islands: AggregationProps
-    munros: AggregationProps
-    munroTops: AggregationProps
-    corbetts: AggregationProps
-    corbettTops: AggregationProps
-    grahams: AggregationProps
-    subTwos: AggregationProps
-    donalds: AggregationProps
-}
-
-// END OF TEMP REFACTOR OF Compiled Props
-
 export type CompiledProjectProps = {
     projects: {
         2020: ProjectProps[]

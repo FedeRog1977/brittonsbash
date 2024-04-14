@@ -134,6 +134,5 @@ export const compileEvent = ({
         showSport: showSport,
     }
 
-    // console.log('Refactored Event:\n\n', refactoredEvent)
     return refactoredEvent
 }
