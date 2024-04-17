@@ -13,11 +13,9 @@ export const Gradient: React.FC<GradientProps> = ({
     const classNames = cx(styles.gradient, {
         [styles[`${value}${opacity}${toUpperCase(start)}Align`]]: !fill,
         [styles[`${value}Fill${opacity}`]]: fill,
+        // Fix this to work like other one when it's fixed
+        [styles[`${value}FillTransparent`]]: hide,
     })
-
-    if (hide) {
-        return null
-    }
 
     return <div className={classNames} />
 }
