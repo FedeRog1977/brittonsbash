@@ -1,5 +1,5 @@
 import { Button } from '../../../../bash-blocks'
-import { useScreenWidth } from '../../../../../scripts'
+import { generateUniqueKey, useScreenWidth } from '../../../../../scripts'
 import { MiamiViceSearchListProps } from '../types'
 
 export const MiamiViceSearchList: React.FC<MiamiViceSearchListProps> = ({
@@ -12,7 +12,7 @@ export const MiamiViceSearchList: React.FC<MiamiViceSearchListProps> = ({
         <>
             {items.map(({ heading, subHeading }, index) => (
                 <Button
-                    key={index}
+                    key={generateUniqueKey(index)}
                     typeType={isMobile ? 'h4' : 'body'}
                     forceWidth={!isMobile ? 25 : 100}
                     value={heading}

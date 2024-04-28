@@ -1,6 +1,10 @@
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { getGridAlign, useScreenWidth } from '../../../../scripts'
+import {
+    generateUniqueKey,
+    getGridAlign,
+    useScreenWidth,
+} from '../../../../scripts'
 import { Grid, Search, SearchList, Spacing } from '../../basics'
 import { Button } from '../button'
 import { BigSearchProps } from './big-search.types'
@@ -50,7 +54,7 @@ export const BigSearch: React.FC<BigSearchProps> = ({
                                     columnItem={[index + 1, selects.length + 1]}
                                 >
                                     <SearchList
-                                        key={index}
+                                        key={generateUniqueKey(index)}
                                         func={funcSelect}
                                         content={content}
                                         placeholder={placeholder ?? ''}

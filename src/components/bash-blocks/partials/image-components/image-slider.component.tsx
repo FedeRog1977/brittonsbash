@@ -7,7 +7,7 @@ import {
     faExchange,
 } from '@fortawesome/free-solid-svg-icons'
 import styles from './image-components.module.scss'
-import { useScreenWidth } from '../../../../scripts'
+import { generateUniqueKey, useScreenWidth } from '../../../../scripts'
 import { Typography } from '../../basics'
 import { ImageSliderProps } from './image-components.types'
 import { ImageProps } from '../../reference'
@@ -78,7 +78,7 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
             })}
             {slides.map((slide, index) => (
                 <div
-                    key={slide.alt}
+                    key={generateUniqueKey(index)}
                     className={`${styles.imageSliderSlide} ${
                         index === current ? styles.imageSliderSlideActive : ''
                     }`}

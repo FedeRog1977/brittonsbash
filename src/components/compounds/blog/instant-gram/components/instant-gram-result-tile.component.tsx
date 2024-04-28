@@ -16,6 +16,7 @@ import {
     useShowElement,
     useScreenWidth,
     RefactoredEventNameProps,
+    generateUniqueKey,
 } from '../../../../../scripts'
 import { useEffect } from 'react'
 import { InstantGramResultTileProps } from '../types'
@@ -65,6 +66,7 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                                         textAlign="right"
                                     >
                                         <Typography
+                                            key={generateUniqueKey(index)}
                                             type="t2"
                                             content={
                                                 <>
@@ -73,7 +75,6 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                                                 </>
                                             }
                                             color="mediumGrey"
-                                            key={refKey}
                                         />
                                     </Grid>
                                     <Grid
@@ -85,9 +86,9 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                                         textAlign="left"
                                     >
                                         <Typography
+                                            key={generateUniqueKey(index)}
                                             type="t2"
-                                            content={<>{name}</>}
-                                            key={refKey}
+                                            content={name}
                                         />
                                     </Grid>
                                 </>

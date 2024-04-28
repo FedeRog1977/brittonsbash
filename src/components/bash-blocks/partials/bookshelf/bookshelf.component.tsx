@@ -1,4 +1,4 @@
-import { useShowElement } from '../../../../scripts'
+import { generateUniqueKey, useShowElement } from '../../../../scripts'
 import { Spacing, Typography } from '../../basics'
 import { Button } from '../button'
 import { BookProps, BookshelfProps } from './bookshelf.types'
@@ -25,7 +25,7 @@ export const Bookshelf: React.FC<BookshelfProps> = ({
                     <>
                         <Spacing mY={20} />
                         <Typography
-                            key={index}
+                            key={generateUniqueKey(index)}
                             type="body"
                             content={content}
                             link={{ url: url, newTab: true }}

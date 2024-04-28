@@ -1,4 +1,4 @@
-import { formatItems } from '../../../../../scripts'
+import { formatItems, generateUniqueKey } from '../../../../../scripts'
 import { Flex } from '../../../basics'
 import { BookshelfProps, Bookshelf } from '../../../partials'
 import { ArticleTileBookShelfProps } from '../article-tile.types'
@@ -16,7 +16,7 @@ export const ArticleTileBookShelf: React.FC<ArticleTileBookShelfProps> = ({
             {formattedItems.map((row) => (
                 <Flex>
                     {row.map(({ heading, items }, index) => (
-                        <Flex item key={index}>
+                        <Flex item key={generateUniqueKey(index)}>
                             <Bookshelf heading={heading} items={items} />
                         </Flex>
                     ))}

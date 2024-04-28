@@ -1,5 +1,9 @@
 import { Button, Grid, Spacing } from '../../../../bash-blocks'
-import { useShowElement, useScreenWidth } from '../../../../../scripts'
+import {
+    useShowElement,
+    useScreenWidth,
+    generateUniqueKey,
+} from '../../../../../scripts'
 import { WeatherColumnDaily } from './weather-column-daily.component'
 import { WeatherHourly } from './weather-hourly.component'
 import { WeatherColumnDailyDense } from './weather-column-daily-dense.component'
@@ -19,8 +23,8 @@ export const WeatherDaily = ({ latIn, lonIn }: any) => {
             <Grid alignColumns={handleGridColumns} columnGap={10}>
                 {dailyResult.slice(0, isMobile ? 5 : 7).map((value, index) => (
                     <Grid
+                        key={generateUniqueKey(index)}
                         columnItem={[index + 1, isMobile ? 5 : 7]}
-                        key={index}
                     >
                         {isMobile ? (
                             <WeatherColumnDailyDense

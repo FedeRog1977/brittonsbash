@@ -1,5 +1,6 @@
 import {
     formatArticle,
+    generateUniqueKey,
     getGridAlign,
     useScreenWidth,
 } from '../../../../scripts'
@@ -89,7 +90,10 @@ export const ImageTile: React.FC<ImageTileProps> = ({
                 justifyItems={handleGridCtasAlignX}
             >
                 {ctas?.map(({ content, href }: CtaProps, index) => (
-                    <Grid key={index} rowItem={[index + 1, ctas.length + 1]}>
+                    <Grid
+                        key={generateUniqueKey(index)}
+                        rowItem={[index + 1, ctas.length + 1]}
+                    >
                         <Button
                             typeType="h3"
                             type="inverse"

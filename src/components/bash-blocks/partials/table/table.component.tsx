@@ -1,4 +1,4 @@
-import { useScreenWidth } from '../../../../scripts'
+import { generateUniqueKey, useScreenWidth } from '../../../../scripts'
 import { Grid, Typography } from '../../basics'
 import styles from './table.module.scss'
 import { ColumnTableProps, RowTableProps } from './table.types'
@@ -31,69 +31,54 @@ export const ColumnTable: React.FC<ColumnTableProps> = ({
                         ) : (
                             <Typography type="footnote" content={<>&nbsp;</>} />
                         )}
-                        {leftColumn.entries?.map(
-                            (
-                                entry: ColumnTableProps['leftColumn']['entries'][0],
-                                index
-                            ) => {
+                        {leftColumn.entries?.map((entry, index) => {
+                            if (entry)
+                                return (
+                                    <Typography
+                                        key={generateUniqueKey(index)}
+                                        type="footnote"
+                                        content={entry}
+                                        boldFace
+                                        mT={isMobile ? 3.75 : 7.5}
+                                    />
+                                )
+
+                            return null
+                        })}
+                    </div>
+                </Grid>
+                <Grid columnItem={[2, 2]} textAlign="right">
+                    {rightColumns.map(({ title, entries }, index) => (
+                        <div
+                            key={generateUniqueKey(index)}
+                            style={{
+                                width: 'fit-content',
+                                maxWidth: isMobile ? '250px' : '500px',
+                                marginLeft: '1rem',
+                                display: 'inline-block',
+                            }}
+                        >
+                            <Typography
+                                type="footnote"
+                                content={title}
+                                boldFace
+                                inline
+                            />
+                            {entries?.map((entry, index) => {
                                 if (entry)
                                     return (
                                         <Typography
-                                            key={index}
+                                            key={generateUniqueKey(index)}
                                             type="footnote"
                                             content={entry}
-                                            boldFace
                                             mT={isMobile ? 3.75 : 7.5}
                                         />
                                     )
 
                                 return null
-                            }
-                        )}
-                    </div>
-                </Grid>
-                <Grid columnItem={[2, 2]} textAlign="right">
-                    {rightColumns.map(
-                        ({
-                            title,
-                            entries,
-                        }: ColumnTableProps['rightColumns'][0]) => (
-                            <div
-                                key={title as string}
-                                style={{
-                                    width: 'fit-content',
-                                    maxWidth: isMobile ? '250px' : '500px',
-                                    marginLeft: '1rem',
-                                    display: 'inline-block',
-                                }}
-                            >
-                                <Typography
-                                    type="footnote"
-                                    content={title}
-                                    boldFace
-                                    inline
-                                />
-                                {entries?.map(
-                                    (
-                                        entry: ColumnTableProps['rightColumns'][0]['entries'][0],
-                                        index
-                                    ) => {
-                                        if (entry)
-                                            return (
-                                                <Typography
-                                                    key={index}
-                                                    type="footnote"
-                                                    content={entry}
-                                                    mT={isMobile ? 3.75 : 7.5}
-                                                />
-                                            )
-
-                                        return null
-                                    }
-                                )}
-                            </div>
-                        )
-                    )}
+                            })}
+                        </div>
+                    ))}
                 </Grid>
             </Grid>
         </div>
@@ -160,69 +145,58 @@ export const RowTable: React.FC<RowTableProps> = ({
                     </div>
                 </Grid>
                 <>
-                    {rows?.map(
-                        (
-                            { leftItem, rightItem }: RowTableProps['rows'][0],
-                            index
-                        ) => {
-                            if (Boolean(leftItem && rightItem)) {
-                                return (
-                                    <>
-                                        <Grid
-                                            key={index}
-                                            columnItem={[1, 2]}
-                                            rowItem={[
-                                                index + 2,
-                                                rows.length + 1,
-                                            ]}
+                    {rows?.map(({ leftItem, rightItem }, index) => {
+                        if (Boolean(leftItem && rightItem)) {
+                            return (
+                                <>
+                                    <Grid
+                                        key={generateUniqueKey(index)}
+                                        columnItem={[1, 2]}
+                                        rowItem={[index + 2, rows.length + 1]}
+                                    >
+                                        <div
+                                            style={{
+                                                width: 'fit-content',
+                                                marginRight: '1rem',
+                                                display: 'inline-block',
+                                            }}
                                         >
-                                            <div
-                                                style={{
-                                                    width: 'fit-content',
-                                                    marginRight: '1rem',
-                                                    display: 'inline-block',
-                                                }}
-                                            >
-                                                <Typography
-                                                    type="footnote"
-                                                    content={leftItem}
-                                                    boldFace
-                                                    mT={isMobile ? 3.75 : 7.5}
-                                                />
-                                            </div>
-                                        </Grid>
-                                        <Grid
-                                            columnItem={[2, 2]}
-                                            rowItem={[
-                                                index + 2,
-                                                rows.length + 1,
-                                            ]}
-                                            textAlign="right"
+                                            <Typography
+                                                type="footnote"
+                                                content={leftItem}
+                                                boldFace
+                                                mT={isMobile ? 3.75 : 7.5}
+                                            />
+                                        </div>
+                                    </Grid>
+                                    <Grid
+                                        columnItem={[2, 2]}
+                                        rowItem={[index + 2, rows.length + 1]}
+                                        textAlign="right"
+                                    >
+                                        <div
+                                            style={{
+                                                width: 'fit-content',
+                                                maxWidth: isMobile
+                                                    ? '250px'
+                                                    : '500px',
+                                                marginLeft: '1rem',
+                                                display: 'inline-block',
+                                            }}
                                         >
-                                            <div
-                                                style={{
-                                                    width: 'fit-content',
-                                                    maxWidth: isMobile
-                                                        ? '250px'
-                                                        : '500px',
-                                                    marginLeft: '1rem',
-                                                    display: 'inline-block',
-                                                }}
-                                            >
-                                                <Typography
-                                                    type="footnote"
-                                                    content={rightItem}
-                                                    mT={isMobile ? 3.75 : 7.5}
-                                                />
-                                            </div>
-                                        </Grid>
-                                    </>
-                                )
-                            }
-
-                            return null
+                                            <Typography
+                                                type="footnote"
+                                                content={rightItem}
+                                                mT={isMobile ? 3.75 : 7.5}
+                                            />
+                                        </div>
+                                    </Grid>
+                                </>
+                            )
                         }
-                    )}
+
+                        return null
+                    })}
                 </>
             </Grid>
         </div>

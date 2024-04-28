@@ -1,6 +1,7 @@
 export * from './format-article'
 export * from './format-items'
 export * from './from-british-grid-projection'
+export * from './generate-unique-key'
 export * from './get-grid-align'
 export * from './remove-duplicates'
 export * from './sum'

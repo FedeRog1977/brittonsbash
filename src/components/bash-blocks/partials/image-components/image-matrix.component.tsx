@@ -1,4 +1,8 @@
-import { formatItems, useShowElement } from '../../../../scripts'
+import {
+    formatItems,
+    generateUniqueKey,
+    useShowElement,
+} from '../../../../scripts'
 import styles from './image-components.module.scss'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { Flex, Image, Spacing, Typography } from '../../basics'
@@ -25,8 +29,8 @@ export const ImageMatrix: React.FC<ImageMatrixProps> = ({
         <>
             {formattedItems.map((row) => (
                 <Flex>
-                    {row.map(({ url, alt, description }) => (
-                        <Flex item key={alt}>
+                    {row.map(({ url, alt, description }, index) => (
+                        <Flex item key={generateUniqueKey(index)}>
                             <a
                                 onClick={() => {
                                     setImage({ url, alt, description })

@@ -1,4 +1,5 @@
 import { Marker, Popup } from 'react-leaflet'
+import { generateUniqueKey } from '../../../../../scripts'
 
 export const RouteMarker = ({
     nameRoute,
@@ -14,7 +15,7 @@ export const RouteMarker = ({
     // var corbetts = null;
 
     // if (munrosIn != null) {
-    //     munros = munrosIn.map(({ x, idx }: any) => {
+    //     munros = munrosIn.map(({ x, index }: any) => {
     //         return (<li key={idx}>{munrosIn[idx]}</li>)
     //     });
     // }
@@ -22,12 +23,12 @@ export const RouteMarker = ({
     const array = ['Ben More', 'Stob Binnein', 'Ben Starav', 'Creise']
 
     munros = array.map((x, index) => {
-        return <li key={index}>{x}</li>
+        return <li key={generateUniqueKey(index)}>{x}</li>
     })
 
     // for (var i in corbettsIn) {
-    //     corbetts = corbettsIn.map(() => (
-    //         <li key={corbettsIn[i]}>{corbettsIn[i]}</li>
+    //     corbetts = corbettsIn.map((index) => (
+    //         <li key={generateUniqueKey(index)}>{corbettsIn[i]}</li>
     //     ));
     // }
 

@@ -1,4 +1,4 @@
-import { useScreenWidth } from '../../../../../scripts'
+import { generateUniqueKey, useScreenWidth } from '../../../../../scripts'
 import { Grid } from '../../../../bash-blocks'
 import { useOpenWeatherCall } from '../calls'
 import { WeatherColumnHourlyDense } from './weather-column-hourly-dense.component'
@@ -16,7 +16,7 @@ export const WeatherHourly = ({ latIn, lonIn }: any) => {
     return (
         <Grid alignColumns={handleGridColumns} columnGap={10}>
             {hourlyResult.slice(0, isMobile ? 5 : 7).map((value, index) => (
-                <Grid columnItem={[index, 7]} key={index}>
+                <Grid key={generateUniqueKey(index)} columnItem={[index, 7]}>
                     {isMobile ? (
                         <WeatherColumnHourlyDense
                             dt={value.dt}

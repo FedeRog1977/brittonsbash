@@ -1,11 +1,12 @@
-import { compileHills } from '../../../../../scripts'
+import { compileHills, generateUniqueKey } from '../../../../../scripts'
 
 export const LandmassList = ({ id, func }: any) => {
     const hills = compileHills()
 
     const routes = hills.landmasses.map(
-        ({ name, subtype, subsubtype }: any) => (
-            <option key={name} value={name}>
+        // Requires significant work
+        ({ name, subtype, subsubtype }: any, index: number) => (
+            <option key={generateUniqueKey(index)} value={name}>
                 {name}
             </option>
         )

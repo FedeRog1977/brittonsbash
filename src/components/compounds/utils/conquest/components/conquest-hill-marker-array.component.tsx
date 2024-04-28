@@ -1,5 +1,5 @@
 import { Marker, Popup } from 'react-leaflet'
-import { toCoords, toFeet } from '../../../../../scripts'
+import { generateUniqueKey, toCoords, toFeet } from '../../../../../scripts'
 import { Spacing, Typography } from '../../../../bash-blocks'
 import { ConquestHillMarkerArrayProps } from '../types'
 
@@ -8,11 +8,11 @@ export const ConquestMarkerArray: React.FC<ConquestHillMarkerArrayProps> = ({
     type,
 }: ConquestHillMarkerArrayProps) => (
     <>
-        {hills.map(({ name, lat, lon, elevation, summit, image }: any) => {
+        {hills.map(({ name, lat, lon, elevation, summit, image }, index) => {
             const { latFormatted, lonFormatted } = toCoords(lat, lon)
 
             return (
-                <Marker key={name} position={[lat, lon]}>
+                <Marker key={generateUniqueKey(index)} position={[lat, lon]}>
                     <Popup>
                         <Spacing textAlign="center">
                             <Typography type="h4" content={name} />
