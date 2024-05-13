@@ -37,17 +37,49 @@ Update:
 -   Install version of choice: `nvm install <x.y.z>`
 -   Choose this version using `nvm`: `nvm use <x.y.z>`
 
-Install `pnpm`:
+Notes:
+
+-   [Guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+-   [Update](https://stackoverflow.com/questions/8191459/how-do-i-update-node-js)
+
+## `pnpm`
+
+Install:
 
 ```
 npm install -g pnpm
 ```
 
+Build app, after configuring `build` script:
+
+```
+pnpm --filter <app-name> build
+```
+
+Run app, after configuring `watch` script:
+
+```
+pnpm --filter <app-name> watch
+```
+
+Run app, with all dependencies of `<app-name>`, after configuring `watch` script:
+
+```
+pnpm --parallel --filter <app-name>... watch
+```
+
+Change version, using `corepack`:
+
+```
+corepack enable
+corepack prepare pnpm@<version> --activate
+```
+
 Notes:
 
--   [Guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
--   [Update](https://stackoverflow.com/questions/8191459/how-do-i-update-node-js)
--   [`pnpm`](https://pnpm.io/installation)
+-   [Guide](https://pnpm.io/installation)
+-   [Run scripts](https://pnpm.io/cli/run)
+-   `pnpm` also accepts variables, prefacing the command
 
 # Atomic Design
 
