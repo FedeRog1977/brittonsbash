@@ -4,8 +4,9 @@ import { toSentenceCase, toUpperCase } from '../../../../scripts'
 import { Gradient } from '../gradient'
 import { TileProps } from './tile.types'
 import { Image } from '../image'
+import { FC } from 'react'
 
-export const Tile: React.FC<TileProps> = ({
+export const Tile: FC<TileProps> = ({
     type,
     gap,
     dense,
@@ -13,7 +14,6 @@ export const Tile: React.FC<TileProps> = ({
     img,
     gradient,
     children,
-    anchor,
 }: TileProps) => {
     const classNames = cx(
         styles.tile,
@@ -35,7 +35,7 @@ export const Tile: React.FC<TileProps> = ({
     })
 
     return (
-        <div id={anchor} className={classNames}>
+        <div className={classNames}>
             <div className={classNamesContainer}>
                 {img && <Image {...img} />}
                 {gradient && <Gradient {...gradient} />}

@@ -20,6 +20,7 @@ import {
 } from '../../../../../scripts'
 import { useEffect } from 'react'
 import { InstantGramResultTileProps } from '../types'
+import { Anchor } from '../../../../bash-blocks/basics/anchor'
 
 export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
     event,
@@ -43,7 +44,8 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
     }, [])
 
     return (
-        <Tile type="solid" anchor={`${url}#result`}>
+        <Tile type="solid">
+            {/* <Anchor url={`${url}#result`} /> */}
             <Spacing mB={isMobile ? 7.5 : 15}>
                 {refactoredEvent.prefix && (
                     <Typography

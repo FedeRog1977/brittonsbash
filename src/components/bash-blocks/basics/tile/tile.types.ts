@@ -9,5 +9,4 @@ export type TileProps = {
     img?: ImageProps
     gradient?: GradientProps
     children: React.ReactNode
-    anchor?: string
 }

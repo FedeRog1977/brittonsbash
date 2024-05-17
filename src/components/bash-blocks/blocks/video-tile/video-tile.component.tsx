@@ -1,5 +1,6 @@
 import { useScreenWidth } from '../../../../scripts'
 import { Tile, Typography } from '../../basics'
+import { Anchor } from '../../basics/anchor'
 import { VideoTileProps } from './video-tile.types'
 
 export const VideoTile: React.FC<VideoTileProps> = ({
@@ -13,7 +14,8 @@ export const VideoTile: React.FC<VideoTileProps> = ({
     const { isMobile } = useScreenWidth()
 
     return (
-        <Tile type={type} anchor={anchor}>
+        <Tile type={type}>
+            {anchor ? <Anchor url={anchor} /> : null}
             {subHeading && <Typography type="h2" content={subHeading} light />}
             {heading && (
                 <Typography
