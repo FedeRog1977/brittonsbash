@@ -17,7 +17,6 @@ export const InstantGramSearchList: React.FC<InstantGramSearchListProps> = ({
                     typeType={isMobile ? 'h4' : 'body'}
                     forceWidth={!isMobile ? 25 : 100}
                     value={names.join(' - ')}
-                    // link={{ url: `${url}#result` }}
                     func={func}
                     funcResp={false}
                     content={

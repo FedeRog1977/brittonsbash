@@ -45,7 +45,6 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
 
     return (
         <Tile type="solid">
-            {/* <Anchor url={`${url}#result`} /> */}
             <Spacing mB={isMobile ? 7.5 : 15}>
                 {refactoredEvent.prefix && (
                     <Typography
