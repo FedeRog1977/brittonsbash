@@ -9,8 +9,11 @@ import {
 import styles from './image-components.module.scss'
 import { generateUniqueKey, useScreenWidth } from '../../../../scripts'
 import { Typography } from '../../basics'
-import { ImageSliderProps } from './image-components.types'
-import { ImageProps } from '../../reference'
+import { Img } from '../../reference'
+
+export type ImageSliderProps = {
+    slides: Img[]
+}
 
 export const ImageSlider: FC<ImageSliderProps> = ({ slides }) => {
     const { isMobile } = useScreenWidth()

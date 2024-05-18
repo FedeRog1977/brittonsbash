@@ -1,7 +1,7 @@
 import { getSessionItem } from '../api'
 import { ProjectProps } from './types'
 
-export function compileEventSports() {
+export const compileEventSports = () => {
     const sport = getSessionItem('response-sport')
     const sportParsed: ProjectProps[] = []
 

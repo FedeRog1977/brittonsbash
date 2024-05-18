@@ -2,7 +2,7 @@ import { IconProp } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FC } from 'react'
 import { toTemperature, useScreenWidth } from '../../../../../scripts'
-import { ColorProps, Spacing, Typography } from '../../../../bash-blocks'
+import { Color, Spacing, Typography } from '../../../../bash-blocks'
 import { WeatherTemperatureProps } from '../types'
 
 export const WeatherTemperature: FC<WeatherTemperatureProps> = ({
@@ -13,7 +13,7 @@ export const WeatherTemperature: FC<WeatherTemperatureProps> = ({
     const { isMobile } = useScreenWidth()
 
     let backgroundColor = undefined
-    let fontColor: ColorProps = undefined
+    let fontColor: Color = undefined
 
     if (temp >= 30) {
         backgroundColor = 'rgba(238, 40, 0, 0.8)'

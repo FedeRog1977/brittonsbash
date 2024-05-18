@@ -1,7 +1,7 @@
 import { ElementType } from 'react'
-import { TextProps } from '../types/typography.types'
+import { Text } from '../../../reference/'
 
-export const tagType: Record<TextProps['type'], ElementType> = {
+export const tagType: Record<Text['type'], ElementType> = {
     t1: 'h1',
     t2: 'h2',
     h1: 'h3',

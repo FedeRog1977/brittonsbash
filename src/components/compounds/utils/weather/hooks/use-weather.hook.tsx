@@ -3,7 +3,7 @@ import { Typography } from '../../../../bash-blocks'
 import { compileHills, toCoords, toFeet } from '../../../../../scripts'
 import { WeatherDaily } from '../components'
 
-export function useWeather() {
+export const useWeather = () => {
     const hills = compileHills()
 
     var [lat, setLat] = useState(56.6826)

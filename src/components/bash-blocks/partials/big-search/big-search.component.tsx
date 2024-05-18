@@ -8,7 +8,18 @@ import {
 } from '../../../../scripts'
 import { Grid, Search, SearchList, Spacing } from '../../basics'
 import { Button } from '../button'
-import { BigSearchProps } from './big-search.types'
+import { SearchProps } from '../../basics'
+
+export type BigSearchProps = {
+    funcInput: SearchProps['func']
+    funcButton: () => void
+    placeholder?: string
+    selects?: {
+        funcSelect: () => void
+        content: any[]
+        placeholder?: string
+    }[]
+}
 
 export const BigSearch: FC<BigSearchProps> = ({
     funcInput,

@@ -2,7 +2,11 @@ import { FC } from 'react'
 import { formatArticle } from '../../../../scripts'
 import { Tile, Typography } from '../../basics'
 import { Article } from '../../partials'
-import { FootnoteTileProps } from './footnote-tile.types'
+import { ArticleProps } from '../../partials'
+
+export type FootnoteTileProps = {
+    content: string | ArticleProps['sections']
+}
 
 export const FootnoteTile: FC<FootnoteTileProps> = ({ content }) => (
     <Tile type="clear">

@@ -1,1 +1,1 @@
-export * from './sport.types'
+export * from './sport.type'

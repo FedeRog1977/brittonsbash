@@ -2,7 +2,7 @@ import { getSessionItem } from '../api'
 import { toFeet, toMiles } from '../formatters'
 import { CompiledMilesProps, MilesProps } from './types'
 
-export function compileMiles() {
+export const compileMiles = () => {
     const sport = getSessionItem('response-sport')
 
     const miles: CompiledMilesProps['miles'] = {

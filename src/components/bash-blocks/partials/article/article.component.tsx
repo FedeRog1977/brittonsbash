@@ -1,6 +1,14 @@
 import { FC } from 'react'
 import { Typography } from '../../basics'
-import { ArticleProps } from './article.types'
+import { TypographyProps } from '../../basics'
+import { Align, Text } from '../../reference'
+
+export type ArticleProps = {
+    sections: Text[]
+    fontFamily?: TypographyProps['fontFamily']
+    textAlign?: Align
+    extendParagraphMargins?: boolean
+}
 
 export const Article: FC<ArticleProps> = ({
     sections,

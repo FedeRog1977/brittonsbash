@@ -1,7 +1,14 @@
 import { FC } from 'react'
 import { generateUniqueKey } from '../../../../scripts'
-import { SearchListProps } from './search-list.types'
 import styles from './search.module.scss'
+
+export type SearchListProps = {
+    func: () => void
+    content: {
+        name: string
+    }[]
+    placeholder: string
+}
 
 export const SearchList: FC<SearchListProps> = ({
     func,

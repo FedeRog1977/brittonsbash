@@ -1,1 +1,1 @@
-export * from './instant-gram.types'
+export * from './instant-gram.type'

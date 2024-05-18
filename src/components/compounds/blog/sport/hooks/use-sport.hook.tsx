@@ -5,7 +5,7 @@ import {
     compileRoadies,
 } from '../../../../../scripts'
 
-export function useSport() {
+export const useSport = () => {
     const compiledRoadies = compileRoadies()
     const compiledProjects = compileProjects()
     const compiledMiles = compileMiles()

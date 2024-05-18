@@ -1,2 +1,2 @@
-export * from './open-weather.types'
-export * from './weather.types'
+export * from './open-weather.type'
+export * from './weather.type'

@@ -1,3 +1,3 @@
-export function sum(accumulator: number, i: number) {
+export const sum = (accumulator: number, i: number) => {
     return accumulator + i
 }

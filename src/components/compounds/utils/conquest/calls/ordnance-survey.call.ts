@@ -1,6 +1,6 @@
 import { appendScript, appendStyle } from '../../../../../scripts/hooks'
 
-export function useOrdnanceSurveyCall() {
+export const useOrdnanceSurveyCall = () => {
     appendStyle('https://unpkg.com/leaflet@1.9.4/dist/leaflet.css')
     appendStyle(
         'https://cdn.jsdelivr.net/gh/OrdnanceSurvey/os-api-branding@0.3.1/os-api-branding.css'

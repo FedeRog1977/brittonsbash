@@ -1,6 +1,10 @@
 import { FC } from 'react'
 import styles from './search.module.scss'
-import { SearchProps } from './search.types'
+
+export type SearchProps = {
+    func: (() => void) | ((e: any) => void)
+    placeholder?: string
+}
 
 export const Search: FC<SearchProps> = ({ func, placeholder }) => (
     <input

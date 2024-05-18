@@ -1,4 +1,4 @@
-export function appendScript(url: string) {
+export const appendScript = (url: string) => {
     new Promise<void>((resolve) => {
         const script = document.createElement('script')
         script.src = url

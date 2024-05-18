@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { compileMiamiVice } from '../../../../../scripts'
 
-export function useMiamiVice() {
+export const useMiamiVice = () => {
     const allVideos = compileMiamiVice()
     const [video, setVideo] = useState(allVideos[0])
 

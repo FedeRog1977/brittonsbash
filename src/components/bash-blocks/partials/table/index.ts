@@ -1,2 +1,2 @@
-export * from './table.component'
-export * from './table.types'
+export * from './column-table.component'
+export * from './row-table.component'

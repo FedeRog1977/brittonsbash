@@ -1,16 +1,16 @@
-import { ArticleProps, TextProps } from '../../components/bash-blocks'
+import { ArticleProps, Text } from '../../components/bash-blocks'
 
-export function formatArticle(
+export const formatArticle = (
     sections: ArticleProps['sections'],
-    type: TextProps['type'],
-    color?: TextProps['color'],
-    boldFace?: TextProps['boldFace'],
-    italicize?: TextProps['italicize'],
-    smallCaps?: TextProps['smallCaps'],
-    textDecoration?: TextProps['textDecoration'],
-    light?: TextProps['light'],
-    shadow?: TextProps['shadow']
-) {
+    type: Text['type'],
+    color?: Text['color'],
+    boldFace?: Text['boldFace'],
+    italicize?: Text['italicize'],
+    smallCaps?: Text['smallCaps'],
+    textDecoration?: Text['textDecoration'],
+    light?: Text['light'],
+    shadow?: Text['shadow']
+) => {
     const formattedSections: ArticleProps['sections'] = []
 
     sections.forEach((section) => {

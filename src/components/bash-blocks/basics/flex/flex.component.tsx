@@ -1,6 +1,10 @@
 import { FC } from 'react'
 import styles from './flex.module.scss'
-import { FlexProps } from './flex.types'
+
+export type FlexProps = {
+    children: React.ReactNode
+    item?: boolean
+}
 
 export const Flex: FC<FlexProps> = ({ children, item }) => {
     if (item) {

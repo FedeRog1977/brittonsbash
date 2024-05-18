@@ -1,7 +1,8 @@
 import styles from './footer.module.scss'
 import { Spacing, Grid, Typography } from '../../basics'
+import { FC } from 'react'
 
-export const Footer = () => (
+export const Footer: FC = () => (
     <footer className={styles.footer}>
         <Spacing pY={60}>
             <Grid alignRows="auto auto auto auto auto" rowGap={20}>

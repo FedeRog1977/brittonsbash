@@ -1,6 +1,6 @@
 import proj4 from 'proj4'
 
-export function fromBritishGridProjection(coords: any) {
+export const fromBritishGridProjection = (coords: any) => {
     proj4.defs(
         'EPSG:27700',
         `+proj=tmerc

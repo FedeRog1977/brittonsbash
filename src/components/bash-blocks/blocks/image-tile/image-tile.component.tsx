@@ -7,8 +7,22 @@ import {
 } from '../../../../scripts'
 import { Grid, Tile, Typography } from '../../basics'
 import { Article, Button } from '../../partials'
-import { CtaProps } from '../../reference'
-import { ImageTileProps } from './image-tile.types'
+import { GradientProps } from '../../basics'
+import { ArticleProps } from '../../partials'
+import { Img, Cta, Align } from '../../reference'
+
+export type ImageTileProps = {
+    top?: boolean
+    imgDesktop?: Img
+    imgMobile?: Img
+    gradient?: GradientProps
+    heading: string
+    subHeading?: string
+    body?: string | ArticleProps['sections']
+    ctas?: Cta[]
+    textAlign?: Align
+    invert?: boolean
+}
 
 export const ImageTile: FC<ImageTileProps> = ({
     imgDesktop,
@@ -93,7 +107,7 @@ export const ImageTile: FC<ImageTileProps> = ({
                 rowGap={20}
                 justifyItems={handleGridCtasAlignX}
             >
-                {ctas?.map(({ content, href }: CtaProps, index) => (
+                {ctas?.map(({ content, href }, index) => (
                     <Grid
                         key={generateUniqueKey(index)}
                         rowItem={[index + 1, ctas.length + 1]}

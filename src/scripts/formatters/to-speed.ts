@@ -1,4 +1,4 @@
-export function toSpeed(speed: number, isKmh: boolean) {
+export const toSpeed = (speed: number, isKmh: boolean) => {
     var speedFormatted = ''
 
     isKmh

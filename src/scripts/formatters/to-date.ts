@@ -1,4 +1,4 @@
-export function toDate(dt: number) {
+export const toDate = (dt: number) => {
     const hour = new Date(dt * 1000).toLocaleTimeString('en-us', {
         hour: 'numeric',
     })

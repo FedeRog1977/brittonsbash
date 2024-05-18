@@ -1,1 +1,1 @@
-export * from './miami-vice.types'
+export * from './miami-vice.type'

@@ -3,7 +3,12 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import styles from './header.module.scss'
 import { useShowElement, useScreenWidth } from '../../../../scripts'
-import { Grid, Spacing } from '../../basics'
+import { Grid } from '../../basics'
+
+export type HeaderMobileProps = {
+    funcMobile: () => void
+    funcUtilities: () => void
+}
 
 export const Header = () => {
     const { isMobile } = useScreenWidth()

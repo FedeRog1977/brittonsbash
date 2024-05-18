@@ -2,7 +2,12 @@ import { FC } from 'react'
 import { generateUniqueKey, useShowElement } from '../../../../scripts'
 import { Spacing, Typography } from '../../basics'
 import { Button } from '../button'
-import { BookProps, BookshelfProps } from './bookshelf.types'
+import { Book } from './types/book.type'
+
+export type BookshelfProps = {
+    heading: string
+    items: Book[]
+}
 
 export const Bookshelf: FC<BookshelfProps> = ({ heading, items }) => {
     const { showElement, setShowElement } = useShowElement()
@@ -19,7 +24,7 @@ export const Bookshelf: FC<BookshelfProps> = ({ heading, items }) => {
                 content={heading}
             />
             {showElement &&
-                items.map(({ content, url }: BookProps, index) => (
+                items.map(({ content, url }, index) => (
                     <Spacing mY={20}>
                         <Typography
                             key={generateUniqueKey(index)}

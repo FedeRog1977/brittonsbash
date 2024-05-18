@@ -1,7 +1,7 @@
 import { getSessionItem } from '../api'
 import { EventProps } from './types'
 
-export function compileEvents() {
+export const compileEvents = () => {
     const events = getSessionItem('response-events')
     const eventsParsed: EventProps[] = []
 

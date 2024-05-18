@@ -1,60 +1,46 @@
 import { FC } from 'react'
-import { SpacingProps } from './spacing.types'
+import { Align, Margin, Padding } from '../../reference'
 // import styles from './spacing.module.scss'
 
-export const Spacing: FC<SpacingProps> = ({ ...props }) => (
+export type SpacingProps = {
+    children?: React.ReactNode
+    textAlign?: Align
+    mX?: number
+    mY?: number
+    pX?: number
+    pY?: number
+} & Margin &
+    Padding
+
+export const Spacing: FC<SpacingProps> = ({
+    children,
+    textAlign,
+    mX,
+    mY,
+    pX,
+    pY,
+    mT,
+    mB,
+    mL,
+    mR,
+    pT,
+    pB,
+    pL,
+    pR,
+}) => (
     <div
         style={{
-            textAlign: props.textAlign,
-            backgroundColor: props.backgroundColor,
-            width: `${props.width}px`,
-            border: props.border,
-            borderTop: props.ruleTop ? '1.5px solid black' : undefined,
-            borderBottom: props.ruleBottom ? '1.5px solid black' : undefined,
-            borderRadius: props.borderRadius,
-            position: props.position ? props.position : undefined,
-            marginTop: props.mY
-                ? `${props.mY / 2}px`
-                : props.mT
-                ? `${props.mT}px`
-                : 0,
-            marginBottom: props.mY
-                ? `${props.mY / 2}px`
-                : props.mB
-                ? `${props.mB}px`
-                : 0,
-            marginLeft: props.mX
-                ? `${props.mX / 2}px`
-                : props.mL
-                ? `${props.mL}px`
-                : 0,
-            marginRight: props.mX
-                ? `${props.mX / 2}px`
-                : props.mR
-                ? `${props.mR}px`
-                : 0,
-            paddingTop: props.pY
-                ? `${props.pY / 2}px`
-                : props.pT
-                ? `${props.pT}px`
-                : 0,
-            paddingBottom: props.pY
-                ? `${props.pY / 2}px`
-                : props.pB
-                ? `${props.pB}px`
-                : 0,
-            paddingLeft: props.pX
-                ? `${props.pX / 2}px`
-                : props.pL
-                ? `${props.pL}px`
-                : 0,
-            paddingRight: props.pX
-                ? `${props.pX / 2}px`
-                : props.pR
-                ? `${props.pR}px`
-                : 0,
+            textAlign: textAlign,
+            marginTop: mY ? `${mY / 2}px` : mT ? `${mT}px` : 0,
+            marginBottom: mY ? `${mY / 2}px` : mB ? `${mB}px` : 0,
+            marginLeft: mX ? `${mX / 2}px` : mL ? `${mL}px` : 0,
+            marginRight: mX ? `${mX / 2}px` : mR ? `${mR}px` : 0,
+            paddingTop: pY ? `${pY / 2}px` : pT ? `${pT}px` : 0,
+            paddingBottom: pY ? `${pY / 2}px` : pB ? `${pB}px` : 0,
+            paddingLeft: pX ? `${pX / 2}px` : pL ? `${pL}px` : 0,
+            paddingRight: pX ? `${pX / 2}px` : pR ? `${pR}px` : 0,
         }}
     >
-        {props.children && props.children}
+        {children}
     </div>
 )

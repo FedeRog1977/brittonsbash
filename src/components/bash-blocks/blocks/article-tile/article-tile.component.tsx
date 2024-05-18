@@ -1,7 +1,16 @@
 import { FC } from 'react'
-import { Tile, Typography } from '../../basics'
-import { ArticleTileProps, Section } from './article-tile.types'
-import { getContent } from './formatters'
+import { Tile, TileProps, Typography } from '../../basics'
+import { Align } from '../../reference'
+import { getContent } from './formatters/get-content'
+import { Section } from './types/section.type'
+
+export type ArticleTileProps = {
+    type?: TileProps['type']
+    heading?: string
+    subHeading?: string
+    textAlign?: Align
+    sections: Section[]
+}
 
 export const ArticleTile: FC<ArticleTileProps> = ({
     type = 'clear',

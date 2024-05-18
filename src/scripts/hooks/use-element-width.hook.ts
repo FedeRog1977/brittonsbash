@@ -1,4 +1,4 @@
-export function useElementWidth(element: string) {
+export const useElementWidth = (element: string) => {
     const widthEl = document.getElementById(element) as HTMLElement | null
     const width = widthEl?.clientWidth
 

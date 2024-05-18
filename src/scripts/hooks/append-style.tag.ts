@@ -1,4 +1,4 @@
-export function appendStyle(url: string) {
+export const appendStyle = (url: string) => {
     new Promise<void>((resolve) => {
         const link = document.createElement('link')
         link.rel = 'stylesheet'

@@ -2,7 +2,14 @@ import cx from 'classnames'
 import { FC } from 'react'
 import { toUpperCase } from '../../../../scripts'
 import styles from './gradient.module.scss'
-import { GradientProps } from './gradient.types'
+
+export type GradientProps = {
+    value?: 'light' | 'dark'
+    opacity?: 60 | 40 | 20
+    start?: 'left' | 'right' | 'center'
+    fill?: boolean
+    hide?: boolean
+}
 
 export const Gradient: FC<GradientProps> = ({
     value = 'dark',

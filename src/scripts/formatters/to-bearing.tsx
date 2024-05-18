@@ -1,7 +1,7 @@
 import { faLocationArrow } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-export function toBearing(bearing: number) {
+export const toBearing = (bearing: number) => {
     const bearingFormatted = bearing + '°'
 
     var bearingCompass = ''

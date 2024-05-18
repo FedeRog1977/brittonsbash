@@ -1,20 +1,13 @@
-import { Section } from '../article-tile.types'
-import {
-    ArticleTileBody,
-    ArticleTileBookShelf,
-    ArticleTileImageMatrix,
-} from '../components'
+import { FC } from 'react'
+import { Body } from '../components/body.component'
+import { Books } from '../components/books.component'
+import { Images } from '../components/images.component'
+import { Section } from '../types/section.type'
 
-export const getContent = (section: Section) => (
+export const getContent: FC<Section> = (section) => (
     <>
-        {section.component === 'body' && (
-            <ArticleTileBody {...section.content} />
-        )}
-        {section.component === 'bookShelf' && (
-            <ArticleTileBookShelf {...section.content} />
-        )}
-        {section.component === 'imageMatrix' && (
-            <ArticleTileImageMatrix {...section.content} />
-        )}
+        {section.component === 'body' && <Body {...section.content} />}
+        {section.component === 'bookShelf' && <Books {...section.content} />}
+        {section.component === 'imageMatrix' && <Images {...section.content} />}
     </>
 )

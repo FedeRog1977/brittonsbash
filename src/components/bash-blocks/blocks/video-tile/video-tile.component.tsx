@@ -2,7 +2,16 @@ import { FC } from 'react'
 import { useScreenWidth } from '../../../../scripts'
 import { Tile, Typography } from '../../basics'
 import { Anchor } from '../../basics/anchor'
-import { VideoTileProps } from './video-tile.types'
+import { TileProps } from '../../basics'
+
+export type VideoTileProps = {
+    type?: TileProps['type']
+    anchor?: string
+    heading?: string
+    subHeading?: string
+    video: string
+    controls?: boolean
+}
 
 export const VideoTile: FC<VideoTileProps> = ({
     type = 'clear',

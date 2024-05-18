@@ -3,7 +3,7 @@ import { getResponse } from '../../../../../scripts/api/get-response'
 import { getSessionItem } from '../../../../../scripts/api/get-session-item'
 import { DailyProps, HourlyProps } from '../types'
 
-export function useOpenWeatherCall(latIn: number, lonIn: number) {
+export const useOpenWeatherCall = (latIn: number, lonIn: number) => {
     const [dailyResult, setDailyResult] = useState<DailyProps[]>([])
     const [hourlyResult, setHourlyResult] = useState<HourlyProps[]>([])
 

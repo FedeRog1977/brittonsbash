@@ -1,4 +1,4 @@
-export function toCoords(lat: number, lon: number) {
+export const toCoords = (lat: number, lon: number) => {
     var latMag = ''
     var latSuffix = ''
 

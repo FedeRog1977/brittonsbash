@@ -1,12 +1,12 @@
 import { toUpperCase, useScreenWidth } from '../../../../scripts'
 import cx from 'classnames'
 import styles from './typography.module.scss'
-import { StyleProps, TextProps } from './types/typography.types'
 import Markdown from 'markdown-to-jsx'
 import { createElement, FC } from 'react'
 import { tagType } from './constants/tag-type.constant'
+import { Style, Text } from '../../reference'
 
-export type TypographyProps = TextProps & StyleProps
+export type TypographyProps = Text & Style
 
 export const Typography: FC<TypographyProps> = ({
     type,

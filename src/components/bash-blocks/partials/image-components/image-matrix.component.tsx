@@ -6,21 +6,22 @@ import {
 import styles from './image-components.module.scss'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { Flex, Image, Spacing, Typography } from '../../basics'
-import { ImageProps } from '../../reference'
-import { ImageMatrixProps } from './image-components.types'
+import { Img } from '../../reference'
 import { Modal } from '../../blocks'
 import { FC, useState } from 'react'
 
+export type ImageMatrixProps = {
+    items: Img[]
+    columns?: number
+}
+
 export const ImageMatrix: FC<ImageMatrixProps> = ({ items, columns }) => {
-    const formattedItems = formatItems(
-        columns ? columns : 3,
-        items
-    ) as ImageProps[][]
+    const formattedItems = formatItems(columns ? columns : 3, items) as Img[][]
 
     const { showElement: showModal, setShowElement: setShowModal } =
         useShowElement()
 
-    const [image, setImage] = useState<ImageProps>()
+    const [image, setImage] = useState<Img>()
 
     return (
         <>
@@ -52,7 +53,7 @@ export const ImageMatrix: FC<ImageMatrixProps> = ({ items, columns }) => {
                 </Flex>
             ))}
             <Modal isOpen={showModal} onClose={() => setShowModal(!showModal)}>
-                <Image {...(image as ImageProps)} />
+                <Image {...(image as Img)} />
             </Modal>
         </>
     )

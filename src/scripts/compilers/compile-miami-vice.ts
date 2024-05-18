@@ -1,7 +1,7 @@
 import { miamiViceContent } from '../../components/compounds'
 import { VideoTileProps } from '../../components/bash-blocks'
 
-export function compileMiamiVice() {
+export const compileMiamiVice = () => {
     const allVideos: VideoTileProps[] = []
 
     miamiViceContent.tileOne.season1.forEach((video) => {

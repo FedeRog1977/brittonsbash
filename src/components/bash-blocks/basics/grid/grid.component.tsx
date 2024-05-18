@@ -1,8 +1,24 @@
 import { FC } from 'react'
-import { GridProps } from './grid.types'
+import { ItemsAdv, Items, Align } from '../../reference'
 
 // Reminder: https://developer.mozilla.org/en-US/docs/Web/CSS/grid
 // Reminder: https://css-tricks.com/snippets/css/complete-guide-grid/
+
+export type GridProps = {
+    alignColumns?: string
+    alignRows?: string
+    columnGap?: number
+    rowGap?: number
+    justifyContent?: ItemsAdv
+    alignContent?: ItemsAdv
+    justifyItems?: Items
+    alignItems?: Items
+
+    columnItem?: number[]
+    rowItem?: number[]
+    textAlign?: Align
+    children: React.ReactNode
+}
 
 export const Grid: FC<GridProps> = ({
     alignColumns,

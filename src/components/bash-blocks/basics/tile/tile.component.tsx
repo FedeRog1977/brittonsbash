@@ -1,10 +1,21 @@
 import cx from 'classnames'
 import styles from './tile.module.scss'
-import { toSentenceCase, toUpperCase } from '../../../../scripts'
+import { toUpperCase } from '../../../../scripts'
 import { Gradient } from '../gradient'
-import { TileProps } from './tile.types'
 import { Image } from '../image'
 import { FC } from 'react'
+import { Img } from '../../reference'
+import { GradientProps } from '../gradient'
+
+export type TileProps = {
+    type: 'clear' | 'solid'
+    gap?: boolean
+    dense?: boolean
+    stacked?: boolean
+    img?: Img
+    gradient?: GradientProps
+    children: React.ReactNode
+}
 
 export const Tile: FC<TileProps> = ({
     type,
@@ -14,7 +25,7 @@ export const Tile: FC<TileProps> = ({
     img,
     gradient,
     children,
-}: TileProps) => {
+}) => {
     const classNames = cx(
         styles.tile,
         [styles[`tile${toUpperCase(type)}`]],
