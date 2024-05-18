@@ -10,27 +10,47 @@
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-        height: 100%;
+        height: 500px;
         overflow: hidden;
-        padding: 0px 0px 0px 0px;
+        top: -80px;
     }
 
     @media (max-width: 768px) {
         background-image: url('https://lewisbritton.com/images/general/background-mobile.jpg');
         background-size: 100% auto;
-        padding: 50px 0px 0px 0px;
+        height: 150px;
     }
 }
 
 .text {
-    font-size: 64px;
     color: reference.$lighter-grey;
     background-image: reference.$gradient-dark-60-bottom-top;
-    padding: 225px 75px 25px 75px;
+    display: grid;
+    align-items: end;
+    position: absolute;
+
+    @media (min-width: 768px) {
+        width: 100%;
+        height: 500px;
+    }
 
     @media (max-width: 768px) {
-        font-size: 32px;
-        padding: 0px 20px 0px 20px;
+        width: 100%;
+        height: 150px;
+    }
+
+    &Content {
+        @media (min-width: 768px) {
+            font-size: 64px;
+            margin: 20px auto;
+            width: 960px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 28px;
+            margin: 10px auto;
+            width: 380px;
+        }
     }
 
     &Std {

@@ -11,7 +11,7 @@ export type TypographyProps = TextProps & StyleProps
 export const Typography: FC<TypographyProps> = ({
     type,
     children,
-    // element,
+    element,
     color = 'white',
     inline,
     boldFace,

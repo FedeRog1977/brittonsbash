@@ -149,7 +149,6 @@ export const SportResultTile: FC<SportResultTileProps> = ({
                             func={() => setSportYearData(sport2024)}
                             funcResp={Boolean(sportYearData === sport2024)}
                             content="2024"
-                            color="darkerGrey"
                         />
                     </Grid>
                     <Grid columnItem={[2, 5]}>
@@ -158,7 +157,6 @@ export const SportResultTile: FC<SportResultTileProps> = ({
                             func={() => setSportYearData(sport2023)}
                             funcResp={Boolean(sportYearData === sport2023)}
                             content="2023"
-                            color="darkerGrey"
                         />
                     </Grid>
                     <Grid columnItem={[3, 5]}>
@@ -167,7 +165,6 @@ export const SportResultTile: FC<SportResultTileProps> = ({
                             func={() => setSportYearData(sport2022)}
                             funcResp={Boolean(sportYearData === sport2022)}
                             content="2022"
-                            color="darkerGrey"
                         />
                     </Grid>
                     <Grid columnItem={[4, 5]}>
@@ -176,7 +173,6 @@ export const SportResultTile: FC<SportResultTileProps> = ({
                             func={() => setSportYearData(sport2021)}
                             funcResp={Boolean(sportYearData === sport2021)}
                             content="2021"
-                            color="darkerGrey"
                         />
                     </Grid>
                     <Grid columnItem={[5, 5]}>
@@ -185,7 +181,6 @@ export const SportResultTile: FC<SportResultTileProps> = ({
                             func={() => setSportYearData(sport2020)}
                             funcResp={Boolean(sportYearData === sport2020)}
                             content="2020"
-                            color="darkerGrey"
                         />
                     </Grid>
                 </Grid>

@@ -37,7 +37,6 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
 root.render(
     <HashRouter>
-        <Header />
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/academia" element={<Academia />} />
@@ -65,7 +64,6 @@ root.render(
             </Route>
             <Route path="*" element={<ErrorPage />} />
         </Routes>
-        <Footer />
     </HashRouter>
 )
 

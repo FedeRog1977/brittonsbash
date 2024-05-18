@@ -11,7 +11,7 @@ export const FootnoteTile: FC<FootnoteTileProps> = ({ content }) => (
                 sections={formatArticle(
                     content,
                     'footnote',
-                    'darkerGrey',
+                    'white',
                     false,
                     false,
                     false,
