@@ -11,7 +11,6 @@ export type TypographyProps = Text & Style
 export const Typography: FC<TypographyProps> = ({
     type,
     children,
-    element,
     color = 'white',
     inline,
     boldFace,
@@ -80,33 +79,36 @@ export const Typography: FC<TypographyProps> = ({
         }
     )
 
-    // const reactElement = element ?? tagType[type]
+    // const parsedTagMappedText = createElement(tagType[type], {
+    //     className: classNamesText,
+    //     children,
+    // })
 
-    const contentText =
+    const parsedText =
         typeof children === 'string' ? (
             <Markdown>{children}</Markdown>
         ) : (
-            // createElement(reactElement, {
-            //     children,
-            // })
-            children
+            <>{children}</>
         )
 
-    return (
-        <div className={classNamesContainer}>
-            <span className={classNamesText}>
-                {link ? (
+    if (link?.url)
+        return (
+            <div className={classNamesContainer}>
+                <div className={classNamesText}>
                     <a
                         href={link.url}
                         target={link.newTab ? '_blank' : undefined}
                         rel={link.newTab ? 'noreferrer' : undefined}
                     >
-                        <>{contentText}</>
+                        {parsedText}
                     </a>
-                ) : (
-                    <>{contentText}</>
-                )}
-            </span>
+                </div>
+            </div>
+        )
+
+    return (
+        <div className={classNamesContainer}>
+            <div className={classNamesText}>{parsedText}</div>
         </div>
     )
 }

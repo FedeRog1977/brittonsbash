@@ -15,7 +15,6 @@ export type Text = {
         | 'footnote'
         | 'tiny'
     children?: string | React.ReactElement | React.ReactNode | Element
-    element?: ElementType
     color?: Color
     inline?: boolean
     boldFace?: boolean
