@@ -23,6 +23,7 @@ export const WeatherColumnHourly = ({
     vb,
     uvi,
 }: any) => {
+    // App props
     const { hour } = toDate(dt)
     const precipitation = toPrecipitation(pop)
     const {
@@ -36,13 +37,13 @@ export const WeatherColumnHourly = ({
     return (
         <>
             <Spacing pY={20} textAlign="center">
-                <Typography type="h4" content={hour} paragraphMargins />
-                <Typography
-                    type="h1"
-                    content={<WeatherIcon icon={icon} />}
-                    paragraphMargins
-                />
-                <Typography type="body" content={precipitation} />
+                <Typography type="h4" paragraphMargins>
+                    {hour}
+                </Typography>
+                <Typography type="h1" paragraphMargins>
+                    <WeatherIcon icon={icon} />
+                </Typography>
+                <Typography type="body">{precipitation}</Typography>
             </Spacing>
             <Spacing pY={20}>
                 <Grid alignColumns="auto">
@@ -55,15 +56,15 @@ export const WeatherColumnHourly = ({
                 </Grid>
             </Spacing>
             <Spacing pY={20} textAlign="center">
-                <Typography type="body" content={bearingCompass} />
-                <Typography type="body" content={bearingArrow} />
-                <Typography type="footnote" content={bearing} />
-                <Typography type="footnote" content={speed} boldFace />
-                <Typography
-                    type="footnote"
-                    content={gusts + ' gusts'}
-                    boldFace
-                />
+                <Typography type="body">{bearingCompass}</Typography>
+                <Typography type="body">{bearingArrow}</Typography>
+                <Typography type="footnote">{bearing}</Typography>
+                <Typography type="footnote" boldFace>
+                    {speed}
+                </Typography>
+                <Typography type="footnote" boldFace>
+                    {gusts + ' gusts'}
+                </Typography>
             </Spacing>
             <Spacing pY={20} textAlign="center">
                 <Flex>
@@ -71,63 +72,58 @@ export const WeatherColumnHourly = ({
                         <Spacing textAlign="center" mR={2.5}>
                             <Typography
                                 type="footnote"
-                                content="Pressure:"
                                 textAlign="right"
                                 boldFace
-                            />
+                            >
+                                Pressure:
+                            </Typography>
                             <Typography
                                 type="footnote"
-                                content="Humidity:"
                                 textAlign="right"
                                 boldFace
-                            />
+                            >
+                                Humidity:
+                            </Typography>
                             <Typography
                                 type="footnote"
-                                content="Dew Pt.:"
                                 textAlign="right"
                                 boldFace
-                            />
+                            >
+                                Dew Pt.:
+                            </Typography>
                             <Typography
                                 type="footnote"
-                                content="Visibility:"
                                 textAlign="right"
                                 boldFace
-                            />
+                            >
+                                Visibility:
+                            </Typography>
                             <Typography
                                 type="footnote"
-                                content="UV Index:"
                                 textAlign="right"
                                 boldFace
-                            />
+                            >
+                                UV Index:
+                            </Typography>
                         </Spacing>
                     </Flex>
                     <Flex item>
                         <Spacing textAlign="center" mL={2.5}>
-                            <Typography
-                                type="footnote"
-                                content={pressure + 'mb'}
-                                textAlign="left"
-                            />
-                            <Typography
-                                type="footnote"
-                                content={humidity + '%'}
-                                textAlign="left"
-                            />
-                            <Typography
-                                type="footnote"
-                                content={dp}
-                                textAlign="left"
-                            />
-                            <Typography
-                                type="footnote"
-                                content={vb / 100 + '%'}
-                                textAlign="left"
-                            />
-                            <Typography
-                                type="footnote"
-                                content={uvi}
-                                textAlign="left"
-                            />
+                            <Typography type="footnote" textAlign="left">
+                                {pressure + 'mb'}
+                            </Typography>
+                            <Typography type="footnote" textAlign="left">
+                                {humidity + '%'}
+                            </Typography>
+                            <Typography type="footnote" textAlign="left">
+                                {dp}
+                            </Typography>
+                            <Typography type="footnote" textAlign="left">
+                                {vb / 100 + '%'}
+                            </Typography>
+                            <Typography type="footnote" textAlign="left">
+                                {uvi}
+                            </Typography>
                         </Spacing>
                     </Flex>
                 </Flex>

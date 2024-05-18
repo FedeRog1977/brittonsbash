@@ -1,9 +1,10 @@
+import { FC } from 'react'
 import { GridProps } from './grid.types'
 
 // Reminder: https://developer.mozilla.org/en-US/docs/Web/CSS/grid
 // Reminder: https://css-tricks.com/snippets/css/complete-guide-grid/
 
-export const Grid: React.FC<GridProps> = ({
+export const Grid: FC<GridProps> = ({
     alignColumns,
     alignRows,
     columnGap,
@@ -16,7 +17,7 @@ export const Grid: React.FC<GridProps> = ({
     rowItem,
     textAlign,
     children,
-}: GridProps) => {
+}) => {
     if (columnItem || rowItem) {
         return (
             <div

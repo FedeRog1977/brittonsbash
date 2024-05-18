@@ -9,12 +9,9 @@ import { Flex, Image, Spacing, Typography } from '../../basics'
 import { ImageProps } from '../../reference'
 import { ImageMatrixProps } from './image-components.types'
 import { Modal } from '../../blocks'
-import { useState } from 'react'
+import { FC, useState } from 'react'
 
-export const ImageMatrix: React.FC<ImageMatrixProps> = ({
-    items,
-    columns,
-}: ImageMatrixProps) => {
+export const ImageMatrix: FC<ImageMatrixProps> = ({ items, columns }) => {
     const formattedItems = formatItems(
         columns ? columns : 3,
         items
@@ -45,7 +42,9 @@ export const ImageMatrix: React.FC<ImageMatrixProps> = ({
                             </a>
                             {description && (
                                 <Spacing mY={15}>
-                                    <Typography content={description} />
+                                    <Typography type="body">
+                                        {description}
+                                    </Typography>
                                 </Spacing>
                             )}
                         </Flex>

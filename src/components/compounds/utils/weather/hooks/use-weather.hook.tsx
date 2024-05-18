@@ -97,10 +97,9 @@ export function useWeather() {
                 <>
                     Munro at {toFeet(weatherElevation)} - {latFormatted},{' '}
                     {lonFormatted}
-                    <Typography
-                        type="h4"
-                        content={'Marked by ' + weatherMark}
-                    />
+                    <Typography type="h4">
+                        {'Marked by ' + weatherMark}
+                    </Typography>
                 </>
             )
             // If the text inputted into the input search bar is pulled from the suggested list (non-functional)

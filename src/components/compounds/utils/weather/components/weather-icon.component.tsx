@@ -13,10 +13,9 @@ import {
     faCloudMoonRain,
 } from '@fortawesome/free-solid-svg-icons'
 import { WeatherIconProps } from '../types'
+import { FC } from 'react'
 
-export const WeatherIcon: React.FC<WeatherIconProps> = ({
-    icon,
-}: WeatherIconProps) => {
+export const WeatherIcon: FC<WeatherIconProps> = ({ icon }) => {
     if (icon === '01d') {
         return (
             <div style={{ color: `rgba(238, 40, 0, 0.6)` }}>

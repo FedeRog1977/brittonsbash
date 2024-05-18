@@ -1,12 +1,13 @@
 import { Button } from '../../../../bash-blocks'
 import { generateUniqueKey, useScreenWidth } from '../../../../../scripts'
 import { InstantGramSearchListProps } from '../types'
+import { FC } from 'react'
 
-export const InstantGramSearchList: React.FC<InstantGramSearchListProps> = ({
+export const InstantGramSearchList: FC<InstantGramSearchListProps> = ({
     url,
     func,
     items,
-}: InstantGramSearchListProps) => {
+}) => {
     const { isMobile } = useScreenWidth()
 
     return (
@@ -29,7 +30,6 @@ export const InstantGramSearchList: React.FC<InstantGramSearchListProps> = ({
                     }
                     subContent={id.slice(-2)}
                     subContentTop
-                    color="darkerGrey"
                     coarsePadding
                 />
             ))}

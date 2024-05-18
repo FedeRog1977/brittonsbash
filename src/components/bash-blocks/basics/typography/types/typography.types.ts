@@ -1,13 +1,8 @@
-import {
-    AlignProps,
-    ColorProps,
-    ImageProps,
-    LinkProps,
-    MarginProps,
-} from '../../reference'
+import { ElementType } from 'react'
+import { AlignProps, ColorProps, LinkProps } from '../../../reference'
 
-export type TypographyTextProps = {
-    type?:
+export type TextProps = {
+    type:
         | 't1'
         | 't2'
         | 'h1'
@@ -18,8 +13,8 @@ export type TypographyTextProps = {
         | 'caption'
         | 'footnote'
         | 'tiny'
-    content?: string | React.ReactElement | React.ReactNode | Element
-    imageContent?: ImageProps
+    children?: string | React.ReactElement | React.ReactNode | Element
+    element?: ElementType
     color?: ColorProps
     inline?: boolean
     boldFace?: boolean
@@ -31,10 +26,8 @@ export type TypographyTextProps = {
     shadow?: boolean
 }
 
-export type TypographyStyleProps = {
+export type StyleProps = {
     fontFamily?: 'serif' | 'sansSerif'
     textAlign?: AlignProps
     paragraphMargins?: boolean
-} & MarginProps
-
-export type TypographyProps = TypographyTextProps & TypographyStyleProps
+}

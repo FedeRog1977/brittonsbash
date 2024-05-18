@@ -1,13 +1,14 @@
+import { FC } from 'react'
 import { generateUniqueKey, useScreenWidth } from '../../../../scripts'
-import { Grid, Typography } from '../../basics'
+import { Grid, Spacing, Typography } from '../../basics'
 import styles from './table.module.scss'
 import { ColumnTableProps, RowTableProps } from './table.types'
 
-export const ColumnTable: React.FC<ColumnTableProps> = ({
+export const ColumnTable: FC<ColumnTableProps> = ({
     leftColumn,
     rightColumns,
     scroll,
-}: ColumnTableProps) => {
+}) => {
     const { isMobile } = useScreenWidth()
 
     const content: React.ReactElement = (
@@ -22,25 +23,26 @@ export const ColumnTable: React.FC<ColumnTableProps> = ({
                         }}
                     >
                         {leftColumn.title != null ? (
-                            <Typography
-                                type="footnote"
-                                content={leftColumn.title}
-                                boldFace
-                                inline
-                            />
+                            <Typography type="footnote" boldFace inline>
+                                {leftColumn.title}
+                            </Typography>
                         ) : (
-                            <Typography type="footnote" content={<>&nbsp;</>} />
+                            <Typography type="footnote">
+                                <>&nbsp;</>
+                            </Typography>
                         )}
                         {leftColumn.entries?.map((entry, index) => {
                             if (entry)
                                 return (
-                                    <Typography
-                                        key={generateUniqueKey(index)}
-                                        type="footnote"
-                                        content={entry}
-                                        boldFace
-                                        mT={isMobile ? 3.75 : 7.5}
-                                    />
+                                    <Spacing mT={isMobile ? 3.75 : 7.5}>
+                                        <Typography
+                                            key={generateUniqueKey(index)}
+                                            type="footnote"
+                                            boldFace
+                                        >
+                                            {entry}
+                                        </Typography>
+                                    </Spacing>
                                 )
 
                             return null
@@ -58,21 +60,20 @@ export const ColumnTable: React.FC<ColumnTableProps> = ({
                                 display: 'inline-block',
                             }}
                         >
-                            <Typography
-                                type="footnote"
-                                content={title}
-                                boldFace
-                                inline
-                            />
+                            <Typography type="footnote" boldFace inline>
+                                {title}
+                            </Typography>
                             {entries?.map((entry, index) => {
                                 if (entry)
                                     return (
-                                        <Typography
-                                            key={generateUniqueKey(index)}
-                                            type="footnote"
-                                            content={entry}
-                                            mT={isMobile ? 3.75 : 7.5}
-                                        />
+                                        <Spacing mT={isMobile ? 3.75 : 7.5}>
+                                            <Typography
+                                                key={generateUniqueKey(index)}
+                                                type="footnote"
+                                            >
+                                                {entry}
+                                            </Typography>
+                                        </Spacing>
                                     )
 
                                 return null
@@ -96,10 +97,7 @@ export const ColumnTable: React.FC<ColumnTableProps> = ({
     return content
 }
 
-export const RowTable: React.FC<RowTableProps> = ({
-    titleRow,
-    rows,
-}: RowTableProps) => {
+export const RowTable: FC<RowTableProps> = ({ titleRow, rows }) => {
     const { isMobile } = useScreenWidth()
 
     return (
@@ -114,13 +112,13 @@ export const RowTable: React.FC<RowTableProps> = ({
                         }}
                     >
                         {titleRow.leftItem != null ? (
-                            <Typography
-                                type="footnote"
-                                content={titleRow.leftItem}
-                                boldFace
-                            />
+                            <Typography type="footnote" boldFace>
+                                {titleRow.leftItem}
+                            </Typography>
                         ) : (
-                            <Typography type="footnote" content={<>&nbsp;</>} />
+                            <Typography type="footnote">
+                                <>&nbsp;</>
+                            </Typography>
                         )}
                     </div>
                 </Grid>
@@ -137,11 +135,9 @@ export const RowTable: React.FC<RowTableProps> = ({
                             display: 'inline-block',
                         }}
                     >
-                        <Typography
-                            type="footnote"
-                            content={titleRow.rightItem}
-                            boldFace
-                        />
+                        <Typography type="footnote" boldFace>
+                            {titleRow.rightItem}
+                        </Typography>
                     </div>
                 </Grid>
                 <>
@@ -161,12 +157,14 @@ export const RowTable: React.FC<RowTableProps> = ({
                                                 display: 'inline-block',
                                             }}
                                         >
-                                            <Typography
-                                                type="footnote"
-                                                content={leftItem}
-                                                boldFace
-                                                mT={isMobile ? 3.75 : 7.5}
-                                            />
+                                            <Spacing mT={isMobile ? 3.75 : 7.5}>
+                                                <Typography
+                                                    type="footnote"
+                                                    boldFace
+                                                >
+                                                    {leftItem}
+                                                </Typography>
+                                            </Spacing>
                                         </div>
                                     </Grid>
                                     <Grid
@@ -184,11 +182,11 @@ export const RowTable: React.FC<RowTableProps> = ({
                                                 display: 'inline-block',
                                             }}
                                         >
-                                            <Typography
-                                                type="footnote"
-                                                content={rightItem}
-                                                mT={isMobile ? 3.75 : 7.5}
-                                            />
+                                            <Spacing mT={isMobile ? 3.75 : 7.5}>
+                                                <Typography type="footnote">
+                                                    {rightItem}
+                                                </Typography>
+                                            </Spacing>
                                         </div>
                                     </Grid>
                                 </>

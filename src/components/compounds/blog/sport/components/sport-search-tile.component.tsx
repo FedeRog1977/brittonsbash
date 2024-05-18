@@ -5,16 +5,17 @@ import {
     faTrophy,
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FC } from 'react'
 import { useScreenWidth } from '../../../../../scripts'
 import { Tile, Button, Grid } from '../../../../bash-blocks'
 import { SportSearchTileProps } from '../types'
 
-export const SportSearchTile: React.FC<SportSearchTileProps> = ({
+export const SportSearchTile: FC<SportSearchTileProps> = ({
     funcSelect,
     isRoadies,
     isProjects,
     isMiles,
-}: SportSearchTileProps) => {
+}) => {
     const { isMobile } = useScreenWidth()
 
     return (
@@ -29,7 +30,6 @@ export const SportSearchTile: React.FC<SportSearchTileProps> = ({
                         content={<FontAwesomeIcon icon={faBiking} />}
                         subContent="Roadies"
                         subContentTop={isMobile}
-                        color="darkerGrey"
                     />
                 </Grid>
                 <Grid columnItem={[2, 4]}>
@@ -41,7 +41,6 @@ export const SportSearchTile: React.FC<SportSearchTileProps> = ({
                         content={<FontAwesomeIcon icon={faMountainSun} />}
                         subContent="Projects"
                         subContentTop={isMobile}
-                        color="darkerGrey"
                     />
                 </Grid>
                 <Grid columnItem={[3, 4]}>
@@ -53,7 +52,6 @@ export const SportSearchTile: React.FC<SportSearchTileProps> = ({
                         content={<FontAwesomeIcon icon={faWalking} />}
                         subContent="Miles"
                         subContentTop={isMobile}
-                        color="darkerGrey"
                     />
                 </Grid>
                 <Grid columnItem={[4, 4]}>
@@ -65,7 +63,6 @@ export const SportSearchTile: React.FC<SportSearchTileProps> = ({
                         content={<FontAwesomeIcon icon={faTrophy} />}
                         subContent="Tennis"
                         subContentTop={isMobile}
-                        color="darkerGrey"
                     />
                 </Grid>
             </Grid>

@@ -1,11 +1,12 @@
+import { FC } from 'react'
 import { formatItems, generateUniqueKey } from '../../../../../scripts'
 import { Flex } from '../../../basics'
 import { BookshelfProps, Bookshelf } from '../../../partials'
 import { ArticleTileBookShelfProps } from '../article-tile.types'
 
-export const ArticleTileBookShelf: React.FC<ArticleTileBookShelfProps> = ({
+export const ArticleTileBookShelf: FC<ArticleTileBookShelfProps> = ({
     items,
-}: ArticleTileBookShelfProps) => {
+}) => {
     const formattedItems = formatItems(
         3,
         items ? items : []

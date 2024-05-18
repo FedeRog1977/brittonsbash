@@ -4,17 +4,17 @@ import {
     useScreenWidth,
     useShowElement,
 } from '../../../../../scripts'
-import { useState } from 'react'
+import { FC, useState } from 'react'
 import { InstantGramSearchTileProps } from '../types'
 import { InstantGramSearchList } from './instant-gram-search-list.component'
 import { BigSearch } from '../../../../bash-blocks'
 
-export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
+export const InstantGramSearchTile: FC<InstantGramSearchTileProps> = ({
     url,
     funcInput,
     funcButton,
     funcSelect,
-}: InstantGramSearchTileProps) => {
+}) => {
     const { isMobile } = useScreenWidth()
     const { showElement, setShowElement } = useShowElement()
 
@@ -40,7 +40,7 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
             <BigSearch
                 funcInput={funcInput}
                 funcButton={funcButton}
-                placeholder="Search Events"
+                placeholder="Lookup Events"
             />
             <Spacing mY={30} />
             <Grid
@@ -62,7 +62,6 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                         content="2024"
                         subContent="Season 5"
                         subContentTop={isMobile}
-                        color="darkerGrey"
                     />
                 </Grid>
                 <Grid columnItem={[2, 3]} rowItem={[1, 2]}>
@@ -78,7 +77,6 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                         content="2023"
                         subContent="Season 4"
                         subContentTop={isMobile}
-                        color="darkerGrey"
                     />
                 </Grid>
                 <Grid columnItem={[3, 3]} rowItem={[1, 2]}>
@@ -94,7 +92,6 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                         content="2022"
                         subContent="Season 3"
                         subContentTop={isMobile}
-                        color="darkerGrey"
                     />
                 </Grid>
                 <Grid columnItem={[1, 3]} rowItem={[2, 2]}>
@@ -110,7 +107,6 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                         content="2021"
                         subContent="Season 2"
                         subContentTop={isMobile}
-                        color="darkerGrey"
                     />
                 </Grid>
                 <Grid columnItem={[2, 3]} rowItem={[2, 2]}>
@@ -126,19 +122,17 @@ export const InstantGramSearchTile: React.FC<InstantGramSearchTileProps> = ({
                         content="2020"
                         subContent="Season 1"
                         subContentTop={isMobile}
-                        color="darkerGrey"
                     />
                 </Grid>
             </Grid>
             {showElement && (
-                <>
-                    <Spacing mY={30} />
+                <Spacing mY={30}>
                     <InstantGramSearchList
                         url={url}
                         func={funcSelect}
                         items={parsedEventData}
                     />
-                </>
+                </Spacing>
             )}
         </Tile>
     )

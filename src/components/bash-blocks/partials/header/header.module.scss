@@ -1,10 +1,10 @@
 @use '../../reference' as reference;
 
 .header {
-    background-color: reference.$darker-grey;
+    background-color: reference.$black;
     display: grid;
     align-items: center;
-    color: reference.$light-grey;
+    color: reference.$white;
 
     &Sub {
         background-color: reference.$dark-grey;
@@ -14,11 +14,11 @@
 
     &Navigation {
         font-family: Audi-Light;
-        color: reference.$light-grey;
+        color: reference.$white;
 
         a {
             text-decoration: none;
-            color: reference.$light-grey;
+            color: reference.$white;
             transition: color reference.$transition-long;
         }
 

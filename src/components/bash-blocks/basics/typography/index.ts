@@ -1,2 +1,2 @@
 export * from './typography.component'
-export * from './typography.types'
+export * from './types/typography.types'

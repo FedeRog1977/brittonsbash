@@ -24,11 +24,9 @@ export const Footer = () => (
                                 <div className={styles.footerLogo}>
                                     BrittonsBashRC
                                 </div>
-                                <Typography
-                                    type="body"
-                                    content={<code>brittonsbash.com</code>}
-                                    color="lightGrey"
-                                />
+                                <Typography type="body" color="lightGrey">
+                                    {<code>brittonsbash.com</code>}
+                                </Typography>
                             </Grid>
                         </Grid>
                     </Grid>
@@ -48,28 +46,22 @@ export const Footer = () => (
                             />
                         </Grid>
                         <Grid columnItem={[2, 2]}>
-                            <Typography
-                                type="body"
-                                content="Monero Donations"
-                                color="lightGrey"
-                            />
+                            <Typography type="body" color="lightGrey">
+                                Monero Donations
+                            </Typography>
                         </Grid>
                     </Grid>
                 </Grid>
                 <Grid rowItem={[3, 5]}>
-                    <Typography
-                        type="footnote"
-                        content={
-                            <code>
-                                4ALBFTLBcv68zhmy8vvdTdjLZ2bisn5RPcM8KF6hDWGhj7
-                                <br />
-                                f37dfqwzGCqq1Vug13vmBkxoQARfNnrbNEcqsj
-                                <br />
-                                ZMTJSSkB46V
-                            </code>
-                        }
-                        color="lightGrey"
-                    />
+                    <Typography type="footnote" color="lightGrey">
+                        <code>
+                            4ALBFTLBcv68zhmy8vvdTdjLZ2bisn5RPcM8KF6hDWGhj7
+                            <br />
+                            f37dfqwzGCqq1Vug13vmBkxoQARfNnrbNEcqsj
+                            <br />
+                            ZMTJSSkB46V
+                        </code>
+                    </Typography>
                 </Grid>
                 <Grid rowItem={[4, 5]}>
                     <img
@@ -79,11 +71,9 @@ export const Footer = () => (
                     />
                 </Grid>
                 <Grid rowItem={[5, 5]}>
-                    <Typography
-                        type="body"
-                        content={<>&#169; Lewis Britton 2020&mdash;2024</>}
-                        color="lightGrey"
-                    />
+                    <Typography type="body" color="lightGrey">
+                        <>&#169; Lewis Britton 2020&mdash;2024</>
+                    </Typography>
                 </Grid>
             </Grid>
         </Spacing>

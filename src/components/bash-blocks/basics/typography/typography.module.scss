@@ -1,7 +1,5 @@
 @use '../../reference' as reference;
 
-// Image
-
 .image {
     &Container {
         text-align: center;
@@ -16,8 +14,6 @@
         max-width: 250px;
     }
 }
-
-// Serif
 
 .serif {
     padding: 0;
@@ -124,8 +120,6 @@
         font-family: CMU-Bold-Italic;
     }
 }
-
-// Sans-Serif
 
 $sans-regular: Audi-Light;
 $sans-light: Audi-Light;
@@ -321,13 +315,9 @@ $sans-bold-italic: Audi-Bold-Italic;
     }
 }
 
-// Small-Caps
-
 .smallCaps {
     font-variant: small-caps;
 }
-
-// Text Decoration
 
 .textDecoration {
     &None {
@@ -350,7 +340,8 @@ $sans-bold-italic: Audi-Bold-Italic;
 // Links
 
 a {
-    color: reference.$darker-grey;
+    // This isn't very versatile but I suppose links will always just be white
+    color: reference.$white;
     text-decoration: none;
     transition: color reference.$transition-long;
 }
@@ -360,8 +351,6 @@ a:hover {
     transition: color reference.$transition-long;
     cursor: pointer;
 }
-
-// Align
 
 .align {
     &Inherit {
@@ -385,13 +374,9 @@ a:hover {
     }
 }
 
-// Inline
-
 .inline {
     display: inline;
 }
-
-// Color
 
 .color {
     &Black {
@@ -431,8 +416,6 @@ a:hover {
     }
 }
 
-// Paragraph Margins
-
 .paragraphMargins {
     &Desktop {
         margin-bottom: 30px;
@@ -442,8 +425,6 @@ a:hover {
         margin-bottom: 15px;
     }
 }
-
-// Shadow
 
 .shadow {
     text-shadow: 0px 0px 5px reference.$darker-grey;

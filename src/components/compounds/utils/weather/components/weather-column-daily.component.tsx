@@ -28,6 +28,7 @@ export const WeatherColumnDaily = ({
     sr,
     ss,
 }: any) => {
+    // Add props
     const { weekday, dayOfMonth } = toDate(dt)
     const precipitation = toPrecipitation(pop)
     const { time: sunrise } = toDate(sr)
@@ -42,27 +43,29 @@ export const WeatherColumnDaily = ({
     return (
         <>
             <Spacing pY={20} textAlign="center">
-                <Typography type="h4" content={weekday} />
-                <Typography type="body" content={dayOfMonth} paragraphMargins />
-                <Typography
-                    type="h1"
-                    content={<WeatherIcon icon={icon} />}
-                    paragraphMargins
-                />
-                <Typography type="body" content={precipitation} />
-                <Typography
-                    type="body"
-                    content={toSentenceCase(desc)}
-                    paragraphMargins
-                />
+                <Typography type="h4">{weekday}</Typography>
+                <Typography type="body" paragraphMargins>
+                    {dayOfMonth}
+                </Typography>
+                <Typography type="h1" paragraphMargins>
+                    <WeatherIcon icon={icon} />
+                </Typography>
+                <Typography type="body">{precipitation}</Typography>
+                <Typography type="body" paragraphMargins>
+                    {toSentenceCase(desc)}
+                </Typography>
                 <Grid alignColumns="auto">
                     <Grid columnItem={[1, 2]}>
-                        <Typography type="body" content="Sunrise:" boldFace />
-                        <Typography type="body" content={sunrise} />
+                        <Typography type="body" boldFace>
+                            Sunrise:
+                        </Typography>
+                        <Typography type="body">{sunrise}</Typography>
                     </Grid>
                     <Grid columnItem={[2, 2]}>
-                        <Typography type="body" content="Sunset:" boldFace />
-                        <Typography type="body" content={sunset} />
+                        <Typography type="body" boldFace>
+                            Sunset:
+                        </Typography>
+                        <Typography type="body">{sunset}</Typography>
                     </Grid>
                 </Grid>
             </Spacing>
@@ -80,10 +83,12 @@ export const WeatherColumnDaily = ({
                 </Grid>
             </Spacing>
             <Spacing pY={20} textAlign="center">
-                <Typography type="body" content={bearingCompass} />
-                <Typography type="body" content={bearingArrow} />
-                <Typography type="footnote" content={bearing} />
-                <Typography type="footnote" content={speed} boldFace />
+                <Typography type="body">{bearingCompass}</Typography>
+                <Typography type="body">{bearingArrow}</Typography>
+                <Typography type="footnote">{bearing}</Typography>
+                <Typography type="footnote" boldFace>
+                    {speed}
+                </Typography>
             </Spacing>
             <Spacing pY={20} textAlign="center">
                 <Flex>
@@ -91,52 +96,48 @@ export const WeatherColumnDaily = ({
                         <Spacing textAlign="center" mR={2.5}>
                             <Typography
                                 type="footnote"
-                                content="Pressure:"
                                 textAlign="right"
                                 boldFace
-                            />
+                            >
+                                Pressure:
+                            </Typography>
                             <Typography
                                 type="footnote"
-                                content="Humidity:"
                                 textAlign="right"
                                 boldFace
-                            />
+                            >
+                                Humidity:
+                            </Typography>
                             <Typography
                                 type="footnote"
-                                content="Dew Pt.:"
                                 textAlign="right"
                                 boldFace
-                            />
+                            >
+                                Dew Pt.:
+                            </Typography>
                             <Typography
                                 type="footnote"
-                                content="UV Index:"
                                 textAlign="right"
                                 boldFace
-                            />
+                            >
+                                UV Index:
+                            </Typography>
                         </Spacing>
                     </Flex>
                     <Flex item>
                         <Spacing textAlign="center" mL={2.5}>
-                            <Typography
-                                type="footnote"
-                                content={pressure + 'mb'}
-                                textAlign="left"
-                            />
-                            <Typography
-                                type="footnote"
-                                content={humidity + '%'}
-                                textAlign="left"
-                            />
-                            <Typography
-                                type="footnote"
-                                content={dp}
-                                textAlign="left"
-                            />
-                            <Typography
-                                type="footnote"
-                                content={uvi}
-                                textAlign="left"
-                            />
+                            <Typography type="footnote" textAlign="left">
+                                {pressure + 'mb'}
+                            </Typography>
+                            <Typography type="footnote" textAlign="left">
+                                {humidity + '%'}
+                            </Typography>
+                            <Typography type="footnote" textAlign="left">
+                                {dp}
+                            </Typography>
+                            <Typography type="footnote" textAlign="left">
+                                {uvi}
+                            </Typography>
                         </Spacing>
                     </Flex>
                 </Flex>

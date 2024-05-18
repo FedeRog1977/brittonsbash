@@ -1,8 +1,9 @@
+import { FC } from 'react'
 import { VideoTile } from '../../../bash-blocks'
 import { MiamiViceSearchTile } from './components'
 import { useMiamiVice } from './hooks/use-miami-vice.hook'
 
-export const MiamiVice: React.FC = () => {
+export const MiamiVice: FC = () => {
     const { handleSelect, video } = useMiamiVice()
 
     return (

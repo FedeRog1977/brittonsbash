@@ -1,29 +1,31 @@
+import { FC } from 'react'
 import { useScreenWidth } from '../../../../scripts'
 import { Tile, Typography } from '../../basics'
 import { Anchor } from '../../basics/anchor'
 import { VideoTileProps } from './video-tile.types'
 
-export const VideoTile: React.FC<VideoTileProps> = ({
+export const VideoTile: FC<VideoTileProps> = ({
     type = 'clear',
     anchor,
     heading,
     subHeading,
     video,
     controls = false,
-}: VideoTileProps) => {
+}) => {
     const { isMobile } = useScreenWidth()
 
     return (
         <Tile type={type}>
             {anchor ? <Anchor url={anchor} /> : null}
-            {subHeading && <Typography type="h2" content={subHeading} light />}
+            {subHeading && (
+                <Typography type="h2" light>
+                    {subHeading}
+                </Typography>
+            )}
             {heading && (
-                <Typography
-                    type="h1"
-                    content={heading}
-                    light
-                    paragraphMargins
-                />
+                <Typography type="h1" light paragraphMargins>
+                    {heading}
+                </Typography>
             )}
             <iframe
                 frameBorder="none"

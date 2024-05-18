@@ -1,13 +1,13 @@
 import { Button, Grid, Tile, VideoTileProps } from '../../../../bash-blocks'
 import { useScreenWidth, useShowElement } from '../../../../../scripts'
-import { useState } from 'react'
+import { FC, useState } from 'react'
 import { MiamiViceSearchTileProps } from '../types'
 import { MiamiViceSearchList } from './miami-vice-search-list.component'
 import { miamiViceContent } from '../content'
 
-export const MiamiViceSearchTile: React.FC<MiamiViceSearchTileProps> = ({
+export const MiamiViceSearchTile: FC<MiamiViceSearchTileProps> = ({
     funcSelect,
-}: MiamiViceSearchTileProps) => {
+}) => {
     const { isMobile } = useScreenWidth()
     const { showElement, setShowElement } = useShowElement()
 

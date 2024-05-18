@@ -1,11 +1,12 @@
 import { Button } from '../../../../bash-blocks'
 import { generateUniqueKey, useScreenWidth } from '../../../../../scripts'
 import { MiamiViceSearchListProps } from '../types'
+import { FC } from 'react'
 
-export const MiamiViceSearchList: React.FC<MiamiViceSearchListProps> = ({
+export const MiamiViceSearchList: FC<MiamiViceSearchListProps> = ({
     func,
     items,
-}: MiamiViceSearchListProps) => {
+}) => {
     const { isMobile } = useScreenWidth()
 
     return (

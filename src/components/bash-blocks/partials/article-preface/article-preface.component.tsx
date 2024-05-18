@@ -1,32 +1,30 @@
+import { FC } from 'react'
 import { Typography } from '../../basics'
 import { ArticlePrefaceProps } from './article-preface.types'
 
-export const ArticlePreface: React.FC<ArticlePrefaceProps> = ({
-    entries,
-}: ArticlePrefaceProps) => {
+export const ArticlePreface: FC<ArticlePrefaceProps> = ({ entries }) => {
     return (
         <>
-            {entries.map(
-                ({ title, content }: ArticlePrefaceProps['entries'][0]) => {
-                    if (Boolean(title && content)) {
-                        return (
-                            <Typography
-                                type="body"
-                                content={
-                                    <>
-                                        <Typography content={title} boldFace />
-                                        <Typography content={content} />
-                                    </>
-                                }
-                                textAlign="center"
-                                paragraphMargins
-                            />
-                        )
-                    }
-
-                    return null
+            {entries.map(({ title, content }) => {
+                if (Boolean(title && content)) {
+                    return (
+                        <Typography
+                            type="body"
+                            textAlign="center"
+                            paragraphMargins
+                        >
+                            <>
+                                <Typography type="body" boldFace>
+                                    {title}
+                                </Typography>
+                                <Typography type="body">{content}</Typography>
+                            </>
+                        </Typography>
+                    )
                 }
-            )}
+
+                return null
+            })}
         </>
     )
 }

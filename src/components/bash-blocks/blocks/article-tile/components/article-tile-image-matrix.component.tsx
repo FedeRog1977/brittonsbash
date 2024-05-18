@@ -1,6 +1,7 @@
+import { FC } from 'react'
 import { ImageMatrix } from '../../../partials'
 import { ArticleTileImageMatrixProps } from '../article-tile.types'
 
-export const ArticleTileImageMatrix: React.FC<ArticleTileImageMatrixProps> = ({
+export const ArticleTileImageMatrix: FC<ArticleTileImageMatrixProps> = ({
     items,
-}: ArticleTileImageMatrixProps) => <ImageMatrix items={items} />
+}) => <ImageMatrix items={items} />

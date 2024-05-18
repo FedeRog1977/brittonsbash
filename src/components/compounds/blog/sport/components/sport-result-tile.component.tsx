@@ -17,10 +17,10 @@ import {
     fromBritishGridProjection,
     useShowElement,
 } from '../../../../../scripts'
-import { useState } from 'react'
+import { FC, useState } from 'react'
 import { SportResultTileProps } from '../types'
 
-export const SportResultTile: React.FC<SportResultTileProps> = ({
+export const SportResultTile: FC<SportResultTileProps> = ({
     title,
     subTitle,
     description,
@@ -34,7 +34,7 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
     sport2022,
     sport2021,
     sport2020,
-}: SportResultTileProps) => {
+}) => {
     const { isMobile } = useScreenWidth()
     const [sportYearData, setSportYearData] = useState(sport2024)
 
@@ -44,25 +44,24 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
     return (
         <Tile type="solid">
             <Spacing mB={isMobile ? 7.5 : 15}>
-                <Typography type="t1" content={title} textAlign="center" />
+                <Typography type="t1" textAlign="center">
+                    {title}
+                </Typography>
             </Spacing>
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
-                <Typography
-                    type="h4"
-                    content={subTitle}
-                    color="mediumGrey"
-                    textAlign="center"
-                />
+                <Typography type="h4" color="mediumGrey" textAlign="center">
+                    {subTitle}
+                </Typography>
             </Spacing>
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
-                <Typography
-                    type="body"
-                    content={description}
-                    textAlign="left"
-                />
+                <Typography type="body" textAlign="left">
+                    {description}
+                </Typography>
             </Spacing>
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
-                <Typography type="h2" content="Summary" textAlign="left" />
+                <Typography type="h2" textAlign="left">
+                    Summary
+                </Typography>
             </Spacing>
             <Spacing
                 mX={isMobile ? -40 : 0}
@@ -118,11 +117,9 @@ export const SportResultTile: React.FC<SportResultTileProps> = ({
                 />
             </Spacing>
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
-                <Typography
-                    type="h2"
-                    content={isProjects ? 'Hills' : 'Routes'}
-                    textAlign="left"
-                />
+                <Typography type="h2" textAlign="left">
+                    {isProjects ? 'Hills' : 'Routes'}
+                </Typography>
             </Spacing>
             <Spacing
                 mX={isMobile ? -40 : 0}

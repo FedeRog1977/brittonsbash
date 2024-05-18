@@ -1,22 +1,22 @@
-import { ArticleProps, TypographyTextProps } from '../../components/bash-blocks'
+import { ArticleProps, TextProps } from '../../components/bash-blocks'
 
 export function formatArticle(
     sections: ArticleProps['sections'],
-    type?: TypographyTextProps['type'],
-    color?: TypographyTextProps['color'],
-    boldFace?: TypographyTextProps['boldFace'],
-    italicize?: TypographyTextProps['italicize'],
-    smallCaps?: TypographyTextProps['smallCaps'],
-    textDecoration?: TypographyTextProps['textDecoration'],
-    light?: TypographyTextProps['light'],
-    shadow?: TypographyTextProps['shadow']
+    type: TextProps['type'],
+    color?: TextProps['color'],
+    boldFace?: TextProps['boldFace'],
+    italicize?: TextProps['italicize'],
+    smallCaps?: TextProps['smallCaps'],
+    textDecoration?: TextProps['textDecoration'],
+    light?: TextProps['light'],
+    shadow?: TextProps['shadow']
 ) {
     const formattedSections: ArticleProps['sections'] = []
 
-    sections.forEach((section: ArticleProps['sections'][0]) => {
+    sections.forEach((section) => {
         formattedSections.push({
             type: section.type ? section.type : type,
-            content: section.content,
+            children: section.children,
             color: section.color ? section.color : color,
             boldFace: section.boldFace ? section.boldFace : boldFace,
             italicize: section.italicize ? section.italicize : italicize,

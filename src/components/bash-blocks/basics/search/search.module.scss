@@ -4,8 +4,8 @@ input[type='text'] {
     &.search {
         font-family: Sans-Regular;
         font-size: 16px;
-        color: reference.$medium-grey;
-        background-color: reference.$lighter-grey;
+        background-color: reference.$dark-grey;
+        color: reference.$white;
         width: 98%;
         border: none;
         border-radius: reference.$corners-small;
@@ -22,8 +22,8 @@ select {
     &.search {
         font-family: Sans-Regular;
         font-size: 16px;
-        color: reference.$medium-grey;
-        background-color: reference.$lighter-grey;
+        background-color: reference.$dark-grey;
+        color: reference.$white;
         width: 100%;
         border: none;
         border-radius: reference.$corners-small;

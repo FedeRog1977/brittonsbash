@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { InstantGramSearchTile, InstantGramResultTile } from './components'
 import { useInstantGram } from './hooks'
 
-export const InstantGram: React.FC = () => {
+export const InstantGram: FC = () => {
     const {
         url,
         handleInput,

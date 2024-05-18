@@ -1,14 +1,15 @@
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FC } from 'react'
 import { toTemperature, useScreenWidth } from '../../../../../scripts'
 import { ColorProps, Spacing, Typography } from '../../../../bash-blocks'
 import { WeatherTemperatureProps } from '../types'
 
-export const WeatherTemperature: React.FC<WeatherTemperatureProps> = ({
+export const WeatherTemperature: FC<WeatherTemperatureProps> = ({
     temp,
     suffix,
     icon,
-}: WeatherTemperatureProps) => {
+}) => {
     const { isMobile } = useScreenWidth()
 
     let backgroundColor = undefined
@@ -34,19 +35,13 @@ export const WeatherTemperature: React.FC<WeatherTemperatureProps> = ({
     return (
         <div style={{ background: backgroundColor }}>
             <Spacing pY={isMobile ? 5 : 10} textAlign="center">
-                <Typography
-                    type="footnote"
-                    content={toTemperature(temp)}
-                    color={fontColor}
-                    inline
-                />
+                <Typography type="footnote" color={fontColor} inline>
+                    {toTemperature(temp)}
+                </Typography>
                 {suffix && (
-                    <Typography
-                        type="footnote"
-                        content={<>&nbsp;{suffix}</>}
-                        color={fontColor}
-                        inline
-                    />
+                    <Typography type="footnote" color={fontColor} inline>
+                        <>&nbsp;{suffix}</>
+                    </Typography>
                 )}
                 {icon && (
                     <>

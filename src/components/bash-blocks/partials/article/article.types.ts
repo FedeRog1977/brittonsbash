@@ -1,9 +1,9 @@
-import { TypographyTextProps, TypographyProps } from '../../basics'
-import { AlignProps, MarginProps } from '../../reference'
+import { TextProps, TypographyProps } from '../../basics'
+import { AlignProps } from '../../reference'
 
 export type ArticleProps = {
-    sections: TypographyTextProps[]
+    sections: TextProps[]
     fontFamily?: TypographyProps['fontFamily']
     textAlign?: AlignProps
     extendParagraphMargins?: boolean
-} & MarginProps
+}

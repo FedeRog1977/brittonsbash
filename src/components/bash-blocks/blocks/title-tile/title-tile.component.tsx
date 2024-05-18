@@ -1,26 +1,23 @@
+import { FC } from 'react'
 import { useScreenWidth } from '../../../../scripts'
 import { Grid, Spacing, Tile, Typography } from '../../basics'
 import { TitleTileItemsProps, TitleTileProps } from './title-tile.types'
 
-export const TitleTile: React.FC<TitleTileProps> = ({
+export const TitleTile: FC<TitleTileProps> = ({
     heading,
     titleItems,
     bodyItems,
-}: TitleTileProps) => {
+}) => {
     const { isMobile } = useScreenWidth()
 
     return (
         <Tile type="clear" dense>
             {heading && (
-                <>
-                    <Typography
-                        type="h3"
-                        textAlign="center"
-                        content={heading}
-                        light
-                    />
-                    <Spacing mY={20} />
-                </>
+                <Spacing mY={20}>
+                    <Typography type="h3" textAlign="center" light>
+                        {heading}
+                    </Typography>
+                </Spacing>
             )}
             {titleItems && (
                 <Grid alignColumns="auto auto" columnGap={10} rowGap={10}>
@@ -37,9 +34,10 @@ export const TitleTile: React.FC<TitleTileProps> = ({
                                 >
                                     <Typography
                                         type={isMobile ? 'h4' : 'h3'}
-                                        content={content}
                                         inline
-                                    />
+                                    >
+                                        {content}
+                                    </Typography>
                                 </Grid>
                                 <Grid
                                     columnItem={[2, 2]}
@@ -48,7 +46,6 @@ export const TitleTile: React.FC<TitleTileProps> = ({
                                 >
                                     <Typography
                                         type={isMobile ? 'h4' : 'h3'}
-                                        content={subContent.content}
                                         link={
                                             subContent.link?.url
                                                 ? {
@@ -60,7 +57,9 @@ export const TitleTile: React.FC<TitleTileProps> = ({
                                         }
                                         light
                                         inline
-                                    />
+                                    >
+                                        {subContent.content}
+                                    </Typography>
                                 </Grid>
                             </>
                         )
@@ -81,11 +80,9 @@ export const TitleTile: React.FC<TitleTileProps> = ({
                                     rowItem={[index + 1, bodyItems.length + 1]}
                                     textAlign="right"
                                 >
-                                    <Typography
-                                        type="body"
-                                        content={content}
-                                        inline
-                                    />
+                                    <Typography type="body" inline>
+                                        {content}
+                                    </Typography>
                                 </Grid>
                                 <Grid
                                     columnItem={[2, 2]}
@@ -94,7 +91,6 @@ export const TitleTile: React.FC<TitleTileProps> = ({
                                 >
                                     <Typography
                                         type="body"
-                                        content={subContent.content}
                                         link={
                                             subContent.link?.url
                                                 ? {
@@ -106,7 +102,9 @@ export const TitleTile: React.FC<TitleTileProps> = ({
                                         }
                                         light
                                         inline
-                                    />
+                                    >
+                                        {subContent.content}
+                                    </Typography>
                                 </Grid>
                             </>
                         )

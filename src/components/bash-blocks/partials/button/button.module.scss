@@ -18,7 +18,7 @@ button {
 .button {
     &Search {
         border-radius: reference.$corners-small;
-        background-color: reference.$darker-grey;
+        background-color: reference.$medium-grey;
         width: 100%;
     }
 
@@ -28,13 +28,13 @@ button {
         transition: background-color reference.$transition-long;
 
         &:hover {
-            background-color: reference.$lighter-grey;
+            background-color: reference.$dark-grey;
             transition: background-color reference.$transition-long;
         }
     }
 
     &RegularSolid {
-        background-color: reference.$lighter-grey;
+        background-color: reference.$dark-grey;
         border-radius: reference.$corners-large;
         transition: background-color reference.$transition-long;
 

@@ -2,11 +2,9 @@ import { toUpperCase } from '../../../../scripts'
 import styles from './background.module.scss'
 import cx from 'classnames'
 import { BackgroundProps } from './background.types'
+import { FC } from 'react'
 
-export const Background: React.FC<BackgroundProps> = ({
-    type = 'logo',
-    content,
-}: BackgroundProps) => {
+export const Background: FC<BackgroundProps> = ({ type = 'logo', content }) => {
     const classNamesText = cx(styles.text, styles[`text${toUpperCase(type)}`])
 
     return (

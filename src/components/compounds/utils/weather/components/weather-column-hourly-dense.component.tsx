@@ -37,26 +37,27 @@ export const WeatherColumnHourlyDense = ({
         return (
             <>
                 <Spacing pY={20} textAlign="center">
-                    <Typography type="h4" content={hour} paragraphMargins />
-                    <Typography
-                        type="h1"
-                        content={<WeatherIcon icon={icon} />}
-                    />
+                    <Typography type="h4" paragraphMargins>
+                        {hour}
+                    </Typography>
+                    <Typography type="h1">
+                        <WeatherIcon icon={icon} />
+                    </Typography>
                     <Spacing pY={20} textAlign="center">
                         <WeatherTemperature temp={temp} />
                     </Spacing>
-                    <Typography type="body" content={precipitation} />
+                    <Typography type="body">{precipitation}</Typography>
                 </Spacing>
                 <Spacing pY={20} textAlign="center">
-                    <Typography type="body" content={bearingCompass} />
-                    <Typography type="body" content={bearingArrow} />
-                    <Typography type="footnote" content={bearing} />
-                    <Typography type="footnote" content={speed} boldFace />
-                    <Typography
-                        type="footnote"
-                        content={gusts + ' gusts'}
-                        boldFace
-                    />
+                    <Typography type="body">{bearingCompass}</Typography>
+                    <Typography type="body">{bearingArrow}</Typography>
+                    <Typography type="footnote">{bearing}</Typography>
+                    <Typography type="footnote" boldFace>
+                        {speed}
+                    </Typography>
+                    <Typography type="footnote" boldFace>
+                        {gusts + ' gusts'}
+                    </Typography>
                 </Spacing>
             </>
         )

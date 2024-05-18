@@ -1,144 +1,110 @@
 import { toUpperCase, useScreenWidth } from '../../../../scripts'
 import cx from 'classnames'
 import styles from './typography.module.scss'
-import { TypographyProps } from './typography.types'
+import { StyleProps, TextProps } from './types/typography.types'
 import Markdown from 'markdown-to-jsx'
+import { createElement, FC } from 'react'
+import { tagType } from './constants/tag-type.constant'
 
-export const Typography: React.FC<TypographyProps> = ({
-    type = 'body',
-    color = 'darkGrey',
+export type TypographyProps = TextProps & StyleProps
+
+export const Typography: FC<TypographyProps> = ({
+    type,
+    children,
+    // element,
+    color = 'white',
+    inline,
+    boldFace,
+    italicize,
+    smallCaps,
+    textDecoration = 'none',
+    link,
+    light,
+    shadow,
+    fontFamily = 'sansSerif',
     textAlign,
-    ...props
-}: TypographyProps) => {
+    paragraphMargins = false,
+}) => {
     const { isMobile } = useScreenWidth()
 
-    const classNamesImgContainer = cx(styles.imageContainer, {
-        [styles.inline]: props.inline,
-        [styles[`paragraphMargins${isMobile ? 'Mobile' : 'Desktop'}`]]:
-            props.paragraphMargins,
-    })
-
-    const classNamesImage = cx(
-        styles[`image${isMobile ? 'Mobile' : 'Desktop'}`]
-    )
-
-    const classNamesTextContainer = cx(
+    const classNamesContainer = cx(
         ...(textAlign ? [styles[`align${toUpperCase(textAlign)}`]] : []),
         {
-            [styles.inline]: props.inline,
+            [styles.inline]: inline,
             [styles[`paragraphMargins${isMobile ? 'Mobile' : 'Desktop'}`]]:
-                props.paragraphMargins,
+                paragraphMargins,
         }
     )
 
     const classNamesText = cx(
-        ...(props.fontFamily === 'serif'
+        ...(fontFamily === 'serif'
             ? [styles[`serif${type ? toUpperCase(type) : ''}`]]
             : [
                   styles[
                       `sansSerif${
-                          type
-                              ? toUpperCase(type) + (props.light ? 'Light' : '')
-                              : ''
+                          type ? toUpperCase(type) + (light ? 'Light' : '') : ''
                       }`
                   ],
               ]),
-        ...(props.fontFamily === 'serif'
-            ? props.boldFace
+        ...(fontFamily === 'serif'
+            ? boldFace
                 ? [styles.serifBold]
                 : []
-            : props.boldFace
+            : boldFace
             ? [styles.sansSerifBold]
             : []),
-        ...(props.fontFamily === 'serif'
-            ? props.italicize
+        ...(fontFamily === 'serif'
+            ? italicize
                 ? [styles.serifItalic]
                 : []
-            : props.italicize
+            : italicize
             ? [styles.sansSerifItalic]
             : []),
-        ...(props.fontFamily === 'serif'
-            ? Boolean(props.boldFace && props.italicize)
+        ...(fontFamily === 'serif'
+            ? Boolean(boldFace && italicize)
                 ? [styles.serifBoldItalic]
                 : []
-            : Boolean(props.boldFace && props.italicize)
+            : Boolean(boldFace && italicize)
             ? [styles.sansSerifBoldItalic]
             : []),
         {
-            [styles.smallCaps]: props.smallCaps,
+            [styles.smallCaps]: smallCaps,
             [styles[
                 `textDecoration${
-                    props.textDecoration
-                        ? toUpperCase(props.textDecoration)
-                        : 'None'
+                    textDecoration ? toUpperCase(textDecoration) : 'None'
                 }`
-            ]]: props.textDecoration,
+            ]]: textDecoration,
             [styles[`color${color ? toUpperCase(color) : 'DarkerGrey'}`]]:
                 color,
-            [styles.shadow]: props.shadow,
+            [styles.shadow]: shadow,
         }
     )
 
-    if (props.imageContent) {
-        return (
-            <div
-                className={classNamesImgContainer}
-                style={{
-                    marginTop: props.mT ? props.mT : 0,
-                    marginBottom: Boolean(!props.paragraphMargins && props.mB)
-                        ? props.mB
-                        : undefined,
-                    marginLeft: props.mL ? props.mL : 0,
-                    marginRight: props.mR ? props.mR : 0,
-                }}
-            >
-                <img
-                    className={classNamesImage}
-                    src={props.imageContent.url}
-                    alt={props.imageContent.alt}
-                />
-                {props.imageContent.description && (
-                    <Typography
-                        type="caption"
-                        content={props.imageContent.description}
-                        fontFamily={props.fontFamily}
-                        mT={5}
-                    />
-                )}
-            </div>
-        )
-    }
+    // const reactElement = element ?? tagType[type]
 
-    const content =
-        typeof props.content === 'string' ? (
-            <Markdown>{props.content}</Markdown>
+    const contentText =
+        typeof children === 'string' ? (
+            <Markdown>{children}</Markdown>
         ) : (
-            props.content
+            // createElement(reactElement, {
+            //     children,
+            // })
+            children
         )
 
     return (
-        <div
-            className={classNamesTextContainer}
-            style={{
-                marginTop: props.mT ? props.mT : 0,
-                marginBottom: Boolean(!props.paragraphMargins && props.mB)
-                    ? props.mB
-                    : undefined,
-                marginLeft: props.mL ? props.mL : 0,
-                marginRight: props.mR ? props.mR : 0,
-            }}
-        >
+        <div className={classNamesContainer}>
             <span className={classNamesText}>
-                {props.link ? (
+                {link ? (
                     <a
-                        href={props.link.url}
-                        target={props.link.newTab ? '_blank' : undefined}
-                        rel={props.link.newTab ? 'noreferrer' : undefined}
+                        href={link.url}
+                        target={link.newTab ? '_blank' : undefined}
+                        rel={link.newTab ? 'noreferrer' : undefined}
                     >
-                        <>{content}</>
+                        <>{contentText}</>
                     </a>
                 ) : (
-                    <>{content}</>
+                    <>{contentText}</>
                 )}
             </span>
         </div>

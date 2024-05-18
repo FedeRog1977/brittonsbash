@@ -1,7 +1,8 @@
+import { FC } from 'react'
 import { SportSearchTile, SportResultTile } from './components'
 import { useSport } from './hooks/use-sport.hook'
 
-export const Sport: React.FC = () => {
+export const Sport: FC = () => {
     const {
         handleSelect,
         title,

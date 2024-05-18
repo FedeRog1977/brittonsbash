@@ -1,3 +1,4 @@
+import { FC } from 'react'
 import {
     formatArticle,
     generateUniqueKey,
@@ -9,7 +10,7 @@ import { Article, Button } from '../../partials'
 import { CtaProps } from '../../reference'
 import { ImageTileProps } from './image-tile.types'
 
-export const ImageTile: React.FC<ImageTileProps> = ({
+export const ImageTile: FC<ImageTileProps> = ({
     imgDesktop,
     imgMobile,
     gradient,
@@ -19,7 +20,7 @@ export const ImageTile: React.FC<ImageTileProps> = ({
     ctas,
     textAlign = 'left',
     invert = false,
-}: ImageTileProps) => {
+}) => {
     const { isMobile } = useScreenWidth()
 
     const handleInverseColor = invert ? 'white' : 'mediumGrey'
@@ -29,19 +30,21 @@ export const ImageTile: React.FC<ImageTileProps> = ({
         <Grid columnItem={handleGridTextPosition}>
             <Typography
                 type="h4"
-                content={subHeading}
                 textAlign={textAlign}
                 color={handleInverseColor}
                 light
-            />
+            >
+                {subHeading}
+            </Typography>
             <Typography
                 type="t1"
-                content={heading}
                 textAlign={textAlign}
                 color={handleInverseColor}
                 light
                 paragraphMargins
-            />
+            >
+                {heading}
+            </Typography>
             {Array.isArray(body) ? (
                 <Article
                     sections={formatArticle(
@@ -61,12 +64,13 @@ export const ImageTile: React.FC<ImageTileProps> = ({
             ) : (
                 <Typography
                     type="body"
-                    content={body}
                     textAlign={textAlign === 'right' ? 'right' : 'justify'}
                     color={handleInverseColor}
                     light
                     paragraphMargins
-                />
+                >
+                    {body}
+                </Typography>
             )}
         </Grid>
     )

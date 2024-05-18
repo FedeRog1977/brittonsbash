@@ -1,11 +1,10 @@
+import { FC } from 'react'
 import { formatArticle } from '../../../../scripts'
 import { Tile, Typography } from '../../basics'
 import { Article } from '../../partials'
 import { FootnoteTileProps } from './footnote-tile.types'
 
-export const FootnoteTile: React.FC<FootnoteTileProps> = ({
-    content,
-}: FootnoteTileProps) => (
+export const FootnoteTile: FC<FootnoteTileProps> = ({ content }) => (
     <Tile type="clear">
         {Array.isArray(content) ? (
             <Article
@@ -23,7 +22,9 @@ export const FootnoteTile: React.FC<FootnoteTileProps> = ({
                 textAlign="justify"
             />
         ) : (
-            <Typography type="footnote" textAlign="justify" content={content} />
+            <Typography type="footnote" textAlign="justify">
+                {content}
+            </Typography>
         )}
     </Tile>
 )

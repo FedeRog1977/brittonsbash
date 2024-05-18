@@ -4,13 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import { ModalProps } from './modal.types'
 import cx from 'classnames'
+import { FC } from 'react'
 
-export const Modal: React.FC<ModalProps> = ({
-    isOpen,
-    onClose,
-    solid,
-    children,
-}: ModalProps) => (
+export const Modal: FC<ModalProps> = ({ isOpen, onClose, solid, children }) => (
     <ReactModal
         className={cx(styles.modal, { [styles.modalSolid]: solid })}
         overlayClassName={styles.overlay}

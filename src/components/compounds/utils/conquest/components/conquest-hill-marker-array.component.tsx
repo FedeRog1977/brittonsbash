@@ -1,12 +1,13 @@
+import { FC } from 'react'
 import { Marker, Popup } from 'react-leaflet'
 import { generateUniqueKey, toCoords, toFeet } from '../../../../../scripts'
 import { Spacing, Typography } from '../../../../bash-blocks'
 import { ConquestHillMarkerArrayProps } from '../types'
 
-export const ConquestMarkerArray: React.FC<ConquestHillMarkerArrayProps> = ({
+export const ConquestMarkerArray: FC<ConquestHillMarkerArrayProps> = ({
     hills,
     type,
-}: ConquestHillMarkerArrayProps) => (
+}) => (
     <>
         {hills.map(({ name, lat, lon, elevation, summit, image }, index) => {
             const { latFormatted, lonFormatted } = toCoords(lat, lon)
@@ -14,31 +15,27 @@ export const ConquestMarkerArray: React.FC<ConquestHillMarkerArrayProps> = ({
             return (
                 <Marker key={generateUniqueKey(index)} position={[lat, lon]}>
                     <Popup>
-                        <Spacing textAlign="center">
-                            <Typography type="h4" content={name} />
+                        <Spacing textAlign="center" mY={30}>
+                            <Typography type="h4">{name}</Typography>
                             <Spacing mY={30} />
-                            <Typography
-                                type="body"
-                                content={type + ' at ' + toFeet(elevation)}
-                                boldFace
-                            />
-                            <Typography
-                                type="body"
-                                content={latFormatted + ', ' + lonFormatted}
-                            />
-                            <Typography
-                                type="body"
-                                content={summit + ' summit'}
-                            />
-                            <Spacing mY={30} />
-                            <img
-                                style={{
-                                    width: '250px',
-                                }}
-                                src="https://lewisbritton.com/images/general/placeholder.webp"
-                                alt="placeholder"
-                            />
+                            <Typography type="body" boldFace>
+                                {type + ' at ' + toFeet(elevation)}
+                            </Typography>
+                            <Typography type="body">
+                                {latFormatted + ', ' + lonFormatted}
+                            </Typography>
+                            <Typography type="body">
+                                {summit + ' summit'}
+                            </Typography>
                         </Spacing>
+
+                        <img
+                            style={{
+                                width: '250px',
+                            }}
+                            src="https://lewisbritton.com/images/general/placeholder.webp"
+                            alt="placeholder"
+                        />
                     </Popup>
                 </Marker>
             )

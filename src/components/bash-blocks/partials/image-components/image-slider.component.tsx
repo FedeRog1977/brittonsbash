@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { FC, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     faChevronCircleLeft,
@@ -12,9 +12,7 @@ import { Typography } from '../../basics'
 import { ImageSliderProps } from './image-components.types'
 import { ImageProps } from '../../reference'
 
-export const ImageSlider: React.FC<ImageSliderProps> = ({
-    slides,
-}: ImageSliderProps) => {
+export const ImageSlider: FC<ImageSliderProps> = ({ slides }) => {
     const { isMobile } = useScreenWidth()
 
     const [current, setCurrent] = useState(0)
@@ -57,18 +55,20 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
                                 <div className={styles.imageSliderCaption}>
                                     <Typography
                                         type={isMobile ? 'footnote' : 'body'}
-                                        content={slide.description}
                                         textAlign="left"
                                         color="white"
-                                    />
+                                    >
+                                        {slide.description}
+                                    </Typography>
                                 </div>
                             )}
                             <div className={styles.imageSliderIndex}>
                                 <Typography
                                     type={isMobile ? 'footnote' : 'body'}
-                                    content={`${current + 1}/${slides.length}`}
                                     color="white"
-                                />
+                                >{`${current + 1}/${
+                                    slides.length
+                                }`}</Typography>
                             </div>
                         </div>
                     )
@@ -95,19 +95,16 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({
                         </>
                     ) : (
                         <>
-                            <Typography type="h3" content="No Disc Loaded" />
-                            <Typography
-                                type="h4"
-                                content={
-                                    <>
-                                        Insert Disc{' '}
-                                        <FontAwesomeIcon
-                                            icon={faEject}
-                                            size="2xs"
-                                        />
-                                    </>
-                                }
-                            />
+                            <Typography type="h3">No Disc Loaded</Typography>
+                            <Typography type="h4">
+                                <>
+                                    Insert Disc{' '}
+                                    <FontAwesomeIcon
+                                        icon={faEject}
+                                        size="2xs"
+                                    />
+                                </>
+                            </Typography>
                         </>
                     )}
                 </div>

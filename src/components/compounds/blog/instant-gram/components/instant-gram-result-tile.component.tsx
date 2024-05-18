@@ -18,16 +18,15 @@ import {
     RefactoredEventNameProps,
     generateUniqueKey,
 } from '../../../../../scripts'
-import { useEffect } from 'react'
+import { FC, useEffect } from 'react'
 import { InstantGramResultTileProps } from '../types'
-import { Anchor } from '../../../../bash-blocks/basics/anchor'
 
-export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
+export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
     event,
     sport,
     showSport,
     url,
-}: InstantGramResultTileProps) => {
+}) => {
     const { isMobile } = useScreenWidth()
 
     const { showElement: showDescription, setShowElement: setShowDescription } =
@@ -47,11 +46,9 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
         <Tile type="solid">
             <Spacing mB={isMobile ? 7.5 : 15}>
                 {refactoredEvent.prefix && (
-                    <Typography
-                        type="t1"
-                        content={`${refactoredEvent.prefix}:`}
-                        textAlign="center"
-                    />
+                    <Typography type="t1" textAlign="center">
+                        {`${refactoredEvent.prefix}:`}
+                    </Typography>
                 )}
                 {refactoredEvent.names.length > 1 ? (
                     <Grid alignColumns="auto auto">
@@ -69,14 +66,13 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                                         <Typography
                                             key={generateUniqueKey(index)}
                                             type="t2"
-                                            content={
-                                                <>
-                                                    Part&nbsp;
-                                                    {refKey}&nbsp;
-                                                </>
-                                            }
                                             color="mediumGrey"
-                                        />
+                                        >
+                                            <>
+                                                Part&nbsp;
+                                                {refKey}&nbsp;
+                                            </>
+                                        </Typography>
                                     </Grid>
                                     <Grid
                                         columnItem={[2, 2]}
@@ -89,8 +85,9 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                                         <Typography
                                             key={generateUniqueKey(index)}
                                             type="t2"
-                                            content={name}
-                                        />
+                                        >
+                                            {name}
+                                        </Typography>
                                     </Grid>
                                 </>
                             )
@@ -99,28 +96,26 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                 ) : (
                     <Typography
                         type={refactoredEvent.prefix ? 't2' : 't1'}
-                        content={refactoredEvent.names[0].name}
                         textAlign="center"
-                    />
+                    >
+                        {refactoredEvent.names[0].name}
+                    </Typography>
                 )}
             </Spacing>
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                 <Typography
                     type="h4"
-                    content={
-                        <>
-                            {refactoredEvent.startDate}
-                            {refactoredEvent.endDate && (
-                                <>
-                                    &nbsp;&#8212;&nbsp;{refactoredEvent.endDate}
-                                </>
-                            )}
-                        </>
-                    }
                     color="mediumGrey"
                     textAlign="center"
                     paragraphMargins
-                />
+                >
+                    <>
+                        {refactoredEvent.startDate}
+                        {refactoredEvent.endDate && (
+                            <>&nbsp;&#8212;&nbsp;{refactoredEvent.endDate}</>
+                        )}
+                    </>
+                </Typography>
             </Spacing>
             {refactoredEvent.showSport && (
                 <Spacing
@@ -348,11 +343,9 @@ export const InstantGramResultTile: React.FC<InstantGramResultTileProps> = ({
                             textAlign="justify"
                         />
                     ) : (
-                        <Typography
-                            type="body"
-                            content={refactoredEvent.description}
-                            textAlign="justify"
-                        />
+                        <Typography type="body" textAlign="justify">
+                            {refactoredEvent.description}
+                        </Typography>
                     )}
                 </Spacing>
             )}

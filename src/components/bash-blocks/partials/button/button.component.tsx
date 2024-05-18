@@ -5,8 +5,9 @@ import cx from 'classnames'
 import { useScreenWidth, toUpperCase } from '../../../../scripts'
 import { Grid, Typography } from '../../basics'
 import { ButtonProps } from './button.types'
+import { FC } from 'react'
 
-export const Button: React.FC<ButtonProps> = ({
+export const Button: FC<ButtonProps> = ({
     typeType = 'body',
     light,
     type = 'regularClear',
@@ -23,7 +24,7 @@ export const Button: React.FC<ButtonProps> = ({
     color,
     coarsePadding,
     removePadding,
-}: ButtonProps) => {
+}) => {
     const { isMobile } = useScreenWidth()
 
     const classNames = cx(styles[`button${toUpperCase(type)}`], {
@@ -61,16 +62,12 @@ export const Button: React.FC<ButtonProps> = ({
                                 : 'right'
                         }
                     >
-                        <Typography
-                            type="body"
-                            color="mediumGrey"
-                            content={
-                                <>
-                                    {subContent}
-                                    {!isMobile && <>&nbsp;&nbsp;</>}
-                                </>
-                            }
-                        />
+                        <Typography type="body" color="lightGrey">
+                            <>
+                                {subContent}
+                                {!isMobile && <>&nbsp;&nbsp;</>}
+                            </>
+                        </Typography>
                     </Grid>
                 )}
                 <Grid
@@ -90,22 +87,21 @@ export const Button: React.FC<ButtonProps> = ({
                 >
                     <Typography
                         type={typeType}
-                        content={
-                            content
-                                ? content
-                                : Boolean(funcResp === false)
-                                ? 'Read more'
-                                : 'Read less'
-                        }
                         color={
                             Boolean(funcResp === false && color)
                                 ? color
                                 : Boolean(funcResp === false)
-                                ? 'mediumGrey'
+                                ? 'white'
                                 : 'lightBlue'
                         }
                         light={light}
-                    />
+                    >
+                        {content
+                            ? content
+                            : Boolean(funcResp === false)
+                            ? 'Read more'
+                            : 'Read less'}
+                    </Typography>
                 </Grid>
                 {Boolean(!content) && (
                     <Grid
@@ -115,18 +111,15 @@ export const Button: React.FC<ButtonProps> = ({
                     >
                         <Typography
                             type="footnote"
-                            content={
-                                funcResp === false ? (
-                                    <FontAwesomeIcon icon={faChevronDown} />
-                                ) : (
-                                    <FontAwesomeIcon icon={faChevronUp} />
-                                )
-                            }
-                            color={
-                                funcResp === false ? 'mediumGrey' : 'lightBlue'
-                            }
+                            color={funcResp === false ? 'white' : 'lightBlue'}
                             light
-                        />
+                        >
+                            {funcResp === false ? (
+                                <FontAwesomeIcon icon={faChevronDown} />
+                            ) : (
+                                <FontAwesomeIcon icon={faChevronUp} />
+                            )}
+                        </Typography>
                     </Grid>
                 )}
             </Grid>
@@ -135,7 +128,11 @@ export const Button: React.FC<ButtonProps> = ({
 
     if (link?.url)
         return (
-            <a target={link.newTab ? '_blank' : undefined} href={link.url}>
+            <a
+                href={link.url}
+                target={link.newTab ? '_blank' : undefined}
+                rel={link.newTab ? 'noreferrer' : undefined}
+            >
                 {buttonContent}
             </a>
         )

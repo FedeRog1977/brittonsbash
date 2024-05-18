@@ -1,12 +1,13 @@
+import { FC } from 'react'
 import { generateUniqueKey } from '../../../../scripts'
 import { SearchListProps } from './search-list.types'
 import styles from './search.module.scss'
 
-export const SearchList: React.FC<SearchListProps> = ({
+export const SearchList: FC<SearchListProps> = ({
     func,
     content,
     placeholder,
-}: SearchListProps) => (
+}) => (
     <select className={styles.search} onChange={func}>
         <option value="" disabled selected>
             {placeholder}
