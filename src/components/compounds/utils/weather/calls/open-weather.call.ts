@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
 import { getResponse } from '../../../../../scripts/api/get-response'
 import { getSessionItem } from '../../../../../scripts/api/get-session-item'
-import { DailyProps, HourlyProps } from '../types/open-weather.type'
+import { Daily } from '../types/daily.type'
+import { Hourly } from '../types/hourly.type'
 
 export const useOpenWeatherCall = (latIn: number, lonIn: number) => {
-    const [dailyResult, setDailyResult] = useState<DailyProps[]>([])
-    const [hourlyResult, setHourlyResult] = useState<HourlyProps[]>([])
+    const [dailyResult, setDailyResult] = useState<Daily[]>([])
+    const [hourlyResult, setHourlyResult] = useState<Hourly[]>([])
 
     const base = 'https://api.openweathermap.org/data/3.0/onecall?'
     const appid = '6008c47adda4d19b4055c7058a622879'
@@ -14,8 +15,8 @@ export const useOpenWeatherCall = (latIn: number, lonIn: number) => {
 
     useEffect(() => {
         const setResults = () => {
-            setDailyResult(getSessionItem('response-daily') as DailyProps[])
-            setHourlyResult(getSessionItem('response-hourly') as HourlyProps[])
+            setDailyResult(getSessionItem('response-daily') as Daily[])
+            setHourlyResult(getSessionItem('response-hourly') as Hourly[])
         }
 
         getResponse(

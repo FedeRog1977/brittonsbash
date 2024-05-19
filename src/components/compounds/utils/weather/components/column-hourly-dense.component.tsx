@@ -5,20 +5,26 @@ import {
     toSpeed,
 } from '../../../../../scripts'
 import { Spacing, Typography } from '../../../../bash-blocks'
-import { WeatherIcon } from './weather-icon.component'
-import { WeatherTemperature } from './weather-temperature.component'
+import { Icon } from './icon.component'
+import { Temperature } from './temperature.component'
 
-export const WeatherColumnDailyDense = ({
+export const ColumnHourlyDense = ({
     dt,
     icon,
     temp,
     pop,
     windDeg,
     windSpd,
+    windGst,
+    pressure,
+    humidity,
+    dp,
+    vb,
+    uvi,
 }: any) =>
     // Add props
     {
-        const { weekdayPartial, dayOfMonthPartial } = toDate(dt)
+        const { hour } = toDate(dt)
         const precipitation = toPrecipitation(pop)
         const {
             bearingFormatted: bearing,
@@ -26,19 +32,19 @@ export const WeatherColumnDailyDense = ({
             bearingArrow,
         } = toBearing(windDeg)
         const speed = toSpeed(windSpd, true)
+        const gusts = toSpeed(windGst, true)
 
         return (
             <>
                 <Spacing pY={20} textAlign="center">
-                    <Typography type="h4">{weekdayPartial}</Typography>
-                    <Typography type="body" paragraphMargins>
-                        {dayOfMonthPartial}
+                    <Typography type="h4" paragraphMargins>
+                        {hour}
                     </Typography>
                     <Typography type="h1">
-                        <WeatherIcon icon={icon} />
+                        <Icon icon={icon} />
                     </Typography>
                     <Spacing pY={20} textAlign="center">
-                        <WeatherTemperature temp={temp} />
+                        <Temperature temp={temp} />
                     </Spacing>
                     <Typography type="body">{precipitation}</Typography>
                 </Spacing>
@@ -48,6 +54,9 @@ export const WeatherColumnDailyDense = ({
                     <Typography type="footnote">{bearing}</Typography>
                     <Typography type="footnote" boldFace>
                         {speed}
+                    </Typography>
+                    <Typography type="footnote" boldFace>
+                        {gusts + ' gusts'}
                     </Typography>
                 </Spacing>
             </>

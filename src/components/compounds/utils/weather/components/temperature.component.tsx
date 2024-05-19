@@ -5,16 +5,12 @@ import { toTemperature, useScreenWidth } from '../../../../../scripts'
 import { Color, Spacing, Typography } from '../../../../bash-blocks'
 import { Icon } from '../types/icon.type'
 
-type WeatherTemperatureProps = {
+type TemperatureProps = {
     temp: number
     suffix?: string
 } & Icon
 
-export const WeatherTemperature: FC<WeatherTemperatureProps> = ({
-    temp,
-    suffix,
-    icon,
-}) => {
+export const Temperature: FC<TemperatureProps> = ({ temp, suffix, icon }) => {
     const { isMobile } = useScreenWidth()
 
     let backgroundColor = undefined

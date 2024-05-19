@@ -12,12 +12,10 @@ import {
     faSmog,
     faCloudMoonRain,
 } from '@fortawesome/free-solid-svg-icons'
-import { Icon } from '../types/icon.type'
+import { Icon as IconProps } from '../types/icon.type'
 import { FC } from 'react'
 
-type WeatherIconProps = Icon
-
-export const WeatherIcon: FC<WeatherIconProps> = ({ icon }) => {
+export const Icon: FC<IconProps> = ({ icon }) => {
     if (icon === '01d') {
         return (
             <div style={{ color: `rgba(238, 40, 0, 0.6)` }}>

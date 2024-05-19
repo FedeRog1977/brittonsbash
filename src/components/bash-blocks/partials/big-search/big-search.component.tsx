@@ -15,7 +15,7 @@ export type BigSearchProps = {
     funcButton: () => void
     placeholder?: string
     selects?: {
-        funcSelect: () => void
+        funcSelect: (() => void) | ((e: any) => void)
         content: any[]
         placeholder?: string
     }[]
@@ -63,7 +63,7 @@ export const BigSearch: FC<BigSearchProps> = ({
                             <Grid columnItem={[index + 1, selects.length + 1]}>
                                 <SearchList
                                     key={generateUniqueKey(index)}
-                                    func={funcSelect}
+                                    func={() => funcSelect}
                                     content={content}
                                     placeholder={placeholder ?? ''}
                                 />

@@ -1,5 +1,5 @@
-import { WeatherResultTitle } from './components/weather-result-title.component'
-import { WeatherSearchTile } from './components/weather-search-tile.component'
+import { ResultTitle } from './components/result-title.component'
+import { SearchTile } from './components/search-tile.component'
 import { useWeather } from './hooks/use-weather.hook'
 
 export const Weather = () => {
@@ -14,12 +14,12 @@ export const Weather = () => {
 
     return (
         <>
-            <WeatherSearchTile
-                funcSelect={handleSelect}
+            <SearchTile
                 funcInput={handleInput}
                 funcButton={executeInput}
+                funcSelect={handleSelect}
             />
-            <WeatherResultTitle
+            <ResultTitle
                 title={weatherTitle}
                 subTitle={weatherSubTitle}
                 result={showWeatherContent}

@@ -1,8 +1,18 @@
+import { FC, ReactElement } from 'react'
 import { useScreenWidth } from '../../../../../scripts'
 import { Spacing, Tile, Typography } from '../../../../bash-blocks'
 
-// Temp any
-export const WeatherResultTitle = ({ title, subTitle, result }: any) => {
+type ResultTileProps = {
+    title: string
+    subTitle: ReactElement
+    result: ReactElement
+}
+
+export const ResultTitle: FC<ResultTileProps> = ({
+    title,
+    subTitle,
+    result,
+}) => {
     const { isMobile } = useScreenWidth()
 
     return (

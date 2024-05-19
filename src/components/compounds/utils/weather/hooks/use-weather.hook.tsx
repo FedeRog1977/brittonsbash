@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Typography } from '../../../../bash-blocks'
 import { compileHills, toCoords, toFeet } from '../../../../../scripts'
-import { WeatherDaily } from '../components/weather-daily.component'
+import { WeatherDaily } from '../components/daily.component'
 
 export const useWeather = () => {
     const hills = compileHills()

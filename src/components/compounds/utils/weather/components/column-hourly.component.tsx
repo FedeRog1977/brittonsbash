@@ -3,82 +3,55 @@ import {
     toPrecipitation,
     toBearing,
     toSpeed,
-    toSentenceCase,
 } from '../../../../../scripts'
 import { Flex, Grid, Spacing, Typography } from '../../../../bash-blocks'
-import { WeatherIcon } from './weather-icon.component'
-import { WeatherTemperature } from './weather-temperature.component'
+import { Icon } from './icon.component'
+import { Temperature } from './temperature.component'
 
-export const WeatherColumnDaily = ({
+export const ColumnHourly = ({
     dt,
     icon,
     temp,
+    tempFl,
     pop,
-    desc,
-    tempMax,
-    tempMin,
-    // tempFlDay,
-    // tempFlNight,
     windDeg,
     windSpd,
+    windGst,
     pressure,
     humidity,
     dp,
+    vb,
     uvi,
-    sr,
-    ss,
 }: any) => {
-    // Add props
-    const { weekday, dayOfMonth } = toDate(dt)
+    // App props
+    const { hour } = toDate(dt)
     const precipitation = toPrecipitation(pop)
-    const { time: sunrise } = toDate(sr)
-    const { time: sunset } = toDate(ss)
     const {
         bearingFormatted: bearing,
         bearingCompass,
         bearingArrow,
     } = toBearing(windDeg)
     const speed = toSpeed(windSpd, true)
+    const gusts = toSpeed(windGst, true)
 
     return (
         <>
             <Spacing pY={20} textAlign="center">
-                <Typography type="h4">{weekday}</Typography>
-                <Typography type="body" paragraphMargins>
-                    {dayOfMonth}
+                <Typography type="h4" paragraphMargins>
+                    {hour}
                 </Typography>
                 <Typography type="h1" paragraphMargins>
-                    <WeatherIcon icon={icon} />
+                    <Icon icon={icon} />
                 </Typography>
                 <Typography type="body">{precipitation}</Typography>
-                <Typography type="body" paragraphMargins>
-                    {toSentenceCase(desc)}
-                </Typography>
-                <Grid alignColumns="auto">
-                    <Grid columnItem={[1, 2]}>
-                        <Typography type="body" boldFace>
-                            Sunrise:
-                        </Typography>
-                        <Typography type="body">{sunrise}</Typography>
-                    </Grid>
-                    <Grid columnItem={[2, 2]}>
-                        <Typography type="body" boldFace>
-                            Sunset:
-                        </Typography>
-                        <Typography type="body">{sunset}</Typography>
-                    </Grid>
-                </Grid>
             </Spacing>
             <Spacing pY={20}>
                 <Grid alignColumns="auto">
-                    <Grid columnItem={[1, 3]}>
-                        <WeatherTemperature temp={temp} />
+                    <Grid columnItem={[1, 2]}>
+                        <Temperature temp={temp} />
                     </Grid>
-                    <Grid columnItem={[2, 3]}>
-                        <WeatherTemperature temp={tempMax} suffix="(H)" />
-                    </Grid>
-                    <Grid columnItem={[3, 3]}>
-                        <WeatherTemperature temp={tempMin} suffix="(L)" />
+                    <Grid columnItem={[1, 2]}>
+                        <Temperature temp={tempFl} suffix="(FL)" />
                     </Grid>
                 </Grid>
             </Spacing>
@@ -88,6 +61,9 @@ export const WeatherColumnDaily = ({
                 <Typography type="footnote">{bearing}</Typography>
                 <Typography type="footnote" boldFace>
                     {speed}
+                </Typography>
+                <Typography type="footnote" boldFace>
+                    {gusts + ' gusts'}
                 </Typography>
             </Spacing>
             <Spacing pY={20} textAlign="center">
@@ -120,6 +96,13 @@ export const WeatherColumnDaily = ({
                                 textAlign="right"
                                 boldFace
                             >
+                                Visibility:
+                            </Typography>
+                            <Typography
+                                type="footnote"
+                                textAlign="right"
+                                boldFace
+                            >
                                 UV Index:
                             </Typography>
                         </Spacing>
@@ -134,6 +117,9 @@ export const WeatherColumnDaily = ({
                             </Typography>
                             <Typography type="footnote" textAlign="left">
                                 {dp}
+                            </Typography>
+                            <Typography type="footnote" textAlign="left">
+                                {vb / 100 + '%'}
                             </Typography>
                             <Typography type="footnote" textAlign="left">
                                 {uvi}

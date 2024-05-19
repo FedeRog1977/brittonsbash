@@ -1,11 +1,18 @@
 import { BigSearch, Tile } from '../../../../bash-blocks'
 import { compileHills } from '../../../../../scripts'
+import { FC } from 'react'
 
-export const WeatherSearchTile = ({
-    funcSelect,
+type SearchTile = {
+    funcInput: (e: any) => void
+    funcButton: () => void
+    funcSelect: (e: any) => void
+}
+
+export const SearchTile: FC<SearchTile> = ({
     funcInput,
     funcButton,
-}: any) => {
+    funcSelect,
+}) => {
     const hills = compileHills()
 
     return (

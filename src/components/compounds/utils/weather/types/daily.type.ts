@@ -1,4 +1,6 @@
-export type DailyProps = {
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons'
+
+export type Daily = {
     dt: number
     sunrise: number
     sunset: number
@@ -26,35 +28,11 @@ export type DailyProps = {
             id: number
             main: string
             description: string
-            icon: string
+            icon: string | IconDefinition
         }
     ]
     clouds: number
     pop: number
     rain: number
     uvi: number
-}
-
-export type HourlyProps = {
-    dt: number
-    temp: number
-    feels_like: number
-    pressure: number
-    humidity: number
-    dew_point: number
-    uvi: number
-    clouds: number
-    visibility: number
-    wind_speed: number
-    wind_deg: number
-    wind_gust: number
-    weather: [
-        {
-            id: number
-            main: string
-            description: string
-            icon: string
-        }
-    ]
-    pop: number
 }
