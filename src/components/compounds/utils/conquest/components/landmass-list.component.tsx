@@ -1,6 +1,12 @@
+import { FC } from 'react'
 import { compileHills, generateUniqueKey } from '../../../../../scripts'
 
-export const LandmassList = ({ id, func }: any) => {
+type LandmassListProps = {
+    id: string
+    func: (e: any) => void
+}
+
+export const LandmassList: FC<LandmassListProps> = ({ id, func }: any) => {
     const hills = compileHills()
 
     const routes = hills.landmasses.map(

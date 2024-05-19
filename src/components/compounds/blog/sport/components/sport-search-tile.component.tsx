@@ -8,10 +8,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FC } from 'react'
 import { useScreenWidth } from '../../../../../scripts'
 import { Tile, Button, Grid } from '../../../../bash-blocks'
-import { SportSearchTileProps } from '../types'
+
+export type SportSearchTileProps = {
+    funcCategory: (e: any) => void
+    isRoadies: boolean
+    isProjects: boolean
+    isMiles: boolean
+}
 
 export const SportSearchTile: FC<SportSearchTileProps> = ({
-    funcSelect,
+    funcCategory,
     isRoadies,
     isProjects,
     isMiles,
@@ -25,7 +31,7 @@ export const SportSearchTile: FC<SportSearchTileProps> = ({
                     <Button
                         typeType="t2"
                         value="roadies"
-                        func={funcSelect}
+                        func={funcCategory}
                         funcResp={isRoadies}
                         content={<FontAwesomeIcon icon={faBiking} />}
                         subContent="Roadies"
@@ -36,7 +42,7 @@ export const SportSearchTile: FC<SportSearchTileProps> = ({
                     <Button
                         typeType="t2"
                         value="projects"
-                        func={funcSelect}
+                        func={funcCategory}
                         funcResp={isProjects}
                         content={<FontAwesomeIcon icon={faMountainSun} />}
                         subContent="Projects"
@@ -47,7 +53,7 @@ export const SportSearchTile: FC<SportSearchTileProps> = ({
                     <Button
                         typeType="t2"
                         value="miles"
-                        func={funcSelect}
+                        func={funcCategory}
                         funcResp={isMiles}
                         content={<FontAwesomeIcon icon={faWalking} />}
                         subContent="Miles"

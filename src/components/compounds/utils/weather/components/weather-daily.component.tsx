@@ -7,7 +7,7 @@ import {
 import { WeatherColumnDaily } from './weather-column-daily.component'
 import { WeatherHourly } from './weather-hourly.component'
 import { WeatherColumnDailyDense } from './weather-column-daily-dense.component'
-import { useOpenWeatherCall } from '../calls'
+import { useOpenWeatherCall } from '../calls/open-weather.call'
 
 export const WeatherDaily = ({ latIn, lonIn }: any) => {
     const { isMobile } = useScreenWidth()

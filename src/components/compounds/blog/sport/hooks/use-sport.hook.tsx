@@ -286,7 +286,7 @@ export const useSport = () => {
         ? sportData.miles[2020]
         : sportData.roadies[2020]
 
-    const handleSelect = (e: any) => {
+    const handleCategory = (e: any) => {
         if (e.currentTarget.value === 'roadies') {
             setSportData(compiledRoadies)
             setIsRoadies(true)
@@ -312,7 +312,7 @@ export const useSport = () => {
     }
 
     return {
-        handleSelect,
+        handleCategory,
         sportData,
         sport2024,
         sport2023,

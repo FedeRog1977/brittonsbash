@@ -26,8 +26,22 @@ export const useInstantGram = () => {
     const [sportHandler, setSportHandler] = useState(sport)
     const [showSportHandler, setShowSportHandler] = useState(showSport)
 
+    const [is2024, setIs2024] = useState(false)
+    const [is2023, setIs2023] = useState(false)
+    const [is2022, setIs2022] = useState(false)
+    const [is2021, setIs2021] = useState(false)
+    const [is2020, setIs2020] = useState(false)
+
     useEffect(() => {
-        if (location.search !== '') {
+        if (location.search === '') {
+            for (var i in allSport) {
+                if (eventsParsed[0].names.includes(allSport[i].name)) {
+                    sportOnEvent.push(allSport[i])
+                    setSport(sportOnEvent)
+                    setShowSport(true)
+                }
+            }
+        } else {
             setUrl(`${location.pathname}${location.search}`)
 
             for (var i in eventsParsed) {
@@ -49,18 +63,6 @@ export const useInstantGram = () => {
             }
         }
     }, [searchParams])
-
-    useEffect(() => {
-        if (location.search === '') {
-            for (var i in allSport) {
-                if (eventsParsed[0].names.includes(allSport[i].name)) {
-                    sportOnEvent.push(allSport[i])
-                    setSport(sportOnEvent)
-                    setShowSport(true)
-                }
-            }
-        }
-    }, [])
 
     const handleInput = (e: any) => {
         setSearchField(e.target.value.toLowerCase())
@@ -132,13 +134,57 @@ export const useInstantGram = () => {
         }
     }
 
+    const handleCategory = (value: string) => {
+        if (value === '2024') {
+            setIs2024(true)
+            setIs2023(false)
+            setIs2022(false)
+            setIs2021(false)
+            setIs2020(false)
+        }
+        if (value === '2023') {
+            setIs2024(false)
+            setIs2023(true)
+            setIs2022(false)
+            setIs2021(false)
+            setIs2020(false)
+        }
+        if (value === '2022') {
+            setIs2024(false)
+            setIs2023(false)
+            setIs2022(true)
+            setIs2021(false)
+            setIs2020(false)
+        }
+        if (value === '2021') {
+            setIs2024(false)
+            setIs2023(false)
+            setIs2022(false)
+            setIs2021(true)
+            setIs2020(false)
+        }
+        if (value === '2020') {
+            setIs2024(false)
+            setIs2023(false)
+            setIs2022(false)
+            setIs2021(false)
+            setIs2020(true)
+        }
+    }
+
     return {
         url,
+        handleCategory,
         handleInput,
         executeInput,
         handleSelect,
         event,
         sport,
         showSport,
+        is2024,
+        is2023,
+        is2022,
+        is2021,
+        is2020,
     }
 }

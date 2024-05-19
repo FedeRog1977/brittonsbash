@@ -1,10 +1,18 @@
 import { Button } from '../../../../bash-blocks'
 import { generateUniqueKey, useScreenWidth } from '../../../../../scripts'
-import { MiamiViceSearchListProps } from '../types'
 import { FC } from 'react'
 
+export type MiamiViceSearchListProps = {
+    funcSelect: (() => void) | ((e: any) => void)
+    items: {
+        heading?: string
+        subHeading?: string
+        video: string
+    }[]
+}
+
 export const MiamiViceSearchList: FC<MiamiViceSearchListProps> = ({
-    func,
+    funcSelect,
     items,
 }) => {
     const { isMobile } = useScreenWidth()
@@ -18,12 +26,11 @@ export const MiamiViceSearchList: FC<MiamiViceSearchListProps> = ({
                     forceWidth={!isMobile ? 25 : 100}
                     value={heading}
                     link={{ url: '#/blog/miami-vice/#result' }}
-                    func={func}
+                    func={funcSelect}
                     funcResp={false}
                     content={heading}
                     subContent={subHeading}
                     subContentTop
-                    color="darkerGrey"
                     coarsePadding
                 />
             ))}

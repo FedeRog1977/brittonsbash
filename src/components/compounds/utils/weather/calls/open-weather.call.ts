@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { getResponse } from '../../../../../scripts/api/get-response'
 import { getSessionItem } from '../../../../../scripts/api/get-session-item'
-import { DailyProps, HourlyProps } from '../types'
+import { DailyProps, HourlyProps } from '../types/open-weather.type'
 
 export const useOpenWeatherCall = (latIn: number, lonIn: number) => {
     const [dailyResult, setDailyResult] = useState<DailyProps[]>([])

@@ -1,8 +1,20 @@
+import { FC } from 'react'
 import { Marker, Popup } from 'react-leaflet'
 import { generateUniqueKey } from '../../../../../scripts'
 
-export const RouteMarker = ({
-    nameRoute,
+export type RouteMarkerProps = {
+    name: string
+    dist: number
+    elev: number
+    time: string
+    munrosIn: []
+    corbettsIn: []
+    latIn: number
+    lonIn: number
+}
+
+export const RouteMarker: FC<RouteMarkerProps> = ({
+    name,
     dist,
     elev,
     time,
@@ -10,7 +22,7 @@ export const RouteMarker = ({
     corbettsIn,
     latIn,
     lonIn,
-}: any) => {
+}) => {
     var munros = null
     // var corbetts = null;
 
@@ -36,7 +48,7 @@ export const RouteMarker = ({
         <Marker position={[latIn, lonIn]}>
             <Popup>
                 <div style={{ textAlign: 'center' }}>
-                    <h3>{nameRoute}</h3>
+                    <h3>{name}</h3>
                     <div>
                         <b>Distance:</b> {dist.toFixed(2)}mi
                         <br />

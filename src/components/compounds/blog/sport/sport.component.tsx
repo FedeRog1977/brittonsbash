@@ -1,10 +1,11 @@
 import { FC } from 'react'
-import { SportSearchTile, SportResultTile } from './components'
+import { SportResultTile } from './components/sport-result-tile.component'
+import { SportSearchTile } from './components/sport-search-tile.component'
 import { useSport } from './hooks/use-sport.hook'
 
 export const Sport: FC = () => {
     const {
-        handleSelect,
+        handleCategory,
         title,
         subTitle,
         description,
@@ -23,7 +24,7 @@ export const Sport: FC = () => {
     return (
         <>
             <SportSearchTile
-                funcSelect={handleSelect}
+                funcCategory={handleCategory}
                 isRoadies={isRoadies}
                 isProjects={isProjects}
                 isMiles={isMiles}

@@ -6,19 +6,20 @@ import {
     // useMap,
     // useMapEvents
 } from 'react-leaflet'
-import './styles/styles-temp.scss'
+import './styles-temp.scss'
 import { useState } from 'react'
 import { compileHills, fromBritishGridProjection } from '../../../../scripts'
 // import L from 'leaflet'
 import * as L from 'leaflet'
+import { useOrdnanceSurveyCall } from './calls/ordnance-survey.call'
+import { RouteList, RouteListProps } from './components/route-list.component'
 import {
-    RouteList,
     RouteMarker,
-    LandmassList,
-    ConquestLocationMarker,
-    ConquestHillMarkers,
-} from './components'
-import { useOrdnanceSurveyCall } from './calls'
+    RouteMarkerProps,
+} from './components/route-marker.component'
+import { LandmassList } from './components/landmass-list.component'
+import { LocationMarker } from './components/location-marker.component'
+import { HillMarkers } from './components/hill-markers.component'
 
 export const Conquest = () => {
     const hills = compileHills()
@@ -33,10 +34,14 @@ export const Conquest = () => {
 
     const [showLandmasses, setShowLandmasses] = useState(false)
     const [showRoutesList, setShowRoutesList] = useState(false)
-    const [routesList, setRoutesList] = useState(<RouteList />)
+    const [routesList, setRoutesList] = useState(
+        <RouteList {...({} as RouteListProps)} />
+    )
 
     const [showRouteMarker, setShowRouteMarker] = useState(false)
-    const [routeMarker, setRouteMarker] = useState(<RouteMarker />)
+    const [routeMarker, setRouteMarker] = useState(
+        <RouteMarker {...({} as RouteMarkerProps)} />
+    )
 
     const currLocClick = () => {
         if (showCurrLoc === false) {
@@ -106,7 +111,7 @@ export const Conquest = () => {
                     setShowRouteMarker(true)
                     setRouteMarker(
                         <RouteMarker
-                            nameRoute={hills.landmasses[i].routes[k].name}
+                            name={hills.landmasses[i].routes[k].name}
                             dist={hills.landmasses[i].routes[k].distance}
                             elev={hills.landmasses[i].routes[k].elevationgain}
                             time={hills.landmasses[i].routes[k].stdtime}
@@ -185,9 +190,9 @@ export const Conquest = () => {
                 scrollWheelZoom={true}
             >
                 <TileLayer url={apiUrl} />
-                {showCurrLoc && <ConquestLocationMarker />}
-                {showMunros && <ConquestHillMarkers type="Munro" />}
-                {showCorbetts && <ConquestHillMarkers type="Corbett" />}
+                {showCurrLoc && <LocationMarker />}
+                {showMunros && <HillMarkers type="Munro" />}
+                {showCorbetts && <HillMarkers type="Corbett" />}
                 {showRouteMarker && routeMarker}
             </MapContainer>
         </>

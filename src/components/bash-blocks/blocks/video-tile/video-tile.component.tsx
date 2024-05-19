@@ -1,8 +1,6 @@
 import { FC } from 'react'
 import { useScreenWidth } from '../../../../scripts'
-import { Tile, Typography } from '../../basics'
-import { Anchor } from '../../basics/anchor'
-import { TileProps } from '../../basics'
+import { Anchor, Tile, TileProps, Typography } from '../../basics'
 
 export type VideoTileProps = {
     type?: TileProps['type']
@@ -25,7 +23,7 @@ export const VideoTile: FC<VideoTileProps> = ({
 
     return (
         <Tile type={type}>
-            {anchor ? <Anchor url={anchor} /> : null}
+            {anchor ? <Anchor id={anchor} /> : null}
             {subHeading && (
                 <Typography type="h2" light>
                     {subHeading}

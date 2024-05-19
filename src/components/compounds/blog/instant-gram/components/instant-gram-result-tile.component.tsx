@@ -10,6 +10,7 @@ import {
     Typography,
     RowTable,
     Grid,
+    Anchor,
 } from '../../../../bash-blocks'
 import {
     compileEvent,
@@ -19,13 +20,17 @@ import {
     generateUniqueKey,
 } from '../../../../../scripts'
 import { FC, useEffect } from 'react'
-import { InstantGramResultTileProps } from '../types'
+import { CompiledEventProps } from '../../../../../scripts'
+
+interface InstantGramResultTileProps extends CompiledEventProps {
+    url: string
+}
 
 export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
+    url,
     event,
     sport,
     showSport,
-    url,
 }) => {
     const { isMobile } = useScreenWidth()
 
@@ -44,6 +49,7 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
 
     return (
         <Tile type="solid">
+            <Anchor id={`${url}#result`} />
             <Spacing mB={isMobile ? 7.5 : 15}>
                 {refactoredEvent.prefix && (
                     <Typography type="t1" textAlign="center">

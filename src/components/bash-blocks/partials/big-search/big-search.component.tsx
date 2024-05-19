@@ -31,7 +31,7 @@ export const BigSearch: FC<BigSearchProps> = ({
     const handleAlign = getGridAlign(selects ?? [])
 
     return (
-        <>
+        <Spacing gapsY={30}>
             <Grid alignColumns="3fr 1fr" alignItems="center" columnGap={15}>
                 <Grid columnItem={[1, 2]}>
                     <Search
@@ -57,26 +57,21 @@ export const BigSearch: FC<BigSearchProps> = ({
                 </Grid>
             </Grid>
             {selects && (
-                <>
-                    <Spacing mY={30} />
-                    <Grid alignColumns={handleAlign} columnGap={15}>
-                        {selects.map(
-                            ({ funcSelect, content, placeholder }, index) => (
-                                <Grid
-                                    columnItem={[index + 1, selects.length + 1]}
-                                >
-                                    <SearchList
-                                        key={generateUniqueKey(index)}
-                                        func={funcSelect}
-                                        content={content}
-                                        placeholder={placeholder ?? ''}
-                                    />
-                                </Grid>
-                            )
-                        )}
-                    </Grid>
-                </>
+                <Grid alignColumns={handleAlign} columnGap={15}>
+                    {selects.map(
+                        ({ funcSelect, content, placeholder }, index) => (
+                            <Grid columnItem={[index + 1, selects.length + 1]}>
+                                <SearchList
+                                    key={generateUniqueKey(index)}
+                                    func={funcSelect}
+                                    content={content}
+                                    placeholder={placeholder ?? ''}
+                                />
+                            </Grid>
+                        )
+                    )}
+                </Grid>
             )}
-        </>
+        </Spacing>
     )
 }

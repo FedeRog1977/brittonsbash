@@ -19,93 +19,94 @@ export const TitleTile: FC<TitleTileProps> = ({
     return (
         <Tile type="clear" dense>
             {heading && (
-                <Spacing mY={20}>
-                    <Typography type="h3" textAlign="center" light>
-                        {heading}
-                    </Typography>
-                </Spacing>
+                <Typography type="h3" textAlign="center" light>
+                    {heading}
+                </Typography>
             )}
             {titleItems && (
-                <Grid alignColumns="auto auto" columnGap={10} rowGap={10}>
-                    {titleItems?.map(({ content, subContent }, index) => (
-                        <>
-                            <Grid
-                                columnItem={[1, 2]}
-                                rowItem={[index + 1, titleItems.length + 1]}
-                                textAlign="right"
-                            >
-                                <Typography
-                                    type={isMobile ? 'h4' : 'h3'}
-                                    inline
+                <Spacing mT={heading ? 10 : 0}>
+                    <Grid alignColumns="auto auto" columnGap={10} rowGap={10}>
+                        {titleItems?.map(({ content, subContent }, index) => (
+                            <>
+                                <Grid
+                                    columnItem={[1, 2]}
+                                    rowItem={[index + 1, titleItems.length + 1]}
+                                    textAlign="right"
                                 >
-                                    {content}
-                                </Typography>
-                            </Grid>
-                            <Grid
-                                columnItem={[2, 2]}
-                                rowItem={[index + 1, titleItems.length + 1]}
-                                textAlign="left"
-                            >
-                                <Typography
-                                    type={isMobile ? 'h4' : 'h3'}
-                                    link={
-                                        subContent.link?.url
-                                            ? {
-                                                  url: subContent.link?.url,
-                                                  newTab: subContent.link
-                                                      ?.newTab,
-                                              }
-                                            : undefined
-                                    }
-                                    light
-                                    inline
+                                    <Typography
+                                        type={isMobile ? 'h4' : 'h3'}
+                                        inline
+                                    >
+                                        {content}
+                                    </Typography>
+                                </Grid>
+                                <Grid
+                                    columnItem={[2, 2]}
+                                    rowItem={[index + 1, titleItems.length + 1]}
+                                    textAlign="left"
                                 >
-                                    {subContent.content}
-                                </Typography>
-                            </Grid>
-                        </>
-                    ))}
-                </Grid>
+                                    <Typography
+                                        type={isMobile ? 'h4' : 'h3'}
+                                        link={
+                                            subContent.link?.url
+                                                ? {
+                                                      url: subContent.link?.url,
+                                                      newTab: subContent.link
+                                                          ?.newTab,
+                                                  }
+                                                : undefined
+                                        }
+                                        light
+                                        inline
+                                    >
+                                        {subContent.content}
+                                    </Typography>
+                                </Grid>
+                            </>
+                        ))}
+                    </Grid>
+                </Spacing>
             )}
-            {Boolean(titleItems && bodyItems) && <Spacing mY={10} />}
             {bodyItems && (
-                <Grid alignColumns="auto auto" rowGap={10}>
-                    {bodyItems?.map(({ content, subContent }, index) => (
-                        <>
-                            <Grid
-                                columnItem={[1, 2]}
-                                rowItem={[index + 1, bodyItems.length + 1]}
-                                textAlign="right"
-                            >
-                                <Typography type="body" inline>
-                                    {content}
-                                </Typography>
-                            </Grid>
-                            <Grid
-                                columnItem={[2, 2]}
-                                rowItem={[index + 1, bodyItems.length + 1]}
-                                textAlign="left"
-                            >
-                                <Typography
-                                    type="body"
-                                    link={
-                                        subContent.link?.url
-                                            ? {
-                                                  url: subContent.link?.url,
-                                                  newTab: subContent.link
-                                                      ?.newTab,
-                                              }
-                                            : undefined
-                                    }
-                                    light
-                                    inline
+                <Spacing mT={heading || titleItems ? 10 : 0}>
+                    <Grid alignColumns="auto auto" columnGap={10} rowGap={10}>
+                        {bodyItems?.map(({ content, subContent }, index) => (
+                            <>
+                                <Grid
+                                    columnItem={[1, 2]}
+                                    rowItem={[index + 1, bodyItems.length + 1]}
+                                    textAlign="right"
                                 >
-                                    {subContent.content}
-                                </Typography>
-                            </Grid>
-                        </>
-                    ))}
-                </Grid>
+                                    <Typography type="body" inline>
+                                        {content}
+                                    </Typography>
+                                </Grid>
+                                <Grid
+                                    columnItem={[2, 2]}
+                                    rowItem={[index + 1, bodyItems.length + 1]}
+                                    textAlign="left"
+                                >
+                                    <Typography
+                                        type="body"
+                                        link={
+                                            subContent.link?.url
+                                                ? {
+                                                      url: subContent.link?.url,
+                                                      newTab: subContent.link
+                                                          ?.newTab,
+                                                  }
+                                                : undefined
+                                        }
+                                        light
+                                        inline
+                                    >
+                                        {subContent.content}
+                                    </Typography>
+                                </Grid>
+                            </>
+                        ))}
+                    </Grid>
+                </Spacing>
             )}
         </Tile>
     )

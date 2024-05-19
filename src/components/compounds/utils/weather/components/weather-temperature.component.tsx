@@ -3,7 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FC } from 'react'
 import { toTemperature, useScreenWidth } from '../../../../../scripts'
 import { Color, Spacing, Typography } from '../../../../bash-blocks'
-import { WeatherTemperatureProps } from '../types'
+import { Icon } from '../types/icon.type'
+
+type WeatherTemperatureProps = {
+    temp: number
+    suffix?: string
+} & Icon
 
 export const WeatherTemperature: FC<WeatherTemperatureProps> = ({
     temp,

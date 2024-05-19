@@ -2,12 +2,24 @@ import { FC } from 'react'
 import { Marker, Popup } from 'react-leaflet'
 import { generateUniqueKey, toCoords, toFeet } from '../../../../../scripts'
 import { Spacing, Typography } from '../../../../bash-blocks'
-import { ConquestHillMarkerArrayProps } from '../types'
+import { HillMarkerProps } from './hill-markers.component'
 
-export const ConquestMarkerArray: FC<ConquestHillMarkerArrayProps> = ({
-    hills,
-    type,
-}) => (
+type HillMarkerArrayProps = {
+    hills: {
+        name: string
+        lat: number
+        lon: number
+        OSgrid: string
+        elevation: number
+        prominence: number
+        isolation: number
+        summit: string
+        image: string
+        type: string
+    }[]
+} & HillMarkerProps
+
+export const HillMarkerArray: FC<HillMarkerArrayProps> = ({ hills, type }) => (
     <>
         {hills.map(({ name, lat, lon, elevation, summit, image }, index) => {
             const { latFormatted, lonFormatted } = toCoords(lat, lon)
@@ -15,9 +27,8 @@ export const ConquestMarkerArray: FC<ConquestHillMarkerArrayProps> = ({
             return (
                 <Marker key={generateUniqueKey(index)} position={[lat, lon]}>
                     <Popup>
-                        <Spacing textAlign="center" mY={30}>
+                        <Spacing textAlign="center" gapsY={30}>
                             <Typography type="h4">{name}</Typography>
-                            <Spacing mY={30} />
                             <Typography type="body" boldFace>
                                 {type + ' at ' + toFeet(elevation)}
                             </Typography>

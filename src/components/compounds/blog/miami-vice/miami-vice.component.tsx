@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { VideoTile } from '../../../bash-blocks'
-import { MiamiViceSearchTile } from './components'
+import { MiamiViceSearchTile } from './components/miami-vice-search-tile.component'
 import { useMiamiVice } from './hooks/use-miami-vice.hook'
 
 export const MiamiVice: FC = () => {
