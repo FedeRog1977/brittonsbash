@@ -10,6 +10,7 @@ import { Daily } from '../types/daily.type'
 import { Icon } from './icon.component'
 import { Temperature } from './temperature.component'
 
+// Sort order of props
 type DailyPartial = Omit<
     Daily,
     | 'sunrise'
@@ -32,8 +33,8 @@ type ColumnDailyDenseProps = Required<DailyPartial> & {
 
 export const ColumnDailyDense: FC<ColumnDailyDenseProps> = ({
     dt,
-    weather: [{ icon }],
     temp: { day },
+    weather: [{ icon }],
     pop,
     windSpeed,
     windDeg,

@@ -8,10 +8,10 @@ import {
 } from '../../../../../scripts'
 import { Flex, Grid, Spacing, Typography } from '../../../../bash-blocks'
 import { Daily } from '../types/daily.type'
-import { Icon } from '../types/icon.type'
 import { Icon as IconComponent } from './icon.component'
 import { Temperature } from './temperature.component'
 
+// Sort order of props
 type DailyPartial = Omit<
     Daily,
     'feels_like' | 'dew_point' | 'wind_speed' | 'wind_deg' | 'clouds' | 'rain'
@@ -26,16 +26,16 @@ type ColumnDailyProps = Required<DailyPartial> & {
 export const ColumnDaily: FC<ColumnDailyProps> = ({
     dt,
     temp: { day, min, max },
-    pop,
     weather: [{ description, icon }],
-    windDeg,
-    windSpeed,
+    pop,
     sunrise: sr,
     sunset: ss,
     pressure,
     humidity,
     dp,
     uvi,
+    windDeg,
+    windSpeed,
 }) => {
     const { weekday, dayOfMonth } = toDate(dt)
     const precipitation = toPrecipitation(pop)

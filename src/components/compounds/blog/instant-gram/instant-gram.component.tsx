@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
-import { InstantGramResultTile } from './components/instant-gram-result-tile.component'
-import { InstantGramSearchTile } from './components/instant-gram-search-tile.component'
+import { ResultTile } from './components/result-tile.component'
+import { SearchTile } from './components/search-tile.component'
 import { useInstantGram } from './hooks/use-instant-gram.hook'
 
 export const InstantGram: FC = () => {
@@ -22,7 +22,7 @@ export const InstantGram: FC = () => {
 
     return (
         <>
-            <InstantGramSearchTile
+            <SearchTile
                 url={url}
                 funcCategory={handleCategory}
                 funcInput={handleInput}
@@ -34,7 +34,7 @@ export const InstantGram: FC = () => {
                 is2021={is2021}
                 is2020={is2020}
             />
-            <InstantGramResultTile
+            <ResultTile
                 url={url}
                 event={event}
                 sport={sport}

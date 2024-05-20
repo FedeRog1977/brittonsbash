@@ -22,11 +22,11 @@ import {
 import { FC, useEffect } from 'react'
 import { CompiledEventProps } from '../../../../../scripts'
 
-interface InstantGramResultTileProps extends CompiledEventProps {
+interface ResultTileProps extends CompiledEventProps {
     url: string
 }
 
-export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
+export const ResultTile: FC<ResultTileProps> = ({
     url,
     event,
     sport,
@@ -49,11 +49,11 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
 
     return (
         <Tile type="solid">
-            <Anchor id={`${url}#result`} />
+            {/* <Anchor id={`${url}#result`} /> */}
             <Spacing mB={isMobile ? 7.5 : 15}>
                 {refactoredEvent.prefix && (
                     <Typography type="t1" textAlign="center">
-                        {`${refactoredEvent.prefix}:`}
+                        {refactoredEvent.prefix}:
                     </Typography>
                 )}
                 {refactoredEvent.names.length > 1 ? (
@@ -70,14 +70,11 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
                                         textAlign="right"
                                     >
                                         <Typography
-                                            key={generateUniqueKey(index)}
                                             type="t2"
                                             color="mediumGrey"
                                         >
-                                            <>
-                                                Part&nbsp;
-                                                {refKey}&nbsp;
-                                            </>
+                                            Part&nbsp;
+                                            {refKey}&nbsp;
                                         </Typography>
                                     </Grid>
                                     <Grid
@@ -88,10 +85,7 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
                                         ]}
                                         textAlign="left"
                                     >
-                                        <Typography
-                                            key={generateUniqueKey(index)}
-                                            type="t2"
-                                        >
+                                        <Typography type="t2">
                                             {name}
                                         </Typography>
                                     </Grid>
@@ -115,17 +109,15 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
                     textAlign="center"
                     paragraphMargins
                 >
-                    <>
-                        {refactoredEvent.startDate}
-                        {refactoredEvent.endDate && (
-                            <>&nbsp;&#8212;&nbsp;{refactoredEvent.endDate}</>
-                        )}
-                    </>
+                    {refactoredEvent.startDate}
+                    {refactoredEvent.endDate && (
+                        <>&nbsp;&#8212;&nbsp;{refactoredEvent.endDate}</>
+                    )}
                 </Typography>
             </Spacing>
             {refactoredEvent.showSport && (
                 <Spacing
-                    mX={isMobile ? -40 : 0}
+                    mX={isMobile ? -20 : 0}
                     mT={isMobile ? 7.5 : 15}
                     mB={isMobile ? 7.5 : 15}
                 >
@@ -357,7 +349,7 @@ export const InstantGramResultTile: FC<InstantGramResultTileProps> = ({
             )}
             {isMobile ? (
                 <Spacing
-                    mX={isMobile ? -40 : 0}
+                    mX={isMobile ? -20 : 0}
                     mT={isMobile ? 7.5 : 15}
                     mB={isMobile ? 7.5 : 15}
                 >

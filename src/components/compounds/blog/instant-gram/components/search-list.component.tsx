@@ -2,7 +2,7 @@ import { Button } from '../../../../bash-blocks'
 import { generateUniqueKey, useScreenWidth } from '../../../../../scripts'
 import { FC } from 'react'
 
-type InstantGramSearchListProps = {
+type SearchListProps = {
     url?: string
     funcSelect: (() => void) | ((e: any) => void)
     items: {
@@ -12,11 +12,7 @@ type InstantGramSearchListProps = {
     }[]
 }
 
-export const InstantGramSearchList: FC<InstantGramSearchListProps> = ({
-    url,
-    funcSelect,
-    items,
-}) => {
+export const SearchList: FC<SearchListProps> = ({ url, funcSelect, items }) => {
     const { isMobile } = useScreenWidth()
 
     return (
@@ -27,7 +23,7 @@ export const InstantGramSearchList: FC<InstantGramSearchListProps> = ({
                     typeType={isMobile ? 'h4' : 'body'}
                     forceWidth={!isMobile ? 25 : 100}
                     value={names.join(' - ')}
-                    link={{ url: `#${url}#result` }}
+                    // link={{ url: `#${url}#result` }}
                     func={funcSelect}
                     funcResp={false}
                     content={

@@ -1,3 +1,4 @@
+import { FC } from 'react'
 import {
     toDate,
     toPrecipitation,
@@ -5,25 +6,44 @@ import {
     toSpeed,
 } from '../../../../../scripts'
 import { Flex, Grid, Spacing, Typography } from '../../../../bash-blocks'
+import { Hourly } from '../types/hourly.type'
 import { Icon } from './icon.component'
 import { Temperature } from './temperature.component'
 
-export const ColumnHourly = ({
+// Sort order of props
+type HourlyPartial = Omit<
+    Hourly,
+    | 'feels_like'
+    | 'dew_point'
+    | 'clouds'
+    | 'wind_speed'
+    | 'wind_deg'
+    | 'wind_gust'
+>
+
+type ColumnHourlyProps = Required<HourlyPartial> & {
+    dp: number
+    tempFl: number
+    windSpeed: number
+    windDeg: number
+    windGust: number
+}
+
+export const ColumnHourly: FC<ColumnHourlyProps> = ({
     dt,
-    icon,
+    weather: [{ icon }],
     temp,
     tempFl,
     pop,
+    windSpeed,
     windDeg,
-    windSpd,
-    windGst,
+    windGust,
     pressure,
     humidity,
     dp,
-    vb,
+    visibility,
     uvi,
-}: any) => {
-    // App props
+}) => {
     const { hour } = toDate(dt)
     const precipitation = toPrecipitation(pop)
     const {
@@ -31,8 +51,8 @@ export const ColumnHourly = ({
         bearingCompass,
         bearingArrow,
     } = toBearing(windDeg)
-    const speed = toSpeed(windSpd, true)
-    const gusts = toSpeed(windGst, true)
+    const speed = toSpeed(windSpeed, true)
+    const gusts = toSpeed(windGust, true)
 
     return (
         <>
@@ -119,7 +139,7 @@ export const ColumnHourly = ({
                                 {dp}
                             </Typography>
                             <Typography type="footnote" textAlign="left">
-                                {vb / 100 + '%'}
+                                {visibility / 100 + '%'}
                             </Typography>
                             <Typography type="footnote" textAlign="left">
                                 {uvi}

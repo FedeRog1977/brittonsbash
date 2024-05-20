@@ -18,35 +18,32 @@ export const Hourly = ({ latIn, lonIn }: any) => {
             {hourlyResult.slice(0, isMobile ? 5 : 7).map((value, index) => (
                 <Grid key={generateUniqueKey(index)} columnItem={[index, 7]}>
                     {isMobile ? (
+                        // Good example of Hidden component
                         <ColumnHourlyDense
+                            // Sort order of props
                             dt={value.dt}
-                            icon={value.weather[0].icon}
+                            weather={value.weather}
                             temp={value.temp}
-                            tempFl={value.feels_like}
                             pop={value.pop}
+                            windSpeed={value.wind_speed}
                             windDeg={value.wind_deg}
-                            windSpd={value.wind_speed}
-                            windGst={value.wind_gust}
-                            pressure={value.pressure}
-                            humidity={value.humidity}
-                            dp={value.dew_point}
-                            vb={value.visibility}
-                            uvi={value.uvi}
+                            windGust={value.wind_gust}
                         />
                     ) : (
                         <ColumnHourly
+                            // Sort order of props
                             dt={value.dt}
-                            icon={value.weather[0].icon}
+                            weather={value.weather}
                             temp={value.temp}
                             tempFl={value.feels_like}
                             pop={value.pop}
+                            windSpeed={value.wind_speed}
                             windDeg={value.wind_deg}
-                            windSpd={value.wind_speed}
-                            windGst={value.wind_gust}
+                            windGust={value.wind_gust}
                             pressure={value.pressure}
                             humidity={value.humidity}
                             dp={value.dew_point}
-                            vb={value.visibility}
+                            visibility={value.visibility}
                             uvi={value.uvi}
                         />
                     )}

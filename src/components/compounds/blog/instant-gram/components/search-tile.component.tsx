@@ -5,10 +5,10 @@ import {
     useShowElement,
 } from '../../../../../scripts'
 import { FC, useState } from 'react'
-import { InstantGramSearchList } from './instant-gram-search-list.component'
+import { SearchList } from './search-list.component'
 import { BigSearch } from '../../../../bash-blocks'
 
-type InstantGramSearchTileProps = {
+type SearchTileProps = {
     url?: string
     funcCategory: (value: string) => void
     funcInput: (e: any) => void
@@ -21,7 +21,7 @@ type InstantGramSearchTileProps = {
     is2020: boolean
 }
 
-export const InstantGramSearchTile: FC<InstantGramSearchTileProps> = ({
+export const SearchTile: FC<SearchTileProps> = ({
     url,
     funcCategory,
     funcInput,
@@ -147,7 +147,7 @@ export const InstantGramSearchTile: FC<InstantGramSearchTileProps> = ({
                 </Grid>
             </Spacing>
             {showElement && (
-                <InstantGramSearchList
+                <SearchList
                     url={url}
                     funcSelect={funcSelect}
                     items={parsedEventData}

@@ -26,8 +26,8 @@ export const WeatherDaily = ({ latIn, lonIn }: any) => {
                         key={generateUniqueKey(index)}
                         columnItem={[index + 1, isMobile ? 5 : 7]}
                     >
-                        {/* Good example of Hidden component */}
                         {isMobile ? (
+                            // Good example of Hidden component
                             <ColumnDailyDense
                                 dt={value.dt}
                                 weather={value.weather}
