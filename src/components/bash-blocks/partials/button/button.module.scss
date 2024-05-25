@@ -40,12 +40,12 @@ button {
     }
 
     &Solid {
-        background-color: reference.$dark-grey;
+        background-color: reference.$dark-grey-60;
         border-radius: reference.$corners-large;
         transition: background-color reference.$transition-long;
 
         &:hover {
-            background-color: reference.$medium-grey;
+            background-color: reference.$dark-grey;
             transition: background-color reference.$transition-long;
         }
     }
