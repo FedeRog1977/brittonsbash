@@ -35,7 +35,8 @@ export const MiamiViceSearchTile: FC<MiamiViceSearchTileProps> = ({
                 <Grid alignColumns="1fr 1fr 1fr 1fr 1fr" justifyItems="center">
                     <Grid columnItem={[1, 5]}>
                         <Button
-                            typeType={isMobile ? 't1' : 't2'}
+                            variant="clear"
+                            typeVariant={isMobile ? 't1' : 't2'}
                             func={() => {
                                 setShowElement(!showElement)
                                 setParsedEventData(
@@ -54,7 +55,8 @@ export const MiamiViceSearchTile: FC<MiamiViceSearchTileProps> = ({
                     </Grid>
                     <Grid columnItem={[2, 5]}>
                         <Button
-                            typeType={isMobile ? 't1' : 't2'}
+                            variant="clear"
+                            typeVariant={isMobile ? 't1' : 't2'}
                             func={() => {
                                 setShowElement(!showElement)
                                 setParsedEventData(
@@ -73,7 +75,8 @@ export const MiamiViceSearchTile: FC<MiamiViceSearchTileProps> = ({
                     </Grid>
                     <Grid columnItem={[3, 5]}>
                         <Button
-                            typeType={isMobile ? 't1' : 't2'}
+                            variant="clear"
+                            typeVariant={isMobile ? 't1' : 't2'}
                             func={() => {
                                 setShowElement(!showElement)
                                 setParsedEventData(
@@ -92,7 +95,8 @@ export const MiamiViceSearchTile: FC<MiamiViceSearchTileProps> = ({
                     </Grid>
                     <Grid columnItem={[4, 5]}>
                         <Button
-                            typeType={isMobile ? 't1' : 't2'}
+                            variant="clear"
+                            typeVariant={isMobile ? 't1' : 't2'}
                             func={() => {
                                 setShowElement(!showElement)
                                 setParsedEventData(
@@ -111,7 +115,8 @@ export const MiamiViceSearchTile: FC<MiamiViceSearchTileProps> = ({
                     </Grid>
                     <Grid columnItem={[5, 5]}>
                         <Button
-                            typeType={isMobile ? 't1' : 't2'}
+                            variant="clear"
+                            typeVariant={isMobile ? 't1' : 't2'}
                             func={() => {
                                 setShowElement(!showElement)
                                 setParsedEventData(

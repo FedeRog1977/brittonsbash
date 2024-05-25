@@ -16,12 +16,12 @@ export type Text = {
         | 'tiny'
     children?: string | React.ReactElement | React.ReactNode | Element
     color?: Color
+    light?: boolean
     inline?: boolean
     boldFace?: boolean
     italicize?: boolean
     smallCaps?: boolean
     textDecoration?: 'none' | 'overline' | 'underline' | 'lineThrough'
     link?: Url['link']
-    light?: boolean
     shadow?: boolean
 }

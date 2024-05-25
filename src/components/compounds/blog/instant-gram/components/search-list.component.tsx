@@ -20,10 +20,11 @@ export const SearchList: FC<SearchListProps> = ({ url, funcSelect, items }) => {
             {items.map(({ id, prefix, names }, index) => (
                 <Button
                     key={generateUniqueKey(index)}
-                    typeType={isMobile ? 'h4' : 'body'}
+                    variant="clear"
+                    typeVariant={isMobile ? 'h4' : 'body'}
+                    // link={{ url: `#${url}#result` }}
                     forceWidth={!isMobile ? 25 : 100}
                     value={names.join(' - ')}
-                    // link={{ url: `#${url}#result` }}
                     func={funcSelect}
                     funcResp={false}
                     content={
@@ -36,7 +37,7 @@ export const SearchList: FC<SearchListProps> = ({ url, funcSelect, items }) => {
                     }
                     subContent={id.slice(-2)}
                     subContentTop
-                    coarsePadding
+                    padding="coarse"
                 />
             ))}
         </>

@@ -23,7 +23,7 @@ import {
 import { FC, useState } from 'react'
 import { Column } from '../../../../bash-blocks/partials/table/types/column.type'
 
-export type SportResultTileProps = {
+export type ResultTileProps = {
     title: string
     subTitle: string
     description: string
@@ -39,7 +39,7 @@ export type SportResultTileProps = {
     sport2020: RoadieProps[] | ProjectProps[] | MilesProps[]
 }
 
-export const SportResultTile: FC<SportResultTileProps> = ({
+export const ResultTile: FC<ResultTileProps> = ({
     title,
     subTitle,
     description,
@@ -164,7 +164,7 @@ export const SportResultTile: FC<SportResultTileProps> = ({
                 <Grid alignColumns="1fr 1fr 1fr 1fr 1fr" justifyItems="center">
                     <Grid columnItem={[1, 5]}>
                         <Button
-                            typeType="h2"
+                            typeVariant="h2"
                             func={() => setSportYearData(sport2024)}
                             funcResp={Boolean(sportYearData === sport2024)}
                             content="2024"
@@ -172,7 +172,7 @@ export const SportResultTile: FC<SportResultTileProps> = ({
                     </Grid>
                     <Grid columnItem={[2, 5]}>
                         <Button
-                            typeType="h2"
+                            typeVariant="h2"
                             func={() => setSportYearData(sport2023)}
                             funcResp={Boolean(sportYearData === sport2023)}
                             content="2023"
@@ -180,7 +180,7 @@ export const SportResultTile: FC<SportResultTileProps> = ({
                     </Grid>
                     <Grid columnItem={[3, 5]}>
                         <Button
-                            typeType="h2"
+                            typeVariant="h2"
                             func={() => setSportYearData(sport2022)}
                             funcResp={Boolean(sportYearData === sport2022)}
                             content="2022"
@@ -188,7 +188,7 @@ export const SportResultTile: FC<SportResultTileProps> = ({
                     </Grid>
                     <Grid columnItem={[4, 5]}>
                         <Button
-                            typeType="h2"
+                            typeVariant="h2"
                             func={() => setSportYearData(sport2021)}
                             funcResp={Boolean(sportYearData === sport2021)}
                             content="2021"
@@ -196,7 +196,7 @@ export const SportResultTile: FC<SportResultTileProps> = ({
                     </Grid>
                     <Grid columnItem={[5, 5]}>
                         <Button
-                            typeType="h2"
+                            typeVariant="h2"
                             func={() => setSportYearData(sport2020)}
                             funcResp={Boolean(sportYearData === sport2020)}
                             content="2020"

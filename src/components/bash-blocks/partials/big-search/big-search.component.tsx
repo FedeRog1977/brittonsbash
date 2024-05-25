@@ -41,7 +41,6 @@ export const BigSearch: FC<BigSearchProps> = ({
                 </Grid>
                 <Grid columnItem={[2, 2]}>
                     <Button
-                        type="search"
                         func={funcButton}
                         funcResp={false}
                         content={
@@ -51,8 +50,7 @@ export const BigSearch: FC<BigSearchProps> = ({
                                 'Search'
                             )
                         }
-                        color="white"
-                        coarsePadding={!isMobile}
+                        padding={isMobile ? 'default' : 'coarse'}
                     />
                 </Grid>
             </Grid>

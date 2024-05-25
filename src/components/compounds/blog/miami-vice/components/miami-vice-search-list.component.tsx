@@ -22,16 +22,17 @@ export const MiamiViceSearchList: FC<MiamiViceSearchListProps> = ({
             {items.map(({ heading, subHeading }, index) => (
                 <Button
                     key={generateUniqueKey(index)}
-                    typeType={isMobile ? 'h4' : 'body'}
+                    variant="clear"
+                    typeVariant={isMobile ? 'h4' : 'body'}
+                    link={{ url: '#/blog/miami-vice/#result' }}
                     forceWidth={!isMobile ? 25 : 100}
                     value={heading}
-                    link={{ url: '#/blog/miami-vice/#result' }}
                     func={funcSelect}
                     funcResp={false}
                     content={heading}
                     subContent={subHeading}
                     subContentTop
-                    coarsePadding
+                    padding="coarse"
                 />
             ))}
         </>

@@ -113,13 +113,12 @@ export const ImageTile: FC<ImageTileProps> = ({
                         rowItem={[index + 1, ctas.length + 1]}
                     >
                         <Button
-                            typeType="h3"
-                            type="inverse"
+                            variant="inverse"
+                            typeVariant="h3"
+                            typeLight
                             func={() => (window.location.href = href)}
                             funcResp={false}
                             content={content}
-                            color="white"
-                            light
                         />
                     </Grid>
                 ))}

@@ -15,8 +15,9 @@ export const Bookshelf: FC<BookshelfProps> = ({ heading, items }) => {
     return (
         <Spacing mY={20}>
             <Button
-                typeType="h3"
-                light
+                variant="clear"
+                typeVariant="h3"
+                typeLight
                 fill
                 transition
                 func={() => setShowElement(!showElement)}

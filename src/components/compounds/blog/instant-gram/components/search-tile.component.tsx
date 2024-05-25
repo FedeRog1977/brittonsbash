@@ -71,7 +71,8 @@ export const SearchTile: FC<SearchTileProps> = ({
                 >
                     <Grid columnItem={[1, 3]} rowItem={[1, 2]}>
                         <Button
-                            typeType={isMobile ? 't1' : 't2'}
+                            variant="clear"
+                            typeVariant={isMobile ? 't1' : 't2'}
                             value="2024"
                             func={() => {
                                 funcCategory('2024')
@@ -86,7 +87,8 @@ export const SearchTile: FC<SearchTileProps> = ({
                     </Grid>
                     <Grid columnItem={[2, 3]} rowItem={[1, 2]}>
                         <Button
-                            typeType={isMobile ? 't1' : 't2'}
+                            variant="clear"
+                            typeVariant={isMobile ? 't1' : 't2'}
                             value="2023"
                             func={() => {
                                 funcCategory('2023')
@@ -101,7 +103,8 @@ export const SearchTile: FC<SearchTileProps> = ({
                     </Grid>
                     <Grid columnItem={[3, 3]} rowItem={[1, 2]}>
                         <Button
-                            typeType={isMobile ? 't1' : 't2'}
+                            variant="clear"
+                            typeVariant={isMobile ? 't1' : 't2'}
                             value="2022"
                             func={() => {
                                 funcCategory('2022')
@@ -116,7 +119,8 @@ export const SearchTile: FC<SearchTileProps> = ({
                     </Grid>
                     <Grid columnItem={[1, 3]} rowItem={[2, 2]}>
                         <Button
-                            typeType={isMobile ? 't1' : 't2'}
+                            variant="clear"
+                            typeVariant={isMobile ? 't1' : 't2'}
                             value="2021"
                             func={() => {
                                 funcCategory('2021')
@@ -131,7 +135,8 @@ export const SearchTile: FC<SearchTileProps> = ({
                     </Grid>
                     <Grid columnItem={[2, 3]} rowItem={[2, 2]}>
                         <Button
-                            typeType={isMobile ? 't1' : 't2'}
+                            variant="clear"
+                            typeVariant={isMobile ? 't1' : 't2'}
                             value="2020"
                             func={() => {
                                 funcCategory('2020')
@@ -146,13 +151,13 @@ export const SearchTile: FC<SearchTileProps> = ({
                     </Grid>
                 </Grid>
             </Spacing>
-            {showElement && (
+            {showElement ? (
                 <SearchList
                     url={url}
                     funcSelect={funcSelect}
                     items={parsedEventData}
                 />
-            )}
+            ) : null}
         </Tile>
     )
 }

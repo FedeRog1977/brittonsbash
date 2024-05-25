@@ -16,13 +16,19 @@ button {
 }
 
 .button {
-    &Search {
+    &Default {
         border-radius: reference.$corners-small;
-        background-color: reference.$medium-grey;
+        background-color: reference.$apple-blue-60;
         width: 100%;
+        transition: background-color reference.$transition-long;
+
+        &:hover {
+            background-color: reference.$apple-blue;
+            transition: background-color reference.$transition-long;
+        }
     }
 
-    &RegularClear {
+    &Clear {
         background-color: reference.$transparent;
         border-radius: reference.$corners-large;
         transition: background-color reference.$transition-long;
@@ -33,7 +39,7 @@ button {
         }
     }
 
-    &RegularSolid {
+    &Solid {
         background-color: reference.$dark-grey;
         border-radius: reference.$corners-large;
         transition: background-color reference.$transition-long;
@@ -56,9 +62,11 @@ button {
     }
 }
 
-.padded {
-    padding-top: 5px;
-    padding-bottom: 5px;
+.padding {
+    &Default {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
 
     &Coarse {
         padding-top: 15px;

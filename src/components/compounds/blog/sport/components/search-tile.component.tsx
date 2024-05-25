@@ -9,14 +9,14 @@ import { FC } from 'react'
 import { useScreenWidth } from '../../../../../scripts'
 import { Tile, Button, Grid } from '../../../../bash-blocks'
 
-export type SportSearchTileProps = {
+export type SearchTileProps = {
     funcCategory: (e: any) => void
     isRoadies: boolean
     isProjects: boolean
     isMiles: boolean
 }
 
-export const SportSearchTile: FC<SportSearchTileProps> = ({
+export const SearchTile: FC<SearchTileProps> = ({
     funcCategory,
     isRoadies,
     isProjects,
@@ -29,7 +29,7 @@ export const SportSearchTile: FC<SportSearchTileProps> = ({
             <Grid alignColumns="1fr 1fr 1fr 1fr" justifyItems="center">
                 <Grid columnItem={[1, 4]}>
                     <Button
-                        typeType="t2"
+                        typeVariant="t2"
                         value="roadies"
                         func={funcCategory}
                         funcResp={isRoadies}
@@ -40,7 +40,7 @@ export const SportSearchTile: FC<SportSearchTileProps> = ({
                 </Grid>
                 <Grid columnItem={[2, 4]}>
                     <Button
-                        typeType="t2"
+                        typeVariant="t2"
                         value="projects"
                         func={funcCategory}
                         funcResp={isProjects}
@@ -51,7 +51,7 @@ export const SportSearchTile: FC<SportSearchTileProps> = ({
                 </Grid>
                 <Grid columnItem={[3, 4]}>
                     <Button
-                        typeType="t2"
+                        typeVariant="t2"
                         value="miles"
                         func={funcCategory}
                         funcResp={isMiles}
@@ -62,7 +62,7 @@ export const SportSearchTile: FC<SportSearchTileProps> = ({
                 </Grid>
                 <Grid columnItem={[4, 4]}>
                     <Button
-                        typeType="t2"
+                        typeVariant="t2"
                         value="tennis"
                         func={() => {}}
                         funcResp={false}

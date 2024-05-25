@@ -4,57 +4,58 @@ import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import cx from 'classnames'
 import { useScreenWidth, toUpperCase } from '../../../../scripts'
 import { Grid, Typography } from '../../basics'
-import { FC } from 'react'
+import { FC, ReactElement } from 'react'
 import { TypographyProps } from '../../basics'
-import { Color, Url } from '../../reference'
+import { Url } from '../../reference'
 
 export type ButtonProps = {
-    typeType?: TypographyProps['type']
-    light?: boolean
-    type?: 'regularClear' | 'regularSolid' | 'search' | 'inverse'
+    variant?: 'default' | 'clear' | 'solid' | 'inverse'
+    // Go into typography and type --> variant
+    typeVariant?: TypographyProps['type']
+    typeColor?: TypographyProps['color']
+    typeLight?: boolean
+    link?: Url['link']
     fill?: boolean
     forceWidth?: number
     transition?: boolean
     value?: string
-    func: (() => void) | ((e: any) => void)
+    func?: (() => void) | ((e: any) => void)
     funcResp?: boolean
-    link?: Url['link']
-    content?: string | React.ReactElement
-    subContent?: string | React.ReactElement
+    content?: string | ReactElement
+    subContent?: string | ReactElement
     subContentTop?: boolean
-    color?: Color
-    coarsePadding?: boolean
-    removePadding?: boolean
+    padding?: 'default' | 'coarse'
 }
 
 export const Button: FC<ButtonProps> = ({
-    typeType = 'body',
-    light,
-    type = 'regularClear',
+    variant = 'default',
+    typeVariant = 'body',
+    typeColor = 'white',
+    typeLight = false,
+    link,
     fill,
     forceWidth,
     transition,
     value,
     func,
     funcResp,
-    link,
     content,
     subContent,
     subContentTop,
-    color,
-    coarsePadding,
-    removePadding,
+    padding = 'default',
 }) => {
     const { isMobile } = useScreenWidth()
 
-    const classNames = cx(styles[`button${toUpperCase(type)}`], {
-        [styles[`padded${toUpperCase(coarsePadding ? 'Coarse' : '')}`]]:
-            !removePadding,
-        [styles.fill]: fill,
-        [styles.transition]: transition,
-    })
+    const classNames = cx(
+        styles[`button${toUpperCase(variant)}`],
+        styles[`padded${toUpperCase(padding)}`],
+        {
+            [styles.fill]: fill,
+            [styles.transition]: transition,
+        }
+    )
 
-    const buttonContent: React.ReactElement = (
+    const buttonContent: ReactElement = (
         <button
             className={classNames}
             onClick={func}
@@ -85,7 +86,7 @@ export const Button: FC<ButtonProps> = ({
                         <Typography type="body" color="lightGrey">
                             <>
                                 {subContent}
-                                {!isMobile && <>&nbsp;&nbsp;</>}
+                                {!isMobile ? <>&nbsp;&nbsp;</> : null}
                             </>
                         </Typography>
                     </Grid>
@@ -106,15 +107,15 @@ export const Button: FC<ButtonProps> = ({
                     }
                 >
                     <Typography
-                        type={typeType}
+                        type={typeVariant}
                         color={
-                            Boolean(funcResp === false && color)
-                                ? color
+                            Boolean(funcResp === false && typeColor)
+                                ? typeColor
                                 : Boolean(funcResp === false)
                                 ? 'white'
                                 : 'lightBlue'
                         }
-                        light={light}
+                        light={typeLight}
                     >
                         {content
                             ? content
