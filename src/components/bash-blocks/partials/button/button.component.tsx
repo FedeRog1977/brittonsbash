@@ -14,6 +14,9 @@ export type ButtonProps = {
     typeVariant?: TypographyProps['type']
     typeColor?: TypographyProps['color']
     typeLight?: boolean
+    content?: string | ReactElement
+    subContent?: string | ReactElement
+    subContentTop?: boolean
     link?: Url['link']
     fill?: boolean
     forceWidth?: number
@@ -21,9 +24,6 @@ export type ButtonProps = {
     value?: string
     func?: (() => void) | ((e: any) => void)
     funcResp?: boolean
-    content?: string | ReactElement
-    subContent?: string | ReactElement
-    subContentTop?: boolean
     padding?: 'default' | 'coarse'
 }
 
@@ -48,7 +48,7 @@ export const Button: FC<ButtonProps> = ({
 
     const classNames = cx(
         styles[`button${toUpperCase(variant)}`],
-        styles[`padded${toUpperCase(padding)}`],
+        styles[`padding${toUpperCase(padding)}`],
         {
             [styles.fill]: fill,
             [styles.transition]: transition,

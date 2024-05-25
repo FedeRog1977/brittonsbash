@@ -185,6 +185,7 @@ export const ResultTile: FC<ResultTileProps> = ({
             )}
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                 <Button
+                    variant="clear"
                     fill
                     transition
                     func={() => setShowDescription(!showDescription)}
@@ -360,6 +361,7 @@ export const ResultTile: FC<ResultTileProps> = ({
                     <Grid alignColumns="auto auto" justifyItems="center">
                         <Grid columnItem={[1, 2]}>
                             <Button
+                                variant="clear"
                                 func={() => setShowMatrix(!showMatrix)}
                                 funcResp={showMatrix}
                                 content="Image matrix"
@@ -367,6 +369,7 @@ export const ResultTile: FC<ResultTileProps> = ({
                         </Grid>
                         <Grid columnItem={[2, 2]}>
                             <Button
+                                variant="clear"
                                 func={() => setShowModal(!showModal)}
                                 funcResp={showModal}
                                 content="Image slideshow"
