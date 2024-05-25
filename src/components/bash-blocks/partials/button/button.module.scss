@@ -15,7 +15,7 @@ button {
     }
 }
 
-.button {
+.variant {
     &Default {
         border-radius: reference.$corners-small;
         background-color: reference.$apple-blue-60;
@@ -45,7 +45,7 @@ button {
         transition: background-color reference.$transition-long;
 
         &:hover {
-            background-color: reference.$miami-blue-20;
+            background-color: reference.$medium-grey;
             transition: background-color reference.$transition-long;
         }
     }

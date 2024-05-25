@@ -18,13 +18,13 @@ export type ButtonProps = {
     subContent?: string | ReactElement
     subContentTop?: boolean
     link?: Url['link']
-    fill?: boolean
-    forceWidth?: number
-    transition?: boolean
     value?: string
     func?: (() => void) | ((e: any) => void)
     funcResp?: boolean
     padding?: 'default' | 'coarse'
+    fill?: boolean
+    forceWidth?: number
+    transition?: boolean
 }
 
 export const Button: FC<ButtonProps> = ({
@@ -32,22 +32,23 @@ export const Button: FC<ButtonProps> = ({
     typeVariant = 'body',
     typeColor = 'white',
     typeLight = false,
-    link,
-    fill,
-    forceWidth,
-    transition,
-    value,
-    func,
-    funcResp,
     content,
     subContent,
     subContentTop,
+    link,
+    value,
+    func,
+    funcResp,
     padding = 'default',
+    fill,
+    forceWidth,
+    transition,
 }) => {
     const { isMobile } = useScreenWidth()
 
     const classNames = cx(
-        styles[`button${toUpperCase(variant)}`],
+        styles.button,
+        styles[`variant${toUpperCase(variant)}`],
         styles[`padding${toUpperCase(padding)}`],
         {
             [styles.fill]: fill,

@@ -62,6 +62,7 @@ export const WeatherDaily = ({ latIn, lonIn }: any) => {
                     func={() => setShowElement(!showElement)}
                     funcResp={showElement}
                     content={
+                        // Do this for "Read more" / "Read less" and make `content` required
                         showElement
                             ? 'Hide hourly forecast'
                             : 'See hourly forecast'
