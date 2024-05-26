@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { VideoTile } from '../../../bash-blocks'
-import { MiamiViceSearchTile } from './components/miami-vice-search-tile.component'
+import { SearchTile } from './components/search-tile.component'
 import { useMiamiVice } from './hooks/use-miami-vice.hook'
 
 export const MiamiVice: FC = () => {
@@ -8,7 +8,7 @@ export const MiamiVice: FC = () => {
 
     return (
         <>
-            <MiamiViceSearchTile funcSelect={handleSelect} />
+            <SearchTile funcSelect={handleSelect} />
             <VideoTile
                 type="solid"
                 anchor="/blog/miami-vice/#result"

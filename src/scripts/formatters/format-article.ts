@@ -8,7 +8,6 @@ export const formatArticle = (
     italicize?: Text['italicize'],
     smallCaps?: Text['smallCaps'],
     textDecoration?: Text['textDecoration'],
-    light?: Text['light'],
     shadow?: Text['shadow']
 ) => {
     const formattedSections: ArticleProps['sections'] = []
@@ -24,7 +23,6 @@ export const formatArticle = (
             textDecoration: section.textDecoration
                 ? section.textDecoration
                 : textDecoration,
-            light: section.light ? section.light : light,
             shadow: section.shadow ? section.shadow : shadow,
         })
     })

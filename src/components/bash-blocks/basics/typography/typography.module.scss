@@ -1,25 +1,13 @@
 @use '../../reference' as reference;
 
-.image {
-    &Container {
-        text-align: center;
-        padding: 0;
-    }
-
-    &Desktop {
-        max-width: 500px;
-    }
-
-    &Mobile {
-        max-width: 250px;
-    }
+.typography {
+    margin: 0;
+    padding: 0;
 }
 
 .serif {
-    padding: 0;
-
     &T1 {
-        font-family: CMU-Bold;
+        font-family: CMU-Serif;
         font-size: 52px;
 
         @media (max-width: 768px) {
@@ -37,7 +25,7 @@
     }
 
     &H1 {
-        font-family: CMU-Bold;
+        font-family: CMU-Serif;
         font-size: 46px;
 
         @media (max-width: 768px) {
@@ -46,7 +34,7 @@
     }
 
     &H2 {
-        font-family: CMU-Bold;
+        font-family: CMU-Serif;
         font-size: 32px;
 
         @media (max-width: 768px) {
@@ -55,7 +43,7 @@
     }
 
     &H3 {
-        font-family: CMU-Bold;
+        font-family: CMU-Serif;
         font-size: 24px;
 
         @media (max-width: 768px) {
@@ -82,7 +70,7 @@
     }
 
     &Caption {
-        font-family: CMU-Bold;
+        font-family: CMU-Serif;
         font-size: 16px;
 
         @media (max-width: 768px) {
@@ -121,143 +109,72 @@
     }
 }
 
-$sans-regular: Audi-Light;
-$sans-light: Audi-Light;
-$sans-bold: Audi-Regular;
-$sans-italic: Audi-Italic;
-$sans-bold-italic: Audi-Bold-Italic;
-
 .sansSerif {
-    padding: 0;
-
     &T1 {
-        font-family: $sans-bold;
+        font-family: Audi-Light;
         font-size: 52px;
 
         @media (max-width: 768px) {
             font-size: 24px;
-        }
-
-        &Light {
-            font-family: $sans-light;
-            font-size: 52px;
-
-            @media (max-width: 768px) {
-                font-size: 24px;
-            }
         }
     }
 
     &T2 {
-        font-family: $sans-regular;
+        font-family: Audi-Light;
         font-size: 52px;
 
         @media (max-width: 768px) {
             font-size: 24px;
         }
-
-        &Light {
-            font-family: $sans-light;
-            font-size: 52px;
-
-            @media (max-width: 768px) {
-                font-size: 24px;
-            }
-        }
     }
 
     &H1 {
-        font-family: $sans-bold;
+        font-family: Audi-Light;
         font-size: 46px;
 
         @media (max-width: 768px) {
             font-size: 22px;
         }
-
-        &Light {
-            font-family: $sans-light;
-            font-size: 46px;
-
-            @media (max-width: 768px) {
-                font-size: 22px;
-            }
-        }
     }
 
     &H2 {
-        font-family: $sans-bold;
+        font-family: Audi-Light;
         font-size: 32px;
 
         @media (max-width: 768px) {
             font-size: 20px;
         }
-
-        &Light {
-            font-family: $sans-light;
-            font-size: 32px;
-
-            @media (max-width: 768px) {
-                font-size: 20px;
-            }
-        }
     }
 
     &H3 {
-        font-family: $sans-bold;
+        font-family: Audi-Light;
         font-size: 24px;
 
         @media (max-width: 768px) {
             font-size: 16px;
-        }
-
-        &Light {
-            font-family: $sans-light;
-            font-size: 24px;
-
-            @media (max-width: 768px) {
-                font-size: 16px;
-            }
         }
     }
 
     &H4 {
-        font-family: $sans-regular;
+        font-family: Audi-Light;
         font-size: 24px;
 
         @media (max-width: 768px) {
             font-size: 16px;
         }
-
-        &Light {
-            font-family: $sans-light;
-            font-size: 24px;
-
-            @media (max-width: 768px) {
-                font-size: 16px;
-            }
-        }
     }
 
     &Body {
-        font-family: $sans-regular;
+        font-family: Audi-Light;
         font-size: 16px;
 
         @media (max-width: 768px) {
             font-size: 12px;
         }
-
-        &Light {
-            font-family: $sans-light;
-            font-size: 16px;
-
-            @media (max-width: 768px) {
-                font-size: 12px;
-            }
-        }
     }
 
     &Caption {
-        font-family: $sans-bold;
+        font-family: Audi-Light;
         font-size: 16px;
 
         @media (max-width: 768px) {
@@ -266,53 +183,133 @@ $sans-bold-italic: Audi-Bold-Italic;
     }
 
     &Footnote {
-        font-family: $sans-regular;
+        font-family: Audi-Light;
         font-size: 14px;
 
         @media (max-width: 768px) {
             font-size: 10px;
         }
-
-        &Light {
-            font-family: $sans-light;
-            font-size: 14px;
-
-            @media (max-width: 768px) {
-                font-size: 10px;
-            }
-        }
     }
 
     &Tiny {
-        font-family: $sans-regular;
+        font-family: Audi-Light;
         font-size: 10px;
 
         @media (max-width: 768px) {
             font-size: 8px;
         }
-
-        &Light {
-            font-family: $sans-light;
-            font-size: 10px;
-
-            @media (max-width: 768px) {
-                font-size: 8px;
-            }
-        }
     }
 
     &Bold {
-        font-family: $sans-bold;
+        font-family: Audi-Regular;
         letter-spacing: 0.25px;
     }
 
     &Italic {
-        font-family: $sans-italic;
+        font-family: Audi-Italic;
     }
 
     &BoldItalic {
-        font-family: $sans-bold-italic;
+        font-family: Audi-Bold-Italic;
     }
+}
+
+.instagram {
+    &T1 {
+        font-family: Instagram;
+        font-size: 52px;
+
+        @media (max-width: 768px) {
+            font-size: 24px;
+        }
+    }
+
+    &T2 {
+        font-family: Instagram;
+        font-size: 52px;
+
+        @media (max-width: 768px) {
+            font-size: 24px;
+        }
+    }
+
+    &H1 {
+        font-family: Instagram;
+        font-size: 46px;
+
+        @media (max-width: 768px) {
+            font-size: 22px;
+        }
+    }
+
+    &H2 {
+        font-family: Instagram;
+        font-size: 32px;
+
+        @media (max-width: 768px) {
+            font-size: 20px;
+        }
+    }
+
+    &H3 {
+        font-family: Instagram;
+        font-size: 24px;
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+    &H4 {
+        font-family: Instagram;
+        font-size: 24px;
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+    &Body {
+        font-family: Instagram;
+        font-size: 16px;
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
+    }
+
+    &Caption {
+        font-family: Instagram;
+        font-size: 16px;
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
+    }
+
+    &Footnote {
+        font-family: Instagram;
+        font-size: 14px;
+
+        @media (max-width: 768px) {
+            font-size: 10px;
+        }
+    }
+
+    &Tiny {
+        font-family: Instagram;
+        font-size: 10px;
+
+        @media (max-width: 768px) {
+            font-size: 8px;
+        }
+    }
+}
+
+.sport {
+}
+
+.miami {
 }
 
 .smallCaps {
@@ -335,19 +332,6 @@ $sans-bold-italic: Audi-Bold-Italic;
     &LineThrough {
         text-decoration-line: line-through;
     }
-}
-
-a {
-    // This isn't very versatile but I suppose links will always just be white
-    color: reference.$white;
-    text-decoration: none;
-    transition: color reference.$transition-long;
-}
-
-a:hover {
-    color: reference.$light-blue;
-    transition: color reference.$transition-long;
-    cursor: pointer;
 }
 
 .align {
@@ -415,15 +399,28 @@ a:hover {
 }
 
 .paragraphMargins {
-    &Desktop {
+    @media (min-width: 768px) {
         margin-bottom: 30px;
     }
 
-    &Mobile {
+    @media (max-width: 768px) {
         margin-bottom: 15px;
     }
 }
 
 .shadow {
     text-shadow: 0px 0px 5px reference.$darker-grey;
+}
+
+a {
+    // This isn't very versatile but I suppose links will always just be white
+    color: reference.$white;
+    text-decoration: none;
+    transition: color reference.$transition-long;
+
+    &:hover {
+        color: reference.$light-blue;
+        transition: color reference.$transition-long;
+        cursor: pointer;
+    }
 }

@@ -8,6 +8,8 @@ import { ColumnDaily } from './column-daily.component'
 import { Hourly } from './hourly.component'
 import { ColumnDailyDense } from './column-daily-dense.component'
 import { useOpenWeatherCall } from '../calls/open-weather.call'
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const WeatherDaily = ({ latIn, lonIn }: any) => {
     const { isMobile } = useScreenWidth()
@@ -57,16 +59,24 @@ export const WeatherDaily = ({ latIn, lonIn }: any) => {
             </Grid>
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                 <Button
-                    fill
-                    transition
-                    func={() => setShowElement(!showElement)}
-                    funcResp={showElement}
+                    variant="clear"
+                    typeColor={showElement ? 'lightBlue' : undefined}
                     content={
-                        // Do this for "Read more" / "Read less" and make `content` required
                         showElement
                             ? 'Hide hourly forecast'
                             : 'See hourly forecast'
                     }
+                    icon={
+                        showElement ? (
+                            <FontAwesomeIcon icon={faChevronUp} />
+                        ) : (
+                            <FontAwesomeIcon icon={faChevronDown} />
+                        )
+                    }
+                    func={() => setShowElement(!showElement)}
+                    space
+                    width="full"
+                    transition
                 />
             </Spacing>
             {showElement && <Hourly latIn={latIn} lonIn={lonIn} />}

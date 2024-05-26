@@ -21,12 +21,12 @@ export const ArticleTile: FC<ArticleTileProps> = ({
 }) => (
     <Tile type={type}>
         {subHeading && (
-            <Typography type="h2" textAlign={textAlign} light>
+            <Typography type="h2" textAlign={textAlign}>
                 {subHeading}
             </Typography>
         )}
         {heading && (
-            <Typography type="h1" textAlign={textAlign} light paragraphMargins>
+            <Typography type="h1" textAlign={textAlign} paragraphMargins>
                 {heading}
             </Typography>
         )}

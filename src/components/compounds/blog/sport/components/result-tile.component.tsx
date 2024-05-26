@@ -165,41 +165,61 @@ export const ResultTile: FC<ResultTileProps> = ({
                     <Grid columnItem={[1, 5]}>
                         <Button
                             typeVariant="h2"
-                            func={() => setSportYearData(sport2024)}
-                            funcResp={Boolean(sportYearData === sport2024)}
+                            typeColor={
+                                Boolean(sportYearData === sport2024)
+                                    ? 'lightBlue'
+                                    : undefined
+                            }
                             content="2024"
+                            func={() => setSportYearData(sport2024)}
                         />
                     </Grid>
                     <Grid columnItem={[2, 5]}>
                         <Button
                             typeVariant="h2"
-                            func={() => setSportYearData(sport2023)}
-                            funcResp={Boolean(sportYearData === sport2023)}
+                            typeColor={
+                                Boolean(sportYearData === sport2023)
+                                    ? 'lightBlue'
+                                    : undefined
+                            }
                             content="2023"
+                            func={() => setSportYearData(sport2023)}
                         />
                     </Grid>
                     <Grid columnItem={[3, 5]}>
                         <Button
                             typeVariant="h2"
-                            func={() => setSportYearData(sport2022)}
-                            funcResp={Boolean(sportYearData === sport2022)}
+                            typeColor={
+                                Boolean(sportYearData === sport2022)
+                                    ? 'lightBlue'
+                                    : undefined
+                            }
                             content="2022"
+                            func={() => setSportYearData(sport2022)}
                         />
                     </Grid>
                     <Grid columnItem={[4, 5]}>
                         <Button
                             typeVariant="h2"
-                            func={() => setSportYearData(sport2021)}
-                            funcResp={Boolean(sportYearData === sport2021)}
+                            typeColor={
+                                Boolean(sportYearData === sport2021)
+                                    ? 'lightBlue'
+                                    : undefined
+                            }
                             content="2021"
+                            func={() => setSportYearData(sport2021)}
                         />
                     </Grid>
                     <Grid columnItem={[5, 5]}>
                         <Button
                             typeVariant="h2"
-                            func={() => setSportYearData(sport2020)}
-                            funcResp={Boolean(sportYearData === sport2020)}
+                            typeColor={
+                                Boolean(sportYearData === sport2020)
+                                    ? 'lightBlue'
+                                    : undefined
+                            }
                             content="2020"
+                            func={() => setSportYearData(sport2020)}
                         />
                     </Grid>
                 </Grid>

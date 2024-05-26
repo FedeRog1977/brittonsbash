@@ -16,11 +16,15 @@ import {
     compileEvent,
     useShowElement,
     useScreenWidth,
-    RefactoredEventNameProps,
-    generateUniqueKey,
 } from '../../../../../scripts'
 import { FC, useEffect } from 'react'
 import { CompiledEventProps } from '../../../../../scripts'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+    faChevronDown,
+    faChevronUp,
+    prefix,
+} from '@fortawesome/free-solid-svg-icons'
 
 interface ResultTileProps extends CompiledEventProps {
     url: string
@@ -49,56 +53,63 @@ export const ResultTile: FC<ResultTileProps> = ({
 
     return (
         <Tile type="solid">
-            {/* <Anchor id={`${url}#result`} /> */}
+            <Anchor id="#result" />
             <Spacing mB={isMobile ? 7.5 : 15}>
-                {refactoredEvent.prefix && (
-                    <Typography type="t1" textAlign="center">
+                {refactoredEvent.prefix ? (
+                    <Typography
+                        type="t1"
+                        fontFamily="instagram"
+                        textAlign="center"
+                    >
                         {refactoredEvent.prefix}:
                     </Typography>
-                )}
+                ) : null}
                 {refactoredEvent.names.length > 1 ? (
                     <Grid alignColumns="auto auto">
-                        {refactoredEvent.names.map(
-                            ({ name, refKey }, index) => (
-                                <>
-                                    <Grid
-                                        columnItem={[1, 2]}
-                                        rowItem={[
-                                            index + 1,
-                                            refactoredEvent.names.length + 1,
-                                        ]}
-                                        textAlign="right"
+                        {refactoredEvent.names.map((name, index) => (
+                            <>
+                                <Grid
+                                    columnItem={[1, 2]}
+                                    rowItem={[
+                                        index + 1,
+                                        refactoredEvent.names.length + 1,
+                                    ]}
+                                    textAlign="right"
+                                >
+                                    <Typography
+                                        type="t1"
+                                        fontFamily="instagram"
+                                        color="mediumGrey"
                                     >
-                                        <Typography
-                                            type="t2"
-                                            color="mediumGrey"
-                                        >
-                                            Part&nbsp;
-                                            {refKey}&nbsp;
-                                        </Typography>
-                                    </Grid>
-                                    <Grid
-                                        columnItem={[2, 2]}
-                                        rowItem={[
-                                            index + 1,
-                                            refactoredEvent.names.length + 1,
-                                        ]}
-                                        textAlign="left"
+                                        Part&nbsp;
+                                        {index + 1}&nbsp;
+                                    </Typography>
+                                </Grid>
+                                <Grid
+                                    columnItem={[2, 2]}
+                                    rowItem={[
+                                        index + 1,
+                                        refactoredEvent.names.length + 1,
+                                    ]}
+                                    textAlign="left"
+                                >
+                                    <Typography
+                                        type="t1"
+                                        fontFamily="instagram"
                                     >
-                                        <Typography type="t2">
-                                            {name}
-                                        </Typography>
-                                    </Grid>
-                                </>
-                            )
-                        )}
+                                        {name}
+                                    </Typography>
+                                </Grid>
+                            </>
+                        ))}
                     </Grid>
                 ) : (
                     <Typography
-                        type={refactoredEvent.prefix ? 't2' : 't1'}
+                        type="t1"
+                        fontFamily="instagram"
                         textAlign="center"
                     >
-                        {refactoredEvent.names[0].name}
+                        {refactoredEvent.names[0]}
                     </Typography>
                 )}
             </Spacing>
@@ -110,12 +121,12 @@ export const ResultTile: FC<ResultTileProps> = ({
                     paragraphMargins
                 >
                     {refactoredEvent.startDate}
-                    {refactoredEvent.endDate && (
+                    {refactoredEvent.endDate ? (
                         <>&nbsp;&#8212;&nbsp;{refactoredEvent.endDate}</>
-                    )}
+                    ) : null}
                 </Typography>
             </Spacing>
-            {refactoredEvent.showSport && (
+            {refactoredEvent.showSport ? (
                 <Spacing
                     mX={isMobile ? -20 : 0}
                     mT={isMobile ? 7.5 : 15}
@@ -128,73 +139,94 @@ export const ResultTile: FC<ResultTileProps> = ({
                         }}
                         rows={[
                             {
-                                leftItem: refactoredEvent.islands && 'Islands',
-                                rightItem:
-                                    refactoredEvent.islands &&
-                                    refactoredEvent.islands,
+                                leftItem: refactoredEvent.islands
+                                    ? 'Islands'
+                                    : undefined,
+                                rightItem: refactoredEvent.islands
+                                    ? refactoredEvent.islands
+                                    : undefined,
                             },
                             {
-                                leftItem: refactoredEvent.munros && 'Munros',
-                                rightItem:
-                                    refactoredEvent.munros &&
-                                    refactoredEvent.munros,
+                                leftItem: refactoredEvent.munros
+                                    ? 'Munros'
+                                    : undefined,
+                                rightItem: refactoredEvent.munros
+                                    ? refactoredEvent.munros
+                                    : undefined,
                             },
                             {
-                                leftItem:
-                                    refactoredEvent.munroTops && 'Munro Tops',
-                                rightItem:
-                                    refactoredEvent.munroTops &&
-                                    refactoredEvent.munroTops,
+                                leftItem: refactoredEvent.munroTops
+                                    ? 'Munro Tops'
+                                    : undefined,
+                                rightItem: refactoredEvent.munroTops
+                                    ? refactoredEvent.munroTops
+                                    : undefined,
                             },
                             {
-                                leftItem:
-                                    refactoredEvent.corbetts && 'Corbetts',
-                                rightItem:
-                                    refactoredEvent.corbetts &&
-                                    refactoredEvent.corbetts,
+                                leftItem: refactoredEvent.corbetts
+                                    ? 'Corbetts'
+                                    : undefined,
+                                rightItem: refactoredEvent.corbetts
+                                    ? refactoredEvent.corbetts
+                                    : undefined,
                             },
                             {
-                                leftItem:
-                                    refactoredEvent.corbettTops &&
-                                    'Corbett Tops',
-                                rightItem:
-                                    refactoredEvent.corbettTops &&
-                                    refactoredEvent.corbettTops,
+                                leftItem: refactoredEvent.corbettTops
+                                    ? 'Corbett Tops'
+                                    : undefined,
+                                rightItem: refactoredEvent.corbettTops
+                                    ? refactoredEvent.corbettTops
+                                    : undefined,
                             },
                             {
-                                leftItem: refactoredEvent.grahams && 'Grahams',
-                                rightItem:
-                                    refactoredEvent.grahams &&
-                                    refactoredEvent.grahams,
+                                leftItem: refactoredEvent.grahams
+                                    ? 'Grahams'
+                                    : undefined,
+                                rightItem: refactoredEvent.grahams
+                                    ? refactoredEvent.grahams
+                                    : undefined,
                             },
                             {
-                                leftItem: refactoredEvent.subTwos && 'SubTwos',
-                                rightItem:
-                                    refactoredEvent.subTwos &&
-                                    refactoredEvent.subTwos,
+                                leftItem: refactoredEvent.subTwos
+                                    ? 'SubTwos'
+                                    : undefined,
+                                rightItem: refactoredEvent.subTwos
+                                    ? refactoredEvent.subTwos
+                                    : undefined,
                             },
                             {
-                                leftItem: refactoredEvent.donalds && 'Donalds',
-                                rightItem:
-                                    refactoredEvent.donalds &&
-                                    refactoredEvent.donalds,
+                                leftItem: refactoredEvent.donalds
+                                    ? 'Donalds'
+                                    : undefined,
+                                rightItem: refactoredEvent.donalds
+                                    ? refactoredEvent.donalds
+                                    : undefined,
                             },
                         ]}
                     />
                 </Spacing>
-            )}
+            ) : null}
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                 <Button
                     variant="clear"
-                    fill
-                    transition
+                    typeColor={showDescription ? 'lightBlue' : undefined}
+                    content={showDescription ? 'Read less' : 'Read more'}
+                    icon={
+                        showDescription ? (
+                            <FontAwesomeIcon icon={faChevronUp} />
+                        ) : (
+                            <FontAwesomeIcon icon={faChevronDown} />
+                        )
+                    }
                     func={() => setShowDescription(!showDescription)}
-                    funcResp={showDescription}
+                    space
+                    width="full"
+                    transition
                 />
             </Spacing>
-            {showDescription && (
+            {showDescription ? (
                 <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
-                    {refactoredEvent.features && (
+                    {refactoredEvent.features ? (
                         <Spacing
                             mL={isMobile ? 0 : 280}
                             mR={isMobile ? 0 : 280}
@@ -335,7 +367,7 @@ export const ResultTile: FC<ResultTileProps> = ({
                                 ]}
                             />
                         </Spacing>
-                    )}
+                    ) : null}
                     {Array.isArray(refactoredEvent.description) ? (
                         <Article
                             sections={refactoredEvent.description}
@@ -347,7 +379,7 @@ export const ResultTile: FC<ResultTileProps> = ({
                         </Typography>
                     )}
                 </Spacing>
-            )}
+            ) : null}
             {isMobile ? (
                 <Spacing
                     mX={isMobile ? -20 : 0}
@@ -362,35 +394,35 @@ export const ResultTile: FC<ResultTileProps> = ({
                         <Grid columnItem={[1, 2]}>
                             <Button
                                 variant="clear"
-                                func={() => setShowMatrix(!showMatrix)}
-                                funcResp={showMatrix}
+                                typeColor={showMatrix ? 'lightBlue' : undefined}
                                 content="Image matrix"
+                                func={() => setShowMatrix(!showMatrix)}
                             />
                         </Grid>
                         <Grid columnItem={[2, 2]}>
                             <Button
                                 variant="clear"
-                                func={() => setShowModal(!showModal)}
-                                funcResp={showModal}
+                                typeColor={showModal ? 'lightBlue' : undefined}
                                 content="Image slideshow"
+                                func={() => setShowModal(!showModal)}
                             />
                         </Grid>
                     </Grid>
                 </Spacing>
             )}
-            {showMatrix && (
+            {showMatrix ? (
                 <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                     <ImageMatrix items={refactoredEvent.images} columns={4} />
                 </Spacing>
-            )}
-            {showModal && (
+            ) : null}
+            {showModal ? (
                 <Modal
                     isOpen={showModal}
                     onClose={() => setShowModal(!showModal)}
                 >
                     <ImageSlider slides={refactoredEvent.images} />
                 </Modal>
-            )}
+            ) : null}
         </Tile>
     )
 }

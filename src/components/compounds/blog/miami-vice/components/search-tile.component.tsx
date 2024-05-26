@@ -7,16 +7,14 @@ import {
 } from '../../../../bash-blocks'
 import { useScreenWidth, useShowElement } from '../../../../../scripts'
 import { FC, useState } from 'react'
-import { MiamiViceSearchList } from './miami-vice-search-list.component'
+import { SearchList } from './search-list.component'
 import { miamiViceContent } from '../content'
 
-export type MiamiViceSearchTileProps = {
+export type SearchTileProps = {
     funcSelect: (e: any) => void
 }
 
-export const MiamiViceSearchTile: FC<MiamiViceSearchTileProps> = ({
-    funcSelect,
-}) => {
+export const SearchTile: FC<SearchTileProps> = ({ funcSelect }) => {
     const { isMobile } = useScreenWidth()
     const { showElement, setShowElement } = useShowElement()
 
@@ -37,109 +35,126 @@ export const MiamiViceSearchTile: FC<MiamiViceSearchTileProps> = ({
                         <Button
                             variant="clear"
                             typeVariant={isMobile ? 't1' : 't2'}
+                            typeColor={
+                                Boolean(
+                                    showElement &&
+                                        parsedVideoData ===
+                                            miamiViceContent.tileOne.season1
+                                )
+                                    ? 'lightBlue'
+                                    : undefined
+                            }
+                            content="1"
+                            subContent="Season"
+                            subContentTop={isMobile}
                             func={() => {
                                 setShowElement(!showElement)
                                 setParsedEventData(
                                     miamiViceContent.tileOne.season1
                                 )
                             }}
-                            funcResp={
-                                showElement &&
-                                parsedVideoData ===
-                                    miamiViceContent.tileOne.season1
-                            }
-                            content="1"
-                            subContent="Season"
-                            subContentTop={isMobile}
                         />
                     </Grid>
                     <Grid columnItem={[2, 5]}>
                         <Button
                             variant="clear"
                             typeVariant={isMobile ? 't1' : 't2'}
+                            typeColor={
+                                Boolean(
+                                    showElement &&
+                                        parsedVideoData ===
+                                            miamiViceContent.tileOne.season2
+                                )
+                                    ? 'lightBlue'
+                                    : undefined
+                            }
+                            content="2"
+                            subContent="Season"
+                            subContentTop={isMobile}
                             func={() => {
                                 setShowElement(!showElement)
                                 setParsedEventData(
                                     miamiViceContent.tileOne.season2
                                 )
                             }}
-                            funcResp={
-                                showElement &&
-                                parsedVideoData ===
-                                    miamiViceContent.tileOne.season2
-                            }
-                            content="2"
-                            subContent="Season"
-                            subContentTop={isMobile}
                         />
                     </Grid>
                     <Grid columnItem={[3, 5]}>
                         <Button
                             variant="clear"
                             typeVariant={isMobile ? 't1' : 't2'}
+                            typeColor={
+                                Boolean(
+                                    showElement &&
+                                        parsedVideoData ===
+                                            miamiViceContent.tileOne.season3
+                                )
+                                    ? 'lightBlue'
+                                    : undefined
+                            }
+                            content="3"
+                            subContent="Season"
+                            subContentTop={isMobile}
                             func={() => {
                                 setShowElement(!showElement)
                                 setParsedEventData(
                                     miamiViceContent.tileOne.season3
                                 )
                             }}
-                            funcResp={
-                                showElement &&
-                                parsedVideoData ===
-                                    miamiViceContent.tileOne.season3
-                            }
-                            content="3"
-                            subContent="Season"
-                            subContentTop={isMobile}
                         />
                     </Grid>
                     <Grid columnItem={[4, 5]}>
                         <Button
                             variant="clear"
                             typeVariant={isMobile ? 't1' : 't2'}
+                            typeColor={
+                                Boolean(
+                                    showElement &&
+                                        parsedVideoData ===
+                                            miamiViceContent.tileOne.season4
+                                )
+                                    ? 'lightBlue'
+                                    : undefined
+                            }
+                            content="4"
+                            subContent="Season"
+                            subContentTop={isMobile}
                             func={() => {
                                 setShowElement(!showElement)
                                 setParsedEventData(
                                     miamiViceContent.tileOne.season4
                                 )
                             }}
-                            funcResp={
-                                showElement &&
-                                parsedVideoData ===
-                                    miamiViceContent.tileOne.season4
-                            }
-                            content="4"
-                            subContent="Season"
-                            subContentTop={isMobile}
                         />
                     </Grid>
                     <Grid columnItem={[5, 5]}>
                         <Button
                             variant="clear"
                             typeVariant={isMobile ? 't1' : 't2'}
+                            typeColor={
+                                Boolean(
+                                    showElement &&
+                                        parsedVideoData ===
+                                            miamiViceContent.tileOne.season5
+                                )
+                                    ? 'lightBlue'
+                                    : undefined
+                            }
+                            content="5"
+                            subContent="Season"
+                            subContentTop={isMobile}
                             func={() => {
                                 setShowElement(!showElement)
                                 setParsedEventData(
                                     miamiViceContent.tileOne.season5
                                 )
                             }}
-                            funcResp={
-                                showElement &&
-                                parsedVideoData ===
-                                    miamiViceContent.tileOne.season5
-                            }
-                            content="5"
-                            subContent="Season"
-                            subContentTop={isMobile}
                         />
                     </Grid>
                 </Grid>
             </Spacing>
             {showElement && (
-                <MiamiViceSearchList
-                    funcSelect={funcSelect}
-                    items={parsedVideoData}
-                />
+                <SearchList funcSelect={funcSelect} items={parsedVideoData} />
             )}
         </Tile>
     )

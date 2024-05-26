@@ -16,7 +16,6 @@ export type Text = {
         | 'tiny'
     children?: string | React.ReactElement | React.ReactNode | Element
     color?: Color
-    light?: boolean
     inline?: boolean
     boldFace?: boolean
     italicize?: boolean

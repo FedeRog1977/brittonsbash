@@ -33,7 +33,6 @@ export const Article: FC<ArticleProps> = ({
                         smallCaps,
                         textDecoration,
                         link,
-                        light,
                         shadow,
                     }) => (
                         <Typography
@@ -48,7 +47,6 @@ export const Article: FC<ArticleProps> = ({
                             smallCaps={smallCaps}
                             textDecoration={textDecoration}
                             link={link}
-                            light={light}
                             shadow={shadow}
                             paragraphMargins
                         >
@@ -67,7 +65,6 @@ export const Article: FC<ArticleProps> = ({
                 smallCaps={sections[sectionsFinal].smallCaps}
                 textDecoration={sections[sectionsFinal].textDecoration}
                 link={sections[sectionsFinal].link}
-                light={sections[sectionsFinal].light}
                 shadow={sections[sectionsFinal].shadow}
                 paragraphMargins={extendParagraphMargins}
             >

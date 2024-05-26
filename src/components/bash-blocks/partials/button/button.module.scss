@@ -62,6 +62,24 @@ button {
     }
 }
 
+.width {
+    &Default {
+        width: auto;
+    }
+
+    &Quarter {
+        width: 25%;
+    }
+
+    &Half {
+        width: 50%;
+    }
+
+    &Full {
+        width: 100%;
+    }
+}
+
 .padding {
     &Default {
         padding-top: 5px;
@@ -72,10 +90,6 @@ button {
         padding-top: 15px;
         padding-bottom: 15px;
     }
-}
-
-.fill {
-    width: 100%;
 }
 
 .transition {

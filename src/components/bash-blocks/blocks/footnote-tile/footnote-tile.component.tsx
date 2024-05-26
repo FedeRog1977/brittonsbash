@@ -20,7 +20,6 @@ export const FootnoteTile: FC<FootnoteTileProps> = ({ content }) => (
                     false,
                     false,
                     'none',
-                    false,
                     false
                 )}
                 textAlign="justify"

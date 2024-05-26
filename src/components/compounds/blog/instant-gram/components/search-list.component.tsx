@@ -23,10 +23,8 @@ export const SearchList: FC<SearchListProps> = ({ url, funcSelect, items }) => {
                     variant="clear"
                     typeVariant={isMobile ? 'h4' : 'body'}
                     // link={{ url: `#${url}#result` }}
-                    forceWidth={!isMobile ? 25 : 100}
                     value={names.join(' - ')}
                     func={funcSelect}
-                    funcResp={false}
                     content={
                         <>
                             {prefix && prefix + ':'}
@@ -37,6 +35,7 @@ export const SearchList: FC<SearchListProps> = ({ url, funcSelect, items }) => {
                     }
                     subContent={id.slice(-2)}
                     subContentTop
+                    width="quarter"
                     padding="coarse"
                 />
             ))}

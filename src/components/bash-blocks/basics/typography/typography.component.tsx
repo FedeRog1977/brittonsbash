@@ -18,55 +18,24 @@ export const Typography: FC<TypographyProps> = ({
     smallCaps,
     textDecoration = 'none',
     link,
-    light,
     shadow,
     fontFamily = 'sansSerif',
-    textAlign,
+    textAlign = 'inherit',
     paragraphMargins = false,
 }) => {
-    const { isMobile } = useScreenWidth()
-
-    const classNamesContainer = cx(
-        ...(textAlign ? [styles[`align${toUpperCase(textAlign)}`]] : []),
-        {
-            [styles.inline]: inline,
-            [styles[`paragraphMargins${isMobile ? 'Mobile' : 'Desktop'}`]]:
-                paragraphMargins,
-        }
-    )
+    const classNamesContainer = cx({
+        [styles.inline]: inline,
+        [styles.paragraphMargins]: paragraphMargins,
+        [styles[`align${toUpperCase(textAlign)}`]]: textAlign,
+    })
 
     const classNamesText = cx(
-        ...(fontFamily === 'serif'
-            ? [styles[`serif${type ? toUpperCase(type) : ''}`]]
-            : [
-                  styles[
-                      `sansSerif${
-                          type ? toUpperCase(type) + (light ? 'Light' : '') : ''
-                      }`
-                  ],
-              ]),
-        ...(fontFamily === 'serif'
-            ? boldFace
-                ? [styles.serifBold]
-                : []
-            : boldFace
-            ? [styles.sansSerifBold]
-            : []),
-        ...(fontFamily === 'serif'
-            ? italicize
-                ? [styles.serifItalic]
-                : []
-            : italicize
-            ? [styles.sansSerifItalic]
-            : []),
-        ...(fontFamily === 'serif'
-            ? Boolean(boldFace && italicize)
-                ? [styles.serifBoldItalic]
-                : []
-            : Boolean(boldFace && italicize)
-            ? [styles.sansSerifBoldItalic]
-            : []),
+        styles.typography,
+        styles[`${fontFamily}${toUpperCase(type)}`],
         {
+            [styles[`${fontFamily}Bold`]]: boldFace,
+            [styles[`${fontFamily}Italic`]]: italicize,
+            [styles[`${fontFamily}BoldItalic`]]: Boolean(boldFace && italicize),
             [styles.smallCaps]: smallCaps,
             [styles[
                 `textDecoration${

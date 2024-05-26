@@ -16,14 +16,13 @@ export const Body: FC<BodyProps> = ({ body }) =>
                 false,
                 false,
                 'none',
-                true,
                 false
             )}
             textAlign="justify"
             extendParagraphMargins
         />
     ) : (
-        <Typography type="body" textAlign="justify" light paragraphMargins>
+        <Typography type="body" textAlign="justify" paragraphMargins>
             {body}
         </Typography>
     )

@@ -73,80 +73,100 @@ export const SearchTile: FC<SearchTileProps> = ({
                         <Button
                             variant="clear"
                             typeVariant={isMobile ? 't1' : 't2'}
+                            typeColor={
+                                Boolean(showElement && is2024)
+                                    ? 'lightBlue'
+                                    : undefined
+                            }
+                            content="2024"
+                            subContent="Season 5"
+                            subContentTop={isMobile}
                             value="2024"
                             func={() => {
                                 funcCategory('2024')
                                 setShowElement(!showElement)
                                 setParsedEventData(events[2024])
                             }}
-                            funcResp={showElement && is2024}
-                            content="2024"
-                            subContent="Season 5"
-                            subContentTop={isMobile}
                         />
                     </Grid>
                     <Grid columnItem={[2, 3]} rowItem={[1, 2]}>
                         <Button
                             variant="clear"
                             typeVariant={isMobile ? 't1' : 't2'}
+                            typeColor={
+                                Boolean(showElement && is2023)
+                                    ? 'lightBlue'
+                                    : undefined
+                            }
+                            content="2023"
+                            subContent="Season 4"
+                            subContentTop={isMobile}
                             value="2023"
                             func={() => {
                                 funcCategory('2023')
                                 setShowElement(!showElement)
                                 setParsedEventData(events[2023])
                             }}
-                            funcResp={showElement && is2023}
-                            content="2023"
-                            subContent="Season 4"
-                            subContentTop={isMobile}
                         />
                     </Grid>
                     <Grid columnItem={[3, 3]} rowItem={[1, 2]}>
                         <Button
                             variant="clear"
                             typeVariant={isMobile ? 't1' : 't2'}
+                            typeColor={
+                                Boolean(showElement && is2022)
+                                    ? 'lightBlue'
+                                    : undefined
+                            }
+                            content="2022"
+                            subContent="Season 3"
+                            subContentTop={isMobile}
                             value="2022"
                             func={() => {
                                 funcCategory('2022')
                                 setShowElement(!showElement)
                                 setParsedEventData(events[2022])
                             }}
-                            funcResp={showElement && is2022}
-                            content="2022"
-                            subContent="Season 3"
-                            subContentTop={isMobile}
                         />
                     </Grid>
                     <Grid columnItem={[1, 3]} rowItem={[2, 2]}>
                         <Button
                             variant="clear"
                             typeVariant={isMobile ? 't1' : 't2'}
+                            typeColor={
+                                Boolean(showElement && is2021)
+                                    ? 'lightBlue'
+                                    : undefined
+                            }
+                            content="2021"
+                            subContent="Season 2"
+                            subContentTop={isMobile}
                             value="2021"
                             func={() => {
                                 funcCategory('2021')
                                 setShowElement(!showElement)
                                 setParsedEventData(events[2021])
                             }}
-                            funcResp={showElement && is2021}
-                            content="2021"
-                            subContent="Season 2"
-                            subContentTop={isMobile}
                         />
                     </Grid>
                     <Grid columnItem={[2, 3]} rowItem={[2, 2]}>
                         <Button
                             variant="clear"
                             typeVariant={isMobile ? 't1' : 't2'}
+                            typeColor={
+                                Boolean(showElement && is2020)
+                                    ? 'lightBlue'
+                                    : undefined
+                            }
+                            content="2020"
+                            subContent="Season 1"
+                            subContentTop={isMobile}
                             value="2020"
                             func={() => {
                                 funcCategory('2020')
                                 setShowElement(!showElement)
                                 setParsedEventData(events[2020])
                             }}
-                            funcResp={showElement && is2020}
-                            content="2020"
-                            subContent="Season 1"
-                            subContentTop={isMobile}
                         />
                     </Grid>
                 </Grid>

@@ -17,12 +17,11 @@ export const Bookshelf: FC<BookshelfProps> = ({ heading, items }) => {
             <Button
                 variant="clear"
                 typeVariant="h3"
-                typeLight
-                fill
+                typeColor={showElement ? 'lightBlue' : undefined}
                 transition
                 func={() => setShowElement(!showElement)}
-                funcResp={showElement}
                 content={heading}
+                width="full"
             />
             {showElement &&
                 items.map(({ content, url }, index) => (

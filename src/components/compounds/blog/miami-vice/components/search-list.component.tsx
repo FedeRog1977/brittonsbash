@@ -2,7 +2,7 @@ import { Button } from '../../../../bash-blocks'
 import { generateUniqueKey, useScreenWidth } from '../../../../../scripts'
 import { FC } from 'react'
 
-export type MiamiViceSearchListProps = {
+export type SearchListProps = {
     funcSelect: (() => void) | ((e: any) => void)
     items: {
         heading?: string
@@ -11,10 +11,7 @@ export type MiamiViceSearchListProps = {
     }[]
 }
 
-export const MiamiViceSearchList: FC<MiamiViceSearchListProps> = ({
-    funcSelect,
-    items,
-}) => {
+export const SearchList: FC<SearchListProps> = ({ funcSelect, items }) => {
     const { isMobile } = useScreenWidth()
 
     return (
@@ -24,14 +21,16 @@ export const MiamiViceSearchList: FC<MiamiViceSearchListProps> = ({
                     key={generateUniqueKey(index)}
                     variant="clear"
                     typeVariant={isMobile ? 'h4' : 'body'}
-                    link={{ url: '#/blog/miami-vice/#result' }}
-                    forceWidth={!isMobile ? 25 : 100}
                     value={heading}
                     func={funcSelect}
-                    funcResp={false}
+                    // () => {
+                    //     funcSelect
+                    //     window.location.href = '#/blog/miami-vice/#result'
+                    // }
                     content={heading}
                     subContent={subHeading}
                     subContentTop
+                    width="quarter"
                     padding="coarse"
                 />
             ))}

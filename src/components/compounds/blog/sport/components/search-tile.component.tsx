@@ -30,9 +30,9 @@ export const SearchTile: FC<SearchTileProps> = ({
                 <Grid columnItem={[1, 4]}>
                     <Button
                         typeVariant="t2"
+                        typeColor={isRoadies ? 'lightBlue' : undefined}
                         value="roadies"
                         func={funcCategory}
-                        funcResp={isRoadies}
                         content={<FontAwesomeIcon icon={faBiking} />}
                         subContent="Roadies"
                         subContentTop={isMobile}
@@ -41,9 +41,9 @@ export const SearchTile: FC<SearchTileProps> = ({
                 <Grid columnItem={[2, 4]}>
                     <Button
                         typeVariant="t2"
+                        typeColor={isProjects ? 'lightBlue' : undefined}
                         value="projects"
                         func={funcCategory}
-                        funcResp={isProjects}
                         content={<FontAwesomeIcon icon={faMountainSun} />}
                         subContent="Projects"
                         subContentTop={isMobile}
@@ -52,9 +52,9 @@ export const SearchTile: FC<SearchTileProps> = ({
                 <Grid columnItem={[3, 4]}>
                     <Button
                         typeVariant="t2"
+                        typeColor={isMiles ? 'lightBlue' : undefined}
                         value="miles"
                         func={funcCategory}
-                        funcResp={isMiles}
                         content={<FontAwesomeIcon icon={faWalking} />}
                         subContent="Miles"
                         subContentTop={isMobile}
@@ -64,8 +64,6 @@ export const SearchTile: FC<SearchTileProps> = ({
                     <Button
                         typeVariant="t2"
                         value="tennis"
-                        func={() => {}}
-                        funcResp={false}
                         content={<FontAwesomeIcon icon={faTrophy} />}
                         subContent="Tennis"
                         subContentTop={isMobile}

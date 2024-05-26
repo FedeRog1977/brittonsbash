@@ -1,17 +1,12 @@
 import { sum, toFeet, toMiles } from '../formatters'
-import {
-    CompiledEventProps,
-    RefactoredEventNameProps,
-    ProjectProps,
-    RefactoredEventProps,
-} from './types'
+import { CompiledEventProps, ProjectProps, RefactoredEventProps } from './types'
 
 export const compileEvent = ({
     event,
     sport,
     showSport,
 }: CompiledEventProps) => {
-    const names: RefactoredEventNameProps[] = []
+    const names: string[] = []
     const distances: number[] = []
     const elevations: number[] = []
     const times: string[] = []
@@ -37,14 +32,8 @@ export const compileEvent = ({
     subTwoSetAggregate.pop()
     donaldSetAggregate.pop()
 
-    var refKey = 0
-
     event.names.forEach((name: string) => {
-        refKey = refKey + 1
-        names.push({
-            name: name,
-            refKey: refKey,
-        })
+        names.push(name)
     })
 
     if (sport.length === 0) {

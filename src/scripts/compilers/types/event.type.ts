@@ -198,14 +198,9 @@ export type CompiledMilesProps = {
 
 // Event Output Props
 
-export type RefactoredEventNameProps = {
-    refKey: number
-    name: string
-}
-
 export type RefactoredEventProps = {
     prefix?: EventProps['prefix']
-    names: RefactoredEventNameProps[]
+    names: string[]
     startDate: EventProps['startDate']
     endDate?: EventProps['endDate']
     features?: {

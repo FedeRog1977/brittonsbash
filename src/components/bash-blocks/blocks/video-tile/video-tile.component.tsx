@@ -24,13 +24,9 @@ export const VideoTile: FC<VideoTileProps> = ({
     return (
         <Tile type={type}>
             {anchor ? <Anchor id={anchor} /> : null}
-            {subHeading && (
-                <Typography type="h2" light>
-                    {subHeading}
-                </Typography>
-            )}
+            {subHeading && <Typography type="h2">{subHeading}</Typography>}
             {heading && (
-                <Typography type="h1" light paragraphMargins>
+                <Typography type="h1" paragraphMargins>
                     {heading}
                 </Typography>
             )}

@@ -330,6 +330,23 @@ Install classnames:
 npm install classnames
 ```
 
+... more to come ...
+
+Example of prop spreading in classnames:
+
+```ts
+const classNamesContainer = cx(
+    ...(textAlign ? [styles[`align${toUpperCase(textAlign)}`]] : []),
+    {
+        [styles.inline]: inline,
+        [styles[`paragraphMargins${isMobile ? 'Mobile' : 'Desktop'}`]]:
+            paragraphMargins,
+    }
+)
+```
+
+... more to come ...
+
 -   [Guide](https://www.npmjs.com/package/classnames)
 
 ## Prettier

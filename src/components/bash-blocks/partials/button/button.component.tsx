@@ -1,29 +1,24 @@
 import styles from './button.module.scss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import cx from 'classnames'
-import { useScreenWidth, toUpperCase } from '../../../../scripts'
-import { Grid, Typography } from '../../basics'
+import { toUpperCase } from '../../../../scripts'
+import { Grid, Typography, TypographyProps } from '../../basics'
 import { FC, ReactElement } from 'react'
-import { TypographyProps } from '../../basics'
-import { Url } from '../../reference'
+import { getGridArgs } from './hooks/get-grid-args'
 
 export type ButtonProps = {
     variant?: 'default' | 'clear' | 'solid' | 'inverse'
     // Go into typography and type --> variant
     typeVariant?: TypographyProps['type']
     typeColor?: TypographyProps['color']
-    typeLight?: boolean
     content?: string | ReactElement
     subContent?: string | ReactElement
     subContentTop?: boolean
-    link?: Url['link']
+    icon?: ReactElement
     value?: string
     func?: (() => void) | ((e: any) => void)
-    funcResp?: boolean
+    space?: boolean
+    width?: 'default' | 'quarter' | 'half' | 'full'
     padding?: 'default' | 'coarse'
-    fill?: boolean
-    forceWidth?: number
     transition?: boolean
 }
 
@@ -31,133 +26,76 @@ export const Button: FC<ButtonProps> = ({
     variant = 'default',
     typeVariant = 'body',
     typeColor = 'white',
-    typeLight = false,
     content,
     subContent,
     subContentTop,
-    link,
+    icon,
     value,
     func,
-    funcResp,
+    space,
+    width = 'default',
     padding = 'default',
-    fill,
-    forceWidth,
     transition,
 }) => {
-    const { isMobile } = useScreenWidth()
-
     const classNames = cx(
         styles.button,
         styles[`variant${toUpperCase(variant)}`],
+        styles[`width${toUpperCase(width)}`],
         styles[`padding${toUpperCase(padding)}`],
         {
-            [styles.fill]: fill,
             [styles.transition]: transition,
         }
     )
 
-    const buttonContent: ReactElement = (
-        <button
-            className={classNames}
-            onClick={func}
-            value={value}
-            style={{
-                width: forceWidth ? `${forceWidth}%` : undefined,
-            }}
-        >
+    const {
+        gridArgs,
+        gridItemSubContentArgs,
+        gridItemContentArgs,
+        gridItemIconArgs,
+    } = getGridArgs(Boolean(subContent), Boolean(subContentTop), Boolean(space))
+
+    return (
+        <button className={classNames} onClick={func} value={value}>
             <Grid
-                alignColumns={subContentTop ? 'auto' : 'auto auto'}
-                alignRows={subContentTop ? 'auto auto' : undefined}
-                justifyContent={Boolean(content) ? 'center' : undefined}
-                alignContent="center"
-                alignItems={isMobile ? undefined : 'center'}
+                alignColumns={gridArgs.alignColumns}
+                alignRows={gridArgs.alignRows}
+                justifyContent={gridArgs.justifyContent}
+                alignItems={gridArgs.alignItems}
             >
-                {Boolean(subContent) && (
+                {subContent ? (
                     <Grid
-                        columnItem={subContentTop ? [1, 1] : [1, 2]}
-                        rowItem={subContentTop ? [1, 2] : undefined}
-                        textAlign={
-                            Boolean(isMobile && content)
-                                ? 'center'
-                                : subContentTop
-                                ? 'center'
-                                : 'right'
-                        }
+                        columnItem={gridItemSubContentArgs.columnItem}
+                        rowItem={gridItemSubContentArgs.rowItem}
+                        textAlign={gridItemSubContentArgs.textAlign}
                     >
                         <Typography type="body" color="lightGrey">
-                            <>
-                                {subContent}
-                                {!isMobile ? <>&nbsp;&nbsp;</> : null}
-                            </>
+                            {subContent}
+                            {subContentTop ? null : <>&nbsp;</>}
                         </Typography>
                     </Grid>
-                )}
+                ) : null}
                 <Grid
-                    columnItem={
-                        subContentTop ? [1, 1] : [subContent ? 2 : 1, 2]
-                    }
-                    rowItem={
-                        subContentTop ? [subContent ? 2 : 1, 2] : undefined
-                    }
-                    textAlign={
-                        Boolean(isMobile && content)
-                            ? 'center'
-                            : subContentTop
-                            ? 'center'
-                            : 'left'
-                    }
+                    columnItem={gridItemContentArgs.columnItem}
+                    rowItem={gridItemContentArgs.rowItem}
+                    textAlign={gridItemContentArgs.textAlign}
                 >
-                    <Typography
-                        type={typeVariant}
-                        color={
-                            Boolean(funcResp === false && typeColor)
-                                ? typeColor
-                                : Boolean(funcResp === false)
-                                ? 'white'
-                                : 'lightBlue'
-                        }
-                        light={typeLight}
-                    >
-                        {content
-                            ? content
-                            : Boolean(funcResp === false)
-                            ? 'Read more'
-                            : 'Read less'}
+                    <Typography type={typeVariant} color={typeColor}>
+                        {content}
                     </Typography>
                 </Grid>
-                {Boolean(!content) && (
+                {icon ? (
                     <Grid
-                        columnItem={subContentTop ? undefined : [2, 2]}
-                        rowItem={subContentTop ? [2, 2] : undefined}
-                        textAlign="right"
+                        columnItem={gridItemIconArgs.columnItem}
+                        rowItem={gridItemIconArgs.rowItem}
+                        textAlign={gridItemIconArgs.textAlign}
                     >
-                        <Typography
-                            type="footnote"
-                            color={funcResp === false ? 'white' : 'lightBlue'}
-                            light
-                        >
-                            {funcResp === false ? (
-                                <FontAwesomeIcon icon={faChevronDown} />
-                            ) : (
-                                <FontAwesomeIcon icon={faChevronUp} />
-                            )}
+                        <Typography type="footnote" color={typeColor}>
+                            {space ? null : <>&nbsp;</>}
+                            {icon}
                         </Typography>
                     </Grid>
-                )}
+                ) : null}
             </Grid>
         </button>
     )
-
-    if (link?.url)
-        return (
-            <a
-                href={link.url}
-                target={link.newTab ? '_blank' : undefined}
-                rel={link.newTab ? 'noreferrer' : undefined}
-            >
-                {buttonContent}
-            </a>
-        )
-
-    return buttonContent
 }

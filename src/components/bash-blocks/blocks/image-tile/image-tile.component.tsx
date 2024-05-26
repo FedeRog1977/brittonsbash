@@ -46,7 +46,6 @@ export const ImageTile: FC<ImageTileProps> = ({
                 type="h4"
                 textAlign={textAlign}
                 color={handleInverseColor}
-                light
             >
                 {subHeading}
             </Typography>
@@ -54,7 +53,6 @@ export const ImageTile: FC<ImageTileProps> = ({
                 type="t1"
                 textAlign={textAlign}
                 color={handleInverseColor}
-                light
                 paragraphMargins
             >
                 {heading}
@@ -69,7 +67,6 @@ export const ImageTile: FC<ImageTileProps> = ({
                         false,
                         false,
                         'none',
-                        true,
                         false
                     )}
                     textAlign={textAlign === 'right' ? 'right' : 'justify'}
@@ -80,7 +77,6 @@ export const ImageTile: FC<ImageTileProps> = ({
                     type="body"
                     textAlign={textAlign === 'right' ? 'right' : 'justify'}
                     color={handleInverseColor}
-                    light
                     paragraphMargins
                 >
                     {body}
@@ -115,10 +111,8 @@ export const ImageTile: FC<ImageTileProps> = ({
                         <Button
                             variant="inverse"
                             typeVariant="h3"
-                            typeLight
-                            func={() => (window.location.href = href)}
-                            funcResp={false}
                             content={content}
+                            func={() => (window.location.href = href)}
                         />
                     </Grid>
                 ))}

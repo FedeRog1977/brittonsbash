@@ -19,11 +19,11 @@ export const TitleTile: FC<TitleTileProps> = ({
     return (
         <Tile type="clear" dense>
             {heading && (
-                <Typography type="h3" textAlign="center" light>
+                <Typography type="h3" textAlign="center">
                     {heading}
                 </Typography>
             )}
-            {titleItems && (
+            {titleItems ? (
                 <Spacing mT={heading ? 10 : 0}>
                     <Grid alignColumns="auto auto" columnGap={10} rowGap={10}>
                         {titleItems?.map(({ content, subContent }, index) => (
@@ -35,6 +35,7 @@ export const TitleTile: FC<TitleTileProps> = ({
                                 >
                                     <Typography
                                         type={isMobile ? 'h4' : 'h3'}
+                                        boldFace
                                         inline
                                     >
                                         {content}
@@ -56,7 +57,6 @@ export const TitleTile: FC<TitleTileProps> = ({
                                                   }
                                                 : undefined
                                         }
-                                        light
                                         inline
                                     >
                                         {subContent.content}
@@ -66,8 +66,8 @@ export const TitleTile: FC<TitleTileProps> = ({
                         ))}
                     </Grid>
                 </Spacing>
-            )}
-            {bodyItems && (
+            ) : null}
+            {bodyItems ? (
                 <Spacing mT={heading || titleItems ? 10 : 0}>
                     <Grid alignColumns="auto auto" columnGap={10} rowGap={10}>
                         {bodyItems?.map(({ content, subContent }, index) => (
@@ -97,7 +97,6 @@ export const TitleTile: FC<TitleTileProps> = ({
                                                   }
                                                 : undefined
                                         }
-                                        light
                                         inline
                                     >
                                         {subContent.content}
@@ -107,7 +106,7 @@ export const TitleTile: FC<TitleTileProps> = ({
                         ))}
                     </Grid>
                 </Spacing>
-            )}
+            ) : null}
         </Tile>
     )
 }
