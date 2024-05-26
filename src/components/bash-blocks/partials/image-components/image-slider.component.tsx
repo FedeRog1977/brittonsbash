@@ -57,7 +57,7 @@ export const ImageSlider: FC<ImageSliderProps> = ({ slides }) => {
                             {slide.description && (
                                 <div className={styles.imageSliderCaption}>
                                     <Typography
-                                        type={isMobile ? 'footnote' : 'body'}
+                                        variant={isMobile ? 'footnote' : 'body'}
                                         textAlign="left"
                                         color="white"
                                     >
@@ -67,7 +67,7 @@ export const ImageSlider: FC<ImageSliderProps> = ({ slides }) => {
                             )}
                             <div className={styles.imageSliderIndex}>
                                 <Typography
-                                    type={isMobile ? 'footnote' : 'body'}
+                                    variant={isMobile ? 'footnote' : 'body'}
                                     color="white"
                                 >{`${current + 1}/${
                                     slides.length
@@ -98,8 +98,8 @@ export const ImageSlider: FC<ImageSliderProps> = ({ slides }) => {
                         </>
                     ) : (
                         <>
-                            <Typography type="h3">No Disc Loaded</Typography>
-                            <Typography type="h4">
+                            <Typography variant="h3">No Disc Loaded</Typography>
+                            <Typography variant="h4">
                                 <>
                                     Insert Disc{' '}
                                     <FontAwesomeIcon

@@ -25,7 +25,7 @@ export const Footer: FC = () => (
                                 <div className={styles.footerLogo}>
                                     BrittonsBashRC
                                 </div>
-                                <Typography type="body" color="lightGrey">
+                                <Typography variant="body" color="lightGrey">
                                     {<code>brittonsbash.com</code>}
                                 </Typography>
                             </Grid>
@@ -47,14 +47,14 @@ export const Footer: FC = () => (
                             />
                         </Grid>
                         <Grid columnItem={[2, 2]}>
-                            <Typography type="body" color="lightGrey">
+                            <Typography variant="body" color="lightGrey">
                                 Monero Donations
                             </Typography>
                         </Grid>
                     </Grid>
                 </Grid>
                 <Grid rowItem={[3, 5]}>
-                    <Typography type="footnote" color="lightGrey">
+                    <Typography variant="footnote" color="lightGrey">
                         <code>
                             4ALBFTLBcv68zhmy8vvdTdjLZ2bisn5RPcM8KF6hDWGhj7
                             <br />
@@ -72,7 +72,7 @@ export const Footer: FC = () => (
                     />
                 </Grid>
                 <Grid rowItem={[5, 5]}>
-                    <Typography type="body" color="lightGrey">
+                    <Typography variant="body" color="lightGrey">
                         <>&#169; Lewis Britton 2020&mdash;2024</>
                     </Typography>
                 </Grid>

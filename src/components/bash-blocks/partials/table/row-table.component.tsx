@@ -24,11 +24,11 @@ export const RowTable: FC<RowTableProps> = ({ titleRow, rows }) => {
                         }}
                     >
                         {titleRow.leftItem != null ? (
-                            <Typography type="footnote" boldFace>
+                            <Typography variant="footnote" boldFace>
                                 {titleRow.leftItem}
                             </Typography>
                         ) : (
-                            <Typography type="footnote">
+                            <Typography variant="footnote">
                                 <>&nbsp;</>
                             </Typography>
                         )}
@@ -47,7 +47,7 @@ export const RowTable: FC<RowTableProps> = ({ titleRow, rows }) => {
                             display: 'inline-block',
                         }}
                     >
-                        <Typography type="footnote" boldFace>
+                        <Typography variant="footnote" boldFace>
                             {titleRow.rightItem}
                         </Typography>
                     </div>
@@ -71,7 +71,7 @@ export const RowTable: FC<RowTableProps> = ({ titleRow, rows }) => {
                                         >
                                             <Spacing mT={isMobile ? 3.75 : 7.5}>
                                                 <Typography
-                                                    type="footnote"
+                                                    variant="footnote"
                                                     boldFace
                                                 >
                                                     {leftItem}
@@ -95,7 +95,7 @@ export const RowTable: FC<RowTableProps> = ({ titleRow, rows }) => {
                                             }}
                                         >
                                             <Spacing mT={isMobile ? 3.75 : 7.5}>
-                                                <Typography type="footnote">
+                                                <Typography variant="footnote">
                                                     {rightItem}
                                                 </Typography>
                                             </Spacing>

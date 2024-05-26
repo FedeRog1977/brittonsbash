@@ -3,7 +3,6 @@
 button {
     border: 0 none !important;
     margin: 0;
-    padding: 15px;
 
     &::-moz-focus-inner {
         border: 0 none !important;
@@ -82,13 +81,11 @@ button {
 
 .padding {
     &Default {
-        padding-top: 5px;
-        padding-bottom: 5px;
+        padding: 5px 15px 5px 15px;
     }
 
     &Coarse {
-        padding-top: 15px;
-        padding-bottom: 15px;
+        padding: 15px;
     }
 }
 

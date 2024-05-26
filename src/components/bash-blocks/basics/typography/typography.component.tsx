@@ -9,7 +9,7 @@ import { Style, Text } from '../../reference'
 export type TypographyProps = Text & Style
 
 export const Typography: FC<TypographyProps> = ({
-    type,
+    variant,
     children,
     color = 'white',
     inline,
@@ -31,11 +31,13 @@ export const Typography: FC<TypographyProps> = ({
 
     const classNamesText = cx(
         styles.typography,
-        styles[`${fontFamily}${toUpperCase(type)}`],
+        styles[`variant${toUpperCase(fontFamily)}${toUpperCase(variant)}`],
         {
-            [styles[`${fontFamily}Bold`]]: boldFace,
-            [styles[`${fontFamily}Italic`]]: italicize,
-            [styles[`${fontFamily}BoldItalic`]]: Boolean(boldFace && italicize),
+            [styles[`variant${toUpperCase(fontFamily)}Bold`]]: boldFace,
+            [styles[`variant${toUpperCase(fontFamily)}Italic`]]: italicize,
+            [styles[`variant${toUpperCase(fontFamily)}BoldItalic`]]: Boolean(
+                boldFace && italicize
+            ),
             [styles.smallCaps]: smallCaps,
             [styles[
                 `textDecoration${
@@ -60,7 +62,7 @@ export const Typography: FC<TypographyProps> = ({
             <>{children}</>
         )
 
-    if (link?.url)
+    if (link)
         return (
             <div className={classNamesContainer}>
                 <div className={classNamesText}>

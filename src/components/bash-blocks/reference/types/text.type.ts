@@ -1,9 +1,8 @@
-import { ElementType } from 'react'
 import { Color } from './color.type'
 import { Url } from './url.type'
 
 export type Text = {
-    type:
+    variant:
         | 't1'
         | 't2'
         | 'h1'
@@ -21,6 +20,6 @@ export type Text = {
     italicize?: boolean
     smallCaps?: boolean
     textDecoration?: 'none' | 'overline' | 'underline' | 'lineThrough'
-    link?: Url['link']
+    link?: Url
     shadow?: boolean
 }

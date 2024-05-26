@@ -28,7 +28,7 @@ export const SearchTile: FC<SearchTileProps> = ({ funcSelect }) => {
     const [parsedVideoData, setParsedEventData] = useState(emptyVideoData)
 
     return (
-        <Tile type="solid">
+        <Tile type="solid" gap>
             <Spacing mB={showElement ? 30 : 0}>
                 <Grid alignColumns="1fr 1fr 1fr 1fr 1fr" justifyItems="center">
                     <Grid columnItem={[1, 5]}>

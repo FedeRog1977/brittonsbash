@@ -9,6 +9,7 @@ export const thinkFlowContent: ThinkFlowProps = {
     background: { content: 'ThinkFlow' },
     tileOne: {
         type: 'solid',
+        gap: true,
         heading: 'ThinkFlow (Patent Pending)',
         subHeading: 'My ThinkPads',
         sections: [

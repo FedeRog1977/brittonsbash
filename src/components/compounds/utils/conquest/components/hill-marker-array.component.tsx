@@ -28,14 +28,14 @@ export const HillMarkerArray: FC<HillMarkerArrayProps> = ({ hills, type }) => (
                 <Marker key={generateUniqueKey(index)} position={[lat, lon]}>
                     <Popup>
                         <Spacing textAlign="center" gapsY={30}>
-                            <Typography type="h4">{name}</Typography>
-                            <Typography type="body" boldFace>
+                            <Typography variant="h4">{name}</Typography>
+                            <Typography variant="body" boldFace>
                                 {type + ' at ' + toFeet(elevation)}
                             </Typography>
-                            <Typography type="body">
+                            <Typography variant="body">
                                 {latFormatted + ', ' + lonFormatted}
                             </Typography>
-                            <Typography type="body">
+                            <Typography variant="body">
                                 {summit + ' summit'}
                             </Typography>
                         </Spacing>

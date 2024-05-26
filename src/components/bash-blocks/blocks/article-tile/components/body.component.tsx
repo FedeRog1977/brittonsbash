@@ -22,7 +22,7 @@ export const Body: FC<BodyProps> = ({ body }) =>
             extendParagraphMargins
         />
     ) : (
-        <Typography type="body" textAlign="justify" paragraphMargins>
+        <Typography variant="body" textAlign="justify" paragraphMargins>
             {body}
         </Typography>
     )

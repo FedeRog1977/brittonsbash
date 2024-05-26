@@ -24,7 +24,7 @@ export const Article: FC<ArticleProps> = ({
                 .slice(0, sectionsFinal)
                 .map(
                     ({
-                        type = 'body',
+                        variant = 'body',
                         children,
                         color = 'darkerGrey',
                         inline,
@@ -36,8 +36,8 @@ export const Article: FC<ArticleProps> = ({
                         shadow,
                     }) => (
                         <Typography
-                            key={type}
-                            type={type}
+                            key={variant}
+                            variant={variant}
                             fontFamily={fontFamily}
                             color={color}
                             textAlign={textAlign}
@@ -55,7 +55,7 @@ export const Article: FC<ArticleProps> = ({
                     )
                 )}
             <Typography
-                type={sections[sectionsFinal].type}
+                variant={sections[sectionsFinal].variant}
                 fontFamily={fontFamily}
                 color={sections[sectionsFinal].color}
                 textAlign={textAlign}

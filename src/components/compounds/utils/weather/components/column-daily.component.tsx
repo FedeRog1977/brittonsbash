@@ -51,29 +51,29 @@ export const ColumnDaily: FC<ColumnDailyProps> = ({
     return (
         <>
             <Spacing pY={20} textAlign="center">
-                <Typography type="h4">{weekday}</Typography>
-                <Typography type="body" paragraphMargins>
+                <Typography variant="h4">{weekday}</Typography>
+                <Typography variant="body" paragraphMargins>
                     {dayOfMonth}
                 </Typography>
-                <Typography type="h1" paragraphMargins>
+                <Typography variant="h1" paragraphMargins>
                     <IconComponent icon={icon} />
                 </Typography>
-                <Typography type="body">{precipitation}</Typography>
-                <Typography type="body" paragraphMargins>
+                <Typography variant="body">{precipitation}</Typography>
+                <Typography variant="body" paragraphMargins>
                     {toSentenceCase(description)}
                 </Typography>
                 <Grid alignColumns="auto">
                     <Grid columnItem={[1, 2]}>
-                        <Typography type="body" boldFace>
+                        <Typography variant="body" boldFace>
                             Sunrise:
                         </Typography>
-                        <Typography type="body">{sunrise}</Typography>
+                        <Typography variant="body">{sunrise}</Typography>
                     </Grid>
                     <Grid columnItem={[2, 2]}>
-                        <Typography type="body" boldFace>
+                        <Typography variant="body" boldFace>
                             Sunset:
                         </Typography>
-                        <Typography type="body">{sunset}</Typography>
+                        <Typography variant="body">{sunset}</Typography>
                     </Grid>
                 </Grid>
             </Spacing>
@@ -91,10 +91,10 @@ export const ColumnDaily: FC<ColumnDailyProps> = ({
                 </Grid>
             </Spacing>
             <Spacing pY={20} textAlign="center">
-                <Typography type="body">{bearingCompass}</Typography>
-                <Typography type="body">{bearingArrow}</Typography>
-                <Typography type="footnote">{bearing}</Typography>
-                <Typography type="footnote" boldFace>
+                <Typography variant="body">{bearingCompass}</Typography>
+                <Typography variant="body">{bearingArrow}</Typography>
+                <Typography variant="footnote">{bearing}</Typography>
+                <Typography variant="footnote" boldFace>
                     {speed}
                 </Typography>
             </Spacing>
@@ -103,28 +103,28 @@ export const ColumnDaily: FC<ColumnDailyProps> = ({
                     <Flex item>
                         <Spacing textAlign="center" mR={2.5}>
                             <Typography
-                                type="footnote"
+                                variant="footnote"
                                 textAlign="right"
                                 boldFace
                             >
                                 Pressure:
                             </Typography>
                             <Typography
-                                type="footnote"
+                                variant="footnote"
                                 textAlign="right"
                                 boldFace
                             >
                                 Humidity:
                             </Typography>
                             <Typography
-                                type="footnote"
+                                variant="footnote"
                                 textAlign="right"
                                 boldFace
                             >
                                 Dew Pt.:
                             </Typography>
                             <Typography
-                                type="footnote"
+                                variant="footnote"
                                 textAlign="right"
                                 boldFace
                             >
@@ -134,16 +134,16 @@ export const ColumnDaily: FC<ColumnDailyProps> = ({
                     </Flex>
                     <Flex item>
                         <Spacing textAlign="center" mL={2.5}>
-                            <Typography type="footnote" textAlign="left">
+                            <Typography variant="footnote" textAlign="left">
                                 {pressure + 'mb'}
                             </Typography>
-                            <Typography type="footnote" textAlign="left">
+                            <Typography variant="footnote" textAlign="left">
                                 {humidity + '%'}
                             </Typography>
-                            <Typography type="footnote" textAlign="left">
+                            <Typography variant="footnote" textAlign="left">
                                 {dp}
                             </Typography>
-                            <Typography type="footnote" textAlign="left">
+                            <Typography variant="footnote" textAlign="left">
                                 {uvi}
                             </Typography>
                         </Spacing>

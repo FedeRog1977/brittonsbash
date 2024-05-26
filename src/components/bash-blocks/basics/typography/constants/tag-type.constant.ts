@@ -1,7 +1,7 @@
 import { ElementType } from 'react'
 import { Text } from '../../../reference/'
 
-export const tagType: Record<Text['type'], ElementType> = {
+export const tagType: Record<Text['variant'], ElementType> = {
     t1: 'h1',
     t2: 'h2',
     h1: 'h3',

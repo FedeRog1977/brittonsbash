@@ -43,7 +43,7 @@ export const ImageMatrix: FC<ImageMatrixProps> = ({ items, columns }) => {
                             </a>
                             {description && (
                                 <Spacing mY={15}>
-                                    <Typography type="body">
+                                    <Typography variant="body">
                                         {description}
                                     </Typography>
                                 </Spacing>

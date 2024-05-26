@@ -57,13 +57,13 @@ export const ColumnHourly: FC<ColumnHourlyProps> = ({
     return (
         <>
             <Spacing pY={20} textAlign="center">
-                <Typography type="h4" paragraphMargins>
+                <Typography variant="h4" paragraphMargins>
                     {hour}
                 </Typography>
-                <Typography type="h1" paragraphMargins>
+                <Typography variant="h1" paragraphMargins>
                     <Icon icon={icon} />
                 </Typography>
-                <Typography type="body">{precipitation}</Typography>
+                <Typography variant="body">{precipitation}</Typography>
             </Spacing>
             <Spacing pY={20}>
                 <Grid alignColumns="auto">
@@ -76,13 +76,13 @@ export const ColumnHourly: FC<ColumnHourlyProps> = ({
                 </Grid>
             </Spacing>
             <Spacing pY={20} textAlign="center">
-                <Typography type="body">{bearingCompass}</Typography>
-                <Typography type="body">{bearingArrow}</Typography>
-                <Typography type="footnote">{bearing}</Typography>
-                <Typography type="footnote" boldFace>
+                <Typography variant="body">{bearingCompass}</Typography>
+                <Typography variant="body">{bearingArrow}</Typography>
+                <Typography variant="footnote">{bearing}</Typography>
+                <Typography variant="footnote" boldFace>
                     {speed}
                 </Typography>
-                <Typography type="footnote" boldFace>
+                <Typography variant="footnote" boldFace>
                     {gusts + ' gusts'}
                 </Typography>
             </Spacing>
@@ -91,35 +91,35 @@ export const ColumnHourly: FC<ColumnHourlyProps> = ({
                     <Flex item>
                         <Spacing textAlign="center" mR={2.5}>
                             <Typography
-                                type="footnote"
+                                variant="footnote"
                                 textAlign="right"
                                 boldFace
                             >
                                 Pressure:
                             </Typography>
                             <Typography
-                                type="footnote"
+                                variant="footnote"
                                 textAlign="right"
                                 boldFace
                             >
                                 Humidity:
                             </Typography>
                             <Typography
-                                type="footnote"
+                                variant="footnote"
                                 textAlign="right"
                                 boldFace
                             >
                                 Dew Pt.:
                             </Typography>
                             <Typography
-                                type="footnote"
+                                variant="footnote"
                                 textAlign="right"
                                 boldFace
                             >
                                 Visibility:
                             </Typography>
                             <Typography
-                                type="footnote"
+                                variant="footnote"
                                 textAlign="right"
                                 boldFace
                             >
@@ -129,19 +129,19 @@ export const ColumnHourly: FC<ColumnHourlyProps> = ({
                     </Flex>
                     <Flex item>
                         <Spacing textAlign="center" mL={2.5}>
-                            <Typography type="footnote" textAlign="left">
+                            <Typography variant="footnote" textAlign="left">
                                 {pressure + 'mb'}
                             </Typography>
-                            <Typography type="footnote" textAlign="left">
+                            <Typography variant="footnote" textAlign="left">
                                 {humidity + '%'}
                             </Typography>
-                            <Typography type="footnote" textAlign="left">
+                            <Typography variant="footnote" textAlign="left">
                                 {dp}
                             </Typography>
-                            <Typography type="footnote" textAlign="left">
+                            <Typography variant="footnote" textAlign="left">
                                 {visibility / 100 + '%'}
                             </Typography>
-                            <Typography type="footnote" textAlign="left">
+                            <Typography variant="footnote" textAlign="left">
                                 {uvi}
                             </Typography>
                         </Spacing>

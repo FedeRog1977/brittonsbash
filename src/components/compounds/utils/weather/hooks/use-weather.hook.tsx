@@ -97,7 +97,7 @@ export const useWeather = () => {
                 <>
                     Munro at {toFeet(weatherElevation)} - {latFormatted},{' '}
                     {lonFormatted}
-                    <Typography type="h4">
+                    <Typography variant="h4">
                         {'Marked by ' + weatherMark}
                     </Typography>
                 </>

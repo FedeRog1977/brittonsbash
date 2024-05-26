@@ -29,6 +29,7 @@ export const SearchTile: FC<SearchTileProps> = ({
             <Grid alignColumns="1fr 1fr 1fr 1fr" justifyItems="center">
                 <Grid columnItem={[1, 4]}>
                     <Button
+                        variant="clear"
                         typeVariant="t2"
                         typeColor={isRoadies ? 'lightBlue' : undefined}
                         value="roadies"
@@ -40,6 +41,7 @@ export const SearchTile: FC<SearchTileProps> = ({
                 </Grid>
                 <Grid columnItem={[2, 4]}>
                     <Button
+                        variant="clear"
                         typeVariant="t2"
                         typeColor={isProjects ? 'lightBlue' : undefined}
                         value="projects"
@@ -51,6 +53,7 @@ export const SearchTile: FC<SearchTileProps> = ({
                 </Grid>
                 <Grid columnItem={[3, 4]}>
                     <Button
+                        variant="clear"
                         typeVariant="t2"
                         typeColor={isMiles ? 'lightBlue' : undefined}
                         value="miles"
@@ -62,6 +65,7 @@ export const SearchTile: FC<SearchTileProps> = ({
                 </Grid>
                 <Grid columnItem={[4, 4]}>
                     <Button
+                        variant="clear"
                         typeVariant="t2"
                         value="tennis"
                         content={<FontAwesomeIcon icon={faTrophy} />}

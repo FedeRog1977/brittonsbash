@@ -57,7 +57,7 @@ export const ResultTile: FC<ResultTileProps> = ({
             <Spacing mB={isMobile ? 7.5 : 15}>
                 {refactoredEvent.prefix ? (
                     <Typography
-                        type="t1"
+                        variant="t1"
                         fontFamily="instagram"
                         textAlign="center"
                     >
@@ -77,7 +77,7 @@ export const ResultTile: FC<ResultTileProps> = ({
                                     textAlign="right"
                                 >
                                     <Typography
-                                        type="t1"
+                                        variant="t1"
                                         fontFamily="instagram"
                                         color="mediumGrey"
                                     >
@@ -94,7 +94,7 @@ export const ResultTile: FC<ResultTileProps> = ({
                                     textAlign="left"
                                 >
                                     <Typography
-                                        type="t1"
+                                        variant="t1"
                                         fontFamily="instagram"
                                     >
                                         {name}
@@ -105,7 +105,7 @@ export const ResultTile: FC<ResultTileProps> = ({
                     </Grid>
                 ) : (
                     <Typography
-                        type="t1"
+                        variant="t1"
                         fontFamily="instagram"
                         textAlign="center"
                     >
@@ -115,7 +115,7 @@ export const ResultTile: FC<ResultTileProps> = ({
             </Spacing>
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
                 <Typography
-                    type="h4"
+                    variant="h4"
                     color="mediumGrey"
                     textAlign="center"
                     paragraphMargins
@@ -374,7 +374,7 @@ export const ResultTile: FC<ResultTileProps> = ({
                             textAlign="justify"
                         />
                     ) : (
-                        <Typography type="body" textAlign="justify">
+                        <Typography variant="body" textAlign="justify">
                             {refactoredEvent.description}
                         </Typography>
                     )}

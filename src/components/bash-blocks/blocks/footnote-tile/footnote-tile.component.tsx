@@ -25,7 +25,7 @@ export const FootnoteTile: FC<FootnoteTileProps> = ({ content }) => (
                 textAlign="justify"
             />
         ) : (
-            <Typography type="footnote" textAlign="justify">
+            <Typography variant="footnote" textAlign="justify">
                 {content}
             </Typography>
         )}

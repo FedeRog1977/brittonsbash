@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Button as ButtonComponent } from './button.component'
 
 const meta: Meta<typeof ButtonComponent> = {
-    title: 'BashBlocks / Button',
+    title: 'Partials / Button',
     component: ButtonComponent,
     argTypes: {
         variant: {

@@ -19,7 +19,7 @@ export const TitleTile: FC<TitleTileProps> = ({
     return (
         <Tile type="clear" dense>
             {heading && (
-                <Typography type="h3" textAlign="center">
+                <Typography variant="h3" textAlign="center">
                     {heading}
                 </Typography>
             )}
@@ -34,7 +34,7 @@ export const TitleTile: FC<TitleTileProps> = ({
                                     textAlign="right"
                                 >
                                     <Typography
-                                        type={isMobile ? 'h4' : 'h3'}
+                                        variant={isMobile ? 'h4' : 'h3'}
                                         boldFace
                                         inline
                                     >
@@ -47,13 +47,13 @@ export const TitleTile: FC<TitleTileProps> = ({
                                     textAlign="left"
                                 >
                                     <Typography
-                                        type={isMobile ? 'h4' : 'h3'}
+                                        variant={isMobile ? 'h4' : 'h3'}
                                         link={
-                                            subContent.link?.url
+                                            subContent.link
                                                 ? {
-                                                      url: subContent.link?.url,
+                                                      url: subContent.link.url,
                                                       newTab: subContent.link
-                                                          ?.newTab,
+                                                          .newTab,
                                                   }
                                                 : undefined
                                         }
@@ -77,7 +77,7 @@ export const TitleTile: FC<TitleTileProps> = ({
                                     rowItem={[index + 1, bodyItems.length + 1]}
                                     textAlign="right"
                                 >
-                                    <Typography type="body" inline>
+                                    <Typography variant="body" inline>
                                         {content}
                                     </Typography>
                                 </Grid>
@@ -87,13 +87,13 @@ export const TitleTile: FC<TitleTileProps> = ({
                                     textAlign="left"
                                 >
                                     <Typography
-                                        type="body"
+                                        variant="body"
                                         link={
-                                            subContent.link?.url
+                                            subContent.link
                                                 ? {
-                                                      url: subContent.link?.url,
+                                                      url: subContent.link.url,
                                                       newTab: subContent.link
-                                                          ?.newTab,
+                                                          .newTab,
                                                   }
                                                 : undefined
                                         }

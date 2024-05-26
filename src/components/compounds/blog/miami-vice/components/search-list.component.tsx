@@ -5,7 +5,7 @@ import { FC } from 'react'
 export type SearchListProps = {
     funcSelect: (() => void) | ((e: any) => void)
     items: {
-        heading?: string
+        heading: string
         subHeading?: string
         video: string
     }[]

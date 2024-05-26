@@ -15,15 +15,17 @@ export const ArticlePreface: FC<ArticlePrefaceProps> = ({ entries }) => {
                 if (Boolean(title && content)) {
                     return (
                         <Typography
-                            type="body"
+                            variant="body"
                             textAlign="center"
                             paragraphMargins
                         >
                             <>
-                                <Typography type="body" boldFace>
+                                <Typography variant="body" boldFace>
                                     {title}
                                 </Typography>
-                                <Typography type="body">{content}</Typography>
+                                <Typography variant="body">
+                                    {content}
+                                </Typography>
                             </>
                         </Typography>
                     )

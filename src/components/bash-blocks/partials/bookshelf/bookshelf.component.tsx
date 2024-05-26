@@ -28,7 +28,7 @@ export const Bookshelf: FC<BookshelfProps> = ({ heading, items }) => {
                     <Spacing mY={20}>
                         <Typography
                             key={generateUniqueKey(index)}
-                            type="body"
+                            variant="body"
                             link={{ url: url, newTab: true }}
                         >
                             {content}

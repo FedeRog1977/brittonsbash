@@ -18,10 +18,10 @@ export const ResultTitle: FC<ResultTileProps> = ({
     return (
         <Tile type="solid">
             <Spacing mB={isMobile ? 7.5 : 15}>
-                <Typography type="h1" textAlign="center">
+                <Typography variant="h1" textAlign="center">
                     {title}
                 </Typography>
-                <Typography type="h2" color="mediumGrey" textAlign="center">
+                <Typography variant="h2" color="mediumGrey" textAlign="center">
                     {subTitle}
                 </Typography>
             </Spacing>

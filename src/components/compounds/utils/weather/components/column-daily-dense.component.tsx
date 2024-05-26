@@ -51,23 +51,23 @@ export const ColumnDailyDense: FC<ColumnDailyDenseProps> = ({
     return (
         <>
             <Spacing pY={20} textAlign="center">
-                <Typography type="h4">{weekdayPartial}</Typography>
-                <Typography type="body" paragraphMargins>
+                <Typography variant="h4">{weekdayPartial}</Typography>
+                <Typography variant="body" paragraphMargins>
                     {dayOfMonthPartial}
                 </Typography>
-                <Typography type="h1">
+                <Typography variant="h1">
                     <Icon icon={icon} />
                 </Typography>
                 <Spacing pY={20} textAlign="center">
                     <Temperature temp={day} />
                 </Spacing>
-                <Typography type="body">{precipitation}</Typography>
+                <Typography variant="body">{precipitation}</Typography>
             </Spacing>
             <Spacing pY={20} textAlign="center">
-                <Typography type="body">{bearingCompass}</Typography>
-                <Typography type="body">{bearingArrow}</Typography>
-                <Typography type="footnote">{bearing}</Typography>
-                <Typography type="footnote" boldFace>
+                <Typography variant="body">{bearingCompass}</Typography>
+                <Typography variant="body">{bearingArrow}</Typography>
+                <Typography variant="footnote">{bearing}</Typography>
+                <Typography variant="footnote" boldFace>
                     {speed}
                 </Typography>
             </Spacing>

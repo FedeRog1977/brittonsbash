@@ -8,7 +8,7 @@ export const Image: FC<Img> = ({ url, alt, description }) => (
         <img className={styles.image} src={url} alt={alt} />
         {description && (
             <div className={styles.imageCaption}>
-                <Typography type="body" textAlign="left" color="white">
+                <Typography variant="body" textAlign="left" color="white">
                     {description}
                 </Typography>
             </div>

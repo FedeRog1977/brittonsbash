@@ -2,7 +2,7 @@ import { ArticleProps, Text } from '../../components/bash-blocks'
 
 export const formatArticle = (
     sections: ArticleProps['sections'],
-    type: Text['type'],
+    variant: Text['variant'],
     color?: Text['color'],
     boldFace?: Text['boldFace'],
     italicize?: Text['italicize'],
@@ -14,7 +14,7 @@ export const formatArticle = (
 
     sections.forEach((section) => {
         formattedSections.push({
-            type: section.type ? section.type : type,
+            variant: section.variant ? section.variant : variant,
             children: section.children,
             color: section.color ? section.color : color,
             boldFace: section.boldFace ? section.boldFace : boldFace,

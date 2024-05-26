@@ -54,7 +54,7 @@ export const SearchTile: FC<SearchTileProps> = ({
     const [parsedEventData, setParsedEventData] = useState(emptyEventData)
 
     return (
-        <Tile type="solid">
+        <Tile type="solid" gap>
             <Spacing mB={30}>
                 <BigSearch
                     funcInput={funcInput}

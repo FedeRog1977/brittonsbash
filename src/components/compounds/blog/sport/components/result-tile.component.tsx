@@ -63,27 +63,27 @@ export const ResultTile: FC<ResultTileProps> = ({
     return (
         <Tile type="solid">
             <Spacing mB={isMobile ? 7.5 : 15}>
-                <Typography type="t1" textAlign="center">
+                <Typography variant="t1" fontFamily="sport" textAlign="center">
                     {title}
                 </Typography>
             </Spacing>
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
-                <Typography type="h4" color="mediumGrey" textAlign="center">
+                <Typography variant="h4" color="mediumGrey" textAlign="center">
                     {subTitle}
                 </Typography>
             </Spacing>
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
-                <Typography type="body" textAlign="left">
+                <Typography variant="body" textAlign="left">
                     {description}
                 </Typography>
             </Spacing>
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
-                <Typography type="h2" textAlign="left">
+                <Typography variant="h2" fontFamily="sport" textAlign="left">
                     Summary
                 </Typography>
             </Spacing>
             <Spacing
-                mX={isMobile ? -40 : 0}
+                mX={isMobile ? -20 : 0}
                 mT={isMobile ? 7.5 : 15}
                 mB={isMobile ? 7.5 : 15}
             >
@@ -136,12 +136,12 @@ export const ResultTile: FC<ResultTileProps> = ({
                 />
             </Spacing>
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
-                <Typography type="h2" textAlign="left">
+                <Typography variant="h2" fontFamily="sport" textAlign="left">
                     {isProjects ? 'Hills' : 'Routes'}
                 </Typography>
             </Spacing>
             <Spacing
-                mX={isMobile ? -40 : 0}
+                mX={isMobile ? -20 : 0}
                 mT={isMobile ? 7.5 : 15}
                 mB={isMobile ? 7.5 : 15}
             >
@@ -161,9 +161,18 @@ export const ResultTile: FC<ResultTileProps> = ({
                 />
             </Spacing>
             <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
-                <Grid alignColumns="1fr 1fr 1fr 1fr 1fr" justifyItems="center">
-                    <Grid columnItem={[1, 5]}>
+                <Grid
+                    alignColumns={
+                        isMobile ? '1fr 1fr 1fr' : '1fr 1fr 1fr 1fr 1fr'
+                    }
+                    justifyItems="center"
+                >
+                    <Grid
+                        columnItem={[1, isMobile ? 3 : 5]}
+                        rowItem={isMobile ? [1, 2] : undefined}
+                    >
                         <Button
+                            variant="clear"
                             typeVariant="h2"
                             typeColor={
                                 Boolean(sportYearData === sport2024)
@@ -174,8 +183,12 @@ export const ResultTile: FC<ResultTileProps> = ({
                             func={() => setSportYearData(sport2024)}
                         />
                     </Grid>
-                    <Grid columnItem={[2, 5]}>
+                    <Grid
+                        columnItem={[2, isMobile ? 3 : 5]}
+                        rowItem={isMobile ? [1, 2] : undefined}
+                    >
                         <Button
+                            variant="clear"
                             typeVariant="h2"
                             typeColor={
                                 Boolean(sportYearData === sport2023)
@@ -186,8 +199,12 @@ export const ResultTile: FC<ResultTileProps> = ({
                             func={() => setSportYearData(sport2023)}
                         />
                     </Grid>
-                    <Grid columnItem={[3, 5]}>
+                    <Grid
+                        columnItem={[3, isMobile ? 3 : 5]}
+                        rowItem={isMobile ? [1, 2] : undefined}
+                    >
                         <Button
+                            variant="clear"
                             typeVariant="h2"
                             typeColor={
                                 Boolean(sportYearData === sport2022)
@@ -198,8 +215,12 @@ export const ResultTile: FC<ResultTileProps> = ({
                             func={() => setSportYearData(sport2022)}
                         />
                     </Grid>
-                    <Grid columnItem={[4, 5]}>
+                    <Grid
+                        columnItem={[isMobile ? 1 : 4, isMobile ? 3 : 5]}
+                        rowItem={isMobile ? [2, 2] : undefined}
+                    >
                         <Button
+                            variant="clear"
                             typeVariant="h2"
                             typeColor={
                                 Boolean(sportYearData === sport2021)
@@ -210,8 +231,12 @@ export const ResultTile: FC<ResultTileProps> = ({
                             func={() => setSportYearData(sport2021)}
                         />
                     </Grid>
-                    <Grid columnItem={[5, 5]}>
+                    <Grid
+                        columnItem={[isMobile ? 2 : 5, isMobile ? 3 : 5]}
+                        rowItem={isMobile ? [2, 2] : undefined}
+                    >
                         <Button
+                            variant="clear"
                             typeVariant="h2"
                             typeColor={
                                 Boolean(sportYearData === sport2020)
@@ -225,7 +250,7 @@ export const ResultTile: FC<ResultTileProps> = ({
                 </Grid>
             </Spacing>
             <Spacing
-                mX={isMobile ? -40 : 0}
+                mX={isMobile ? -20 : 0}
                 mT={isMobile ? 7.5 : 15}
                 mB={isMobile ? 7.5 : 15}
             >

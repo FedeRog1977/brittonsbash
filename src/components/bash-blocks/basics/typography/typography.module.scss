@@ -5,311 +5,491 @@
     padding: 0;
 }
 
-.serif {
-    &T1 {
-        font-family: CMU-Serif;
-        font-size: 52px;
+.variant {
+    &Serif {
+        &T1 {
+            font-family: CMU-Serif;
+            font-size: 52px;
 
-        @media (max-width: 768px) {
+            @media (max-width: 768px) {
+                font-size: 24px;
+            }
+        }
+
+        &T2 {
+            font-family: CMU-Serif;
+            font-size: 52px;
+
+            @media (max-width: 768px) {
+                font-size: 24px;
+            }
+        }
+
+        &H1 {
+            font-family: CMU-Serif;
+            font-size: 46px;
+
+            @media (max-width: 768px) {
+                font-size: 22px;
+            }
+        }
+
+        &H2 {
+            font-family: CMU-Serif;
+            font-size: 32px;
+
+            @media (max-width: 768px) {
+                font-size: 20px;
+            }
+        }
+
+        &H3 {
+            font-family: CMU-Serif;
             font-size: 24px;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
         }
-    }
 
-    &T2 {
-        font-family: CMU-Serif;
-        font-size: 52px;
-
-        @media (max-width: 768px) {
+        &H4 {
+            font-family: CMU-Serif;
             font-size: 24px;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
         }
-    }
 
-    &H1 {
-        font-family: CMU-Serif;
-        font-size: 46px;
-
-        @media (max-width: 768px) {
-            font-size: 22px;
-        }
-    }
-
-    &H2 {
-        font-family: CMU-Serif;
-        font-size: 32px;
-
-        @media (max-width: 768px) {
-            font-size: 20px;
-        }
-    }
-
-    &H3 {
-        font-family: CMU-Serif;
-        font-size: 24px;
-
-        @media (max-width: 768px) {
+        &Body {
+            font-family: CMU-Serif;
             font-size: 16px;
+
+            @media (max-width: 768px) {
+                font-size: 12px;
+            }
         }
-    }
 
-    &H4 {
-        font-family: CMU-Serif;
-        font-size: 24px;
-
-        @media (max-width: 768px) {
+        &Caption {
+            font-family: CMU-Serif;
             font-size: 16px;
+
+            @media (max-width: 768px) {
+                font-size: 12px;
+            }
         }
-    }
 
-    &Body {
-        font-family: CMU-Serif;
-        font-size: 16px;
+        &Footnote {
+            font-family: CMU-Serif;
+            font-size: 14px;
 
-        @media (max-width: 768px) {
-            font-size: 12px;
+            @media (max-width: 768px) {
+                font-size: 10px;
+            }
         }
-    }
 
-    &Caption {
-        font-family: CMU-Serif;
-        font-size: 16px;
-
-        @media (max-width: 768px) {
-            font-size: 12px;
-        }
-    }
-
-    &Footnote {
-        font-family: CMU-Serif;
-        font-size: 14px;
-
-        @media (max-width: 768px) {
+        &Tiny {
+            font-family: CMU-Serif;
             font-size: 10px;
+
+            @media (max-width: 768px) {
+                font-size: 8px;
+            }
+        }
+
+        &Bold {
+            font-family: CMU-Bold;
+        }
+
+        &Italic {
+            font-family: CMU-Italic;
+        }
+
+        &BoldItalic {
+            font-family: CMU-Bold-Italic;
         }
     }
 
-    &Tiny {
-        font-family: CMU-Serif;
-        font-size: 10px;
+    &SansSerif {
+        &T1 {
+            font-family: Audi-Light;
+            font-size: 52px;
 
-        @media (max-width: 768px) {
-            font-size: 8px;
+            @media (max-width: 768px) {
+                font-size: 24px;
+            }
         }
-    }
 
-    &Bold {
-        font-family: CMU-Bold;
-    }
+        &T2 {
+            font-family: Audi-Light;
+            font-size: 52px;
 
-    &Italic {
-        font-family: CMU-Italic;
-    }
+            @media (max-width: 768px) {
+                font-size: 24px;
+            }
+        }
 
-    &BoldItalic {
-        font-family: CMU-Bold-Italic;
-    }
-}
+        &H1 {
+            font-family: Audi-Light;
+            font-size: 46px;
 
-.sansSerif {
-    &T1 {
-        font-family: Audi-Light;
-        font-size: 52px;
+            @media (max-width: 768px) {
+                font-size: 22px;
+            }
+        }
 
-        @media (max-width: 768px) {
+        &H2 {
+            font-family: Audi-Light;
+            font-size: 32px;
+
+            @media (max-width: 768px) {
+                font-size: 20px;
+            }
+        }
+
+        &H3 {
+            font-family: Audi-Light;
             font-size: 24px;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
         }
-    }
 
-    &T2 {
-        font-family: Audi-Light;
-        font-size: 52px;
-
-        @media (max-width: 768px) {
+        &H4 {
+            font-family: Audi-Light;
             font-size: 24px;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
         }
-    }
 
-    &H1 {
-        font-family: Audi-Light;
-        font-size: 46px;
-
-        @media (max-width: 768px) {
-            font-size: 22px;
-        }
-    }
-
-    &H2 {
-        font-family: Audi-Light;
-        font-size: 32px;
-
-        @media (max-width: 768px) {
-            font-size: 20px;
-        }
-    }
-
-    &H3 {
-        font-family: Audi-Light;
-        font-size: 24px;
-
-        @media (max-width: 768px) {
+        &Body {
+            font-family: Audi-Light;
             font-size: 16px;
+
+            @media (max-width: 768px) {
+                font-size: 12px;
+            }
         }
-    }
 
-    &H4 {
-        font-family: Audi-Light;
-        font-size: 24px;
-
-        @media (max-width: 768px) {
+        &Caption {
+            font-family: Audi-Light;
             font-size: 16px;
+
+            @media (max-width: 768px) {
+                font-size: 12px;
+            }
         }
-    }
 
-    &Body {
-        font-family: Audi-Light;
-        font-size: 16px;
+        &Footnote {
+            font-family: Audi-Light;
+            font-size: 14px;
 
-        @media (max-width: 768px) {
-            font-size: 12px;
+            @media (max-width: 768px) {
+                font-size: 10px;
+            }
         }
-    }
 
-    &Caption {
-        font-family: Audi-Light;
-        font-size: 16px;
-
-        @media (max-width: 768px) {
-            font-size: 12px;
-        }
-    }
-
-    &Footnote {
-        font-family: Audi-Light;
-        font-size: 14px;
-
-        @media (max-width: 768px) {
+        &Tiny {
+            font-family: Audi-Light;
             font-size: 10px;
+
+            @media (max-width: 768px) {
+                font-size: 8px;
+            }
+        }
+
+        &Bold {
+            font-family: Audi-Regular;
+            letter-spacing: 0.25px;
+        }
+
+        &Italic {
+            font-family: Audi-Italic;
+        }
+
+        &BoldItalic {
+            font-family: Audi-Bold-Italic;
         }
     }
 
-    &Tiny {
-        font-family: Audi-Light;
-        font-size: 10px;
+    &Instagram {
+        &T1 {
+            font-family: Instagram;
+            font-size: 52px;
 
-        @media (max-width: 768px) {
-            font-size: 8px;
+            @media (max-width: 768px) {
+                font-size: 24px;
+            }
         }
-    }
 
-    &Bold {
-        font-family: Audi-Regular;
-        letter-spacing: 0.25px;
-    }
+        &T2 {
+            font-family: Instagram;
+            font-size: 52px;
 
-    &Italic {
-        font-family: Audi-Italic;
-    }
+            @media (max-width: 768px) {
+                font-size: 24px;
+            }
+        }
 
-    &BoldItalic {
-        font-family: Audi-Bold-Italic;
-    }
-}
+        &H1 {
+            font-family: Instagram;
+            font-size: 46px;
 
-.instagram {
-    &T1 {
-        font-family: Instagram;
-        font-size: 52px;
+            @media (max-width: 768px) {
+                font-size: 22px;
+            }
+        }
 
-        @media (max-width: 768px) {
+        &H2 {
+            font-family: Instagram;
+            font-size: 32px;
+
+            @media (max-width: 768px) {
+                font-size: 20px;
+            }
+        }
+
+        &H3 {
+            font-family: Instagram;
             font-size: 24px;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
         }
-    }
 
-    &T2 {
-        font-family: Instagram;
-        font-size: 52px;
-
-        @media (max-width: 768px) {
+        &H4 {
+            font-family: Instagram;
             font-size: 24px;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
         }
-    }
 
-    &H1 {
-        font-family: Instagram;
-        font-size: 46px;
-
-        @media (max-width: 768px) {
-            font-size: 22px;
-        }
-    }
-
-    &H2 {
-        font-family: Instagram;
-        font-size: 32px;
-
-        @media (max-width: 768px) {
-            font-size: 20px;
-        }
-    }
-
-    &H3 {
-        font-family: Instagram;
-        font-size: 24px;
-
-        @media (max-width: 768px) {
+        &Body {
+            font-family: Instagram;
             font-size: 16px;
+
+            @media (max-width: 768px) {
+                font-size: 12px;
+            }
         }
-    }
 
-    &H4 {
-        font-family: Instagram;
-        font-size: 24px;
-
-        @media (max-width: 768px) {
+        &Caption {
+            font-family: Instagram;
             font-size: 16px;
+
+            @media (max-width: 768px) {
+                font-size: 12px;
+            }
         }
-    }
 
-    &Body {
-        font-family: Instagram;
-        font-size: 16px;
+        &Footnote {
+            font-family: Instagram;
+            font-size: 14px;
 
-        @media (max-width: 768px) {
-            font-size: 12px;
+            @media (max-width: 768px) {
+                font-size: 10px;
+            }
         }
-    }
 
-    &Caption {
-        font-family: Instagram;
-        font-size: 16px;
-
-        @media (max-width: 768px) {
-            font-size: 12px;
-        }
-    }
-
-    &Footnote {
-        font-family: Instagram;
-        font-size: 14px;
-
-        @media (max-width: 768px) {
+        &Tiny {
+            font-family: Instagram;
             font-size: 10px;
+
+            @media (max-width: 768px) {
+                font-size: 8px;
+            }
         }
     }
 
-    &Tiny {
-        font-family: Instagram;
-        font-size: 10px;
+    &Sport {
+        &T1 {
+            font-family: NFS;
+            font-size: 52px;
 
-        @media (max-width: 768px) {
-            font-size: 8px;
+            @media (max-width: 768px) {
+                font-size: 24px;
+            }
+        }
+
+        &T2 {
+            font-family: NFS;
+            font-size: 52px;
+
+            @media (max-width: 768px) {
+                font-size: 24px;
+            }
+        }
+
+        &H1 {
+            font-family: NFS;
+            font-size: 46px;
+
+            @media (max-width: 768px) {
+                font-size: 22px;
+            }
+        }
+
+        &H2 {
+            font-family: NFS;
+            font-size: 32px;
+
+            @media (max-width: 768px) {
+                font-size: 20px;
+            }
+        }
+
+        &H3 {
+            font-family: NFS;
+            font-size: 24px;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
+        }
+
+        &H4 {
+            font-family: NFS;
+            font-size: 24px;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
+        }
+
+        &Body {
+            font-family: NFS;
+            font-size: 16px;
+
+            @media (max-width: 768px) {
+                font-size: 12px;
+            }
+        }
+
+        &Caption {
+            font-family: NFS;
+            font-size: 16px;
+
+            @media (max-width: 768px) {
+                font-size: 12px;
+            }
+        }
+
+        &Footnote {
+            font-family: NFS;
+            font-size: 14px;
+
+            @media (max-width: 768px) {
+                font-size: 10px;
+            }
+        }
+
+        &Tiny {
+            font-family: NFS;
+            font-size: 10px;
+
+            @media (max-width: 768px) {
+                font-size: 8px;
+            }
         }
     }
-}
 
-.sport {
-}
+    &Miami {
+        &T1 {
+            font-family: Broadway;
+            font-size: 52px;
 
-.miami {
+            @media (max-width: 768px) {
+                font-size: 24px;
+            }
+        }
+
+        &T2 {
+            font-family: Broadway;
+            font-size: 52px;
+
+            @media (max-width: 768px) {
+                font-size: 24px;
+            }
+        }
+
+        &H1 {
+            font-family: Broadway;
+            font-size: 46px;
+
+            @media (max-width: 768px) {
+                font-size: 22px;
+            }
+        }
+
+        &H2 {
+            font-family: Broadway;
+            font-size: 32px;
+
+            @media (max-width: 768px) {
+                font-size: 20px;
+            }
+        }
+
+        &H3 {
+            font-family: Broadway;
+            font-size: 24px;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
+        }
+
+        &H4 {
+            font-family: Broadway;
+            font-size: 24px;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
+        }
+
+        &Body {
+            font-family: Broadway;
+            font-size: 16px;
+
+            @media (max-width: 768px) {
+                font-size: 12px;
+            }
+        }
+
+        &Caption {
+            font-family: Broadway;
+            font-size: 16px;
+
+            @media (max-width: 768px) {
+                font-size: 12px;
+            }
+        }
+
+        &Footnote {
+            font-family: Broadway;
+            font-size: 14px;
+
+            @media (max-width: 768px) {
+                font-size: 10px;
+            }
+        }
+
+        &Tiny {
+            font-family: Broadway;
+            font-size: 10px;
+
+            @media (max-width: 768px) {
+                font-size: 8px;
+            }
+        }
+    }
 }
 
 .smallCaps {

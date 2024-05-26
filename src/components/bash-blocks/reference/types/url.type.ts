@@ -1,6 +1,4 @@
 export type Url = {
-    link?: {
-        url: string
-        newTab?: boolean
-    }
+    url: string
+    newTab?: boolean
 }

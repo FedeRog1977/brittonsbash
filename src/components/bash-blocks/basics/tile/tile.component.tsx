@@ -26,15 +26,11 @@ export const Tile: FC<TileProps> = ({
     gradient,
     children,
 }) => {
-    const classNames = cx(
-        styles.tile,
-        [styles[`tile${toUpperCase(type)}`]],
-        [styles[`tile${gap ? 'Gap' : 'NoGap'}`]],
-        {
-            [styles.marginsXDense]: !stacked,
-            [styles[`marginsY${dense ? 'Dense' : 'Regular'}`]]: !stacked,
-        }
-    )
+    const classNames = cx(styles.tile, [styles[`tile${toUpperCase(type)}`]], {
+        [styles.gap]: gap,
+        [styles.marginsXDense]: !stacked,
+        [styles[`marginsY${dense ? 'Dense' : 'Regular'}`]]: !stacked,
+    })
 
     const classNamesContainer = cx(styles.constrain, {
         [styles.stacked]: stacked,

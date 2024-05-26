@@ -7,10 +7,9 @@ import { getGridArgs } from './hooks/get-grid-args'
 
 export type ButtonProps = {
     variant?: 'default' | 'clear' | 'solid' | 'inverse'
-    // Go into typography and type --> variant
-    typeVariant?: TypographyProps['type']
+    typeVariant?: TypographyProps['variant']
     typeColor?: TypographyProps['color']
-    content?: string | ReactElement
+    content: string | ReactElement
     subContent?: string | ReactElement
     subContentTop?: boolean
     icon?: ReactElement
@@ -68,7 +67,7 @@ export const Button: FC<ButtonProps> = ({
                         rowItem={gridItemSubContentArgs.rowItem}
                         textAlign={gridItemSubContentArgs.textAlign}
                     >
-                        <Typography type="body" color="lightGrey">
+                        <Typography variant="body" color="lightGrey">
                             {subContent}
                             {subContentTop ? null : <>&nbsp;</>}
                         </Typography>
@@ -79,7 +78,7 @@ export const Button: FC<ButtonProps> = ({
                     rowItem={gridItemContentArgs.rowItem}
                     textAlign={gridItemContentArgs.textAlign}
                 >
-                    <Typography type={typeVariant} color={typeColor}>
+                    <Typography variant={typeVariant} color={typeColor}>
                         {content}
                     </Typography>
                 </Grid>
@@ -89,7 +88,7 @@ export const Button: FC<ButtonProps> = ({
                         rowItem={gridItemIconArgs.rowItem}
                         textAlign={gridItemIconArgs.textAlign}
                     >
-                        <Typography type="footnote" color={typeColor}>
+                        <Typography variant="footnote" color={typeColor}>
                             {space ? null : <>&nbsp;</>}
                             {icon}
                         </Typography>

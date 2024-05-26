@@ -29,11 +29,11 @@ export const ColumnTable: FC<ColumnTableProps> = ({
                         }}
                     >
                         {leftColumn.title != null ? (
-                            <Typography type="footnote" boldFace inline>
+                            <Typography variant="footnote" boldFace inline>
                                 {leftColumn.title}
                             </Typography>
                         ) : (
-                            <Typography type="footnote">
+                            <Typography variant="footnote">
                                 <>&nbsp;</>
                             </Typography>
                         )}
@@ -43,7 +43,7 @@ export const ColumnTable: FC<ColumnTableProps> = ({
                                     <Spacing mT={isMobile ? 3.75 : 7.5}>
                                         <Typography
                                             key={generateUniqueKey(index)}
-                                            type="footnote"
+                                            variant="footnote"
                                             boldFace
                                         >
                                             {entry}
@@ -66,7 +66,7 @@ export const ColumnTable: FC<ColumnTableProps> = ({
                                 display: 'inline-block',
                             }}
                         >
-                            <Typography type="footnote" boldFace inline>
+                            <Typography variant="footnote" boldFace inline>
                                 {title}
                             </Typography>
                             {entries?.map((entry, index) => {
@@ -75,7 +75,7 @@ export const ColumnTable: FC<ColumnTableProps> = ({
                                         <Spacing mT={isMobile ? 3.75 : 7.5}>
                                             <Typography
                                                 key={generateUniqueKey(index)}
-                                                type="footnote"
+                                                variant="footnote"
                                             >
                                                 {entry}
                                             </Typography>

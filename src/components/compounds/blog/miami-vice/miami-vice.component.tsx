@@ -11,7 +11,6 @@ export const MiamiVice: FC = () => {
             <SearchTile funcSelect={handleSelect} />
             <VideoTile
                 type="solid"
-                anchor="/blog/miami-vice/#result"
                 heading={video.heading}
                 subHeading={video.subHeading}
                 video={video.video}

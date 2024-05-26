@@ -43,14 +43,14 @@ export const ImageTile: FC<ImageTileProps> = ({
     const handleText: React.ReactElement = (
         <Grid columnItem={handleGridTextPosition}>
             <Typography
-                type="h4"
+                variant="h4"
                 textAlign={textAlign}
                 color={handleInverseColor}
             >
                 {subHeading}
             </Typography>
             <Typography
-                type="t1"
+                variant="t1"
                 textAlign={textAlign}
                 color={handleInverseColor}
                 paragraphMargins
@@ -74,7 +74,7 @@ export const ImageTile: FC<ImageTileProps> = ({
                 />
             ) : (
                 <Typography
-                    type="body"
+                    variant="body"
                     textAlign={textAlign === 'right' ? 'right' : 'justify'}
                     color={handleInverseColor}
                     paragraphMargins
@@ -130,7 +130,7 @@ export const ImageTile: FC<ImageTileProps> = ({
     return (
         <Tile
             type="clear"
-            gap
+            gap={!isMobile}
             stacked
             img={isMobile ? imgMobile : imgDesktop}
             gradient={gradient}

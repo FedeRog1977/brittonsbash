@@ -6,6 +6,7 @@ import { Section } from './types/section.type'
 
 export type ArticleTileProps = {
     type?: TileProps['type']
+    gap?: TileProps['gap']
     heading?: string
     subHeading?: string
     textAlign?: Align
@@ -14,22 +15,23 @@ export type ArticleTileProps = {
 
 export const ArticleTile: FC<ArticleTileProps> = ({
     type = 'clear',
+    gap,
     heading,
     subHeading,
     textAlign = 'center',
     sections,
 }) => (
-    <Tile type={type}>
-        {subHeading && (
-            <Typography type="h2" textAlign={textAlign}>
+    <Tile type={type} gap={gap}>
+        {subHeading ? (
+            <Typography variant="h2" textAlign={textAlign}>
                 {subHeading}
             </Typography>
-        )}
-        {heading && (
-            <Typography type="h1" textAlign={textAlign} paragraphMargins>
+        ) : null}
+        {heading ? (
+            <Typography variant="h1" textAlign={textAlign} paragraphMargins>
                 {heading}
             </Typography>
-        )}
+        ) : null}
         {sections.map((section) => getContent(section))}
     </Tile>
 )
