@@ -3,18 +3,18 @@ import {
     faMountainSun,
     faWalking,
     faTrophy,
-} from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { FC } from 'react'
-import { useScreenWidth } from '../../../../../scripts'
-import { Tile, Button, Grid } from '../../../../bash-blocks'
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FC } from 'react';
+import { useScreenWidth } from '../../../../../scripts';
+import { Tile, Button, Grid } from '../../../../bash-blocks';
 
 export type SearchTileProps = {
-    funcCategory: (e: any) => void
-    isRoadies: boolean
-    isProjects: boolean
-    isMiles: boolean
-}
+    funcCategory: (e: any) => void;
+    isRoadies: boolean;
+    isProjects: boolean;
+    isMiles: boolean;
+};
 
 export const SearchTile: FC<SearchTileProps> = ({
     funcCategory,
@@ -22,10 +22,10 @@ export const SearchTile: FC<SearchTileProps> = ({
     isProjects,
     isMiles,
 }) => {
-    const { isMobile } = useScreenWidth()
+    const { isMobile } = useScreenWidth();
 
     return (
-        <Tile type="solid">
+        <Tile type="solid" gap>
             <Grid alignColumns="1fr 1fr 1fr 1fr" justifyItems="center">
                 <Grid columnItem={[1, 4]}>
                     <Button
@@ -75,5 +75,5 @@ export const SearchTile: FC<SearchTileProps> = ({
                 </Grid>
             </Grid>
         </Tile>
-    )
-}
+    );
+};

@@ -1,25 +1,25 @@
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { FC } from 'react'
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FC } from 'react';
 import {
     generateUniqueKey,
     getGridAlign,
     useScreenWidth,
-} from '../../../../scripts'
-import { Grid, Search, SearchList, Spacing } from '../../basics'
-import { Button } from '../button'
-import { SearchProps } from '../../basics'
+} from '../../../../scripts';
+import { Grid, Search, SearchList, Spacing } from '../../basics';
+import { Button } from '../button';
+import { SearchProps } from '../../basics';
 
 export type BigSearchProps = {
-    funcInput: SearchProps['func']
-    funcButton: () => void
-    placeholder?: string
+    funcInput: SearchProps['func'];
+    funcButton: () => void;
+    placeholder?: string;
     selects?: {
-        funcSelect: (() => void) | ((e: any) => void)
-        content: any[]
-        placeholder?: string
-    }[]
-}
+        funcSelect: (() => void) | ((e: any) => void);
+        content: any[];
+        placeholder?: string;
+    }[];
+};
 
 export const BigSearch: FC<BigSearchProps> = ({
     funcInput,
@@ -27,8 +27,8 @@ export const BigSearch: FC<BigSearchProps> = ({
     placeholder = 'Search',
     selects,
 }) => {
-    const { isMobile } = useScreenWidth()
-    const handleAlign = getGridAlign(selects ?? [])
+    const { isMobile } = useScreenWidth();
+    const handleAlign = getGridAlign(selects ?? []);
 
     return (
         <Spacing gapsY={30}>
@@ -54,7 +54,7 @@ export const BigSearch: FC<BigSearchProps> = ({
                     />
                 </Grid>
             </Grid>
-            {selects && (
+            {selects ? (
                 <Grid alignColumns={handleAlign} columnGap={15}>
                     {selects.map(
                         ({ funcSelect, content, placeholder }, index) => (
@@ -69,7 +69,7 @@ export const BigSearch: FC<BigSearchProps> = ({
                         )
                     )}
                 </Grid>
-            )}
+            ) : null}
         </Spacing>
-    )
-}
+    );
+};

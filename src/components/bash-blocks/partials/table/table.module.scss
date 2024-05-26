@@ -1,7 +1,15 @@
 @use '../../reference' as reference;
 
-.table {
+.container {
     background-color: reference.$dark-grey;
+    
+    @media (max-width: 768px) {
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+}
+
+.table {
     border-radius: reference.$corners-small;
     padding: 15px 75px 15px 75px;
 
@@ -11,7 +19,13 @@
     }
 }
 
-.scrollX {
-    overflow-x: scroll;
-    white-space: nowrap;
-}
+// .rightColumn {
+//     display: 'inline-block';
+//     width: 'fit-content';
+//     margin-left: '20px';
+// }
+
+// .scrollY {
+//     max-height: '300px';
+//     overflow-y: 'scroll';
+// }

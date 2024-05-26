@@ -4,19 +4,19 @@ import {
     Spacing,
     Tile,
     VideoTileProps,
-} from '../../../../bash-blocks'
-import { useScreenWidth, useShowElement } from '../../../../../scripts'
-import { FC, useState } from 'react'
-import { SearchList } from './search-list.component'
-import { miamiViceContent } from '../content'
+} from '../../../../bash-blocks';
+import { useScreenWidth, useShowElement } from '../../../../../scripts';
+import { FC, useState } from 'react';
+import { SearchList } from './search-list.component';
+import { miamiViceContent } from '../content';
 
 export type SearchTileProps = {
-    funcSelect: (e: any) => void
-}
+    funcSelect: (e: any) => void;
+};
 
 export const SearchTile: FC<SearchTileProps> = ({ funcSelect }) => {
-    const { isMobile } = useScreenWidth()
-    const { showElement, setShowElement } = useShowElement()
+    const { isMobile } = useScreenWidth();
+    const { showElement, setShowElement } = useShowElement();
 
     const emptyVideoData: VideoTileProps[] = [
         {
@@ -24,8 +24,8 @@ export const SearchTile: FC<SearchTileProps> = ({ funcSelect }) => {
             subHeading: '',
             video: '',
         },
-    ]
-    const [parsedVideoData, setParsedEventData] = useState(emptyVideoData)
+    ];
+    const [parsedVideoData, setParsedEventData] = useState(emptyVideoData);
 
     return (
         <Tile type="solid" gap>
@@ -48,10 +48,10 @@ export const SearchTile: FC<SearchTileProps> = ({ funcSelect }) => {
                             subContent="Season"
                             subContentTop={isMobile}
                             func={() => {
-                                setShowElement(!showElement)
+                                setShowElement(!showElement);
                                 setParsedEventData(
                                     miamiViceContent.tileOne.season1
-                                )
+                                );
                             }}
                         />
                     </Grid>
@@ -72,10 +72,10 @@ export const SearchTile: FC<SearchTileProps> = ({ funcSelect }) => {
                             subContent="Season"
                             subContentTop={isMobile}
                             func={() => {
-                                setShowElement(!showElement)
+                                setShowElement(!showElement);
                                 setParsedEventData(
                                     miamiViceContent.tileOne.season2
-                                )
+                                );
                             }}
                         />
                     </Grid>
@@ -96,10 +96,10 @@ export const SearchTile: FC<SearchTileProps> = ({ funcSelect }) => {
                             subContent="Season"
                             subContentTop={isMobile}
                             func={() => {
-                                setShowElement(!showElement)
+                                setShowElement(!showElement);
                                 setParsedEventData(
                                     miamiViceContent.tileOne.season3
-                                )
+                                );
                             }}
                         />
                     </Grid>
@@ -120,10 +120,10 @@ export const SearchTile: FC<SearchTileProps> = ({ funcSelect }) => {
                             subContent="Season"
                             subContentTop={isMobile}
                             func={() => {
-                                setShowElement(!showElement)
+                                setShowElement(!showElement);
                                 setParsedEventData(
                                     miamiViceContent.tileOne.season4
-                                )
+                                );
                             }}
                         />
                     </Grid>
@@ -144,18 +144,18 @@ export const SearchTile: FC<SearchTileProps> = ({ funcSelect }) => {
                             subContent="Season"
                             subContentTop={isMobile}
                             func={() => {
-                                setShowElement(!showElement)
+                                setShowElement(!showElement);
                                 setParsedEventData(
                                     miamiViceContent.tileOne.season5
-                                )
+                                );
                             }}
                         />
                     </Grid>
                 </Grid>
             </Spacing>
-            {showElement && (
+            {showElement ? (
                 <SearchList funcSelect={funcSelect} items={parsedVideoData} />
-            )}
+            ) : null}
         </Tile>
-    )
-}
+    );
+};

@@ -1,24 +1,24 @@
-import { Button, Grid, Spacing } from '../../../../bash-blocks'
+import { Button, Grid, Spacing } from '../../../../bash-blocks';
 import {
     useShowElement,
     useScreenWidth,
     generateUniqueKey,
-} from '../../../../../scripts'
-import { ColumnDaily } from './column-daily.component'
-import { Hourly } from './hourly.component'
-import { ColumnDailyDense } from './column-daily-dense.component'
-import { useOpenWeatherCall } from '../calls/open-weather.call'
-import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+} from '../../../../../scripts';
+import { ColumnDaily } from './column-daily.component';
+import { Hourly } from './hourly.component';
+import { ColumnDailyDense } from './column-daily-dense.component';
+import { useOpenWeatherCall } from '../calls/open-weather.call';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const WeatherDaily = ({ latIn, lonIn }: any) => {
-    const { isMobile } = useScreenWidth()
-    const { showElement, setShowElement } = useShowElement()
-    const { dailyResult } = useOpenWeatherCall(latIn, lonIn)
+    const { isMobile } = useScreenWidth();
+    const { showElement, setShowElement } = useShowElement();
+    const { dailyResult } = useOpenWeatherCall(latIn, lonIn);
 
     const handleGridColumns = isMobile
         ? '1fr 1fr 1fr 1fr 1fr'
-        : '1fr 1fr 1fr 1fr 1fr 1fr 1fr'
+        : '1fr 1fr 1fr 1fr 1fr 1fr 1fr';
 
     return (
         <>
@@ -79,7 +79,7 @@ export const WeatherDaily = ({ latIn, lonIn }: any) => {
                     transition
                 />
             </Spacing>
-            {showElement && <Hourly latIn={latIn} lonIn={lonIn} />}
+            {showElement ? <Hourly latIn={latIn} lonIn={lonIn} /> : null}
         </>
-    )
-}
+    );
+};

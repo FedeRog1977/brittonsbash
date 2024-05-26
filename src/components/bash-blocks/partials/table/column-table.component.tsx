@@ -1,77 +1,67 @@
-import { FC, ReactElement } from 'react'
-import { generateUniqueKey, useScreenWidth } from '../../../../scripts'
-import { Grid, Spacing, Typography } from '../../basics'
-import styles from './table.module.scss'
-import { Column } from './types/column.type'
+import { FC, ReactElement } from 'react';
+import { generateUniqueKey, useScreenWidth } from '../../../../scripts';
+import { Grid, Spacing, Typography } from '../../basics';
+import styles from './table.module.scss';
+import { Column } from './types/column.type';
 
 export type ColumnTableProps = {
-    leftColumn: Column
-    rightColumns: Column[]
-    scroll?: boolean
-}
+    leftColumn: Column;
+    rightColumns: Column[];
+    scroll?: boolean;
+};
 
 export const ColumnTable: FC<ColumnTableProps> = ({
     leftColumn,
     rightColumns,
     scroll,
 }) => {
-    const { isMobile } = useScreenWidth()
+    const { isMobile } = useScreenWidth();
 
     const content: ReactElement = (
         <div className={styles.table}>
-            <Grid alignColumns="auto auto">
+            <Grid alignColumns="1fr 3fr">
                 <Grid columnItem={[1, 2]}>
-                    <div
-                        style={{
-                            width: 'fit-content',
-                            marginRight: '1rem',
-                            display: 'inline-block',
-                        }}
-                    >
-                        {leftColumn.title != null ? (
-                            <Typography variant="footnote" boldFace inline>
-                                {leftColumn.title}
-                            </Typography>
-                        ) : (
-                            <Typography variant="footnote">
-                                <>&nbsp;</>
-                            </Typography>
-                        )}
-                        {leftColumn.entries?.map((entry, index) => {
-                            if (entry)
-                                return (
-                                    <Spacing mT={isMobile ? 3.75 : 7.5}>
-                                        <Typography
-                                            key={generateUniqueKey(index)}
-                                            variant="footnote"
-                                            boldFace
-                                        >
-                                            {entry}
-                                        </Typography>
-                                    </Spacing>
-                                )
-
-                            return null
-                        })}
-                    </div>
+                    {leftColumn.title != null ? (
+                        <Typography variant="footnote" boldFace inline>
+                            {leftColumn.title}
+                        </Typography>
+                    ) : (
+                        <Typography variant="footnote">
+                            <>&nbsp;</>
+                        </Typography>
+                    )}
+                    {leftColumn.entries?.map((entry, index) => (
+                        <>
+                            {entry ? (
+                                <Spacing mT={isMobile ? 3.75 : 7.5}>
+                                    <Typography
+                                        key={generateUniqueKey(index)}
+                                        variant="footnote"
+                                        boldFace
+                                    >
+                                        {entry}
+                                    </Typography>
+                                </Spacing>
+                            ) : null}
+                        </>
+                    ))}
                 </Grid>
                 <Grid columnItem={[2, 2]} textAlign="right">
                     {rightColumns.map(({ title, entries }, index) => (
                         <div
-                            key={generateUniqueKey(index)}
                             style={{
+                                // Fix this
                                 width: 'fit-content',
-                                maxWidth: isMobile ? '250px' : '500px',
-                                marginLeft: '1rem',
                                 display: 'inline-block',
+                                marginLeft: '15px',
                             }}
                         >
                             <Typography variant="footnote" boldFace inline>
                                 {title}
                             </Typography>
-                            {entries?.map((entry, index) => {
-                                if (entry)
-                                    return (
+                            {entries?.map((entry, index) => (
+                                <>
+                                    {entry ? (
                                         <Spacing mT={isMobile ? 3.75 : 7.5}>
                                             <Typography
                                                 key={generateUniqueKey(index)}
@@ -80,25 +70,28 @@ export const ColumnTable: FC<ColumnTableProps> = ({
                                                 {entry}
                                             </Typography>
                                         </Spacing>
-                                    )
-
-                                return null
-                            })}
+                                    ) : null}
+                                </>
+                            ))}
                         </div>
                     ))}
                 </Grid>
             </Grid>
         </div>
-    )
+    );
 
     if (scroll)
         return (
-            <div style={{ maxHeight: '300px', overflowY: 'scroll' }}>
-                {content}
+            <div className={styles.container}>
+                <div
+                    // Fix this
+                    style={{ overflowY: 'scroll', maxHeight: '300px' }}
+                    className={styles.scrollY}
+                >
+                    {content}
+                </div>
             </div>
-        )
+        );
 
-    if (isMobile) return <div className={styles.scrollX}>{content}</div>
-
-    return content
-}
+    return <div className={styles.container}>{content}</div>;
+};

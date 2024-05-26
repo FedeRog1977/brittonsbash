@@ -67,10 +67,6 @@
     &Fill {
         background: none;
 
-        &Transparent {
-            background-color: reference.$transparent;
-        }
-
         &20 {
             background-color: reference.$darker-grey-20;
         }
@@ -143,10 +139,6 @@
     &Fill {
         background: none;
 
-        &Transparent {
-            background-color: reference.$transparent;
-        }
-
         &20 {
             background-color: reference.$white-20;
         }
@@ -159,8 +151,4 @@
             background-color: reference.$white-60;
         }
     }
-}
-
-.hide {
-    display: none;
 }

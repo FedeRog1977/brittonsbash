@@ -1,14 +1,14 @@
-import { FC } from 'react'
-import { useScreenWidth } from '../../../../scripts'
-import { Tile, TileProps, Typography } from '../../basics'
+import { FC } from 'react';
+import { useScreenWidth } from '../../../../scripts';
+import { Tile, TileProps, Typography } from '../../basics';
 
 export type VideoTileProps = {
-    type?: TileProps['type']
-    heading: string
-    subHeading?: string
-    video: string
-    controls?: boolean
-}
+    type?: TileProps['type'];
+    heading: string;
+    subHeading?: string;
+    video: string;
+    controls?: boolean;
+};
 
 export const VideoTile: FC<VideoTileProps> = ({
     type = 'clear',
@@ -17,16 +17,18 @@ export const VideoTile: FC<VideoTileProps> = ({
     video,
     controls = false,
 }) => {
-    const { isMobile } = useScreenWidth()
+    const { isMobile } = useScreenWidth();
 
     return (
         <Tile type={type}>
-            {subHeading && <Typography variant="h2">{subHeading}</Typography>}
-            {heading && (
+            {subHeading ? (
+                <Typography variant="h2">{subHeading}</Typography>
+            ) : null}
+            {heading ? (
                 <Typography variant="h1" paragraphMargins>
                     {heading}
                 </Typography>
-            )}
+            ) : null}
             <iframe
                 frameBorder="none"
                 width="100%"
@@ -36,5 +38,5 @@ export const VideoTile: FC<VideoTileProps> = ({
                 }`}
             />
         </Tile>
-    )
-}
+    );
+};

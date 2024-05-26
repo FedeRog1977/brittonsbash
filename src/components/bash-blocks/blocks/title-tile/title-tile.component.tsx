@@ -1,28 +1,28 @@
-import { FC } from 'react'
-import { useScreenWidth } from '../../../../scripts'
-import { Grid, Spacing, Tile, Typography } from '../../basics'
-import { Items } from './types/items.type'
+import { FC } from 'react';
+import { useScreenWidth } from '../../../../scripts';
+import { Grid, Spacing, Tile, Typography } from '../../basics';
+import { Items } from './types/items.type';
 
 export type TitleTileProps = {
-    heading?: string
-    titleItems?: Items[]
-    bodyItems?: Items[]
-}
+    heading?: string;
+    titleItems?: Items[];
+    bodyItems?: Items[];
+};
 
 export const TitleTile: FC<TitleTileProps> = ({
     heading,
     titleItems,
     bodyItems,
 }) => {
-    const { isMobile } = useScreenWidth()
+    const { isMobile } = useScreenWidth();
 
     return (
         <Tile type="clear" dense>
-            {heading && (
+            {heading ? (
                 <Typography variant="h3" textAlign="center">
                     {heading}
                 </Typography>
-            )}
+            ) : null}
             {titleItems ? (
                 <Spacing mT={heading ? 10 : 0}>
                     <Grid alignColumns="auto auto" columnGap={10} rowGap={10}>
@@ -108,5 +108,5 @@ export const TitleTile: FC<TitleTileProps> = ({
                 </Spacing>
             ) : null}
         </Tile>
-    )
-}
+    );
+};

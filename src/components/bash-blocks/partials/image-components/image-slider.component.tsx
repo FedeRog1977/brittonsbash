@@ -1,36 +1,36 @@
-import { FC, useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FC, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faChevronCircleLeft,
     faChevronCircleRight,
     faEject,
     faExchange,
-} from '@fortawesome/free-solid-svg-icons'
-import styles from './image-components.module.scss'
-import { generateUniqueKey, useScreenWidth } from '../../../../scripts'
-import { Typography } from '../../basics'
-import { Img } from '../../reference'
+} from '@fortawesome/free-solid-svg-icons';
+import styles from './image-components.module.scss';
+import { generateUniqueKey, useScreenWidth } from '../../../../scripts';
+import { Typography } from '../../basics';
+import { Img } from '../../reference';
 
 export type ImageSliderProps = {
-    slides: Img[]
-}
+    slides: Img[];
+};
 
 export const ImageSlider: FC<ImageSliderProps> = ({ slides }) => {
-    const { isMobile } = useScreenWidth()
+    const { isMobile } = useScreenWidth();
 
-    const [current, setCurrent] = useState(0)
-    const length = slides.length
+    const [current, setCurrent] = useState(0);
+    const length = slides.length;
 
     const nextSlide = () => {
-        setCurrent(current === length - 1 ? 0 : current + 1)
-    }
+        setCurrent(current === length - 1 ? 0 : current + 1);
+    };
 
     const prevSlide = () => {
-        setCurrent(current === 0 ? length - 1 : current - 1)
-    }
+        setCurrent(current === 0 ? length - 1 : current - 1);
+    };
 
     if (!Array.isArray(slides) || slides.length <= 0) {
-        return null
+        return null;
     }
 
     return (
@@ -54,7 +54,7 @@ export const ImageSlider: FC<ImageSliderProps> = ({ slides }) => {
                 if (index === current) {
                     return (
                         <div>
-                            {slide.description && (
+                            {slide.description ? (
                                 <div className={styles.imageSliderCaption}>
                                     <Typography
                                         variant={isMobile ? 'footnote' : 'body'}
@@ -64,7 +64,7 @@ export const ImageSlider: FC<ImageSliderProps> = ({ slides }) => {
                                         {slide.description}
                                     </Typography>
                                 </div>
-                            )}
+                            ) : null}
                             <div className={styles.imageSliderIndex}>
                                 <Typography
                                     variant={isMobile ? 'footnote' : 'body'}
@@ -74,10 +74,10 @@ export const ImageSlider: FC<ImageSliderProps> = ({ slides }) => {
                                 }`}</Typography>
                             </div>
                         </div>
-                    )
+                    );
                 }
 
-                return null
+                return null;
             })}
             {slides.map((slide, index) => (
                 <div
@@ -88,13 +88,13 @@ export const ImageSlider: FC<ImageSliderProps> = ({ slides }) => {
                 >
                     {slide.url ? (
                         <>
-                            {index === current && (
+                            {index === current ? (
                                 <img
                                     className={styles.imageSliderImage}
                                     src={slide.url}
                                     alt={slide.alt}
                                 />
-                            )}
+                            ) : null}
                         </>
                     ) : (
                         <>
@@ -113,5 +113,5 @@ export const ImageSlider: FC<ImageSliderProps> = ({ slides }) => {
                 </div>
             ))}
         </div>
-    )
-}
+    );
+};

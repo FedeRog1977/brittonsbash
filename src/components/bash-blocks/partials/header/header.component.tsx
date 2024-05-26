@@ -114,7 +114,7 @@ export const Header = () => {
                     </Grid>
                 </div>
             </div>
-            {Boolean(showMobile && isMobile) && (
+            {Boolean(showMobile && isMobile) ? (
                 <div className={styles.subheader}>
                     <div className={styles.subheaderContent}>
                         <Spacing mY={20}>
@@ -179,8 +179,8 @@ export const Header = () => {
                         </Spacing>
                     </div>
                 </div>
-            )}
-            {showBlog && (
+            ) : null}
+            {showBlog ? (
                 <div className={styles.subheader}>
                     <div className={styles.subheaderContent}>
                         <Spacing mY={20}>
@@ -309,8 +309,8 @@ export const Header = () => {
                         </Spacing>
                     </div>
                 </div>
-            )}
-            {showUtilities && (
+            ) : null}
+            {showUtilities ? (
                 <div className={styles.subheader}>
                     <div className={styles.subheaderContent}>
                         <Spacing mY={20}>
@@ -339,7 +339,7 @@ export const Header = () => {
                         </Spacing>
                     </div>
                 </div>
-            )}
+            ) : null}
         </>
     )
 }

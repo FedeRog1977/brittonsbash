@@ -164,7 +164,7 @@ export const Conquest = () => {
                     <span onClick={landmassesClick}>Routes</span>
                 </li>
             </ul>
-            {showLandmasses && (
+            {showLandmasses ? (
                 <ul>
                     <li>
                         <LandmassList
@@ -172,9 +172,9 @@ export const Conquest = () => {
                             func={landmassesSelect}
                         />
                     </li>
-                    {showRoutesList && <li>{routesList}</li>}
+                    {showRoutesList ? <li>{routesList}</li> : null}
                 </ul>
-            )}
+            ) : null}
             <MapContainer
                 // crs={crs}
                 crs={L.CRS.EPSG3857}
@@ -190,10 +190,10 @@ export const Conquest = () => {
                 scrollWheelZoom={true}
             >
                 <TileLayer url={apiUrl} />
-                {showCurrLoc && <LocationMarker />}
-                {showMunros && <HillMarkers type="Munro" />}
-                {showCorbetts && <HillMarkers type="Corbett" />}
-                {showRouteMarker && routeMarker}
+                {showCurrLoc ? <LocationMarker />: null}
+                {showMunros ? <HillMarkers type="Munro" />: null}
+                {showCorbetts ? <HillMarkers type="Corbett" />: null}
+                {showRouteMarker ? routeMarker: null}
             </MapContainer>
         </>
     )

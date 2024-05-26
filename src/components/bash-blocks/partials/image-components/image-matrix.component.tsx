@@ -2,26 +2,26 @@ import {
     formatItems,
     generateUniqueKey,
     useShowElement,
-} from '../../../../scripts'
-import styles from './image-components.module.scss'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
-import { Flex, Image, Spacing, Typography } from '../../basics'
-import { Img } from '../../reference'
-import { Modal } from '../../blocks'
-import { FC, useState } from 'react'
+} from '../../../../scripts';
+import styles from './image-components.module.scss';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { Flex, Image, Spacing, Typography } from '../../basics';
+import { Img } from '../../reference';
+import { Modal } from '../../blocks';
+import { FC, useState } from 'react';
 
 export type ImageMatrixProps = {
-    items: Img[]
-    columns?: number
-}
+    items: Img[];
+    columns?: number;
+};
 
 export const ImageMatrix: FC<ImageMatrixProps> = ({ items, columns }) => {
-    const formattedItems = formatItems(columns ? columns : 3, items) as Img[][]
+    const formattedItems = formatItems(columns ? columns : 3, items) as Img[][];
 
     const { showElement: showModal, setShowElement: setShowModal } =
-        useShowElement()
+        useShowElement();
 
-    const [image, setImage] = useState<Img>()
+    const [image, setImage] = useState<Img>();
 
     return (
         <>
@@ -31,8 +31,8 @@ export const ImageMatrix: FC<ImageMatrixProps> = ({ items, columns }) => {
                         <Flex item key={generateUniqueKey(index)}>
                             <a
                                 onClick={() => {
-                                    setImage({ url, alt, description })
-                                    setShowModal(!showModal)
+                                    setImage({ url, alt, description });
+                                    setShowModal(!showModal);
                                 }}
                             >
                                 <LazyLoadImage
@@ -41,13 +41,13 @@ export const ImageMatrix: FC<ImageMatrixProps> = ({ items, columns }) => {
                                     alt={alt}
                                 />
                             </a>
-                            {description && (
+                            {description ? (
                                 <Spacing mY={15}>
                                     <Typography variant="body">
                                         {description}
                                     </Typography>
                                 </Spacing>
-                            )}
+                            ) : null}
                         </Flex>
                     ))}
                 </Flex>
@@ -56,5 +56,5 @@ export const ImageMatrix: FC<ImageMatrixProps> = ({ items, columns }) => {
                 <Image {...(image as Img)} />
             </Modal>
         </>
-    )
-}
+    );
+};

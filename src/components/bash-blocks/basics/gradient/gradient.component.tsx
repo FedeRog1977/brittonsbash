@@ -8,7 +8,6 @@ export type GradientProps = {
     opacity?: 60 | 40 | 20
     start?: 'left' | 'right' | 'center'
     fill?: boolean
-    hide?: boolean
 }
 
 export const Gradient: FC<GradientProps> = ({
@@ -16,12 +15,10 @@ export const Gradient: FC<GradientProps> = ({
     opacity = 60,
     start = 'left',
     fill = false,
-    hide = false,
 }) => {
     const classNames = cx(styles.gradient, {
         [styles[`${value}${opacity}${toUpperCase(start)}Align`]]: !fill,
         [styles[`${value}Fill${opacity}`]]: fill,
-        [styles.hide]: hide,
     })
 
     return <div className={classNames} />

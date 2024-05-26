@@ -1,19 +1,19 @@
-import { FC, ReactElement } from 'react'
-import { useScreenWidth } from '../../../../../scripts'
-import { Spacing, Tile, Typography } from '../../../../bash-blocks'
+import { FC, ReactElement } from 'react';
+import { useScreenWidth } from '../../../../../scripts';
+import { Spacing, Tile, Typography } from '../../../../bash-blocks';
 
 type ResultTileProps = {
-    title: string
-    subTitle: ReactElement
-    result: ReactElement
-}
+    title: string;
+    subTitle: ReactElement;
+    result: ReactElement;
+};
 
 export const ResultTitle: FC<ResultTileProps> = ({
     title,
     subTitle,
     result,
 }) => {
-    const { isMobile } = useScreenWidth()
+    const { isMobile } = useScreenWidth();
 
     return (
         <Tile type="solid">
@@ -25,7 +25,7 @@ export const ResultTitle: FC<ResultTileProps> = ({
                     {subTitle}
                 </Typography>
             </Spacing>
-            {result && result}
+            {result}
         </Tile>
-    )
-}
+    );
+};

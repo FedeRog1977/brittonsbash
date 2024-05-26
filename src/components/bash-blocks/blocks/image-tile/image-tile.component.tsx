@@ -1,28 +1,28 @@
-import { FC } from 'react'
+import { FC } from 'react';
 import {
     formatArticle,
     generateUniqueKey,
     getGridAlign,
     useScreenWidth,
-} from '../../../../scripts'
-import { Grid, Tile, Typography } from '../../basics'
-import { Article, Button } from '../../partials'
-import { GradientProps } from '../../basics'
-import { ArticleProps } from '../../partials'
-import { Img, Cta, Align } from '../../reference'
+} from '../../../../scripts';
+import { Grid, Tile, Typography } from '../../basics';
+import { Article, Button } from '../../partials';
+import { GradientProps } from '../../basics';
+import { ArticleProps } from '../../partials';
+import { Img, Cta, Align } from '../../reference';
 
 export type ImageTileProps = {
-    top?: boolean
-    imgDesktop?: Img
-    imgMobile?: Img
-    gradient?: GradientProps
-    heading: string
-    subHeading?: string
-    body?: string | ArticleProps['sections']
-    ctas?: Cta[]
-    textAlign?: Align
-    invert?: boolean
-}
+    top?: boolean;
+    imgDesktop?: Img;
+    imgMobile?: Img;
+    gradient?: GradientProps;
+    heading: string;
+    subHeading?: string;
+    body?: string | ArticleProps['sections'];
+    ctas?: Cta[];
+    textAlign?: Align;
+    invert?: boolean;
+};
 
 export const ImageTile: FC<ImageTileProps> = ({
     imgDesktop,
@@ -35,11 +35,11 @@ export const ImageTile: FC<ImageTileProps> = ({
     textAlign = 'left',
     invert = false,
 }) => {
-    const { isMobile } = useScreenWidth()
+    const { isMobile } = useScreenWidth();
 
-    const handleInverseColor = invert ? 'white' : 'mediumGrey'
+    const handleInverseColor = invert ? 'white' : 'mediumGrey';
 
-    const handleGridTextPosition = [textAlign === 'left' ? 1 : 2, ctas ? 2 : 1]
+    const handleGridTextPosition = [textAlign === 'left' ? 1 : 2, ctas ? 2 : 1];
     const handleText: React.ReactElement = (
         <Grid columnItem={handleGridTextPosition}>
             <Typography
@@ -83,19 +83,19 @@ export const ImageTile: FC<ImageTileProps> = ({
                 </Typography>
             )}
         </Grid>
-    )
+    );
 
     const handleGridCtasPosition = [
         textAlign === 'left' || textAlign === 'center' ? 2 : 1,
         2,
-    ]
+    ];
     const handleGridCtasAlignX =
         textAlign === 'left'
             ? 'end'
             : textAlign === 'right'
             ? 'start'
-            : 'center'
-    const handleGridCtasAlignY = getGridAlign(ctas ?? [])
+            : 'center';
+    const handleGridCtasAlignY = getGridAlign(ctas ?? []);
     const handleCtas: React.ReactElement = (
         <Grid columnItem={handleGridCtasPosition}>
             <Grid
@@ -118,14 +118,14 @@ export const ImageTile: FC<ImageTileProps> = ({
                 ))}
             </Grid>
         </Grid>
-    )
+    );
 
     const handleGridAlign =
         textAlign === 'left'
             ? '3fr 1fr'
             : textAlign === 'right'
             ? '1fr 3fr'
-            : '1fr 1fr'
+            : '1fr 1fr';
 
     return (
         <Tile
@@ -136,12 +136,14 @@ export const ImageTile: FC<ImageTileProps> = ({
             gradient={gradient}
         >
             <Grid alignColumns={handleGridAlign} alignItems="center">
-                {Boolean(ctas && textAlign === 'right') && handleCtas}
+                {Boolean(ctas && textAlign === 'right') ? handleCtas : null}
                 {handleText}
                 {Boolean(
                     ctas && (textAlign === 'left' || textAlign === 'center')
-                ) && handleCtas}
+                )
+                    ? handleCtas
+                    : null}
             </Grid>
         </Tile>
-    )
-}
+    );
+};

@@ -1,19 +1,19 @@
-import { Button } from '../../../../bash-blocks'
-import { generateUniqueKey, useScreenWidth } from '../../../../../scripts'
-import { FC } from 'react'
+import { Button } from '../../../../bash-blocks';
+import { generateUniqueKey, useScreenWidth } from '../../../../../scripts';
+import { FC } from 'react';
 
 type SearchListProps = {
-    url?: string
-    funcSelect: (() => void) | ((e: any) => void)
+    url?: string;
+    funcSelect: (() => void) | ((e: any) => void);
     items: {
-        id: string
-        prefix?: string
-        names: string[]
-    }[]
-}
+        id: string;
+        prefix?: string;
+        names: string[];
+    }[];
+};
 
 export const SearchList: FC<SearchListProps> = ({ url, funcSelect, items }) => {
-    const { isMobile } = useScreenWidth()
+    const { isMobile } = useScreenWidth();
 
     return (
         <>
@@ -27,7 +27,7 @@ export const SearchList: FC<SearchListProps> = ({ url, funcSelect, items }) => {
                     func={funcSelect}
                     content={
                         <>
-                            {prefix && prefix + ':'}
+                            {prefix ? prefix + ':' : null}
                             {names.map((name, index) => (
                                 <div key={generateUniqueKey(index)}>{name}</div>
                             ))}
@@ -35,10 +35,10 @@ export const SearchList: FC<SearchListProps> = ({ url, funcSelect, items }) => {
                     }
                     subContent={id.slice(-2)}
                     subContentTop
-                    width="quarter"
+                    width={isMobile ? 'full' : 'quarter'}
                     padding="coarse"
                 />
             ))}
         </>
-    )
-}
+    );
+};

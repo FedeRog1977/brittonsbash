@@ -1,12 +1,12 @@
-import { toUpperCase, useScreenWidth } from '../../../../scripts'
-import cx from 'classnames'
-import styles from './typography.module.scss'
-import Markdown from 'markdown-to-jsx'
-import { createElement, FC } from 'react'
-import { tagType } from './constants/tag-type.constant'
-import { Style, Text } from '../../reference'
+import { toUpperCase, useScreenWidth } from '../../../../scripts';
+import cx from 'classnames';
+import styles from './typography.module.scss';
+import Markdown from 'markdown-to-jsx';
+import { createElement, FC } from 'react';
+import { tagType } from './constants/tag-type.constant';
+import { Style, Text } from '../../reference';
 
-export type TypographyProps = Text & Style
+export type TypographyProps = Text & Style;
 
 export const Typography: FC<TypographyProps> = ({
     variant,
@@ -27,7 +27,7 @@ export const Typography: FC<TypographyProps> = ({
         [styles.inline]: inline,
         [styles.paragraphMargins]: paragraphMargins,
         [styles[`align${toUpperCase(textAlign)}`]]: textAlign,
-    })
+    });
 
     const classNamesText = cx(
         styles.typography,
@@ -48,7 +48,7 @@ export const Typography: FC<TypographyProps> = ({
                 color,
             [styles.shadow]: shadow,
         }
-    )
+    );
 
     // const parsedTagMappedText = createElement(tagType[type], {
     //     className: classNamesText,
@@ -60,7 +60,7 @@ export const Typography: FC<TypographyProps> = ({
             <Markdown>{children}</Markdown>
         ) : (
             <>{children}</>
-        )
+        );
 
     if (link)
         return (
@@ -75,11 +75,11 @@ export const Typography: FC<TypographyProps> = ({
                     </a>
                 </div>
             </div>
-        )
+        );
 
     return (
         <div className={classNamesContainer}>
             <div className={classNamesText}>{parsedText}</div>
         </div>
-    )
-}
+    );
+};

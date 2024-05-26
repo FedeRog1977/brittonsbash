@@ -1,25 +1,25 @@
-import styles from './button.module.scss'
-import cx from 'classnames'
-import { toUpperCase } from '../../../../scripts'
-import { Grid, Typography, TypographyProps } from '../../basics'
-import { FC, ReactElement } from 'react'
-import { getGridArgs } from './hooks/get-grid-args'
+import styles from './button.module.scss';
+import cx from 'classnames';
+import { toUpperCase } from '../../../../scripts';
+import { Grid, Typography, TypographyProps } from '../../basics';
+import { FC, ReactElement } from 'react';
+import { getGridArgs } from './hooks/get-grid-args';
 
 export type ButtonProps = {
-    variant?: 'default' | 'clear' | 'solid' | 'inverse'
-    typeVariant?: TypographyProps['variant']
-    typeColor?: TypographyProps['color']
-    content: string | ReactElement
-    subContent?: string | ReactElement
-    subContentTop?: boolean
-    icon?: ReactElement
-    value?: string
-    func?: (() => void) | ((e: any) => void)
-    space?: boolean
-    width?: 'default' | 'quarter' | 'half' | 'full'
-    padding?: 'default' | 'coarse'
-    transition?: boolean
-}
+    variant?: 'default' | 'clear' | 'solid' | 'inverse';
+    typeVariant?: TypographyProps['variant'];
+    typeColor?: TypographyProps['color'];
+    content: string | ReactElement;
+    subContent?: string | ReactElement;
+    subContentTop?: boolean;
+    icon?: ReactElement;
+    value?: string;
+    func?: (() => void) | ((e: any) => void);
+    space?: boolean;
+    width?: 'default' | 'quarter' | 'half' | 'full';
+    padding?: 'default' | 'coarse';
+    transition?: boolean;
+};
 
 export const Button: FC<ButtonProps> = ({
     variant = 'default',
@@ -44,14 +44,18 @@ export const Button: FC<ButtonProps> = ({
         {
             [styles.transition]: transition,
         }
-    )
+    );
 
     const {
         gridArgs,
         gridItemSubContentArgs,
         gridItemContentArgs,
         gridItemIconArgs,
-    } = getGridArgs(Boolean(subContent), Boolean(subContentTop), Boolean(space))
+    } = getGridArgs(
+        Boolean(subContent),
+        Boolean(subContentTop),
+        Boolean(space)
+    );
 
     return (
         <button className={classNames} onClick={func} value={value}>
@@ -96,5 +100,5 @@ export const Button: FC<ButtonProps> = ({
                 ) : null}
             </Grid>
         </button>
-    )
-}
+    );
+};
