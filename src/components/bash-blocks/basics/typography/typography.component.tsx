@@ -1,4 +1,4 @@
-import { toUpperCase, useScreenWidth } from '../../../../scripts';
+import { toUpperCase } from '../../../../scripts';
 import cx from 'classnames';
 import styles from './typography.module.scss';
 import Markdown from 'markdown-to-jsx';

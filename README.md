@@ -156,6 +156,12 @@ Install Storybook:
 npx storybook@latest init
 ```
 
+Install in application:
+
+```sh
+npx sb init
+```
+
 Run Storybook:
 
 ```
@@ -342,7 +348,7 @@ const classNamesContainer = cx(
         [styles[`paragraphMargins${isMobile ? 'Mobile' : 'Desktop'}`]]:
             paragraphMargins,
     }
-)
+);
 ```
 
 ... more to come ...
