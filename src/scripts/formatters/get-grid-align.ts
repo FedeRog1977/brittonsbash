@@ -1,6 +1,13 @@
-export const getGridAlign = (array: any[]) => {
-    const handleAlign: string[] = []
-    array?.forEach(() => handleAlign.push('1fr'))
+export const getGridAlign = (
+    array: any[],
+    leftWidth?: string,
+    rightWidth?: string
+) => {
+    const rightWidths: string[] = [];
 
-    return handleAlign.join(' ')
-}
+    for (var i in array) {
+        rightWidths.push(rightWidth ?? '1fr');
+    }
+
+    return `${leftWidth ?? '1fr'} ${rightWidths.join(' ')}`;
+};

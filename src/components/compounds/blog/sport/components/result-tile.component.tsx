@@ -5,7 +5,7 @@ import {
     Spacing,
     Button,
     Grid,
-} from '../../../../bash-blocks'
+} from '../../../../bash-blocks';
 import {
     toMiles,
     toFeet,
@@ -19,25 +19,25 @@ import {
     CompiledMilesProps,
     CompiledProjectProps,
     CompiledRoadieProps,
-} from '../../../../../scripts'
-import { FC, useState } from 'react'
-import { Column } from '../../../../bash-blocks/partials/table/types/column.type'
+} from '../../../../../scripts';
+import { FC, useState } from 'react';
+import { Column } from '../../../../bash-blocks/partials/table/types/column.type';
 
 export type ResultTileProps = {
-    title: string
-    subTitle: string
-    description: string
-    routes: Column[]
-    isRoadies: boolean
-    isProjects: boolean
-    isMiles: boolean
-    sportData: CompiledRoadieProps | CompiledProjectProps | CompiledMilesProps
-    sport2024: RoadieProps[] | ProjectProps[] | MilesProps[]
-    sport2023: RoadieProps[] | ProjectProps[] | MilesProps[]
-    sport2022: RoadieProps[] | ProjectProps[] | MilesProps[]
-    sport2021: RoadieProps[] | ProjectProps[] | MilesProps[]
-    sport2020: RoadieProps[] | ProjectProps[] | MilesProps[]
-}
+    title: string;
+    subTitle: string;
+    description: string;
+    routes: Column[];
+    isRoadies: boolean;
+    isProjects: boolean;
+    isMiles: boolean;
+    sportData: CompiledRoadieProps | CompiledProjectProps | CompiledMilesProps;
+    sport2024: RoadieProps[] | ProjectProps[] | MilesProps[];
+    sport2023: RoadieProps[] | ProjectProps[] | MilesProps[];
+    sport2022: RoadieProps[] | ProjectProps[] | MilesProps[];
+    sport2021: RoadieProps[] | ProjectProps[] | MilesProps[];
+    sport2020: RoadieProps[] | ProjectProps[] | MilesProps[];
+};
 
 export const ResultTile: FC<ResultTileProps> = ({
     title,
@@ -54,39 +54,35 @@ export const ResultTile: FC<ResultTileProps> = ({
     sport2021,
     sport2020,
 }) => {
-    const { isMobile } = useScreenWidth()
-    const [sportYearData, setSportYearData] = useState(sport2024)
+    const { isMobile } = useScreenWidth();
+    const [sportYearData, setSportYearData] = useState(sport2024);
 
     const { showElement: showMunros, setShowElement: setShowMunros } =
-        useShowElement()
+        useShowElement();
 
     return (
         <Tile type="solid">
-            <Spacing mB={isMobile ? 7.5 : 15}>
+            <Spacing mB={15}>
                 <Typography variant="t1" fontFamily="sport" textAlign="center">
                     {title}
                 </Typography>
             </Spacing>
-            <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
+            <Spacing mT={15} mB={15}>
                 <Typography variant="h4" color="mediumGrey" textAlign="center">
                     {subTitle}
                 </Typography>
             </Spacing>
-            <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
+            <Spacing mT={15} mB={15}>
                 <Typography variant="body" textAlign="left">
                     {description}
                 </Typography>
             </Spacing>
-            <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
+            <Spacing mT={15} mB={15}>
                 <Typography variant="h2" fontFamily="sport" textAlign="left">
                     Summary
                 </Typography>
             </Spacing>
-            <Spacing
-                mX={isMobile ? -20 : 0}
-                mT={isMobile ? 7.5 : 15}
-                mB={isMobile ? 7.5 : 15}
-            >
+            <Spacing mX={isMobile ? -20 : 0} mT={15} mB={15}>
                 <ColumnTable
                     leftColumn={{
                         entries: [
@@ -135,16 +131,12 @@ export const ResultTile: FC<ResultTileProps> = ({
                     ]}
                 />
             </Spacing>
-            <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
+            <Spacing mT={15} mB={15}>
                 <Typography variant="h2" fontFamily="sport" textAlign="left">
                     {isProjects ? 'Hills' : 'Routes'}
                 </Typography>
             </Spacing>
-            <Spacing
-                mX={isMobile ? -20 : 0}
-                mT={isMobile ? 7.5 : 15}
-                mB={isMobile ? 7.5 : 15}
-            >
+            <Spacing mX={isMobile ? -20 : 0} mT={15} mB={15}>
                 <ColumnTable
                     leftColumn={{
                         entries: [
@@ -160,7 +152,7 @@ export const ResultTile: FC<ResultTileProps> = ({
                     rightColumns={routes}
                 />
             </Spacing>
-            <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
+            <Spacing mT={15} mB={15}>
                 <Grid
                     alignColumns={
                         isMobile ? '1fr 1fr 1fr' : '1fr 1fr 1fr 1fr 1fr'
@@ -249,11 +241,7 @@ export const ResultTile: FC<ResultTileProps> = ({
                     </Grid>
                 </Grid>
             </Spacing>
-            <Spacing
-                mX={isMobile ? -20 : 0}
-                mT={isMobile ? 7.5 : 15}
-                mB={isMobile ? 7.5 : 15}
-            >
+            <Spacing mX={isMobile ? -20 : 0} mT={15} mB={15}>
                 <ColumnTable
                     leftColumn={{
                         entries: sportYearData.map(
@@ -263,7 +251,7 @@ export const ResultTile: FC<ResultTileProps> = ({
                                 <a
                                     href="#"
                                     onClick={() => {
-                                        setShowMunros(!showMunros)
+                                        setShowMunros(!showMunros);
                                     }}
                                 >
                                     {name}
@@ -315,9 +303,8 @@ export const ResultTile: FC<ResultTileProps> = ({
                               ]
                             : []),
                     ]}
-                    scroll
                 />
             </Spacing>
         </Tile>
-    )
-}
+    );
+};

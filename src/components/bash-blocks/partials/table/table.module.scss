@@ -1,31 +1,22 @@
 @use '../../reference' as reference;
 
 .container {
+    border-radius: reference.$corners-medium;
     background-color: reference.$dark-grey;
-    
+    max-height: 300px;
+    overflow-y: auto;
+
     @media (max-width: 768px) {
+        border-radius: none;
         overflow-x: scroll;
         white-space: nowrap;
     }
 }
 
 .table {
-    border-radius: reference.$corners-small;
     padding: 15px 75px 15px 75px;
 
     @media (max-width: 768px) {
-        border-radius: none;
         padding: 7.5px 20px 7.5px 20px;
     }
 }
-
-// .rightColumn {
-//     display: 'inline-block';
-//     width: 'fit-content';
-//     margin-left: '20px';
-// }
-
-// .scrollY {
-//     max-height: '300px';
-//     overflow-y: 'scroll';
-// }

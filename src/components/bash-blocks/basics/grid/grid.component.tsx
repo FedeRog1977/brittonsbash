@@ -1,24 +1,26 @@
-import { FC } from 'react'
-import { ItemsAdv, Items, Align } from '../../reference'
+import { FC, ReactNode } from 'react';
+import { ItemsAdv, Items, Align } from '../../reference';
 
 // Reminder: https://developer.mozilla.org/en-US/docs/Web/CSS/grid
 // Reminder: https://css-tricks.com/snippets/css/complete-guide-grid/
 
 export type GridProps = {
-    alignColumns?: string
-    alignRows?: string
-    columnGap?: number
-    rowGap?: number
-    justifyContent?: ItemsAdv
-    alignContent?: ItemsAdv
-    justifyItems?: Items
-    alignItems?: Items
+    alignColumns?: string;
+    alignRows?: string;
+    columnGap?: number;
+    rowGap?: number;
+    justifyContent?: ItemsAdv;
+    alignContent?: ItemsAdv;
+    justifyItems?: Items;
+    alignItems?: Items;
 
-    columnItem?: number[]
-    rowItem?: number[]
-    textAlign?: Align
-    children: React.ReactNode
-}
+    columnItem?: number[];
+    rowItem?: number[];
+    minWidth?: number;
+    minHeight?: number;
+    textAlign?: Align;
+    children: ReactNode;
+};
 
 export const Grid: FC<GridProps> = ({
     alignColumns,
@@ -31,6 +33,8 @@ export const Grid: FC<GridProps> = ({
     alignItems,
     columnItem,
     rowItem,
+    minWidth,
+    minHeight,
     textAlign,
     children,
 }) => {
@@ -44,12 +48,14 @@ export const Grid: FC<GridProps> = ({
                     gridRow: `${rowItem ? [0] : undefined} / ${
                         rowItem ? [1] : undefined
                     }`,
+                    width: `${minWidth}px`,
+                    height: `${minHeight}px`,
                     textAlign: textAlign ? textAlign : undefined,
                 }}
             >
                 {children}
             </div>
-        )
+        );
     }
 
     return (
@@ -68,5 +74,5 @@ export const Grid: FC<GridProps> = ({
         >
             {children}
         </div>
-    )
-}
+    );
+};
