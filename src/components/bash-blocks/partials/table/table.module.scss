@@ -7,6 +7,7 @@
     overflow-y: auto;
 
     @media (max-width: 768px) {
+        // This doesn't work for some reason
         border-radius: none;
         overflow-x: scroll;
         white-space: nowrap;
