@@ -8,7 +8,7 @@ input[type='text'] {
         color: reference.$white;
         width: 98%;
         border: none;
-        border-radius: reference.$corners-small;
+        border-radius: reference.$corners-sm;
         padding: 15px;
 
         @media (max-width: 768px) {
@@ -26,7 +26,7 @@ select {
         color: reference.$white;
         width: 100%;
         border: none;
-        border-radius: reference.$corners-small;
+        border-radius: reference.$corners-sm;
         cursor: pointer;
         padding: 5px;
     }

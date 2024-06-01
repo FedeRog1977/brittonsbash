@@ -1,7 +1,7 @@
 @use '../../reference' as reference;
 
 .container {
-    border-radius: reference.$corners-medium;
+    border-radius: reference.$corners-md;
     background-color: reference.$dark-grey;
     max-height: 300px;
     overflow-y: auto;

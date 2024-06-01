@@ -2,7 +2,7 @@
 
 .tile {
     @media (min-width: 768px) {
-        border-radius: reference.$corners-large;
+        border-radius: reference.$corners-xl;
         max-width: 1600px;
         margin: 0px auto 24px auto;
     }
@@ -25,7 +25,7 @@
     margin: auto;
 
     @media (min-width: 768px) {
-        border-radius: reference.$corners-medium;
+        border-radius: reference.$corners-xl;
     }
 
     @media (max-width: 768px) {

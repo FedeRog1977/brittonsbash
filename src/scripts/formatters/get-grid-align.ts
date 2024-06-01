@@ -9,5 +9,5 @@ export const getGridAlign = (
         rightWidths.push(rightWidth ?? '1fr');
     }
 
-    return `${leftWidth ?? '1fr'} ${rightWidths.join(' ')}`;
+    return `${leftWidth ?? ''}${rightWidths.join(' ')}`;
 };

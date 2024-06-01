@@ -16,7 +16,7 @@ button {
 
 .variant {
     &Default {
-        border-radius: reference.$corners-small;
+        border-radius: reference.$corners-sm;
         background-color: reference.$apple-blue-60;
         width: 100%;
         transition: background-color reference.$transition-long;
@@ -29,7 +29,7 @@ button {
 
     &Clear {
         background-color: reference.$transparent;
-        border-radius: reference.$corners-large;
+        border-radius: reference.$corners-lg;
         transition: background-color reference.$transition-long;
 
         &:hover {
@@ -40,7 +40,7 @@ button {
 
     &Solid {
         background-color: reference.$dark-grey-60;
-        border-radius: reference.$corners-large;
+        border-radius: reference.$corners-lg;
         transition: background-color reference.$transition-long;
 
         &:hover {
@@ -51,7 +51,7 @@ button {
 
     &Inverse {
         background-color: reference.$transparent;
-        border-radius: reference.$corners-large;
+        border-radius: reference.$corners-lg;
         transition: background-color reference.$transition-long;
 
         &:hover {
@@ -92,13 +92,15 @@ button {
 .transition {
     padding-left: 0;
     padding-right: 0;
-    transition: background-color reference.$transition-long,
+    transition:
+        background-color reference.$transition-long,
         padding reference.$transition-long;
 
     &:hover {
         padding-left: 15px;
         padding-right: 15px;
-        transition: background-color reference.$transition-long,
+        transition:
+            background-color reference.$transition-long,
             padding reference.$transition-long;
 
         @media (max-width: 768px) {

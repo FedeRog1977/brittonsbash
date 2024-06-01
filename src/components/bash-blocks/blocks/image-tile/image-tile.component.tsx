@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, ReactElement } from 'react';
 import {
     formatArticle,
     generateUniqueKey,
@@ -36,12 +36,17 @@ export const ImageTile: FC<ImageTileProps> = ({
     invert = false,
 }) => {
     const { isMobile } = useScreenWidth();
-
     const handleInverseColor = invert ? 'white' : 'mediumGrey';
 
-    const handleGridTextPosition = [textAlign === 'left' ? 1 : 2, ctas ? 2 : 1];
-    const handleText: React.ReactElement = (
-        <Grid columnItem={handleGridTextPosition}>
+    const textComponent: ReactElement = (
+        <Grid
+            columnItem={
+                isMobile
+                    ? undefined
+                    : [textAlign === 'left' ? 1 : 2, ctas ? 2 : 1]
+            }
+            rowItem={isMobile ? [1, 2] : undefined}
+        >
             <Typography
                 variant="h4"
                 textAlign={textAlign}
@@ -85,28 +90,42 @@ export const ImageTile: FC<ImageTileProps> = ({
         </Grid>
     );
 
-    const handleGridCtasPosition = [
-        textAlign === 'left' || textAlign === 'center' ? 2 : 1,
-        2,
-    ];
-    const handleGridCtasAlignX =
-        textAlign === 'left'
-            ? 'end'
-            : textAlign === 'right'
-            ? 'start'
-            : 'center';
-    const handleGridCtasAlignY = getGridAlign(ctas ?? []);
-    const handleCtas: React.ReactElement = (
-        <Grid columnItem={handleGridCtasPosition}>
+    const ctasComponent: ReactElement = (
+        <Grid
+            columnItem={
+                isMobile
+                    ? undefined
+                    : [
+                          textAlign === 'left' || textAlign === 'center'
+                              ? 2
+                              : 1,
+                          2,
+                      ]
+            }
+            rowItem={isMobile ? [2, 2] : undefined}
+        >
             <Grid
-                alignRows={handleGridCtasAlignY}
+                alignColumns={isMobile ? getGridAlign(ctas ?? []) : undefined}
+                alignRows={isMobile ? undefined : getGridAlign(ctas ?? [])}
+                justifyItems={
+                    textAlign === 'left'
+                        ? 'end'
+                        : textAlign === 'right'
+                          ? 'start'
+                          : 'center'
+                }
+                alignItems="end"
                 rowGap={20}
-                justifyItems={handleGridCtasAlignX}
             >
                 {ctas?.map(({ content, href }, index) => (
                     <Grid
                         key={generateUniqueKey(index)}
-                        rowItem={[index + 1, ctas.length + 1]}
+                        columnItem={
+                            isMobile ? [index + 1, ctas.length + 1] : undefined
+                        }
+                        rowItem={
+                            isMobile ? undefined : [index + 1, ctas.length + 1]
+                        }
                     >
                         <Button
                             variant="inverse"
@@ -120,13 +139,6 @@ export const ImageTile: FC<ImageTileProps> = ({
         </Grid>
     );
 
-    const handleGridAlign =
-        textAlign === 'left'
-            ? '3fr 1fr'
-            : textAlign === 'right'
-            ? '1fr 3fr'
-            : '1fr 1fr';
-
     return (
         <Tile
             type="clear"
@@ -135,13 +147,25 @@ export const ImageTile: FC<ImageTileProps> = ({
             img={isMobile ? imgMobile : imgDesktop}
             gradient={gradient}
         >
-            <Grid alignColumns={handleGridAlign} alignItems="center">
-                {Boolean(ctas && textAlign === 'right') ? handleCtas : null}
-                {handleText}
+            <Grid
+                alignColumns={
+                    isMobile
+                        ? '12fr'
+                        : textAlign === 'left'
+                          ? '3fr 1fr'
+                          : textAlign === 'right'
+                            ? '1fr 3fr'
+                            : '1fr 1fr'
+                }
+                alignRows={isMobile ? '1fr 1fr' : undefined}
+                alignItems="center"
+            >
+                {Boolean(ctas && textAlign === 'right') ? ctasComponent : null}
+                {textComponent}
                 {Boolean(
                     ctas && (textAlign === 'left' || textAlign === 'center')
                 )
-                    ? handleCtas
+                    ? ctasComponent
                     : null}
             </Grid>
         </Tile>
