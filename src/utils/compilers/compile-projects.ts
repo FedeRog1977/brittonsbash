@@ -32,7 +32,7 @@ type CompiledProjects = {
 export const compileProjects = () => {
   const sport = getSessionItem('response-sport');
 
-  // type SportDataKeys = keyof typeof sport
+  // type SportDataKeys = keyof typeof sport;
 
   // const years = Object.keys(sport)
 

@@ -1,15 +1,15 @@
 import styles from './button.module.scss';
 import cx from 'classnames';
 import { toUpperCase } from '../../../../utils';
-import { Grid, Typography, TypographyProps } from '../../basics';
+import { Grid, Typography } from '../../basics';
 import { FC, ReactElement } from 'react';
 import { getGridArgs } from './utils/get-grid-args';
-import { Url } from '../../reference';
+import { TextStyle, Url } from '../../reference';
 
 export type ButtonProps = {
   variant?: 'default' | 'clear' | 'solid' | 'inverse';
-  typeVariant?: TypographyProps['variant'];
-  typeColor?: TypographyProps['color'];
+  typeVariant?: TextStyle['variant'];
+  typeColor?: TextStyle['color'];
   content: string | ReactElement;
   subContent?: string | ReactElement;
   subContentTop?: boolean;

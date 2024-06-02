@@ -1,7 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Typography as TypographyComponent } from '../components/bash-blocks';
-import '../components/bash-blocks/reference/styles/_global.scss';
-import '../components/bash-blocks/reference/styles/_fonts.scss';
 
 const meta = {
   title: 'Basics / Typography',
@@ -50,19 +48,27 @@ const meta = {
     shadow: false,
     fontFamily: 'serif',
     textAlign: 'left',
-    paragraphMargins: false,
+    paragraphMargins: true,
     markdown: true,
   },
 } as Meta<typeof TypographyComponent>;
 
 export const Typography: StoryObj<typeof meta> = {
   args: {},
-  // render: ({ ...args }) => (
-  //   <div style={{ display: 'inline' }}>
-  //     <TypographyComponent {...args} />
-  //     <TypographyComponent {...args} />
-  //   </div>
-  // ),
+  render: ({ ...args }) => (
+    <div style={{ display: 'flex-column' }}>
+      <TypographyComponent {...args} />
+      <TypographyComponent {...args} variant="t2" />
+      <TypographyComponent {...args} variant="h1" />
+      <TypographyComponent {...args} variant="h2" />
+      <TypographyComponent {...args} variant="h3" />
+      <TypographyComponent {...args} variant="h4" />
+      <TypographyComponent {...args} variant="body" />
+      <TypographyComponent {...args} variant="caption" />
+      <TypographyComponent {...args} variant="footnote" />
+      <TypographyComponent {...args} variant="tiny" />
+    </div>
+  ),
 };
 
 export default meta;

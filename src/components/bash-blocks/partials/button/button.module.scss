@@ -16,9 +16,8 @@ button {
 
 .variant {
   &Default {
-    border-radius: reference.$corners-sm;
     background-color: reference.$apple-blue-60;
-    width: 100%;
+    border-radius: reference.$corners-sm;
     transition: background-color reference.$transition-long;
 
     &:hover {

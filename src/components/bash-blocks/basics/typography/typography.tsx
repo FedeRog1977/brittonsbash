@@ -42,17 +42,6 @@ export const Typography: FC<TypographyProps> = ({
     }
   );
 
-  // if (link)
-  //   return (
-  //       <a
-  //         href={link.url}
-  //         target={link.newTab ? '_blank' : undefined}
-  //         rel={link.newTab ? 'noreferrer' : undefined}
-  //       >
-  //         {parsedText}
-  //       </a>
-  //   );
-
   return typeof children === 'string' && markdown ? (
     <ReactMarkdown className={classNames} linkTarget="_blank">
       {children}
