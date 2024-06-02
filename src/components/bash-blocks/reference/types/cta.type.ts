@@ -1,4 +1,4 @@
 export type Cta = {
-    content: string
-    href: string
-}
+  content: string;
+  href: string;
+};

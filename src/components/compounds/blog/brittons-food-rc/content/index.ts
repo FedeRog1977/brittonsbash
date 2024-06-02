@@ -1,1 +1,1 @@
-export * from './brittons-food-rc.content'
+export * from './brittons-food-rc';

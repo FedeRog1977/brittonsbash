@@ -1,1 +1,1 @@
-export * from './instant-gram.content'
+export * from './instant-gram';

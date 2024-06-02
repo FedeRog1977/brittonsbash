@@ -1,4 +1,4 @@
-import { isDefined, toUpperCase } from '../../../../scripts';
+import { isDefined, toUpperCase } from '../../../../utils';
 import { AlignConfig } from '../types/align-config';
 import { JustifyConfig } from '../types/justify-config';
 

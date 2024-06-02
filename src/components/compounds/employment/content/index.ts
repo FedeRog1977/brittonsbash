@@ -1,1 +1,1 @@
-export * from './employment.content'
+export * from './employment';

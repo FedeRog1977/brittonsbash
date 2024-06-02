@@ -1,6 +1,6 @@
 import cx from 'classnames';
 import styles from './tile.module.scss';
-import { toUpperCase } from '../../../../scripts';
+import { toUpperCase } from '../../../../utils';
 import { Gradient } from '../gradient';
 import { Image } from '../image';
 import { FC, ReactNode } from 'react';

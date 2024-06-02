@@ -1,1 +1,1 @@
-export type Items = 'start' | 'end' | 'center' | 'stretch'
+export type Items = 'start' | 'end' | 'center' | 'stretch';

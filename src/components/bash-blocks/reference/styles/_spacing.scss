@@ -14,15 +14,15 @@ $spacing-3xl: utils.to-rem(96px);
 $spacing-4xl: utils.to-rem(114px);
 
 $size-to-spacing-variable: (
-    'None': $spacing-none,
-    '3xs': $spacing-3xs,
-    '2xs': $spacing-2xs,
-    'Xs': $spacing-xs,
-    'Sm': $spacing-sm,
-    'Md': $spacing-md,
-    'Lg': $spacing-lg,
-    'Xl': $spacing-xl,
-    '2xl': $spacing-2xl,
-    '3xl': $spacing-3xl,
-    '4xl': $spacing-4xl,
+  'None': $spacing-none,
+  '3xs': $spacing-3xs,
+  '2xs': $spacing-2xs,
+  'Xs': $spacing-xs,
+  'Sm': $spacing-sm,
+  'Md': $spacing-md,
+  'Lg': $spacing-lg,
+  'Xl': $spacing-xl,
+  '2xl': $spacing-2xl,
+  '3xl': $spacing-3xl,
+  '4xl': $spacing-4xl,
 );

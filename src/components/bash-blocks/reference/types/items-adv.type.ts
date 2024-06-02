@@ -1,3 +1,7 @@
-import { Items } from './items.type'
+import { Items } from './items.type';
 
-export type ItemsAdv = 'space-around' | 'space-between' | 'space-evenly' | Items
+export type ItemsAdv =
+  | 'space-around'
+  | 'space-between'
+  | 'space-evenly'
+  | Items;

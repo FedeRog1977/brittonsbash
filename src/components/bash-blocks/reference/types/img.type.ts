@@ -1,5 +1,5 @@
 export type Img = {
-    url: string
-    alt: string
-    description?: string
-}
+  url: string;
+  alt: string;
+  description?: string;
+};

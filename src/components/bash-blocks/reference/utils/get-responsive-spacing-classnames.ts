@@ -1,4 +1,4 @@
-import { isDefined, toUpperCase } from '../../../../scripts';
+import { isDefined, toUpperCase } from '../../../../utils';
 import { SpacingConfig } from '..';
 
 export const getResponsiveSpacingClassNames = (

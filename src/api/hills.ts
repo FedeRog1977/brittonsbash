@@ -1,4 +1,4 @@
-import { getResponse } from '../scripts';
+import { getResponse } from '../utils';
 
 export const useHills = () => {
   getResponse(

@@ -1,4 +1,4 @@
 export type Url = {
-    url: string
-    newTab?: boolean
-}
+  url: string;
+  newTab?: boolean;
+};

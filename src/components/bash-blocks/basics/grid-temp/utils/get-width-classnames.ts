@@ -1,4 +1,4 @@
-import { toUpperCase } from '../../../../../scripts';
+import { toUpperCase } from '../../../../../utils';
 import { ColumnSpan } from '../types/column-span';
 import { Width } from '../types/width';
 

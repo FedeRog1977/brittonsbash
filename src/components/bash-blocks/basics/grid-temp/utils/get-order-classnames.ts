@@ -1,4 +1,4 @@
-import { isDefined, toUpperCase } from '../../../../../scripts';
+import { isDefined, toUpperCase } from '../../../../../utils';
 import { Order } from '../types/order';
 
 export const getOrderClassNames = (

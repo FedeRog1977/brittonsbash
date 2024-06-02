@@ -1,23 +1,23 @@
 @use '../../reference' as reference;
 
 .container {
-    border-radius: reference.$corners-md;
-    background-color: reference.$dark-grey;
-    max-height: 300px;
-    overflow-y: auto;
+  border-radius: reference.$corners-md;
+  background-color: reference.$dark-grey;
+  max-height: 300px;
+  overflow-y: auto;
 
-    @media (max-width: 768px) {
-        // This doesn't work for some reason
-        border-radius: none;
-        overflow-x: scroll;
-        white-space: nowrap;
-    }
+  @media (max-width: 768px) {
+    // This doesn't work for some reason
+    border-radius: none;
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
 }
 
 .table {
-    padding: 15px 75px 15px 75px;
+  padding: 15px 75px 15px 75px;
 
-    @media (max-width: 768px) {
-        padding: 7.5px 20px 7.5px 20px;
-    }
+  @media (max-width: 768px) {
+    padding: 7.5px 20px 7.5px 20px;
+  }
 }
