@@ -1,4 +1,4 @@
-import { sum, toFeet, toMiles } from '../formatters';
+import { toSum, toFeet, toMiles } from '../helpers';
 import {
   CompiledEventProps,
   ProjectProps,
@@ -111,8 +111,8 @@ export const compileEvent = ({
     },
     description: event.description,
     images: event.images,
-    distance: toMiles(distances.reduce(sum)),
-    elevation: toFeet(elevations.reduce(sum)),
+    distance: toMiles(distances.reduce(toSum)),
+    elevation: toFeet(elevations.reduce(toSum)),
     time: times.join(', '),
     islands: islandSetAggregate.join(', '),
     munros: munroSetAggregate.join(', '),

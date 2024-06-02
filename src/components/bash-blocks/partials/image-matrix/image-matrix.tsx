@@ -3,7 +3,7 @@ import {
   generateUniqueKey,
   useShowElement,
 } from '../../../../utils';
-import styles from './image.module.scss';
+import styles from './image-matrix.module.scss';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Flex, Image, Spacing, Typography } from '../../basics';
 import { Img } from '../../reference';

@@ -6,7 +6,7 @@ import {
   faEject,
   faExchange,
 } from '@fortawesome/free-solid-svg-icons';
-import styles from './image.module.scss';
+import styles from './image-slider.module.scss';
 import { generateUniqueKey, useScreenWidth } from '../../../../utils';
 import { Typography } from '../../basics';
 import { Img } from '../../reference';

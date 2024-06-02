@@ -1,5 +1,5 @@
 import { getSessionItem } from '../api';
-import { toFeet, toMiles } from '../formatters';
+import { toFeet, toMiles } from '../helpers';
 import { CompiledMilesProps, MilesProps } from './types';
 
 export const compileMiles = () => {

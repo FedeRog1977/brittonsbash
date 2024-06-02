@@ -1,5 +1,5 @@
 import { getSessionItem } from '../api';
-import { removeDuplicates, toMiles, toFeet } from '../formatters';
+import { removeDuplicates, toMiles, toFeet } from '../helpers';
 import {
   AggregationAlphabeticalProps,
   AggregationNumericalProps,
