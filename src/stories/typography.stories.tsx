@@ -37,6 +37,7 @@ const meta = {
       options: ['left', 'center', 'right', 'inherit', 'justify'],
     },
     paragraphMargins: { control: 'boolean' },
+    markdown: { control: 'boolean' },
   },
   args: {
     variant: 't1',
@@ -50,6 +51,7 @@ const meta = {
     fontFamily: 'serif',
     textAlign: 'left',
     paragraphMargins: false,
+    markdown: true,
   },
 } as Meta<typeof TypographyComponent>;
 

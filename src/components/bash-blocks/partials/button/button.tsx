@@ -4,6 +4,7 @@ import { toUpperCase } from '../../../../utils';
 import { Grid, Typography, TypographyProps } from '../../basics';
 import { FC, ReactElement } from 'react';
 import { getGridArgs } from './utils/get-grid-args';
+import { Url } from '../../reference';
 
 export type ButtonProps = {
   variant?: 'default' | 'clear' | 'solid' | 'inverse';
@@ -15,6 +16,7 @@ export type ButtonProps = {
   icon?: ReactElement;
   value?: string;
   func?: (() => void) | ((e: any) => void);
+  link?: Url;
   space?: boolean;
   width?: 'default' | 'quarter' | 'half' | 'full';
   padding?: 'default' | 'coarse';
@@ -31,6 +33,7 @@ export const Button: FC<ButtonProps> = ({
   icon,
   value,
   func,
+  link,
   space,
   width = 'default',
   padding = 'default',
@@ -52,6 +55,13 @@ export const Button: FC<ButtonProps> = ({
     gridItemContentArgs,
     gridItemIconArgs,
   } = getGridArgs(Boolean(subContent), Boolean(subContentTop), Boolean(space));
+
+  if (typeof content === 'string' && link)
+    return (
+      <Typography variant={typeVariant} markdown>
+        {`[${content}](${link.url})`}
+      </Typography>
+    );
 
   return (
     <button className={classNames} onClick={func} value={value}>

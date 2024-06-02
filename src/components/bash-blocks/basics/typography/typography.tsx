@@ -1,7 +1,7 @@
 import { toUpperCase } from '../../../../utils';
 import cx from 'classnames';
 import styles from './typography.module.scss';
-import Markdown from 'markdown-to-jsx';
+import ReactMarkdown from 'react-markdown';
 import { createElement, FC } from 'react';
 import { tagType } from './constants/tag-type';
 import { TextStyle } from '../../reference';
@@ -44,7 +44,6 @@ export const Typography: FC<TypographyProps> = ({
 
   // if (link)
   //   return (
-  //     <div className={classNames}>
   //       <a
   //         href={link.url}
   //         target={link.newTab ? '_blank' : undefined}
@@ -52,13 +51,12 @@ export const Typography: FC<TypographyProps> = ({
   //       >
   //         {parsedText}
   //       </a>
-  //     </div>
   //   );
 
   return typeof children === 'string' && markdown ? (
-    <Markdown className={classNames} linkTarget="_blank" linkRel="noreferrer">
+    <ReactMarkdown className={classNames} linkTarget="_blank">
       {children}
-    </Markdown>
+    </ReactMarkdown>
   ) : (
     createElement(tagType[variant], {
       className: classNames,
