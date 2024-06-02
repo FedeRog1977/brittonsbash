@@ -1,4 +1,4 @@
-import { Items } from './items.type';
+import { Items } from './items';
 
 export type ItemsAdv =
   | 'space-around'

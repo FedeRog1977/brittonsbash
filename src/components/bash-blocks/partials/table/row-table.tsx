@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { generateUniqueKey, useScreenWidth } from '../../../../utils';
 import { Grid, Spacing, Typography } from '../../basics';
 import styles from './table.module.scss';
-import { Row } from './types/row.type';
+import { Row } from './types/row';
 
 export type RowTableProps = {
   titleRow: Row;

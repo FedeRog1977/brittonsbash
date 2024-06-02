@@ -37,15 +37,19 @@ export const ImageMatrix: FC<ImageMatrixProps> = ({ items, columns }) => {
               >
                 <LazyLoadImage className={styles.image} src={url} alt={alt} />
               </a>
+
               {description ? (
                 <Spacing mY={15}>
-                  <Typography variant="body">{description}</Typography>
+                  <Typography variant="body" markdown>
+                    {description}
+                  </Typography>
                 </Spacing>
               ) : null}
             </Flex>
           ))}
         </Flex>
       ))}
+
       <Modal isOpen={showModal} onClose={() => setShowModal(!showModal)}>
         <Image {...(image as Img)} />
       </Modal>

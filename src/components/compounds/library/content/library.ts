@@ -22,41 +22,19 @@ export const libraryContent: LibraryProps = {
             {
               heading: 'LaTeX and Markdown',
               items: [
-                {
-                  content: 'Symbols & Logic Syntax (TeX)',
-                  url: '',
-                },
-                {
-                  content: 'Symbols & Logic Syntax (PDF)',
-                  url: '',
-                },
-                {
-                  content: 'Basic Syntax Templates (TeX)',
-                  url: '',
-                },
-                {
-                  content: 'Basic Syntax Templates (PDF)',
-                  url: '',
-                },
+                '[Symbols & Logic Syntax (TeX)]()',
+                '[Symbols & Logic Syntax (PDF)]()',
+                '[Basic Syntax Templates (TeX)]()',
+                '[Basic Syntax Templates (PDF)]()',
               ],
             },
             {
               heading: 'HTML, CSS, and JavaScript',
-              items: [
-                {
-                  content: 'TBW',
-                  url: '',
-                },
-              ],
+              items: ['TBW'],
             },
             {
               heading: 'React and Typescript',
-              items: [
-                {
-                  content: 'TBW',
-                  url: '',
-                },
-              ],
+              items: ['TBW'],
             },
           ],
         },
@@ -74,128 +52,49 @@ export const libraryContent: LibraryProps = {
           items: [
             {
               heading: 'CS958 (Project)',
-              items: [
-                {
-                  content: 'Assignment',
-                  url: '',
-                },
-              ],
+              items: ['Assignment'],
             },
             {
               heading: 'CS995',
-              items: [
-                {
-                  content: 'Assignment (Code)',
-                  url: '',
-                },
-              ],
+              items: ['Assignment (Code)'],
             },
             {
               heading: 'CS994',
-              items: [
-                {
-                  content: 'Assignment (Code)',
-                  url: '',
-                },
-              ],
+              items: ['Assignment (Code)'],
             },
             {
               heading: 'CS993',
-              items: [
-                {
-                  content: 'Assignment I',
-                  url: '',
-                },
-                {
-                  content: 'Assignment I (Code)',
-                  url: '',
-                },
-                {
-                  content: 'Assignment II',
-                  url: '',
-                },
-              ],
+              items: ['Assignment I', 'Assignment I (Code)', 'Assignment II'],
             },
             {
               heading: 'CS992',
-              items: [
-                {
-                  content: 'Assignment',
-                  url: '',
-                },
-                {
-                  content: 'Labs',
-                  url: '',
-                },
-              ],
+              items: ['Assignment', 'Labs'],
             },
             {
               heading: 'CS991',
               items: [
-                {
-                  content: 'Assignment I',
-                  url: '',
-                },
-                {
-                  content: 'Assignment I (Code)',
-                  url: '',
-                },
-                {
-                  content: 'Assignment II (Code)',
-                  url: '',
-                },
+                'Assignment I',
+                'Assignment I (Code)',
+                'Assignment II (Code)',
               ],
             },
             {
               heading: 'CS990',
               items: [
-                {
-                  content: 'Assignment I',
-                  url: '',
-                },
-                {
-                  content: 'Assignment II',
-                  url: '',
-                },
-                {
-                  content: 'Assignment II (Code)',
-                  url: '',
-                },
-                {
-                  content: 'Labs',
-                  url: '',
-                },
-                {
-                  content: 'Lectures',
-                  url: '',
-                },
+                'Assignment I',
+                'Assignment II',
+                'Assignment II (Code)',
+                'Labs',
+                'Lectures',
               ],
             },
             {
               heading: 'CS978',
-              items: [
-                {
-                  content: 'Assignment',
-                  url: '',
-                },
-              ],
+              items: ['Assignment'],
             },
             {
               heading: 'CS808',
-              items: [
-                {
-                  content: 'Assignment',
-                  url: '',
-                },
-                {
-                  content: 'Assignment (Code)',
-                  url: '',
-                },
-                {
-                  content: 'Examination',
-                  url: '',
-                },
-              ],
+              items: ['Assignment', 'Assignment (Code)', 'Examination'],
             },
           ],
         },
@@ -213,147 +112,51 @@ export const libraryContent: LibraryProps = {
           items: [
             {
               heading: 'AG436 (Dissertation)',
-              items: [
-                {
-                  content: 'Assignment',
-                  url: '',
-                },
-              ],
+              items: ['Assignment'],
             },
             {
               heading: 'AG432',
-              items: [
-                {
-                  content: 'Assignment',
-                  url: '',
-                },
-                {
-                  content: 'Test',
-                  url: '',
-                },
-              ],
+              items: ['Assignment', 'Test'],
             },
             {
               heading: 'AG431',
-              items: [
-                {
-                  content: 'Assignment',
-                  url: '',
-                },
-                {
-                  content: 'Examination',
-                  url: '',
-                },
-              ],
+              items: ['Assignment', 'Examination'],
             },
             {
               heading: 'AG430',
-              items: [
-                {
-                  content: 'Examination',
-                  url: '',
-                },
-              ],
+              items: ['Examination'],
             },
             {
               heading: 'AG428',
-              items: [
-                {
-                  content: 'Assignment',
-                  url: '',
-                },
-                {
-                  content: 'Examination',
-                  url: '',
-                },
-              ],
+              items: ['Assignment', 'Examination'],
             },
             {
               heading: 'AG313',
-              items: [
-                {
-                  content: 'Summary',
-                  url: '',
-                },
-                {
-                  content: 'Examination',
-                  url: '',
-                },
-              ],
+              items: ['Summary', 'Examination'],
             },
             {
               heading: 'AG312',
-              items: [
-                {
-                  content: 'Summary',
-                  url: '',
-                },
-                {
-                  content: 'Assignment',
-                  url: '',
-                },
-              ],
+              items: ['Summary', 'Assignment'],
             },
             {
               heading: 'AG217',
-              items: [
-                {
-                  content: 'Summary',
-                  url: '',
-                },
-                {
-                  content: 'Assignment',
-                  url: '',
-                },
-              ],
+              items: ['Summary', 'Assignment'],
             },
             {
               heading: 'AG215',
-              items: [
-                {
-                  content: 'Summary',
-                  url: '',
-                },
-                {
-                  content: 'Assignment',
-                  url: '',
-                },
-              ],
+              items: ['Summary', 'Assignment'],
             },
             {
               heading: 'EC315',
-              items: [
-                {
-                  content: 'Summary',
-                  url: '',
-                },
-                {
-                  content: 'Assignment',
-                  url: '',
-                },
-              ],
+              items: ['Summary', 'Assignment'],
             },
             {
               heading: 'EC216',
-              items: [
-                {
-                  content: 'Summary',
-                  url: '',
-                },
-              ],
+              items: ['Summary'],
             },
             {
               heading: 'BF303 and BF201',
-              items: [
-                {
-                  content: 'Assignment (BF303)',
-                  url: '',
-                },
-                {
-                  content: 'Assignment (BF201)',
-                  url: '',
-                },
-              ],
+              items: ['Assignment (BF303)', 'Assignment (BF201)'],
             },
           ],
         },

@@ -19,11 +19,11 @@ export const academiaContent: AcademiaProps = {
     titleItems: [
       {
         content: 'M.Sc. Software Development',
-        subContent: { content: '2022 – Distinction' },
+        subContent: '2022 – Distinction',
       },
       {
         content: 'B.A. Finance (Honours)',
-        subContent: { content: '2021 – First Class' },
+        subContent: '2021 – First Class',
       },
     ],
   },

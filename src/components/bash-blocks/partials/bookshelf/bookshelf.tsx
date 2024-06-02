@@ -2,11 +2,10 @@ import { FC } from 'react';
 import { generateUniqueKey, useShowElement } from '../../../../utils';
 import { Spacing, Typography } from '../../basics';
 import { Button } from '../button';
-import { Book } from './types/book';
 
 export type BookshelfProps = {
   heading: string;
-  items: Book[];
+  items: string[];
 };
 
 export const Bookshelf: FC<BookshelfProps> = ({ heading, items }) => {
@@ -23,15 +22,12 @@ export const Bookshelf: FC<BookshelfProps> = ({ heading, items }) => {
         content={heading}
         width="full"
       />
+
       {showElement &&
-        items.map(({ content, url }, index) => (
+        items.map((item, index) => (
           <Spacing mY={20}>
-            <Typography
-              key={generateUniqueKey(index)}
-              variant="body"
-              link={{ url: url, newTab: true }}
-            >
-              {content}
+            <Typography key={generateUniqueKey(index)} variant="body" markdown>
+              {item}
             </Typography>
           </Spacing>
         ))}

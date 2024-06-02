@@ -36,14 +36,16 @@ export const Temperature: FC<TemperatureProps> = ({ temp, suffix, icon }) => {
   return (
     <div style={{ background: backgroundColor }}>
       <Spacing pY={isMobile ? 5 : 10} textAlign="center">
-        <Typography variant="footnote" color={fontColor} inline>
+        <Typography variant="footnote" color={fontColor}>
           {toTemperature(temp)}
         </Typography>
+
         {suffix ? (
-          <Typography variant="footnote" color={fontColor} inline>
+          <Typography variant="footnote" color={fontColor}>
             <>&nbsp;{suffix}</>
           </Typography>
         ) : null}
+
         {icon ? (
           <>
             &nbsp;

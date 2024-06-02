@@ -34,7 +34,7 @@ export const TitleTile: FC<TitleTileProps> = ({
                   rowItem={[index + 1, titleItems.length + 1]}
                   textAlign="right"
                 >
-                  <Typography variant={isMobile ? 'h4' : 'h3'} boldFace inline>
+                  <Typography variant={isMobile ? 'h4' : 'h3'} boldFace>
                     {content}
                   </Typography>
                 </Grid>
@@ -43,19 +43,8 @@ export const TitleTile: FC<TitleTileProps> = ({
                   rowItem={[index + 1, titleItems.length + 1]}
                   textAlign="left"
                 >
-                  <Typography
-                    variant={isMobile ? 'h4' : 'h3'}
-                    link={
-                      subContent.link
-                        ? {
-                            url: subContent.link.url,
-                            newTab: subContent.link.newTab,
-                          }
-                        : undefined
-                    }
-                    inline
-                  >
-                    {subContent.content}
+                  <Typography variant={isMobile ? 'h4' : 'h3'} markdown>
+                    {subContent}
                   </Typography>
                 </Grid>
               </>
@@ -74,28 +63,15 @@ export const TitleTile: FC<TitleTileProps> = ({
                   rowItem={[index + 1, bodyItems.length + 1]}
                   textAlign="right"
                 >
-                  <Typography variant="body" inline>
-                    {content}
-                  </Typography>
+                  <Typography variant="body">{content}</Typography>
                 </Grid>
                 <Grid
                   columnItem={[2, 2]}
                   rowItem={[index + 1, bodyItems.length + 1]}
                   textAlign="left"
                 >
-                  <Typography
-                    variant="body"
-                    link={
-                      subContent.link
-                        ? {
-                            url: subContent.link.url,
-                            newTab: subContent.link.newTab,
-                          }
-                        : undefined
-                    }
-                    inline
-                  >
-                    {subContent.content}
+                  <Typography variant="body" markdown>
+                    {subContent}
                   </Typography>
                 </Grid>
               </>

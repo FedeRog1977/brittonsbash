@@ -281,12 +281,12 @@ export const Header = () => {
                 columnGap={10}
               >
                 <Grid columnItem={[1, 2]}>
-                  <Link to="/utils/weather" onClick={resetHeader}>
+                  <Link to="/utilities/weather" onClick={resetHeader}>
                     Weather
                   </Link>
                 </Grid>
                 <Grid columnItem={[2, 2]}>
-                  <Link to="/utils/conquest" onClick={resetHeader}>
+                  <Link to="/utilities/conquest" onClick={resetHeader}>
                     Conquest
                   </Link>
                 </Grid>

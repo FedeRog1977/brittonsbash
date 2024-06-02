@@ -21,7 +21,7 @@ import {
   CompiledRoadieProps,
 } from '../../../../../utils';
 import { FC, useState } from 'react';
-import { Column } from '../../../../bash-blocks/partials/table/types/column.type';
+import { Column } from '../../../../bash-blocks/partials/table/types/column';
 
 export type ResultTileProps = {
   title: string;

@@ -26,12 +26,10 @@ export const Article: FC<ArticleProps> = ({
             variant = 'body',
             children,
             color = 'darkerGrey',
-            inline,
             boldFace,
             italicize,
             smallCaps,
             textDecoration,
-            link,
             shadow,
           }) => (
             <Typography
@@ -40,12 +38,10 @@ export const Article: FC<ArticleProps> = ({
               fontFamily={fontFamily}
               color={color}
               textAlign={textAlign}
-              inline={inline}
               boldFace={boldFace}
               italicize={italicize}
               smallCaps={smallCaps}
               textDecoration={textDecoration}
-              link={link}
               shadow={shadow}
               paragraphMargins
             >
@@ -59,12 +55,10 @@ export const Article: FC<ArticleProps> = ({
         fontFamily={fontFamily}
         color={sections[sectionsFinal].color}
         textAlign={textAlign}
-        inline={sections[sectionsFinal].inline}
         boldFace={sections[sectionsFinal].boldFace}
         italicize={sections[sectionsFinal].italicize}
         smallCaps={sections[sectionsFinal].smallCaps}
         textDecoration={sections[sectionsFinal].textDecoration}
-        link={sections[sectionsFinal].link}
         shadow={sections[sectionsFinal].shadow}
         paragraphMargins={extendParagraphMargins}
       >

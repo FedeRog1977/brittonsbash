@@ -17,13 +17,8 @@ export const employmentContent: EmploymentProps = {
     titleItems: [
       {
         content: 'View / Download',
-        subContent: {
-          content: 'Curriculum Vitæ',
-          link: {
-            url: 'https://lewisbritton.com/documents/employment/cv.pdf',
-            newTab: true,
-          },
-        },
+        subContent:
+          '[Curriculum Vitæ](https://lewisbritton.com/documents/employment/cv.pdf)',
       },
     ],
   },

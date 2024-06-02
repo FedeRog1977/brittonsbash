@@ -12,24 +12,17 @@ export const Typography: FC<TypographyProps> = ({
   variant,
   children,
   color = 'white',
-  inline,
   boldFace,
   italicize,
   smallCaps,
   textDecoration = 'none',
-  link,
   shadow,
   fontFamily = 'sansSerif',
   textAlign = 'inherit',
   paragraphMargins = false,
+  markdown,
 }) => {
-  const classNamesContainer = cx({
-    [styles.inline]: inline,
-    [styles.paragraphMargins]: paragraphMargins,
-    [styles[`align${toUpperCase(textAlign)}`]]: textAlign,
-  });
-
-  const classNamesText = cx(
+  const classNames = cx(
     styles.typography,
     styles[`variant${toUpperCase(fontFamily)}${toUpperCase(variant)}`],
     {
@@ -44,39 +37,32 @@ export const Typography: FC<TypographyProps> = ({
       ]]: textDecoration,
       [styles[`color${color ? toUpperCase(color) : 'DarkerGrey'}`]]: color,
       [styles.shadow]: shadow,
+      [styles[`align${toUpperCase(textAlign)}`]]: textAlign,
+      [styles.paragraphMargins]: paragraphMargins,
     }
   );
 
-  // const parsedTagMappedText = createElement(tagType[type], {
-  //     className: classNamesText,
-  //     children,
-  // })
+  // if (link)
+  //   return (
+  //     <div className={classNames}>
+  //       <a
+  //         href={link.url}
+  //         target={link.newTab ? '_blank' : undefined}
+  //         rel={link.newTab ? 'noreferrer' : undefined}
+  //       >
+  //         {parsedText}
+  //       </a>
+  //     </div>
+  //   );
 
-  const parsedText =
-    typeof children === 'string' ? (
-      <Markdown>{children}</Markdown>
-    ) : (
-      <>{children}</>
-    );
-
-  if (link)
-    return (
-      <div className={classNamesContainer}>
-        <div className={classNamesText}>
-          <a
-            href={link.url}
-            target={link.newTab ? '_blank' : undefined}
-            rel={link.newTab ? 'noreferrer' : undefined}
-          >
-            {parsedText}
-          </a>
-        </div>
-      </div>
-    );
-
-  return (
-    <div className={classNamesContainer}>
-      <div className={classNamesText}>{parsedText}</div>
-    </div>
+  return typeof children === 'string' && markdown ? (
+    <Markdown className={classNames} linkTarget="_blank" linkRel="noreferrer">
+      {children}
+    </Markdown>
+  ) : (
+    createElement(tagType[variant], {
+      className: classNames,
+      children,
+    })
   );
 };

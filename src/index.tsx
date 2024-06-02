@@ -22,7 +22,6 @@ import {
   Weather,
   Conquest,
 } from './components';
-import { Footer, Header } from './components/bash-blocks';
 import { reportWebVitals } from './utils/react';
 import { useEvents, useHills, useRegions, useSport } from './api';
 

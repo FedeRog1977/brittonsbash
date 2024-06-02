@@ -6,7 +6,7 @@ import {
 } from '../../../../utils';
 import { Grid, Spacing, Typography } from '../../basics';
 import styles from './table.module.scss';
-import { Column } from './types/column.type';
+import { Column } from './types/column';
 
 export type ColumnTableProps = {
   leftColumn: Column;
@@ -27,7 +27,7 @@ export const ColumnTable: FC<ColumnTableProps> = ({
         <Grid alignColumns={columnWidths} columnGap={10}>
           <Grid columnItem={[1, columnCount]}>
             {leftColumn.title != null ? (
-              <Typography variant="footnote" boldFace inline>
+              <Typography variant="footnote" boldFace>
                 {leftColumn.title}
               </Typography>
             ) : (
@@ -49,7 +49,7 @@ export const ColumnTable: FC<ColumnTableProps> = ({
           </Grid>
           {rightColumns.map(({ title, entries }, index) => (
             <Grid columnItem={[index + 2, columnCount]} textAlign="right">
-              <Typography variant="footnote" boldFace inline>
+              <Typography variant="footnote" boldFace>
                 {title}
               </Typography>
               {entries?.map((entry, index) => (
