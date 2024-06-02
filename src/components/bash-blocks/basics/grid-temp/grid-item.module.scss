@@ -1,0 +1,44 @@
+@use 'sass:math' as math;
+@use '../../styles/reference' as reference;
+
+$-column-count: 12;
+$-max-order: 12;
+
+.width {
+  @each $size, $screen-variable in reference.$size-to-screen-variable {
+    &#{$size} {
+      @for $column-span from 1 through $-column-count {
+        &#{$column-span} {
+          @media (min-width: #{$screen-variable}) {
+            width: math.percentage(math.div($column-span, $-column-count));
+          }
+        }
+      }
+    }
+  }
+}
+
+.order {
+  @for $order from 0 to $-max-order {
+    @each $size, $screen-variable in reference.$size-to-screen-variable {
+      &#{$size} {
+        @media (min-width: #{$screen-variable}) {
+          &#{$order} {
+            order: $order;
+          }
+        }
+      }
+    }
+  }
+}
+
+.position {
+  &Underlay {
+    z-index: -1;
+  }
+
+  &Overlay {
+    z-index: 100;
+    position: absolute;
+  }
+}

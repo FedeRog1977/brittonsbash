@@ -1,4 +1,7 @@
-export * from './align.type';
+export * from './align-config';
+export * from './align-horizontal';
+export * from './align-vertical';
+export * from './align';
 export * from './breakpoints';
 export * from './color.type';
 export * from './cta.type';
@@ -9,6 +12,5 @@ export * from './margin.type';
 export * from './padding.type';
 export * from './spacing-size';
 export * from './spacing-config';
-export * from './style.type';
-export * from './text.type';
+export * from './text-style';
 export * from './url.type';

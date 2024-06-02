@@ -1,79 +1,70 @@
 import cx from 'classnames';
 import { FC, ReactNode } from 'react';
 import styles from './spacing.module.scss';
-import { SpacingConfig } from '../../reference';
-import { getResponsiveSpacingClassNames } from './utils/get-responsive-spacing-classnames';
+import { SpacingConfig, getResponsiveSpacingClassNames } from '../../reference';
 
 export type SpacingProps = {
-    children?: ReactNode;
-    margin?: SpacingConfig;
-    marginX?: SpacingConfig;
-    marginY?: SpacingConfig;
-    marginTop?: SpacingConfig;
-    marginRight?: SpacingConfig;
-    marginBottom?: SpacingConfig;
-    marginLeft?: SpacingConfig;
-    padding?: SpacingConfig;
-    paddingX?: SpacingConfig;
-    paddingY?: SpacingConfig;
-    paddingTop?: SpacingConfig;
-    paddingRight?: SpacingConfig;
-    paddingBottom?: SpacingConfig;
-    paddingLeft?: SpacingConfig;
-    inline?: boolean;
+  children?: ReactNode;
+  margin?: SpacingConfig;
+  marginX?: SpacingConfig;
+  marginY?: SpacingConfig;
+  marginTop?: SpacingConfig;
+  marginRight?: SpacingConfig;
+  marginBottom?: SpacingConfig;
+  marginLeft?: SpacingConfig;
+  padding?: SpacingConfig;
+  paddingX?: SpacingConfig;
+  paddingY?: SpacingConfig;
+  paddingTop?: SpacingConfig;
+  paddingRight?: SpacingConfig;
+  paddingBottom?: SpacingConfig;
+  paddingLeft?: SpacingConfig;
+  inline?: boolean;
 };
 
 export const SpacingTemp: FC<SpacingProps> = ({
-    children,
-    margin,
-    marginX,
-    marginY,
-    marginTop,
-    marginRight,
-    marginBottom,
-    marginLeft,
-    padding,
-    paddingX,
-    paddingY,
-    paddingTop,
-    paddingRight,
-    paddingBottom,
-    paddingLeft,
-    inline = false,
+  children,
+  margin,
+  marginX,
+  marginY,
+  marginTop,
+  marginRight,
+  marginBottom,
+  marginLeft,
+  padding,
+  paddingX,
+  paddingY,
+  paddingTop,
+  paddingRight,
+  paddingBottom,
+  paddingLeft,
+  inline = false,
 }) => {
-    const display = inline ? 'inline' : 'block';
+  const display = inline ? 'inline' : 'block';
 
-    const classNames = cx(
-        ...getResponsiveSpacingClassNames('margin', styles, margin),
-        ...getResponsiveSpacingClassNames('marginX', styles, marginX),
-        ...getResponsiveSpacingClassNames('marginY', styles, marginY),
-        ...getResponsiveSpacingClassNames('marginTop', styles, marginTop),
-        ...getResponsiveSpacingClassNames('marginRight', styles, marginRight),
-        ...getResponsiveSpacingClassNames('marginBottom', styles, marginBottom),
-        ...getResponsiveSpacingClassNames('marginLeft', styles, marginLeft),
-        ...getResponsiveSpacingClassNames('padding', styles, padding),
-        ...getResponsiveSpacingClassNames('paddingX', styles, paddingX),
-        ...getResponsiveSpacingClassNames('paddingY', styles, paddingY),
-        ...getResponsiveSpacingClassNames('paddingTop', styles, paddingTop),
-        ...getResponsiveSpacingClassNames('paddingRight', styles, paddingRight),
-        ...getResponsiveSpacingClassNames(
-            'paddingBottom',
-            styles,
-            paddingBottom
-        ),
-        ...getResponsiveSpacingClassNames('paddingLeft', styles, paddingLeft),
-        {
-            [styles.inline]: inline,
-        }
-    );
+  const classNames = cx(
+    ...getResponsiveSpacingClassNames('margin', styles, margin),
+    ...getResponsiveSpacingClassNames('marginX', styles, marginX),
+    ...getResponsiveSpacingClassNames('marginY', styles, marginY),
+    ...getResponsiveSpacingClassNames('marginTop', styles, marginTop),
+    ...getResponsiveSpacingClassNames('marginRight', styles, marginRight),
+    ...getResponsiveSpacingClassNames('marginBottom', styles, marginBottom),
+    ...getResponsiveSpacingClassNames('marginLeft', styles, marginLeft),
+    ...getResponsiveSpacingClassNames('padding', styles, padding),
+    ...getResponsiveSpacingClassNames('paddingX', styles, paddingX),
+    ...getResponsiveSpacingClassNames('paddingY', styles, paddingY),
+    ...getResponsiveSpacingClassNames('paddingTop', styles, paddingTop),
+    ...getResponsiveSpacingClassNames('paddingRight', styles, paddingRight),
+    ...getResponsiveSpacingClassNames('paddingBottom', styles, paddingBottom),
+    ...getResponsiveSpacingClassNames('paddingLeft', styles, paddingLeft),
+    {
+      [styles.inline]: inline,
+    }
+  );
 
-    return (
-        <div
-            className={classNames}
-            data-testid="spacing"
-            data-display={display}
-        >
-            {children}
-        </div>
-    );
+  return (
+    <div className={classNames} data-testid="spacing" data-display={display}>
+      {children}
+    </div>
+  );
 };

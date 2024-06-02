@@ -1,85 +1,85 @@
 .flexRow {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 2.5px;
-    padding-bottom: 2.5px;
-    // border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+  // border: 1px solid black;
 
-    > * {
-        flex-shrink: 0;
-        width: 100%;
-        max-width: 100%;
-    }
+  > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .flexRow:first-child {
-    padding-top: 0;
-    padding-bottom: 2.5px;
+  padding-top: 0;
+  padding-bottom: 2.5px;
 
-    @media (max-width: 768px) {
-        padding: 0;
-    }
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 }
 
 .flexRow:last-child {
-    padding-top: 2.5px;
-    padding-bottom: 0;
+  padding-top: 2.5px;
+  padding-bottom: 0;
 
-    @media (max-width: 768px) {
-        padding: 0;
-    }
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 }
 
 .flexRow:only-child {
-    padding: 0;
+  padding: 0;
 }
 
 .flexCol {
-    text-align: center;
-    padding-left: 2.5px;
-    padding-right: 2.5px;
-    // border: 1px solid black;
+  text-align: center;
+  padding-left: 2.5px;
+  padding-right: 2.5px;
+  // border: 1px solid black;
 
-    @media (max-width: 768px) {
-        padding-top: 2.5px;
-        padding-bottom: 2.5px;
-        padding-left: 0;
-        padding-right: 0;
-    }
+  @media (max-width: 768px) {
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-    @media (min-width: 768px) {
-        flex: 2 0;
-    }
+  @media (min-width: 768px) {
+    flex: 2 0;
+  }
 }
 
 .flexCol:first-child {
-    padding-left: 0;
-    padding-right: 2.5px;
+  padding-left: 0;
+  padding-right: 2.5px;
 
-    @media (max-width: 768px) {
-        padding-top: 0;
-        padding-bottom: 2.5px;
-        padding-left: 0;
-        padding-right: 0;
-    }
+  @media (max-width: 768px) {
+    padding-top: 0;
+    padding-bottom: 2.5px;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .flexCol:last-child {
-    padding-left: 2.5px;
-    padding-right: 0;
+  padding-left: 2.5px;
+  padding-right: 0;
 
-    @media (max-width: 768px) {
-        padding-top: 2.5px;
-        padding-bottom: 0;
-        padding-left: 0;
-        padding-right: 0;
-    }
+  @media (max-width: 768px) {
+    padding-top: 2.5px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .flexCol:only-child {
-    padding: 0px;
+  padding: 0px;
 
-    @media (max-width: 768px) {
-        padding-top: 2.5px;
-    }
+  @media (max-width: 768px) {
+    padding-top: 2.5px;
+  }
 }

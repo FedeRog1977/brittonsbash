@@ -1,0 +1,30 @@
+import { isDefined, toUpperCase } from '../../../../scripts';
+import { AlignConfig } from '../types/align-config';
+import { JustifyConfig } from '../types/justify-config';
+
+export const getResponsiveAlignmentClassNames = (
+  prefix: string,
+  suffix: string,
+  styles: Record<string, string>,
+  alignmentConfig?: JustifyConfig | AlignConfig
+): string[] => {
+  if (!alignmentConfig) {
+    return [];
+  }
+
+  const config: JustifyConfig | AlignConfig =
+    typeof alignmentConfig === 'string'
+      ? { xs: alignmentConfig }
+      : alignmentConfig;
+
+  return Object.entries(config)
+    .map(
+      ([breakpoint, alignment]) =>
+        styles[
+          `${prefix}Breakpoint${toUpperCase(breakpoint)}${toUpperCase(
+            alignment
+          )}${toUpperCase(suffix)}`
+        ]
+    )
+    .filter(isDefined);
+};

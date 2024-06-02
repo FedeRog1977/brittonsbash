@@ -1,16 +1,16 @@
-import { FC } from 'react'
-import { Background, BackgroundProps } from '../../basics'
-import { Footer } from '../../partials'
+import { FC, ReactNode } from 'react';
+import { Background, BackgroundProps } from '../../basics';
+import { Footer } from '../../partials';
 
 export type PageLayoutProps = {
-    background: BackgroundProps
-    children: React.ReactNode
-}
+  background: BackgroundProps;
+  children: ReactNode;
+};
 
 export const PageLayout: FC<PageLayoutProps> = ({ background, children }) => (
-    <>
-        <Background {...background} />
-        {children}
-        <Footer />
-    </>
-)
+  <>
+    <Background {...background} />
+    {children}
+    <Footer />
+  </>
+);
