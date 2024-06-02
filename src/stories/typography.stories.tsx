@@ -30,7 +30,6 @@ const meta = {
     italicize: { control: 'boolean' },
     smallCaps: { control: 'boolean' },
     textDecoration: { control: 'select' },
-    link: { url: { control: 'string' }, newTab: { control: 'boolean' } },
     shadow: { control: 'boolean' },
     fontFamily: { control: 'select' },
     textAlign: {
@@ -47,7 +46,6 @@ const meta = {
     italicize: false,
     smallCaps: false,
     textDecoration: 'none',
-    link: undefined,
     shadow: false,
     fontFamily: 'serif',
     textAlign: 'left',
