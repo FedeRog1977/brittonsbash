@@ -1,0 +1,10 @@
+$justify-to-value-variable: (
+  'Left': 'flex-start',
+  'Right': 'flex-end',
+  'Center': 'center',
+  'Stretch': 'stretch',
+  // TODO: align semantics with FlexBase
+  'Between': 'space-between',
+  'Around': 'space-around',
+  'Even': 'space-evenly',
+);

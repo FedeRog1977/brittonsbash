@@ -35,7 +35,6 @@ export const homeContent: HomeProps = {
       { content: 'Conquest', href: '#/utils/conquest' },
     ],
     invert: true,
-    textAlign: 'left',
   },
   tileTwo: {
     heading: 'A short introduction',

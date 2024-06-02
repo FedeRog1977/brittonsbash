@@ -35,7 +35,3 @@
   );
   @include reference.custom-attribute('Items', 'align-items', $align-variable);
 }
-
-.stacked {
-  position: relative;
-}

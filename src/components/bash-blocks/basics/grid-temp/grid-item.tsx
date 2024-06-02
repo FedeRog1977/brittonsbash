@@ -41,9 +41,5 @@ export const GridItemTemp: FC<GridItemProps> = ({
     ...getOrderClassNames(styles, order)
   );
 
-  return (
-    <div data-testid="grid-item" className={classNames}>
-      {children}
-    </div>
-  );
+  return <div className={classNames}>{children}</div>;
 };

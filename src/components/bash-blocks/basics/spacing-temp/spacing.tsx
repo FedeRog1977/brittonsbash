@@ -63,7 +63,7 @@ export const SpacingTemp: FC<SpacingProps> = ({
   );
 
   return (
-    <div className={classNames} data-testid="spacing" data-display={display}>
+    <div className={classNames} data-display={display}>
       {children}
     </div>
   );

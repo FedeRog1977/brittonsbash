@@ -1,5 +1,7 @@
 export * from './align-config';
+export * from './align-cross-axis';
 export * from './align-horizontal';
+export * from './align-main-axis';
 export * from './align-vertical';
 export * from './align';
 export * from './breakpoints';

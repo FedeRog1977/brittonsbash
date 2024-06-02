@@ -14,7 +14,6 @@ export type GridProps = {
   spacing?: SpacingConfig;
   alignHorizontal?: JustifyConfig;
   alignVertical?: AlignConfig;
-  stacked?: boolean;
 };
 
 const defaultSpacing: SpacingConfig = { xs: 'sm', lg: 'md' };
@@ -24,7 +23,6 @@ export const GridTemp: FC<GridProps> = ({
   spacing = defaultSpacing,
   alignHorizontal = 'left',
   alignVertical = 'top',
-  stacked,
 }) => {
   const classNames = cx(
     styles.grid,
@@ -35,18 +33,8 @@ export const GridTemp: FC<GridProps> = ({
       styles,
       alignHorizontal
     ),
-    ...getResponsiveAlignmentClassNames(
-      'align',
-      'items',
-      styles,
-      alignVertical
-    ),
-    { [styles.stacked]: stacked }
+    ...getResponsiveAlignmentClassNames('align', 'items', styles, alignVertical)
   );
 
-  return (
-    <div data-testid="grid" className={classNames}>
-      {children}
-    </div>
-  );
+  return <div className={classNames}>{children}</div>;
 };
