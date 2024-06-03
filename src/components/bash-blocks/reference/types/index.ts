@@ -6,7 +6,6 @@ export * from './align-vertical';
 export * from './align';
 export * from './breakpoints';
 export * from './color';
-export * from './cta';
 export * from './img';
 export * from './items-adv';
 export * from './items';
