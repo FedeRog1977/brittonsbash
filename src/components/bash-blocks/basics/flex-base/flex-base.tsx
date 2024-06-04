@@ -9,6 +9,7 @@ import { getResponsiveSpacingClassNames } from '../../reference';
 type FlexBase = Horizontal | Vertical;
 export type FlexBaseProps = FlexBase & { wrap?: boolean };
 
+// TODO: maybe move to new reference/components
 export const FlexBase: FC<FlexBaseProps> = ({
   children,
   direction,
