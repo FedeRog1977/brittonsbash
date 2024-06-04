@@ -1,22 +1,11 @@
 @use 'sass:math' as math;
 @use '../../reference' as reference;
 
-$-column-count: 12;
-$-max-order: 12;
-
-.width {
-  @each $size, $screen-variable in reference.$size-to-screen-variable {
-    &#{$size} {
-      @for $column-span from 1 through $-column-count {
-        &#{$column-span} {
-          @media (min-width: #{$screen-variable}) {
-            width: math.percentage(math.div($column-span, $-column-count));
-          }
-        }
-      }
-    }
-  }
+@include reference.responsive-column-span('width') using ($percentage) {
+  width: $percentage;
 }
+
+$-max-order: 12;
 
 .order {
   @for $order from 0 to $-max-order {
