@@ -1,7 +1,7 @@
 import cx from 'classnames';
 import { FC, ReactNode } from 'react';
 import styles from './grid-item.module.scss';
-import { ColumnSpan } from './types/column-span';
+import { ColumnSpan } from '../../reference';
 import { Order } from './types/order';
 import { getOrderClassNames } from './utils/get-order-classnames';
 import { getPositionClassName } from './utils/get-position-classnames';
@@ -19,6 +19,7 @@ export type GridItemProps = {
   position?: 'overlay' | 'underlay';
 };
 
+// TODO: export from index.ts once old Flex is discontinued
 export const GridItemTemp: FC<GridItemProps> = ({
   children,
   order,

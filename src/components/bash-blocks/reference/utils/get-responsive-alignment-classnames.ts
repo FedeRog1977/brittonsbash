@@ -1,6 +1,5 @@
 import { isDefined, toUpperCase } from '../../../../utils';
-import { AlignConfig } from '../types/align-config';
-import { JustifyConfig } from '../types/justify-config';
+import { AlignConfig, JustifyConfig } from '../types';
 
 export const getResponsiveAlignmentClassNames = (
   prefix: string,

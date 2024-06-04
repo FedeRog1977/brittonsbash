@@ -1,5 +1,5 @@
 import { isDefined, toUpperCase } from '../../../../utils';
-import { SpacingConfig } from '..';
+import { SpacingConfig } from '../types';
 
 export const getResponsiveSpacingClassNames = (
   prefix: string,

@@ -589,7 +589,7 @@
 }
 
 a {
-  // This isn't very versatile but I suppose links will always just be white
+  // TODO: move this to nest within individual styles
   color: reference.$white;
   text-decoration: none;
   transition: color reference.$transition-long;

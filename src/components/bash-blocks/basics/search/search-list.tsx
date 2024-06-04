@@ -19,6 +19,7 @@ export const SearchList: FC<SearchListProps> = ({
     <option value="" disabled selected>
       {placeholder}
     </option>
+
     {content.map(({ name }, index) => (
       <option key={generateUniqueKey(index)} value={name}>
         {name}

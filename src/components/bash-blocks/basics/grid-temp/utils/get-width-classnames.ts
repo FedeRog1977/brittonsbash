@@ -1,5 +1,5 @@
 import { toUpperCase } from '../../../../../utils';
-import { ColumnSpan } from '../types/column-span';
+import { ColumnSpan } from '../../../reference';
 import { Width } from '../types/width';
 
 export const getWidthClassName = (
