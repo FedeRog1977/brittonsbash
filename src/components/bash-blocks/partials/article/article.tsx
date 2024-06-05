@@ -44,6 +44,7 @@ export const Article: FC<ArticleProps> = ({
               textDecoration={textDecoration}
               shadow={shadow}
               paragraphMargins
+              markdown
             >
               {children}
             </Typography>
@@ -61,6 +62,7 @@ export const Article: FC<ArticleProps> = ({
         textDecoration={sections[sectionsFinal].textDecoration}
         shadow={sections[sectionsFinal].shadow}
         paragraphMargins={extendParagraphMargins}
+        markdown
       >
         {sections[sectionsFinal].children}
       </Typography>

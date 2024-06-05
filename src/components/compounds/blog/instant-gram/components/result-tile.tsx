@@ -56,7 +56,12 @@ export const ResultTile: FC<ResultTileProps> = ({
       <Anchor id="#result" />
       <Spacing mB={isMobile ? 7.5 : 15}>
         {refactoredEvent.prefix ? (
-          <Typography variant="t1" fontFamily="instagram" textAlign="center">
+          <Typography
+            variant="t1"
+            fontFamily="instagram"
+            textAlign="center"
+            paragraphMargins
+          >
             {refactoredEvent.prefix}:
           </Typography>
         ) : null}
@@ -351,7 +356,7 @@ export const ResultTile: FC<ResultTileProps> = ({
       )}
       {showMatrix ? (
         <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
-          <ImageMatrix items={refactoredEvent.images} columns={4} />
+          <ImageMatrix items={refactoredEvent.images} />
         </Spacing>
       ) : null}
       {showModal ? (

@@ -26,7 +26,12 @@ export const Bookshelf: FC<BookshelfProps> = ({ heading, items }) => {
       {showElement &&
         items.map((item, index) => (
           <Spacing mY={20}>
-            <Typography key={generateUniqueKey(index)} variant="body" markdown>
+            <Typography
+              key={generateUniqueKey(index)}
+              variant="body"
+              textAlign="center"
+              markdown
+            >
               {item}
             </Typography>
           </Spacing>

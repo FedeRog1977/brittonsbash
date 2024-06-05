@@ -1,7 +1,8 @@
 import { FC } from 'react';
 import { formatItems, generateUniqueKey } from '../../../../../utils';
-import { Flex } from '../../../basics';
 import { BookshelfProps, Bookshelf } from '../../../partials';
+import { FlexTemp } from '../../../basics/flex-temp/flex';
+import { FlexItemTemp } from '../../../basics/flex-temp/flex-item';
 
 export type BooksProps = { items: BookshelfProps[] };
 
@@ -14,13 +15,20 @@ export const Books: FC<BooksProps> = ({ items }) => {
   return (
     <>
       {formattedItems.map((row) => (
-        <Flex>
+        <FlexTemp
+          direction="horizontal"
+          alignHorizontal="center"
+          alignVertical="center"
+        >
           {row.map(({ heading, items }, index) => (
-            <Flex item key={generateUniqueKey(index)}>
+            <FlexItemTemp
+              key={generateUniqueKey(index)}
+              basis={{ xs: 12, lg: 4 }}
+            >
               <Bookshelf heading={heading} items={items} />
-            </Flex>
+            </FlexItemTemp>
           ))}
-        </Flex>
+        </FlexTemp>
       ))}
     </>
   );
