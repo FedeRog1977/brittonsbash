@@ -6,7 +6,7 @@ import {
 import styles from './image-matrix.module.scss';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Image, Spacing, Typography } from '../../basics';
-import { Img } from '../../reference';
+import { ColumnSpan, Img } from '../../reference';
 import { Modal } from '../../blocks';
 import { FC, useState } from 'react';
 import { FlexTemp } from '../../basics/flex-temp/flex';
@@ -15,11 +15,14 @@ import { SpacingTemp } from '../../basics/spacing-temp';
 
 export type ImageMatrixProps = {
   items: Img[];
+  columns?: number;
 };
 
-export const ImageMatrix: FC<ImageMatrixProps> = ({ items }) => {
+export const ImageMatrix: FC<ImageMatrixProps> = ({ items, columns }) => {
   const { showElement: showModal, setShowElement: setShowModal } =
     useShowElement();
+
+  const basis: ColumnSpan = columns ? ((12 / columns) as ColumnSpan) : 2;
 
   const [image, setImage] = useState<Img>();
 
@@ -34,7 +37,7 @@ export const ImageMatrix: FC<ImageMatrixProps> = ({ items }) => {
         {items.map(({ url, alt, description }, index) => (
           <FlexItemTemp
             key={generateUniqueKey(index)}
-            basis={{ xs: 12, lg: 2 }}
+            basis={{ xs: 12, lg: basis }}
           >
             <a
               onClick={() => {
