@@ -63,7 +63,6 @@ export const WeatherDaily = ({ latIn, lonIn }: any) => {
           )
         }
         func={() => setShowElement(!showElement)}
-        space
         width="full"
         transition
       />

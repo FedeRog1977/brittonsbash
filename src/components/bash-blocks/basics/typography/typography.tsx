@@ -11,6 +11,7 @@ export type TypographyProps = TextStyle;
 export const Typography: FC<TypographyProps> = ({
   variant,
   children,
+  element,
   color = 'white',
   boldFace,
   italicize,
@@ -22,32 +23,30 @@ export const Typography: FC<TypographyProps> = ({
   paragraphMargins = false,
   markdown,
 }) => {
-  const classNames = cx(
-    styles.typography,
-    styles[`variant${toUpperCase(fontFamily)}${toUpperCase(variant)}`],
-    {
-      [styles[`variant${toUpperCase(fontFamily)}Bold`]]: boldFace,
-      [styles[`variant${toUpperCase(fontFamily)}Italic`]]: italicize,
-      [styles[`variant${toUpperCase(fontFamily)}BoldItalic`]]: Boolean(
-        boldFace && italicize
-      ),
-      [styles.smallCaps]: smallCaps,
-      [styles[
-        `textDecoration${textDecoration ? toUpperCase(textDecoration) : 'None'}`
-      ]]: textDecoration,
-      [styles[`color${color ? toUpperCase(color) : 'DarkerGrey'}`]]: color,
-      [styles.shadow]: shadow,
-      [styles[`align${toUpperCase(textAlign)}`]]: textAlign,
-      [styles.paragraphMargins]: paragraphMargins,
-    }
-  );
+  const classNames = cx(styles.typography, {
+    [styles[`variant${toUpperCase(fontFamily)}${toUpperCase(variant)}`]]:
+      !element,
+    [styles[`variant${toUpperCase(fontFamily)}Bold`]]: boldFace,
+    [styles[`variant${toUpperCase(fontFamily)}Italic`]]: italicize,
+    [styles[`variant${toUpperCase(fontFamily)}BoldItalic`]]: Boolean(
+      boldFace && italicize
+    ),
+    [styles.smallCaps]: smallCaps,
+    [styles[
+      `textDecoration${textDecoration ? toUpperCase(textDecoration) : 'None'}`
+    ]]: textDecoration,
+    [styles[`color${color ? toUpperCase(color) : 'DarkerGrey'}`]]: color,
+    [styles.shadow]: shadow,
+    [styles[`align${toUpperCase(textAlign)}`]]: textAlign,
+    [styles.paragraphMargins]: paragraphMargins,
+  });
 
   return typeof children === 'string' && markdown ? (
     <ReactMarkdown className={classNames} linkTarget="_blank">
       {children}
     </ReactMarkdown>
   ) : (
-    createElement(tagType[variant], {
+    createElement(element ?? tagType[variant], {
       className: classNames,
       children,
     })

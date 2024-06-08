@@ -110,7 +110,6 @@ export const Inverse: StoryObj<typeof meta> = {
 export const Spaced: StoryObj<typeof meta> = {
   args: {
     variant: 'default',
-    space: true,
     width: 'full',
   },
   render: ({ ...args }) => {

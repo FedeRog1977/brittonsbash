@@ -1,4 +1,4 @@
-import { ReactElement, ReactNode } from 'react';
+import { ElementType, ReactElement, ReactNode } from 'react';
 import { AlignHorizontal, Color } from '.';
 
 export type TextStyle = {
@@ -14,6 +14,7 @@ export type TextStyle = {
     | 'footnote'
     | 'tiny';
   children?: string | ReactElement | ReactNode | Element;
+  element?: ElementType;
   color?: Color;
   boldFace?: boolean;
   italicize?: boolean;

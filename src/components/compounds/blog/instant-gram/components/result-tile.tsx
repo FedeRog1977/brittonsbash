@@ -193,7 +193,6 @@ export const ResultTile: FC<ResultTileProps> = ({
             )
           }
           func={() => setShowDescription(!showDescription)}
-          space
           width="full"
           transition
         />

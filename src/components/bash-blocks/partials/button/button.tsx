@@ -1,10 +1,11 @@
 import styles from './button.module.scss';
 import cx from 'classnames';
 import { toUpperCase } from '../../../../utils';
-import { Grid, Typography } from '../../basics';
+import { Stack, Typography } from '../../basics';
 import { FC, ReactElement } from 'react';
-import { getGridArgs } from './utils/get-grid-args';
 import { TextStyle, Url } from '../../reference';
+import { GridTemp } from '../../basics/grid-temp/grid';
+import { GridItemTemp } from '../../basics/grid-temp/grid-item';
 
 export type ButtonProps = {
   variant?: 'default' | 'clear' | 'solid' | 'inverse';
@@ -17,7 +18,6 @@ export type ButtonProps = {
   value?: string;
   func?: (() => void) | ((e: any) => void);
   link?: Url;
-  space?: boolean;
   width?: 'default' | 'quarter' | 'half' | 'full';
   padding?: 'default' | 'coarse';
   transition?: boolean;
@@ -34,7 +34,6 @@ export const Button: FC<ButtonProps> = ({
   value,
   func,
   link,
-  space,
   width = 'default',
   padding = 'default',
   transition,
@@ -49,13 +48,6 @@ export const Button: FC<ButtonProps> = ({
     }
   );
 
-  const {
-    gridArgs,
-    gridItemSubContentArgs,
-    gridItemContentArgs,
-    gridItemIconArgs,
-  } = getGridArgs(Boolean(subContent), Boolean(subContentTop), Boolean(space));
-
   if (typeof content === 'string' && link)
     return (
       <Typography variant={typeVariant} markdown>
@@ -65,48 +57,41 @@ export const Button: FC<ButtonProps> = ({
 
   return (
     <button className={classNames} onClick={func} value={value}>
-      <Grid
-        alignColumns={gridArgs.alignColumns}
-        alignRows={gridArgs.alignRows}
-        justifyContent={gridArgs.justifyContent}
-        alignItems={gridArgs.alignItems}
+      <GridTemp
+        alignHorizontal="between"
+        alignVertical="center"
+        spacing={icon ? 'xs' : 'none'}
       >
-        {subContent ? (
-          <Grid
-            columnItem={gridItemSubContentArgs.columnItem}
-            rowItem={gridItemSubContentArgs.rowItem}
-            textAlign={gridItemSubContentArgs.textAlign}
+        <GridItemTemp xs={icon ? 2 : 12}>
+          <Stack
+            direction={subContentTop ? 'vertical' : 'horizontal'}
+            alignHorizontal={icon ? 'left' : 'center'}
+            spacing="xs"
           >
-            <Typography variant="body" color="lightGrey">
-              {subContent}
-              {subContentTop ? null : <>&nbsp;</>}
-            </Typography>
-          </Grid>
-        ) : null}
+            {subContent ? (
+              <Typography variant="body" color="lightGrey" textAlign="right">
+                {subContent}
+              </Typography>
+            ) : null}
 
-        <Grid
-          columnItem={gridItemContentArgs.columnItem}
-          rowItem={gridItemContentArgs.rowItem}
-          textAlign={gridItemContentArgs.textAlign}
-        >
-          <Typography variant={typeVariant} color={typeColor}>
-            {content}
-          </Typography>
-        </Grid>
+            <Typography
+              variant={typeVariant}
+              color={typeColor}
+              textAlign="left"
+            >
+              {content}
+            </Typography>
+          </Stack>
+        </GridItemTemp>
 
         {icon ? (
-          <Grid
-            columnItem={gridItemIconArgs.columnItem}
-            rowItem={gridItemIconArgs.rowItem}
-            textAlign={gridItemIconArgs.textAlign}
-          >
-            <Typography variant="footnote" color={typeColor}>
-              {space ? null : <>&nbsp;</>}
+          <GridItemTemp xs={1}>
+            <Typography variant="footnote" color={typeColor} textAlign="right">
               {icon}
             </Typography>
-          </Grid>
+          </GridItemTemp>
         ) : null}
-      </Grid>
+      </GridTemp>
     </button>
   );
 };
