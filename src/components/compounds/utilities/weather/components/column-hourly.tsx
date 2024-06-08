@@ -7,7 +7,7 @@ import {
 } from '../../../../../utils';
 import { Flex, Grid, Spacing, Typography } from '../../../../bash-blocks';
 import { Hourly } from '../types/hourly';
-import { Icon } from './icon';
+import { ConditionIcon } from './condition-icon';
 import { Temperature } from './temperature';
 
 // Sort order of props
@@ -61,7 +61,7 @@ export const ColumnHourly: FC<ColumnHourlyProps> = ({
           {hour}
         </Typography>
         <Typography variant="h1" paragraphMargins>
-          <Icon icon={icon} />
+          <ConditionIcon variant={icon} />
         </Typography>
         <Typography variant="body">{precipitation}</Typography>
       </Spacing>
@@ -71,7 +71,7 @@ export const ColumnHourly: FC<ColumnHourlyProps> = ({
             <Temperature temp={temp} />
           </Grid>
           <Grid columnItem={[1, 2]}>
-            <Temperature temp={tempFl} suffix="(FL)" />
+            <Temperature temp={tempFl} />
           </Grid>
         </Grid>
       </Spacing>

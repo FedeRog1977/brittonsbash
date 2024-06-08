@@ -6,10 +6,13 @@ import {
   toSpeed,
   toSentenceCase,
 } from '../../../../../utils';
-import { Flex, Grid, Spacing, Typography } from '../../../../bash-blocks';
+import { Stack, Typography } from '../../../../bash-blocks';
 import { Daily } from '../types/daily';
-import { Icon as IconComponent } from './icon';
+import { ConditionIcon } from './condition-icon';
 import { Temperature } from './temperature';
+import { FlexTemp } from '../../../../bash-blocks/basics/flex-temp/flex';
+import { FlexItemTemp } from '../../../../bash-blocks/basics/flex-temp/flex-item';
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 // Sort order of props
 type DailyPartial = Omit<
@@ -49,91 +52,58 @@ export const ColumnDaily: FC<ColumnDailyProps> = ({
   const speed = toSpeed(windSpeed, true);
 
   return (
-    <>
-      <Spacing pY={20} textAlign="center">
+    <Stack direction="vertical" spacing="lg">
+      <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
         <Typography variant="h4">{weekday}</Typography>
-        <Typography variant="body" paragraphMargins>
-          {dayOfMonth}
+        <Typography variant="body">{dayOfMonth}</Typography>
+        <ConditionIcon variant={icon} />
+        <Typography variant="body">
+          {`${precipitation} ${toSentenceCase(description)}`}
         </Typography>
-        <Typography variant="h1" paragraphMargins>
-          <IconComponent icon={icon} />
-        </Typography>
-        <Typography variant="body">{precipitation}</Typography>
-        <Typography variant="body" paragraphMargins>
-          {toSentenceCase(description)}
-        </Typography>
-        <Grid alignColumns="auto">
-          <Grid columnItem={[1, 2]}>
-            <Typography variant="body" boldFace>
-              Sunrise:
-            </Typography>
-            <Typography variant="body">{sunrise}</Typography>
-          </Grid>
-          <Grid columnItem={[2, 2]}>
-            <Typography variant="body" boldFace>
-              Sunset:
-            </Typography>
-            <Typography variant="body">{sunset}</Typography>
-          </Grid>
-        </Grid>
-      </Spacing>
-      <Spacing pY={20}>
-        <Grid alignColumns="auto">
-          <Grid columnItem={[1, 3]}>
-            <Temperature temp={day} />
-          </Grid>
-          <Grid columnItem={[2, 3]}>
-            <Temperature temp={max} suffix="(H)" />
-          </Grid>
-          <Grid columnItem={[3, 3]}>
-            <Temperature temp={min} suffix="(L)" />
-          </Grid>
-        </Grid>
-      </Spacing>
-      <Spacing pY={20} textAlign="center">
-        <Typography variant="body">{bearingCompass}</Typography>
-        <Typography variant="body">{bearingArrow}</Typography>
-        <Typography variant="footnote">{bearing}</Typography>
+      </Stack>
+
+      <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
         <Typography variant="footnote" boldFace>
-          {speed}
+          {`Sunrise:\n${sunrise}`}
         </Typography>
-      </Spacing>
-      <Spacing pY={20} textAlign="center">
-        <Flex>
-          <Flex item>
-            <Spacing textAlign="center" mR={2.5}>
-              <Typography variant="footnote" textAlign="right" boldFace>
-                Pressure:
-              </Typography>
-              <Typography variant="footnote" textAlign="right" boldFace>
-                Humidity:
-              </Typography>
-              <Typography variant="footnote" textAlign="right" boldFace>
-                Dew Pt.:
-              </Typography>
-              <Typography variant="footnote" textAlign="right" boldFace>
-                UV Index:
-              </Typography>
-            </Spacing>
-          </Flex>
-          <Flex item>
-            <Spacing textAlign="center" mL={2.5}>
-              <Typography variant="footnote" textAlign="left">
-                {pressure + 'mb'}
-              </Typography>
-              <Typography variant="footnote" textAlign="left">
-                {humidity + '%'}
-              </Typography>
-              <Typography variant="footnote" textAlign="left">
-                {dp}
-              </Typography>
-              <Typography variant="footnote" textAlign="left">
-                {uvi}
-              </Typography>
-            </Spacing>
-          </Flex>
-        </Flex>
-      </Spacing>
-    </>
+        <Typography variant="footnote" boldFace>
+          {`Sunset:\n${sunset}`}
+        </Typography>
+      </Stack>
+
+      <FlexTemp direction="horizontal" gap="2xs">
+        <FlexItemTemp grow>
+          <Temperature temp={day} />
+        </FlexItemTemp>
+        <FlexItemTemp grow>
+          <Temperature temp={max} />
+        </FlexItemTemp>
+        <FlexItemTemp grow>
+          <Temperature temp={min} />
+        </FlexItemTemp>
+      </FlexTemp>
+
+      <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
+        <Typography variant="body">{bearingCompass}</Typography>
+        {bearingArrow}
+        <Typography variant="footnote">{bearing}</Typography>
+        <Typography variant="footnote">{speed}</Typography>
+      </Stack>
+
+      <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
+        <Typography variant="footnote" boldFace>
+          {`Pressure: ${pressure + 'mb'}`}
+        </Typography>
+        <Typography variant="footnote" boldFace>
+          {`Humidity: ${humidity + '%'}`}
+        </Typography>
+        <Typography variant="footnote" boldFace>
+          {`Dew Pt.: ${dp}`}
+        </Typography>
+        <Typography variant="footnote" boldFace>
+          {`UV Index: ${uvi}`}
+        </Typography>
+      </Stack>
+    </Stack>
   );
 };

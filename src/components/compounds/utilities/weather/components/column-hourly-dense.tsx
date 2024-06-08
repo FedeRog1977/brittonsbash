@@ -7,7 +7,7 @@ import {
 } from '../../../../../utils';
 import { Spacing, Typography } from '../../../../bash-blocks';
 import { Hourly } from '../types/hourly';
-import { Icon } from './icon';
+import { ConditionIcon } from './condition-icon';
 import { Temperature } from './temperature';
 
 // Sort order of props
@@ -57,7 +57,7 @@ export const ColumnHourlyDense: FC<ColumnHourlyDenseProps> = ({
           {hour}
         </Typography>
         <Typography variant="h1">
-          <Icon icon={icon} />
+          <ConditionIcon variant={icon} />
         </Typography>
         <Spacing pY={20} textAlign="center">
           <Temperature temp={temp} />

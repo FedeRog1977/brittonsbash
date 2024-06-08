@@ -45,8 +45,13 @@ export const toBearing = (bearing: number) => {
   const angle = -45 + 180 + bearing;
 
   const bearingArrow = (
-    <div style={{ transform: `rotate(${angle}deg)` }}>
-      <FontAwesomeIcon icon={faLocationArrow} />
+    <div
+      style={{
+        transform: `rotate(${angle}deg)`,
+        maxWidth: '16px',
+      }}
+    >
+      <FontAwesomeIcon icon={faLocationArrow} color="white" />
     </div>
   );
 

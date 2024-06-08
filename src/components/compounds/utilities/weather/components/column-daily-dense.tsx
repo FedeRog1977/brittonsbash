@@ -7,7 +7,7 @@ import {
 } from '../../../../../utils';
 import { Spacing, Typography } from '../../../../bash-blocks';
 import { Daily } from '../types/daily';
-import { Icon } from './icon';
+import { ConditionIcon } from './condition-icon';
 import { Temperature } from './temperature';
 
 // Sort order of props
@@ -56,7 +56,7 @@ export const ColumnDailyDense: FC<ColumnDailyDenseProps> = ({
           {dayOfMonthPartial}
         </Typography>
         <Typography variant="h1">
-          <Icon icon={icon} />
+          <ConditionIcon variant={icon} />
         </Typography>
         <Spacing pY={20} textAlign="center">
           <Temperature temp={day} />

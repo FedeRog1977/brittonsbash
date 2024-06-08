@@ -20,7 +20,7 @@ export const Hourly = ({ latIn, lonIn }: any) => {
           {isMobile ? (
             // Good example of Hidden component
             <ColumnHourlyDense
-              // Sort order of props
+              // TODO: sort order of props
               dt={value.dt}
               weather={value.weather}
               temp={value.temp}
@@ -31,7 +31,7 @@ export const Hourly = ({ latIn, lonIn }: any) => {
             />
           ) : (
             <ColumnHourly
-              // Sort order of props
+              // TODO: sort order of props
               dt={value.dt}
               weather={value.weather}
               temp={value.temp}

@@ -1,18 +1,16 @@
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FC } from 'react';
-import { toTemperature, useScreenWidth } from '../../../../../utils';
-import { Color, Spacing, Typography } from '../../../../bash-blocks';
-import { Icon } from '../types/icon';
+import { toTemperature } from '../../../../../utils';
+import { Color, Typography } from '../../../../bash-blocks';
+import { SpacingTemp } from '../../../../bash-blocks/basics/spacing-temp';
 
 type TemperatureProps = {
   temp: number;
-  suffix?: string;
-} & Icon;
+  icon?: IconDefinition;
+};
 
-export const Temperature: FC<TemperatureProps> = ({ temp, suffix, icon }) => {
-  const { isMobile } = useScreenWidth();
-
+export const Temperature: FC<TemperatureProps> = ({ temp, icon }) => {
   let backgroundColor = undefined;
   let fontColor: Color = undefined;
 
@@ -35,24 +33,18 @@ export const Temperature: FC<TemperatureProps> = ({ temp, suffix, icon }) => {
 
   return (
     <div style={{ background: backgroundColor }}>
-      <Spacing pY={isMobile ? 5 : 10} textAlign="center">
-        <Typography variant="footnote" color={fontColor}>
+      <SpacingTemp padding="2xs">
+        <Typography variant="footnote" textAlign="center" color={fontColor}>
           {toTemperature(temp)}
         </Typography>
-
-        {suffix ? (
-          <Typography variant="footnote" color={fontColor}>
-            <>&nbsp;{suffix}</>
-          </Typography>
-        ) : null}
 
         {icon ? (
           <>
             &nbsp;
-            <FontAwesomeIcon icon={icon as IconProp} size="2xs" />
+            <FontAwesomeIcon icon={icon} size="2xs" />
           </>
         ) : null}
-      </Spacing>
+      </SpacingTemp>
     </div>
   );
 };

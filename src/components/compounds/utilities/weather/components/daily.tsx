@@ -1,4 +1,4 @@
-import { Button, Grid, Spacing } from '../../../../bash-blocks';
+import { Button, Grid, Spacing, Stack } from '../../../../bash-blocks';
 import {
   useShowElement,
   useScreenWidth,
@@ -10,24 +10,19 @@ import { ColumnDailyDense } from './column-daily-dense';
 import { useOpenWeatherCall } from '../api/open-weather';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FlexTemp } from '../../../../bash-blocks/basics/flex-temp/flex';
+import { FlexItemTemp } from '../../../../bash-blocks/basics/flex-temp/flex-item';
 
 export const WeatherDaily = ({ latIn, lonIn }: any) => {
   const { isMobile } = useScreenWidth();
   const { showElement, setShowElement } = useShowElement();
   const { dailyResult } = useOpenWeatherCall(latIn, lonIn);
 
-  const handleGridColumns = isMobile
-    ? '1fr 1fr 1fr 1fr 1fr'
-    : '1fr 1fr 1fr 1fr 1fr 1fr 1fr';
-
   return (
-    <>
-      <Grid alignColumns={handleGridColumns} columnGap={10}>
-        {dailyResult.slice(0, isMobile ? 5 : 7).map((value, index) => (
-          <Grid
-            key={generateUniqueKey(index)}
-            columnItem={[index + 1, isMobile ? 5 : 7]}
-          >
+    <Stack direction="vertical" spacing="xl">
+      <FlexTemp direction="horizontal" alignHorizontal="apart" gap="md">
+        {dailyResult.slice(0, 5).map((value, index) => (
+          <FlexItemTemp key={generateUniqueKey(index)} basis={2} grow>
             {isMobile ? (
               // Good example of Hidden component
               <ColumnDailyDense
@@ -54,28 +49,28 @@ export const WeatherDaily = ({ latIn, lonIn }: any) => {
                 uvi={value.uvi}
               />
             )}
-          </Grid>
+          </FlexItemTemp>
         ))}
-      </Grid>
-      <Spacing mT={isMobile ? 7.5 : 15} mB={isMobile ? 7.5 : 15}>
-        <Button
-          variant="clear"
-          typeColor={showElement ? 'lightBlue' : undefined}
-          content={showElement ? 'Hide hourly forecast' : 'See hourly forecast'}
-          icon={
-            showElement ? (
-              <FontAwesomeIcon icon={faChevronUp} />
-            ) : (
-              <FontAwesomeIcon icon={faChevronDown} />
-            )
-          }
-          func={() => setShowElement(!showElement)}
-          space
-          width="full"
-          transition
-        />
-      </Spacing>
+      </FlexTemp>
+
+      <Button
+        variant="clear"
+        typeColor={showElement ? 'lightBlue' : undefined}
+        content={showElement ? 'Hide hourly forecast' : 'See hourly forecast'}
+        icon={
+          showElement ? (
+            <FontAwesomeIcon icon={faChevronUp} />
+          ) : (
+            <FontAwesomeIcon icon={faChevronDown} />
+          )
+        }
+        func={() => setShowElement(!showElement)}
+        space
+        width="full"
+        transition
+      />
+
       {showElement ? <Hourly latIn={latIn} lonIn={lonIn} /> : null}
-    </>
+    </Stack>
   );
 };

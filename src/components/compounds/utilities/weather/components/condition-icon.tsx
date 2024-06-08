@@ -11,108 +11,112 @@ import {
   faSnowflake,
   faSmog,
   faCloudMoonRain,
+  IconDefinition,
 } from '@fortawesome/free-solid-svg-icons';
-import { Icon as IconProps } from '../types/icon';
 import { FC } from 'react';
 
-export const Icon: FC<IconProps> = ({ icon }) => {
-  if (icon === '01d') {
+export type ConditionIconProps = {
+  variant?: IconDefinition | string;
+};
+
+export const ConditionIcon: FC<ConditionIconProps> = ({ variant }) => {
+  if (variant === '01d') {
     return (
       <div style={{ color: `rgba(238, 40, 0, 0.6)` }}>
-        <FontAwesomeIcon icon={faSun} fade />
+        <FontAwesomeIcon icon={faSun} fade size="3x" />
       </div>
     );
-  } else if (icon === '01n') {
+  } else if (variant === '01n') {
     return (
       <div style={{ color: `rgba(25, 25, 112, 0.6)` }}>
-        <FontAwesomeIcon icon={faMoon} />
+        <FontAwesomeIcon icon={faMoon} size="3x" />
       </div>
     );
-  } else if (icon === '02d') {
+  } else if (variant === '02d') {
     return (
       <div style={{ color: `rgba(238, 40, 0, 0.6)` }}>
-        <FontAwesomeIcon icon={faCloudSun} />
+        <FontAwesomeIcon icon={faCloudSun} size="3x" />
       </div>
     );
-  } else if (icon === '02n') {
+  } else if (variant === '02n') {
     return (
       <div style={{ color: `rgba(25, 25, 112, 0.6)` }}>
-        <FontAwesomeIcon icon={faCloudMoon} />
+        <FontAwesomeIcon icon={faCloudMoon} size="3x" />
       </div>
     );
-  } else if (icon === '03d' || icon === '04d') {
+  } else if (variant === '03d' || variant === '04d') {
     return (
       <div style={{ color: `rgba(128, 128, 128, 0.6)` }}>
-        <FontAwesomeIcon icon={faCloud} />
+        <FontAwesomeIcon icon={faCloud} size="3x" />
       </div>
     );
-  } else if (icon === '03n' || icon === '04n') {
+  } else if (variant === '03n' || variant === '04n') {
     return (
       <div style={{ color: `rgba(25, 25, 112, 0.6)` }}>
-        <FontAwesomeIcon icon={faCloud} />
+        <FontAwesomeIcon icon={faCloud} size="3x" />
       </div>
     );
-  } else if (icon === '09d') {
+  } else if (variant === '09d') {
     return (
       <div style={{ color: `rgba(128, 128, 128, 0.6)` }}>
-        <FontAwesomeIcon icon={faCloudSunRain} />
+        <FontAwesomeIcon icon={faCloudSunRain} size="3x" />
       </div>
     );
-  } else if (icon === '09n') {
+  } else if (variant === '09n') {
     return (
       <div style={{ color: `rgba(25, 25, 112, 0.6)` }}>
-        <FontAwesomeIcon icon={faCloudMoonRain} />
+        <FontAwesomeIcon icon={faCloudMoonRain} size="3x" />
       </div>
     );
-  } else if (icon === '10d') {
+  } else if (variant === '10d') {
     return (
       <div style={{ color: `rgba(128, 128, 128, 0.6)` }}>
-        <FontAwesomeIcon icon={faCloudRain} />
+        <FontAwesomeIcon icon={faCloudRain} size="3x" />
       </div>
     );
-  } else if (icon === '10n') {
+  } else if (variant === '10n') {
     return (
       <div style={{ color: `rgba(25, 25, 112, 0.6)` }}>
-        <FontAwesomeIcon icon={faCloudRain} />
+        <FontAwesomeIcon icon={faCloudRain} size="3x" />
       </div>
     );
-  } else if (icon === '11d') {
+  } else if (variant === '11d') {
     return (
       <div style={{ color: `rgba(128, 128, 128, 0.6)` }}>
-        <FontAwesomeIcon icon={faThunderstorm} />
+        <FontAwesomeIcon icon={faThunderstorm} size="3x" />
       </div>
     );
-  } else if (icon === '11n') {
+  } else if (variant === '11n') {
     return (
       <div style={{ color: `rgba(25, 25, 112, 0.6)` }}>
-        <FontAwesomeIcon icon={faThunderstorm} />
+        <FontAwesomeIcon icon={faThunderstorm} size="3x" />
       </div>
     );
-  } else if (icon === '13d') {
+  } else if (variant === '13d') {
     return (
       <div style={{ color: `rgba(0, 163, 224, 0.6)` }}>
-        <FontAwesomeIcon icon={faSnowflake} />
+        <FontAwesomeIcon icon={faSnowflake} size="3x" />
       </div>
     );
-  } else if (icon === '13n') {
+  } else if (variant === '13n') {
     return (
       <div style={{ color: `rgba(0, 163, 224, 0.6)` }}>
-        <FontAwesomeIcon icon={faSnowflake} />
+        <FontAwesomeIcon icon={faSnowflake} size="3x" />
       </div>
     );
-  } else if (icon === '50d') {
+  } else if (variant === '50d') {
     return (
       <div style={{ color: `rgba(128, 128, 128, 0.6)` }}>
-        <FontAwesomeIcon icon={faSmog} />
+        <FontAwesomeIcon icon={faSmog} size="3x" />
       </div>
     );
-  } else if (icon === '50n') {
+  } else if (variant === '50n') {
     return (
       <div style={{ color: `rgba(25, 25, 112, 0.6)` }}>
-        <FontAwesomeIcon icon={faSmog} />
+        <FontAwesomeIcon icon={faSmog} size="3x" />
       </div>
     );
-  } else {
-    return <></>;
   }
+
+  return null;
 };
