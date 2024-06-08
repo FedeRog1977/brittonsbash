@@ -1,4 +1,4 @@
-@use '../../reference' as reference;
+@use '../../mixins' as mixins;
 
 .flex {
   display: flex;
@@ -97,7 +97,7 @@ $-prefix-to-properties: (
 );
 
 @each $prefix, $properties in $-prefix-to-properties {
-  @include reference.responsive-spacing($prefix) using ($spacing-variable) {
+  @include mixins.responsive-spacing($prefix) using ($spacing-variable) {
     @each $property in $properties {
       #{$property}: $spacing-variable;
     }

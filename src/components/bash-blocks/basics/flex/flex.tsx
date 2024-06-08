@@ -1,15 +1,12 @@
-import { FC, ReactNode } from 'react';
-import styles from './flex.module.scss';
+import { FC } from 'react';
+import { Horizontal } from './types/horizontal';
+import { Vertical } from './types/vertical';
+import { FlexBase } from '../../reference';
 
-export type FlexProps = {
-  children: ReactNode;
-  item?: boolean;
-};
+export type FlexProps = Horizontal | Vertical;
 
-export const Flex: FC<FlexProps> = ({ children, item }) => {
-  if (item) {
-    return <div className={styles.flexCol}>{children}</div>;
-  }
-
-  return <div className={styles.flexRow}>{children}</div>;
-};
+export const Flex: FC<FlexProps> = ({ children, ...props }) => (
+  <FlexBase {...props} wrap>
+    {children}
+  </FlexBase>
+);

@@ -6,13 +6,10 @@ import {
   toSpeed,
   toSentenceCase,
 } from '../../../../../utils';
-import { Stack, Typography } from '../../../../bash-blocks';
+import { Flex, FlexItem, Stack, Typography } from '../../../../bash-blocks';
 import { Daily } from '../types/daily';
 import { ConditionIcon } from './condition-icon';
 import { Temperature } from './temperature';
-import { FlexTemp } from '../../../../bash-blocks/basics/flex-temp/flex';
-import { FlexItemTemp } from '../../../../bash-blocks/basics/flex-temp/flex-item';
-import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 // Sort order of props
 type DailyPartial = Omit<
@@ -71,17 +68,17 @@ export const ColumnDaily: FC<ColumnDailyProps> = ({
         </Typography>
       </Stack>
 
-      <FlexTemp direction="horizontal" gap="2xs">
-        <FlexItemTemp grow>
+      <Flex direction="horizontal" gap="2xs">
+        <FlexItem grow>
           <Temperature temp={day} />
-        </FlexItemTemp>
-        <FlexItemTemp grow>
+        </FlexItem>
+        <FlexItem grow>
           <Temperature temp={max} />
-        </FlexItemTemp>
-        <FlexItemTemp grow>
+        </FlexItem>
+        <FlexItem grow>
           <Temperature temp={min} />
-        </FlexItemTemp>
-      </FlexTemp>
+        </FlexItem>
+      </Flex>
 
       <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
         <Typography variant="body">{bearingCompass}</Typography>
@@ -91,18 +88,14 @@ export const ColumnDaily: FC<ColumnDailyProps> = ({
       </Stack>
 
       <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
-        <Typography variant="footnote" boldFace>
+        <Typography variant="footnote">
           {`Pressure: ${pressure + 'mb'}`}
         </Typography>
-        <Typography variant="footnote" boldFace>
+        <Typography variant="footnote">
           {`Humidity: ${humidity + '%'}`}
         </Typography>
-        <Typography variant="footnote" boldFace>
-          {`Dew Pt.: ${dp}`}
-        </Typography>
-        <Typography variant="footnote" boldFace>
-          {`UV Index: ${uvi}`}
-        </Typography>
+        <Typography variant="footnote">{`Dew Pt.: ${dp}`}</Typography>
+        <Typography variant="footnote">{`UV Index: ${uvi}`}</Typography>
       </Stack>
     </Stack>
   );

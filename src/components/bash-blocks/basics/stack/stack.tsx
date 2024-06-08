@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { FlexBase } from '../flex-base';
 import { Horizontal } from './types/horizontal';
 import { Vertical } from './types/vertical';
+import { FlexBase } from '../../reference';
 
 type Stack = Horizontal | Vertical;
 export type StackProps = Stack & { wrap?: boolean };

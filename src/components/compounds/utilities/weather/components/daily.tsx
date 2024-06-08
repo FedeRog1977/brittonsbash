@@ -1,4 +1,4 @@
-import { Button, Grid, Spacing, Stack } from '../../../../bash-blocks';
+import { Button, Flex, FlexItem, Stack } from '../../../../bash-blocks';
 import {
   useShowElement,
   useScreenWidth,
@@ -10,8 +10,6 @@ import { ColumnDailyDense } from './column-daily-dense';
 import { useOpenWeatherCall } from '../api/open-weather';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FlexTemp } from '../../../../bash-blocks/basics/flex-temp/flex';
-import { FlexItemTemp } from '../../../../bash-blocks/basics/flex-temp/flex-item';
 
 export const WeatherDaily = ({ latIn, lonIn }: any) => {
   const { isMobile } = useScreenWidth();
@@ -20,11 +18,11 @@ export const WeatherDaily = ({ latIn, lonIn }: any) => {
 
   return (
     <Stack direction="vertical" spacing="xl">
-      <FlexTemp direction="horizontal" alignHorizontal="apart" gap="md">
+      <Flex direction="horizontal" alignHorizontal="apart" gap="md">
         {dailyResult.slice(0, 5).map((value, index) => (
-          <FlexItemTemp key={generateUniqueKey(index)} basis={2} grow>
+          <FlexItem key={generateUniqueKey(index)} basis={2} grow>
             {isMobile ? (
-              // Good example of Hidden component
+              // TODO: good example of Hidden component
               <ColumnDailyDense
                 dt={value.dt}
                 weather={value.weather}
@@ -49,9 +47,9 @@ export const WeatherDaily = ({ latIn, lonIn }: any) => {
                 uvi={value.uvi}
               />
             )}
-          </FlexItemTemp>
+          </FlexItem>
         ))}
-      </FlexTemp>
+      </Flex>
 
       <Button
         variant="clear"

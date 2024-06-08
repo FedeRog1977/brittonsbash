@@ -1,9 +1,9 @@
 import {
-  AlignCrossAxis,
   AlignHorizontal,
-  AlignMainAxis,
+  AlignCrossAxis,
   AlignVertical,
-} from '../../../reference';
+  AlignMainAxis,
+} from '../../../types';
 import { Common } from './common';
 
 export type Vertical = Common & {

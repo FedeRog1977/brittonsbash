@@ -13,7 +13,7 @@ export type FlexItemProps = {
 };
 
 // TODO: export from index.ts once old Flex is discontinued
-export const FlexItemTemp: FC<FlexItemProps> = ({ children, basis, grow }) => {
+export const FlexItem: FC<FlexItemProps> = ({ children, basis, grow }) => {
   const classNames = cx(
     styles.flexItem,
     ...getResponsiveColumnSpanClassNames('basis', styles, basis),

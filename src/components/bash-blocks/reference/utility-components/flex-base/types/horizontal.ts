@@ -3,7 +3,7 @@ import {
   AlignHorizontal,
   AlignMainAxis,
   AlignVertical,
-} from '../../../reference';
+} from '../../../types';
 import { Common } from './common';
 
 export type Horizontal = Common & {

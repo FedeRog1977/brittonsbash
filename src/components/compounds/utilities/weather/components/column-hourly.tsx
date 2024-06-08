@@ -5,7 +5,7 @@ import {
   toBearing,
   toSpeed,
 } from '../../../../../utils';
-import { Flex, Grid, Spacing, Typography } from '../../../../bash-blocks';
+import { Flex, FlexItem, Stack, Typography } from '../../../../bash-blocks';
 import { Hourly } from '../types/hourly';
 import { ConditionIcon } from './condition-icon';
 import { Temperature } from './temperature';
@@ -55,79 +55,43 @@ export const ColumnHourly: FC<ColumnHourlyProps> = ({
   const gusts = toSpeed(windGust, true);
 
   return (
-    <>
-      <Spacing pY={20} textAlign="center">
-        <Typography variant="h4" paragraphMargins>
-          {hour}
-        </Typography>
-        <Typography variant="h1" paragraphMargins>
-          <ConditionIcon variant={icon} />
-        </Typography>
+    <Stack direction="vertical" spacing="lg">
+      <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
+        <Typography variant="h4">{hour}</Typography>
+        <ConditionIcon variant={icon} />
         <Typography variant="body">{precipitation}</Typography>
-      </Spacing>
-      <Spacing pY={20}>
-        <Grid alignColumns="auto">
-          <Grid columnItem={[1, 2]}>
-            <Temperature temp={temp} />
-          </Grid>
-          <Grid columnItem={[1, 2]}>
-            <Temperature temp={tempFl} />
-          </Grid>
-        </Grid>
-      </Spacing>
-      <Spacing pY={20} textAlign="center">
+      </Stack>
+
+      <Flex direction="horizontal" gap="2xs">
+        <FlexItem grow>
+          <Temperature temp={temp} />
+        </FlexItem>
+        <FlexItem grow>
+          <Temperature temp={tempFl} />
+        </FlexItem>
+      </Flex>
+
+      <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
         <Typography variant="body">{bearingCompass}</Typography>
-        <Typography variant="body">{bearingArrow}</Typography>
+        {bearingArrow}
         <Typography variant="footnote">{bearing}</Typography>
-        <Typography variant="footnote" boldFace>
-          {speed}
+        <Typography variant="footnote">{speed}</Typography>
+        <Typography variant="footnote">{gusts + ' gusts'}</Typography>
+      </Stack>
+
+      <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
+        <Typography variant="footnote">
+          {`Pressure: ${pressure + 'mb'}`}
         </Typography>
-        <Typography variant="footnote" boldFace>
-          {gusts + ' gusts'}
+        <Typography variant="footnote">
+          {`Humidity: ${humidity + '%'}`}
         </Typography>
-      </Spacing>
-      <Spacing pY={20} textAlign="center">
-        <Flex>
-          <Flex item>
-            <Spacing textAlign="center" mR={2.5}>
-              <Typography variant="footnote" textAlign="right" boldFace>
-                Pressure:
-              </Typography>
-              <Typography variant="footnote" textAlign="right" boldFace>
-                Humidity:
-              </Typography>
-              <Typography variant="footnote" textAlign="right" boldFace>
-                Dew Pt.:
-              </Typography>
-              <Typography variant="footnote" textAlign="right" boldFace>
-                Visibility:
-              </Typography>
-              <Typography variant="footnote" textAlign="right" boldFace>
-                UV Index:
-              </Typography>
-            </Spacing>
-          </Flex>
-          <Flex item>
-            <Spacing textAlign="center" mL={2.5}>
-              <Typography variant="footnote" textAlign="left">
-                {pressure + 'mb'}
-              </Typography>
-              <Typography variant="footnote" textAlign="left">
-                {humidity + '%'}
-              </Typography>
-              <Typography variant="footnote" textAlign="left">
-                {dp}
-              </Typography>
-              <Typography variant="footnote" textAlign="left">
-                {visibility / 100 + '%'}
-              </Typography>
-              <Typography variant="footnote" textAlign="left">
-                {uvi}
-              </Typography>
-            </Spacing>
-          </Flex>
-        </Flex>
-      </Spacing>
-    </>
+        <Typography variant="footnote">{`Dew Pt.: ${dp}`}</Typography>
+        <Typography variant="footnote">
+          {`Visibility: ${visibility / 100 + '%'}`}
+        </Typography>
+        <Typography variant="footnote">{`UV Index: ${uvi}`}</Typography>
+      </Stack>
+    </Stack>
   );
 };

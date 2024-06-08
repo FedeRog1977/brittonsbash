@@ -3,8 +3,8 @@ import { FC } from 'react';
 import styles from './flex-base.module.scss';
 import { Horizontal } from './types/horizontal.js';
 import { Vertical } from './types/vertical.js';
-import { toUpperCase } from '../../../../utils';
-import { getResponsiveSpacingClassNames } from '../../reference';
+import { toUpperCase } from '../../../../../utils';
+import { getResponsiveSpacingClassNames } from '../../utils';
 
 type FlexBase = Horizontal | Vertical;
 export type FlexBaseProps = FlexBase & { wrap?: boolean };

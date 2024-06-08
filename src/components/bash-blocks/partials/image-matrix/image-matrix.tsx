@@ -1,16 +1,10 @@
-import {
-  formatItems,
-  generateUniqueKey,
-  useShowElement,
-} from '../../../../utils';
+import { generateUniqueKey, useShowElement } from '../../../../utils';
 import styles from './image-matrix.module.scss';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { Image, Spacing, Typography } from '../../basics';
+import { Flex, FlexItem, Image, Typography } from '../../basics';
 import { ColumnSpan, Img } from '../../reference';
 import { Modal } from '../../blocks';
 import { FC, useState } from 'react';
-import { FlexTemp } from '../../basics/flex-temp/flex';
-import { FlexItemTemp } from '../../basics/flex-temp/flex-item';
 import { SpacingTemp } from '../../basics/spacing-temp';
 
 export type ImageMatrixProps = {
@@ -28,14 +22,14 @@ export const ImageMatrix: FC<ImageMatrixProps> = ({ items, columns }) => {
 
   return (
     <>
-      <FlexTemp
+      <Flex
         direction="horizontal"
         alignHorizontal="center"
         alignVertical="center"
         gap="xs"
       >
         {items.map(({ url, alt, description }, index) => (
-          <FlexItemTemp
+          <FlexItem
             key={generateUniqueKey(index)}
             basis={{ xs: 12, lg: basis }}
           >
@@ -55,9 +49,9 @@ export const ImageMatrix: FC<ImageMatrixProps> = ({ items, columns }) => {
                 </Typography>
               </SpacingTemp>
             ) : null}
-          </FlexItemTemp>
+          </FlexItem>
         ))}
-      </FlexTemp>
+      </Flex>
 
       <Modal isOpen={showModal} onClose={() => setShowModal(!showModal)}>
         <Image {...(image as Img)} />
