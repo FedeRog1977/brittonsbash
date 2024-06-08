@@ -14,6 +14,7 @@ export const Footer: FC = () => (
           alignItems="center"
         >
           <Grid columnItem={[1, 2]}>
+            {/* TODO: make image component */}
             <img
               src="https://lewisbritton.com/images/logo/bash-logo.png"
               alt="logo"
@@ -37,6 +38,7 @@ export const Footer: FC = () => (
           alignItems="center"
         >
           <Grid columnItem={[1, 2]}>
+            {/* TODO: make image component */}
             <img
               src="https://lewisbritton.com/images/monero/xmr.svg"
               alt="xmr"
@@ -50,16 +52,17 @@ export const Footer: FC = () => (
           </Grid>
         </Grid>
 
-        <Typography variant="footnote" color="lightGrey">
-          <code>
+        <Typography variant="footnote" element="code" color="lightGrey">
+          <>
             4ALBFTLBcv68zhmy8vvdTdjLZ2bisn5RPcM8KF6hDWGhj7
             <br />
             f37dfqwzGCqq1Vug13vmBkxoQARfNnrbNEcqsj
             <br />
             ZMTJSSkB46V
-          </code>
+          </>
         </Typography>
 
+        {/* TODO: make image component */}
         <img
           src="https://lewisbritton.com/images/monero/xmr-code.png"
           alt="xmr-code"
