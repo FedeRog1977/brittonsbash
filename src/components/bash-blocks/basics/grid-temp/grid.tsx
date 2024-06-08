@@ -16,7 +16,7 @@ export type GridProps = {
   alignVertical?: AlignConfig;
 };
 
-const defaultSpacing: SpacingConfig = { xs: 'sm', lg: 'md' };
+const defaultSpacing: SpacingConfig = { xs: 'sm' };
 
 // TODO: export from index.ts once old Grid is discontinued
 export const GridTemp: FC<GridProps> = ({

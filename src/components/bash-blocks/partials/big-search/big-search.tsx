@@ -6,9 +6,11 @@ import {
   getGridAlign,
   useScreenWidth,
 } from '../../../../utils';
-import { Grid, Search, SearchList, Spacing } from '../../basics';
+import { Grid, Search, SearchList, Spacing, Stack } from '../../basics';
 import { Button } from '../button';
 import { SearchProps } from '../../basics';
+import { GridTemp } from '../../basics/grid-temp/grid';
+import { GridItemTemp } from '../../basics/grid-temp/grid-item';
 
 export type BigSearchProps = {
   funcInput: SearchProps['func'];
@@ -31,36 +33,40 @@ export const BigSearch: FC<BigSearchProps> = ({
   const handleAlign = getGridAlign(selects ?? []);
 
   return (
-    <Spacing gapsY={30}>
-      <Grid alignColumns="3fr 1fr" alignItems="center" columnGap={15}>
-        <Grid columnItem={[1, 2]}>
+    <Stack direction="vertical" spacing="md">
+      <GridTemp
+        alignHorizontal="center"
+        alignVertical="center"
+        spacing={{ xs: 'xs', lg: 'md' }}
+      >
+        <GridItemTemp xs={isMobile ? 8 : 6}>
           <Search func={funcInput} placeholder={placeholder ?? undefined} />
-        </Grid>
+        </GridItemTemp>
 
-        <Grid columnItem={[2, 2]}>
+        <GridItemTemp xs={2}>
           <Button
             content={isMobile ? <FontAwesomeIcon icon={faSearch} /> : 'Search'}
             func={funcButton}
             width="full"
             padding={isMobile ? 'default' : 'coarse'}
           />
-        </Grid>
-      </Grid>
+        </GridItemTemp>
+      </GridTemp>
 
       {selects ? (
-        <Grid alignColumns={handleAlign} columnGap={15}>
+        <GridTemp alignHorizontal="center" alignVertical="center" spacing="xs">
           {selects.map(({ funcSelect, content, placeholder }, index) => (
-            <Grid columnItem={[index + 1, selects.length + 1]}>
+            <GridItemTemp key={generateUniqueKey(index)} xs={3}>
               <SearchList
                 key={generateUniqueKey(index)}
                 func={() => funcSelect}
                 content={content}
                 placeholder={placeholder ?? ''}
               />
-            </Grid>
+            </GridItemTemp>
           ))}
-        </Grid>
+        </GridTemp>
       ) : null}
-    </Spacing>
+    </Stack>
   );
 };

@@ -1,7 +1,9 @@
 import { FC } from 'react';
-import { useScreenWidth } from '../../../../utils';
-import { Grid, Spacing, Tile, Typography } from '../../basics';
+import { generateUniqueKey, useScreenWidth } from '../../../../utils';
+import { Stack, Tile, Typography } from '../../basics';
 import { Items } from './types/items';
+import { GridTemp } from '../../basics/grid-temp/grid';
+import { GridItemTemp } from '../../basics/grid-temp/grid-item';
 
 export type TitleTileProps = {
   heading?: string;
@@ -13,72 +15,56 @@ export const TitleTile: FC<TitleTileProps> = ({
   heading,
   titleItems,
   bodyItems,
-}) => {
-  const { isMobile } = useScreenWidth();
-
-  return (
-    <Tile type="clear" dense>
+}) => (
+  <Tile type="clear" dense>
+    <Stack direction="vertical" spacing="xs">
       {heading ? (
         <Typography variant="h3" textAlign="center">
           {heading}
         </Typography>
       ) : null}
 
-      {titleItems ? (
-        <Spacing mT={heading ? 10 : 0}>
-          <Grid alignColumns="auto auto" columnGap={10} rowGap={10}>
-            {titleItems?.map(({ content, subContent }, index) => (
-              <>
-                <Grid
-                  columnItem={[1, 2]}
-                  rowItem={[index + 1, titleItems.length + 1]}
-                  textAlign="right"
-                >
-                  <Typography variant={isMobile ? 'h4' : 'h3'} boldFace>
-                    {content}
-                  </Typography>
-                </Grid>
-                <Grid
-                  columnItem={[2, 2]}
-                  rowItem={[index + 1, titleItems.length + 1]}
-                  textAlign="left"
-                >
-                  <Typography variant={isMobile ? 'h4' : 'h3'} markdown>
-                    {subContent}
-                  </Typography>
-                </Grid>
-              </>
-            ))}
-          </Grid>
-        </Spacing>
-      ) : null}
+      {titleItems
+        ? titleItems.map(({ content, subContent }, index) => (
+            <GridTemp
+              key={generateUniqueKey(index)}
+              alignHorizontal="center"
+              spacing="xs"
+            >
+              <GridItemTemp xs={5}>
+                <Typography variant="h3" boldFace textAlign="right">
+                  {content}
+                </Typography>
+              </GridItemTemp>
+              <GridItemTemp xs={5}>
+                <Typography variant="h3" markdown>
+                  {subContent}
+                </Typography>
+              </GridItemTemp>
+            </GridTemp>
+          ))
+        : null}
 
-      {bodyItems ? (
-        <Spacing mT={heading || titleItems ? 10 : 0}>
-          <Grid alignColumns="auto auto" columnGap={10} rowGap={10}>
-            {bodyItems?.map(({ content, subContent }, index) => (
-              <>
-                <Grid
-                  columnItem={[1, 2]}
-                  rowItem={[index + 1, bodyItems.length + 1]}
-                  textAlign="right"
-                >
-                  <Typography variant="body">{content}</Typography>
-                </Grid>
-                <Grid
-                  columnItem={[2, 2]}
-                  rowItem={[index + 1, bodyItems.length + 1]}
-                  textAlign="left"
-                >
-                  <Typography variant="body" markdown>
-                    {subContent}
-                  </Typography>
-                </Grid>
-              </>
-            ))}
-          </Grid>
-        </Spacing>
-      ) : null}
-    </Tile>
-  );
-};
+      {bodyItems
+        ? bodyItems.map(({ content, subContent }, index) => (
+            <GridTemp
+              key={generateUniqueKey(index)}
+              alignHorizontal="center"
+              spacing="xs"
+            >
+              <GridItemTemp xs={5}>
+                <Typography variant="body" boldFace textAlign="right">
+                  {content}
+                </Typography>
+              </GridItemTemp>
+              <GridItemTemp xs={5}>
+                <Typography variant="body" markdown>
+                  {subContent}
+                </Typography>
+              </GridItemTemp>
+            </GridTemp>
+          ))
+        : null}
+    </Stack>
+  </Tile>
+);
