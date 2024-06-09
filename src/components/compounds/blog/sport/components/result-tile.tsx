@@ -6,7 +6,7 @@ import {
   Stack,
   ColumnTableProps,
 } from '../../../../bash-blocks';
-import { FC, useState } from 'react';
+import { FC } from 'react';
 
 export type ResultTileProps = {
   funcActivities: (e: any) => void;

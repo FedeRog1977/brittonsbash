@@ -23,31 +23,6 @@ export const useSport = () => {
 
   const [sportData, setSportData]: any = useState(compiledRoadies);
 
-  const handleCategory = (e: any) => {
-    if (e.currentTarget.value === 'roadies') {
-      setSportData(compiledRoadies);
-      setIsRoadies(true);
-      setIsProjects(false);
-      setIsMiles(false);
-    } else if (e.currentTarget.value === 'projects') {
-      setSportData(compiledProjects);
-      setIsRoadies(false);
-      setIsProjects(true);
-      setIsMiles(false);
-    } else if (e.currentTarget.value === 'miles') {
-      setSportData(compiledMiles);
-      setIsRoadies(false);
-      setIsProjects(false);
-      setIsMiles(true);
-    } else if (e.currentTarget.value === 'tennis') {
-    } else {
-      setSportData(compiledRoadies);
-      setIsRoadies(true);
-      setIsProjects(false);
-      setIsMiles(false);
-    }
-  };
-
   const title: string = isRoadies
     ? 'Roadies'
     : isProjects
@@ -790,6 +765,55 @@ export const useSport = () => {
   const [is2020, setIs2020] = useState(false);
 
   const [activities, setActivities] = useState(activities2024);
+
+  const handleCategory = (e: any) => {
+    if (e.currentTarget.value === 'roadies') {
+      setSportData(compiledRoadies);
+      setIsRoadies(true);
+      setIsProjects(false);
+      setIsMiles(false);
+      setActivities(activities2024);
+      setIs2024(true);
+      setIs2023(false);
+      setIs2022(false);
+      setIs2021(false);
+      setIs2020(false);
+    } else if (e.currentTarget.value === 'projects') {
+      setSportData(compiledProjects);
+      setIsRoadies(false);
+      setIsProjects(true);
+      setIsMiles(false);
+      setActivities(activities2024);
+      setIs2024(true);
+      setIs2023(false);
+      setIs2022(false);
+      setIs2021(false);
+      setIs2020(false);
+    } else if (e.currentTarget.value === 'miles') {
+      setSportData(compiledMiles);
+      setIsRoadies(false);
+      setIsProjects(false);
+      setIsMiles(true);
+      setActivities(activities2024);
+      setIs2024(true);
+      setIs2023(false);
+      setIs2022(false);
+      setIs2021(false);
+      setIs2020(false);
+    } else if (e.currentTarget.value === 'tennis') {
+    } else {
+      setSportData(compiledRoadies);
+      setIsRoadies(true);
+      setIsProjects(false);
+      setIsMiles(false);
+      setActivities(activities2024);
+      setIs2024(true);
+      setIs2023(false);
+      setIs2022(false);
+      setIs2021(false);
+      setIs2020(false);
+    }
+  };
 
   const handleActivities = (e: any) => {
     if (e.currentTarget.value === '2024') {
