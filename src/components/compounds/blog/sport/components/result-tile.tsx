@@ -6,136 +6,125 @@ import {
   Stack,
   ColumnTableProps,
 } from '../../../../bash-blocks';
-import {
-  CompiledMilesProps,
-  CompiledProjectProps,
-  CompiledRoadieProps,
-  useShowElement,
-} from '../../../../../utils';
 import { FC, useState } from 'react';
 
 export type ResultTileProps = {
+  funcActivities: (e: any) => void;
   title: string;
   subTitle: string;
   description: string;
   summary: ColumnTableProps;
   routes: ColumnTableProps;
-  activities2024: ColumnTableProps;
-  activities2023: ColumnTableProps;
-  activities2022: ColumnTableProps;
-  activities2021: ColumnTableProps;
-  activities2020: ColumnTableProps;
+  activities: ColumnTableProps;
+  is2024: boolean;
+  is2023: boolean;
+  is2022: boolean;
+  is2021: boolean;
+  is2020: boolean;
 };
 
 export const ResultTile: FC<ResultTileProps> = ({
+  funcActivities,
   title,
   subTitle,
   description,
   summary,
   routes,
-  activities2024,
-  activities2023,
-  activities2022,
-  activities2021,
-  activities2020,
-}) => {
-  const [activities, setActivities] = useState(activities2024);
+  activities,
+  is2024,
+  is2023,
+  is2022,
+  is2021,
+  is2020,
+}) => (
+  <Tile type="solid">
+    <Stack direction="vertical" spacing="md">
+      <Typography variant="t1" fontFamily="sport" textAlign="center">
+        {title}
+      </Typography>
 
-  return (
-    <Tile type="solid">
-      <Stack direction="vertical" spacing="md">
-        <Typography variant="t1" fontFamily="sport" textAlign="center">
-          {title}
-        </Typography>
+      <Typography variant="h4" color="mediumGrey" textAlign="center">
+        {subTitle}
+      </Typography>
 
-        <Typography variant="h4" color="mediumGrey" textAlign="center">
-          {subTitle}
-        </Typography>
+      <Typography variant="body" textAlign="left">
+        {description}
+      </Typography>
 
-        <Typography variant="body" textAlign="left">
-          {description}
-        </Typography>
+      <Typography variant="h2" fontFamily="sport">
+        Summary
+      </Typography>
 
-        <Typography variant="h2" fontFamily="sport">
-          Summary
-        </Typography>
+      <ColumnTable
+        leftColumn={summary.leftColumn}
+        rightColumns={summary.rightColumns}
+      />
 
-        <ColumnTable
-          leftColumn={summary.leftColumn}
-          rightColumns={summary.rightColumns}
+      <Typography variant="h2" fontFamily="sport">
+        Routes
+      </Typography>
+
+      <ColumnTable
+        leftColumn={routes.leftColumn}
+        rightColumns={routes.rightColumns}
+      />
+
+      <Stack direction="horizontal" alignHorizontal="apart" wrap>
+        <Button
+          variant="clear"
+          typeVariant="h2"
+          typeColor={is2024 ? 'lightBlue' : undefined}
+          typeFontFamily="sport"
+          value="2024"
+          func={funcActivities}
+          content="2024"
         />
 
-        <Typography variant="h2" fontFamily="sport">
-          Routes
-        </Typography>
-
-        <ColumnTable
-          leftColumn={routes.leftColumn}
-          rightColumns={routes.rightColumns}
+        <Button
+          variant="clear"
+          typeVariant="h2"
+          typeColor={is2023 ? 'lightBlue' : undefined}
+          typeFontFamily="sport"
+          value="2023"
+          func={funcActivities}
+          content="2023"
         />
 
-        <Stack direction="horizontal" alignHorizontal="apart">
-          <Button
-            variant="clear"
-            typeVariant="h2"
-            typeColor={
-              Boolean(activities === activities2024) ? 'lightBlue' : undefined
-            }
-            typeFontFamily="sport"
-            content="2024"
-            func={() => setActivities(activities2024)}
-          />
+        <Button
+          variant="clear"
+          typeVariant="h2"
+          typeColor={is2022 ? 'lightBlue' : undefined}
+          typeFontFamily="sport"
+          value="2022"
+          func={funcActivities}
+          content="2022"
+        />
 
-          <Button
-            variant="clear"
-            typeVariant="h2"
-            typeColor={
-              Boolean(activities === activities2023) ? 'lightBlue' : undefined
-            }
-            typeFontFamily="sport"
-            content="2023"
-            func={() => setActivities(activities2023)}
-          />
+        <Button
+          variant="clear"
+          typeVariant="h2"
+          typeColor={is2021 ? 'lightBlue' : undefined}
+          typeFontFamily="sport"
+          value="2021"
+          func={funcActivities}
+          content="2021"
+        />
 
-          <Button
-            variant="clear"
-            typeVariant="h2"
-            typeColor={
-              Boolean(activities === activities2022) ? 'lightBlue' : undefined
-            }
-            typeFontFamily="sport"
-            content="2022"
-            func={() => setActivities(activities2022)}
-          />
-
-          <Button
-            variant="clear"
-            typeVariant="h2"
-            typeColor={
-              Boolean(activities === activities2021) ? 'lightBlue' : undefined
-            }
-            typeFontFamily="sport"
-            content="2021"
-            func={() => setActivities(activities2021)}
-          />
-
-          <Button
-            variant="clear"
-            typeVariant="h2"
-            typeColor={
-              Boolean(activities === activities2020) ? 'lightBlue' : undefined
-            }
-            typeFontFamily="sport"
-            content="2020"
-            func={() => setActivities(activities2020)}
-          />
-        </Stack>
-
-        <ColumnTable
-          leftColumn={activities.leftColumn}
-          rightColumns={activities.rightColumns}
+        <Button
+          variant="clear"
+          typeVariant="h2"
+          typeColor={is2020 ? 'lightBlue' : undefined}
+          typeFontFamily="sport"
+          value="2020"
+          func={funcActivities}
+          content="2020"
         />
       </Stack>
-    </Tile>
-  );
-};
+
+      <ColumnTable
+        leftColumn={activities.leftColumn}
+        rightColumns={activities.rightColumns}
+      />
+    </Stack>
+  </Tile>
+);

@@ -17,11 +17,36 @@ export const useSport = () => {
   const compiledProjects = compileProjects();
   const compiledMiles = compileMiles();
 
-  const [sportData, setSportData]: any = useState(compiledRoadies);
-
   const [isRoadies, setIsRoadies] = useState(true);
   const [isProjects, setIsProjects] = useState(false);
   const [isMiles, setIsMiles] = useState(false);
+
+  const [sportData, setSportData]: any = useState(compiledRoadies);
+
+  const handleCategory = (e: any) => {
+    if (e.currentTarget.value === 'roadies') {
+      setSportData(compiledRoadies);
+      setIsRoadies(true);
+      setIsProjects(false);
+      setIsMiles(false);
+    } else if (e.currentTarget.value === 'projects') {
+      setSportData(compiledProjects);
+      setIsRoadies(false);
+      setIsProjects(true);
+      setIsMiles(false);
+    } else if (e.currentTarget.value === 'miles') {
+      setSportData(compiledMiles);
+      setIsRoadies(false);
+      setIsProjects(false);
+      setIsMiles(true);
+    } else if (e.currentTarget.value === 'tennis') {
+    } else {
+      setSportData(compiledRoadies);
+      setIsRoadies(true);
+      setIsProjects(false);
+      setIsMiles(false);
+    }
+  };
 
   const title: string = isRoadies
     ? 'Roadies'
@@ -66,23 +91,23 @@ export const useSport = () => {
       {
         title: 'Distance',
         entries: [
-          sportData.distance.total as string,
-          sportData.distance[2024] as string,
-          sportData.distance[2023] as string,
-          sportData.distance[2022] as string,
-          sportData.distance[2021] as string,
-          sportData.distance[2020] as string,
+          `${sportData.distance.total}`,
+          `${sportData.distance[2024]}`,
+          `${sportData.distance[2023]}`,
+          `${sportData.distance[2022]}`,
+          `${sportData.distance[2021]}`,
+          `${sportData.distance[2020]}`,
         ],
       },
       {
         title: 'Elevation',
         entries: [
-          sportData.elevation.total as string,
-          sportData.elevation[2024] as string,
-          sportData.elevation[2023] as string,
-          sportData.elevation[2022] as string,
-          sportData.elevation[2021] as string,
-          sportData.elevation[2020] as string,
+          `${sportData.elevation.total}`,
+          `${sportData.elevation[2024]}`,
+          `${sportData.elevation[2023]}`,
+          `${sportData.elevation[2022]}`,
+          `${sportData.elevation[2021]}`,
+          `${sportData.elevation[2020]}`,
         ],
       },
     ],
@@ -314,11 +339,23 @@ export const useSport = () => {
   };
 
   const activities2024: ColumnTableProps = {
-    leftColumn: {
-      entries: sportData.roadies[2024].map(
-        ({ name }: RoadieProps | ProjectProps | MilesProps) => name
-      ),
-    },
+    leftColumn: isRoadies
+      ? {
+          entries: sportData.roadies[2024].map(
+            ({ name }: RoadieProps | ProjectProps | MilesProps) => name
+          ),
+        }
+      : isProjects
+        ? {
+            entries: sportData.projects[2024].map(
+              ({ name }: RoadieProps | ProjectProps | MilesProps) => name
+            ),
+          }
+        : {
+            entries: sportData.miles[2024].map(
+              ({ name }: RoadieProps | ProjectProps | MilesProps) => name
+            ),
+          },
     rightColumns: isRoadies
       ? [
           {
@@ -391,11 +428,23 @@ export const useSport = () => {
   };
 
   const activities2023: ColumnTableProps = {
-    leftColumn: {
-      entries: sportData.roadies[2023].map(
-        ({ name }: RoadieProps | ProjectProps | MilesProps) => name
-      ),
-    },
+    leftColumn: isRoadies
+      ? {
+          entries: sportData.roadies[2023].map(
+            ({ name }: RoadieProps | ProjectProps | MilesProps) => name
+          ),
+        }
+      : isProjects
+        ? {
+            entries: sportData.projects[2023].map(
+              ({ name }: RoadieProps | ProjectProps | MilesProps) => name
+            ),
+          }
+        : {
+            entries: sportData.miles[2023].map(
+              ({ name }: RoadieProps | ProjectProps | MilesProps) => name
+            ),
+          },
     rightColumns: isRoadies
       ? [
           {
@@ -468,11 +517,23 @@ export const useSport = () => {
   };
 
   const activities2022: ColumnTableProps = {
-    leftColumn: {
-      entries: sportData.roadies[2022].map(
-        ({ name }: RoadieProps | ProjectProps | MilesProps) => name
-      ),
-    },
+    leftColumn: isRoadies
+      ? {
+          entries: sportData.roadies[2022].map(
+            ({ name }: RoadieProps | ProjectProps | MilesProps) => name
+          ),
+        }
+      : isProjects
+        ? {
+            entries: sportData.projects[2022].map(
+              ({ name }: RoadieProps | ProjectProps | MilesProps) => name
+            ),
+          }
+        : {
+            entries: sportData.miles[2022].map(
+              ({ name }: RoadieProps | ProjectProps | MilesProps) => name
+            ),
+          },
     rightColumns: isRoadies
       ? [
           {
@@ -545,11 +606,23 @@ export const useSport = () => {
   };
 
   const activities2021: ColumnTableProps = {
-    leftColumn: {
-      entries: sportData.roadies[2021].map(
-        ({ name }: RoadieProps | ProjectProps | MilesProps) => name
-      ),
-    },
+    leftColumn: isRoadies
+      ? {
+          entries: sportData.roadies[2021].map(
+            ({ name }: RoadieProps | ProjectProps | MilesProps) => name
+          ),
+        }
+      : isProjects
+        ? {
+            entries: sportData.projects[2021].map(
+              ({ name }: RoadieProps | ProjectProps | MilesProps) => name
+            ),
+          }
+        : {
+            entries: sportData.miles[2021].map(
+              ({ name }: RoadieProps | ProjectProps | MilesProps) => name
+            ),
+          },
     rightColumns: isRoadies
       ? [
           {
@@ -622,11 +695,23 @@ export const useSport = () => {
   };
 
   const activities2020: ColumnTableProps = {
-    leftColumn: {
-      entries: sportData.roadies[2020].map(
-        ({ name }: RoadieProps | ProjectProps | MilesProps) => name
-      ),
-    },
+    leftColumn: isRoadies
+      ? {
+          entries: sportData.roadies[2020].map(
+            ({ name }: RoadieProps | ProjectProps | MilesProps) => name
+          ),
+        }
+      : isProjects
+        ? {
+            entries: sportData.projects[2020].map(
+              ({ name }: RoadieProps | ProjectProps | MilesProps) => name
+            ),
+          }
+        : {
+            entries: sportData.miles[2020].map(
+              ({ name }: RoadieProps | ProjectProps | MilesProps) => name
+            ),
+          },
     rightColumns: isRoadies
       ? [
           {
@@ -698,45 +783,76 @@ export const useSport = () => {
           ],
   };
 
-  const handleCategory = (e: any) => {
-    if (e.currentTarget.value === 'roadies') {
-      setSportData(compiledRoadies);
-      setIsRoadies(true);
-      setIsProjects(false);
-      setIsMiles(false);
-    } else if (e.currentTarget.value === 'projects') {
-      setSportData(compiledProjects);
-      setIsRoadies(false);
-      setIsProjects(true);
-      setIsMiles(false);
-    } else if (e.currentTarget.value === 'miles') {
-      setSportData(compiledMiles);
-      setIsRoadies(false);
-      setIsProjects(false);
-      setIsMiles(true);
-    } else if (e.currentTarget.value === 'tennis') {
+  const [is2024, setIs2024] = useState(true);
+  const [is2023, setIs2023] = useState(false);
+  const [is2022, setIs2022] = useState(false);
+  const [is2021, setIs2021] = useState(false);
+  const [is2020, setIs2020] = useState(false);
+
+  const [activities, setActivities] = useState(activities2024);
+
+  const handleActivities = (e: any) => {
+    if (e.currentTarget.value === '2024') {
+      setActivities(activities2024);
+      setIs2024(true);
+      setIs2023(false);
+      setIs2022(false);
+      setIs2021(false);
+      setIs2020(false);
+    } else if (e.currentTarget.value === '2023') {
+      setActivities(activities2023);
+      setIs2024(false);
+      setIs2023(true);
+      setIs2022(false);
+      setIs2021(false);
+      setIs2020(false);
+    } else if (e.currentTarget.value === '2022') {
+      setActivities(activities2022);
+      setIs2024(false);
+      setIs2023(false);
+      setIs2022(true);
+      setIs2021(false);
+      setIs2020(false);
+    } else if (e.currentTarget.value === '2021') {
+      setActivities(activities2021);
+      setIs2024(false);
+      setIs2023(false);
+      setIs2022(false);
+      setIs2021(true);
+      setIs2020(false);
+    } else if (e.currentTarget.value === '2020') {
+      setActivities(activities2020);
+      setIs2024(false);
+      setIs2023(false);
+      setIs2022(false);
+      setIs2021(false);
+      setIs2020(true);
     } else {
-      setSportData(compiledRoadies);
-      setIsRoadies(true);
-      setIsProjects(false);
-      setIsMiles(false);
+      setActivities(activities2024);
+      setIs2024(true);
+      setIs2023(false);
+      setIs2022(false);
+      setIs2021(false);
+      setIs2020(false);
     }
   };
 
   return {
     handleCategory,
+    handleActivities,
     title,
     subTitle,
     description,
     summary,
     routes,
-    activities2024,
-    activities2023,
-    activities2022,
-    activities2021,
-    activities2020,
+    activities,
     isRoadies,
     isProjects,
     isMiles,
+    is2024,
+    is2023,
+    is2022,
+    is2021,
+    is2020,
   };
 };

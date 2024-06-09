@@ -6,19 +6,21 @@ import { useSport } from './utils/use-sport';
 export const Sport: FC = () => {
   const {
     handleCategory,
+    handleActivities,
     title,
     subTitle,
     description,
     summary,
     routes,
-    activities2024,
-    activities2023,
-    activities2022,
-    activities2021,
-    activities2020,
+    activities,
     isRoadies,
     isProjects,
     isMiles,
+    is2024,
+    is2023,
+    is2022,
+    is2021,
+    is2020,
   } = useSport();
 
   return (
@@ -30,16 +32,18 @@ export const Sport: FC = () => {
         isMiles={isMiles}
       />
       <ResultTile
+        funcActivities={handleActivities}
         title={title}
         subTitle={subTitle}
         description={description}
         summary={summary}
         routes={routes}
-        activities2024={activities2024}
-        activities2023={activities2023}
-        activities2022={activities2022}
-        activities2021={activities2021}
-        activities2020={activities2020}
+        activities={activities}
+        is2024={is2024}
+        is2023={is2023}
+        is2022={is2022}
+        is2021={is2021}
+        is2020={is2020}
       />
     </>
   );
