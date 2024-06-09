@@ -2,25 +2,15 @@ import {
   Typography,
   Tile,
   ColumnTable,
-  Spacing,
   Button,
-  Grid,
   Stack,
   ColumnTableProps,
 } from '../../../../bash-blocks';
 import {
-  toMiles,
-  toFeet,
-  toSpeed,
-  useScreenWidth,
-  RoadieProps,
-  ProjectProps,
-  MilesProps,
-  formatCoordinates,
-  useShowElement,
   CompiledMilesProps,
   CompiledProjectProps,
   CompiledRoadieProps,
+  useShowElement,
 } from '../../../../../utils';
 import { FC, useState } from 'react';
 
@@ -28,37 +18,28 @@ export type ResultTileProps = {
   title: string;
   subTitle: string;
   description: string;
+  summary: ColumnTableProps;
   routes: ColumnTableProps;
-  isRoadies: boolean;
-  isProjects: boolean;
-  isMiles: boolean;
-  sportData: CompiledRoadieProps | CompiledProjectProps | CompiledMilesProps;
-  sport2024: RoadieProps[] | ProjectProps[] | MilesProps[];
-  sport2023: RoadieProps[] | ProjectProps[] | MilesProps[];
-  sport2022: RoadieProps[] | ProjectProps[] | MilesProps[];
-  sport2021: RoadieProps[] | ProjectProps[] | MilesProps[];
-  sport2020: RoadieProps[] | ProjectProps[] | MilesProps[];
+  activities2024: ColumnTableProps;
+  activities2023: ColumnTableProps;
+  activities2022: ColumnTableProps;
+  activities2021: ColumnTableProps;
+  activities2020: ColumnTableProps;
 };
 
 export const ResultTile: FC<ResultTileProps> = ({
   title,
   subTitle,
   description,
+  summary,
   routes,
-  isRoadies,
-  isProjects,
-  isMiles,
-  sportData,
-  sport2024,
-  sport2023,
-  sport2022,
-  sport2021,
-  sport2020,
+  activities2024,
+  activities2023,
+  activities2022,
+  activities2021,
+  activities2020,
 }) => {
-  const [sportYearData, setSportYearData] = useState(sport2024);
-
-  const { showElement: showMunros, setShowElement: setShowMunros } =
-    useShowElement();
+  const [activities, setActivities] = useState(activities2024);
 
   return (
     <Tile type="solid">
@@ -80,44 +61,8 @@ export const ResultTile: FC<ResultTileProps> = ({
         </Typography>
 
         <ColumnTable
-          leftColumn={{
-            entries: ['Total', '2024', '2023', '2022', '2021', '2020'],
-          }}
-          rightColumns={[
-            {
-              title: 'Occurrences',
-              entries: [
-                `${sportData.number.total}`,
-                `${sportData.number[2024]}`,
-                `${sportData.number[2023]}`,
-                `${sportData.number[2022]}`,
-                `${sportData.number[2021]}`,
-                `${sportData.number[2020]}`,
-              ],
-            },
-            {
-              title: 'Distance',
-              entries: [
-                sportData.distance.total as string,
-                sportData.distance[2024] as string,
-                sportData.distance[2023] as string,
-                sportData.distance[2022] as string,
-                sportData.distance[2021] as string,
-                sportData.distance[2020] as string,
-              ],
-            },
-            {
-              title: 'Elevation',
-              entries: [
-                sportData.elevation.total as string,
-                sportData.elevation[2024] as string,
-                sportData.elevation[2023] as string,
-                sportData.elevation[2022] as string,
-                sportData.elevation[2021] as string,
-                sportData.elevation[2020] as string,
-              ],
-            },
-          ]}
+          leftColumn={summary.leftColumn}
+          rightColumns={summary.rightColumns}
         />
 
         <Typography variant="h2" fontFamily="sport">
@@ -134,100 +79,61 @@ export const ResultTile: FC<ResultTileProps> = ({
             variant="clear"
             typeVariant="h2"
             typeColor={
-              Boolean(sportYearData === sport2024) ? 'lightBlue' : undefined
+              Boolean(activities === activities2024) ? 'lightBlue' : undefined
             }
+            typeFontFamily="sport"
             content="2024"
-            func={() => setSportYearData(sport2024)}
+            func={() => setActivities(activities2024)}
           />
 
           <Button
             variant="clear"
             typeVariant="h2"
             typeColor={
-              Boolean(sportYearData === sport2023) ? 'lightBlue' : undefined
+              Boolean(activities === activities2023) ? 'lightBlue' : undefined
             }
+            typeFontFamily="sport"
             content="2023"
-            func={() => setSportYearData(sport2023)}
+            func={() => setActivities(activities2023)}
           />
 
           <Button
             variant="clear"
             typeVariant="h2"
             typeColor={
-              Boolean(sportYearData === sport2022) ? 'lightBlue' : undefined
+              Boolean(activities === activities2022) ? 'lightBlue' : undefined
             }
+            typeFontFamily="sport"
             content="2022"
-            func={() => setSportYearData(sport2022)}
+            func={() => setActivities(activities2022)}
           />
 
           <Button
             variant="clear"
             typeVariant="h2"
             typeColor={
-              Boolean(sportYearData === sport2021) ? 'lightBlue' : undefined
+              Boolean(activities === activities2021) ? 'lightBlue' : undefined
             }
+            typeFontFamily="sport"
             content="2021"
-            func={() => setSportYearData(sport2021)}
+            func={() => setActivities(activities2021)}
           />
 
           <Button
             variant="clear"
             typeVariant="h2"
             typeColor={
-              Boolean(sportYearData === sport2020) ? 'lightBlue' : undefined
+              Boolean(activities === activities2020) ? 'lightBlue' : undefined
             }
+            typeFontFamily="sport"
             content="2020"
-            func={() => setSportYearData(sport2020)}
+            func={() => setActivities(activities2020)}
           />
         </Stack>
 
         <ColumnTable
-          leftColumn={{
-            entries: sportYearData.map(
-              ({ name }: RoadieProps | ProjectProps | MilesProps) => (
-                <a
-                  href="#"
-                  onClick={() => {
-                    setShowMunros(!showMunros);
-                  }}
-                >
-                  {name}
-                </a>
-              )
-            ),
-          }}
-          rightColumns={[
-            {
-              title: 'Distance',
-              entries: sportYearData.map(
-                ({ distance }: RoadieProps | ProjectProps | MilesProps) =>
-                  toMiles(distance)
-              ),
-            },
-            {
-              title: 'Elevation',
-              entries: sportYearData.map(
-                ({ elevation }: RoadieProps | ProjectProps | MilesProps) =>
-                  toFeet(elevation)
-              ),
-            },
-            {
-              title: 'Time',
-              entries: sportYearData.map(
-                ({ time }: RoadieProps | ProjectProps | MilesProps) => time
-              ),
-            },
-            ...(isRoadies
-              ? [
-                  {
-                    title: 'Speed',
-                    entries: sportYearData.map(({ speed }: RoadieProps) =>
-                      speed ? toSpeed(speed, false) : <>&nbsp;</>
-                    ),
-                  },
-                ]
-              : []),
-          ]}
+          leftColumn={activities.leftColumn}
+          rightColumns={activities.rightColumns}
         />
       </Stack>
     </Tile>

@@ -11,6 +11,7 @@ export type ButtonProps = {
   variant?: 'default' | 'clear' | 'solid' | 'inverse';
   typeVariant?: TextStyle['variant'];
   typeColor?: TextStyle['color'];
+  typeFontFamily?: TextStyle['fontFamily'];
   content: string | ReactElement;
   subContent?: string | ReactElement;
   subContentTop?: boolean;
@@ -27,6 +28,7 @@ export const Button: FC<ButtonProps> = ({
   variant = 'default',
   typeVariant = 'body',
   typeColor = 'white',
+  typeFontFamily,
   content,
   subContent,
   subContentTop,
@@ -78,6 +80,7 @@ export const Button: FC<ButtonProps> = ({
             <Typography
               variant={typeVariant}
               color={typeColor}
+              fontFamily={typeFontFamily}
               textAlign="left"
             >
               {content}

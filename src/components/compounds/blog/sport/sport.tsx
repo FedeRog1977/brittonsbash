@@ -9,16 +9,16 @@ export const Sport: FC = () => {
     title,
     subTitle,
     description,
+    summary,
     routes,
+    activities2024,
+    activities2023,
+    activities2022,
+    activities2021,
+    activities2020,
     isRoadies,
     isProjects,
     isMiles,
-    sportData,
-    sport2024,
-    sport2023,
-    sport2022,
-    sport2021,
-    sport2020,
   } = useSport();
 
   return (
@@ -33,16 +33,13 @@ export const Sport: FC = () => {
         title={title}
         subTitle={subTitle}
         description={description}
+        summary={summary}
         routes={routes}
-        isRoadies={isRoadies}
-        isProjects={isProjects}
-        isMiles={isMiles}
-        sportData={sportData}
-        sport2024={sport2024}
-        sport2023={sport2023}
-        sport2022={sport2022}
-        sport2021={sport2021}
-        sport2020={sport2020}
+        activities2024={activities2024}
+        activities2023={activities2023}
+        activities2022={activities2022}
+        activities2021={activities2021}
+        activities2020={activities2020}
       />
     </>
   );
