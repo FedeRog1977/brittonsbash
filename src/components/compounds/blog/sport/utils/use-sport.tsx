@@ -40,176 +40,195 @@ export const useSport = () => {
         ? 'My Miles, as of recently, hit all of the major rewards I look for in an activity: enjoyment, fitness, and calorie burn. My most frequent route is a Waterfoot, which I have just started segmenting into a half-walk, half-run. Before this they delivered all but fitness. Now that has changed.'
         : 'This is not even a sport yet.';
 
-  const routes = isRoadies
-    ? [
-        {
-          title: 'Centuries',
-          entries: [
-            `${sportData.centuries.total}`,
-            `${sportData.centuries[2024]}`,
-            `${sportData.centuries[2023]}`,
-            `${sportData.centuries[2022]}`,
-            `${sportData.centuries[2021]}`,
-            `${sportData.centuries[2020]}`,
-          ],
-        },
-        {
-          title: 'Strathavens',
-          entries: [
-            `${sportData.strathavens.total}`,
-            `${sportData.strathavens[2024]}`,
-            `${sportData.strathavens[2023]}`,
-            `${sportData.strathavens[2022]}`,
-            `${sportData.strathavens[2021]}`,
-            `${sportData.strathavens[2020]}`,
-          ],
-        },
-        {
-          title: 'Fenwick + W.F.s',
-          entries: [
-            `${sportData.fenwickWindfarms.total}`,
-            `${sportData.fenwickWindfarms[2024]}`,
-            `${sportData.fenwickWindfarms[2023]}`,
-            `${sportData.fenwickWindfarms[2022]}`,
-            `${sportData.fenwickWindfarms[2021]}`,
-            `${sportData.fenwickWindfarms[2020]}`,
-          ],
-        },
-        {
-          title: 'Fenwicks',
-          entries: [
-            `${sportData.fenwicks.total}`,
-            `${sportData.fenwicks[2024]}`,
-            `${sportData.fenwicks[2023]}`,
-            `${sportData.fenwicks[2022]}`,
-            `${sportData.fenwicks[2021]}`,
-            `${sportData.fenwicks[2020]}`,
-          ],
-        },
-        {
-          title: 'Wind Farms',
-          entries: [
-            `${sportData.windfarms.total}`,
-            `${sportData.windfarms[2024]}`,
-            `${sportData.windfarms[2023]}`,
-            `${sportData.windfarms[2022]}`,
-            `${sportData.windfarms[2021]}`,
-            `${sportData.windfarms[2020]}`,
-          ],
-        },
-        {
-          title: 'Thorntonhalls',
-          entries: [
-            `${sportData.thorntonhalls.total}`,
-            `${sportData.thorntonhalls[2024]}`,
-            `${sportData.thorntonhalls[2023]}`,
-            `${sportData.thorntonhalls[2022]}`,
-            `${sportData.thorntonhalls[2021]}`,
-            `${sportData.thorntonhalls[2020]}`,
-          ],
-        },
-      ]
-    : isProjects
+  const routes = {
+    leftColumn: isRoadies
+      ? {
+          entries: ['Total', '2024', '2023', '2022', '2021', '2020'],
+        }
+      : isProjects
+        ? {
+            entries: [
+              'Unique',
+              'Total',
+              '2024',
+              '2023',
+              '2022',
+              '2021',
+              '2020',
+            ],
+          }
+        : {
+            entries: ['Total', '2024', '2023', '2022', '2021', '2020'],
+          },
+    rightColumns: isRoadies
       ? [
           {
-            title: 'Islands',
+            title: 'Centuries',
             entries: [
-              `${sportData.islands.number.unique}`,
-              `${sportData.islands.number.total}`,
-              `${sportData.islands.number[2024]}`,
-              `${sportData.islands.number[2023]}`,
-              `${sportData.islands.number[2022]}`,
-              `${sportData.islands.number[2021]}`,
-              `${sportData.islands.number[2020]}`,
+              `${sportData.centuries.total}`,
+              `${sportData.centuries[2024]}`,
+              `${sportData.centuries[2023]}`,
+              `${sportData.centuries[2022]}`,
+              `${sportData.centuries[2021]}`,
+              `${sportData.centuries[2020]}`,
             ],
           },
           {
-            title: 'Munros',
+            title: 'Strathavens',
             entries: [
-              `${sportData.munros.number.unique}`,
-              `${sportData.munros.number.total}`,
-              `${sportData.munros.number[2024]}`,
-              `${sportData.munros.number[2023]}`,
-              `${sportData.munros.number[2022]}`,
-              `${sportData.munros.number[2021]}`,
-              `${sportData.munros.number[2020]}`,
+              `${sportData.strathavens.total}`,
+              `${sportData.strathavens[2024]}`,
+              `${sportData.strathavens[2023]}`,
+              `${sportData.strathavens[2022]}`,
+              `${sportData.strathavens[2021]}`,
+              `${sportData.strathavens[2020]}`,
             ],
           },
           {
-            title: 'Munro Tops',
+            title: 'Fenwick + W.F.s',
             entries: [
-              `${sportData.munroTops.number.unique}`,
-              `${sportData.munroTops.number.total}`,
-              `${sportData.munroTops.number[2024]}`,
-              `${sportData.munroTops.number[2023]}`,
-              `${sportData.munroTops.number[2022]}`,
-              `${sportData.munroTops.number[2021]}`,
-              `${sportData.munroTops.number[2020]}`,
+              `${sportData.fenwickWindfarms.total}`,
+              `${sportData.fenwickWindfarms[2024]}`,
+              `${sportData.fenwickWindfarms[2023]}`,
+              `${sportData.fenwickWindfarms[2022]}`,
+              `${sportData.fenwickWindfarms[2021]}`,
+              `${sportData.fenwickWindfarms[2020]}`,
             ],
           },
           {
-            title: 'Corbetts',
+            title: 'Fenwicks',
             entries: [
-              `${sportData.corbetts.number.unique}`,
-              `${sportData.corbetts.number.total}`,
-              `${sportData.corbetts.number[2024]}`,
-              `${sportData.corbetts.number[2023]}`,
-              `${sportData.corbetts.number[2022]}`,
-              `${sportData.corbetts.number[2021]}`,
-              `${sportData.corbetts.number[2020]}`,
+              `${sportData.fenwicks.total}`,
+              `${sportData.fenwicks[2024]}`,
+              `${sportData.fenwicks[2023]}`,
+              `${sportData.fenwicks[2022]}`,
+              `${sportData.fenwicks[2021]}`,
+              `${sportData.fenwicks[2020]}`,
             ],
           },
           {
-            title: 'Corbett Tops',
+            title: 'Wind Farms',
             entries: [
-              `${sportData.corbettTops.number.unique}`,
-              `${sportData.corbettTops.number.total}`,
-              `${sportData.corbettTops.number[2024]}`,
-              `${sportData.corbettTops.number[2023]}`,
-              `${sportData.corbettTops.number[2022]}`,
-              `${sportData.corbettTops.number[2021]}`,
-              `${sportData.corbettTops.number[2020]}`,
+              `${sportData.windfarms.total}`,
+              `${sportData.windfarms[2024]}`,
+              `${sportData.windfarms[2023]}`,
+              `${sportData.windfarms[2022]}`,
+              `${sportData.windfarms[2021]}`,
+              `${sportData.windfarms[2020]}`,
             ],
           },
           {
-            title: 'Grahams',
+            title: 'Thorntonhalls',
             entries: [
-              `${sportData.grahams.number.unique}`,
-              `${sportData.grahams.number.total}`,
-              `${sportData.grahams.number[2024]}`,
-              `${sportData.grahams.number[2023]}`,
-              `${sportData.grahams.number[2022]}`,
-              `${sportData.grahams.number[2021]}`,
-              `${sportData.grahams.number[2020]}`,
-            ],
-          },
-          {
-            title: 'Sub2000s',
-            entries: [
-              `${sportData.subTwos.number.unique}`,
-              `${sportData.subTwos.number.total}`,
-              `${sportData.subTwos.number[2024]}`,
-              `${sportData.subTwos.number[2023]}`,
-              `${sportData.subTwos.number[2022]}`,
-              `${sportData.subTwos.number[2021]}`,
-              `${sportData.subTwos.number[2020]}`,
-            ],
-          },
-          {
-            title: 'Donalds',
-            entries: [
-              `${sportData.donalds.number.unique}`,
-              `${sportData.donalds.number.total}`,
-              `${sportData.donalds.number[2024]}`,
-              `${sportData.donalds.number[2023]}`,
-              `${sportData.donalds.number[2022]}`,
-              `${sportData.donalds.number[2021]}`,
-              `${sportData.donalds.number[2020]}`,
+              `${sportData.thorntonhalls.total}`,
+              `${sportData.thorntonhalls[2024]}`,
+              `${sportData.thorntonhalls[2023]}`,
+              `${sportData.thorntonhalls[2022]}`,
+              `${sportData.thorntonhalls[2021]}`,
+              `${sportData.thorntonhalls[2020]}`,
             ],
           },
         ]
-      : isMiles
+      : isProjects
         ? [
+            {
+              title: 'Islands',
+              entries: [
+                `${sportData.islands.number.unique}`,
+                `${sportData.islands.number.total}`,
+                `${sportData.islands.number[2024]}`,
+                `${sportData.islands.number[2023]}`,
+                `${sportData.islands.number[2022]}`,
+                `${sportData.islands.number[2021]}`,
+                `${sportData.islands.number[2020]}`,
+              ],
+            },
+            {
+              title: 'Munros',
+              entries: [
+                `${sportData.munros.number.unique}`,
+                `${sportData.munros.number.total}`,
+                `${sportData.munros.number[2024]}`,
+                `${sportData.munros.number[2023]}`,
+                `${sportData.munros.number[2022]}`,
+                `${sportData.munros.number[2021]}`,
+                `${sportData.munros.number[2020]}`,
+              ],
+            },
+            {
+              title: 'Munro Tops',
+              entries: [
+                `${sportData.munroTops.number.unique}`,
+                `${sportData.munroTops.number.total}`,
+                `${sportData.munroTops.number[2024]}`,
+                `${sportData.munroTops.number[2023]}`,
+                `${sportData.munroTops.number[2022]}`,
+                `${sportData.munroTops.number[2021]}`,
+                `${sportData.munroTops.number[2020]}`,
+              ],
+            },
+            {
+              title: 'Corbetts',
+              entries: [
+                `${sportData.corbetts.number.unique}`,
+                `${sportData.corbetts.number.total}`,
+                `${sportData.corbetts.number[2024]}`,
+                `${sportData.corbetts.number[2023]}`,
+                `${sportData.corbetts.number[2022]}`,
+                `${sportData.corbetts.number[2021]}`,
+                `${sportData.corbetts.number[2020]}`,
+              ],
+            },
+            {
+              title: 'Corbett Tops',
+              entries: [
+                `${sportData.corbettTops.number.unique}`,
+                `${sportData.corbettTops.number.total}`,
+                `${sportData.corbettTops.number[2024]}`,
+                `${sportData.corbettTops.number[2023]}`,
+                `${sportData.corbettTops.number[2022]}`,
+                `${sportData.corbettTops.number[2021]}`,
+                `${sportData.corbettTops.number[2020]}`,
+              ],
+            },
+            {
+              title: 'Grahams',
+              entries: [
+                `${sportData.grahams.number.unique}`,
+                `${sportData.grahams.number.total}`,
+                `${sportData.grahams.number[2024]}`,
+                `${sportData.grahams.number[2023]}`,
+                `${sportData.grahams.number[2022]}`,
+                `${sportData.grahams.number[2021]}`,
+                `${sportData.grahams.number[2020]}`,
+              ],
+            },
+            {
+              title: 'Sub2000s',
+              entries: [
+                `${sportData.subTwos.number.unique}`,
+                `${sportData.subTwos.number.total}`,
+                `${sportData.subTwos.number[2024]}`,
+                `${sportData.subTwos.number[2023]}`,
+                `${sportData.subTwos.number[2022]}`,
+                `${sportData.subTwos.number[2021]}`,
+                `${sportData.subTwos.number[2020]}`,
+              ],
+            },
+            {
+              title: 'Donalds',
+              entries: [
+                `${sportData.donalds.number.unique}`,
+                `${sportData.donalds.number.total}`,
+                `${sportData.donalds.number[2024]}`,
+                `${sportData.donalds.number[2023]}`,
+                `${sportData.donalds.number[2022]}`,
+                `${sportData.donalds.number[2021]}`,
+                `${sportData.donalds.number[2020]}`,
+              ],
+            },
+          ]
+        : [
             {
               title: 'Wind Farms',
               entries: [
@@ -243,8 +262,8 @@ export const useSport = () => {
                 `${sportData.waterfoots[2020]}`,
               ],
             },
-          ]
-        : [];
+          ],
+  };
 
   const sport2024 = isRoadies
     ? sportData.roadies[2024]

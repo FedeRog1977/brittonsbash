@@ -5,6 +5,8 @@ import {
   Spacing,
   Button,
   Grid,
+  Stack,
+  ColumnTableProps,
 } from '../../../../bash-blocks';
 import {
   toMiles,
@@ -21,13 +23,12 @@ import {
   CompiledRoadieProps,
 } from '../../../../../utils';
 import { FC, useState } from 'react';
-import { Column } from '../../../../bash-blocks/partials/table/types/column';
 
 export type ResultTileProps = {
   title: string;
   subTitle: string;
   description: string;
-  routes: Column[];
+  routes: ColumnTableProps;
   isRoadies: boolean;
   isProjects: boolean;
   isMiles: boolean;
@@ -54,7 +55,6 @@ export const ResultTile: FC<ResultTileProps> = ({
   sport2021,
   sport2020,
 }) => {
-  const { isMobile } = useScreenWidth();
   const [sportYearData, setSportYearData] = useState(sport2024);
 
   const { showElement: showMunros, setShowElement: setShowMunros } =
@@ -62,27 +62,23 @@ export const ResultTile: FC<ResultTileProps> = ({
 
   return (
     <Tile type="solid">
-      <Spacing mB={15}>
+      <Stack direction="vertical" spacing="md">
         <Typography variant="t1" fontFamily="sport" textAlign="center">
           {title}
         </Typography>
-      </Spacing>
-      <Spacing mT={15} mB={15}>
+
         <Typography variant="h4" color="mediumGrey" textAlign="center">
           {subTitle}
         </Typography>
-      </Spacing>
-      <Spacing mT={15} mB={15}>
+
         <Typography variant="body" textAlign="left">
           {description}
         </Typography>
-      </Spacing>
-      <Spacing mT={15} mB={15}>
-        <Typography variant="h2" fontFamily="sport" textAlign="left">
+
+        <Typography variant="h2" fontFamily="sport">
           Summary
         </Typography>
-      </Spacing>
-      <Spacing mX={isMobile ? -20 : 0} mT={15} mB={15}>
+
         <ColumnTable
           leftColumn={{
             entries: ['Total', '2024', '2023', '2022', '2021', '2020'],
@@ -123,106 +119,68 @@ export const ResultTile: FC<ResultTileProps> = ({
             },
           ]}
         />
-      </Spacing>
-      <Spacing mT={15} mB={15}>
-        <Typography variant="h2" fontFamily="sport" textAlign="left">
-          {isProjects ? 'Hills' : 'Routes'}
+
+        <Typography variant="h2" fontFamily="sport">
+          Routes
         </Typography>
-      </Spacing>
-      <Spacing mX={isMobile ? -20 : 0} mT={15} mB={15}>
+
         <ColumnTable
-          leftColumn={{
-            entries: [
-              isProjects ? 'Unique' : '',
-              'Total',
-              '2024',
-              '2023',
-              '2022',
-              '2021',
-              '2020',
-            ],
-          }}
-          rightColumns={routes}
+          leftColumn={routes.leftColumn}
+          rightColumns={routes.rightColumns}
         />
-      </Spacing>
-      <Spacing mT={15} mB={15}>
-        <Grid
-          alignColumns={isMobile ? '1fr 1fr 1fr' : '1fr 1fr 1fr 1fr 1fr'}
-          justifyItems="center"
-        >
-          <Grid
-            columnItem={[1, isMobile ? 3 : 5]}
-            rowItem={isMobile ? [1, 2] : undefined}
-          >
-            <Button
-              variant="clear"
-              typeVariant="h2"
-              typeColor={
-                Boolean(sportYearData === sport2024) ? 'lightBlue' : undefined
-              }
-              content="2024"
-              func={() => setSportYearData(sport2024)}
-            />
-          </Grid>
-          <Grid
-            columnItem={[2, isMobile ? 3 : 5]}
-            rowItem={isMobile ? [1, 2] : undefined}
-          >
-            <Button
-              variant="clear"
-              typeVariant="h2"
-              typeColor={
-                Boolean(sportYearData === sport2023) ? 'lightBlue' : undefined
-              }
-              content="2023"
-              func={() => setSportYearData(sport2023)}
-            />
-          </Grid>
-          <Grid
-            columnItem={[3, isMobile ? 3 : 5]}
-            rowItem={isMobile ? [1, 2] : undefined}
-          >
-            <Button
-              variant="clear"
-              typeVariant="h2"
-              typeColor={
-                Boolean(sportYearData === sport2022) ? 'lightBlue' : undefined
-              }
-              content="2022"
-              func={() => setSportYearData(sport2022)}
-            />
-          </Grid>
-          <Grid
-            columnItem={[isMobile ? 1 : 4, isMobile ? 3 : 5]}
-            rowItem={isMobile ? [2, 2] : undefined}
-          >
-            <Button
-              variant="clear"
-              typeVariant="h2"
-              typeColor={
-                Boolean(sportYearData === sport2021) ? 'lightBlue' : undefined
-              }
-              content="2021"
-              func={() => setSportYearData(sport2021)}
-            />
-          </Grid>
-          <Grid
-            columnItem={[isMobile ? 2 : 5, isMobile ? 3 : 5]}
-            rowItem={isMobile ? [2, 2] : undefined}
-          >
-            <Button
-              variant="clear"
-              typeVariant="h2"
-              typeColor={
-                Boolean(sportYearData === sport2020) ? 'lightBlue' : undefined
-              }
-              content="2020"
-              func={() => setSportYearData(sport2020)}
-            />
-          </Grid>
-        </Grid>
-      </Spacing>
-      <Spacing mX={isMobile ? -20 : 0} mT={15} mB={15}>
+
+        <Stack direction="horizontal" alignHorizontal="apart">
+          <Button
+            variant="clear"
+            typeVariant="h2"
+            typeColor={
+              Boolean(sportYearData === sport2024) ? 'lightBlue' : undefined
+            }
+            content="2024"
+            func={() => setSportYearData(sport2024)}
+          />
+
+          <Button
+            variant="clear"
+            typeVariant="h2"
+            typeColor={
+              Boolean(sportYearData === sport2023) ? 'lightBlue' : undefined
+            }
+            content="2023"
+            func={() => setSportYearData(sport2023)}
+          />
+
+          <Button
+            variant="clear"
+            typeVariant="h2"
+            typeColor={
+              Boolean(sportYearData === sport2022) ? 'lightBlue' : undefined
+            }
+            content="2022"
+            func={() => setSportYearData(sport2022)}
+          />
+
+          <Button
+            variant="clear"
+            typeVariant="h2"
+            typeColor={
+              Boolean(sportYearData === sport2021) ? 'lightBlue' : undefined
+            }
+            content="2021"
+            func={() => setSportYearData(sport2021)}
+          />
+
+          <Button
+            variant="clear"
+            typeVariant="h2"
+            typeColor={
+              Boolean(sportYearData === sport2020) ? 'lightBlue' : undefined
+            }
+            content="2020"
+            func={() => setSportYearData(sport2020)}
+          />
+        </Stack>
+
         <ColumnTable
           leftColumn={{
             entries: sportYearData.map(
@@ -271,7 +229,7 @@ export const ResultTile: FC<ResultTileProps> = ({
               : []),
           ]}
         />
-      </Spacing>
+      </Stack>
     </Tile>
   );
 };
