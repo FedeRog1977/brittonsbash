@@ -66,6 +66,7 @@ export const Button: FC<ButtonProps> = ({
           <Stack
             direction={subContentTop ? 'vertical' : 'horizontal'}
             alignHorizontal={icon ? 'left' : 'center'}
+            alignVertical="center"
             spacing="xs"
           >
             {subContent ? (

@@ -3,7 +3,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import styles from './header.module.scss';
 import { useShowElement, useScreenWidth } from '../../../../utils';
-import { Grid, Spacing } from '../../basics';
+import { Stack } from '../../basics';
 
 export type HeaderMobileProps = {
   funcMobile: () => void;
@@ -25,276 +25,196 @@ export const Header = () => {
     setShowUtilities(false);
   };
 
+  const toggleBlog = () => {
+    setShowBlog(!showBlog);
+    setShowUtilities(false);
+  };
+
+  const toggleUtilities = () => {
+    setShowUtilities(!showUtilities);
+    setShowBlog(false);
+  };
+
+  const toggleBlogMobile = () => {
+    setShowMobile(false);
+    setShowBlog(!showBlog);
+    setShowUtilities(false);
+  };
+
+  const toggleUtilitiesMobile = () => {
+    setShowMobile(false);
+    setShowBlog(false);
+    setShowUtilities(!showUtilities);
+  };
+
   return (
-    <>
-      <div className={styles.header}>
-        <div className={styles.headerContent}>
-          <Grid alignColumns="auto auto" alignItems="center">
-            <Grid columnItem={[1, 2]}>
-              {isMobile ? (
-                <img
-                  className={styles.headerImage}
-                  src="https://lewisbritton.com/images/logo/bash-logo.png"
-                  alt="header-logo"
-                />
-              ) : (
-                <Grid
-                  alignColumns="auto auto"
-                  columnGap={15}
-                  justifyContent="start"
-                  alignItems="center"
-                >
-                  <Grid columnItem={[1, 2]}>
-                    <img
-                      className={styles.headerImage}
-                      src="https://lewisbritton.com/images/logo/bash-logo.png"
-                      alt="header-logo"
-                    />
-                  </Grid>
-                  <Grid columnItem={[2, 2]}>
-                    <div className={styles.headerLogo}>BrittonsBashRC</div>
-                  </Grid>
-                </Grid>
-              )}
-            </Grid>
-            <Grid columnItem={[2, 2]} textAlign="right">
-              {isMobile ? (
-                <FontAwesomeIcon
-                  icon={faBars}
-                  onClick={() => {
-                    setShowMobile(!showMobile);
-                    resetHeader();
-                  }}
-                />
-              ) : (
-                <Grid
-                  alignColumns="auto  auto  auto  auto  auto  auto"
-                  justifyContent="end"
-                  columnGap={15}
-                >
-                  <Grid columnItem={[1, 6]}>
-                    <Link to="/">Home</Link>
-                  </Grid>
-                  <Grid columnItem={[2, 6]}>
-                    <Link to="/academia">Academia</Link>
-                  </Grid>
-                  <Grid columnItem={[3, 6]}>
-                    <Link to="/employment">Employment</Link>
-                  </Grid>
-                  <Grid columnItem={[4, 6]}>
-                    <Link to="/library">Library</Link>
-                  </Grid>
-                  <Grid columnItem={[5, 6]}>
-                    <Link
-                      to="#"
-                      onClick={() => {
-                        setShowBlog(!showBlog);
-                        setShowUtilities(false);
-                      }}
-                    >
-                      Blog
-                    </Link>
-                  </Grid>
-                  <Grid columnItem={[6, 6]}>
-                    <Link
-                      to="#"
-                      onClick={() => {
-                        setShowUtilities(!showUtilities);
-                        setShowBlog(false);
-                      }}
-                    >
-                      Utilities
-                    </Link>
-                  </Grid>
-                </Grid>
-              )}
-            </Grid>
-          </Grid>
-        </div>
+    <div className={styles.header}>
+      <div className={styles.headerContent}>
+        <Stack
+          direction="horizontal"
+          alignHorizontal="apart"
+          alignVertical="center"
+        >
+          {isMobile ? (
+            // TODO: make image component
+            <img
+              className={styles.headerImage}
+              src="https://lewisbritton.com/images/logo/bash-logo.png"
+              alt="header-logo"
+            />
+          ) : (
+            <Stack direction="horizontal" alignVertical="center" spacing="sm">
+              {/* TODO: make image component */}
+              <img
+                className={styles.headerImage}
+                src="https://lewisbritton.com/images/logo/bash-logo.png"
+                alt="header-logo"
+              />
+
+              <div className={styles.headerLogo}>BrittonsBashRC</div>
+            </Stack>
+          )}
+
+          {isMobile ? (
+            <FontAwesomeIcon
+              icon={faBars}
+              onClick={() => {
+                setShowMobile(!showMobile);
+                resetHeader();
+              }}
+            />
+          ) : (
+            <Stack direction="horizontal" alignVertical="center" spacing="sm">
+              <Link to="/">Home</Link>
+              <Link to="/academia">Academia</Link>
+              <Link to="/employment">Employment</Link>
+              <Link to="/library">Library</Link>
+              <Link to="#" onClick={toggleBlog}>
+                Blog
+              </Link>
+              <Link to="#" onClick={toggleUtilities}>
+                Utilities
+              </Link>
+            </Stack>
+          )}
+        </Stack>
       </div>
-      {Boolean(showMobile && isMobile) ? (
+
+      {showMobile && isMobile ? (
         <div className={styles.subheader}>
           <div className={styles.subheaderContent}>
-            <Spacing mY={20}>
-              <Grid alignRows="auto" rowGap={10}>
-                <Grid rowItem={[1, 2]}>
-                  <Grid
-                    alignColumns="auto auto auto auto"
-                    justifyContent="end"
-                    columnGap={10}
-                  >
-                    <Grid columnItem={[1, 4]}>
-                      <Link to="/">Home</Link>
-                    </Grid>
-                    <Grid columnItem={[2, 4]}>
-                      <Link to="/academia">Academia</Link>
-                    </Grid>
-                    <Grid columnItem={[3, 4]}>
-                      <Link to="/employment">Employment</Link>
-                    </Grid>
-                    <Grid columnItem={[4, 4]}>
-                      <Link to="/library">Library</Link>
-                    </Grid>
-                  </Grid>
-                </Grid>
-                <Grid rowItem={[2, 2]}>
-                  <Grid
-                    alignColumns="auto auto"
-                    justifyContent="end"
-                    columnGap={10}
-                  >
-                    <Grid columnItem={[1, 4]}>
-                      <Link
-                        to="#"
-                        onClick={() => {
-                          setShowMobile(false);
-                          setShowBlog(!showBlog);
-                          setShowUtilities(false);
-                        }}
-                      >
-                        Blog
-                      </Link>
-                    </Grid>
-                    <Grid columnItem={[2, 4]}>
-                      <Link
-                        to="#"
-                        onClick={() => {
-                          setShowMobile(false);
-                          setShowBlog(false);
-                          setShowUtilities(!showUtilities);
-                        }}
-                      >
-                        Utilities
-                      </Link>
-                    </Grid>
-                  </Grid>
-                </Grid>
-              </Grid>
-            </Spacing>
+            <Stack direction="vertical" spacing="2xs">
+              <Stack
+                direction="horizontal"
+                alignHorizontal="right"
+                spacing="sm"
+              >
+                <Link to="/">Home</Link>
+                <Link to="/academia">Academia</Link>
+                <Link to="/employment">Employment</Link>
+                <Link to="/library">Library</Link>
+              </Stack>
+
+              <Stack
+                direction="horizontal"
+                alignHorizontal="right"
+                spacing="sm"
+              >
+                <Link to="#" onClick={toggleBlogMobile}>
+                  Blog
+                </Link>
+                <Link to="#" onClick={toggleUtilitiesMobile}>
+                  Utilities
+                </Link>
+              </Stack>
+            </Stack>
           </div>
         </div>
       ) : null}
+
       {showBlog ? (
         <div className={styles.subheader}>
           <div className={styles.subheaderContent}>
-            <Spacing mY={20}>
-              <Grid alignRows="auto" rowGap={10}>
-                <Grid rowItem={[1, 4]}>
-                  <Grid
-                    alignColumns="auto auto auto"
-                    justifyContent="end"
-                    columnGap={10}
-                  >
-                    <Grid columnItem={[1, 3]}>
-                      <Link to="/blog/instant-gram" onClick={resetHeader}>
-                        Instant Gram
-                      </Link>
-                    </Grid>
-                    <Grid columnItem={[2, 3]}>
-                      <Link to="/blog/sport" onClick={resetHeader}>
-                        Sport
-                      </Link>
-                    </Grid>
-                    <Grid columnItem={[3, 3]}>
-                      <Link to="/blog/brittons-foodrc" onClick={resetHeader}>
-                        BrittonsFoodRC
-                      </Link>
-                    </Grid>
-                  </Grid>
-                </Grid>
-                <Grid rowItem={[2, 4]}>
-                  <Grid
-                    alignColumns="auto auto"
-                    justifyContent="end"
-                    columnGap={10}
-                  >
-                    <Grid columnItem={[1, 2]}>
-                      <Link to="/blog/allroad" onClick={resetHeader}>
-                        allroad
-                      </Link>
-                    </Grid>
-                    <Grid columnItem={[2, 2]}>
-                      <Link to="/blog/gentlemen-who-cafe" onClick={resetHeader}>
-                        Gentlemen Who Caf&eacute;
-                      </Link>
-                    </Grid>
-                  </Grid>
-                </Grid>
-                <Grid rowItem={[3, 4]}>
-                  <Grid
-                    alignColumns="auto auto auto"
-                    justifyContent="end"
-                    columnGap={10}
-                  >
-                    <Grid columnItem={[1, 3]}>
-                      <Link to="/blog/ricing" onClick={resetHeader}>
-                        Ricing
-                      </Link>
-                    </Grid>
-                    <Grid columnItem={[2, 3]}>
-                      <Link to="/blog/think-flow" onClick={resetHeader}>
-                        ThinkFlow
-                      </Link>
-                    </Grid>
-                    <Grid columnItem={[3, 3]}>
-                      <Link to="/blog/founding-fathers" onClick={resetHeader}>
-                        Founding Fathers
-                      </Link>
-                    </Grid>
-                  </Grid>
-                </Grid>
-                <Grid rowItem={[4, 4]}>
-                  <Grid
-                    alignColumns="auto auto auto"
-                    justifyContent="end"
-                    columnGap={10}
-                  >
-                    <Grid columnItem={[1, 3]}>
-                      <Link to="/blog/media" onClick={resetHeader}>
-                        Media
-                      </Link>
-                    </Grid>
-                    <Grid columnItem={[2, 3]}>
-                      <Link to="/blog/miami-vice" onClick={resetHeader}>
-                        Miami Vice
-                      </Link>
-                    </Grid>
-                    <Grid columnItem={[3, 3]}>
-                      <Link to="/blog/graphic-design" onClick={resetHeader}>
-                        Graphic Design
-                      </Link>
-                    </Grid>
-                  </Grid>
-                </Grid>
-              </Grid>
-            </Spacing>
+            <Stack direction="vertical" spacing="2xs">
+              <Stack
+                direction="horizontal"
+                alignHorizontal="right"
+                spacing="sm"
+              >
+                <Link to="/blog/instant-gram" onClick={resetHeader}>
+                  Instant Gram
+                </Link>
+                <Link to="/blog/sport" onClick={resetHeader}>
+                  Sport
+                </Link>
+                <Link to="/blog/brittons-foodrc" onClick={resetHeader}>
+                  BrittonsFoodRC
+                </Link>
+              </Stack>
+
+              <Stack
+                direction="horizontal"
+                alignHorizontal="right"
+                spacing="sm"
+              >
+                <Link to="/blog/allroad" onClick={resetHeader}>
+                  allroad
+                </Link>
+                <Link to="/blog/gentlemen-who-cafe" onClick={resetHeader}>
+                  Gentlemen Who Caf&eacute;
+                </Link>
+              </Stack>
+
+              <Stack
+                direction="horizontal"
+                alignHorizontal="right"
+                spacing="sm"
+              >
+                <Link to="/blog/ricing" onClick={resetHeader}>
+                  Ricing
+                </Link>
+                <Link to="/blog/think-flow" onClick={resetHeader}>
+                  ThinkFlow
+                </Link>
+                <Link to="/blog/founding-fathers" onClick={resetHeader}>
+                  Founding Fathers
+                </Link>
+              </Stack>
+
+              <Stack
+                direction="horizontal"
+                alignHorizontal="right"
+                spacing="sm"
+              >
+                <Link to="/blog/media" onClick={resetHeader}>
+                  Media
+                </Link>
+                <Link to="/blog/miami-vice" onClick={resetHeader}>
+                  Miami Vice
+                </Link>
+                <Link to="/blog/graphic-design" onClick={resetHeader}>
+                  Graphic Design
+                </Link>
+              </Stack>
+            </Stack>
           </div>
         </div>
       ) : null}
+
       {showUtilities ? (
         <div className={styles.subheader}>
           <div className={styles.subheaderContent}>
-            <Spacing mY={20}>
-              <Grid
-                alignColumns="auto auto"
-                justifyContent="end"
-                columnGap={10}
-              >
-                <Grid columnItem={[1, 2]}>
-                  <Link to="/utilities/weather" onClick={resetHeader}>
-                    Weather
-                  </Link>
-                </Grid>
-                <Grid columnItem={[2, 2]}>
-                  <Link to="/utilities/conquest" onClick={resetHeader}>
-                    Conquest
-                  </Link>
-                </Grid>
-              </Grid>
-            </Spacing>
+            <Stack direction="horizontal" alignHorizontal="right" spacing="sm">
+              <Link to="/utilities/weather" onClick={resetHeader}>
+                Weather
+              </Link>
+              <Link to="/utilities/conquest" onClick={resetHeader}>
+                Conquest
+              </Link>
+            </Stack>
           </div>
         </div>
       ) : null}
-    </>
+    </div>
   );
 };

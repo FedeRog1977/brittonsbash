@@ -2,55 +2,41 @@ import styles from './footer.module.scss';
 import { Spacing, Grid, Typography, Stack } from '../../basics';
 import { FC } from 'react';
 import { SpacingTemp } from '../../basics/spacing-temp';
+import { GridTemp } from '../../basics/grid-temp/grid';
 
 export const Footer: FC = () => (
   <footer className={styles.footer}>
     <SpacingTemp padding="xl">
       <Stack direction="vertical" alignHorizontal="center" spacing="md">
-        <Grid
-          alignColumns="auto auto"
-          columnGap={15}
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Grid columnItem={[1, 2]}>
-            {/* TODO: make image component */}
-            <img
-              src="https://lewisbritton.com/images/logo/bash-logo.png"
-              alt="logo"
-              style={{ height: '48px' }}
-            />
-          </Grid>
-          <Grid columnItem={[2, 2]}>
-            <Grid alignRows="auto auto" justifyItems="start">
-              <div className={styles.footerLogo}>BrittonsBashRC</div>
-              <Typography variant="body" element="code" color="lightGrey">
-                brittonsbash.com
-              </Typography>
-            </Grid>
-          </Grid>
-        </Grid>
+        <Stack direction="horizontal" alignVertical="center" spacing="sm">
+          {/* TODO: make image component */}
+          <img
+            src="https://lewisbritton.com/images/logo/bash-logo.png"
+            alt="logo"
+            style={{ height: '48px' }}
+          />
 
-        <Grid
-          alignColumns="auto auto"
-          columnGap={10}
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Grid columnItem={[1, 2]}>
-            {/* TODO: make image component */}
-            <img
-              src="https://lewisbritton.com/images/monero/xmr.svg"
-              alt="xmr"
-              style={{ height: '15px' }}
-            />
-          </Grid>
-          <Grid columnItem={[2, 2]}>
-            <Typography variant="body" color="lightGrey">
-              Monero Donations
+          <Stack direction="vertical" alignHorizontal="left">
+            <div className={styles.footerLogo}>BrittonsBashRC</div>
+
+            <Typography variant="body" element="code" color="lightGrey">
+              brittonsbash.com
             </Typography>
-          </Grid>
-        </Grid>
+          </Stack>
+        </Stack>
+
+        <Stack direction="horizontal" alignVertical="center" spacing="sm">
+          {/* TODO: make image component */}
+          <img
+            src="https://lewisbritton.com/images/monero/xmr.svg"
+            alt="xmr"
+            style={{ height: '15px' }}
+          />
+
+          <Typography variant="body" color="lightGrey">
+            Monero Donations
+          </Typography>
+        </Stack>
 
         <Typography variant="footnote" element="code" color="lightGrey">
           <>
