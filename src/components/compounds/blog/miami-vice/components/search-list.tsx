@@ -1,4 +1,4 @@
-import { Button } from '../../../../bash-blocks';
+import { Button, Stack } from '../../../../bash-blocks';
 import { generateUniqueKey, useScreenWidth } from '../../../../../utils';
 import { FC } from 'react';
 
@@ -15,7 +15,12 @@ export const SearchList: FC<SearchListProps> = ({ funcSelect, items }) => {
   const { isMobile } = useScreenWidth();
 
   return (
-    <>
+    <Stack
+      direction={isMobile ? 'vertical' : 'horizontal'}
+      alignHorizontal="center"
+      spacing="md"
+      wrap
+    >
       {items.map(({ heading, subHeading }, index) => (
         <Button
           key={generateUniqueKey(index)}
@@ -30,10 +35,9 @@ export const SearchList: FC<SearchListProps> = ({ funcSelect, items }) => {
           content={heading}
           subContent={subHeading}
           subContentTop
-          width="quarter"
           padding="coarse"
         />
       ))}
-    </>
+    </Stack>
   );
 };
