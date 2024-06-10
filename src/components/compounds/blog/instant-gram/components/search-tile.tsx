@@ -7,6 +7,8 @@ import {
 import { FC, useState } from 'react';
 import { SearchList } from './search-list';
 import { BigSearch } from '../../../../bash-blocks';
+import { GridTemp } from '../../../../bash-blocks/basics/grid-temp/grid';
+import { GridItemTemp } from '../../../../bash-blocks/basics/grid-temp/grid-item';
 
 type SearchTileProps = {
   url?: string;
@@ -63,82 +65,102 @@ export const SearchTile: FC<SearchTileProps> = ({
           placeholder="Lookup Events"
         />
 
-        <Stack direction="horizontal" alignHorizontal="apart" wrap>
-          <Button
-            variant="clear"
-            typeVariant={isMobile ? 't1' : 't2'}
-            typeColor={Boolean(showElement && is2024) ? 'lightBlue' : undefined}
-            content="2024"
-            subContent="Season 5"
-            subContentTop={isMobile}
-            value="2024"
-            func={() => {
-              funcCategory('2024');
-              setShowElement(!showElement);
-              setParsedEventData(events[2024]);
-            }}
-          />
+        <GridTemp alignHorizontal="left">
+          <GridItemTemp xs={3}>
+            <Button
+              variant="clear"
+              typeVariant={isMobile ? 't1' : 't2'}
+              typeColor={
+                Boolean(showElement && is2024) ? 'lightBlue' : undefined
+              }
+              content="2024"
+              subContent="Season 5"
+              subContentTop={isMobile}
+              value="2024"
+              func={() => {
+                funcCategory('2024');
+                setShowElement(!showElement);
+                setParsedEventData(events[2024]);
+              }}
+            />
+          </GridItemTemp>
 
-          <Button
-            variant="clear"
-            typeVariant={isMobile ? 't1' : 't2'}
-            typeColor={Boolean(showElement && is2023) ? 'lightBlue' : undefined}
-            content="2023"
-            subContent="Season 4"
-            subContentTop={isMobile}
-            value="2023"
-            func={() => {
-              funcCategory('2023');
-              setShowElement(!showElement);
-              setParsedEventData(events[2023]);
-            }}
-          />
+          <GridItemTemp xs={3}>
+            <Button
+              variant="clear"
+              typeVariant={isMobile ? 't1' : 't2'}
+              typeColor={
+                Boolean(showElement && is2023) ? 'lightBlue' : undefined
+              }
+              content="2023"
+              subContent="Season 4"
+              subContentTop={isMobile}
+              value="2023"
+              func={() => {
+                funcCategory('2023');
+                setShowElement(!showElement);
+                setParsedEventData(events[2023]);
+              }}
+            />
+          </GridItemTemp>
 
-          <Button
-            variant="clear"
-            typeVariant={isMobile ? 't1' : 't2'}
-            typeColor={Boolean(showElement && is2022) ? 'lightBlue' : undefined}
-            content="2022"
-            subContent="Season 3"
-            subContentTop={isMobile}
-            value="2022"
-            func={() => {
-              funcCategory('2022');
-              setShowElement(!showElement);
-              setParsedEventData(events[2022]);
-            }}
-          />
+          <GridItemTemp xs={3}>
+            <Button
+              variant="clear"
+              typeVariant={isMobile ? 't1' : 't2'}
+              typeColor={
+                Boolean(showElement && is2022) ? 'lightBlue' : undefined
+              }
+              content="2022"
+              subContent="Season 3"
+              subContentTop={isMobile}
+              value="2022"
+              func={() => {
+                funcCategory('2022');
+                setShowElement(!showElement);
+                setParsedEventData(events[2022]);
+              }}
+            />
+          </GridItemTemp>
 
-          <Button
-            variant="clear"
-            typeVariant={isMobile ? 't1' : 't2'}
-            typeColor={Boolean(showElement && is2021) ? 'lightBlue' : undefined}
-            content="2021"
-            subContent="Season 2"
-            subContentTop={isMobile}
-            value="2021"
-            func={() => {
-              funcCategory('2021');
-              setShowElement(!showElement);
-              setParsedEventData(events[2021]);
-            }}
-          />
+          <GridItemTemp xs={3}>
+            <Button
+              variant="clear"
+              typeVariant={isMobile ? 't1' : 't2'}
+              typeColor={
+                Boolean(showElement && is2021) ? 'lightBlue' : undefined
+              }
+              content="2021"
+              subContent="Season 2"
+              subContentTop={isMobile}
+              value="2021"
+              func={() => {
+                funcCategory('2021');
+                setShowElement(!showElement);
+                setParsedEventData(events[2021]);
+              }}
+            />
+          </GridItemTemp>
 
-          <Button
-            variant="clear"
-            typeVariant={isMobile ? 't1' : 't2'}
-            typeColor={Boolean(showElement && is2020) ? 'lightBlue' : undefined}
-            content="2020"
-            subContent="Season 1"
-            subContentTop={isMobile}
-            value="2020"
-            func={() => {
-              funcCategory('2020');
-              setShowElement(!showElement);
-              setParsedEventData(events[2020]);
-            }}
-          />
-        </Stack>
+          <GridItemTemp xs={3}>
+            <Button
+              variant="clear"
+              typeVariant={isMobile ? 't1' : 't2'}
+              typeColor={
+                Boolean(showElement && is2020) ? 'lightBlue' : undefined
+              }
+              content="2020"
+              subContent="Season 1"
+              subContentTop={isMobile}
+              value="2020"
+              func={() => {
+                funcCategory('2020');
+                setShowElement(!showElement);
+                setParsedEventData(events[2020]);
+              }}
+            />
+          </GridItemTemp>
+        </GridTemp>
 
         {showElement ? (
           <SearchList

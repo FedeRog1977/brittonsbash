@@ -1,6 +1,8 @@
-import { Button, Stack } from '../../../../bash-blocks';
+import { Button, Flex, FlexItem, Stack } from '../../../../bash-blocks';
 import { generateUniqueKey, useScreenWidth } from '../../../../../utils';
 import { FC } from 'react';
+import { GridTemp } from '../../../../bash-blocks/basics/grid-temp/grid';
+import { GridItemTemp } from '../../../../bash-blocks/basics/grid-temp/grid-item';
 
 type SearchListProps = {
   url?: string;
@@ -12,38 +14,26 @@ type SearchListProps = {
   }[];
 };
 
-export const SearchList: FC<SearchListProps> = ({ url, funcSelect, items }) => {
-  const { isMobile } = useScreenWidth();
-
-  return (
-    <Stack
-      direction={isMobile ? 'vertical' : 'horizontal'}
-      alignHorizontal="center"
-      spacing="md"
-      wrap
-    >
-      {items.map(({ id, prefix, names }, index) => (
+export const SearchList: FC<SearchListProps> = ({ url, funcSelect, items }) => (
+  // TODO: add justifyItems for Flex / Grid item center align here
+  <Flex direction="horizontal" alignHorizontal="center">
+    {items.map(({ id, prefix, names }, index) => (
+      <FlexItem basis={{ xs: 12, lg: 3 }}>
         <Button
           key={generateUniqueKey(index)}
           variant="clear"
-          typeVariant={isMobile ? 'h4' : 'body'}
+          typeVariant="body"
           // link={{ url: `#${url}#result` }}
           value={names.join(' - ')}
           func={funcSelect}
-          content={
-            // TODO: sort formatting of this
-            <>
-              {prefix ? prefix + ':' : null}
-              {names.map((name, index) => (
-                <div key={generateUniqueKey(index)}>{name}</div>
-              ))}
-            </>
-          }
+          width="full"
+          // TODO: sort this formatting
+          content={`${prefix ?? ''}\n${names.map((name) => [name].join('\n'))}`}
           subContent={id.slice(-2)}
           subContentTop
           padding="coarse"
         />
-      ))}
-    </Stack>
-  );
-};
+      </FlexItem>
+    ))}
+  </Flex>
+);

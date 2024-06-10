@@ -1,10 +1,6 @@
 import { FC } from 'react';
-import {
-  generateUniqueKey,
-  getGridAlign,
-  useScreenWidth,
-} from '../../../../utils';
-import { Grid, Spacing, Stack, Typography } from '../../basics';
+import { generateUniqueKey } from '../../../../utils';
+import { Stack, Typography } from '../../basics';
 import styles from './table.module.scss';
 import { Column } from './types/column';
 
