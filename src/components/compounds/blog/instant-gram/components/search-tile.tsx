@@ -66,7 +66,7 @@ export const SearchTile: FC<SearchTileProps> = ({
           placeholder="Lookup Events"
         />
 
-        {/* TODO: maybe add other justify props to SPacing or make FlexBase consistent with Grid */}
+        {/* TODO: maybe add other justify props to Spacing or make FlexBase consistent with Grid */}
         <Stack direction="horizontal" alignHorizontal="apart" wrap>
           <Button
             variant="clear"
