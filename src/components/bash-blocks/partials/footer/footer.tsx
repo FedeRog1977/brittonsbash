@@ -1,8 +1,7 @@
 import styles from './footer.module.scss';
-import { Spacing, Grid, Typography, Stack } from '../../basics';
+import { Typography, Stack } from '../../basics';
 import { FC } from 'react';
 import { SpacingTemp } from '../../basics/spacing-temp';
-import { GridTemp } from '../../basics/grid-temp/grid';
 
 export const Footer: FC = () => (
   <footer className={styles.footer}>

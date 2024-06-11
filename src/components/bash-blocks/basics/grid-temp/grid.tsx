@@ -9,11 +9,37 @@ import {
 import { JustifyConfig } from '../../reference/types/justify-config.js';
 import { AlignConfig } from '../../reference/types/align-config.js';
 
+// Reminder: https://developer.mozilla.org/en-US/docs/Web/CSS/grid
+// Reminder: https://css-tricks.com/snippets/css/complete-guide-grid/
+
+// Typical Grid Styling
+
+// grid {
+//   display: 'grid',
+//   gridTemplateColumns: '{{n}}fr, ..., {{n}}fr';
+//   gridTemplateRows: '{{n}}fr, ..., {{n}}fr';
+//   columnGap: '{{n}}px';
+//   rowGap: '{{n}}px';
+//   justifyContent: '{{value}}'; // grid x-axis
+//   alignContent: '{{value}}'; // grid y-axis
+//   justifyItems: '{{value}}'; // item x-axis
+//   alignItems: '{{value}}'; // item y-axis
+// }
+
+// gridItem {
+//   grid-column: '1 / N';
+//   grid-row: '1 / N';
+//   width: '{{n}}px';
+//   height '{{n}}px';
+// }
+
 export type GridProps = {
   children: ReactNode;
   spacing?: SpacingConfig;
-  alignHorizontal?: JustifyConfig;
-  alignVertical?: AlignConfig;
+  justifyContent?: JustifyConfig; // x-axis use
+  justifyItems?: JustifyConfig;
+  alignContent?: AlignConfig;
+  alignItems?: AlignConfig; // y-axis use
 };
 
 const defaultSpacing: SpacingConfig = { xs: 'sm' };
@@ -22,8 +48,10 @@ const defaultSpacing: SpacingConfig = { xs: 'sm' };
 export const GridTemp: FC<GridProps> = ({
   children,
   spacing = defaultSpacing,
-  alignHorizontal = 'left',
-  alignVertical = 'top',
+  justifyContent = 'left',
+  justifyItems,
+  alignItems = 'top',
+  alignContent,
 }) => {
   const classNames = cx(
     styles.grid,
@@ -32,9 +60,21 @@ export const GridTemp: FC<GridProps> = ({
       'justify',
       'content',
       styles,
-      alignHorizontal
+      justifyContent
     ),
-    ...getResponsiveAlignmentClassNames('align', 'items', styles, alignVertical)
+    ...getResponsiveAlignmentClassNames(
+      'justify',
+      'items',
+      styles,
+      justifyItems
+    ),
+    ...getResponsiveAlignmentClassNames(
+      'align',
+      'content',
+      styles,
+      alignContent
+    ),
+    ...getResponsiveAlignmentClassNames('align', 'items', styles, alignItems)
   );
 
   return <div className={classNames}>{children}</div>;

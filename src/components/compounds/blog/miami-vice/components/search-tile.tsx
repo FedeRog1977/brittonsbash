@@ -1,11 +1,4 @@
-import {
-  Button,
-  Grid,
-  Spacing,
-  Stack,
-  Tile,
-  VideoTileProps,
-} from '../../../../bash-blocks';
+import { Button, Stack, Tile, VideoTileProps } from '../../../../bash-blocks';
 import { useScreenWidth, useShowElement } from '../../../../../utils';
 import { FC, useState } from 'react';
 import { SearchList } from './search-list';

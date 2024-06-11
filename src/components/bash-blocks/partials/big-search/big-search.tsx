@@ -1,12 +1,8 @@
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FC } from 'react';
-import {
-  generateUniqueKey,
-  getGridAlign,
-  useScreenWidth,
-} from '../../../../utils';
-import { Grid, Search, SearchList, Spacing, Stack } from '../../basics';
+import { generateUniqueKey, useScreenWidth } from '../../../../utils';
+import { Search, SearchList, Stack } from '../../basics';
 import { Button } from '../button';
 import { SearchProps } from '../../basics';
 import { GridTemp } from '../../basics/grid-temp/grid';
@@ -30,13 +26,12 @@ export const BigSearch: FC<BigSearchProps> = ({
   selects,
 }) => {
   const { isMobile } = useScreenWidth();
-  const handleAlign = getGridAlign(selects ?? []);
 
   return (
     <Stack direction="vertical" spacing="md">
       <GridTemp
-        alignHorizontal="center"
-        alignVertical="center"
+        justifyContent="center"
+        alignItems="center"
         spacing={{ xs: 'xs', lg: 'md' }}
       >
         <GridItemTemp xs={isMobile ? 8 : 6}>
@@ -54,7 +49,7 @@ export const BigSearch: FC<BigSearchProps> = ({
       </GridTemp>
 
       {selects ? (
-        <GridTemp alignHorizontal="center" alignVertical="center" spacing="xs">
+        <GridTemp justifyContent="center" alignItems="center" spacing="xs">
           {selects.map(({ funcSelect, content, placeholder }, index) => (
             <GridItemTemp key={generateUniqueKey(index)} xs={3}>
               <SearchList

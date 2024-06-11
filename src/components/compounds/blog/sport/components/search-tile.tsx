@@ -26,7 +26,7 @@ export const SearchTile: FC<SearchTileProps> = ({
 
   return (
     <Tile type="solid" gap>
-      <Stack direction="horizontal" alignHorizontal="apart">
+      <Stack direction="horizontal" alignHorizontal="apart" wrap>
         <Button
           variant="clear"
           typeVariant="t2"

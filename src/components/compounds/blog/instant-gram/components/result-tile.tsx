@@ -63,7 +63,7 @@ export const ResultTile: FC<ResultTileProps> = ({
             refactoredEvent.names.map((name, index) => (
               <GridTemp
                 key={generateUniqueKey(index)}
-                alignHorizontal="center"
+                justifyContent="center"
                 spacing="xs"
               >
                 {/* <GridItemTemp xs={3}> */}
@@ -312,7 +312,7 @@ export const ResultTile: FC<ResultTileProps> = ({
           {isMobile ? (
             <ImageSlider slides={refactoredEvent.images} />
           ) : (
-            <GridTemp alignHorizontal="even">
+            <GridTemp justifyContent="even">
               <Button
                 variant="clear"
                 typeColor={showMatrix ? 'lightBlue' : undefined}

@@ -1,3 +1,4 @@
+// TODO: discontinue
 export type Padding = {
   pT?: number | number;
   pB?: number | number;

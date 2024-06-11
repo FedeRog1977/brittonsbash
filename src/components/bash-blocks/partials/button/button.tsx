@@ -60,8 +60,8 @@ export const Button: FC<ButtonProps> = ({
   return (
     <button className={classNames} onClick={func} value={value}>
       <GridTemp
-        alignHorizontal="between"
-        alignVertical="center"
+        justifyContent="between"
+        alignItems="center"
         spacing={icon ? 'xs' : 'none'}
       >
         <GridItemTemp xs={icon ? 2 : 12}>
@@ -72,7 +72,7 @@ export const Button: FC<ButtonProps> = ({
             spacing="xs"
           >
             {subContent ? (
-              <Typography variant="body" color="lightGrey" textAlign="right">
+              <Typography variant="body" color="lightGrey" textAlign="center">
                 {subContent}
               </Typography>
             ) : null}
@@ -81,7 +81,7 @@ export const Button: FC<ButtonProps> = ({
               variant={typeVariant}
               color={typeColor}
               fontFamily={typeFontFamily}
-              textAlign="left"
+              textAlign="center"
             >
               {content}
             </Typography>

@@ -14,26 +14,29 @@ type SearchListProps = {
   }[];
 };
 
-export const SearchList: FC<SearchListProps> = ({ url, funcSelect, items }) => (
-  // TODO: add justifyItems for Flex / Grid item center align here
-  <Flex direction="horizontal" alignHorizontal="center">
-    {items.map(({ id, prefix, names }, index) => (
-      <FlexItem basis={{ xs: 12, lg: 3 }}>
-        <Button
-          key={generateUniqueKey(index)}
-          variant="clear"
-          typeVariant="body"
-          // link={{ url: `#${url}#result` }}
-          value={names.join(' - ')}
-          func={funcSelect}
-          width="full"
-          // TODO: sort this formatting
-          content={`${prefix ?? ''}\n${names.map((name) => [name].join('\n'))}`}
-          subContent={id.slice(-2)}
-          subContentTop
-          padding="coarse"
-        />
-      </FlexItem>
-    ))}
-  </Flex>
-);
+export const SearchList: FC<SearchListProps> = ({ url, funcSelect, items }) => {
+  const { isMobile } = useScreenWidth();
+
+  return (
+    <GridTemp justifyContent="even" alignItems="center">
+      {items.map(({ id, prefix, names }, index) => (
+        <GridItemTemp xs={12} lg={3}>
+          <Button
+            key={generateUniqueKey(index)}
+            variant="clear"
+            typeVariant={isMobile ? 'h4' : 'body'}
+            // link={{ url: `#${url}#result` }}
+            value={names.join(' - ')}
+            func={funcSelect}
+            width="full"
+            // TODO: sort this formatting
+            content={`${prefix ?? ''}\n${names.map((name) => [name].join('\n'))}`}
+            subContent={id.slice(-2)}
+            subContentTop
+            padding="coarse"
+          />
+        </GridItemTemp>
+      ))}
+    </GridTemp>
+  );
+};

@@ -28,7 +28,7 @@ export const TitleTile: FC<TitleTileProps> = ({
         ? titleItems.map(({ content, subContent }, index) => (
             <GridTemp
               key={generateUniqueKey(index)}
-              alignHorizontal="center"
+              justifyContent="center"
               spacing="xs"
             >
               <GridItemTemp xs={5}>
@@ -49,7 +49,7 @@ export const TitleTile: FC<TitleTileProps> = ({
         ? bodyItems.map(({ content, subContent }, index) => (
             <GridTemp
               key={generateUniqueKey(index)}
-              alignHorizontal="center"
+              justifyContent="center"
               spacing="xs"
             >
               <GridItemTemp xs={5}>

@@ -9,8 +9,6 @@ export * from './color';
 export * from './column-span';
 export * from './column-span-config';
 export * from './img';
-export * from './items-adv';
-export * from './items';
 export * from './justify-config';
 export * from './margin';
 export * from './padding';

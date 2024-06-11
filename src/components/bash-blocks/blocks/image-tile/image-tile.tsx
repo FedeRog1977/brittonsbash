@@ -2,10 +2,9 @@ import { FC, ReactElement } from 'react';
 import {
   formatArticle,
   generateUniqueKey,
-  getGridAlign,
   useScreenWidth,
 } from '../../../../utils';
-import { Grid, Stack, Tile, Typography } from '../../basics';
+import { Stack, Tile, Typography } from '../../basics';
 import { Article, Cta, CtaProps } from '../../partials';
 import { GradientProps } from '../../basics';
 import { ArticleProps } from '../../partials';
@@ -46,7 +45,7 @@ export const ImageTile: FC<ImageTileProps> = ({
       img={isMobile ? imgMobile : imgDesktop}
       gradient={gradient}
     >
-      <GridTemp alignHorizontal="center" alignVertical="center">
+      <GridTemp justifyContent="center" alignItems="center">
         <GridItemTemp xs={12} md={7}>
           <Typography variant="h4" color={invertedTypeVariant}>
             {subHeading}
