@@ -1,0 +1,43 @@
+import { Button, Stack } from '../../../../bash-blocks';
+import { generateUniqueKey, useScreenWidth } from '../../../../../utils';
+import { FC } from 'react';
+import { Grid } from '../../../../bash-blocks/basics/grid/grid';
+import { GridItem } from '../../../../bash-blocks/basics/grid/grid-item';
+
+export type SearchListProps = {
+  funcSelect: (() => void) | ((e: any) => void);
+  items: {
+    heading: string;
+    subHeading?: string;
+    video: string;
+  }[];
+};
+
+export const SearchList: FC<SearchListProps> = ({ funcSelect, items }) => {
+  const { isMobile } = useScreenWidth();
+
+  return (
+    <Grid justifyContent="even" alignItems="center">
+      {items.map(({ heading, subHeading }, index) => (
+        <GridItem xs={12} lg={3}>
+          <Button
+            key={generateUniqueKey(index)}
+            variant="clear"
+            typeVariant={isMobile ? 'h4' : 'body'}
+            value={heading}
+            func={funcSelect}
+            // () => {
+            //     funcSelect
+            //     window.location.href = '#/blog/miami-vice/#result'
+            // }
+            width="full"
+            content={heading}
+            subContent={subHeading}
+            subContentTop
+            padding="coarse"
+          />
+        </GridItem>
+      ))}
+    </Grid>
+  );
+};

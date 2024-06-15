@@ -1,15 +1,15 @@
 # Subject Areas
 
--   Bible
--   `Node.js`
--   Atomic Design
--   React
--   React Router
--   Storybook
--   React Testing Library
--   Cypress
--   Deployment
--   Additional Packages
+- Bible
+- `Node.js`
+- Atomic Design
+- React
+- React Router
+- Storybook
+- React Testing Library
+- Cypress
+- Deployment
+- Additional Packages
 
 # Bible
 
@@ -32,15 +32,15 @@ npm -v
 
 Update:
 
--   List `Node.js` versions in use and use: `nvm ls`
--   List available versions of `Node.js`: `nvm ls-remote`
--   Install version of choice: `nvm install <x.y.z>`
--   Choose this version using `nvm`: `nvm use <x.y.z>`
+- List `Node.js` versions in use and use: `nvm ls`
+- List available versions of `Node.js`: `nvm ls-remote`
+- Install version of choice: `nvm install <x.y.z>`
+- Choose this version using `nvm`: `nvm use <x.y.z>`
 
 Notes:
 
--   [Guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
--   [Update](https://stackoverflow.com/questions/8191459/how-do-i-update-node-js)
+- [Guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+- [Update](https://stackoverflow.com/questions/8191459/how-do-i-update-node-js)
 
 ## `pnpm`
 
@@ -77,9 +77,9 @@ corepack prepare pnpm@<version> --activate
 
 Notes:
 
--   [Guide](https://pnpm.io/installation)
--   [Run scripts](https://pnpm.io/cli/run)
--   `pnpm` also accepts variables, prefacing the command
+- [Guide](https://pnpm.io/installation)
+- [Run scripts](https://pnpm.io/cli/run)
+- `pnpm` also accepts variables, prefacing the command
 
 # Atomic Design
 
@@ -87,15 +87,15 @@ Essentially, a method of file arrangement in a repository.
 
 To ensure the finest of code structure, it is recommended that you install the following extensions if you are using Visual Studio Code (VSCode) rather than Vim:
 
--   ES7+ React/Redux/React-Native
--   ESLint
--   Prettier
--   Code Spell Checker
--   Vim
+- ES7+ React/Redux/React-Native
+- ESLint
+- Prettier
+- Code Spell Checker
+- Vim
 
 Then, configure your **User** `settings.json` to your desired standard. You can shortcut to this file using `shift` + `ctrl/cmd` + `P` from VSCode.
 
--   [File Structure](https://atomicdesign.bradfrost.com/chapter-2/)
+- [File Structure](https://atomicdesign.bradfrost.com/chapter-2/)
 
 # React
 
@@ -113,18 +113,18 @@ npx create-react-app <app-name> --template typescript
 
 Basic scripts:
 
--   Start on `http://localhost:3000`: `npm start`
--   Run tests: `npm test`
--   Build: `npm run build`
--   Eject: `npm run eject`
+- Start on `http://localhost:3000`: `npm start`
+- Run tests: `npm test`
+- Build: `npm run build`
+- Eject: `npm run eject`
 
 Typescript notes:
 
--   [TypeScriptLang.org](https://www.typescriptlang.org/)
--   [Adding TypeScript to React App](https://create-react-app.dev/docs/adding-typescript/)
--   ['Cheat Sheet'](https://react-typescript-cheatsheet.netlify.app/docs/basic/setup)
--   [Solo Let's Play Walkthrough](https://2ality.com/2018/04/type-notation-typescript.html)
--   [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html)
+- [TypeScriptLang.org](https://www.typescriptlang.org/)
+- [Adding TypeScript to React App](https://create-react-app.dev/docs/adding-typescript/)
+- ['Cheat Sheet'](https://react-typescript-cheatsheet.netlify.app/docs/basic/setup)
+- [Solo Let's Play Walkthrough](https://2ality.com/2018/04/type-notation-typescript.html)
+- [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html)
 
 # React Router
 
@@ -142,9 +142,9 @@ npm i react-router-dom
 
 Notes:
 
--   [Guide](https://reactrouter.com/en/6.6.1/start/overview)
--   [Practice guide](https://www.techomoro.com/how-to-create-a-multi-page-website-with-react-in-5-minutes/)
--   [Video tutorial](https://www.youtube.com/watch?v=Ul3y1LXxzdU)
+- [Guide](https://reactrouter.com/en/6.6.1/start/overview)
+- [Practice guide](https://www.techomoro.com/how-to-create-a-multi-page-website-with-react-in-5-minutes/)
+- [Video tutorial](https://www.youtube.com/watch?v=Ul3y1LXxzdU)
 
 # Storybook
 
@@ -170,7 +170,7 @@ npm run storybook
 
 Notes:
 
--   [Guide](https://storybook.js.org/docs/get-started/install)
+- [Guide](https://storybook.js.org/docs/get-started/install)
 
 # React Testing Library
 
@@ -206,14 +206,14 @@ npm install husky --save-dev
 
 Notes:
 
--   [Guide](https://testing-library.com/docs/react-testing-library/cheatsheet/)
--   [Running tests](https://create-react-app.dev/docs/running-tests/)
--   [`npm-test` guide](https://docs.npmjs.com/cli/v8/commands/npm-test)
--   [Jest](https://jestjs.io/docs/api)
--   [Video tutorial](https://www.youtube.com/watch?v=ML5egqL3YFE)
--   [Example](https://github.com/harblaith7/React-Testing-Library-Net-Ninja)
--   [Husky example](https://www.npmjs.com/package/husky)
--   [`.gitignore` snapshots](https://stackoverflow.com/questions/53230363/how-to-gitignore-snapshot-folders)
+- [Guide](https://testing-library.com/docs/react-testing-library/cheatsheet/)
+- [Running tests](https://create-react-app.dev/docs/running-tests/)
+- [`npm-test` guide](https://docs.npmjs.com/cli/v8/commands/npm-test)
+- [Jest](https://jestjs.io/docs/api)
+- [Video tutorial](https://www.youtube.com/watch?v=ML5egqL3YFE)
+- [Example](https://github.com/harblaith7/React-Testing-Library-Net-Ninja)
+- [Husky example](https://www.npmjs.com/package/husky)
+- [`.gitignore` snapshots](https://stackoverflow.com/questions/53230363/how-to-gitignore-snapshot-folders)
 
 # Cypress Testing
 
@@ -237,9 +237,9 @@ npx cypress run
 
 Notes:
 
--   [Cypress guide](https://docs.cypress.io/guides/overview/why-cypress#In-a-nutshell)
--   [Cypress for TypeScript](https://docs.cypress.io/guides/tooling/typescript-support#Install-TypeScript)
--   [Cypress documentation](https://docs.cypress.io/api/table-of-contents)
+- [Cypress guide](https://docs.cypress.io/guides/overview/why-cypress#In-a-nutshell)
+- [Cypress for TypeScript](https://docs.cypress.io/guides/tooling/typescript-support#Install-TypeScript)
+- [Cypress documentation](https://docs.cypress.io/api/table-of-contents)
 
 # Deployment
 
@@ -281,7 +281,7 @@ From GitHub desktop, `<gh-repo-name>` - Settings - Pages, ensure Source is set t
 
 Notes:
 
--   [Video guide](https://www.youtube.com/watch?v=1wDzEjXbblM&t=319s)
+- [Video guide](https://www.youtube.com/watch?v=1wDzEjXbblM&t=319s)
 
 ## Custom Domain
 
@@ -293,10 +293,10 @@ From here, navigate to your purchased domain, 'SET DNS HOST RECORDS', and 'EXTER
 
 In the 'Points to' field, add the four GitHub Pages IP addresses found in the [documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site). These are:
 
--   185.199.108.153
--   185.199.109.153
--   185.199.110.153
--   185.199.111.153
+- 185.199.108.153
+- 185.199.109.153
+- 185.199.110.153
+- 185.199.111.153
 
 Your job on your domain management service is done.
 
@@ -314,7 +314,7 @@ npm run deploy
 
 Navigate back to your GitHub Pages settings and re-run the DNS check. It should pass now. Leave this for a few minutes and your site should be available on the custom domain.
 
--   [Video guide](https://www.youtube.com/watch?v=K5DTIf-jWhk)
+- [Video guide](https://www.youtube.com/watch?v=K5DTIf-jWhk)
 
 # Application Servers
 
@@ -342,18 +342,18 @@ Example of prop spreading in classnames:
 
 ```ts
 const classNamesContainer = cx(
-    ...(textAlign ? [styles[`align${toUpperCase(textAlign)}`]] : []),
-    {
-        [styles.inline]: inline,
-        [styles[`paragraphMargins${isMobile ? 'Mobile' : 'Desktop'}`]]:
-            paragraphMargins,
-    }
+  ...(textAlign ? [styles[`align${toUpperCase(textAlign)}`]] : []),
+  {
+    [styles.inline]: inline,
+    [styles[`paragraphMargins${isMobile ? 'Mobile' : 'Desktop'}`]]:
+      paragraphMargins,
+  }
 );
 ```
 
 ... more to come ...
 
--   [Guide](https://www.npmjs.com/package/classnames)
+- [Guide](https://www.npmjs.com/package/classnames)
 
 ## Prettier
 
@@ -383,7 +383,7 @@ Format files:
 npx prettier --write .
 ```
 
--   [Guide](https://prettier.io/docs/en/install.html)
+- [Guide](https://prettier.io/docs/en/install.html)
 
 ## Markdown To JSX
 
@@ -393,7 +393,7 @@ Install:
 npm i markdown-to-jsx
 ```
 
--   [Guide](https://www.npmjs.com/package/markdown-to-jsx)
+- [Guide](https://www.npmjs.com/package/markdown-to-jsx)
 
 ## React Lazy Load Image Component
 
@@ -409,7 +409,7 @@ Add TypeScript support:
 npm install -D @types/react-lazy-load-image-component
 ```
 
--   [Guide](https://www.freecodecamp.org/news/how-to-lazy-load-images-in-react/)
+- [Guide](https://www.freecodecamp.org/news/how-to-lazy-load-images-in-react/)
 
 ## React Modal
 
@@ -425,7 +425,7 @@ Add TypeScript support:
 npm install -D @types/react-modal
 ```
 
--   [Guide](https://www.npmjs.com/package/react-modal)
+- [Guide](https://www.npmjs.com/package/react-modal)
 
 ## React Responsive Carousel
 
@@ -435,8 +435,8 @@ Install:
 npm install react-responsive-carousel --save
 ```
 
--   [Guide](https://www.npmjs.com/package/react-responsive-carousel?activeTab=readme)
--   [Guide](https://react-responsive-carousel.js.org/)
+- [Guide](https://www.npmjs.com/package/react-responsive-carousel?activeTab=readme)
+- [Guide](https://react-responsive-carousel.js.org/)
 
 ## React Leaflet
 
@@ -458,9 +458,9 @@ Add TypeScript support:
 npm install -D @types/leaflet
 ```
 
--   [Guide](https://react-leaflet.js.org/docs/api-map/)
--   [Video guide](https://www.youtube.com/watch?v=290VgjkLong)
--   [Using Ordnance Survey](https://stackoverflow.com/questions/74407099/use-ordinance-survey-map-tiles-in-react-leaflet)
+- [Guide](https://react-leaflet.js.org/docs/api-map/)
+- [Video guide](https://www.youtube.com/watch?v=290VgjkLong)
+- [Using Ordnance Survey](https://stackoverflow.com/questions/74407099/use-ordinance-survey-map-tiles-in-react-leaflet)
 
 ## Proj4 Leaflet
 
@@ -476,7 +476,7 @@ Add TypeScript support:
 npm install --save @types/proj4
 ```
 
--   [Guide](https://www.npmjs.com/package/proj4)
+- [Guide](https://www.npmjs.com/package/proj4)
 
 Install Proj4 Leaflet (for CRS):
 
@@ -490,4 +490,4 @@ Add TypeScript support:
 npm install --save @types/proj4leaflet
 ```
 
--   [Guide](https://kartena.github.io/Proj4Leaflet/#examples)
+- [Guide](https://kartena.github.io/Proj4Leaflet/#examples)

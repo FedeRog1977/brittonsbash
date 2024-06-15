@@ -1,1 +1,1 @@
-export * from './academia.content'
+export * from './academia';

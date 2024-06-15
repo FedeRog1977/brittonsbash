@@ -1,1 +1,1 @@
-export * from './miami-vice.content'
+export * from './miami-vice';

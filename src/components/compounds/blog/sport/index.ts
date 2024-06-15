@@ -1,1 +1,1 @@
-export * from './sport.component'
+export * from './sport';

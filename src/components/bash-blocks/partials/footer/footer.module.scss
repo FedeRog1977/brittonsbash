@@ -1,15 +1,15 @@
 @use '../../reference' as reference;
 
 .footer {
-    background-color: reference.$black-special;
-    text-align: center;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    color: reference.$light-grey;
+  background-color: reference.$black-special;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: reference.$light-grey;
 
-    &Logo {
-        font-family: Audi-Light;
-        font-size: 24px;
-    }
+  &Logo {
+    font-family: Audi-Light;
+    font-size: 24px;
+  }
 }

@@ -1,0 +1,37 @@
+@use '../../reference/' as reference;
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 100%;
+}
+
+@include reference.responsive-spacing('spacing') using ($spacing-variable) {
+  margin: -0.5 * $spacing-variable;
+
+  > * {
+    padding: 0.5 * $spacing-variable;
+  }
+}
+
+@include reference.responsive-alignment('justify') using ($justify-variable) {
+  @include reference.custom-attribute(
+    'Content',
+    'justify-content',
+    $justify-variable
+  );
+  @include reference.custom-attribute(
+    'Items',
+    'justify-items',
+    $justify-variable
+  );
+}
+
+@include reference.responsive-alignment('align') using ($align-variable) {
+  @include reference.custom-attribute(
+    'Content',
+    'align-content',
+    $align-variable
+  );
+  @include reference.custom-attribute('Items', 'align-items', $align-variable);
+}

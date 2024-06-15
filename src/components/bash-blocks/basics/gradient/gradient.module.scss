@@ -1,154 +1,154 @@
 @use '../../reference' as reference;
 
 .gradient {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 500;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 500;
 }
 
 .dark {
+  &20 {
+    &LeftAlign {
+      background: reference.$gradient-dark-20-left-right;
+
+      @media (max-width: reference.$screen-md) {
+        background: reference.$gradient-dark-20-bottom-top;
+      }
+    }
+
+    &RightAlign {
+      background: reference.$gradient-dark-20-right-left;
+
+      @media (max-width: reference.$screen-md) {
+        background: reference.$gradient-dark-20-bottom-top;
+      }
+    }
+  }
+
+  &40 {
+    &LeftAlign {
+      background: reference.$gradient-dark-40-left-right;
+
+      @media (max-width: reference.$screen-md) {
+        background: reference.$gradient-dark-40-bottom-top;
+      }
+    }
+
+    &RightAlign {
+      background: reference.$gradient-dark-40-right-left;
+
+      @media (max-width: reference.$screen-md) {
+        background: reference.$gradient-dark-40-bottom-top;
+      }
+    }
+  }
+
+  &60 {
+    &LeftAlign {
+      background: reference.$gradient-dark-60-left-right;
+
+      @media (max-width: reference.$screen-md) {
+        background: reference.$gradient-dark-60-bottom-top;
+      }
+    }
+
+    &RightAlign {
+      background: reference.$gradient-dark-60-right-left;
+
+      @media (max-width: reference.$screen-md) {
+        background: reference.$gradient-dark-60-bottom-top;
+      }
+    }
+  }
+
+  &Fill {
+    background: none;
+
     &20 {
-        &LeftAlign {
-            background: reference.$gradient-dark-20-left-right;
-
-            @media (max-width: reference.$screen-md) {
-                background: reference.$gradient-dark-20-bottom-top;
-            }
-        }
-
-        &RightAlign {
-            background: reference.$gradient-dark-20-right-left;
-
-            @media (max-width: reference.$screen-md) {
-                background: reference.$gradient-dark-20-bottom-top;
-            }
-        }
+      background-color: reference.$darker-grey-20;
     }
 
     &40 {
-        &LeftAlign {
-            background: reference.$gradient-dark-40-left-right;
-
-            @media (max-width: reference.$screen-md) {
-                background: reference.$gradient-dark-40-bottom-top;
-            }
-        }
-
-        &RightAlign {
-            background: reference.$gradient-dark-40-right-left;
-
-            @media (max-width: reference.$screen-md) {
-                background: reference.$gradient-dark-40-bottom-top;
-            }
-        }
+      background-color: reference.$darker-grey-40;
     }
 
     &60 {
-        &LeftAlign {
-            background: reference.$gradient-dark-60-left-right;
-
-            @media (max-width: reference.$screen-md) {
-                background: reference.$gradient-dark-60-bottom-top;
-            }
-        }
-
-        &RightAlign {
-            background: reference.$gradient-dark-60-right-left;
-
-            @media (max-width: reference.$screen-md) {
-                background: reference.$gradient-dark-60-bottom-top;
-            }
-        }
+      background-color: reference.$darker-grey-60;
     }
-
-    &Fill {
-        background: none;
-
-        &20 {
-            background-color: reference.$darker-grey-20;
-        }
-
-        &40 {
-            background-color: reference.$darker-grey-40;
-        }
-
-        &60 {
-            background-color: reference.$darker-grey-60;
-        }
-    }
+  }
 }
 
 .light {
+  &20 {
+    &LeftAlign {
+      background: reference.$gradient-light-20-left-right;
+
+      @media (max-width: reference.$screen-md) {
+        background: reference.$gradient-light-20-bottom-top;
+      }
+    }
+
+    &RightAlign {
+      background: reference.$gradient-light-20-right-left;
+
+      @media (max-width: reference.$screen-md) {
+        background: reference.$gradient-light-20-bottom-top;
+      }
+    }
+  }
+
+  &40 {
+    &LeftAlign {
+      background: reference.$gradient-light-40-left-right;
+
+      @media (max-width: reference.$screen-md) {
+        background: reference.$gradient-light-40-bottom-top;
+      }
+    }
+
+    &RightAlign {
+      background: reference.$gradient-light-40-right-left;
+
+      @media (max-width: reference.$screen-md) {
+        background: reference.$gradient-light-40-bottom-top;
+      }
+    }
+  }
+
+  &60 {
+    &LeftAlign {
+      background: reference.$gradient-light-60-left-right;
+
+      @media (max-width: reference.$screen-md) {
+        background: reference.$gradient-light-60-bottom-top;
+      }
+    }
+
+    &RightAlign {
+      background: reference.$gradient-light-60-right-left;
+
+      @media (max-width: reference.$screen-md) {
+        background: reference.$gradient-light-60-bottom-top;
+      }
+    }
+  }
+
+  &Fill {
+    background: none;
+
     &20 {
-        &LeftAlign {
-            background: reference.$gradient-light-20-left-right;
-
-            @media (max-width: reference.$screen-md) {
-                background: reference.$gradient-light-20-bottom-top;
-            }
-        }
-
-        &RightAlign {
-            background: reference.$gradient-light-20-right-left;
-
-            @media (max-width: reference.$screen-md) {
-                background: reference.$gradient-light-20-bottom-top;
-            }
-        }
+      background-color: reference.$white-20;
     }
 
     &40 {
-        &LeftAlign {
-            background: reference.$gradient-light-40-left-right;
-
-            @media (max-width: reference.$screen-md) {
-                background: reference.$gradient-light-40-bottom-top;
-            }
-        }
-
-        &RightAlign {
-            background: reference.$gradient-light-40-right-left;
-
-            @media (max-width: reference.$screen-md) {
-                background: reference.$gradient-light-40-bottom-top;
-            }
-        }
+      background-color: reference.$white-40;
     }
 
     &60 {
-        &LeftAlign {
-            background: reference.$gradient-light-60-left-right;
-
-            @media (max-width: reference.$screen-md) {
-                background: reference.$gradient-light-60-bottom-top;
-            }
-        }
-
-        &RightAlign {
-            background: reference.$gradient-light-60-right-left;
-
-            @media (max-width: reference.$screen-md) {
-                background: reference.$gradient-light-60-bottom-top;
-            }
-        }
+      background-color: reference.$white-60;
     }
-
-    &Fill {
-        background: none;
-
-        &20 {
-            background-color: reference.$white-20;
-        }
-
-        &40 {
-            background-color: reference.$white-40;
-        }
-
-        &60 {
-            background-color: reference.$white-60;
-        }
-    }
+  }
 }

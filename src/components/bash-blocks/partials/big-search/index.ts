@@ -1,1 +1,1 @@
-export * from './big-search.component'
+export * from './big-search';

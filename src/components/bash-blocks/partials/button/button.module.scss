@@ -1,109 +1,110 @@
 @use '../../reference' as reference;
 
 button {
+  border: 0 none !important;
+  margin: 0;
+
+  &::-moz-focus-inner {
     border: 0 none !important;
-    margin: 0;
+    padding: 0 !important;
+  }
 
-    &::-moz-focus-inner {
-        border: 0 none !important;
-        padding: 0 !important;
-    }
-
-    &:hover {
-        cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .variant {
-    &Default {
-        border-radius: reference.$corners-small;
-        background-color: reference.$apple-blue-60;
-        width: 100%;
-        transition: background-color reference.$transition-long;
+  &Default {
+    background-color: reference.$apple-blue-60;
+    border-radius: reference.$corners-sm;
+    transition: background-color reference.$transition-long;
 
-        &:hover {
-            background-color: reference.$apple-blue;
-            transition: background-color reference.$transition-long;
-        }
+    &:hover {
+      background-color: reference.$apple-blue;
+      transition: background-color reference.$transition-long;
     }
+  }
 
-    &Clear {
-        background-color: reference.$transparent;
-        border-radius: reference.$corners-large;
-        transition: background-color reference.$transition-long;
+  &Clear {
+    background-color: reference.$transparent;
+    border-radius: reference.$corners-lg;
+    transition: background-color reference.$transition-long;
 
-        &:hover {
-            background-color: reference.$dark-grey;
-            transition: background-color reference.$transition-long;
-        }
+    &:hover {
+      background-color: reference.$dark-grey;
+      transition: background-color reference.$transition-long;
     }
+  }
 
-    &Solid {
-        background-color: reference.$dark-grey-60;
-        border-radius: reference.$corners-large;
-        transition: background-color reference.$transition-long;
+  &Solid {
+    background-color: reference.$dark-grey-60;
+    border-radius: reference.$corners-lg;
+    transition: background-color reference.$transition-long;
 
-        &:hover {
-            background-color: reference.$dark-grey;
-            transition: background-color reference.$transition-long;
-        }
+    &:hover {
+      background-color: reference.$dark-grey;
+      transition: background-color reference.$transition-long;
     }
+  }
 
-    &Inverse {
-        background-color: reference.$transparent;
-        border-radius: reference.$corners-large;
-        transition: background-color reference.$transition-long;
+  &Inverse {
+    background-color: reference.$transparent;
+    border-radius: reference.$corners-lg;
+    transition: background-color reference.$transition-long;
 
-        &:hover {
-            background-color: reference.$darker-grey-60;
-            transition: background-color reference.$transition-long;
-        }
+    &:hover {
+      background-color: reference.$darker-grey-60;
+      transition: background-color reference.$transition-long;
     }
+  }
 }
 
 .width {
-    &Default {
-        width: auto;
-    }
+  &Default {
+    width: auto;
+  }
 
-    &Quarter {
-        width: 25%;
-    }
+  &Quarter {
+    width: 25%;
+  }
 
-    &Half {
-        width: 50%;
-    }
+  &Half {
+    width: 50%;
+  }
 
-    &Full {
-        width: 100%;
-    }
+  &Full {
+    width: 100%;
+  }
 }
 
 .padding {
-    &Default {
-        padding: 5px 15px 5px 15px;
-    }
+  &Default {
+    padding: 5px 15px 5px 15px;
+  }
 
-    &Coarse {
-        padding: 15px;
-    }
+  &Coarse {
+    padding: 15px;
+  }
 }
 
 .transition {
-    padding-left: 0;
-    padding-right: 0;
-    transition: background-color reference.$transition-long,
-        padding reference.$transition-long;
+  padding-left: 0;
+  padding-right: 0;
+  transition:
+    background-color reference.$transition-long,
+    padding reference.$transition-long;
 
-    &:hover {
-        padding-left: 15px;
-        padding-right: 15px;
-        transition: background-color reference.$transition-long,
-            padding reference.$transition-long;
+  &:hover {
+    padding-left: 15px;
+    padding-right: 15px;
+    transition:
+      background-color reference.$transition-long,
+      padding reference.$transition-long;
 
-        @media (max-width: 768px) {
-            padding-left: 7.5px;
-            padding-right: 7.5px;
-        }
+    @media (max-width: 768px) {
+      padding-left: 7.5px;
+      padding-right: 7.5px;
     }
+  }
 }

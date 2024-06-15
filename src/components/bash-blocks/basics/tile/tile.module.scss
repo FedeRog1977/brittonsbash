@@ -1,96 +1,96 @@
 @use '../../reference' as reference;
 
 .tile {
-    @media (min-width: 768px) {
-        border-radius: reference.$corners-large;
-        max-width: 1600px;
-        margin: 0px auto 24px auto;
-    }
+  @media (min-width: 768px) {
+    border-radius: reference.$corners-xl;
+    max-width: 1600px;
+    margin: 0px auto 24px auto;
+  }
 
-    @media (max-width: 768px) {
-        margin: 0px auto 24px auto;
-    }
+  @media (max-width: 768px) {
+    margin: 0px auto 24px auto;
+  }
 
-    &Clear {
-        background-color: reference.$transparent;
-    }
+  &Clear {
+    background-color: reference.$transparent;
+  }
 
-    &Solid {
-        background-color: reference.$black-special;
-    }
+  &Solid {
+    background-color: reference.$black-special;
+  }
 }
 
 .constrain {
-    max-width: 1440px;
-    margin: auto;
+  max-width: 1440px;
+  margin: auto;
 
-    @media (min-width: 768px) {
-        border-radius: reference.$corners-medium;
-    }
+  @media (min-width: 768px) {
+    border-radius: reference.$corners-xl;
+  }
 
-    @media (max-width: 768px) {
-        border-radius: none;
-    }
+  @media (max-width: 768px) {
+    border-radius: none;
+  }
 }
 
 .gap {
-    margin-top: 24px;
+  margin-top: 24px;
 }
 
 .marginsX {
-    &Regular {
-        padding-left: 76px;
-        padding-right: 76px;
+  &Regular {
+    padding-left: 76px;
+    padding-right: 76px;
 
-        @media (max-width: 768px) {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
+    @media (max-width: 768px) {
+      padding-left: 20px;
+      padding-right: 20px;
     }
+  }
 
-    &Dense {
-        padding-left: 0px;
-        padding-right: 0px;
+  &Dense {
+    padding-left: 0px;
+    padding-right: 0px;
 
-        @media (max-width: 768px) {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
+    @media (max-width: 768px) {
+      padding-left: 20px;
+      padding-right: 20px;
     }
+  }
 }
 
 .marginsY {
-    &Regular {
-        padding-top: 48px;
-        padding-bottom: 48px;
+  &Regular {
+    padding-top: 48px;
+    padding-bottom: 48px;
 
-        @media (max-width: 768px) {
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
+    @media (max-width: 768px) {
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
+  }
 
-    &Dense {
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding-top: 24px;
-        padding-bottom: 24px;
+  &Dense {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 24px;
+    padding-bottom: 24px;
 
-        @media (max-width: 768px) {
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
+    @media (max-width: 768px) {
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
+  }
 }
 
 .stacked {
-    display: grid;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+  display: grid;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .text {
-    z-index: 1000;
-    position: absolute;
+  z-index: 1000;
+  position: absolute;
 }

@@ -1,0 +1,33 @@
+@use 'sass:math' as math;
+@use '../../reference' as reference;
+
+@include reference.responsive-column-span('width') using ($percentage) {
+  width: $percentage;
+}
+
+$-max-order: 12;
+
+.order {
+  @for $order from 0 to $-max-order {
+    @each $size, $screen-variable in reference.$size-to-screen-variable {
+      &#{$size} {
+        @media (min-width: #{$screen-variable}) {
+          &#{$order} {
+            order: $order;
+          }
+        }
+      }
+    }
+  }
+}
+
+.position {
+  &Underlay {
+    z-index: -1;
+  }
+
+  &Overlay {
+    z-index: 100;
+    position: absolute;
+  }
+}

@@ -6,5 +6,6 @@ export * from './grid';
 export * from './image';
 export * from './search';
 export * from './spacing';
+export * from './stack';
 export * from './tile';
 export * from './typography';

@@ -1,54 +1,54 @@
 @use '../../reference/' as reference;
 
 .modal {
-    max-width: 1440px;
-    max-height: 1440px;
+  max-width: 1440px;
+  max-height: 1440px;
 
-    &Solid {
-        background-color: reference.$lighter-grey;
-        box-shadow: reference.$shadow-x-bold;
-    }
+  &Solid {
+    background-color: reference.$lighter-grey;
+    box-shadow: reference.$shadow-x-bold;
+  }
 }
 
 .overlay {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    overflow: hidden;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: reference.$darker-grey-60;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: reference.$darker-grey-60;
 }
 
 .close {
-    &Container {
-        display: flex;
-        justify-content: right;
-        margin: 24px;
+  &Container {
+    display: flex;
+    justify-content: right;
+    margin: 24px;
+  }
+
+  &Icon {
+    font-size: 24px;
+    color: reference.$darker-grey;
+    cursor: pointer;
+    user-select: none;
+    transition: color reference.$transition-long;
+
+    &:hover {
+      color: reference.$light-blue;
+      transition: color reference.$transition-long;
     }
 
-    &Icon {
-        font-size: 24px;
-        color: reference.$darker-grey;
-        cursor: pointer;
-        user-select: none;
-        transition: color reference.$transition-long;
-
-        &:hover {
-            color: reference.$light-blue;
-            transition: color reference.$transition-long;
-        }
-
-        &:active {
-            transform: scale(0.99);
-            transition: transform reference.$transition-short;
-        }
-
-        @media (max-width: 768px) {
-            padding-right: 12px;
-        }
+    &:active {
+      transform: scale(0.99);
+      transition: transform reference.$transition-short;
     }
+
+    @media (max-width: 768px) {
+      padding-right: 12px;
+    }
+  }
 }

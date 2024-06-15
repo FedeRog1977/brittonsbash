@@ -1,1 +1,1 @@
-export * from './library.content'
+export * from './library';
