@@ -10,7 +10,7 @@ export const Hourly = ({ latIn, lonIn }: any) => {
 
   return (
     <Flex direction="horizontal" alignHorizontal="apart" gap="md">
-      {hourlyResult.slice(0, 5).map((value, index) => (
+      {hourlyResult.slice(0, isMobile ? 4 : 5).map((value, index) => (
         <FlexItem key={generateUniqueKey(index)} basis={2} grow>
           {isMobile ? (
             // TODO: good example of Hidden component

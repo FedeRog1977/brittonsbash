@@ -7,17 +7,20 @@ export const InstantGram: FC = () => {
   const {
     url,
     handleCategory,
+    showSearchList,
+    eventData,
     handleInput,
     executeInput,
     handleSelect,
-    event,
-    sport,
-    showSport,
+    refactoredEvent,
     is2024,
     is2023,
     is2022,
     is2021,
     is2020,
+    handleToggleElements,
+    showDescription,
+    showMatrix,
   } = useInstantGram();
 
   return (
@@ -25,6 +28,8 @@ export const InstantGram: FC = () => {
       <SearchTile
         url={url}
         funcCategory={handleCategory}
+        showSearchList={showSearchList}
+        eventData={eventData}
         funcInput={handleInput}
         funcButton={executeInput}
         funcSelect={handleSelect}
@@ -34,7 +39,13 @@ export const InstantGram: FC = () => {
         is2021={is2021}
         is2020={is2020}
       />
-      <ResultTile url={url} event={event} sport={sport} showSport={showSport} />
+      <ResultTile
+        url={url}
+        refactoredEvent={refactoredEvent}
+        funcToggleElements={handleToggleElements}
+        showDescription={showDescription}
+        showMatrix={showMatrix}
+      />
     </>
   );
 };

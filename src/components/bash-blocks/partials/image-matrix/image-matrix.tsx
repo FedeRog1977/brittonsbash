@@ -5,7 +5,6 @@ import { Flex, FlexItem, Image, Stack, Typography } from '../../basics';
 import { ColumnSpan, Img } from '../../reference';
 import { Modal } from '../../blocks';
 import { FC, useState } from 'react';
-import { Spacing } from '../../basics/spacing';
 
 export type ImageMatrixProps = {
   items: Img[];
@@ -16,7 +15,7 @@ export const ImageMatrix: FC<ImageMatrixProps> = ({ items, columns }) => {
   const { showElement: showModal, setShowElement: setShowModal } =
     useShowElement();
 
-  const basis: ColumnSpan = columns ? ((12 / columns) as ColumnSpan) : 2;
+  const basis: ColumnSpan = columns ? ((12 / columns) as ColumnSpan) : 3;
 
   const [image, setImage] = useState<Img>();
 
@@ -31,9 +30,9 @@ export const ImageMatrix: FC<ImageMatrixProps> = ({ items, columns }) => {
         {items.map(({ url, alt, description }, index) => (
           <FlexItem
             key={generateUniqueKey(index)}
-            basis={{ xs: 12, lg: basis }}
+            basis={{ xs: 12, lg: items.length === 1 ? 12 : basis }}
           >
-            <Stack direction="vertical" spacing="xs">
+            <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
               <a
                 onClick={() => {
                   setImage({ url, alt, description });

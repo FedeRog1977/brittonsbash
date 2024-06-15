@@ -1,16 +1,14 @@
 import { Button, Stack, Tile } from '../../../../bash-blocks';
-import {
-  compileEvents,
-  useScreenWidth,
-  useShowElement,
-} from '../../../../../utils';
-import { FC, useState } from 'react';
+import { EventProps } from '../../../../../utils';
+import { FC } from 'react';
 import { SearchList } from './search-list';
 import { BigSearch } from '../../../../bash-blocks';
 
 type SearchTileProps = {
   url?: string;
   funcCategory: (value: string) => void;
+  showSearchList: boolean;
+  eventData: (Pick<EventProps, 'prefix' | 'names'> & { id: string })[];
   funcInput: (e: any) => void;
   funcButton: () => void;
   funcSelect: (e: any) => void;
@@ -24,6 +22,8 @@ type SearchTileProps = {
 export const SearchTile: FC<SearchTileProps> = ({
   url,
   funcCategory,
+  showSearchList,
+  eventData,
   funcInput,
   funcButton,
   funcSelect,
@@ -32,122 +32,95 @@ export const SearchTile: FC<SearchTileProps> = ({
   is2022,
   is2021,
   is2020,
-}) => {
-  const { isMobile } = useScreenWidth();
-  const { showElement, setShowElement } = useShowElement();
+}) => (
+  <Tile type="solid" gap>
+    <Stack direction="vertical" spacing="md">
+      <BigSearch
+        funcInput={funcInput}
+        funcButton={funcButton}
+        placeholder="Lookup Events"
+      />
 
-  const { events } = compileEvents();
-
-  // TODO: move this logic to hook
-  const emptyEventData = [
-    {
-      id: '',
-      names: [''],
-      startDate: '',
-      images: [
-        {
-          url: '',
-          alt: '',
-        },
-      ],
-    },
-  ];
-  const [parsedEventData, setParsedEventData] = useState(emptyEventData);
-
-  return (
-    <Tile type="solid" gap>
-      <Stack direction="vertical" spacing="md">
-        <BigSearch
-          funcInput={funcInput}
-          funcButton={funcButton}
-          placeholder="Lookup Events"
+      <Stack direction="horizontal" alignHorizontal="apart" wrap>
+        <Button
+          variant="clear"
+          typeVariant="t1"
+          typeColor={
+            Boolean(showSearchList && is2024) ? 'lightBlue' : undefined
+          }
+          content="2024"
+          subContent="Season 5"
+          subContentTop
+          value="2024"
+          func={() => {
+            funcCategory('2024');
+          }}
         />
 
-        <Stack direction="horizontal" alignHorizontal="apart" wrap>
-          <Button
-            variant="clear"
-            typeVariant={isMobile ? 't1' : 't2'}
-            typeColor={Boolean(showElement && is2024) ? 'lightBlue' : undefined}
-            content="2024"
-            subContent="Season 5"
-            subContentTop={isMobile}
-            value="2024"
-            func={() => {
-              funcCategory('2024');
-              setShowElement(!showElement);
-              setParsedEventData(events[2024]);
-            }}
-          />
+        <Button
+          variant="clear"
+          typeVariant="t1"
+          typeColor={
+            Boolean(showSearchList && is2023) ? 'lightBlue' : undefined
+          }
+          content="2023"
+          subContent="Season 4"
+          subContentTop
+          value="2023"
+          func={() => {
+            funcCategory('2023');
+          }}
+        />
 
-          <Button
-            variant="clear"
-            typeVariant={isMobile ? 't1' : 't2'}
-            typeColor={Boolean(showElement && is2023) ? 'lightBlue' : undefined}
-            content="2023"
-            subContent="Season 4"
-            subContentTop={isMobile}
-            value="2023"
-            func={() => {
-              funcCategory('2023');
-              setShowElement(!showElement);
-              setParsedEventData(events[2023]);
-            }}
-          />
+        <Button
+          variant="clear"
+          typeVariant="t1"
+          typeColor={
+            Boolean(showSearchList && is2022) ? 'lightBlue' : undefined
+          }
+          content="2022"
+          subContent="Season 3"
+          subContentTop
+          value="2022"
+          func={() => {
+            funcCategory('2022');
+          }}
+        />
 
-          <Button
-            variant="clear"
-            typeVariant={isMobile ? 't1' : 't2'}
-            typeColor={Boolean(showElement && is2022) ? 'lightBlue' : undefined}
-            content="2022"
-            subContent="Season 3"
-            subContentTop={isMobile}
-            value="2022"
-            func={() => {
-              funcCategory('2022');
-              setShowElement(!showElement);
-              setParsedEventData(events[2022]);
-            }}
-          />
+        <Button
+          variant="clear"
+          typeVariant="t1"
+          typeColor={
+            Boolean(showSearchList && is2021) ? 'lightBlue' : undefined
+          }
+          content="2021"
+          subContent="Season 2"
+          subContentTop
+          value="2021"
+          func={() => {
+            funcCategory('2021');
+          }}
+        />
 
-          <Button
-            variant="clear"
-            typeVariant={isMobile ? 't1' : 't2'}
-            typeColor={Boolean(showElement && is2021) ? 'lightBlue' : undefined}
-            content="2021"
-            subContent="Season 2"
-            subContentTop={isMobile}
-            value="2021"
-            func={() => {
-              funcCategory('2021');
-              setShowElement(!showElement);
-              setParsedEventData(events[2021]);
-            }}
-          />
-
-          <Button
-            variant="clear"
-            typeVariant={isMobile ? 't1' : 't2'}
-            typeColor={Boolean(showElement && is2020) ? 'lightBlue' : undefined}
-            content="2020"
-            subContent="Season 1"
-            subContentTop={isMobile}
-            value="2020"
-            func={() => {
-              funcCategory('2020');
-              setShowElement(!showElement);
-              setParsedEventData(events[2020]);
-            }}
-          />
-        </Stack>
-
-        {showElement ? (
-          <SearchList
-            url={url}
-            funcSelect={funcSelect}
-            items={parsedEventData}
-          />
-        ) : null}
+        <Button
+          variant="clear"
+          typeVariant="t1"
+          typeColor={
+            Boolean(showSearchList && is2020) ? 'lightBlue' : undefined
+          }
+          content="2020"
+          subContent="Season 1"
+          subContentTop
+          value="2020"
+          func={() => {
+            funcCategory('2020');
+          }}
+        />
       </Stack>
-    </Tile>
-  );
-};
+
+      {showSearchList ? (
+        <SearchList url={url} funcSelect={funcSelect} items={eventData} />
+      ) : null}
+    </Stack>
+  </Tile>
+);

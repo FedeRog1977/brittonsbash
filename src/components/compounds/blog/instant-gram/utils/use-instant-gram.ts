@@ -1,10 +1,15 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import {
+  compileEvent,
   compileEvents,
   compileEventSports,
+  EventProps,
   ProjectProps,
+  useScreenWidth,
+  useShowElement,
 } from '../../../../../utils';
+import { emptyEventData } from '../mocks/empty-event-data';
 
 export const useInstantGram = () => {
   const location = useLocation();
@@ -12,7 +17,7 @@ export const useInstantGram = () => {
   const [searchParamsHandler, setSearchParamsHandler] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const { eventsParsed } = compileEvents();
+  const { events, eventsParsed } = compileEvents();
   const allSport = compileEventSports();
   const sportOnEvent: ProjectProps[] = [];
 
@@ -31,6 +36,12 @@ export const useInstantGram = () => {
   const [is2022, setIs2022] = useState(false);
   const [is2021, setIs2021] = useState(false);
   const [is2020, setIs2020] = useState(false);
+
+  const { showElement: showSearchList, setShowElement: setShowSearchList } =
+    useShowElement();
+  const [eventData, setEventData] = useState(emptyEventData);
+
+  console.log(eventData);
 
   useEffect(() => {
     if (location.search === '') {
@@ -125,6 +136,8 @@ export const useInstantGram = () => {
     }
   };
 
+  const refactoredEvent = compileEvent({ event, sport, showSport });
+
   const handleCategory = (value: string) => {
     if (value === '2024') {
       setIs2024(true);
@@ -132,6 +145,8 @@ export const useInstantGram = () => {
       setIs2022(false);
       setIs2021(false);
       setIs2020(false);
+      setShowSearchList(!showSearchList);
+      setEventData(events[2024]);
     }
     if (value === '2023') {
       setIs2024(false);
@@ -139,6 +154,8 @@ export const useInstantGram = () => {
       setIs2022(false);
       setIs2021(false);
       setIs2020(false);
+      setShowSearchList(!showSearchList);
+      setEventData(events[2023]);
     }
     if (value === '2022') {
       setIs2024(false);
@@ -146,6 +163,8 @@ export const useInstantGram = () => {
       setIs2022(true);
       setIs2021(false);
       setIs2020(false);
+      setShowSearchList(!showSearchList);
+      setEventData(events[2022]);
     }
     if (value === '2021') {
       setIs2024(false);
@@ -153,6 +172,8 @@ export const useInstantGram = () => {
       setIs2022(false);
       setIs2021(true);
       setIs2020(false);
+      setShowSearchList(!showSearchList);
+      setEventData(events[2021]);
     }
     if (value === '2020') {
       setIs2024(false);
@@ -160,22 +181,48 @@ export const useInstantGram = () => {
       setIs2022(false);
       setIs2021(false);
       setIs2020(true);
+      setShowSearchList(!showSearchList);
+      setEventData(events[2020]);
     }
+  };
+
+  const { isMobile } = useScreenWidth();
+
+  const { showElement: showDescription, setShowElement: setShowDescription } =
+    useShowElement();
+  const { showElement: showMatrix, setShowElement: setShowMatrix } =
+    useShowElement();
+
+  useEffect(() => {
+    setShowMatrix(!isMobile && true);
+  }, []);
+
+  const handleToggleElements = (value: string) => {
+    if (value === 'description') {
+      setShowDescription(!showDescription);
+    }
+    if (value === 'matrix') {
+      setShowMatrix(!showMatrix);
+    }
+    // Modal cannot be handled here
   };
 
   return {
     url,
     handleCategory,
+    showSearchList,
+    eventData,
     handleInput,
     executeInput,
     handleSelect,
-    event,
-    sport,
-    showSport,
+    refactoredEvent,
     is2024,
     is2023,
     is2022,
     is2021,
     is2020,
+    handleToggleElements,
+    showDescription,
+    showMatrix,
   };
 };

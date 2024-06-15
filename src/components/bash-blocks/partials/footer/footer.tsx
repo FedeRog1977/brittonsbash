@@ -39,11 +39,12 @@ export const Footer: FC = () => (
 
         <Typography variant="footnote" element="code" color="lightGrey">
           <>
-            4ALBFTLBcv68zhmy8vvdTdjLZ2bisn5RPcM8KF6hDWGhj7
+            4ALBFTLBcv68zhmy8vvdTdjLZ2bisn5R
             <br />
-            f37dfqwzGCqq1Vug13vmBkxoQARfNnrbNEcqsj
+            PcM8KF6hDWGhj7f37dfqwzGCqq1Vug13vm
             <br />
-            ZMTJSSkB46V
+            BkxoQARfNnrbNEcqsjZMTJSSkB46V
+            <br />
           </>
         </Typography>
 

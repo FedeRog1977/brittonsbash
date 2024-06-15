@@ -12,41 +12,34 @@ import {
   Stack,
 } from '../../../../bash-blocks';
 import {
-  compileEvent,
   useShowElement,
   useScreenWidth,
   generateUniqueKey,
+  RefactoredEventProps,
 } from '../../../../../utils';
 import { FC, useEffect } from 'react';
-import { CompiledEventProps } from '../../../../../utils';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import { Grid, GridItem } from '../../../../bash-blocks/basics';
+import { Grid } from '../../../../bash-blocks/basics';
 
-interface ResultTileProps extends CompiledEventProps {
+type ResultTileProps = {
   url: string;
-}
+  refactoredEvent: RefactoredEventProps;
+  funcToggleElements: (value: string) => void;
+  showDescription: boolean;
+  showMatrix: boolean;
+};
 
 export const ResultTile: FC<ResultTileProps> = ({
-  url,
-  event,
-  sport,
-  showSport,
+  // url,
+  refactoredEvent,
+  funcToggleElements,
+  showDescription,
+  showMatrix,
 }) => {
   const { isMobile } = useScreenWidth();
-
-  const { showElement: showDescription, setShowElement: setShowDescription } =
-    useShowElement();
-  const { showElement: showMatrix, setShowElement: setShowMatrix } =
-    useShowElement();
   const { showElement: showModal, setShowElement: setShowModal } =
     useShowElement();
-
-  const refactoredEvent = compileEvent({ event, sport, showSport });
-
-  useEffect(() => {
-    setShowMatrix(!isMobile && true);
-  }, []);
 
   return (
     <Anchor id="#result">
@@ -60,12 +53,12 @@ export const ResultTile: FC<ResultTileProps> = ({
 
           {refactoredEvent.names.length > 1 ? (
             refactoredEvent.names.map((name, index) => (
-              <Grid
+              <Stack
                 key={generateUniqueKey(index)}
-                justifyContent="center"
+                direction="horizontal"
+                alignHorizontal="center"
                 spacing="xs"
               >
-                {/* <GridItem xs={3}> */}
                 <Typography
                   variant="t1"
                   fontFamily="instagram"
@@ -75,9 +68,7 @@ export const ResultTile: FC<ResultTileProps> = ({
                   Part&nbsp;
                   {index + 1}&nbsp;
                 </Typography>
-                {/* </GridItem> */}
 
-                {/* <GridItem xs={7}> */}
                 <Typography
                   variant="t1"
                   fontFamily="instagram"
@@ -85,8 +76,7 @@ export const ResultTile: FC<ResultTileProps> = ({
                 >
                   {name}
                 </Typography>
-                {/* </GridItem> */}
-              </Grid>
+              </Stack>
             ))
           ) : (
             <Typography variant="t1" fontFamily="instagram" textAlign="center">
@@ -176,7 +166,7 @@ export const ResultTile: FC<ResultTileProps> = ({
                 <FontAwesomeIcon icon={faChevronDown} />
               )
             }
-            func={() => setShowDescription(!showDescription)}
+            func={() => funcToggleElements('description')}
             width="full"
             transition
           />
@@ -308,6 +298,7 @@ export const ResultTile: FC<ResultTileProps> = ({
             </>
           ) : null}
 
+          {/* TODO: hidden component */}
           {isMobile ? (
             <ImageSlider slides={refactoredEvent.images} />
           ) : (
@@ -316,7 +307,7 @@ export const ResultTile: FC<ResultTileProps> = ({
                 variant="clear"
                 typeColor={showMatrix ? 'lightBlue' : undefined}
                 content="Image matrix"
-                func={() => setShowMatrix(!showMatrix)}
+                func={() => funcToggleElements('matrix')}
               />
 
               <Button

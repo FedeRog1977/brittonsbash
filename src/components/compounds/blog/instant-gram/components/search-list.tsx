@@ -1,5 +1,9 @@
 import { Button, Flex, FlexItem, Stack } from '../../../../bash-blocks';
-import { generateUniqueKey, useScreenWidth } from '../../../../../utils';
+import {
+  EventProps,
+  generateUniqueKey,
+  useScreenWidth,
+} from '../../../../../utils';
 import { FC } from 'react';
 import { Grid } from '../../../../bash-blocks/basics/grid/grid';
 import { GridItem } from '../../../../bash-blocks/basics/grid/grid-item';
@@ -7,11 +11,7 @@ import { GridItem } from '../../../../bash-blocks/basics/grid/grid-item';
 type SearchListProps = {
   url?: string;
   funcSelect: (() => void) | ((e: any) => void);
-  items: {
-    id: string;
-    prefix?: string;
-    names: string[];
-  }[];
+  items: (Pick<EventProps, 'prefix' | 'names'> & { id: string })[];
 };
 
 export const SearchList: FC<SearchListProps> = ({ url, funcSelect, items }) => {

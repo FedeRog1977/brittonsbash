@@ -4,5 +4,5 @@ import { ImageMatrix, ImageMatrixProps } from '../../../partials';
 export type ImagesProps = { items: ImageMatrixProps['items'] };
 
 export const Images: FC<ImagesProps> = ({ items }) => (
-  <ImageMatrix items={items} columns={4} />
+  <ImageMatrix items={items} />
 );

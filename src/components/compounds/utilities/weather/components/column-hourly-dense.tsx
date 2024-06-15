@@ -52,23 +52,25 @@ export const ColumnHourlyDense: FC<ColumnHourlyDenseProps> = ({
 
   return (
     <Stack direction="vertical" spacing="lg">
-      <Typography variant="h4" paragraphMargins>
-        {hour}
-      </Typography>
-      <Typography variant="h1">
+      <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
+        <Typography variant="h4">{hour}</Typography>
         <ConditionIcon variant={icon} />
-      </Typography>
+        <Typography variant="body">{precipitation}</Typography>
+      </Stack>
+
       <Temperature temp={temp} />
-      <Typography variant="body">{precipitation}</Typography>
-      <Typography variant="body">{bearingCompass}</Typography>
-      <Typography variant="body">{bearingArrow}</Typography>
-      <Typography variant="footnote">{bearing}</Typography>
-      <Typography variant="footnote" boldFace>
-        {speed}
-      </Typography>
-      <Typography variant="footnote" boldFace>
-        {gusts + ' gusts'}
-      </Typography>
+
+      <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
+        <Typography variant="body">{bearingCompass}</Typography>
+        <Typography variant="body">{bearingArrow}</Typography>
+        <Typography variant="footnote">{bearing}</Typography>
+        <Typography variant="footnote" boldFace>
+          {speed}
+        </Typography>
+        <Typography variant="footnote" boldFace>
+          {gusts + ' gusts'}
+        </Typography>
+      </Stack>
     </Stack>
   );
 };

@@ -52,11 +52,8 @@ export const ColumnDaily: FC<ColumnDailyProps> = ({
     <Stack direction="vertical" spacing="lg">
       <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
         <Typography variant="h4">{weekday}</Typography>
-
         <Typography variant="body">{dayOfMonth}</Typography>
-
         <ConditionIcon variant={icon} />
-
         <Typography variant="body">
           {`${precipitation} ${toSentenceCase(description)}`}
         </Typography>
@@ -66,7 +63,6 @@ export const ColumnDaily: FC<ColumnDailyProps> = ({
         <Typography variant="footnote" boldFace>
           {`Sunrise:\n${sunrise}`}
         </Typography>
-
         <Typography variant="footnote" boldFace>
           {`Sunset:\n${sunset}`}
         </Typography>
@@ -76,11 +72,9 @@ export const ColumnDaily: FC<ColumnDailyProps> = ({
         <FlexItem grow>
           <Temperature temp={day} />
         </FlexItem>
-
         <FlexItem grow>
           <Temperature temp={max} />
         </FlexItem>
-
         <FlexItem grow>
           <Temperature temp={min} />
         </FlexItem>
@@ -90,7 +84,6 @@ export const ColumnDaily: FC<ColumnDailyProps> = ({
         <Typography variant="body">{bearingCompass}</Typography>
         {bearingArrow}
         <Typography variant="footnote">{bearing}</Typography>
-
         <Typography variant="footnote">{speed}</Typography>
       </Stack>
 
@@ -98,13 +91,10 @@ export const ColumnDaily: FC<ColumnDailyProps> = ({
         <Typography variant="footnote">
           {`Pressure: ${pressure + 'mb'}`}
         </Typography>
-
         <Typography variant="footnote">
           {`Humidity: ${humidity + '%'}`}
         </Typography>
-
         <Typography variant="footnote">{`Dew Pt.: ${dp}`}</Typography>
-
         <Typography variant="footnote">{`UV Index: ${uvi}`}</Typography>
       </Stack>
     </Stack>

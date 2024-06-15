@@ -19,7 +19,7 @@ export const WeatherDaily = ({ latIn, lonIn }: any) => {
   return (
     <Stack direction="vertical" spacing="xl">
       <Flex direction="horizontal" alignHorizontal="apart" gap="md">
-        {dailyResult.slice(0, 5).map((value, index) => (
+        {dailyResult.slice(0, isMobile ? 4 : 5).map((value, index) => (
           <FlexItem key={generateUniqueKey(index)} basis={2} grow>
             {isMobile ? (
               // TODO: good example of Hidden component
