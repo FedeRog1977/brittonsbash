@@ -17,7 +17,7 @@ import {
   generateUniqueKey,
   RefactoredEventProps,
 } from '../../../../../utils';
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { Grid } from '../../../../bash-blocks/basics';
