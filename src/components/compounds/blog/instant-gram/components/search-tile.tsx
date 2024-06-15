@@ -1,4 +1,4 @@
-import { Button, Spacing, Stack, Tile } from '../../../../bash-blocks';
+import { Button, Stack, Tile } from '../../../../bash-blocks';
 import {
   compileEvents,
   useScreenWidth,
@@ -7,9 +7,6 @@ import {
 import { FC, useState } from 'react';
 import { SearchList } from './search-list';
 import { BigSearch } from '../../../../bash-blocks';
-import { GridTemp } from '../../../../bash-blocks/basics/grid-temp/grid';
-import { GridItemTemp } from '../../../../bash-blocks/basics/grid-temp/grid-item';
-import { SpacingTemp } from '../../../../bash-blocks/basics/spacing-temp';
 
 type SearchTileProps = {
   url?: string;
@@ -66,7 +63,6 @@ export const SearchTile: FC<SearchTileProps> = ({
           placeholder="Lookup Events"
         />
 
-        {/* TODO: maybe add other justify props to Spacing or make FlexBase consistent with Grid */}
         <Stack direction="horizontal" alignHorizontal="apart" wrap>
           <Button
             variant="clear"

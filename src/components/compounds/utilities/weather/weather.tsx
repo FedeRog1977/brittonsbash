@@ -4,9 +4,10 @@ import { useWeather } from './utils/use-weather';
 
 export const Weather = () => {
   const {
-    weatherTitle,
-    weatherSubTitle,
-    showWeatherContent,
+    title,
+    subTitle,
+    subSubTitle,
+    latLon: [lat, lon],
     handleInput,
     executeInput,
     handleSelect,
@@ -19,11 +20,7 @@ export const Weather = () => {
         funcButton={executeInput}
         funcSelect={handleSelect}
       />
-      <ResultTitle
-        title={weatherTitle}
-        subTitle={weatherSubTitle}
-        result={showWeatherContent}
-      />
+      <ResultTitle title={title} subTitle={subTitle} lat={lat} lon={lon} />
     </>
   );
 };

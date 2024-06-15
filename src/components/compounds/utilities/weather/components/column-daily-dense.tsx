@@ -5,7 +5,7 @@ import {
   toBearing,
   toSpeed,
 } from '../../../../../utils';
-import { Spacing, Typography } from '../../../../bash-blocks';
+import { Stack, Typography } from '../../../../bash-blocks';
 import { Daily } from '../types/daily';
 import { ConditionIcon } from './condition-icon';
 import { Temperature } from './temperature';
@@ -49,28 +49,22 @@ export const ColumnDailyDense: FC<ColumnDailyDenseProps> = ({
   const speed = toSpeed(windSpeed, true);
 
   return (
-    <>
-      <Spacing pY={20} textAlign="center">
-        <Typography variant="h4">{weekdayPartial}</Typography>
-        <Typography variant="body" paragraphMargins>
-          {dayOfMonthPartial}
-        </Typography>
-        <Typography variant="h1">
-          <ConditionIcon variant={icon} />
-        </Typography>
-        <Spacing pY={20} textAlign="center">
-          <Temperature temp={day} />
-        </Spacing>
-        <Typography variant="body">{precipitation}</Typography>
-      </Spacing>
-      <Spacing pY={20} textAlign="center">
-        <Typography variant="body">{bearingCompass}</Typography>
-        <Typography variant="body">{bearingArrow}</Typography>
-        <Typography variant="footnote">{bearing}</Typography>
-        <Typography variant="footnote" boldFace>
-          {speed}
-        </Typography>
-      </Spacing>
-    </>
+    <Stack direction="vertical" spacing="lg">
+      <Typography variant="h4">{weekdayPartial}</Typography>
+      <Typography variant="body" paragraphMargins>
+        {dayOfMonthPartial}
+      </Typography>
+      <Typography variant="h1">
+        <ConditionIcon variant={icon} />
+      </Typography>
+      <Temperature temp={day} />
+      <Typography variant="body">{precipitation}</Typography>
+      <Typography variant="body">{bearingCompass}</Typography>
+      <Typography variant="body">{bearingArrow}</Typography>
+      <Typography variant="footnote">{bearing}</Typography>
+      <Typography variant="footnote" boldFace>
+        {speed}
+      </Typography>
+    </Stack>
   );
 };

@@ -44,8 +44,7 @@ export type GridProps = {
 
 const defaultSpacing: SpacingConfig = { xs: 'sm' };
 
-// TODO: export from index.ts once old Grid is discontinued
-export const GridTemp: FC<GridProps> = ({
+export const Grid: FC<GridProps> = ({
   children,
   spacing = defaultSpacing,
   justifyContent = 'left',

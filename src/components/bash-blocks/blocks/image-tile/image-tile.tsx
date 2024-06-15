@@ -9,8 +9,8 @@ import { Article, Cta, CtaProps } from '../../partials';
 import { GradientProps } from '../../basics';
 import { ArticleProps } from '../../partials';
 import { Img, TextStyle } from '../../reference';
-import { GridTemp } from '../../basics/grid-temp/grid';
-import { GridItemTemp } from '../../basics/grid-temp/grid-item';
+import { Grid } from '../../basics/grid/grid';
+import { GridItem } from '../../basics/grid/grid-item';
 
 export type ImageTileProps = {
   imgDesktop?: Img;
@@ -45,8 +45,8 @@ export const ImageTile: FC<ImageTileProps> = ({
       img={isMobile ? imgMobile : imgDesktop}
       gradient={gradient}
     >
-      <GridTemp justifyContent="center" alignItems="center">
-        <GridItemTemp xs={12} md={7}>
+      <Grid justifyContent="center" alignItems="center">
+        <GridItem xs={12} md={7}>
           <Typography variant="h4" color={invertedTypeVariant}>
             {subHeading}
           </Typography>
@@ -80,10 +80,10 @@ export const ImageTile: FC<ImageTileProps> = ({
               {body}
             </Typography>
           )}
-        </GridItemTemp>
+        </GridItem>
 
         {ctas ? (
-          <GridItemTemp xs={12} md={3}>
+          <GridItem xs={12} md={3}>
             <Stack
               direction={isMobile ? 'horizontal' : 'vertical'}
               alignHorizontal={isMobile ? 'center' : 'right'}
@@ -100,9 +100,9 @@ export const ImageTile: FC<ImageTileProps> = ({
                 />
               ))}
             </Stack>
-          </GridItemTemp>
+          </GridItem>
         ) : null}
-      </GridTemp>
+      </Grid>
     </Tile>
   );
 };

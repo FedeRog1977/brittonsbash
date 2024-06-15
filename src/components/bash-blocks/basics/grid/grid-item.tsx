@@ -18,8 +18,7 @@ export type GridItemProps = {
   position?: 'overlay' | 'underlay';
 };
 
-// TODO: export from index.ts once old Flex is discontinued
-export const GridItemTemp: FC<GridItemProps> = ({
+export const GridItem: FC<GridItemProps> = ({
   children,
   order,
   xs,

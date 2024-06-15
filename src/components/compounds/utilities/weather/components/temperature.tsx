@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FC } from 'react';
 import { toTemperature } from '../../../../../utils';
 import { Color, Typography } from '../../../../bash-blocks';
-import { SpacingTemp } from '../../../../bash-blocks/basics/spacing-temp';
+import { Spacing } from '../../../../bash-blocks/basics/spacing';
 
 type TemperatureProps = {
   temp: number;
@@ -33,7 +33,7 @@ export const Temperature: FC<TemperatureProps> = ({ temp, icon }) => {
 
   return (
     <div style={{ background: backgroundColor }}>
-      <SpacingTemp padding="2xs">
+      <Spacing padding="2xs">
         <Typography variant="footnote" textAlign="center" color={fontColor}>
           {toTemperature(temp)}
         </Typography>
@@ -44,7 +44,7 @@ export const Temperature: FC<TemperatureProps> = ({ temp, icon }) => {
             <FontAwesomeIcon icon={icon} size="2xs" />
           </>
         ) : null}
-      </SpacingTemp>
+      </Spacing>
     </div>
   );
 };

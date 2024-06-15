@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { generateUniqueKey, useShowElement } from '../../../../utils';
-import { Spacing, Typography } from '../../basics';
+import { Stack, Typography } from '../../basics';
 import { Button } from '../button';
 
 export type BookshelfProps = {
@@ -12,7 +12,7 @@ export const Bookshelf: FC<BookshelfProps> = ({ heading, items }) => {
   const { showElement, setShowElement } = useShowElement();
 
   return (
-    <Spacing mY={20}>
+    <Stack direction="vertical" spacing="md">
       <Button
         variant="clear"
         typeVariant="h3"
@@ -23,9 +23,9 @@ export const Bookshelf: FC<BookshelfProps> = ({ heading, items }) => {
         width="full"
       />
 
-      {showElement &&
-        items.map((item, index) => (
-          <Spacing mY={20}>
+      <Stack direction="vertical" spacing="sm">
+        {showElement &&
+          items.map((item, index) => (
             <Typography
               key={generateUniqueKey(index)}
               variant="body"
@@ -34,8 +34,8 @@ export const Bookshelf: FC<BookshelfProps> = ({ heading, items }) => {
             >
               {item}
             </Typography>
-          </Spacing>
-        ))}
-    </Spacing>
+          ))}
+      </Stack>
+    </Stack>
   );
 };

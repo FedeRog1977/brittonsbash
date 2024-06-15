@@ -5,7 +5,7 @@ import {
   toBearing,
   toSpeed,
 } from '../../../../../utils';
-import { Spacing, Typography } from '../../../../bash-blocks';
+import { Stack, Typography } from '../../../../bash-blocks';
 import { Hourly } from '../types/hourly';
 import { ConditionIcon } from './condition-icon';
 import { Temperature } from './temperature';
@@ -51,30 +51,24 @@ export const ColumnHourlyDense: FC<ColumnHourlyDenseProps> = ({
   const gusts = toSpeed(windGust, true);
 
   return (
-    <>
-      <Spacing pY={20} textAlign="center">
-        <Typography variant="h4" paragraphMargins>
-          {hour}
-        </Typography>
-        <Typography variant="h1">
-          <ConditionIcon variant={icon} />
-        </Typography>
-        <Spacing pY={20} textAlign="center">
-          <Temperature temp={temp} />
-        </Spacing>
-        <Typography variant="body">{precipitation}</Typography>
-      </Spacing>
-      <Spacing pY={20} textAlign="center">
-        <Typography variant="body">{bearingCompass}</Typography>
-        <Typography variant="body">{bearingArrow}</Typography>
-        <Typography variant="footnote">{bearing}</Typography>
-        <Typography variant="footnote" boldFace>
-          {speed}
-        </Typography>
-        <Typography variant="footnote" boldFace>
-          {gusts + ' gusts'}
-        </Typography>
-      </Spacing>
-    </>
+    <Stack direction="vertical" spacing="lg">
+      <Typography variant="h4" paragraphMargins>
+        {hour}
+      </Typography>
+      <Typography variant="h1">
+        <ConditionIcon variant={icon} />
+      </Typography>
+      <Temperature temp={temp} />
+      <Typography variant="body">{precipitation}</Typography>
+      <Typography variant="body">{bearingCompass}</Typography>
+      <Typography variant="body">{bearingArrow}</Typography>
+      <Typography variant="footnote">{bearing}</Typography>
+      <Typography variant="footnote" boldFace>
+        {speed}
+      </Typography>
+      <Typography variant="footnote" boldFace>
+        {gusts + ' gusts'}
+      </Typography>
+    </Stack>
   );
 };

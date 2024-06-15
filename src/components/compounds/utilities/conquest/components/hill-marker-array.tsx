@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Marker, Popup } from 'react-leaflet';
 import { generateUniqueKey, toCoords, toFeet } from '../../../../../utils';
-import { Spacing, Typography } from '../../../../bash-blocks';
+import { Stack, Typography } from '../../../../bash-blocks';
 import { HillMarkerProps } from './hill-markers';
 
 type HillMarkerArrayProps = {
@@ -27,24 +27,31 @@ export const HillMarkerArray: FC<HillMarkerArrayProps> = ({ hills, type }) => (
       return (
         <Marker key={generateUniqueKey(index)} position={[lat, lon]}>
           <Popup>
-            <Spacing textAlign="center" gapsY={30}>
-              <Typography variant="h4">{name}</Typography>
-              <Typography variant="body" boldFace>
+            <Stack direction="vertical" alignHorizontal="center" spacing="md">
+              <Typography variant="h4" color="darkGrey">
+                {name}
+              </Typography>
+
+              <Typography variant="body" boldFace color="darkGrey">
                 {type + ' at ' + toFeet(elevation)}
               </Typography>
-              <Typography variant="body">
+
+              <Typography variant="body" color="darkGrey">
                 {latFormatted + ', ' + lonFormatted}
               </Typography>
-              <Typography variant="body">{summit + ' summit'}</Typography>
-            </Spacing>
 
-            <img
-              style={{
-                width: '250px',
-              }}
-              src="https://lewisbritton.com/images/general/placeholder.webp"
-              alt="placeholder"
-            />
+              <Typography variant="body" color="darkGrey">
+                {summit + ' summit'}
+              </Typography>
+
+              <img
+                style={{
+                  width: '250px',
+                }}
+                src="https://lewisbritton.com/images/general/placeholder.webp"
+                alt="placeholder"
+              />
+            </Stack>
           </Popup>
         </Marker>
       );

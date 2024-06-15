@@ -1,11 +1,11 @@
 import { generateUniqueKey, useShowElement } from '../../../../utils';
 import styles from './image-matrix.module.scss';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { Flex, FlexItem, Image, Typography } from '../../basics';
+import { Flex, FlexItem, Image, Stack, Typography } from '../../basics';
 import { ColumnSpan, Img } from '../../reference';
 import { Modal } from '../../blocks';
 import { FC, useState } from 'react';
-import { SpacingTemp } from '../../basics/spacing-temp';
+import { Spacing } from '../../basics/spacing';
 
 export type ImageMatrixProps = {
   items: Img[];
@@ -26,29 +26,29 @@ export const ImageMatrix: FC<ImageMatrixProps> = ({ items, columns }) => {
         direction="horizontal"
         alignHorizontal="center"
         alignVertical="center"
-        gap="xs"
+        gap="2xs"
       >
         {items.map(({ url, alt, description }, index) => (
           <FlexItem
             key={generateUniqueKey(index)}
             basis={{ xs: 12, lg: basis }}
           >
-            <a
-              onClick={() => {
-                setImage({ url, alt, description });
-                setShowModal(!showModal);
-              }}
-            >
-              <LazyLoadImage className={styles.image} src={url} alt={alt} />
-            </a>
+            <Stack direction="vertical" spacing="xs">
+              <a
+                onClick={() => {
+                  setImage({ url, alt, description });
+                  setShowModal(!showModal);
+                }}
+              >
+                <LazyLoadImage className={styles.image} src={url} alt={alt} />
+              </a>
 
-            {description ? (
-              <SpacingTemp marginY="xs">
+              {description ? (
                 <Typography variant="footnote" textAlign="center" markdown>
                   {description}
                 </Typography>
-              </SpacingTemp>
-            ) : null}
+              ) : null}
+            </Stack>
           </FlexItem>
         ))}
       </Flex>

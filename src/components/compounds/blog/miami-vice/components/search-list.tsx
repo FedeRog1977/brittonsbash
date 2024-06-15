@@ -1,8 +1,8 @@
 import { Button, Stack } from '../../../../bash-blocks';
 import { generateUniqueKey, useScreenWidth } from '../../../../../utils';
 import { FC } from 'react';
-import { GridTemp } from '../../../../bash-blocks/basics/grid-temp/grid';
-import { GridItemTemp } from '../../../../bash-blocks/basics/grid-temp/grid-item';
+import { Grid } from '../../../../bash-blocks/basics/grid/grid';
+import { GridItem } from '../../../../bash-blocks/basics/grid/grid-item';
 
 export type SearchListProps = {
   funcSelect: (() => void) | ((e: any) => void);
@@ -17,9 +17,9 @@ export const SearchList: FC<SearchListProps> = ({ funcSelect, items }) => {
   const { isMobile } = useScreenWidth();
 
   return (
-    <GridTemp justifyContent="even" alignItems="center">
+    <Grid justifyContent="even" alignItems="center">
       {items.map(({ heading, subHeading }, index) => (
-        <GridItemTemp xs={12} lg={3}>
+        <GridItem xs={12} lg={3}>
           <Button
             key={generateUniqueKey(index)}
             variant="clear"
@@ -36,8 +36,8 @@ export const SearchList: FC<SearchListProps> = ({ funcSelect, items }) => {
             subContentTop
             padding="coarse"
           />
-        </GridItemTemp>
+        </GridItem>
       ))}
-    </GridTemp>
+    </Grid>
   );
 };

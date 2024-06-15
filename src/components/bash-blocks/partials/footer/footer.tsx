@@ -1,11 +1,11 @@
 import styles from './footer.module.scss';
 import { Typography, Stack } from '../../basics';
 import { FC } from 'react';
-import { SpacingTemp } from '../../basics/spacing-temp';
+import { Spacing } from '../../basics/spacing';
 
 export const Footer: FC = () => (
   <footer className={styles.footer}>
-    <SpacingTemp padding="xl">
+    <Spacing padding="xl">
       <Stack direction="vertical" alignHorizontal="center" spacing="md">
         <Stack direction="horizontal" alignVertical="center" spacing="sm">
           {/* TODO: make image component */}
@@ -58,6 +58,6 @@ export const Footer: FC = () => (
           <>&#169; Lewis Britton 2020&mdash;2024</>
         </Typography>
       </Stack>
-    </SpacingTemp>
+    </Spacing>
   </footer>
 );

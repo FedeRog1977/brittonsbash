@@ -4,8 +4,8 @@ import { toUpperCase } from '../../../../utils';
 import { Stack, Typography } from '../../basics';
 import { FC, ReactElement } from 'react';
 import { TextStyle, Url } from '../../reference';
-import { GridTemp } from '../../basics/grid-temp/grid';
-import { GridItemTemp } from '../../basics/grid-temp/grid-item';
+import { Grid } from '../../basics/grid/grid';
+import { GridItem } from '../../basics/grid/grid-item';
 
 export type ButtonProps = {
   variant?: 'default' | 'clear' | 'solid' | 'inverse';
@@ -59,12 +59,12 @@ export const Button: FC<ButtonProps> = ({
 
   return (
     <button className={classNames} onClick={func} value={value}>
-      <GridTemp
+      <Grid
         justifyContent="between"
         alignItems="center"
         spacing={icon ? 'xs' : 'none'}
       >
-        <GridItemTemp xs={icon ? 2 : 12}>
+        <GridItem xs={icon ? 2 : 12}>
           <Stack
             direction={subContentTop ? 'vertical' : 'horizontal'}
             alignHorizontal={icon ? 'left' : 'center'}
@@ -86,16 +86,16 @@ export const Button: FC<ButtonProps> = ({
               {content}
             </Typography>
           </Stack>
-        </GridItemTemp>
+        </GridItem>
 
         {icon ? (
-          <GridItemTemp xs={1}>
+          <GridItem xs={1}>
             <Typography variant="footnote" color={typeColor} textAlign="right">
               {icon}
             </Typography>
-          </GridItemTemp>
+          </GridItem>
         ) : null}
-      </GridTemp>
+      </Grid>
     </button>
   );
 };

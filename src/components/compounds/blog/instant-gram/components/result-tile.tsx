@@ -21,8 +21,7 @@ import { FC, useEffect } from 'react';
 import { CompiledEventProps } from '../../../../../utils';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import { GridTemp } from '../../../../bash-blocks/basics/grid-temp/grid';
-import { GridItemTemp } from '../../../../bash-blocks/basics/grid-temp/grid-item';
+import { Grid, GridItem } from '../../../../bash-blocks/basics';
 
 interface ResultTileProps extends CompiledEventProps {
   url: string;
@@ -61,12 +60,12 @@ export const ResultTile: FC<ResultTileProps> = ({
 
           {refactoredEvent.names.length > 1 ? (
             refactoredEvent.names.map((name, index) => (
-              <GridTemp
+              <Grid
                 key={generateUniqueKey(index)}
                 justifyContent="center"
                 spacing="xs"
               >
-                {/* <GridItemTemp xs={3}> */}
+                {/* <GridItem xs={3}> */}
                 <Typography
                   variant="t1"
                   fontFamily="instagram"
@@ -76,9 +75,9 @@ export const ResultTile: FC<ResultTileProps> = ({
                   Part&nbsp;
                   {index + 1}&nbsp;
                 </Typography>
-                {/* </GridItemTemp> */}
+                {/* </GridItem> */}
 
-                {/* <GridItemTemp xs={7}> */}
+                {/* <GridItem xs={7}> */}
                 <Typography
                   variant="t1"
                   fontFamily="instagram"
@@ -86,8 +85,8 @@ export const ResultTile: FC<ResultTileProps> = ({
                 >
                   {name}
                 </Typography>
-                {/* </GridItemTemp> */}
-              </GridTemp>
+                {/* </GridItem> */}
+              </Grid>
             ))
           ) : (
             <Typography variant="t1" fontFamily="instagram" textAlign="center">
@@ -312,7 +311,7 @@ export const ResultTile: FC<ResultTileProps> = ({
           {isMobile ? (
             <ImageSlider slides={refactoredEvent.images} />
           ) : (
-            <GridTemp justifyContent="even">
+            <Grid justifyContent="even">
               <Button
                 variant="clear"
                 typeColor={showMatrix ? 'lightBlue' : undefined}
@@ -326,7 +325,7 @@ export const ResultTile: FC<ResultTileProps> = ({
                 content="Image slideshow"
                 func={() => setShowModal(!showModal)}
               />
-            </GridTemp>
+            </Grid>
           )}
 
           {showMatrix ? <ImageMatrix items={refactoredEvent.images} /> : null}

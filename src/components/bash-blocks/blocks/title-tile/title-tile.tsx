@@ -2,8 +2,8 @@ import { FC } from 'react';
 import { generateUniqueKey, useScreenWidth } from '../../../../utils';
 import { Stack, Tile, Typography } from '../../basics';
 import { Items } from './types/items';
-import { GridTemp } from '../../basics/grid-temp/grid';
-import { GridItemTemp } from '../../basics/grid-temp/grid-item';
+import { Grid } from '../../basics/grid/grid';
+import { GridItem } from '../../basics/grid/grid-item';
 
 export type TitleTileProps = {
   heading?: string;
@@ -26,43 +26,43 @@ export const TitleTile: FC<TitleTileProps> = ({
 
       {titleItems
         ? titleItems.map(({ content, subContent }, index) => (
-            <GridTemp
+            <Grid
               key={generateUniqueKey(index)}
               justifyContent="center"
               spacing="xs"
             >
-              <GridItemTemp xs={5}>
+              <GridItem xs={5}>
                 <Typography variant="h3" boldFace textAlign="right">
                   {content}
                 </Typography>
-              </GridItemTemp>
-              <GridItemTemp xs={5}>
+              </GridItem>
+              <GridItem xs={5}>
                 <Typography variant="h3" markdown>
                   {subContent}
                 </Typography>
-              </GridItemTemp>
-            </GridTemp>
+              </GridItem>
+            </Grid>
           ))
         : null}
 
       {bodyItems
         ? bodyItems.map(({ content, subContent }, index) => (
-            <GridTemp
+            <Grid
               key={generateUniqueKey(index)}
               justifyContent="center"
               spacing="xs"
             >
-              <GridItemTemp xs={5}>
+              <GridItem xs={5}>
                 <Typography variant="body" boldFace textAlign="right">
                   {content}
                 </Typography>
-              </GridItemTemp>
-              <GridItemTemp xs={5}>
+              </GridItem>
+              <GridItem xs={5}>
                 <Typography variant="body" markdown>
                   {subContent}
                 </Typography>
-              </GridItemTemp>
-            </GridTemp>
+              </GridItem>
+            </Grid>
           ))
         : null}
     </Stack>
