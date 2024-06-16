@@ -1,7 +1,7 @@
-import { ArticleTileProps, BackgroundProps } from '../../../bash-blocks';
+import { ArticleTileProps, PageBackgroundProps } from '../../../bash-blocks';
 
 type LibraryProps = {
-  background: BackgroundProps;
+  background: PageBackgroundProps;
   tileOne: ArticleTileProps;
   tileTwo: ArticleTileProps;
   tileThree: ArticleTileProps;

@@ -12,7 +12,7 @@ type TemperatureProps = {
 
 export const Temperature: FC<TemperatureProps> = ({ temp, icon }) => {
   let backgroundColor = undefined;
-  let fontColor: Color = undefined;
+  let fontColor: Color | undefined = undefined;
 
   if (temp >= 30) {
     backgroundColor = 'rgba(238, 40, 0, 0.8)';

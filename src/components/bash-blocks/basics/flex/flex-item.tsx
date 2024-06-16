@@ -22,9 +22,5 @@ export const FlexItem: FC<FlexItemProps> = ({ children, basis, grow }) => {
     }
   );
 
-  return (
-    <div data-testid="flex-item" className={classNames}>
-      {children}
-    </div>
-  );
+  return <div className={classNames}>{children}</div>;
 };

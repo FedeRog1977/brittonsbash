@@ -1,7 +1,10 @@
-import { BackgroundProps, FootnoteTileProps } from '../../../../bash-blocks';
+import {
+  PageBackgroundProps,
+  FootnoteTileProps,
+} from '../../../../bash-blocks';
 
 type WeatherProps = {
-  background: BackgroundProps;
+  background: PageBackgroundProps;
   tileOne: FootnoteTileProps;
 };
 

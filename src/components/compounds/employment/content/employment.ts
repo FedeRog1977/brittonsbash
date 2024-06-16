@@ -1,11 +1,11 @@
 import {
   ArticleTileProps,
-  BackgroundProps,
+  PageBackgroundProps,
   TitleTileProps,
 } from '../../../bash-blocks';
 
 type EmploymentProps = {
-  background: BackgroundProps;
+  background: PageBackgroundProps;
   tileOne: TitleTileProps;
   tileTwo: ArticleTileProps;
   tileThree: ArticleTileProps;

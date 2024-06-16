@@ -1,11 +1,11 @@
 import {
-  BackgroundProps,
+  PageBackgroundProps,
   FootnoteTileProps,
   VideoTileProps,
 } from '../../../../bash-blocks';
 
 type MiamiViceProps = {
-  background: BackgroundProps;
+  background: PageBackgroundProps;
   tileOne: {
     season1: VideoTileProps[];
     season2: VideoTileProps[];

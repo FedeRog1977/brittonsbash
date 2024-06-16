@@ -1,92 +1,44 @@
 @use '../../reference' as reference;
 
 .background {
-  @media (min-width: 768px) {
-    background-image: url('https://lewisbritton.com/images/general/background.jpg');
-    background-attachment: fixed;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    height: 500px;
-    overflow: hidden;
-    top: -80px;
-  }
-
-  @media (max-width: 768px) {
-    background-image: url('https://lewisbritton.com/images/general/background-mobile.jpg');
-    background-size: 100% auto;
-    height: 150px;
-  }
+  width: 100%;
+  height: 100%;
 }
 
-.text {
-  color: reference.$lighter-grey;
-  background-image: reference.$gradient-dark-60-bottom-top;
-  display: grid;
-  align-items: end;
-  position: absolute;
-
-  @media (min-width: 768px) {
-    width: 100%;
-    height: 500px;
+.color {
+  &Black {
+    background-color: reference.$black;
   }
 
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 150px;
+  &DarkerGrey {
+    background-color: reference.$darker-grey;
   }
 
-  &Content {
-    @media (min-width: 768px) {
-      font-size: 64px;
-      margin: 20px auto;
-      width: 960px;
-    }
-
-    @media (max-width: 768px) {
-      font-size: 28px;
-      margin: 10px auto;
-      width: 340px;
-    }
+  &DarkGrey {
+    background-color: reference.$dark-grey;
   }
 
-  &Std {
-    font-family: Sans-Light;
+  &MediumGrey {
+    background-color: reference.$medium-grey;
   }
 
-  &Logo {
-    font-family: Audi-Light;
-
-    @media (max-width: 768px) {
-      font-size: 24px;
-    }
+  &LightGrey {
+    background-color: reference.$light-grey;
   }
 
-  &Ig {
-    font-family: Instagram;
-    // background: -webkit-linear-gradient(
-    //     0deg,
-    //     #a13cc2 -50%,
-    //     #9f1b7f 25%,
-    //     #ff971d 100%
-    // );
-    // background-clip: text;
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
+  &LighterGrey {
+    background-color: reference.$lighter-grey;
   }
 
-  &Sport {
-    font-family: NFS;
+  &LightBlue {
+    background-color: reference.$light-blue;
   }
 
-  &Audi {
-    font-family: Audi-Extended;
+  &White {
+    background-color: reference.$white;
   }
 
-  &Miami {
-    font-family: Broadway;
+  &Transparent {
+    background-color: reference.$transparent;
   }
 }

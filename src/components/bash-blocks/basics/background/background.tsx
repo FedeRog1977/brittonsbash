@@ -1,23 +1,19 @@
-import { toUpperCase } from '../../../../utils';
-import styles from './background.module.scss';
 import cx from 'classnames';
-import { FC } from 'react';
-import { Header } from '../../partials';
+import { FC, ReactNode } from 'react';
+import styles from './background.module.scss';
+import { toUpperCase } from '../../../../utils';
+import { Color } from '../../reference';
 
 export type BackgroundProps = {
-  type?: 'std' | 'logo' | 'ig' | 'sport' | 'audi' | 'miami';
-  content: string;
+  children: ReactNode;
+  color: Color;
 };
 
-export const Background: FC<BackgroundProps> = ({ type = 'logo', content }) => {
-  const classNamesText = cx(styles.text, styles[`text${toUpperCase(type)}`]);
-
-  return (
-    <div className={styles.background}>
-      <Header />
-      <div className={classNamesText}>
-        <div className={styles.textContent}>{content}</div>
-      </div>
-    </div>
+export const Background: FC<BackgroundProps> = ({ children, color }) => {
+  const classNames = cx(
+    styles.background,
+    styles[`color${toUpperCase(color)}`]
   );
+
+  return <div className={classNames}>{children}</div>;
 };

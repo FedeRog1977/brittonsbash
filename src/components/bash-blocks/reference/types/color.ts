@@ -7,5 +7,4 @@ export type Color =
   | 'lighterGrey'
   | 'lightBlue'
   | 'white'
-  | 'transparent'
-  | undefined;
+  | 'transparent';
