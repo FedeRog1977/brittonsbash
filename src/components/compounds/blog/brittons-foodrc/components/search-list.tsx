@@ -8,8 +8,7 @@ export type SearchListProps = {
   funcSelect: (() => void) | ((e: any) => void);
   // TODO: make partial of future type
   items: {
-    heading: string;
-    subHeading?: string;
+    name: string;
   }[];
 };
 
@@ -18,22 +17,16 @@ export const SearchList: FC<SearchListProps> = ({ funcSelect, items }) => {
 
   return (
     <Grid justifyContent="even" alignItems="center">
-      {items.map(({ heading, subHeading }, index) => (
+      {items.map(({ name }, index) => (
         <GridItem xs={12} lg={3}>
           <Button
             key={generateUniqueKey(index)}
             variant="clear"
             typeVariant={isMobile ? 'h4' : 'body'}
-            value={heading}
+            value={name}
             func={funcSelect}
-            // () => {
-            //     funcSelect
-            //     window.location.href = '#/blog/miami-vice/#result'
-            // }
             width="full"
-            content={heading}
-            subContent={subHeading}
-            subContentTop
+            content={name}
             padding="coarse"
           />
         </GridItem>

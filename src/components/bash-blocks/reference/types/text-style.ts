@@ -21,7 +21,13 @@ export type TextStyle = {
   smallCaps?: boolean;
   textDecoration?: 'none' | 'overline' | 'underline' | 'lineThrough';
   shadow?: boolean;
-  fontFamily?: 'serif' | 'sansSerif' | 'instagram' | 'sport' | 'miami';
+  fontFamily?:
+    | 'serif'
+    | 'sansSerif'
+    | 'instagram'
+    | 'sport'
+    | 'miami'
+    | 'calligraphy';
   textAlign?: AlignHorizontal | 'inherit' | 'justify';
   paragraphMargins?: boolean;
   markdown?: boolean;

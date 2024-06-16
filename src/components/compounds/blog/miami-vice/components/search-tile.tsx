@@ -12,6 +12,7 @@ export const SearchTile: FC<SearchTileProps> = ({ funcSelect }) => {
   const { isMobile } = useScreenWidth();
   const { showElement, setShowElement } = useShowElement();
 
+  // TODO: move this to hook like IG and Sport
   const emptyVideoData: VideoTileProps[] = [
     {
       heading: '',

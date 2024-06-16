@@ -1,5 +1,5 @@
 export * from './allroad';
-export * from './brittons-food-rc';
+export * from './brittons-foodrc';
 export * from './founding-fathers';
 export * from './gentlemen-who-cafe';
 export * from './graphic-design';

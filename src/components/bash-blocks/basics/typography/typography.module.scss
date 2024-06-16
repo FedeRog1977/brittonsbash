@@ -490,6 +490,98 @@
       }
     }
   }
+
+  &Calligraphy {
+    &T1 {
+      font-family: GreatVibes;
+      font-size: 52px;
+
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
+    }
+
+    &T2 {
+      font-family: GreatVibes;
+      font-size: 52px;
+
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
+    }
+
+    &H1 {
+      font-family: GreatVibes;
+      font-size: 46px;
+
+      @media (max-width: 768px) {
+        font-size: 22px;
+      }
+    }
+
+    &H2 {
+      font-family: GreatVibes;
+      font-size: 32px;
+
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
+    }
+
+    &H3 {
+      font-family: GreatVibes;
+      font-size: 24px;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
+    }
+
+    &H4 {
+      font-family: GreatVibes;
+      font-size: 24px;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
+    }
+
+    &Body {
+      font-family: GreatVibes;
+      font-size: 16px;
+
+      @media (max-width: 768px) {
+        font-size: 12px;
+      }
+    }
+
+    &Caption {
+      font-family: GreatVibes;
+      font-size: 16px;
+
+      @media (max-width: 768px) {
+        font-size: 12px;
+      }
+    }
+
+    &Footnote {
+      font-family: GreatVibes;
+      font-size: 14px;
+
+      @media (max-width: 768px) {
+        font-size: 10px;
+      }
+    }
+
+    &Tiny {
+      font-family: GreatVibes;
+      font-size: 10px;
+
+      @media (max-width: 768px) {
+        font-size: 8px;
+      }
+    }
+  }
 }
 
 .smallCaps {

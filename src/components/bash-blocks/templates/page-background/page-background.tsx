@@ -5,7 +5,7 @@ import { FC } from 'react';
 import { Header } from '../../partials';
 
 export type PageBackgroundProps = {
-  type?: 'std' | 'logo' | 'ig' | 'sport' | 'audi' | 'miami';
+  type?: 'std' | 'logo' | 'ig' | 'sport' | 'audi' | 'miami' | 'calligraphy';
   content: string;
 };
 
