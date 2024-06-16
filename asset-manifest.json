@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d727504d.css",
-    "main.js": "/static/js/main.e767d272.js",
+    "main.css": "/static/css/main.79b47d4e.css",
+    "main.js": "/static/js/main.dcce80aa.js",
     "static/js/787.15aa4678.chunk.js": "/static/js/787.15aa4678.chunk.js",
     "static/media/cmu-italic.ttf": "/static/media/cmu-italic.242b10aa04f441336096.ttf",
     "static/media/cmu-bold-italic.ttf": "/static/media/cmu-bold-italic.00d0acb64afdc41fb234.ttf",
@@ -19,17 +19,18 @@
     "static/media/open-sans-medium.ttf": "/static/media/open-sans-medium.5b0a682fe3717764627e.ttf",
     "static/media/open-sans-regular.ttf": "/static/media/open-sans-regular.9a6cfa5890d7f3eef585.ttf",
     "static/media/open-sans-light.ttf": "/static/media/open-sans-light.ba19b360bc99b580b45b.ttf",
+    "static/media/great-vibes.ttf": "/static/media/great-vibes.9f3b78d95140c3425300.ttf",
     "static/media/grandista.ttf": "/static/media/grandista.bec7f1e368edce800cdd.ttf",
     "static/media/broadway-regular.ttf": "/static/media/broadway-regular.f86d1b2cbfa07b705cef.ttf",
     "static/media/nfs.ttf": "/static/media/nfs.8723982ddbc7e3136bad.ttf",
     "static/media/ibm.ttf": "/static/media/ibm.ea9b8ea99532f40a5c49.ttf",
     "index.html": "/index.html",
-    "main.d727504d.css.map": "/static/css/main.d727504d.css.map",
-    "main.e767d272.js.map": "/static/js/main.e767d272.js.map",
+    "main.79b47d4e.css.map": "/static/css/main.79b47d4e.css.map",
+    "main.dcce80aa.js.map": "/static/js/main.dcce80aa.js.map",
     "787.15aa4678.chunk.js.map": "/static/js/787.15aa4678.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d727504d.css",
-    "static/js/main.e767d272.js"
+    "static/css/main.79b47d4e.css",
+    "static/js/main.dcce80aa.js"
   ]
 }
