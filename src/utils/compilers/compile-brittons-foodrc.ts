@@ -5,13 +5,10 @@ export const compileBrittonsFoodRC = () => {
   // TODO: amend type
   const allFood: FoodProps[] = [];
 
-  brittonsFoodRCContent.tileOne.roast.forEach((food) => {
+  brittonsFoodRCContent.tileOne.meat.forEach((food) => {
     allFood.push(food);
   });
-  brittonsFoodRCContent.tileOne.stew.forEach((food) => {
-    allFood.push(food);
-  });
-  brittonsFoodRCContent.tileOne.ragu.forEach((food) => {
+  brittonsFoodRCContent.tileOne.poultry.forEach((food) => {
     allFood.push(food);
   });
   brittonsFoodRCContent.tileOne.fish.forEach((food) => {

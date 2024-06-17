@@ -39,16 +39,16 @@ export const SearchTile: FC<SearchTileProps> = ({ funcSelect }) => {
             typeColor={
               Boolean(
                 showElement &&
-                  parsedFoodData === brittonsFoodRCContent.tileOne.roast
+                  parsedFoodData === brittonsFoodRCContent.tileOne.meat
               )
                 ? 'lightBlue'
                 : undefined
             }
             typeFontFamily="calligraphy"
-            content="Roast"
+            content="Meat"
             func={() => {
               setShowElement(!showElement);
-              setParsedFoodData(brittonsFoodRCContent.tileOne.roast);
+              setParsedFoodData(brittonsFoodRCContent.tileOne.meat);
             }}
           />
 
@@ -58,35 +58,16 @@ export const SearchTile: FC<SearchTileProps> = ({ funcSelect }) => {
             typeColor={
               Boolean(
                 showElement &&
-                  parsedFoodData === brittonsFoodRCContent.tileOne.stew
+                  parsedFoodData === brittonsFoodRCContent.tileOne.poultry
               )
                 ? 'lightBlue'
                 : undefined
             }
             typeFontFamily="calligraphy"
-            content="Stew"
+            content="Poultry"
             func={() => {
               setShowElement(!showElement);
-              setParsedFoodData(brittonsFoodRCContent.tileOne.stew);
-            }}
-          />
-
-          <Button
-            variant="clear"
-            typeVariant="t1"
-            typeColor={
-              Boolean(
-                showElement &&
-                  parsedFoodData === brittonsFoodRCContent.tileOne.ragu
-              )
-                ? 'lightBlue'
-                : undefined
-            }
-            typeFontFamily="calligraphy"
-            content="Ragu"
-            func={() => {
-              setShowElement(!showElement);
-              setParsedFoodData(brittonsFoodRCContent.tileOne.ragu);
+              setParsedFoodData(brittonsFoodRCContent.tileOne.poultry);
             }}
           />
 
