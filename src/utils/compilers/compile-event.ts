@@ -94,21 +94,51 @@ export const compileEvent = ({
     names,
     startDate: event.startDate,
     endDate: event.endDate,
-    features: {
-      cities: event.features?.cities?.sort().join(', '),
-      districts: event.features?.districts?.sort().join(', '),
-      attractions: event.features?.attractions?.sort().join(', '),
-      youthHostels: event.features?.youthHostels?.sort().join(', '),
-      supermarkets: event.features?.supermarkets?.sort().join(', '),
-      shops: event.features?.shops?.sort().join(', '),
-      foodstuffs: event.features?.foodstuffs?.sort().join(', '),
-      cafes: event.features?.cafes?.sort().join(', '),
-      bakeries: event.features?.bakeries?.sort().join(', '),
-      gelaterias: event.features?.gelaterias?.sort().join(', '),
-      restaurants: event.features?.restaurants?.sort().join(', '),
-      bars: event.features?.bars?.sort().join(', '),
-      filmingLocations: event.features?.filmingLocations?.sort().join(', '),
-    },
+    features: [
+      {
+        title: 'Districts',
+        content: event.features?.districts?.sort(),
+      },
+      {
+        title: 'Districts',
+        content: event.features?.districts?.sort(),
+      },
+      {
+        title: 'Attractions',
+        content: event.features?.attractions?.sort(),
+      },
+      {
+        title: 'Youth Hostels',
+        content: event.features?.youthHostels?.sort(),
+      },
+      {
+        title: 'Supermarkets',
+        content: event.features?.supermarkets?.sort(),
+      },
+      { title: 'Shops', content: event.features?.shops?.sort() },
+      {
+        title: 'Foodstuffs',
+        content: event.features?.foodstuffs?.sort(),
+      },
+      { title: 'Cafés', content: event.features?.cafes?.sort() },
+      {
+        title: 'Bakeries',
+        content: event.features?.bakeries?.sort(),
+      },
+      {
+        title: 'Gelaterias',
+        content: event.features?.gelaterias?.sort(),
+      },
+      {
+        title: 'Restaurants',
+        content: event.features?.restaurants?.sort(),
+      },
+      { title: 'Bars', content: event.features?.bars?.sort() },
+      {
+        title: 'Filming Locations',
+        content: event.features?.filmingLocations?.sort(),
+      },
+    ],
     description: event.description,
     images: event.images,
     distance: toMiles(distances.reduce(toSum)),

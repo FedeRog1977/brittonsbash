@@ -1,22 +1,10 @@
-import { ArticleProps, Img } from '../../../components/bash-blocks';
+import {
+  ArticlePrefaceProps,
+  ArticleProps,
+  Img,
+} from '../../../components/bash-blocks';
 
 // Event Input Props
-
-type FeaturesProps = {
-  cities?: string[];
-  districts?: string[];
-  attractions?: string[];
-  youthHostels?: string[];
-  supermarkets?: string[];
-  shops?: string[];
-  foodstuffs?: string[];
-  cafes?: string[];
-  bakeries?: string[];
-  gelaterias?: string[];
-  restaurants?: string[];
-  bars?: string[];
-  filmingLocations?: string[];
-};
 
 export type EventProps = {
   id?: string;
@@ -24,9 +12,49 @@ export type EventProps = {
   names: string[];
   startDate: string;
   endDate?: string;
-  features?: FeaturesProps;
+  features?: {
+    cities?: string[];
+    districts?: string[];
+    attractions?: string[];
+    youthHostels?: string[];
+    supermarkets?: string[];
+    shops?: string[];
+    foodstuffs?: string[];
+    cafes?: string[];
+    bakeries?: string[];
+    gelaterias?: string[];
+    restaurants?: string[];
+    bars?: string[];
+    filmingLocations?: string[];
+  };
   description: string | ArticleProps['sections'];
   images: Img[];
+};
+
+// ---
+
+// Event Output Props
+
+export type RefactoredEventProps = {
+  prefix?: EventProps['prefix'];
+  names: string[];
+  startDate: EventProps['startDate'];
+  endDate?: EventProps['endDate'];
+  features: ArticlePrefaceProps['entries'];
+  description: EventProps['description'];
+  images: EventProps['images'];
+  distance?: string;
+  elevation?: string;
+  time?: string;
+  islands?: string;
+  munros?: string;
+  munroTops?: string;
+  corbetts?: string;
+  corbettTops?: string;
+  grahams?: string;
+  subTwos?: string;
+  donalds?: string;
+  showSport: boolean;
 };
 
 // ---
@@ -192,46 +220,6 @@ export type CompiledMilesProps = {
   windfarms: AggregationNumericalProps;
   thorntonhalls: AggregationNumericalProps;
   waterfoots: AggregationNumericalProps;
-};
-
-// ---
-
-// Event Output Props
-
-export type RefactoredEventProps = {
-  prefix?: EventProps['prefix'];
-  names: string[];
-  startDate: EventProps['startDate'];
-  endDate?: EventProps['endDate'];
-  features?: {
-    cities?: string;
-    districts?: string;
-    attractions?: string;
-    youthHostels?: string;
-    supermarkets?: string;
-    shops?: string;
-    foodstuffs?: string;
-    cafes?: string;
-    bakeries?: string;
-    gelaterias?: string;
-    restaurants?: string;
-    bars?: string;
-    filmingLocations?: string;
-  };
-  description: EventProps['description'];
-  images: EventProps['images'];
-  distance?: string;
-  elevation?: string;
-  time?: string;
-  islands?: string;
-  munros?: string;
-  munroTops?: string;
-  corbetts?: string;
-  corbettTops?: string;
-  grahams?: string;
-  subTwos?: string;
-  donalds?: string;
-  showSport: CompiledEventProps['showSport'];
 };
 
 // ---

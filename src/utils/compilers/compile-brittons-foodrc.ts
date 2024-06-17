@@ -2,7 +2,6 @@ import { brittonsFoodRCContent } from '../../components/compounds';
 import { FoodProps } from './types';
 
 export const compileBrittonsFoodRC = () => {
-  // TODO: amend type
   const allFood: FoodProps[] = [];
 
   brittonsFoodRCContent.tileOne.meat.forEach((food) => {
