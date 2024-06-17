@@ -95,6 +95,8 @@ export const compileEvent = ({
     startDate: event.startDate,
     endDate: event.endDate,
     features: [
+      // TODO: move this further up to the data level
+      // To get rid of the need for compile-entries and the conditionals
       {
         title: 'Districts',
         content: event.features?.districts?.sort(),
