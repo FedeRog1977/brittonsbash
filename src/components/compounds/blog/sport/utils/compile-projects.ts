@@ -1,33 +1,33 @@
-import { getSessionItem } from '../api';
-import { removeDuplicates, toMiles, toFeet } from '../helpers';
+import { getSessionItem } from '../../../../../utils/api';
 import {
-  AggregationAlphabeticalProps,
-  AggregationNumericalProps,
-  AggregationProps,
-  CompiledProjectProps,
-  ProjectProps,
-} from './types';
+  removeDuplicates,
+  toMiles,
+  toFeet,
+} from '../../../../../utils/helpers';
+import { CompiledProject } from '../types/compiled-project';
+import { Project } from '../types/project';
 
-type CompiledProjects = {
-  projects: {
-    2024: ProjectProps[];
-    2023: ProjectProps[];
-    2022: ProjectProps[];
-    2021: ProjectProps[];
-    2020: ProjectProps[];
-  };
-  occurrences: AggregationNumericalProps;
-  distance: AggregationAlphabeticalProps;
-  elevation: AggregationAlphabeticalProps;
-  islands: AggregationProps;
-  munros: AggregationProps;
-  munroTops: AggregationProps;
-  corbetts: AggregationProps;
-  corbettTops: AggregationProps;
-  grahams: AggregationProps;
-  subTwos: AggregationProps;
-  donalds: AggregationProps;
-};
+// TODO: make this fix
+// type CompiledProjects = {
+//   projects: {
+//     2024: Project[];
+//     2023: Project[];
+//     2022: Project[];
+//     2021: Project[];
+//     2020: Project[];
+//   };
+//   occurrences: AggregationNumerical;
+//   distance: AggregationAlphabetical;
+//   elevation: AggregationAlphabetical;
+//   islands: Aggregation;
+//   munros: Aggregation;
+//   munroTops: Aggregation;
+//   corbetts: Aggregation;
+//   corbettTops: Aggregation;
+//   grahams: Aggregation;
+//   subTwos: Aggregation;
+//   donalds: Aggregation;
+// };
 
 export const compileProjects = () => {
   const sport = getSessionItem('response-sport');
@@ -69,12 +69,12 @@ export const compileProjects = () => {
 
   //         years.forEach((year) => {
   //             sport[year].projects.forEach(
-  //                 (project: ProjectProps) => (total += project.distance)
+  //                 (project: Project) => (total += project.distance)
   //             )
   //         })
 
   //         sport[key].projects.forEach(
-  //             (project: ProjectProps) => (yearTotal += project.distance)
+  //             (project: Project) => (yearTotal += project.distance)
   //         )
 
   //         return {
@@ -93,12 +93,12 @@ export const compileProjects = () => {
 
   //         years.forEach((year) => {
   //             sport[year].projects.forEach(
-  //                 (project: ProjectProps) => (total += project.elevation)
+  //                 (project: Project) => (total += project.elevation)
   //             )
   //         })
 
   //         sport[key].projects.forEach(
-  //             (project: ProjectProps) => (yearTotal += project.elevation)
+  //             (project: Project) => (yearTotal += project.elevation)
   //         )
 
   //         return {
@@ -116,12 +116,12 @@ export const compileProjects = () => {
   //         let yearTotal: string[] = []
 
   //         years.forEach((year) => {
-  //             sport[year].projects.forEach((project: ProjectProps) =>
+  //             sport[year].projects.forEach((project: Project) =>
   //                 project.islands?.forEach((island) => total.push(island))
   //             )
   //         })
 
-  //         sport[key].projects.forEach((project: ProjectProps) =>
+  //         sport[key].projects.forEach((project: Project) =>
   //             project.islands?.forEach((island) => yearTotal.push(island))
   //         )
 
@@ -144,12 +144,12 @@ export const compileProjects = () => {
   //         let yearTotal: string[] = []
 
   //         years.forEach((year) => {
-  //             sport[year].projects.forEach((project: ProjectProps) =>
+  //             sport[year].projects.forEach((project: Project) =>
   //                 project.munros?.forEach((munro) => total.push(munro))
   //             )
   //         })
 
-  //         sport[key].projects.forEach((project: ProjectProps) =>
+  //         sport[key].projects.forEach((project: Project) =>
   //             project.munros?.forEach((munro) => yearTotal.push(munro))
   //         )
 
@@ -172,14 +172,14 @@ export const compileProjects = () => {
   //         let yearTotal: string[] = []
 
   //         years.forEach((year) => {
-  //             sport[year].projects.forEach((project: ProjectProps) =>
+  //             sport[year].projects.forEach((project: Project) =>
   //                 project.munroTops?.forEach((munroTop) =>
   //                     total.push(munroTop)
   //                 )
   //             )
   //         })
 
-  //         sport[key].projects.forEach((project: ProjectProps) =>
+  //         sport[key].projects.forEach((project: Project) =>
   //             project.munroTops?.forEach((munroTop) =>
   //                 yearTotal.push(munroTop)
   //             )
@@ -204,12 +204,12 @@ export const compileProjects = () => {
   //         let yearTotal: string[] = []
 
   //         years.forEach((year) => {
-  //             sport[year].projects.forEach((project: ProjectProps) =>
+  //             sport[year].projects.forEach((project: Project) =>
   //                 project.corbetts?.forEach((corbett) => total.push(corbett))
   //             )
   //         })
 
-  //         sport[key].projects.forEach((project: ProjectProps) =>
+  //         sport[key].projects.forEach((project: Project) =>
   //             project.corbetts?.forEach((corbett) => yearTotal.push(corbett))
   //         )
 
@@ -233,14 +233,14 @@ export const compileProjects = () => {
   //     let yearTotal: string[] = []
 
   //     years.forEach((year) => {
-  //         sport[year].projects.forEach((project: ProjectProps) =>
+  //         sport[year].projects.forEach((project: Project) =>
   //             project.corbettTops?.forEach((corbettTop) =>
   //                 total.push(corbettTop)
   //             )
   //         )
   //     })
 
-  //     sport[key].projects.forEach((project: ProjectProps) =>
+  //     sport[key].projects.forEach((project: Project) =>
   //         project.corbettTops?.forEach((corbettTop) =>
   //             yearTotal.push(corbettTop)
   //         )
@@ -263,12 +263,12 @@ export const compileProjects = () => {
   //         let yearTotal: string[] = []
 
   //         years.forEach((year) => {
-  //             sport[year].projects.forEach((project: ProjectProps) =>
+  //             sport[year].projects.forEach((project: Project) =>
   //                 project.grahams?.forEach((graham) => total.push(graham))
   //             )
   //         })
 
-  //         sport[key].projects.forEach((project: ProjectProps) =>
+  //         sport[key].projects.forEach((project: Project) =>
   //             project.grahams?.forEach((graham) => yearTotal.push(graham))
   //         )
 
@@ -291,12 +291,12 @@ export const compileProjects = () => {
   //         let yearTotal: string[] = []
 
   //         years.forEach((year) => {
-  //             sport[year].projects.forEach((project: ProjectProps) =>
+  //             sport[year].projects.forEach((project: Project) =>
   //                 project.subTwos?.forEach((subTwo) => total.push(subTwo))
   //             )
   //         })
 
-  //         sport[key].projects.forEach((project: ProjectProps) =>
+  //         sport[key].projects.forEach((project: Project) =>
   //             project.subTwos?.forEach((subTwo) => yearTotal.push(subTwo))
   //         )
 
@@ -319,12 +319,12 @@ export const compileProjects = () => {
   //         let yearTotal: string[] = []
 
   //         years.forEach((year) => {
-  //             sport[year].projects.forEach((project: ProjectProps) =>
+  //             sport[year].projects.forEach((project: Project) =>
   //                 project.donalds?.forEach((donald) => total.push(donald))
   //             )
   //         })
 
-  //         sport[key].projects.forEach((project: ProjectProps) =>
+  //         sport[key].projects.forEach((project: Project) =>
   //             project.donalds?.forEach((donald) => yearTotal.push(donald))
   //         )
 
@@ -373,7 +373,7 @@ export const compileProjects = () => {
 
   // Old gen:
 
-  const projects: CompiledProjectProps['projects'] = {
+  const projects: CompiledProject['projects'] = {
     2024: sport[2024].projects,
     2023: sport[2023].projects,
     2022: sport[2022].projects,
@@ -381,7 +381,7 @@ export const compileProjects = () => {
     2020: sport[2020].projects,
   };
 
-  const number: CompiledProjectProps['number'] = {
+  const number: CompiledProject['number'] = {
     total:
       sport[2024].projects.length +
       sport[2023].projects.length +
@@ -416,7 +416,7 @@ export const compileProjects = () => {
   const subTwos2024: string[] = [];
   const donalds2024: string[] = [];
 
-  sport[2024].projects.forEach((event: ProjectProps) => {
+  sport[2024].projects.forEach((event: Project) => {
     distance2024 = distance2024 + event.distance;
     elevation2024 = elevation2024 + event.elevation;
 
@@ -483,7 +483,7 @@ export const compileProjects = () => {
   const subTwos2023: string[] = [];
   const donalds2023: string[] = [];
 
-  sport[2023].projects.forEach((event: ProjectProps) => {
+  sport[2023].projects.forEach((event: Project) => {
     distance2023 = distance2023 + event.distance;
     elevation2023 = elevation2023 + event.elevation;
 
@@ -550,7 +550,7 @@ export const compileProjects = () => {
   const subTwos2022: string[] = [];
   const donalds2022: string[] = [];
 
-  sport[2022].projects.forEach((event: ProjectProps) => {
+  sport[2022].projects.forEach((event: Project) => {
     distance2022 = distance2022 + event.distance;
     elevation2022 = elevation2022 + event.elevation;
 
@@ -617,7 +617,7 @@ export const compileProjects = () => {
   const subTwos2021: string[] = [];
   const donalds2021: string[] = [];
 
-  sport[2021].projects.forEach((event: ProjectProps) => {
+  sport[2021].projects.forEach((event: Project) => {
     distance2021 = distance2021 + event.distance;
     elevation2021 = elevation2021 + event.elevation;
 
@@ -684,7 +684,7 @@ export const compileProjects = () => {
   const subTwos2020: string[] = [];
   const donalds2020: string[] = [];
 
-  sport[2020].projects.forEach((event: ProjectProps) => {
+  sport[2020].projects.forEach((event: Project) => {
     distance2020 = distance2020 + event.distance;
     elevation2020 = elevation2020 + event.elevation;
 
@@ -739,7 +739,7 @@ export const compileProjects = () => {
     donaldsTotal.push(donald);
   });
 
-  const islands: CompiledProjectProps['islands'] = {
+  const islands: CompiledProject['islands'] = {
     names: {
       total: islandsTotal.sort(),
       unique: removeDuplicates(islandsTotal).sort(),
@@ -760,7 +760,7 @@ export const compileProjects = () => {
     },
   };
 
-  const munros: CompiledProjectProps['munros'] = {
+  const munros: CompiledProject['munros'] = {
     names: {
       total: munrosTotal.sort(),
       unique: removeDuplicates(munrosTotal).sort(),
@@ -781,7 +781,7 @@ export const compileProjects = () => {
     },
   };
 
-  const munroTops: CompiledProjectProps['munroTops'] = {
+  const munroTops: CompiledProject['munroTops'] = {
     names: {
       total: munroTopsTotal.sort(),
       unique: removeDuplicates(munroTopsTotal).sort(),
@@ -802,7 +802,7 @@ export const compileProjects = () => {
     },
   };
 
-  const corbetts: CompiledProjectProps['corbetts'] = {
+  const corbetts: CompiledProject['corbetts'] = {
     names: {
       total: corbettsTotal.sort(),
       unique: removeDuplicates(corbettsTotal).sort(),
@@ -823,7 +823,7 @@ export const compileProjects = () => {
     },
   };
 
-  const corbettTops: CompiledProjectProps['corbettTops'] = {
+  const corbettTops: CompiledProject['corbettTops'] = {
     names: {
       total: corbettTopsTotal.sort(),
       unique: removeDuplicates(corbettTopsTotal).sort(),
@@ -844,7 +844,7 @@ export const compileProjects = () => {
     },
   };
 
-  const grahams: CompiledProjectProps['grahams'] = {
+  const grahams: CompiledProject['grahams'] = {
     names: {
       total: grahamsTotal.sort(),
       unique: removeDuplicates(grahamsTotal).sort(),
@@ -865,7 +865,7 @@ export const compileProjects = () => {
     },
   };
 
-  const subTwos: CompiledProjectProps['subTwos'] = {
+  const subTwos: CompiledProject['subTwos'] = {
     names: {
       total: subTwosTotal.sort(),
       unique: removeDuplicates(subTwosTotal).sort(),
@@ -886,7 +886,7 @@ export const compileProjects = () => {
     },
   };
 
-  const donalds: CompiledProjectProps['donalds'] = {
+  const donalds: CompiledProject['donalds'] = {
     names: {
       total: donaldsTotal.sort(),
       unique: removeDuplicates(donaldsTotal).sort(),
@@ -907,7 +907,7 @@ export const compileProjects = () => {
     },
   };
 
-  const distance: CompiledProjectProps['distance'] = {
+  const distance: CompiledProject['distance'] = {
     total: toMiles(
       distance2024 + distance2023 + distance2022 + distance2021 + distance2020
     ),
@@ -918,7 +918,7 @@ export const compileProjects = () => {
     2020: toMiles(distance2020),
   };
 
-  const elevation: CompiledProjectProps['elevation'] = {
+  const elevation: CompiledProject['elevation'] = {
     total: toFeet(
       elevation2024 +
         elevation2023 +
@@ -933,7 +933,7 @@ export const compileProjects = () => {
     2020: toFeet(elevation2020),
   };
 
-  const compiledProjects: CompiledProjectProps = {
+  const compiledProjects: CompiledProject = {
     projects,
     number,
     distance,

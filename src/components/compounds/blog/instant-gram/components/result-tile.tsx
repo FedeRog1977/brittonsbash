@@ -15,16 +15,16 @@ import {
   useShowElement,
   useScreenWidth,
   generateUniqueKey,
-  RefactoredEventProps,
 } from '../../../../../utils';
 import { FC } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { Grid } from '../../../../bash-blocks/basics';
+import { RefactoredEvent } from '../types/refactored-event';
 
 type ResultTileProps = {
   url: string;
-  refactoredEvent: RefactoredEventProps;
+  refactoredEvent: RefactoredEvent;
   funcToggleElements: (value: string) => void;
   showDescription: boolean;
   showMatrix: boolean;

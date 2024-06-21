@@ -1,5 +1,3 @@
-import { EventProps } from '../../../../../utils';
-
 export const emptyEventData = [
   {
     id: '',

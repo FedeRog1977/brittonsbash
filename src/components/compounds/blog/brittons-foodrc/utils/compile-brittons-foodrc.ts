@@ -1,8 +1,8 @@
-import { brittonsFoodRCContent } from '../../components/compounds';
-import { FoodProps } from './types';
+import { brittonsFoodRCContent } from '../../..';
+import { Food } from '../types/food';
 
 export const compileBrittonsFoodRC = () => {
-  const allFood: FoodProps[] = [];
+  const allFood: Food[] = [];
 
   brittonsFoodRCContent.tileOne.meat.forEach((food) => {
     allFood.push(food);

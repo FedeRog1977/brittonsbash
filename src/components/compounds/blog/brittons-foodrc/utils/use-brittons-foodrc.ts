@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { compileBrittonsFoodRC } from '../../../../../utils/compilers/compile-brittons-foodrc';
+import { compileBrittonsFoodRC } from './compile-brittons-foodrc';
 import { useScreenWidth, useShowElement } from '../../../../../utils';
 
 export const useBrittonsFoodRC = () => {

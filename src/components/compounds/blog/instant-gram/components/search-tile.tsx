@@ -1,5 +1,5 @@
 import { Button, Stack, Tile } from '../../../../bash-blocks';
-import { EventProps } from '../../../../../utils';
+import { Event } from '../types/event';
 import { FC } from 'react';
 import { SearchList } from './search-list';
 import { BigSearch } from '../../../../bash-blocks';
@@ -8,7 +8,7 @@ type SearchTileProps = {
   url?: string;
   funcCategory: (value: string) => void;
   showSearchList: boolean;
-  eventData: (Pick<EventProps, 'prefix' | 'names'> & { id: string })[];
+  eventData: (Pick<Event, 'prefix' | 'names'> & { id: string })[];
   funcInput: (e: any) => void;
   funcButton: () => void;
   funcSelect: (e: any) => void;

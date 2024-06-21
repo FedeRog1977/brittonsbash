@@ -1,15 +1,15 @@
-import { toSum, toFeet, toMiles } from '../helpers';
-import {
-  CompiledEventProps,
-  ProjectProps,
-  RefactoredEventProps,
-} from './types';
+import { toSum, toFeet, toMiles } from '../../../../../utils/helpers';
+import { Event } from '../types/event';
+import { Project } from '../types/project';
+import { RefactoredEvent } from '../types/refactored-event';
 
-export const compileEvent = ({
-  event,
-  sport,
-  showSport,
-}: CompiledEventProps) => {
+export type CompiledEvent = {
+  event: Event;
+  sport: Project[];
+  showSport: boolean;
+};
+
+export const compileEvent = ({ event, sport, showSport }: CompiledEvent) => {
   const names: string[] = [];
   const distances: number[] = [];
   const elevations: number[] = [];
@@ -59,7 +59,7 @@ export const compileEvent = ({
     });
   }
 
-  sport.forEach((sport: ProjectProps) => {
+  sport.forEach((sport: Project) => {
     distances.push(sport.distance);
     elevations.push(sport.elevation);
     times.push(sport.time);
@@ -89,7 +89,7 @@ export const compileEvent = ({
     });
   });
 
-  const refactoredEvent: RefactoredEventProps = {
+  const refactoredEvent: RefactoredEvent = {
     prefix: event.prefix,
     names,
     startDate: event.startDate,

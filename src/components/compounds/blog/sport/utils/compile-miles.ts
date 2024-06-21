@@ -1,11 +1,12 @@
-import { getSessionItem } from '../api';
-import { toFeet, toMiles } from '../helpers';
-import { CompiledMilesProps, MilesProps } from './types';
+import { getSessionItem } from '../../../../../utils/api';
+import { toFeet, toMiles } from '../../../../../utils/helpers';
+import { CompiledMiles } from '../types/compiled-miles';
+import { Miles } from '../types/miles';
 
 export const compileMiles = () => {
   const sport = getSessionItem('response-sport');
 
-  const miles: CompiledMilesProps['miles'] = {
+  const miles: CompiledMiles['miles'] = {
     2024: sport[2024].miles,
     2023: sport[2023].miles,
     2022: sport[2022].miles,
@@ -13,7 +14,7 @@ export const compileMiles = () => {
     2020: sport[2020].miles,
   };
 
-  const number: CompiledMilesProps['number'] = {
+  const number: CompiledMiles['number'] = {
     total:
       sport[2024].miles.length +
       sport[2023].miles.length +
@@ -38,7 +39,7 @@ export const compileMiles = () => {
   var thorntonhalls2024: number = 0;
   var waterfoots2024: number = 0;
 
-  sport[2024].miles.forEach((event: MilesProps) => {
+  sport[2024].miles.forEach((event: Miles) => {
     distance2024 = distance2024 + event.distance;
     elevation2024 = elevation2024 + event.elevation;
 
@@ -62,7 +63,7 @@ export const compileMiles = () => {
   var thorntonhalls2023: number = 0;
   var waterfoots2023: number = 0;
 
-  sport[2023].miles.forEach((event: MilesProps) => {
+  sport[2023].miles.forEach((event: Miles) => {
     distance2023 = distance2023 + event.distance;
     elevation2023 = elevation2023 + event.elevation;
 
@@ -86,7 +87,7 @@ export const compileMiles = () => {
   var thorntonhalls2022: number = 0;
   var waterfoots2022: number = 0;
 
-  sport[2022].miles.forEach((event: MilesProps) => {
+  sport[2022].miles.forEach((event: Miles) => {
     distance2022 = distance2022 + event.distance;
     elevation2022 = elevation2022 + event.elevation;
 
@@ -110,7 +111,7 @@ export const compileMiles = () => {
   var thorntonhalls2021: number = 0;
   var waterfoots2021: number = 0;
 
-  sport[2021].miles.forEach((event: MilesProps) => {
+  sport[2021].miles.forEach((event: Miles) => {
     distance2021 = distance2021 + event.distance;
     elevation2021 = elevation2021 + event.elevation;
 
@@ -134,7 +135,7 @@ export const compileMiles = () => {
   var thorntonhalls2020: number = 0;
   var waterfoots2020: number = 0;
 
-  sport[2020].miles.forEach((event: MilesProps) => {
+  sport[2020].miles.forEach((event: Miles) => {
     distance2020 = distance2020 + event.distance;
     elevation2020 = elevation2020 + event.elevation;
 
@@ -170,7 +171,7 @@ export const compileMiles = () => {
     waterfoots2021 +
     waterfoots2020;
 
-  const windfarms: CompiledMilesProps['windfarms'] = {
+  const windfarms: CompiledMiles['windfarms'] = {
     total: windfarmsTotal,
     2024: windfarms2024,
     2023: windfarms2023,
@@ -179,7 +180,7 @@ export const compileMiles = () => {
     2020: windfarms2020,
   };
 
-  const thorntonhalls: CompiledMilesProps['thorntonhalls'] = {
+  const thorntonhalls: CompiledMiles['thorntonhalls'] = {
     total: thorntonhallsTotal,
     2024: thorntonhalls2024,
     2023: thorntonhalls2023,
@@ -188,7 +189,7 @@ export const compileMiles = () => {
     2020: thorntonhalls2020,
   };
 
-  const waterfoots: CompiledMilesProps['waterfoots'] = {
+  const waterfoots: CompiledMiles['waterfoots'] = {
     total: waterfootsTotal,
     2024: waterfoots2024,
     2023: waterfoots2023,
@@ -197,7 +198,7 @@ export const compileMiles = () => {
     2020: waterfoots2020,
   };
 
-  const distance: CompiledMilesProps['distance'] = {
+  const distance: CompiledMiles['distance'] = {
     total: toMiles(
       distance2024 + distance2023 + distance2022 + distance2021 + distance2020
     ),
@@ -208,7 +209,7 @@ export const compileMiles = () => {
     2020: toMiles(distance2020),
   };
 
-  const elevation: CompiledMilesProps['elevation'] = {
+  const elevation: CompiledMiles['elevation'] = {
     total: toFeet(
       elevation2024 +
         elevation2023 +
@@ -223,7 +224,7 @@ export const compileMiles = () => {
     2020: toFeet(elevation2020),
   };
 
-  const compiledMiles: CompiledMilesProps = {
+  const compiledMiles: CompiledMiles = {
     miles,
     number,
     distance,

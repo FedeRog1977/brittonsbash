@@ -1,9 +1,9 @@
-import { getSessionItem } from '../api';
-import { EventProps } from './types';
+import { getSessionItem } from '../../../../../utils/api';
+import { Event } from '../types/event';
 
 export const compileEvents = () => {
   const events = getSessionItem('response-events');
-  const eventsParsed: EventProps[] = [];
+  const eventsParsed: Event[] = [];
 
   events[2024].forEach((event: any) => {
     eventsParsed.push(event);

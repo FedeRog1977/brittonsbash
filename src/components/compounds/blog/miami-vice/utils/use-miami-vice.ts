@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { compileMiamiVice } from '../../../../../utils';
+import { compileMiamiVice } from '../utils/compile-miami-vice';
 
 export const useMiamiVice = () => {
   const allVideos = compileMiamiVice();

@@ -1,4 +1,4 @@
-import { FoodProps } from '../../../../../utils';
+import { Food } from '../types/food';
 import {
   PageBackgroundProps,
   FootnoteTileProps,
@@ -7,13 +7,13 @@ import {
 type BrittonsFoodRCProps = {
   background: PageBackgroundProps;
   tileOne: {
-    meat: FoodProps[];
-    poultry: FoodProps[];
-    fish: FoodProps[];
-    pasta: FoodProps[];
-    bread: FoodProps[];
-    sweet: FoodProps[];
-    misc: FoodProps[];
+    meat: Food[];
+    poultry: Food[];
+    fish: Food[];
+    pasta: Food[];
+    bread: Food[];
+    sweet: Food[];
+    misc: Food[];
   };
   tileTwo: FootnoteTileProps;
 };

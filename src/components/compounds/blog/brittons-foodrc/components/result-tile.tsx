@@ -1,9 +1,5 @@
 import { FC } from 'react';
-import {
-  FoodProps,
-  useScreenWidth,
-  useShowElement,
-} from '../../../../../utils';
+import { useScreenWidth, useShowElement } from '../../../../../utils';
 import {
   ArticlePreface,
   Button,
@@ -17,9 +13,10 @@ import {
 } from '../../../../bash-blocks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { Food } from '../types/food';
 
 type ResultTileProps = {
-  food: FoodProps;
+  food: Food;
   funcToggleElements: (value: string) => void;
   showDescription: boolean;
   showMatrix: boolean;

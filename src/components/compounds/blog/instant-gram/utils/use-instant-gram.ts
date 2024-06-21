@@ -1,15 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
-import {
-  compileEvent,
-  compileEvents,
-  compileEventSports,
-  EventProps,
-  ProjectProps,
-  useScreenWidth,
-  useShowElement,
-} from '../../../../../utils';
+import { useScreenWidth, useShowElement } from '../../../../../utils';
 import { emptyEventData } from '../mocks/empty-event-data';
+import { Project } from '../types/project';
+import { compileEvent } from './compile-event';
+import { compileEventSports } from './compile-event-sports';
+import { compileEvents } from './compile-events';
 
 export const useInstantGram = () => {
   const location = useLocation();
@@ -19,12 +15,12 @@ export const useInstantGram = () => {
 
   const { events, eventsParsed } = compileEvents();
   const allSport = compileEventSports();
-  const sportOnEvent: ProjectProps[] = [];
+  const sportOnEvent: Project[] = [];
 
   const [searchField, setSearchField] = useState('');
 
   const [event, setEvent] = useState(eventsParsed[0]);
-  const [sport, setSport] = useState<ProjectProps[]>([]);
+  const [sport, setSport] = useState<Project[]>([]);
   const [showSport, setShowSport] = useState(false);
 
   const [eventHandler, setEventHandler] = useState(event);
@@ -58,7 +54,7 @@ export const useInstantGram = () => {
       for (var i in eventsParsed) {
         if (location.search === `?${eventsParsed[i].id?.toLowerCase()}=`) {
           setEvent(eventsParsed[i]);
-          setSport([] as ProjectProps[]);
+          setSport([] as Project[]);
           setShowSport(false);
 
           for (var j in allSport) {
@@ -87,7 +83,7 @@ export const useInstantGram = () => {
         setSearchParamsHandler(eventsParsed[i].id?.toLowerCase() ?? '');
 
         setEventHandler(eventsParsed[i]);
-        setSportHandler([] as ProjectProps[]);
+        setSportHandler([] as Project[]);
         setShowSportHandler(false);
 
         for (var j in allSport) {
@@ -118,7 +114,7 @@ export const useInstantGram = () => {
     for (var i in eventsParsed) {
       if (eventsParsed[i].names.join(' - ').includes(e.currentTarget.value)) {
         setEvent(eventsParsed[i]);
-        setSport([] as ProjectProps[]);
+        setSport([] as Project[]);
         setShowSport(false);
 
         const search = `?${eventsParsed[i].id?.toLowerCase()}=`;

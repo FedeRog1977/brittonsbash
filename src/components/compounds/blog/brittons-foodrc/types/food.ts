@@ -1,6 +1,6 @@
-import { ArticlePrefaceProps } from '../../../components/bash-blocks';
+import { ArticlePrefaceProps } from '../../../../bash-blocks';
 
-export type FoodProps = {
+export type Food = {
   name: string;
   ingredients: ArticlePrefaceProps['entries'];
   description: string;

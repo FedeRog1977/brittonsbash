@@ -1,11 +1,12 @@
-import { getSessionItem } from '../api';
-import { toMiles, toFeet } from '../helpers';
-import { CompiledRoadieProps, RoadieProps } from './types';
+import { getSessionItem } from '../../../../../utils/api';
+import { toMiles, toFeet } from '../../../../../utils/helpers';
+import { CompiledRoadie } from '../types/compiled-roadie';
+import { Roadie } from '../types/roadie';
 
 export const compileRoadies = () => {
   const sport = getSessionItem('response-sport');
 
-  const roadies: CompiledRoadieProps['roadies'] = {
+  const roadies: CompiledRoadie['roadies'] = {
     2024: sport[2024].roadies,
     2023: sport[2023].roadies,
     2022: sport[2022].roadies,
@@ -13,7 +14,7 @@ export const compileRoadies = () => {
     2020: sport[2020].roadies,
   };
 
-  const number: CompiledRoadieProps['number'] = {
+  const number: CompiledRoadie['number'] = {
     total:
       sport[2023].roadies.length +
       sport[2022].roadies.length +
@@ -43,7 +44,7 @@ export const compileRoadies = () => {
   var windfarms2024: number = 0;
   var thorntonhalls2024: number = 0;
 
-  sport[2024].roadies.forEach((event: RoadieProps) => {
+  sport[2024].roadies.forEach((event: Roadie) => {
     distance2024 = distance2024 + event.distance;
     elevation2024 = elevation2024 + event.elevation;
 
@@ -82,7 +83,7 @@ export const compileRoadies = () => {
   var windfarms2023: number = 0;
   var thorntonhalls2023: number = 0;
 
-  sport[2023].roadies.forEach((event: RoadieProps) => {
+  sport[2023].roadies.forEach((event: Roadie) => {
     distance2023 = distance2023 + event.distance;
     elevation2023 = elevation2023 + event.elevation;
 
@@ -121,7 +122,7 @@ export const compileRoadies = () => {
   var windfarms2022: number = 0;
   var thorntonhalls2022: number = 0;
 
-  sport[2022].roadies.forEach((event: RoadieProps) => {
+  sport[2022].roadies.forEach((event: Roadie) => {
     distance2022 = distance2022 + event.distance;
     elevation2022 = elevation2022 + event.elevation;
 
@@ -160,7 +161,7 @@ export const compileRoadies = () => {
   var windfarms2021: number = 0;
   var thorntonhalls2021: number = 0;
 
-  sport[2021].roadies.forEach((event: RoadieProps) => {
+  sport[2021].roadies.forEach((event: Roadie) => {
     distance2021 = distance2021 + event.distance;
     elevation2021 = elevation2021 + event.elevation;
 
@@ -199,7 +200,7 @@ export const compileRoadies = () => {
   var windfarms2020: number = 0;
   var thorntonhalls2020: number = 0;
 
-  sport[2020].roadies.forEach((event: RoadieProps) => {
+  sport[2020].roadies.forEach((event: Roadie) => {
     distance2020 = distance2020 + event.distance;
     elevation2020 = elevation2020 + event.elevation;
 
@@ -261,7 +262,7 @@ export const compileRoadies = () => {
     thorntonhalls2021 +
     thorntonhalls2020;
 
-  const centuries: CompiledRoadieProps['centuries'] = {
+  const centuries: CompiledRoadie['centuries'] = {
     total: centuriesTotal,
     2024: centuries2024,
     2023: centuries2023,
@@ -270,7 +271,7 @@ export const compileRoadies = () => {
     2020: centuries2020,
   };
 
-  const strathavens: CompiledRoadieProps['strathavens'] = {
+  const strathavens: CompiledRoadie['strathavens'] = {
     total: strathavensTotal,
     2024: strathavens2024,
     2023: strathavens2023,
@@ -279,7 +280,7 @@ export const compileRoadies = () => {
     2020: strathavens2020,
   };
 
-  const fenwickWindfarms: CompiledRoadieProps['fenwickWindfarms'] = {
+  const fenwickWindfarms: CompiledRoadie['fenwickWindfarms'] = {
     total: fenwickWindfarmsTotal,
     2024: fenwickWindfarms2024,
     2023: fenwickWindfarms2023,
@@ -288,7 +289,7 @@ export const compileRoadies = () => {
     2020: fenwickWindfarms2020,
   };
 
-  const fenwicks: CompiledRoadieProps['fenwicks'] = {
+  const fenwicks: CompiledRoadie['fenwicks'] = {
     total: fenwicksTotal,
     2024: fenwicks2024,
     2023: fenwicks2023,
@@ -297,7 +298,7 @@ export const compileRoadies = () => {
     2020: fenwicks2020,
   };
 
-  const windfarms: CompiledRoadieProps['windfarms'] = {
+  const windfarms: CompiledRoadie['windfarms'] = {
     total: windfarmsTotal,
     2024: windfarms2024,
     2023: windfarms2023,
@@ -306,7 +307,7 @@ export const compileRoadies = () => {
     2020: windfarms2020,
   };
 
-  const thorntonhalls: CompiledRoadieProps['thorntonhalls'] = {
+  const thorntonhalls: CompiledRoadie['thorntonhalls'] = {
     total: thorntonhallsTotal,
     2024: thorntonhalls2024,
     2023: thorntonhalls2023,
@@ -315,7 +316,7 @@ export const compileRoadies = () => {
     2020: thorntonhalls2020,
   };
 
-  const distance: CompiledRoadieProps['distance'] = {
+  const distance: CompiledRoadie['distance'] = {
     total: toMiles(
       distance2024 + distance2023 + distance2022 + distance2021 + distance2020
     ),
@@ -326,7 +327,7 @@ export const compileRoadies = () => {
     2020: toMiles(distance2020),
   };
 
-  const elevation: CompiledRoadieProps['elevation'] = {
+  const elevation: CompiledRoadie['elevation'] = {
     total: toFeet(
       elevation2024 +
         elevation2023 +
@@ -341,7 +342,7 @@ export const compileRoadies = () => {
     2020: toFeet(elevation2020),
   };
 
-  const compiledRoadies: CompiledRoadieProps = {
+  const compiledRoadies: CompiledRoadie = {
     roadies,
     number,
     distance,

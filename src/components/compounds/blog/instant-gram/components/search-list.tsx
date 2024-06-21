@@ -1,17 +1,14 @@
-import { Button, Flex, FlexItem, Stack } from '../../../../bash-blocks';
-import {
-  EventProps,
-  generateUniqueKey,
-  useScreenWidth,
-} from '../../../../../utils';
+import { Button } from '../../../../bash-blocks';
+import { generateUniqueKey, useScreenWidth } from '../../../../../utils';
 import { FC } from 'react';
 import { Grid } from '../../../../bash-blocks/basics/grid/grid';
 import { GridItem } from '../../../../bash-blocks/basics/grid/grid-item';
+import { Event } from '../types/event';
 
 type SearchListProps = {
   url?: string;
   funcSelect: (() => void) | ((e: any) => void);
-  items: (Pick<EventProps, 'prefix' | 'names'> & { id: string })[];
+  items: (Pick<Event, 'prefix' | 'names'> & { id: string })[];
 };
 
 export const SearchList: FC<SearchListProps> = ({ url, funcSelect, items }) => {
@@ -30,7 +27,15 @@ export const SearchList: FC<SearchListProps> = ({ url, funcSelect, items }) => {
             func={funcSelect}
             width="full"
             // TODO: sort this formatting
-            content={`${prefix ?? ''}\n${names.map((name) => [name].join('\n'))}`}
+            // content={`${prefix ?? ''}\n${names.map((name) => [name].join('<br>'))}`}
+            content={
+              <>
+                {prefix ? <div>{prefix}</div> : null}
+                {names.map((name) => (
+                  <div>{name}</div>
+                ))}
+              </>
+            }
             subContent={id.slice(-2)}
             subContentTop
             padding="coarse"
