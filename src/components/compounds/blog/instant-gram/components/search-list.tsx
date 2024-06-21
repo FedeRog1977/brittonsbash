@@ -6,12 +6,11 @@ import { GridItem } from '../../../../bash-blocks/basics/grid/grid-item';
 import { Event } from '../types/event';
 
 type SearchListProps = {
-  url?: string;
   funcSelect: (() => void) | ((e: any) => void);
   items: (Pick<Event, 'prefix' | 'names'> & { id: string })[];
 };
 
-export const SearchList: FC<SearchListProps> = ({ url, funcSelect, items }) => {
+export const SearchList: FC<SearchListProps> = ({ funcSelect, items }) => {
   const { isMobile } = useScreenWidth();
 
   return (
@@ -22,7 +21,6 @@ export const SearchList: FC<SearchListProps> = ({ url, funcSelect, items }) => {
             key={generateUniqueKey(index)}
             variant="clear"
             typeVariant={isMobile ? 'h4' : 'body'}
-            // link={{ url: `#${url}#result` }}
             value={names.join(' - ')}
             func={funcSelect}
             width="full"

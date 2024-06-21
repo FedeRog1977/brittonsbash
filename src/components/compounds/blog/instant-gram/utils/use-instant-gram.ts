@@ -130,6 +130,9 @@ export const useInstantGram = () => {
         }
       }
     }
+
+    // TODO: support this close list logic in Miami Vice and FoodRC
+    setShowSearchList(!showSearchList);
   };
 
   const refactoredEvent = compileEvent({ event, sport, showSport });
@@ -204,6 +207,8 @@ export const useInstantGram = () => {
   };
 
   return {
+    // Need for URL logic has been removed
+    // Keeping it here for the time-being
     url,
     handleCategory,
     showSearchList,

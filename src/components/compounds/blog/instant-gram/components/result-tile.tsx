@@ -23,7 +23,6 @@ import { Grid } from '../../../../bash-blocks/basics';
 import { RefactoredEvent } from '../types/refactored-event';
 
 type ResultTileProps = {
-  url: string;
   refactoredEvent: RefactoredEvent;
   funcToggleElements: (value: string) => void;
   showDescription: boolean;
@@ -31,7 +30,6 @@ type ResultTileProps = {
 };
 
 export const ResultTile: FC<ResultTileProps> = ({
-  // url,
   refactoredEvent,
   funcToggleElements,
   showDescription,

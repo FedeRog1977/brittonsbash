@@ -1,11 +1,10 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { ResultTile } from './components/result-tile';
 import { SearchTile } from './components/search-tile';
 import { useInstantGram } from './utils/use-instant-gram';
 
 export const InstantGram: FC = () => {
   const {
-    url,
     handleCategory,
     showSearchList,
     eventData,
@@ -26,7 +25,6 @@ export const InstantGram: FC = () => {
   return (
     <>
       <SearchTile
-        url={url}
         funcCategory={handleCategory}
         showSearchList={showSearchList}
         eventData={eventData}
@@ -40,7 +38,6 @@ export const InstantGram: FC = () => {
         is2020={is2020}
       />
       <ResultTile
-        url={url}
         refactoredEvent={refactoredEvent}
         funcToggleElements={handleToggleElements}
         showDescription={showDescription}

@@ -5,7 +5,6 @@ import { SearchList } from './search-list';
 import { BigSearch } from '../../../../bash-blocks';
 
 type SearchTileProps = {
-  url?: string;
   funcCategory: (value: string) => void;
   showSearchList: boolean;
   eventData: (Pick<Event, 'prefix' | 'names'> & { id: string })[];
@@ -20,7 +19,6 @@ type SearchTileProps = {
 };
 
 export const SearchTile: FC<SearchTileProps> = ({
-  url,
   funcCategory,
   showSearchList,
   eventData,
@@ -119,7 +117,7 @@ export const SearchTile: FC<SearchTileProps> = ({
       </Stack>
 
       {showSearchList ? (
-        <SearchList url={url} funcSelect={funcSelect} items={eventData} />
+        <SearchList funcSelect={funcSelect} items={eventData} />
       ) : null}
     </Stack>
   </Tile>
