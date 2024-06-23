@@ -1,136 +1,107 @@
 import { Button, Stack, Tile, VideoTileProps } from '../../../../bash-blocks';
-import { useScreenWidth, useShowElement } from '../../../../../utils';
-import { FC, useState } from 'react';
+import { useScreenWidth } from '../../../../../utils';
+import { FC } from 'react';
 import { SearchList } from './search-list';
-import { miamiViceContent } from '../content';
 
 export type SearchTileProps = {
+  funcCategory: (value: string) => void;
+  showSearchList: boolean;
+  videoData: Pick<VideoTileProps, 'heading' | 'subHeading'>[];
+  isFive: boolean;
+  isFour: boolean;
+  isThree: boolean;
+  isTwo: boolean;
+  isOne: boolean;
   funcSelect: (e: any) => void;
 };
 
-export const SearchTile: FC<SearchTileProps> = ({ funcSelect }) => {
-  const { isMobile } = useScreenWidth();
-  const { showElement, setShowElement } = useShowElement();
-
-  // TODO: move this to hook like IG and Sport
-  const emptyVideoData: VideoTileProps[] = [
-    {
-      heading: '',
-      subHeading: '',
-      video: '',
-    },
-  ];
-  const [parsedVideoData, setParsedEventData] = useState(emptyVideoData);
-
-  return (
-    <Tile type="solid" gap>
-      <Stack direction="vertical" spacing="md">
-        <Stack direction="horizontal" alignHorizontal="apart" wrap>
-          <Button
-            variant="clear"
-            typeVariant={isMobile ? 't1' : 't2'}
-            typeColor={
-              Boolean(
-                showElement &&
-                  parsedVideoData === miamiViceContent.tileOne.season1
-              )
-                ? 'lightBlue'
-                : undefined
+export const SearchTile: FC<SearchTileProps> = ({
+  funcCategory,
+  showSearchList,
+  videoData,
+  isFive,
+  isFour,
+  isThree,
+  isTwo,
+  isOne,
+  funcSelect,
+}) => (
+  <Tile type="solid" gap>
+    <Stack direction="vertical" spacing="md">
+      <Stack direction="horizontal" alignHorizontal="apart" wrap>
+        {/* TODO: change data to:
+            {
+              "title": "2024",
+              "entries": []
             }
-            content="1"
-            subContent="Season"
-            subContentTop={isMobile}
-            func={() => {
-              setShowElement(!showElement);
-              setParsedEventData(miamiViceContent.tileOne.season1);
-            }}
-          />
+          so this can be mapped
+          And with this, standardize the { title, entries } type
+        */}
+        <Button
+          variant="clear"
+          typeVariant="t1"
+          typeColor={
+            Boolean(showSearchList && isFive) ? 'lightBlue' : undefined
+          }
+          typeFontFamily="miami"
+          content="ONE"
+          subContent="Season"
+          subContentTop
+          func={() => funcCategory('One')}
+        />
 
-          <Button
-            variant="clear"
-            typeVariant={isMobile ? 't1' : 't2'}
-            typeColor={
-              Boolean(
-                showElement &&
-                  parsedVideoData === miamiViceContent.tileOne.season2
-              )
-                ? 'lightBlue'
-                : undefined
-            }
-            content="2"
-            subContent="Season"
-            subContentTop={isMobile}
-            func={() => {
-              setShowElement(!showElement);
-              setParsedEventData(miamiViceContent.tileOne.season2);
-            }}
-          />
+        <Button
+          variant="clear"
+          typeVariant="t1"
+          typeColor={
+            Boolean(showSearchList && isFour) ? 'lightBlue' : undefined
+          }
+          typeFontFamily="miami"
+          content="TWO"
+          subContent="Season"
+          subContentTop
+          func={() => funcCategory('Two')}
+        />
 
-          <Button
-            variant="clear"
-            typeVariant={isMobile ? 't1' : 't2'}
-            typeColor={
-              Boolean(
-                showElement &&
-                  parsedVideoData === miamiViceContent.tileOne.season3
-              )
-                ? 'lightBlue'
-                : undefined
-            }
-            content="3"
-            subContent="Season"
-            subContentTop={isMobile}
-            func={() => {
-              setShowElement(!showElement);
-              setParsedEventData(miamiViceContent.tileOne.season3);
-            }}
-          />
+        <Button
+          variant="clear"
+          typeVariant="t1"
+          typeColor={
+            Boolean(showSearchList && isThree) ? 'lightBlue' : undefined
+          }
+          typeFontFamily="miami"
+          content="THREE"
+          subContent="Season"
+          subContentTop
+          func={() => funcCategory('Three')}
+        />
 
-          <Button
-            variant="clear"
-            typeVariant={isMobile ? 't1' : 't2'}
-            typeColor={
-              Boolean(
-                showElement &&
-                  parsedVideoData === miamiViceContent.tileOne.season4
-              )
-                ? 'lightBlue'
-                : undefined
-            }
-            content="4"
-            subContent="Season"
-            subContentTop={isMobile}
-            func={() => {
-              setShowElement(!showElement);
-              setParsedEventData(miamiViceContent.tileOne.season4);
-            }}
-          />
+        <Button
+          variant="clear"
+          typeVariant="t1"
+          typeColor={Boolean(showSearchList && isTwo) ? 'lightBlue' : undefined}
+          typeFontFamily="miami"
+          content="FOUR"
+          subContent="Season"
+          subContentTop
+          func={() => funcCategory('Four')}
+        />
 
-          <Button
-            variant="clear"
-            typeVariant={isMobile ? 't1' : 't2'}
-            typeColor={
-              Boolean(
-                showElement &&
-                  parsedVideoData === miamiViceContent.tileOne.season5
-              )
-                ? 'lightBlue'
-                : undefined
-            }
-            content="5"
-            subContent="Season"
-            subContentTop={isMobile}
-            func={() => {
-              setShowElement(!showElement);
-              setParsedEventData(miamiViceContent.tileOne.season5);
-            }}
-          />
-        </Stack>
-
-        {showElement ? (
-          <SearchList funcSelect={funcSelect} items={parsedVideoData} />
-        ) : null}
+        <Button
+          variant="clear"
+          typeVariant="t1"
+          typeColor={Boolean(showSearchList && isOne) ? 'lightBlue' : undefined}
+          typeFontFamily="miami"
+          content="FIVE"
+          subContent="Season"
+          subContentTop
+          func={() => funcCategory('Five')}
+        />
       </Stack>
-    </Tile>
-  );
-};
+
+      {showSearchList ? (
+        <SearchList funcSelect={funcSelect} items={videoData} />
+      ) : null}
+    </Stack>
+  </Tile>
+);

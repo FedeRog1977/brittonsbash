@@ -37,8 +37,6 @@ export const useInstantGram = () => {
     useShowElement();
   const [eventData, setEventData] = useState(emptyEventData);
 
-  console.log(eventData);
-
   useEffect(() => {
     if (location.search === '') {
       for (var i in allSport) {
@@ -131,7 +129,6 @@ export const useInstantGram = () => {
       }
     }
 
-    // TODO: support this close list logic in Miami Vice and FoodRC
     setShowSearchList(!showSearchList);
   };
 
@@ -213,15 +210,15 @@ export const useInstantGram = () => {
     handleCategory,
     showSearchList,
     eventData,
-    handleInput,
-    executeInput,
-    handleSelect,
-    refactoredEvent,
     is2024,
     is2023,
     is2022,
     is2021,
     is2020,
+    handleInput,
+    executeInput,
+    handleSelect,
+    refactoredEvent,
     handleToggleElements,
     showDescription,
     showMatrix,

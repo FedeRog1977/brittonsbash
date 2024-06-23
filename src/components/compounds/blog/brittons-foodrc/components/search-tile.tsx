@@ -1,176 +1,119 @@
-import { Button, Stack, Tile, VideoTileProps } from '../../../../bash-blocks';
-import { useScreenWidth, useShowElement } from '../../../../../utils';
-import { FC, useState } from 'react';
+import { Button, Stack, Tile } from '../../../../bash-blocks';
+import { FC } from 'react';
 import { SearchList } from './search-list';
-import { brittonsFoodRCContent } from '../content';
+import { Food } from '../types/food';
 
 export type SearchTileProps = {
+  funcCategory: (value: string) => void;
+  showSearchList: boolean;
+  foodData: Pick<Food, 'name'>[];
+  isMeat: boolean;
+  isPoultry: boolean;
+  isFish: boolean;
+  isPasta: boolean;
+  isBread: boolean;
+  isSweet: boolean;
+  isMisc: boolean;
   funcSelect: (e: any) => void;
 };
 
-export const SearchTile: FC<SearchTileProps> = ({ funcSelect }) => {
-  const { showElement, setShowElement } = useShowElement();
+export const SearchTile: FC<SearchTileProps> = ({
+  funcCategory,
+  showSearchList,
+  foodData,
+  isMeat,
+  isPoultry,
+  isFish,
+  isPasta,
+  isBread,
+  isSweet,
+  isMisc,
+  funcSelect,
+}) => (
+  <Tile type="solid" gap>
+    <Stack direction="vertical" spacing="md">
+      <Stack direction="horizontal" alignHorizontal="apart" wrap>
+        <Button
+          variant="clear"
+          typeVariant="t1"
+          typeColor={
+            Boolean(showSearchList && isMeat) ? 'lightBlue' : undefined
+          }
+          typeFontFamily="calligraphy"
+          content="Meat"
+          func={() => funcCategory('Meat')}
+        />
 
-  // TODO: move this to hook like IG and Sport
-  // And remove any once types are sorted
-  const emptyFoodData: any = [
-    {
-      name: '',
-      ingredients: ['', ''],
-      description: [''],
-      images: [
-        {
-          url: '',
-          alt: '',
-        },
-      ],
-      tags: [],
-    },
-  ];
-  const [parsedFoodData, setParsedFoodData] = useState(emptyFoodData);
+        <Button
+          variant="clear"
+          typeVariant="t1"
+          typeColor={
+            Boolean(showSearchList && isPoultry) ? 'lightBlue' : undefined
+          }
+          typeFontFamily="calligraphy"
+          content="Poultry"
+          func={() => funcCategory('Poultry')}
+        />
 
-  return (
-    <Tile type="solid" gap>
-      <Stack direction="vertical" spacing="md">
-        <Stack direction="horizontal" alignHorizontal="apart" wrap>
-          <Button
-            variant="clear"
-            typeVariant="t1"
-            typeColor={
-              Boolean(
-                showElement &&
-                  parsedFoodData === brittonsFoodRCContent.tileOne.meat
-              )
-                ? 'lightBlue'
-                : undefined
-            }
-            typeFontFamily="calligraphy"
-            content="Meat"
-            func={() => {
-              setShowElement(!showElement);
-              setParsedFoodData(brittonsFoodRCContent.tileOne.meat);
-            }}
-          />
+        <Button
+          variant="clear"
+          typeVariant="t1"
+          typeColor={
+            Boolean(showSearchList && isFish) ? 'lightBlue' : undefined
+          }
+          typeFontFamily="calligraphy"
+          content="Fish"
+          func={() => funcCategory('Fish')}
+        />
 
-          <Button
-            variant="clear"
-            typeVariant="t1"
-            typeColor={
-              Boolean(
-                showElement &&
-                  parsedFoodData === brittonsFoodRCContent.tileOne.poultry
-              )
-                ? 'lightBlue'
-                : undefined
-            }
-            typeFontFamily="calligraphy"
-            content="Poultry"
-            func={() => {
-              setShowElement(!showElement);
-              setParsedFoodData(brittonsFoodRCContent.tileOne.poultry);
-            }}
-          />
+        <Button
+          variant="clear"
+          typeVariant="t1"
+          typeColor={
+            Boolean(showSearchList && isPasta) ? 'lightBlue' : undefined
+          }
+          typeFontFamily="calligraphy"
+          content="Pasta"
+          func={() => funcCategory('Pasta')}
+        />
 
-          <Button
-            variant="clear"
-            typeVariant="t1"
-            typeColor={
-              Boolean(
-                showElement &&
-                  parsedFoodData === brittonsFoodRCContent.tileOne.fish
-              )
-                ? 'lightBlue'
-                : undefined
-            }
-            typeFontFamily="calligraphy"
-            content="Fish"
-            func={() => {
-              setShowElement(!showElement);
-              setParsedFoodData(brittonsFoodRCContent.tileOne.fish);
-            }}
-          />
+        <Button
+          variant="clear"
+          typeVariant="t1"
+          typeColor={
+            Boolean(showSearchList && isBread) ? 'lightBlue' : undefined
+          }
+          typeFontFamily="calligraphy"
+          content="Bread"
+          func={() => funcCategory('Bread')}
+        />
 
-          <Button
-            variant="clear"
-            typeVariant="t1"
-            typeColor={
-              Boolean(
-                showElement &&
-                  parsedFoodData === brittonsFoodRCContent.tileOne.pasta
-              )
-                ? 'lightBlue'
-                : undefined
-            }
-            typeFontFamily="calligraphy"
-            content="Pasta"
-            func={() => {
-              setShowElement(!showElement);
-              setParsedFoodData(brittonsFoodRCContent.tileOne.pasta);
-            }}
-          />
+        <Button
+          variant="clear"
+          typeVariant="t1"
+          typeColor={
+            Boolean(showSearchList && isSweet) ? 'lightBlue' : undefined
+          }
+          typeFontFamily="calligraphy"
+          content="Sweet"
+          func={() => funcCategory('Sweet')}
+        />
 
-          <Button
-            variant="clear"
-            typeVariant="t1"
-            typeColor={
-              Boolean(
-                showElement &&
-                  parsedFoodData === brittonsFoodRCContent.tileOne.bread
-              )
-                ? 'lightBlue'
-                : undefined
-            }
-            typeFontFamily="calligraphy"
-            content="Bread"
-            func={() => {
-              setShowElement(!showElement);
-              setParsedFoodData(brittonsFoodRCContent.tileOne.bread);
-            }}
-          />
-
-          <Button
-            variant="clear"
-            typeVariant="t1"
-            typeColor={
-              Boolean(
-                showElement &&
-                  parsedFoodData === brittonsFoodRCContent.tileOne.sweet
-              )
-                ? 'lightBlue'
-                : undefined
-            }
-            typeFontFamily="calligraphy"
-            content="Sweet"
-            func={() => {
-              setShowElement(!showElement);
-              setParsedFoodData(brittonsFoodRCContent.tileOne.sweet);
-            }}
-          />
-
-          <Button
-            variant="clear"
-            typeVariant="t1"
-            typeColor={
-              Boolean(
-                showElement &&
-                  parsedFoodData === brittonsFoodRCContent.tileOne.misc
-              )
-                ? 'lightBlue'
-                : undefined
-            }
-            typeFontFamily="calligraphy"
-            content="Misc"
-            func={() => {
-              setShowElement(!showElement);
-              setParsedFoodData(brittonsFoodRCContent.tileOne.misc);
-            }}
-          />
-        </Stack>
-
-        {showElement ? (
-          <SearchList funcSelect={funcSelect} items={parsedFoodData} />
-        ) : null}
+        <Button
+          variant="clear"
+          typeVariant="t1"
+          typeColor={
+            Boolean(showSearchList && isMisc) ? 'lightBlue' : undefined
+          }
+          typeFontFamily="calligraphy"
+          content="Misc"
+          func={() => funcCategory('Misc')}
+        />
       </Stack>
-    </Tile>
-  );
-};
+
+      {showSearchList ? (
+        <SearchList funcSelect={funcSelect} items={foodData} />
+      ) : null}
+    </Stack>
+  </Tile>
+);

@@ -1,13 +1,10 @@
-export const emptyEventData = [
+import { Event } from '../types/event';
+
+export const emptyEventData: (Pick<Event, 'prefix' | 'names'> & {
+  id: string;
+})[] = [
   {
     id: '',
     names: [''],
-    startDate: '',
-    images: [
-      {
-        url: '',
-        alt: '',
-      },
-    ],
   },
 ];

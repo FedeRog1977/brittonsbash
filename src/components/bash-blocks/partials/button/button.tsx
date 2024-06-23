@@ -64,7 +64,7 @@ export const Button: FC<ButtonProps> = ({
         alignItems="center"
         spacing={icon ? 'xs' : 'none'}
       >
-        <GridItem xs={icon ? 2 : 12}>
+        <GridItem xs={icon ? 6 : 12}>
           <Stack
             direction={subContentTop ? 'vertical' : 'horizontal'}
             alignHorizontal={icon ? 'left' : 'center'}

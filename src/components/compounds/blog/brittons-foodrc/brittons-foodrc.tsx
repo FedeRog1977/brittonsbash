@@ -5,6 +5,16 @@ import { ResultTile } from './components/result-tile';
 
 export const BrittonsFoodRC: FC = () => {
   const {
+    handleCategory,
+    showSearchList,
+    foodData,
+    isMeat,
+    isPoultry,
+    isFish,
+    isPasta,
+    isBread,
+    isSweet,
+    isMisc,
     handleSelect,
     food,
     handleToggleElements,
@@ -14,7 +24,19 @@ export const BrittonsFoodRC: FC = () => {
 
   return (
     <>
-      <SearchTile funcSelect={handleSelect} />
+      <SearchTile
+        funcCategory={handleCategory}
+        showSearchList={showSearchList}
+        foodData={foodData}
+        isMeat={isMeat}
+        isPoultry={isPoultry}
+        isFish={isFish}
+        isPasta={isPasta}
+        isBread={isBread}
+        isSweet={isSweet}
+        isMisc={isMisc}
+        funcSelect={handleSelect}
+      />
       <ResultTile
         food={food}
         funcToggleElements={handleToggleElements}

@@ -26,10 +26,6 @@ export const SearchList: FC<SearchListProps> = ({ funcSelect, items }) => {
             typeVariant={isMobile ? 'h4' : 'body'}
             value={heading}
             func={funcSelect}
-            // () => {
-            //     funcSelect
-            //     window.location.href = '#/blog/miami-vice/#result'
-            // }
             width="full"
             content={heading}
             subContent={subHeading}

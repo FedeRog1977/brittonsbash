@@ -8,28 +8,28 @@ type SearchTileProps = {
   funcCategory: (value: string) => void;
   showSearchList: boolean;
   eventData: (Pick<Event, 'prefix' | 'names'> & { id: string })[];
-  funcInput: (e: any) => void;
-  funcButton: () => void;
-  funcSelect: (e: any) => void;
   is2024: boolean;
   is2023: boolean;
   is2022: boolean;
   is2021: boolean;
   is2020: boolean;
+  funcInput: (e: any) => void;
+  funcButton: () => void;
+  funcSelect: (e: any) => void;
 };
 
 export const SearchTile: FC<SearchTileProps> = ({
   funcCategory,
   showSearchList,
   eventData,
-  funcInput,
-  funcButton,
-  funcSelect,
   is2024,
   is2023,
   is2022,
   is2021,
   is2020,
+  funcInput,
+  funcButton,
+  funcSelect,
 }) => (
   <Tile type="solid" gap>
     <Stack direction="vertical" spacing="md">
@@ -40,12 +40,21 @@ export const SearchTile: FC<SearchTileProps> = ({
       />
 
       <Stack direction="horizontal" alignHorizontal="apart" wrap>
+        {/* TODO: change data to:
+          {
+            "title": "2024",
+            "entries": []
+          }
+          so this can be mapped
+          And with this, standardize the { title, entries } type
+        */}
         <Button
           variant="clear"
           typeVariant="t1"
           typeColor={
             Boolean(showSearchList && is2024) ? 'lightBlue' : undefined
           }
+          typeFontFamily="instagram"
           content="2024"
           subContent="Season 5"
           subContentTop
@@ -61,6 +70,7 @@ export const SearchTile: FC<SearchTileProps> = ({
           typeColor={
             Boolean(showSearchList && is2023) ? 'lightBlue' : undefined
           }
+          typeFontFamily="instagram"
           content="2023"
           subContent="Season 4"
           subContentTop
@@ -76,6 +86,7 @@ export const SearchTile: FC<SearchTileProps> = ({
           typeColor={
             Boolean(showSearchList && is2022) ? 'lightBlue' : undefined
           }
+          typeFontFamily="instagram"
           content="2022"
           subContent="Season 3"
           subContentTop
@@ -91,6 +102,7 @@ export const SearchTile: FC<SearchTileProps> = ({
           typeColor={
             Boolean(showSearchList && is2021) ? 'lightBlue' : undefined
           }
+          typeFontFamily="instagram"
           content="2021"
           subContent="Season 2"
           subContentTop
@@ -106,6 +118,7 @@ export const SearchTile: FC<SearchTileProps> = ({
           typeColor={
             Boolean(showSearchList && is2020) ? 'lightBlue' : undefined
           }
+          typeFontFamily="instagram"
           content="2020"
           subContent="Season 1"
           subContentTop

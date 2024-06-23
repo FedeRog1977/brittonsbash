@@ -6,7 +6,7 @@ export type RefactoredEvent = {
   names: string[];
   startDate: Event['startDate'];
   endDate?: Event['endDate'];
-  features: ArticlePrefaceProps['entries'];
+  features?: ArticlePrefaceProps['entries'];
   description: Event['description'];
   images: Event['images'];
   distance?: string;

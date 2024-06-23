@@ -94,53 +94,55 @@ export const compileEvent = ({ event, sport, showSport }: CompiledEvent) => {
     names,
     startDate: event.startDate,
     endDate: event.endDate,
-    features: [
-      // TODO: move this further up to the data level
-      // To get rid of the need for compile-entries and the conditionals
-      {
-        title: 'Districts',
-        content: event.features?.districts?.sort(),
-      },
-      {
-        title: 'Districts',
-        content: event.features?.districts?.sort(),
-      },
-      {
-        title: 'Attractions',
-        content: event.features?.attractions?.sort(),
-      },
-      {
-        title: 'Youth Hostels',
-        content: event.features?.youthHostels?.sort(),
-      },
-      {
-        title: 'Supermarkets',
-        content: event.features?.supermarkets?.sort(),
-      },
-      { title: 'Shops', content: event.features?.shops?.sort() },
-      {
-        title: 'Foodstuffs',
-        content: event.features?.foodstuffs?.sort(),
-      },
-      { title: 'Cafés', content: event.features?.cafes?.sort() },
-      {
-        title: 'Bakeries',
-        content: event.features?.bakeries?.sort(),
-      },
-      {
-        title: 'Gelaterias',
-        content: event.features?.gelaterias?.sort(),
-      },
-      {
-        title: 'Restaurants',
-        content: event.features?.restaurants?.sort(),
-      },
-      { title: 'Bars', content: event.features?.bars?.sort() },
-      {
-        title: 'Filming Locations',
-        content: event.features?.filmingLocations?.sort(),
-      },
-    ],
+    features: event.features
+      ? [
+          // TODO: move this further up to the data level
+          // To get rid of the need for compile-entries and the conditionals
+          {
+            title: 'Districts',
+            content: event.features?.districts?.sort(),
+          },
+          {
+            title: 'Districts',
+            content: event.features?.districts?.sort(),
+          },
+          {
+            title: 'Attractions',
+            content: event.features?.attractions?.sort(),
+          },
+          {
+            title: 'Youth Hostels',
+            content: event.features?.youthHostels?.sort(),
+          },
+          {
+            title: 'Supermarkets',
+            content: event.features?.supermarkets?.sort(),
+          },
+          { title: 'Shops', content: event.features?.shops?.sort() },
+          {
+            title: 'Foodstuffs',
+            content: event.features?.foodstuffs?.sort(),
+          },
+          { title: 'Cafés', content: event.features?.cafes?.sort() },
+          {
+            title: 'Bakeries',
+            content: event.features?.bakeries?.sort(),
+          },
+          {
+            title: 'Gelaterias',
+            content: event.features?.gelaterias?.sort(),
+          },
+          {
+            title: 'Restaurants',
+            content: event.features?.restaurants?.sort(),
+          },
+          { title: 'Bars', content: event.features?.bars?.sort() },
+          {
+            title: 'Filming Locations',
+            content: event.features?.filmingLocations?.sort(),
+          },
+        ]
+      : undefined,
     description: event.description,
     images: event.images,
     distance: toMiles(distances.reduce(toSum)),

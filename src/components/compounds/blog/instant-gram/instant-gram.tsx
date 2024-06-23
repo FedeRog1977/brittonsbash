@@ -8,15 +8,15 @@ export const InstantGram: FC = () => {
     handleCategory,
     showSearchList,
     eventData,
-    handleInput,
-    executeInput,
-    handleSelect,
-    refactoredEvent,
     is2024,
     is2023,
     is2022,
     is2021,
     is2020,
+    handleInput,
+    executeInput,
+    handleSelect,
+    refactoredEvent,
     handleToggleElements,
     showDescription,
     showMatrix,
@@ -28,14 +28,14 @@ export const InstantGram: FC = () => {
         funcCategory={handleCategory}
         showSearchList={showSearchList}
         eventData={eventData}
-        funcInput={handleInput}
-        funcButton={executeInput}
-        funcSelect={handleSelect}
         is2024={is2024}
         is2023={is2023}
         is2022={is2022}
         is2021={is2021}
         is2020={is2020}
+        funcInput={handleInput}
+        funcButton={executeInput}
+        funcSelect={handleSelect}
       />
       <ResultTile
         refactoredEvent={refactoredEvent}

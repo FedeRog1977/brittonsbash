@@ -18,6 +18,7 @@ export type ImageSliderProps = {
 export const ImageSlider: FC<ImageSliderProps> = ({ slides }) => {
   const { isMobile } = useScreenWidth();
 
+  // TODO: move this to hook
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 

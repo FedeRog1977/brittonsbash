@@ -14,6 +14,8 @@
     height: 300px;
     overflow-x: hidden;
   }
+
+  border: 1px solid black;
 }
 
 .imageSliderSlide {
@@ -28,7 +30,7 @@
 }
 
 .imageSliderImage {
-  width: 100%;
+  width: 110%;
 }
 
 .imageSliderCaption {
