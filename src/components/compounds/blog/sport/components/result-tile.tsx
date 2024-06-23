@@ -1,3 +1,4 @@
+import { useScreenWidth } from '../../../../../utils';
 import {
   Typography,
   Tile,
@@ -36,95 +37,99 @@ export const ResultTile: FC<ResultTileProps> = ({
   is2022,
   is2021,
   is2020,
-}) => (
-  <Tile type="solid">
-    <Stack direction="vertical" spacing="md">
-      <Typography variant="t1" fontFamily="sport" textAlign="center">
-        {title}
-      </Typography>
+}) => {
+  const { isMobile } = useScreenWidth();
 
-      <Typography variant="h4" color="mediumGrey" textAlign="center">
-        {subTitle}
-      </Typography>
+  return (
+    <Tile type="solid">
+      <Stack direction="vertical" spacing={isMobile ? 'xs' : 'md'}>
+        <Typography variant="t1" fontFamily="sport" textAlign="center">
+          {title}
+        </Typography>
 
-      <Typography variant="body" textAlign="left">
-        {description}
-      </Typography>
+        <Typography variant="h4" color="mediumGrey" textAlign="center">
+          {subTitle}
+        </Typography>
 
-      <Typography variant="h2" fontFamily="sport">
-        Summary
-      </Typography>
+        <Typography variant="body" textAlign="left">
+          {description}
+        </Typography>
 
-      <ColumnTable
-        leftColumn={summary.leftColumn}
-        rightColumns={summary.rightColumns}
-      />
+        <Typography variant="h2" fontFamily="sport">
+          Summary
+        </Typography>
 
-      <Typography variant="h2" fontFamily="sport">
-        Routes
-      </Typography>
-
-      <ColumnTable
-        leftColumn={routes.leftColumn}
-        rightColumns={routes.rightColumns}
-      />
-
-      <Stack direction="horizontal" alignHorizontal="apart" wrap>
-        <Button
-          variant="clear"
-          typeVariant="h2"
-          typeColor={is2024 ? 'lightBlue' : undefined}
-          typeFontFamily="sport"
-          value="2024"
-          func={funcActivities}
-          content="2024"
+        <ColumnTable
+          leftColumn={summary.leftColumn}
+          rightColumns={summary.rightColumns}
         />
 
-        <Button
-          variant="clear"
-          typeVariant="h2"
-          typeColor={is2023 ? 'lightBlue' : undefined}
-          typeFontFamily="sport"
-          value="2023"
-          func={funcActivities}
-          content="2023"
+        <Typography variant="h2" fontFamily="sport">
+          Routes
+        </Typography>
+
+        <ColumnTable
+          leftColumn={routes.leftColumn}
+          rightColumns={routes.rightColumns}
         />
 
-        <Button
-          variant="clear"
-          typeVariant="h2"
-          typeColor={is2022 ? 'lightBlue' : undefined}
-          typeFontFamily="sport"
-          value="2022"
-          func={funcActivities}
-          content="2022"
-        />
+        <Stack direction="horizontal" alignHorizontal="apart" wrap>
+          <Button
+            variant="clear"
+            typeVariant="h2"
+            typeColor={is2024 ? 'lightBlue' : undefined}
+            typeFontFamily="sport"
+            value="2024"
+            func={funcActivities}
+            content="2024"
+          />
 
-        <Button
-          variant="clear"
-          typeVariant="h2"
-          typeColor={is2021 ? 'lightBlue' : undefined}
-          typeFontFamily="sport"
-          value="2021"
-          func={funcActivities}
-          content="2021"
-        />
+          <Button
+            variant="clear"
+            typeVariant="h2"
+            typeColor={is2023 ? 'lightBlue' : undefined}
+            typeFontFamily="sport"
+            value="2023"
+            func={funcActivities}
+            content="2023"
+          />
 
-        <Button
-          variant="clear"
-          typeVariant="h2"
-          typeColor={is2020 ? 'lightBlue' : undefined}
-          typeFontFamily="sport"
-          value="2020"
-          func={funcActivities}
-          content="2020"
+          <Button
+            variant="clear"
+            typeVariant="h2"
+            typeColor={is2022 ? 'lightBlue' : undefined}
+            typeFontFamily="sport"
+            value="2022"
+            func={funcActivities}
+            content="2022"
+          />
+
+          <Button
+            variant="clear"
+            typeVariant="h2"
+            typeColor={is2021 ? 'lightBlue' : undefined}
+            typeFontFamily="sport"
+            value="2021"
+            func={funcActivities}
+            content="2021"
+          />
+
+          <Button
+            variant="clear"
+            typeVariant="h2"
+            typeColor={is2020 ? 'lightBlue' : undefined}
+            typeFontFamily="sport"
+            value="2020"
+            func={funcActivities}
+            content="2020"
+          />
+        </Stack>
+
+        <ColumnTable
+          leftColumn={activities.leftColumn}
+          rightColumns={activities.rightColumns}
         />
       </Stack>
-
-      <ColumnTable
-        leftColumn={activities.leftColumn}
-        rightColumns={activities.rightColumns}
-      />
-    </Stack>
-  </Tile>
-);
+    </Tile>
+  );
+};

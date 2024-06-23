@@ -6,7 +6,6 @@ import { TextStyle } from '../../reference';
 
 export type ArticleTileProps = {
   type?: TileProps['type'];
-  gap?: TileProps['gap'];
   heading?: string;
   subHeading?: string;
   textAlign?: TextStyle['textAlign'];
@@ -15,13 +14,12 @@ export type ArticleTileProps = {
 
 export const ArticleTile: FC<ArticleTileProps> = ({
   type = 'clear',
-  gap,
   heading,
   subHeading,
   textAlign = 'center',
   sections,
 }) => (
-  <Tile type={type} gap={gap}>
+  <Tile type={type}>
     {subHeading ? (
       <Typography variant="h2" textAlign={textAlign}>
         {subHeading}

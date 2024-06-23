@@ -10,6 +10,7 @@ export type PageLayoutProps = {
 export const PageLayout: FC<PageLayoutProps> = ({ background, children }) => (
   <>
     <PageBackground {...background} />
+    {/* TODO: map individual blocks so they can be spaced */}
     {children}
     <Footer />
   </>

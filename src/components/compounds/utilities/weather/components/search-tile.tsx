@@ -16,7 +16,7 @@ export const SearchTile: FC<SearchTile> = ({
   const hills = compileHills();
 
   return (
-    <Tile type="solid" gap>
+    <Tile type="solid">
       <BigSearch
         funcInput={funcInput}
         funcButton={funcButton}

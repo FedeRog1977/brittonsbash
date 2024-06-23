@@ -16,7 +16,7 @@ export const TitleTile: FC<TitleTileProps> = ({
   titleItems,
   bodyItems,
 }) => (
-  <Tile type="clear" dense>
+  <Tile type="clear">
     <Stack direction="vertical" spacing="xs">
       {heading ? (
         <Typography variant="h3" textAlign="center">

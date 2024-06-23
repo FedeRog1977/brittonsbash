@@ -1,13 +1,16 @@
 @use '../../reference' as reference;
 
 .tile {
+  max-width: 1728px;
+  margin: 0 auto 0 auto;
+
   @media (min-width: 768px) {
-    max-width: 1728px;
-    margin: 0px auto 24px auto;
+    padding: reference.$spacing-xl 0 reference.$spacing-xl 0;
   }
 
   @media (max-width: 768px) {
-    margin: 0px auto 24px auto;
+    padding: reference.$spacing-md reference.$spacing-sm reference.$spacing-md
+      reference.$spacing-sm;
   }
 
   &Clear {
@@ -19,9 +22,9 @@
   }
 }
 
-.constrain {
+.container {
   max-width: 1440px;
-  margin: auto;
+  margin: 0 auto 0 auto;
 
   @media (min-width: 768px) {
     border-radius: reference.$corners-xl;
@@ -32,53 +35,16 @@
   }
 }
 
-.gap {
-  margin-top: 24px;
-}
+.innerContainer {
+  z-index: 1000;
+  position: absolute;
 
-.marginsX {
-  &Regular {
-    padding-left: 76px;
-    padding-right: 76px;
-
-    @media (max-width: 768px) {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
+  @media (min-width: 768px) {
+    padding: 0;
   }
 
-  &Dense {
-    padding-left: 0px;
-    padding-right: 0px;
-
-    @media (max-width: 768px) {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-  }
-}
-
-.marginsY {
-  &Regular {
-    padding-top: 48px;
-    padding-bottom: 48px;
-
-    @media (max-width: 768px) {
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
-  }
-
-  &Dense {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-
-    @media (max-width: 768px) {
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
+  @media (max-width: 768px) {
+    padding: 0 reference.$spacing-sm 0 reference.$spacing-sm;
   }
 }
 
@@ -87,9 +53,4 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-}
-
-.text {
-  z-index: 1000;
-  position: absolute;
 }

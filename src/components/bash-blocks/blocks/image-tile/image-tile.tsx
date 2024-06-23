@@ -40,7 +40,6 @@ export const ImageTile: FC<ImageTileProps> = ({
   return (
     <Tile
       type="clear"
-      gap={!isMobile}
       stacked
       img={isMobile ? imgMobile : imgDesktop}
       gradient={gradient}
@@ -83,7 +82,7 @@ export const ImageTile: FC<ImageTileProps> = ({
         </GridItem>
 
         {ctas ? (
-          <GridItem xs={12} md={3}>
+          <GridItem xs={12} md={2}>
             <Stack
               direction={isMobile ? 'horizontal' : 'vertical'}
               alignHorizontal={isMobile ? 'center' : 'right'}

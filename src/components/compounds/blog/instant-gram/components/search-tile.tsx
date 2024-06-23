@@ -31,7 +31,7 @@ export const SearchTile: FC<SearchTileProps> = ({
   funcButton,
   funcSelect,
 }) => (
-  <Tile type="solid" gap>
+  <Tile type="solid">
     <Stack direction="vertical" spacing="md">
       <BigSearch
         funcInput={funcInput}

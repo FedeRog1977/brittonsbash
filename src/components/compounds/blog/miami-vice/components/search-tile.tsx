@@ -26,7 +26,7 @@ export const SearchTile: FC<SearchTileProps> = ({
   isOne,
   funcSelect,
 }) => (
-  <Tile type="solid" gap>
+  <Tile type="solid">
     <Stack direction="vertical" spacing="md">
       <Stack direction="horizontal" alignHorizontal="apart" wrap>
         {/* TODO: change data to:

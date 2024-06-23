@@ -34,7 +34,7 @@ export const ResultTile: FC<ResultTileProps> = ({
 
   return (
     <Tile type="solid">
-      <Stack direction="vertical" spacing="md">
+      <Stack direction="vertical" spacing={isMobile ? 'xs' : 'md'}>
         <Typography variant="h1" fontFamily="calligraphy" textAlign="center">
           {food.name}
         </Typography>

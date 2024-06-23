@@ -30,7 +30,7 @@ export const SearchTile: FC<SearchTileProps> = ({
   isMisc,
   funcSelect,
 }) => (
-  <Tile type="solid" gap>
+  <Tile type="solid">
     <Stack direction="vertical" spacing="md">
       <Stack direction="horizontal" alignHorizontal="apart" wrap>
         <Button

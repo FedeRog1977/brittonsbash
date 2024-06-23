@@ -41,7 +41,7 @@ export const ResultTile: FC<ResultTileProps> = ({
 
   return (
     <Tile type="solid">
-      <Stack direction="vertical" spacing="md">
+      <Stack direction="vertical" spacing={isMobile ? 'xs' : 'md'}>
         {refactoredEvent.prefix ? (
           <Typography variant="t1" fontFamily="instagram" textAlign="center">
             {refactoredEvent.prefix}:

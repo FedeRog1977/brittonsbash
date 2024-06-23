@@ -25,7 +25,7 @@ export const SearchTile: FC<SearchTileProps> = ({
   const { isMobile } = useScreenWidth();
 
   return (
-    <Tile type="solid" gap>
+    <Tile type="solid">
       <Stack direction="horizontal" alignHorizontal="apart" wrap>
         <Button
           variant="clear"
