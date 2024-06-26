@@ -26,21 +26,19 @@ export const InstantGram: FC = () => {
   return (
     <>
       {/* TODO: sort page spacing */}
-      <Spacing marginY="md">
-        <SearchTile
-          funcCategory={handleCategory}
-          showSearchList={showSearchList}
-          eventData={eventData}
-          is2024={is2024}
-          is2023={is2023}
-          is2022={is2022}
-          is2021={is2021}
-          is2020={is2020}
-          funcInput={handleInput}
-          funcButton={executeInput}
-          funcSelect={handleSelect}
-        />
-      </Spacing>
+      <SearchTile
+        funcCategory={handleCategory}
+        showSearchList={showSearchList}
+        eventData={eventData}
+        is2024={is2024}
+        is2023={is2023}
+        is2022={is2022}
+        is2021={is2021}
+        is2020={is2020}
+        funcInput={handleInput}
+        funcButton={executeInput}
+        funcSelect={handleSelect}
+      />
       <ResultTile
         refactoredEvent={refactoredEvent}
         funcToggleElements={handleToggleElements}

@@ -12,6 +12,7 @@ export type ModalProps = {
   children: ReactElement | ReactNode;
 };
 
+// TODO: make full screen width, with X at top right
 export const Modal: FC<ModalProps> = ({ isOpen, onClose, solid, children }) => (
   <ReactModal
     className={cx(styles.modal, { [styles.modalSolid]: solid })}
