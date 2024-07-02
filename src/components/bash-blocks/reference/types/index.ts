@@ -11,6 +11,7 @@ export * from './breakpoints';
 export * from './color';
 export * from './column-span';
 export * from './column-span-config';
+export * from './data-content-response';
 export * from './img';
 export * from './justify-config';
 export * from './margin';

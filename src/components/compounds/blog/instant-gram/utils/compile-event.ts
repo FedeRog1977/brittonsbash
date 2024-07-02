@@ -100,46 +100,42 @@ export const compileEvent = ({ event, sport, showSport }: CompiledEvent) => {
           // To get rid of the need for compile-entries and the conditionals
           {
             title: 'Districts',
-            content: event.features?.districts?.sort(),
-          },
-          {
-            title: 'Districts',
-            content: event.features?.districts?.sort(),
+            content: event.features?.districts,
           },
           {
             title: 'Attractions',
-            content: event.features?.attractions?.sort(),
+            content: event.features?.attractions,
           },
           {
             title: 'Youth Hostels',
-            content: event.features?.youthHostels?.sort(),
+            content: event.features?.youthHostels,
           },
           {
             title: 'Supermarkets',
-            content: event.features?.supermarkets?.sort(),
+            content: event.features?.supermarkets,
           },
-          { title: 'Shops', content: event.features?.shops?.sort() },
+          { title: 'Shops', content: event.features?.shops },
           {
             title: 'Foodstuffs',
-            content: event.features?.foodstuffs?.sort(),
+            content: event.features?.foodstuffs,
           },
-          { title: 'Cafés', content: event.features?.cafes?.sort() },
+          { title: 'Cafés', content: event.features?.cafes },
           {
             title: 'Bakeries',
-            content: event.features?.bakeries?.sort(),
+            content: event.features?.bakeries,
           },
           {
             title: 'Gelaterias',
-            content: event.features?.gelaterias?.sort(),
+            content: event.features?.gelaterias,
           },
           {
             title: 'Restaurants',
-            content: event.features?.restaurants?.sort(),
+            content: event.features?.restaurants,
           },
-          { title: 'Bars', content: event.features?.bars?.sort() },
+          { title: 'Bars', content: event.features?.bars },
           {
             title: 'Filming Locations',
-            content: event.features?.filmingLocations?.sort(),
+            content: event.features?.filmingLocations,
           },
         ]
       : undefined,

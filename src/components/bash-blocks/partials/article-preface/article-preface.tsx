@@ -1,12 +1,10 @@
 import { FC } from 'react';
 import { Stack, Typography } from '../../basics';
 import { compileEntries } from './utils/compile-entries';
+import { DataContentResponse } from '../../reference';
 
 export type ArticlePrefaceProps = {
-  entries: {
-    title: string;
-    content?: string | string[];
-  }[];
+  entries: DataContentResponse[];
 };
 
 export const ArticlePreface: FC<ArticlePrefaceProps> = ({ entries }) => (

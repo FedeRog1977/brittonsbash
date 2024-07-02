@@ -1,19 +1,21 @@
+import { DataContentResponse } from '../../../reference';
 import { ArticlePrefaceProps } from '../article-preface';
 
-type ArticlePrefaceParsed = {
-  entries: Omit<ArticlePrefaceProps['entries'], 'content'> &
-    { content: string }[];
+type ArticlePrefaceParsed = Pick<DataContentResponse, 'title'> & {
+  content: string;
 };
 
-export const compileEntries = (entries: ArticlePrefaceProps['entries']) => {
-  const entriesParsed: ArticlePrefaceParsed['entries'] = [];
+export const compileEntries = (
+  entries: DataContentResponse[]
+): ArticlePrefaceParsed[] => {
+  const entriesParsed: ArticlePrefaceParsed[] = [];
 
   entries.forEach((entry) => {
     if (entry?.title && entry.content) {
       entriesParsed.push({
         title: entry.title,
         content: Array.isArray(entry.content)
-          ? entry.content.join(', ')
+          ? entry.content.sort().join(', ')
           : entry.content,
       });
     }
