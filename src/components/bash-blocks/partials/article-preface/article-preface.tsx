@@ -17,8 +17,8 @@ export const ArticlePreface: FC<ArticlePrefaceProps> = ({ entries }) => (
           {title}
         </Typography>
 
-        <Typography variant="body">
-          {Array.isArray(content) ? content.join(', ') : content}
+        <Typography variant="body" textAlign="center">
+          {content}
         </Typography>
       </Stack>
     ))}

@@ -8,7 +8,6 @@ import {
   Tile,
   Typography,
   RowTable,
-  Anchor,
   Stack,
 } from '../../../../bash-blocks';
 import {
@@ -168,17 +167,9 @@ export const ResultTile: FC<ResultTileProps> = ({
               <ArticlePreface entries={refactoredEvent.features} />
             ) : null}
 
-            {/* TODO: remove article functionality from this and amend all articles in data to use MD */}
-            {Array.isArray(refactoredEvent.description) ? (
-              <Article
-                sections={refactoredEvent.description}
-                textAlign="justify"
-              />
-            ) : (
-              <Typography variant="body" textAlign="justify">
-                {refactoredEvent.description}
-              </Typography>
-            )}
+            <Typography variant="body" textAlign="justify" markdown>
+              {refactoredEvent.description}
+            </Typography>
           </>
         ) : null}
 

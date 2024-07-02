@@ -23,6 +23,6 @@ export type Event = {
   };
   // TODO: remove ability for Article as this
   // supports MD now
-  description: string | ArticleProps['sections'];
+  description: string;
   images: Img[];
 };
