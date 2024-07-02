@@ -1,5 +1,4 @@
 import { DataContentResponse } from '../../../reference';
-import { ArticlePrefaceProps } from '../article-preface';
 
 type ArticlePrefaceParsed = Pick<DataContentResponse, 'title'> & {
   content: string;

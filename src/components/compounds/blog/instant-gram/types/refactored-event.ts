@@ -1,4 +1,4 @@
-import { ArticlePrefaceProps } from '../../../../bash-blocks';
+import { DataContentResponse } from '../../../../bash-blocks';
 import { Event } from './event';
 
 export type RefactoredEvent = {
@@ -6,7 +6,7 @@ export type RefactoredEvent = {
   names: string[];
   startDate: Event['startDate'];
   endDate?: Event['endDate'];
-  features?: ArticlePrefaceProps['entries'];
+  features?: DataContentResponse[];
   description: Event['description'];
   images: Event['images'];
   distance?: string;

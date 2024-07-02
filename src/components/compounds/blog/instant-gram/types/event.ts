@@ -6,6 +6,8 @@ export type Event = {
   names: string[];
   startDate: string;
   endDate?: string;
+  // TODO: make this accept from the api as DataContentResponse[]
+  // Just like output
   features?: {
     cities?: string[];
     districts?: string[];
@@ -21,8 +23,6 @@ export type Event = {
     bars?: string[];
     filmingLocations?: string[];
   };
-  // TODO: remove ability for Article as this
-  // supports MD now
   description: string;
   images: Img[];
 };
