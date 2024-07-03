@@ -40,9 +40,7 @@ export const SearchTile: FC<SearchTileProps> = ({
         <Button
           variant="clear"
           typeVariant="t1"
-          typeColor={
-            Boolean(showSearchList && isFive) ? 'lightBlue' : undefined
-          }
+          typeColor={Boolean(showSearchList && isOne) ? 'lightBlue' : undefined}
           typeFontFamily="miami"
           content="ONE"
           subContent="Season"
@@ -53,9 +51,7 @@ export const SearchTile: FC<SearchTileProps> = ({
         <Button
           variant="clear"
           typeVariant="t1"
-          typeColor={
-            Boolean(showSearchList && isFour) ? 'lightBlue' : undefined
-          }
+          typeColor={Boolean(showSearchList && isTwo) ? 'lightBlue' : undefined}
           typeFontFamily="miami"
           content="TWO"
           subContent="Season"
@@ -79,7 +75,9 @@ export const SearchTile: FC<SearchTileProps> = ({
         <Button
           variant="clear"
           typeVariant="t1"
-          typeColor={Boolean(showSearchList && isTwo) ? 'lightBlue' : undefined}
+          typeColor={
+            Boolean(showSearchList && isFour) ? 'lightBlue' : undefined
+          }
           typeFontFamily="miami"
           content="FOUR"
           subContent="Season"
@@ -90,7 +88,9 @@ export const SearchTile: FC<SearchTileProps> = ({
         <Button
           variant="clear"
           typeVariant="t1"
-          typeColor={Boolean(showSearchList && isOne) ? 'lightBlue' : undefined}
+          typeColor={
+            Boolean(showSearchList && isFive) ? 'lightBlue' : undefined
+          }
           typeFontFamily="miami"
           content="FIVE"
           subContent="Season"
