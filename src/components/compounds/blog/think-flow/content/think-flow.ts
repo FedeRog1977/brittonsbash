@@ -6,7 +6,7 @@ type ThinkFlowProps = {
 };
 
 export const thinkFlowContent: ThinkFlowProps = {
-  background: { content: 'ThinkFlow' },
+  background: { type: 'ibm', content: 'ThinkFlow' },
   tileOne: {
     type: 'solid',
     heading: 'ThinkFlow (Patent Pending)',

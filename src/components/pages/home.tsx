@@ -1,9 +1,14 @@
-import { ArticleTile, ImageTile, PageLayout } from '../bash-blocks';
-import { homeContent } from '../compounds';
+import { ArticleTile, ImageTile, PageLayout, Spacing } from '../bash-blocks';
+import { homeContent } from '../compounds/home';
 
 export const Home = () => (
   <PageLayout background={homeContent.background}>
-    <ImageTile {...homeContent.tileOne} />
-    <ArticleTile {...homeContent.tileTwo} />
+    <Spacing marginBottom="md">
+      <ImageTile {...homeContent.tileOne} />
+    </Spacing>
+
+    <Spacing marginBottom="md">
+      <ArticleTile {...homeContent.tileTwo} />
+    </Spacing>
   </PageLayout>
 );

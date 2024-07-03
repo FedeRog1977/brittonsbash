@@ -2,10 +2,19 @@ import { toUpperCase } from '../../../../utils';
 import styles from './page-background.module.scss';
 import cx from 'classnames';
 import { FC } from 'react';
-import { Header } from '../../partials';
 
 export type PageBackgroundProps = {
-  type?: 'std' | 'logo' | 'ig' | 'sport' | 'audi' | 'miami' | 'calligraphy';
+  // TODO: clean up the order and naming of these
+  // Also do this in the module
+  type?:
+    | 'std'
+    | 'logo'
+    | 'ig'
+    | 'sport'
+    | 'audi'
+    | 'miami'
+    | 'calligraphy'
+    | 'ibm';
   content: string;
 };
 
@@ -17,7 +26,6 @@ export const PageBackground: FC<PageBackgroundProps> = ({
 
   return (
     <div className={styles.background}>
-      <Header />
       <div className={classNamesText}>
         <div className={styles.textContent}>{content}</div>
       </div>

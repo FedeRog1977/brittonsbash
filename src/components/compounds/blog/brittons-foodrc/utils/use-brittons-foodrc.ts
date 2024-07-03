@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { compileBrittonsFoodRC } from './compile-brittons-foodrc';
 import { useScreenWidth, useShowElement } from '../../../../../utils';
 import { emptyFoodData } from '../mocks/empty-food-data';
-import { brittonsFoodRCContent } from '../content';
+import { brittonsFoodRCContent } from '../content/brittons-foodrc';
 
 export const useBrittonsFoodRC = () => {
   const allFood = compileBrittonsFoodRC();

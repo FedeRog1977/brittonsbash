@@ -1,10 +1,18 @@
-import { ArticleTile, PageLayout } from '../bash-blocks';
+import { ArticleTile, PageLayout, Spacing } from '../bash-blocks';
 import { libraryContent } from '../compounds/library';
 
 export const Library = () => (
   <PageLayout background={libraryContent.background}>
-    <ArticleTile {...libraryContent.tileOne} />
-    <ArticleTile {...libraryContent.tileTwo} />
-    <ArticleTile {...libraryContent.tileThree} />
+    <Spacing marginBottom="md">
+      <ArticleTile {...libraryContent.tileOne} />
+    </Spacing>
+
+    <Spacing marginBottom="md">
+      <ArticleTile {...libraryContent.tileTwo} />
+    </Spacing>
+
+    <Spacing marginBottom="md">
+      <ArticleTile {...libraryContent.tileThree} />
+    </Spacing>
   </PageLayout>
 );

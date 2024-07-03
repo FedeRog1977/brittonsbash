@@ -1,5 +1,5 @@
-import { miamiViceContent } from '../../..';
 import { VideoTileProps } from '../../../../bash-blocks';
+import { miamiViceContent } from '../content/miami-vice';
 
 export const compileMiamiVice = () => {
   const allVideos: VideoTileProps[] = [];

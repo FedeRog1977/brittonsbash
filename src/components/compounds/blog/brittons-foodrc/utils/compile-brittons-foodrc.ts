@@ -1,4 +1,4 @@
-import { brittonsFoodRCContent } from '../../..';
+import { brittonsFoodRCContent } from '../content/brittons-foodrc';
 import { Food } from '../types/food';
 
 export const compileBrittonsFoodRC = () => {
