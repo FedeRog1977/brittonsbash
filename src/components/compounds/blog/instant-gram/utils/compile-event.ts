@@ -94,51 +94,8 @@ export const compileEvent = ({ event, sport, showSport }: CompiledEvent) => {
     names,
     startDate: event.startDate,
     endDate: event.endDate,
-    features: event.features
-      ? [
-          // TODO: move this further up to the data level
-          // To get rid of the need for compile-entries and the conditionals
-          {
-            title: 'Districts',
-            content: event.features?.districts,
-          },
-          {
-            title: 'Attractions',
-            content: event.features?.attractions,
-          },
-          {
-            title: 'Youth Hostels',
-            content: event.features?.youthHostels,
-          },
-          {
-            title: 'Supermarkets',
-            content: event.features?.supermarkets,
-          },
-          { title: 'Shops', content: event.features?.shops },
-          {
-            title: 'Foodstuffs',
-            content: event.features?.foodstuffs,
-          },
-          { title: 'Cafés', content: event.features?.cafes },
-          {
-            title: 'Bakeries',
-            content: event.features?.bakeries,
-          },
-          {
-            title: 'Gelaterias',
-            content: event.features?.gelaterias,
-          },
-          {
-            title: 'Restaurants',
-            content: event.features?.restaurants,
-          },
-          { title: 'Bars', content: event.features?.bars },
-          {
-            title: 'Filming Locations',
-            content: event.features?.filmingLocations,
-          },
-        ]
-      : undefined,
+    // TODO: amend data on this level to reflect new format
+    features: event.features,
     description: event.description,
     images: event.images,
     distance: toMiles(distances.reduce(toSum)),

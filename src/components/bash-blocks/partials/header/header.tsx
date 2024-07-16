@@ -48,56 +48,58 @@ export const Header = () => {
   };
 
   return (
-    <div className={styles.header}>
-      <div className={styles.headerContent}>
-        <Stack
-          direction="horizontal"
-          alignHorizontal="apart"
-          alignVertical="center"
-        >
-          {isMobile ? (
-            // TODO: make image component
-            <img
-              className={styles.headerImage}
-              src="https://lewisbritton.com/images/logo/bash-logo.png"
-              alt="header-logo"
-            />
-          ) : (
-            <Stack direction="horizontal" alignVertical="center" spacing="sm">
-              {/* TODO: make image component */}
+    <header>
+      <div className={styles.header}>
+        <div className={styles.headerContent}>
+          <Stack
+            direction="horizontal"
+            alignHorizontal="apart"
+            alignVertical="center"
+          >
+            {isMobile ? (
+              // TODO: make image component
               <img
                 className={styles.headerImage}
                 src="https://lewisbritton.com/images/logo/bash-logo.png"
                 alt="header-logo"
               />
+            ) : (
+              <Stack direction="horizontal" alignVertical="center" spacing="sm">
+                {/* TODO: make image component */}
+                <img
+                  className={styles.headerImage}
+                  src="https://lewisbritton.com/images/logo/bash-logo.png"
+                  alt="header-logo"
+                />
 
-              <div className={styles.headerLogo}>BrittonsBashRC</div>
-            </Stack>
-          )}
+                <div className={styles.headerLogo}>BrittonsBashRC</div>
+              </Stack>
+            )}
 
-          {isMobile ? (
-            <FontAwesomeIcon
-              icon={faBars}
-              onClick={() => {
-                setShowMobile(!showMobile);
-                resetHeader();
-              }}
-            />
-          ) : (
-            <Stack direction="horizontal" alignVertical="center" spacing="sm">
-              <Link to="/">Home</Link>
-              <Link to="/academia">Academia</Link>
-              <Link to="/employment">Employment</Link>
-              <Link to="/library">Library</Link>
-              <Link to="#" onClick={toggleBlog}>
-                Blog
-              </Link>
-              <Link to="#" onClick={toggleUtilities}>
-                Utilities
-              </Link>
-            </Stack>
-          )}
-        </Stack>
+            {isMobile ? (
+              <FontAwesomeIcon
+                icon={faBars}
+                onClick={() => {
+                  setShowMobile(!showMobile);
+                  resetHeader();
+                }}
+              />
+            ) : (
+              <Stack direction="horizontal" alignVertical="center" spacing="sm">
+                <Link to="/">Home</Link>
+                <Link to="/academia">Academia</Link>
+                <Link to="/employment">Employment</Link>
+                <Link to="/library">Library</Link>
+                <Link to="#" onClick={toggleBlog}>
+                  Blog
+                </Link>
+                <Link to="#" onClick={toggleUtilities}>
+                  Utilities
+                </Link>
+              </Stack>
+            )}
+          </Stack>
+        </div>
       </div>
 
       {showMobile && isMobile ? (
@@ -215,6 +217,6 @@ export const Header = () => {
           </div>
         </div>
       ) : null}
-    </div>
+    </header>
   );
 };

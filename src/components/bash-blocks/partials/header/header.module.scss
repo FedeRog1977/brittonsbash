@@ -2,6 +2,7 @@
 
 .header {
   background-color: reference.$black-special;
+  backdrop-filter: saturate(180%) blur(10px);
   display: grid;
   align-items: center;
   color: reference.$white;
@@ -64,6 +65,7 @@
 
 .subheader {
   background-color: reference.$black-special;
+  backdrop-filter: saturate(180%) blur(10px);
   display: grid;
   align-items: center;
   position: absolute;
