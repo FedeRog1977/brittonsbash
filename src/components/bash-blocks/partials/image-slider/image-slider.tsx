@@ -7,7 +7,7 @@ import {
   faExchange,
 } from '@fortawesome/free-solid-svg-icons';
 import styles from './image-slider.module.scss';
-import { generateUniqueKey, useScreenWidth } from '../../../../utils';
+import { generateUniqueKey, isMobile } from '../../../../utils';
 import { Typography } from '../../basics';
 import { Img } from '../../reference';
 
@@ -16,8 +16,6 @@ export type ImageSliderProps = {
 };
 
 export const ImageSlider: FC<ImageSliderProps> = ({ slides }) => {
-  const { isMobile } = useScreenWidth();
-
   // TODO: move this to hook
   const [current, setCurrent] = useState(0);
   const length = slides.length;
@@ -61,7 +59,7 @@ export const ImageSlider: FC<ImageSliderProps> = ({ slides }) => {
               {slide.description ? (
                 <div className={styles.imageSliderCaption}>
                   <Typography
-                    variant={isMobile ? 'footnote' : 'body'}
+                    variant={isMobile() ? 'footnote' : 'body'}
                     textAlign="left"
                     color="white"
                   >
@@ -71,7 +69,7 @@ export const ImageSlider: FC<ImageSliderProps> = ({ slides }) => {
               ) : null}
               <div className={styles.imageSliderIndex}>
                 <Typography
-                  variant={isMobile ? 'footnote' : 'body'}
+                  variant={isMobile() ? 'footnote' : 'body'}
                   color="white"
                 >{`${current + 1}/${slides.length}`}</Typography>
               </div>

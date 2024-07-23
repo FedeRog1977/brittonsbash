@@ -1,5 +1,4 @@
 import { Button, Stack, Tile, VideoTileProps } from '../../../../bash-blocks';
-import { useScreenWidth } from '../../../../../utils';
 import { FC } from 'react';
 import { SearchList } from './search-list';
 

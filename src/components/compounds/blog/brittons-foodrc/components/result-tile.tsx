@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { useScreenWidth, useShowElement } from '../../../../../utils';
+import { isMobile, useShowElement } from '../../../../../utils';
 import {
   ArticlePreface,
   Button,
@@ -28,13 +28,12 @@ export const ResultTile: FC<ResultTileProps> = ({
   showDescription,
   showMatrix,
 }) => {
-  const { isMobile } = useScreenWidth();
   const { showElement: showModal, setShowElement: setShowModal } =
     useShowElement();
 
   return (
     <Tile type="solid">
-      <Stack direction="vertical" spacing={isMobile ? 'xs' : 'md'}>
+      <Stack direction="vertical" spacing={isMobile() ? 'xs' : 'md'}>
         <Typography variant="h1" fontFamily="calligraphy" textAlign="center">
           {food.name}
         </Typography>
@@ -66,7 +65,7 @@ export const ResultTile: FC<ResultTileProps> = ({
         ) : null}
 
         {/* TODO: hidden component */}
-        {isMobile ? (
+        {isMobile() ? (
           <ImageSlider slides={food.images} />
         ) : (
           <Grid justifyContent="even">

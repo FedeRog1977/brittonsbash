@@ -3,6 +3,7 @@ import { Event } from '../types/event';
 import { FC } from 'react';
 import { SearchList } from './search-list';
 import { BigSearch } from '../../../../bash-blocks';
+import { isMobile } from '../../../../../utils';
 
 type SearchTileProps = {
   funcCategory: (value: string) => void;
@@ -39,7 +40,12 @@ export const SearchTile: FC<SearchTileProps> = ({
         placeholder="Lookup Events"
       />
 
-      <Stack direction="horizontal" alignHorizontal="apart" wrap>
+      <Stack
+        direction="horizontal"
+        alignHorizontal="center"
+        spacing={isMobile() ? 'none' : '2xl'}
+        wrap
+      >
         {/* TODO: change data to:
           {
             "title": "2024",
@@ -56,8 +62,6 @@ export const SearchTile: FC<SearchTileProps> = ({
           }
           typeFontFamily="instagram"
           content="2024"
-          subContent="Season 5"
-          subContentTop
           value="2024"
           func={() => {
             funcCategory('2024');
@@ -72,8 +76,6 @@ export const SearchTile: FC<SearchTileProps> = ({
           }
           typeFontFamily="instagram"
           content="2023"
-          subContent="Season 4"
-          subContentTop
           value="2023"
           func={() => {
             funcCategory('2023');
@@ -88,8 +90,6 @@ export const SearchTile: FC<SearchTileProps> = ({
           }
           typeFontFamily="instagram"
           content="2022"
-          subContent="Season 3"
-          subContentTop
           value="2022"
           func={() => {
             funcCategory('2022');
@@ -104,8 +104,6 @@ export const SearchTile: FC<SearchTileProps> = ({
           }
           typeFontFamily="instagram"
           content="2021"
-          subContent="Season 2"
-          subContentTop
           value="2021"
           func={() => {
             funcCategory('2021');
@@ -120,8 +118,6 @@ export const SearchTile: FC<SearchTileProps> = ({
           }
           typeFontFamily="instagram"
           content="2020"
-          subContent="Season 1"
-          subContentTop
           value="2020"
           func={() => {
             funcCategory('2020');

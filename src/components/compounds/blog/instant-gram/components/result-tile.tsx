@@ -12,8 +12,8 @@ import {
 } from '../../../../bash-blocks';
 import {
   useShowElement,
-  useScreenWidth,
   generateUniqueKey,
+  isMobile,
 } from '../../../../../utils';
 import { FC } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -34,13 +34,12 @@ export const ResultTile: FC<ResultTileProps> = ({
   showDescription,
   showMatrix,
 }) => {
-  const { isMobile } = useScreenWidth();
   const { showElement: showModal, setShowElement: setShowModal } =
     useShowElement();
 
   return (
     <Tile type="solid">
-      <Stack direction="vertical" spacing={isMobile ? 'xs' : 'md'}>
+      <Stack direction="vertical" spacing={isMobile() ? 'xs' : 'md'}>
         {refactoredEvent.prefix ? (
           <Typography variant="t1" fontFamily="instagram" textAlign="center">
             {refactoredEvent.prefix}:
@@ -76,7 +75,12 @@ export const ResultTile: FC<ResultTileProps> = ({
           </Typography>
         )}
 
-        <Typography variant="h4" color="mediumGrey" textAlign="center">
+        <Typography
+          variant="h4"
+          fontFamily="instagram"
+          color="mediumGrey"
+          textAlign="center"
+        >
           {refactoredEvent.startDate}
           {refactoredEvent.endDate ? (
             <>&nbsp;&#8212;&nbsp;{refactoredEvent.endDate}</>
@@ -174,7 +178,7 @@ export const ResultTile: FC<ResultTileProps> = ({
         ) : null}
 
         {/* TODO: hidden component */}
-        {isMobile ? (
+        {isMobile() ? (
           <ImageSlider slides={refactoredEvent.images} />
         ) : (
           <Grid justifyContent="even">

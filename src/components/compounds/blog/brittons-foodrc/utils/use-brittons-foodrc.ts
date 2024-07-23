@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { compileBrittonsFoodRC } from './compile-brittons-foodrc';
-import { useScreenWidth, useShowElement } from '../../../../../utils';
+import { isMobile, useShowElement } from '../../../../../utils';
 import { emptyFoodData } from '../mocks/empty-food-data';
 import { brittonsFoodRCContent } from '../content/brittons-foodrc';
 
@@ -112,15 +112,13 @@ export const useBrittonsFoodRC = () => {
     setShowSearchList(!showSearchList);
   };
 
-  const { isMobile } = useScreenWidth();
-
   const { showElement: showDescription, setShowElement: setShowDescription } =
     useShowElement();
   const { showElement: showMatrix, setShowElement: setShowMatrix } =
     useShowElement();
 
   useEffect(() => {
-    setShowMatrix(!isMobile && true);
+    setShowMatrix(!isMobile() && true);
   }, []);
 
   const handleToggleElements = (value: string) => {

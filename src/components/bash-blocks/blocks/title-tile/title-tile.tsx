@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { generateUniqueKey, useScreenWidth } from '../../../../utils';
+import { generateUniqueKey } from '../../../../utils';
 import { Stack, Tile, Typography } from '../../basics';
 import { Items } from './types/items';
 import { Grid } from '../../basics/grid/grid';

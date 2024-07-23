@@ -1,6 +1,7 @@
 export * from './generate-unique-key';
 export * from './get-grid-align';
 export * from './is-defined';
+export * from './is-mobile';
 export * from './remove-duplicates';
 export * from './to-bearing';
 export * from './to-coords';

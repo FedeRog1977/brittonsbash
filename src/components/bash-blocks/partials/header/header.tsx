@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import styles from './header.module.scss';
-import { useShowElement, useScreenWidth } from '../../../../utils';
+import { isMobile, useShowElement } from '../../../../utils';
 import { Stack } from '../../basics';
 
 export type HeaderMobileProps = {
@@ -11,8 +11,6 @@ export type HeaderMobileProps = {
 };
 
 export const Header = () => {
-  const { isMobile } = useScreenWidth();
-
   const { showElement: showMobile, setShowElement: setShowMobile } =
     useShowElement();
   const { showElement: showBlog, setShowElement: setShowBlog } =
@@ -56,7 +54,7 @@ export const Header = () => {
             alignHorizontal="apart"
             alignVertical="center"
           >
-            {isMobile ? (
+            {isMobile() ? (
               // TODO: make image component
               <img
                 className={styles.headerImage}
@@ -76,7 +74,7 @@ export const Header = () => {
               </Stack>
             )}
 
-            {isMobile ? (
+            {isMobile() ? (
               <FontAwesomeIcon
                 icon={faBars}
                 onClick={() => {
@@ -102,7 +100,7 @@ export const Header = () => {
         </div>
       </div>
 
-      {showMobile && isMobile ? (
+      {showMobile && isMobile() ? (
         <div className={styles.subheader}>
           <div className={styles.subheaderContent}>
             <Stack direction="vertical" spacing="2xs">

@@ -1,19 +1,17 @@
-import { generateUniqueKey, useScreenWidth } from '../../../../../utils';
+import { generateUniqueKey, isMobile } from '../../../../../utils';
 import { Flex, FlexItem } from '../../../../bash-blocks';
 import { useOpenWeatherCall } from '../api/open-weather';
 import { ColumnHourlyDense } from './column-hourly-dense';
 import { ColumnHourly } from './column-hourly';
 
 export const Hourly = ({ latIn, lonIn }: any) => {
-  const { isMobile } = useScreenWidth();
   const { hourlyResult } = useOpenWeatherCall(latIn, lonIn);
 
   return (
     <Flex direction="horizontal" alignHorizontal="apart" gap="md">
-      {hourlyResult.slice(0, isMobile ? 4 : 5).map((value, index) => (
+      {hourlyResult.slice(0, isMobile() ? 4 : 5).map((value, index) => (
         <FlexItem key={generateUniqueKey(index)} basis={2} grow>
-          {isMobile ? (
-            // TODO: good example of Hidden component
+          {isMobile() ? (
             <ColumnHourlyDense
               // TODO: sort order of props
               dt={value.dt}

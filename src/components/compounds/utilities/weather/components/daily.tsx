@@ -1,8 +1,8 @@
 import { Button, Flex, FlexItem, Stack } from '../../../../bash-blocks';
 import {
   useShowElement,
-  useScreenWidth,
   generateUniqueKey,
+  isMobile,
 } from '../../../../../utils';
 import { ColumnDaily } from './column-daily';
 import { Hourly } from './hourly';
@@ -12,17 +12,15 @@ import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const WeatherDaily = ({ latIn, lonIn }: any) => {
-  const { isMobile } = useScreenWidth();
   const { showElement, setShowElement } = useShowElement();
   const { dailyResult } = useOpenWeatherCall(latIn, lonIn);
 
   return (
     <Stack direction="vertical" spacing="xl">
       <Flex direction="horizontal" alignHorizontal="apart" gap="md">
-        {dailyResult.slice(0, isMobile ? 4 : 5).map((value, index) => (
+        {dailyResult.slice(0, isMobile() ? 4 : 5).map((value, index) => (
           <FlexItem key={generateUniqueKey(index)} basis={2} grow>
-            {isMobile ? (
-              // TODO: good example of Hidden component
+            {isMobile() ? (
               <ColumnDailyDense
                 dt={value.dt}
                 weather={value.weather}

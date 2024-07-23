@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { useScreenWidth } from '../../../../utils';
+import { isMobile } from '../../../../utils';
 import { Tile, TileProps, Typography } from '../../basics';
 
 export type VideoTileProps = {
@@ -16,27 +16,23 @@ export const VideoTile: FC<VideoTileProps> = ({
   subHeading,
   video,
   controls = false,
-}) => {
-  const { isMobile } = useScreenWidth();
+}) => (
+  <Tile type={type}>
+    {subHeading ? <Typography variant="h2">{subHeading}</Typography> : null}
 
-  return (
-    <Tile type={type}>
-      {subHeading ? <Typography variant="h2">{subHeading}</Typography> : null}
+    {heading ? (
+      <Typography variant="h1" paragraphMargins>
+        {heading}
+      </Typography>
+    ) : null}
 
-      {heading ? (
-        <Typography variant="h1" paragraphMargins>
-          {heading}
-        </Typography>
-      ) : null}
-
-      <iframe
-        frameBorder="none"
-        width="100%"
-        height={isMobile ? '250px' : '750px'}
-        src={`https://www.youtube.com/embed/${video}${
-          controls ? '' : '?controls=0'
-        }`}
-      />
-    </Tile>
-  );
-};
+    <iframe
+      frameBorder="none"
+      width="100%"
+      height={isMobile() ? '250px' : '750px'}
+      src={`https://www.youtube.com/embed/${video}${
+        controls ? '' : '?controls=0'
+      }`}
+    />
+  </Tile>
+);

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
-import { useScreenWidth, useShowElement } from '../../../../../utils';
+import { isMobile, useShowElement } from '../../../../../utils';
 import { emptyEventData } from '../mocks/empty-event-data';
 import { Project } from '../types/project';
 import { compileEvent } from './compile-event';
@@ -182,15 +182,13 @@ export const useInstantGram = () => {
     }
   };
 
-  const { isMobile } = useScreenWidth();
-
   const { showElement: showDescription, setShowElement: setShowDescription } =
     useShowElement();
   const { showElement: showMatrix, setShowElement: setShowMatrix } =
     useShowElement();
 
   useEffect(() => {
-    setShowMatrix(!isMobile && true);
+    setShowMatrix(!isMobile() && true);
   }, []);
 
   const handleToggleElements = (value: string) => {

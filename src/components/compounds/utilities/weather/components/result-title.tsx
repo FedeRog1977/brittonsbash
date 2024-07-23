@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Stack, Tile, Typography } from '../../../../bash-blocks';
 import { WeatherDaily } from './daily';
-import { useScreenWidth } from '../../../../../utils';
+import { isMobile } from '../../../../../utils';
 
 type ResultTileProps = {
   title: string;
@@ -17,28 +17,24 @@ export const ResultTitle: FC<ResultTileProps> = ({
   subSubTitle,
   lat,
   lon,
-}) => {
-  const { isMobile } = useScreenWidth();
+}) => (
+  <Tile type="solid">
+    <Stack direction="vertical" spacing={isMobile() ? 'xs' : 'md'}>
+      <Typography variant="h1" textAlign="center">
+        {title}
+      </Typography>
 
-  return (
-    <Tile type="solid">
-      <Stack direction="vertical" spacing={isMobile ? 'xs' : 'md'}>
-        <Typography variant="h1" textAlign="center">
-          {title}
+      <Typography variant="h2" color="mediumGrey" textAlign="center">
+        {subTitle}
+      </Typography>
+
+      {subSubTitle ? (
+        <Typography variant="h4" color="mediumGrey" textAlign="center">
+          Marked by {subSubTitle}
         </Typography>
+      ) : null}
 
-        <Typography variant="h2" color="mediumGrey" textAlign="center">
-          {subTitle}
-        </Typography>
-
-        {subSubTitle ? (
-          <Typography variant="h4" color="mediumGrey" textAlign="center">
-            Marked by {subSubTitle}
-          </Typography>
-        ) : null}
-
-        <WeatherDaily latIn={lat} lonIn={lon} />
-      </Stack>
-    </Tile>
-  );
-};
+      <WeatherDaily latIn={lat} lonIn={lon} />
+    </Stack>
+  </Tile>
+);

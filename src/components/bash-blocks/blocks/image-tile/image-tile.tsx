@@ -1,9 +1,5 @@
-import { FC, ReactElement } from 'react';
-import {
-  formatArticle,
-  generateUniqueKey,
-  useScreenWidth,
-} from '../../../../utils';
+import { FC } from 'react';
+import { formatArticle, generateUniqueKey, isMobile } from '../../../../utils';
 import { Stack, Tile, Typography } from '../../basics';
 import { Article, Cta, CtaProps } from '../../partials';
 import { GradientProps } from '../../basics';
@@ -34,14 +30,13 @@ export const ImageTile: FC<ImageTileProps> = ({
   ctas,
   invert = false,
 }) => {
-  const { isMobile } = useScreenWidth();
   const invertedTypeVariant = invert ? 'white' : 'mediumGrey';
 
   return (
     <Tile
       type="clear"
       stacked
-      img={isMobile ? imgMobile : imgDesktop}
+      img={isMobile() ? imgMobile : imgDesktop}
       gradient={gradient}
     >
       <Grid justifyContent="center" alignItems="center">
@@ -84,11 +79,11 @@ export const ImageTile: FC<ImageTileProps> = ({
         {ctas ? (
           <GridItem xs={12} md={2}>
             <Stack
-              direction={isMobile ? 'horizontal' : 'vertical'}
-              alignHorizontal={isMobile ? 'center' : 'right'}
+              direction={isMobile() ? 'horizontal' : 'vertical'}
+              alignHorizontal={isMobile() ? 'center' : 'right'}
               alignVertical="center"
               spacing="2xs"
-              wrap={isMobile}
+              wrap={isMobile()}
             >
               {ctas?.map(({ content, href }, index) => (
                 <Cta
