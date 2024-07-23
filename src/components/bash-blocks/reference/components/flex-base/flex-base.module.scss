@@ -100,6 +100,12 @@ $-prefix-to-properties: (
   @include mixins.responsive-spacing($prefix) using ($spacing-variable) {
     @each $property in $properties {
       #{$property}: $spacing-variable;
+
+      // margin: -0.5 * $spacing-variable;
+
+      // > * {
+      //   padding: 0.5 * $spacing-variable;
+      // }
     }
   }
 }
