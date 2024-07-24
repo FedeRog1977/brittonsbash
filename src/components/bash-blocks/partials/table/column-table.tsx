@@ -9,6 +9,7 @@ export type ColumnTableProps = {
   rightColumns: Column[];
 };
 
+// TODO: segment these into the text content, and the styled table
 export const ColumnTable: FC<ColumnTableProps> = ({
   leftColumn,
   rightColumns,

@@ -2,6 +2,10 @@
 
 .flexItem {
   flex-grow: 0;
+
+  > * {
+    padding: 2.5px;
+  }
 }
 
 .grow {

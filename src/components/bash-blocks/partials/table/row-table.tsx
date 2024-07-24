@@ -9,6 +9,7 @@ export type RowTableProps = {
   rows: Row[];
 };
 
+// TODO: segment these into the text content, and the styled table
 export const RowTable: FC<RowTableProps> = ({ titleRow, rows }) => (
   <div className={styles.container}>
     <div className={styles.table}>

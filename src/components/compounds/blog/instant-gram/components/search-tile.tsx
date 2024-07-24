@@ -40,12 +40,7 @@ export const SearchTile: FC<SearchTileProps> = ({
         placeholder="Lookup Events"
       />
 
-      <Stack
-        direction="horizontal"
-        alignHorizontal="center"
-        spacing={isMobile() ? 'none' : '2xl'}
-        wrap
-      >
+      <Stack direction="horizontal" alignHorizontal="apart" wrap>
         {/* TODO: change data to:
           {
             "title": "2024",
@@ -62,6 +57,8 @@ export const SearchTile: FC<SearchTileProps> = ({
           }
           typeFontFamily="instagram"
           content="2024"
+          subContent="Season 5"
+          subContentTop={isMobile()}
           value="2024"
           func={() => {
             funcCategory('2024');
@@ -76,6 +73,8 @@ export const SearchTile: FC<SearchTileProps> = ({
           }
           typeFontFamily="instagram"
           content="2023"
+          subContent="Season 4"
+          subContentTop={isMobile()}
           value="2023"
           func={() => {
             funcCategory('2023');
@@ -90,6 +89,8 @@ export const SearchTile: FC<SearchTileProps> = ({
           }
           typeFontFamily="instagram"
           content="2022"
+          subContent="Season 3"
+          subContentTop={isMobile()}
           value="2022"
           func={() => {
             funcCategory('2022');
@@ -104,6 +105,8 @@ export const SearchTile: FC<SearchTileProps> = ({
           }
           typeFontFamily="instagram"
           content="2021"
+          subContent="Season 2"
+          subContentTop={isMobile()}
           value="2021"
           func={() => {
             funcCategory('2021');
@@ -118,6 +121,8 @@ export const SearchTile: FC<SearchTileProps> = ({
           }
           typeFontFamily="instagram"
           content="2020"
+          subContent="Season 1"
+          subContentTop={isMobile()}
           value="2020"
           func={() => {
             funcCategory('2020');

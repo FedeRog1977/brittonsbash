@@ -25,7 +25,7 @@ export const ImageMatrix: FC<ImageMatrixProps> = ({ items, columns }) => {
         direction="horizontal"
         alignHorizontal="center"
         alignVertical="center"
-        gap="2xs"
+        // gap="2xs"
       >
         {items.map(({ url, alt, description }, index) => (
           <FlexItem

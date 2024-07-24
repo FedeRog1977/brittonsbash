@@ -27,7 +27,7 @@ export const InstantGram = () => {
 
   return (
     <PageLayout background={instantGramContent.background}>
-      <Spacing marginBottom="md">
+      <Spacing marginTop="md" marginBottom="md">
         <SearchTile
           funcCategory={handleCategory}
           showSearchList={showSearchList}
