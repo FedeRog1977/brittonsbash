@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Flex, Stack, Typography } from '../../basics';
+import { Flex, Typography } from '../../basics';
 import { compileEntries } from './utils/compile-entries';
 import { DataContentResponse } from '../../reference';
 

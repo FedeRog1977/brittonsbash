@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Flex, Stack, Tile, Typography } from '../../../../bash-blocks';
+import { Flex, Tile, Typography } from '../../../../bash-blocks';
 import { WeatherDaily } from './daily';
 import { isMobile } from '../../../../../utils';
 

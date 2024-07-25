@@ -1,4 +1,4 @@
-import { Button, Flex, Stack, Tile } from '../../../../bash-blocks';
+import { Button, Flex, Tile } from '../../../../bash-blocks';
 import { FC } from 'react';
 import { SearchList } from './search-list';
 import { Food } from '../types/food';

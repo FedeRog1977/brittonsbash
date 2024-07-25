@@ -1,10 +1,4 @@
-import {
-  Button,
-  Flex,
-  Stack,
-  Tile,
-  VideoTileProps,
-} from '../../../../bash-blocks';
+import { Button, Flex, Tile, VideoTileProps } from '../../../../bash-blocks';
 import { FC } from 'react';
 import { SearchList } from './search-list';
 

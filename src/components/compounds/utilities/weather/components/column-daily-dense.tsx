@@ -5,7 +5,7 @@ import {
   toBearing,
   toSpeed,
 } from '../../../../../utils';
-import { Flex, Stack, Typography } from '../../../../bash-blocks';
+import { Flex, Typography } from '../../../../bash-blocks';
 import { Daily } from '../types/daily';
 import { ConditionIcon } from './condition-icon';
 import { Temperature } from './temperature';

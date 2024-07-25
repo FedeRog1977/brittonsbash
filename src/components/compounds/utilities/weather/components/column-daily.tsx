@@ -6,7 +6,7 @@ import {
   toSpeed,
   toSentenceCase,
 } from '../../../../../utils';
-import { Flex, FlexItem, Stack, Typography } from '../../../../bash-blocks';
+import { Flex, FlexItem, Typography } from '../../../../bash-blocks';
 import { Daily } from '../types/daily';
 import { ConditionIcon } from './condition-icon';
 import { Temperature } from './temperature';

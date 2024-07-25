@@ -1,4 +1,4 @@
-import { Button, Flex, FlexItem, Stack } from '../../../../bash-blocks';
+import { Button, Flex, FlexItem } from '../../../../bash-blocks';
 import {
   useShowElement,
   generateUniqueKey,

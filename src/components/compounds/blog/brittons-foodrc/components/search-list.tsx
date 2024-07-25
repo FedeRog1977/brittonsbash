@@ -1,4 +1,4 @@
-import { Button, Stack } from '../../../../bash-blocks';
+import { Button } from '../../../../bash-blocks';
 import { generateUniqueKey, isMobile } from '../../../../../utils';
 import { FC } from 'react';
 import { Grid } from '../../../../bash-blocks/basics/grid/grid';

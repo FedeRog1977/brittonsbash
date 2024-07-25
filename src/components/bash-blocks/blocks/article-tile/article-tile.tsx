@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Flex, Stack, Tile, TileProps, Typography } from '../../basics';
+import { Flex, Tile, TileProps, Typography } from '../../basics';
 import { getContent } from './utils/get-content';
 import { Section } from './types/section';
 import { TextStyle } from '../../reference';
