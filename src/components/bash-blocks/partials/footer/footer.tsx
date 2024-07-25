@@ -1,11 +1,11 @@
 import styles from './footer.module.scss';
-import { Typography, Stack } from '../../basics';
+import { Typography, Flex } from '../../basics';
 import { FC } from 'react';
 
 export const Footer: FC = () => (
   <footer className={styles.footer}>
-    <Stack direction="vertical" alignHorizontal="center" spacing="md">
-      <Stack direction="horizontal" alignVertical="center" spacing="sm">
+    <Flex direction="vertical" alignHorizontal="center" gap="md">
+      <Flex direction="horizontal" alignVertical="center" gap="sm">
         {/* TODO: make image component */}
         <img
           src="https://lewisbritton.com/images/logo/bash-logo.png"
@@ -13,16 +13,16 @@ export const Footer: FC = () => (
           style={{ height: '48px' }}
         />
 
-        <Stack direction="vertical" alignHorizontal="left">
+        <Flex direction="vertical" alignHorizontal="left">
           <div className={styles.footerLogo}>BrittonsBashRC</div>
 
           <Typography variant="body" element="code" color="lightGrey">
             brittonsbash.com
           </Typography>
-        </Stack>
-      </Stack>
+        </Flex>
+      </Flex>
 
-      <Stack direction="horizontal" alignVertical="center" spacing="sm">
+      <Flex direction="horizontal" alignVertical="center" gap="sm">
         {/* TODO: make image component */}
         <img
           src="https://lewisbritton.com/images/monero/xmr.svg"
@@ -33,7 +33,7 @@ export const Footer: FC = () => (
         <Typography variant="body" color="lightGrey">
           Monero Donations
         </Typography>
-      </Stack>
+      </Flex>
 
       <Typography variant="footnote" element="code" color="lightGrey">
         <>
@@ -56,6 +56,6 @@ export const Footer: FC = () => (
       <Typography variant="body" color="lightGrey">
         <>&#169; Lewis Britton 2020&mdash;2024</>
       </Typography>
-    </Stack>
+    </Flex>
   </footer>
 );

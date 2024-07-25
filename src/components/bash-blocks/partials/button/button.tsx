@@ -1,7 +1,7 @@
 import styles from './button.module.scss';
 import cx from 'classnames';
 import { toUpperCase } from '../../../../utils';
-import { Stack, Typography } from '../../basics';
+import { Flex, Typography } from '../../basics';
 import { FC, ReactElement } from 'react';
 import { TextStyle, Url } from '../../reference';
 import { Grid } from '../../basics/grid/grid';
@@ -65,11 +65,11 @@ export const Button: FC<ButtonProps> = ({
         spacing={icon ? 'xs' : 'none'}
       >
         <GridItem xs={icon ? 6 : 12}>
-          <Stack
+          <Flex
             direction={subContentTop ? 'vertical' : 'horizontal'}
             alignHorizontal={icon ? 'left' : 'center'}
             alignVertical="center"
-            spacing="xs"
+            gap="xs"
           >
             {subContent ? (
               <Typography variant="body" color="lightGrey" textAlign="center">
@@ -85,7 +85,7 @@ export const Button: FC<ButtonProps> = ({
             >
               {content}
             </Typography>
-          </Stack>
+          </Flex>
         </GridItem>
 
         {icon ? (

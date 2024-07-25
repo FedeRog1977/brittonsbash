@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { formatArticle, generateUniqueKey, isMobile } from '../../../../utils';
-import { Stack, Tile, Typography } from '../../basics';
+import { Flex, Tile, Typography } from '../../basics';
 import { Article, Cta, CtaProps } from '../../partials';
 import { GradientProps } from '../../basics';
 import { ArticleProps } from '../../partials';
@@ -78,12 +78,12 @@ export const ImageTile: FC<ImageTileProps> = ({
 
         {ctas ? (
           <GridItem xs={12} md={2}>
-            <Stack
+            <Flex
               direction={isMobile() ? 'horizontal' : 'vertical'}
               alignHorizontal={isMobile() ? 'center' : 'right'}
               alignVertical="center"
-              spacing="2xs"
               wrap={isMobile()}
+              gap="2xs"
             >
               {ctas?.map(({ content, href }, index) => (
                 <Cta
@@ -93,7 +93,7 @@ export const ImageTile: FC<ImageTileProps> = ({
                   invert={invert}
                 />
               ))}
-            </Stack>
+            </Flex>
           </GridItem>
         ) : null}
       </Grid>

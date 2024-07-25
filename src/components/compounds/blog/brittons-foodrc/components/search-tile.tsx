@@ -1,4 +1,4 @@
-import { Button, Stack, Tile } from '../../../../bash-blocks';
+import { Button, Flex, Stack, Tile } from '../../../../bash-blocks';
 import { FC } from 'react';
 import { SearchList } from './search-list';
 import { Food } from '../types/food';
@@ -31,8 +31,8 @@ export const SearchTile: FC<SearchTileProps> = ({
   funcSelect,
 }) => (
   <Tile type="solid">
-    <Stack direction="vertical" spacing="md">
-      <Stack direction="horizontal" alignHorizontal="apart" wrap>
+    <Flex direction="vertical" gap="md">
+      <Flex direction="horizontal" alignHorizontal="apart" wrap>
         <Button
           variant="clear"
           typeVariant="t1"
@@ -109,11 +109,11 @@ export const SearchTile: FC<SearchTileProps> = ({
           content="Misc"
           func={() => funcCategory('Misc')}
         />
-      </Stack>
+      </Flex>
 
       {showSearchList ? (
         <SearchList funcSelect={funcSelect} items={foodData} />
       ) : null}
-    </Stack>
+    </Flex>
   </Tile>
 );

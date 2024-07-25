@@ -3,6 +3,7 @@ import { SpacingConfig } from '../../../reference';
 
 export type Common = {
   children: ReactNode;
+  wrap?: boolean;
   gap?: SpacingConfig;
   columnGap?: SpacingConfig;
   rowGap?: SpacingConfig;

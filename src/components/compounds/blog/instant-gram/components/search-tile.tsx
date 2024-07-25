@@ -1,4 +1,4 @@
-import { Button, Stack, Tile } from '../../../../bash-blocks';
+import { Button, Flex, Tile } from '../../../../bash-blocks';
 import { Event } from '../types/event';
 import { FC } from 'react';
 import { SearchList } from './search-list';
@@ -33,14 +33,14 @@ export const SearchTile: FC<SearchTileProps> = ({
   funcSelect,
 }) => (
   <Tile type="solid">
-    <Stack direction="vertical" spacing="md">
+    <Flex direction="vertical" gap="md">
       <BigSearch
         funcInput={funcInput}
         funcButton={funcButton}
         placeholder="Lookup Events"
       />
 
-      <Stack direction="horizontal" alignHorizontal="apart" wrap>
+      <Flex direction="horizontal" alignHorizontal="apart" wrap>
         {/* TODO: change data to:
           {
             "title": "2024",
@@ -128,11 +128,11 @@ export const SearchTile: FC<SearchTileProps> = ({
             funcCategory('2020');
           }}
         />
-      </Stack>
+      </Flex>
 
       {showSearchList ? (
         <SearchList funcSelect={funcSelect} items={eventData} />
       ) : null}
-    </Stack>
+    </Flex>
   </Tile>
 );

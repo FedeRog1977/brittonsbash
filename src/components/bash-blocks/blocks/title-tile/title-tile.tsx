@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { generateUniqueKey } from '../../../../utils';
-import { Stack, Tile, Typography } from '../../basics';
+import { Flex, Tile, Typography } from '../../basics';
 import { Items } from './types/items';
 import { Grid } from '../../basics/grid/grid';
 import { GridItem } from '../../basics/grid/grid-item';
@@ -17,7 +17,7 @@ export const TitleTile: FC<TitleTileProps> = ({
   bodyItems,
 }) => (
   <Tile type="clear">
-    <Stack direction="vertical" spacing="xs">
+    <Flex direction="vertical" gap="xs">
       {heading ? (
         <Typography variant="h3" textAlign="center">
           {heading}
@@ -65,6 +65,6 @@ export const TitleTile: FC<TitleTileProps> = ({
             </Grid>
           ))
         : null}
-    </Stack>
+    </Flex>
   </Tile>
 );

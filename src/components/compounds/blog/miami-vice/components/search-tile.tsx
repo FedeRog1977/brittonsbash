@@ -1,4 +1,10 @@
-import { Button, Stack, Tile, VideoTileProps } from '../../../../bash-blocks';
+import {
+  Button,
+  Flex,
+  Stack,
+  Tile,
+  VideoTileProps,
+} from '../../../../bash-blocks';
 import { FC } from 'react';
 import { SearchList } from './search-list';
 
@@ -26,8 +32,8 @@ export const SearchTile: FC<SearchTileProps> = ({
   funcSelect,
 }) => (
   <Tile type="solid">
-    <Stack direction="vertical" spacing="md">
-      <Stack direction="horizontal" alignHorizontal="apart" wrap>
+    <Flex direction="vertical" gap="md">
+      <Flex direction="horizontal" alignHorizontal="apart" wrap>
         {/* TODO: change data to:
             {
               "title": "2024",
@@ -96,11 +102,11 @@ export const SearchTile: FC<SearchTileProps> = ({
           subContentTop
           func={() => funcCategory('Five')}
         />
-      </Stack>
+      </Flex>
 
       {showSearchList ? (
         <SearchList funcSelect={funcSelect} items={videoData} />
       ) : null}
-    </Stack>
+    </Flex>
   </Tile>
 );

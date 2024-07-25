@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { generateUniqueKey, useShowElement } from '../../../../utils';
-import { Background, Spacing, Stack, Typography } from '../../basics';
+import { Background, Flex, Spacing, Typography } from '../../basics';
 import { Button } from '../button';
 
 export type BookshelfProps = {
@@ -26,7 +26,7 @@ export const Bookshelf: FC<BookshelfProps> = ({ heading, items }) => {
       {showElement ? (
         <Background color="darkGrey">
           <Spacing paddingY="sm">
-            <Stack direction="vertical" spacing="sm">
+            <Flex direction="vertical" gap="sm">
               {items.map((item, index) => (
                 <Typography
                   key={generateUniqueKey(index)}
@@ -37,7 +37,7 @@ export const Bookshelf: FC<BookshelfProps> = ({ heading, items }) => {
                   {item}
                 </Typography>
               ))}
-            </Stack>
+            </Flex>
           </Spacing>
         </Background>
       ) : null}

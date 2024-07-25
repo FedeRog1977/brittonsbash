@@ -2,7 +2,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FC } from 'react';
 import { generateUniqueKey, isMobile } from '../../../../utils';
-import { Search, SearchList, Stack } from '../../basics';
+import { Flex, Search, SearchList } from '../../basics';
 import { Button } from '../button';
 import { SearchProps } from '../../basics';
 import { Grid } from '../../basics/grid/grid';
@@ -25,7 +25,7 @@ export const BigSearch: FC<BigSearchProps> = ({
   placeholder = 'Search',
   selects,
 }) => (
-  <Stack direction="vertical" spacing="md">
+  <Flex direction="vertical" gap="md">
     <Grid
       justifyContent="center"
       alignItems="center"
@@ -59,5 +59,5 @@ export const BigSearch: FC<BigSearchProps> = ({
         ))}
       </Grid>
     ) : null}
-  </Stack>
+  </Flex>
 );

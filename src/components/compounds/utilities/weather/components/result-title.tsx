@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Stack, Tile, Typography } from '../../../../bash-blocks';
+import { Flex, Stack, Tile, Typography } from '../../../../bash-blocks';
 import { WeatherDaily } from './daily';
 import { isMobile } from '../../../../../utils';
 
@@ -19,7 +19,7 @@ export const ResultTitle: FC<ResultTileProps> = ({
   lon,
 }) => (
   <Tile type="solid">
-    <Stack direction="vertical" spacing={isMobile() ? 'xs' : 'md'}>
+    <Flex direction="vertical" gap={isMobile() ? 'xs' : 'md'}>
       <Typography variant="h1" textAlign="center">
         {title}
       </Typography>
@@ -35,6 +35,6 @@ export const ResultTitle: FC<ResultTileProps> = ({
       ) : null}
 
       <WeatherDaily latIn={lat} lonIn={lon} />
-    </Stack>
+    </Flex>
   </Tile>
 );

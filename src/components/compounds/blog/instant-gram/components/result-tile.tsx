@@ -1,5 +1,4 @@
 import {
-  Article,
   ArticlePreface,
   Button,
   ImageMatrix,
@@ -8,7 +7,6 @@ import {
   Tile,
   Typography,
   RowTable,
-  Stack,
 } from '../../../../bash-blocks';
 import {
   useShowElement,
@@ -18,7 +16,7 @@ import {
 import { FC } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import { Grid } from '../../../../bash-blocks/basics';
+import { Flex, Grid } from '../../../../bash-blocks/basics';
 import { RefactoredEvent } from '../types/refactored-event';
 
 type ResultTileProps = {
@@ -39,7 +37,7 @@ export const ResultTile: FC<ResultTileProps> = ({
 
   return (
     <Tile type="solid">
-      <Stack direction="vertical" spacing={isMobile() ? 'xs' : 'md'}>
+      <Flex direction="vertical" gap={isMobile() ? 'xs' : 'md'}>
         {refactoredEvent.prefix ? (
           <Typography variant="t1" fontFamily="instagram" textAlign="center">
             {refactoredEvent.prefix}:
@@ -48,11 +46,11 @@ export const ResultTile: FC<ResultTileProps> = ({
 
         {refactoredEvent.names.length > 1 ? (
           refactoredEvent.names.map((name, index) => (
-            <Stack
+            <Flex
               key={generateUniqueKey(index)}
               direction="horizontal"
               alignHorizontal="center"
-              spacing="xs"
+              gap="xs"
             >
               <Typography
                 variant="t1"
@@ -67,7 +65,7 @@ export const ResultTile: FC<ResultTileProps> = ({
               <Typography variant="t1" fontFamily="instagram" textAlign="left">
                 {name}
               </Typography>
-            </Stack>
+            </Flex>
           ))
         ) : (
           <Typography variant="t1" fontFamily="instagram" textAlign="center">
@@ -205,7 +203,7 @@ export const ResultTile: FC<ResultTileProps> = ({
             <ImageSlider slides={refactoredEvent.images} />
           </Modal>
         ) : null}
-      </Stack>
+      </Flex>
     </Tile>
   );
 };

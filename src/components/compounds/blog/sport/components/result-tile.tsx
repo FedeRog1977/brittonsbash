@@ -6,6 +6,7 @@ import {
   Button,
   Stack,
   ColumnTableProps,
+  Flex,
 } from '../../../../bash-blocks';
 import { FC } from 'react';
 
@@ -39,7 +40,7 @@ export const ResultTile: FC<ResultTileProps> = ({
   is2020,
 }) => (
   <Tile type="solid">
-    <Stack direction="vertical" spacing={isMobile() ? 'xs' : 'md'}>
+    <Flex direction="vertical" gap={isMobile() ? 'xs' : 'md'}>
       <Typography variant="t1" fontFamily="sport" textAlign="center">
         {title}
       </Typography>
@@ -70,7 +71,7 @@ export const ResultTile: FC<ResultTileProps> = ({
         rightColumns={routes.rightColumns}
       />
 
-      <Stack direction="horizontal" alignHorizontal="apart" wrap>
+      <Flex direction="horizontal" alignHorizontal="apart" wrap>
         <Button
           variant="clear"
           typeVariant="h2"
@@ -120,12 +121,12 @@ export const ResultTile: FC<ResultTileProps> = ({
           func={funcActivities}
           content="2020"
         />
-      </Stack>
+      </Flex>
 
       <ColumnTable
         leftColumn={activities.leftColumn}
         rightColumns={activities.rightColumns}
       />
-    </Stack>
+    </Flex>
   </Tile>
 );

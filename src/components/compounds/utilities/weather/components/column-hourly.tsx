@@ -5,7 +5,7 @@ import {
   toBearing,
   toSpeed,
 } from '../../../../../utils';
-import { Flex, FlexItem, Stack, Typography } from '../../../../bash-blocks';
+import { Flex, FlexItem, Typography } from '../../../../bash-blocks';
 import { Hourly } from '../types/hourly';
 import { ConditionIcon } from './condition-icon';
 import { Temperature } from './temperature';
@@ -55,12 +55,12 @@ export const ColumnHourly: FC<ColumnHourlyProps> = ({
   const gusts = toSpeed(windGust, true);
 
   return (
-    <Stack direction="vertical" spacing="lg">
-      <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
+    <Flex direction="vertical" gap="lg">
+      <Flex direction="vertical" alignHorizontal="center" gap="2xs">
         <Typography variant="h4">{hour}</Typography>
         <ConditionIcon variant={icon} />
         <Typography variant="body">{precipitation}</Typography>
-      </Stack>
+      </Flex>
 
       <Flex direction="horizontal" gap="2xs">
         <FlexItem grow>
@@ -71,15 +71,15 @@ export const ColumnHourly: FC<ColumnHourlyProps> = ({
         </FlexItem>
       </Flex>
 
-      <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
+      <Flex direction="vertical" alignHorizontal="center" gap="2xs">
         <Typography variant="body">{bearingCompass}</Typography>
         {bearingArrow}
         <Typography variant="footnote">{bearing}</Typography>
         <Typography variant="footnote">{speed}</Typography>
         <Typography variant="footnote">{gusts + ' gusts'}</Typography>
-      </Stack>
+      </Flex>
 
-      <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
+      <Flex direction="vertical" alignHorizontal="center" gap="2xs">
         <Typography variant="footnote">
           {`Pressure: ${pressure + 'mb'}`}
         </Typography>
@@ -91,7 +91,7 @@ export const ColumnHourly: FC<ColumnHourlyProps> = ({
           {`Visibility: ${visibility / 100 + '%'}`}
         </Typography>
         <Typography variant="footnote">{`UV Index: ${uvi}`}</Typography>
-      </Stack>
-    </Stack>
+      </Flex>
+    </Flex>
   );
 };

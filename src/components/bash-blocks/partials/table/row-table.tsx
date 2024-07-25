@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { generateUniqueKey } from '../../../../utils';
-import { Stack, Typography } from '../../basics';
+import { Flex, Typography } from '../../basics';
 import styles from './table.module.scss';
 import { Row } from './types/row';
 
@@ -13,8 +13,8 @@ export type RowTableProps = {
 export const RowTable: FC<RowTableProps> = ({ titleRow, rows }) => (
   <div className={styles.container}>
     <div className={styles.table}>
-      <Stack direction="vertical" spacing="xs">
-        <Stack direction="horizontal" alignHorizontal="apart">
+      <Flex direction="vertical" gap="xs">
+        <Flex direction="horizontal" alignHorizontal="apart">
           {titleRow.leftItem != null ? (
             <Typography variant="footnote" boldFace>
               {titleRow.leftItem}
@@ -28,13 +28,13 @@ export const RowTable: FC<RowTableProps> = ({ titleRow, rows }) => (
           <Typography variant="footnote" boldFace>
             {titleRow.rightItem}
           </Typography>
-        </Stack>
+        </Flex>
 
-        <Stack direction="vertical" spacing="xs">
+        <Flex direction="vertical" gap="xs">
           {rows?.map(({ leftItem, rightItem }, index) => {
             if (leftItem && rightItem) {
               return (
-                <Stack
+                <Flex
                   key={generateUniqueKey(index)}
                   direction="horizontal"
                   alignHorizontal="apart"
@@ -44,14 +44,14 @@ export const RowTable: FC<RowTableProps> = ({ titleRow, rows }) => (
                   </Typography>
 
                   <Typography variant="footnote">{rightItem}</Typography>
-                </Stack>
+                </Flex>
               );
             }
 
             return null;
           })}
-        </Stack>
-      </Stack>
+        </Flex>
+      </Flex>
     </div>
   </div>
 );

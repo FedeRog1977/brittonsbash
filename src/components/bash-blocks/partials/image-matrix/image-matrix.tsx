@@ -25,14 +25,15 @@ export const ImageMatrix: FC<ImageMatrixProps> = ({ items, columns }) => {
         direction="horizontal"
         alignHorizontal="center"
         alignVertical="center"
-        // gap="2xs"
+        wrap
+        gap="2xs"
       >
         {items.map(({ url, alt, description }, index) => (
           <FlexItem
             key={generateUniqueKey(index)}
             basis={{ xs: 12, lg: items.length === 1 ? 12 : basis }}
           >
-            <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
+            <Flex direction="vertical" alignHorizontal="center" gap="2xs">
               <a
                 onClick={() => {
                   setImage({ url, alt, description });
@@ -47,7 +48,7 @@ export const ImageMatrix: FC<ImageMatrixProps> = ({ items, columns }) => {
                   {description}
                 </Typography>
               ) : null}
-            </Stack>
+            </Flex>
           </FlexItem>
         ))}
       </Flex>

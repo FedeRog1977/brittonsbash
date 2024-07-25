@@ -16,7 +16,7 @@ export const WeatherDaily = ({ latIn, lonIn }: any) => {
   const { dailyResult } = useOpenWeatherCall(latIn, lonIn);
 
   return (
-    <Stack direction="vertical" spacing="xl">
+    <Flex direction="vertical" gap="xl">
       <Flex direction="horizontal" alignHorizontal="apart" gap="md">
         {dailyResult.slice(0, isMobile() ? 4 : 5).map((value, index) => (
           <FlexItem key={generateUniqueKey(index)} basis={2} grow>
@@ -66,6 +66,6 @@ export const WeatherDaily = ({ latIn, lonIn }: any) => {
       />
 
       {showElement ? <Hourly latIn={latIn} lonIn={lonIn} /> : null}
-    </Stack>
+    </Flex>
   );
 };

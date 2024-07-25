@@ -49,24 +49,24 @@ export const ColumnDaily: FC<ColumnDailyProps> = ({
   const speed = toSpeed(windSpeed, true);
 
   return (
-    <Stack direction="vertical" spacing="lg">
-      <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
+    <Flex direction="vertical" gap="lg">
+      <Flex direction="vertical" alignHorizontal="center" gap="2xs">
         <Typography variant="h4">{weekday}</Typography>
         <Typography variant="body">{dayOfMonth}</Typography>
         <ConditionIcon variant={icon} />
         <Typography variant="body">
           {`${precipitation} ${toSentenceCase(description)}`}
         </Typography>
-      </Stack>
+      </Flex>
 
-      <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
+      <Flex direction="vertical" alignHorizontal="center" gap="2xs">
         <Typography variant="footnote" boldFace>
           {`Sunrise:\n${sunrise}`}
         </Typography>
         <Typography variant="footnote" boldFace>
           {`Sunset:\n${sunset}`}
         </Typography>
-      </Stack>
+      </Flex>
 
       <Flex direction="horizontal" gap="2xs">
         <FlexItem grow>
@@ -80,14 +80,14 @@ export const ColumnDaily: FC<ColumnDailyProps> = ({
         </FlexItem>
       </Flex>
 
-      <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
+      <Flex direction="vertical" alignHorizontal="center" gap="2xs">
         <Typography variant="body">{bearingCompass}</Typography>
         {bearingArrow}
         <Typography variant="footnote">{bearing}</Typography>
         <Typography variant="footnote">{speed}</Typography>
-      </Stack>
+      </Flex>
 
-      <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
+      <Flex direction="vertical" alignHorizontal="center" gap="2xs">
         <Typography variant="footnote">
           {`Pressure: ${pressure + 'mb'}`}
         </Typography>
@@ -96,7 +96,7 @@ export const ColumnDaily: FC<ColumnDailyProps> = ({
         </Typography>
         <Typography variant="footnote">{`Dew Pt.: ${dp}`}</Typography>
         <Typography variant="footnote">{`UV Index: ${uvi}`}</Typography>
-      </Stack>
-    </Stack>
+      </Flex>
+    </Flex>
   );
 };

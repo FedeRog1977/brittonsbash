@@ -3,11 +3,11 @@ import { isMobile, useShowElement } from '../../../../../utils';
 import {
   ArticlePreface,
   Button,
+  Flex,
   Grid,
   ImageMatrix,
   ImageSlider,
   Modal,
-  Stack,
   Tile,
   Typography,
 } from '../../../../bash-blocks';
@@ -33,7 +33,7 @@ export const ResultTile: FC<ResultTileProps> = ({
 
   return (
     <Tile type="solid">
-      <Stack direction="vertical" spacing={isMobile() ? 'xs' : 'md'}>
+      <Flex direction="vertical" gap={isMobile() ? 'xs' : 'md'}>
         <Typography variant="h1" fontFamily="calligraphy" textAlign="center">
           {food.name}
         </Typography>
@@ -92,7 +92,7 @@ export const ResultTile: FC<ResultTileProps> = ({
             <ImageSlider slides={food.images} />
           </Modal>
         ) : null}
-      </Stack>
+      </Flex>
     </Tile>
   );
 };

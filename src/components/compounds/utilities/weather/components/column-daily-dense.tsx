@@ -5,7 +5,7 @@ import {
   toBearing,
   toSpeed,
 } from '../../../../../utils';
-import { Stack, Typography } from '../../../../bash-blocks';
+import { Flex, Stack, Typography } from '../../../../bash-blocks';
 import { Daily } from '../types/daily';
 import { ConditionIcon } from './condition-icon';
 import { Temperature } from './temperature';
@@ -49,24 +49,24 @@ export const ColumnDailyDense: FC<ColumnDailyDenseProps> = ({
   const speed = toSpeed(windSpeed, true);
 
   return (
-    <Stack direction="vertical" spacing="lg">
-      <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
+    <Flex direction="vertical" gap="lg">
+      <Flex direction="vertical" alignHorizontal="center" gap="2xs">
         <Typography variant="h4">{weekdayPartial}</Typography>
         <Typography variant="body">{dayOfMonthPartial}</Typography>
         <ConditionIcon variant={icon} />
         <Typography variant="body">{precipitation}</Typography>
-      </Stack>
+      </Flex>
 
       <Temperature temp={day} />
 
-      <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
+      <Flex direction="vertical" alignHorizontal="center" gap="2xs">
         <Typography variant="body">{bearingCompass}</Typography>
         <Typography variant="body">{bearingArrow}</Typography>
         <Typography variant="footnote">{bearing}</Typography>
         <Typography variant="footnote" boldFace>
           {speed}
         </Typography>
-      </Stack>
-    </Stack>
+      </Flex>
+    </Flex>
   );
 };

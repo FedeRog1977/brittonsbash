@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { generateUniqueKey } from '../../../../utils';
-import { Stack, Typography } from '../../basics';
+import { Flex, Typography } from '../../basics';
 import styles from './table.module.scss';
 import { Column } from './types/column';
 
@@ -16,8 +16,8 @@ export const ColumnTable: FC<ColumnTableProps> = ({
 }) => (
   <div className={styles.container}>
     <div className={styles.table}>
-      <Stack direction="horizontal" alignHorizontal="apart">
-        <Stack direction="vertical" spacing="xs">
+      <Flex direction="horizontal" alignHorizontal="apart">
+        <Flex direction="vertical" gap="xs">
           <Typography variant="footnote" boldFace>
             {leftColumn.title != null ? leftColumn.title : <>&nbsp;</>}
           </Typography>
@@ -31,15 +31,15 @@ export const ColumnTable: FC<ColumnTableProps> = ({
               {entry}
             </Typography>
           ))}
-        </Stack>
+        </Flex>
 
-        <Stack direction="horizontal" spacing="lg">
+        <Flex direction="horizontal" gap="lg">
           {rightColumns.map(({ title, entries }, index) => (
-            <Stack
+            <Flex
               key={generateUniqueKey(index)}
               direction="vertical"
               alignHorizontal="right"
-              spacing="xs"
+              gap="xs"
             >
               <Typography variant="footnote" boldFace>
                 {title}
@@ -50,10 +50,10 @@ export const ColumnTable: FC<ColumnTableProps> = ({
                   {entry}
                 </Typography>
               ))}
-            </Stack>
+            </Flex>
           ))}
-        </Stack>
-      </Stack>
+        </Flex>
+      </Flex>
     </div>
   </div>
 );

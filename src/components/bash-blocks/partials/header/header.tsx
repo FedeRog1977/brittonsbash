@@ -3,7 +3,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import styles from './header.module.scss';
 import { isMobile, useShowElement } from '../../../../utils';
-import { Stack } from '../../basics';
+import { Flex } from '../../basics';
 
 export type HeaderMobileProps = {
   funcMobile: () => void;
@@ -49,7 +49,7 @@ export const Header = () => {
     <header>
       <div className={styles.header}>
         <div className={styles.headerContent}>
-          <Stack
+          <Flex
             direction="horizontal"
             alignHorizontal="apart"
             alignVertical="center"
@@ -62,7 +62,7 @@ export const Header = () => {
                 alt="header-logo"
               />
             ) : (
-              <Stack direction="horizontal" alignVertical="center" spacing="sm">
+              <Flex direction="horizontal" alignVertical="center" gap="sm">
                 {/* TODO: make image component */}
                 <img
                   className={styles.headerImage}
@@ -71,7 +71,7 @@ export const Header = () => {
                 />
 
                 <div className={styles.headerLogo}>BrittonsBashRC</div>
-              </Stack>
+              </Flex>
             )}
 
             {isMobile() ? (
@@ -83,7 +83,7 @@ export const Header = () => {
                 }}
               />
             ) : (
-              <Stack direction="horizontal" alignVertical="center" spacing="sm">
+              <Flex direction="horizontal" alignVertical="center" gap="sm">
                 <Link to="/">Home</Link>
                 <Link to="/academia">Academia</Link>
                 <Link to="/employment">Employment</Link>
@@ -94,40 +94,32 @@ export const Header = () => {
                 <Link to="#" onClick={toggleUtilities}>
                   Utilities
                 </Link>
-              </Stack>
+              </Flex>
             )}
-          </Stack>
+          </Flex>
         </div>
       </div>
 
       {showMobile && isMobile() ? (
         <div className={styles.subheader}>
           <div className={styles.subheaderContent}>
-            <Stack direction="vertical" spacing="2xs">
-              <Stack
-                direction="horizontal"
-                alignHorizontal="right"
-                spacing="sm"
-              >
+            <Flex direction="vertical" gap="2xs">
+              <Flex direction="horizontal" alignHorizontal="right" gap="sm">
                 <Link to="/">Home</Link>
                 <Link to="/academia">Academia</Link>
                 <Link to="/employment">Employment</Link>
                 <Link to="/library">Library</Link>
-              </Stack>
+              </Flex>
 
-              <Stack
-                direction="horizontal"
-                alignHorizontal="right"
-                spacing="sm"
-              >
+              <Flex direction="horizontal" alignHorizontal="right" gap="sm">
                 <Link to="#" onClick={toggleBlogMobile}>
                   Blog
                 </Link>
                 <Link to="#" onClick={toggleUtilitiesMobile}>
                   Utilities
                 </Link>
-              </Stack>
-            </Stack>
+              </Flex>
+            </Flex>
           </div>
         </div>
       ) : null}
@@ -135,12 +127,8 @@ export const Header = () => {
       {showBlog ? (
         <div className={styles.subheader}>
           <div className={styles.subheaderContent}>
-            <Stack direction="vertical" spacing="2xs">
-              <Stack
-                direction="horizontal"
-                alignHorizontal="right"
-                spacing="sm"
-              >
+            <Flex direction="vertical" gap="2xs">
+              <Flex direction="horizontal" alignHorizontal="right" gap="sm">
                 <Link to="/blog/instant-gram" onClick={resetHeader}>
                   Instant Gram
                 </Link>
@@ -150,26 +138,18 @@ export const Header = () => {
                 <Link to="/blog/brittons-foodrc" onClick={resetHeader}>
                   BrittonsFoodRC
                 </Link>
-              </Stack>
+              </Flex>
 
-              <Stack
-                direction="horizontal"
-                alignHorizontal="right"
-                spacing="sm"
-              >
+              <Flex direction="horizontal" alignHorizontal="right" gap="sm">
                 <Link to="/blog/allroad" onClick={resetHeader}>
                   allroad
                 </Link>
                 <Link to="/blog/gentlemen-who-cafe" onClick={resetHeader}>
                   Gentlemen Who Caf&eacute;
                 </Link>
-              </Stack>
+              </Flex>
 
-              <Stack
-                direction="horizontal"
-                alignHorizontal="right"
-                spacing="sm"
-              >
+              <Flex direction="horizontal" alignHorizontal="right" gap="sm">
                 <Link to="/blog/ricing" onClick={resetHeader}>
                   Ricing
                 </Link>
@@ -179,13 +159,9 @@ export const Header = () => {
                 <Link to="/blog/founding-fathers" onClick={resetHeader}>
                   Founding Fathers
                 </Link>
-              </Stack>
+              </Flex>
 
-              <Stack
-                direction="horizontal"
-                alignHorizontal="right"
-                spacing="sm"
-              >
+              <Flex direction="horizontal" alignHorizontal="right" gap="sm">
                 <Link to="/blog/media" onClick={resetHeader}>
                   Media
                 </Link>
@@ -195,8 +171,8 @@ export const Header = () => {
                 <Link to="/blog/graphic-design" onClick={resetHeader}>
                   Graphic Design
                 </Link>
-              </Stack>
-            </Stack>
+              </Flex>
+            </Flex>
           </div>
         </div>
       ) : null}
@@ -204,14 +180,14 @@ export const Header = () => {
       {showUtilities ? (
         <div className={styles.subheader}>
           <div className={styles.subheaderContent}>
-            <Stack direction="horizontal" alignHorizontal="right" spacing="sm">
+            <Flex direction="horizontal" alignHorizontal="right" gap="sm">
               <Link to="/utilities/weather" onClick={resetHeader}>
                 Weather
               </Link>
               <Link to="/utilities/conquest" onClick={resetHeader}>
                 Conquest
               </Link>
-            </Stack>
+            </Flex>
           </div>
         </div>
       ) : null}

@@ -6,7 +6,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FC } from 'react';
-import { Tile, Button, Stack } from '../../../../bash-blocks';
+import { Tile, Button, Flex } from '../../../../bash-blocks';
 import { isMobile } from '../../../../../utils';
 
 export type SearchTileProps = {
@@ -23,7 +23,7 @@ export const SearchTile: FC<SearchTileProps> = ({
   isMiles,
 }) => (
   <Tile type="solid">
-    <Stack direction="horizontal" alignHorizontal="apart" wrap>
+    <Flex direction="horizontal" alignHorizontal="apart" wrap>
       <Button
         variant="clear"
         typeVariant="t2"
@@ -65,6 +65,6 @@ export const SearchTile: FC<SearchTileProps> = ({
         subContent="Tennis"
         subContentTop={isMobile()}
       />
-    </Stack>
+    </Flex>
   </Tile>
 );

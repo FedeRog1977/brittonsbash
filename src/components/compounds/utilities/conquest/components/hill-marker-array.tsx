@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Marker, Popup } from 'react-leaflet';
 import { generateUniqueKey, toCoords, toFeet } from '../../../../../utils';
-import { Stack, Typography } from '../../../../bash-blocks';
+import { Flex, Typography } from '../../../../bash-blocks';
 import { HillMarkerProps } from './hill-markers';
 
 type HillMarkerArrayProps = {
@@ -27,7 +27,7 @@ export const HillMarkerArray: FC<HillMarkerArrayProps> = ({ hills, type }) => (
       return (
         <Marker key={generateUniqueKey(index)} position={[lat, lon]}>
           <Popup>
-            <Stack direction="vertical" alignHorizontal="center" spacing="md">
+            <Flex direction="vertical" alignHorizontal="center" gap="md">
               <Typography variant="h4" color="darkGrey">
                 {name}
               </Typography>
@@ -51,7 +51,7 @@ export const HillMarkerArray: FC<HillMarkerArrayProps> = ({ hills, type }) => (
                 src="https://lewisbritton.com/images/general/placeholder.webp"
                 alt="placeholder"
               />
-            </Stack>
+            </Flex>
           </Popup>
         </Marker>
       );

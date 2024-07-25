@@ -5,7 +5,7 @@ import {
   toBearing,
   toSpeed,
 } from '../../../../../utils';
-import { Stack, Typography } from '../../../../bash-blocks';
+import { Flex, Stack, Typography } from '../../../../bash-blocks';
 import { Hourly } from '../types/hourly';
 import { ConditionIcon } from './condition-icon';
 import { Temperature } from './temperature';
@@ -51,16 +51,16 @@ export const ColumnHourlyDense: FC<ColumnHourlyDenseProps> = ({
   const gusts = toSpeed(windGust, true);
 
   return (
-    <Stack direction="vertical" spacing="lg">
-      <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
+    <Flex direction="vertical" gap="lg">
+      <Flex direction="vertical" alignHorizontal="center" gap="2xs">
         <Typography variant="h4">{hour}</Typography>
         <ConditionIcon variant={icon} />
         <Typography variant="body">{precipitation}</Typography>
-      </Stack>
+      </Flex>
 
       <Temperature temp={temp} />
 
-      <Stack direction="vertical" alignHorizontal="center" spacing="2xs">
+      <Flex direction="vertical" alignHorizontal="center" gap="2xs">
         <Typography variant="body">{bearingCompass}</Typography>
         <Typography variant="body">{bearingArrow}</Typography>
         <Typography variant="footnote">{bearing}</Typography>
@@ -70,7 +70,7 @@ export const ColumnHourlyDense: FC<ColumnHourlyDenseProps> = ({
         <Typography variant="footnote" boldFace>
           {gusts + ' gusts'}
         </Typography>
-      </Stack>
-    </Stack>
+      </Flex>
+    </Flex>
   );
 };

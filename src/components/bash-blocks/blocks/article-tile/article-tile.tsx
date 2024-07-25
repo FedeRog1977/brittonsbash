@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Stack, Tile, TileProps, Typography } from '../../basics';
+import { Flex, Stack, Tile, TileProps, Typography } from '../../basics';
 import { getContent } from './utils/get-content';
 import { Section } from './types/section';
 import { TextStyle } from '../../reference';
@@ -32,8 +32,8 @@ export const ArticleTile: FC<ArticleTileProps> = ({
       </Typography>
     ) : null}
 
-    <Stack direction="vertical" spacing="md">
+    <Flex direction="vertical" gap="md">
       {sections.map((section) => getContent(section))}
-    </Stack>
+    </Flex>
   </Tile>
 );
