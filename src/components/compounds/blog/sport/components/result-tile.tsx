@@ -44,7 +44,12 @@ export const ResultTile: FC<ResultTileProps> = ({
         {title}
       </Typography>
 
-      <Typography variant="h4" color="mediumGrey" textAlign="center">
+      <Typography
+        variant="h4"
+        fontFamily="sport"
+        color="mediumGrey"
+        textAlign="center"
+      >
         {subTitle}
       </Typography>
 

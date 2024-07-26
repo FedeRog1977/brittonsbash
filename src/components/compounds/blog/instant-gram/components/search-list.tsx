@@ -1,4 +1,4 @@
-import { Button } from '../../../../bash-blocks';
+import { Button, Flex, FlexItem } from '../../../../bash-blocks';
 import { generateUniqueKey, isMobile } from '../../../../../utils';
 import { FC } from 'react';
 import { Grid } from '../../../../bash-blocks/basics/grid/grid';
@@ -11,13 +11,14 @@ type SearchListProps = {
 };
 
 export const SearchList: FC<SearchListProps> = ({ funcSelect, items }) => (
-  <Grid justifyContent="even" alignItems="center">
+  //TODO: carry this formatting over to other search-list's
+  <Flex direction="horizontal" wrap>
     {items.map(({ id, prefix, names }, index) => (
-      <GridItem xs={12} lg={3}>
+      <FlexItem basis={{ xs: 12, sm: 4 }} grow>
         <Button
           key={generateUniqueKey(index)}
           variant="clear"
-          typeVariant={isMobile() ? 'h4' : 'body'}
+          typeVariant="h4"
           typeFontFamily="instagram"
           value={names.join(' - ')}
           func={funcSelect}
@@ -36,7 +37,7 @@ export const SearchList: FC<SearchListProps> = ({ funcSelect, items }) => (
           subContentTop
           padding="coarse"
         />
-      </GridItem>
+      </FlexItem>
     ))}
-  </Grid>
+  </Flex>
 );

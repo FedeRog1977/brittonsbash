@@ -30,9 +30,9 @@ export const useSport = () => {
   const subTitle: string = isRoadies
     ? 'Road Cycling'
     : isProjects
-      ? 'Hiking / Fell Running'
+      ? 'Hiking and Fell Running'
       : isMiles
-        ? 'Walking / Running'
+        ? 'Walking and Running'
         : 'Unrecognised Sport';
 
   const description: string = isRoadies

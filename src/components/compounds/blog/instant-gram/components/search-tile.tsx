@@ -1,4 +1,4 @@
-import { Button, Flex, Tile } from '../../../../bash-blocks';
+import { Button, Flex, FlexItem, Tile } from '../../../../bash-blocks';
 import { Event } from '../types/event';
 import { FC } from 'react';
 import { SearchList } from './search-list';
@@ -40,7 +40,8 @@ export const SearchTile: FC<SearchTileProps> = ({
         placeholder="Lookup Events"
       />
 
-      <Flex direction="horizontal" alignHorizontal="apart" wrap>
+      {/* TODO: carry this formatting over to other search-tile's */}
+      <Flex direction="horizontal" wrap>
         {/* TODO: change data to:
           {
             "title": "2024",
@@ -49,75 +50,90 @@ export const SearchTile: FC<SearchTileProps> = ({
           so this can be mapped
           And with this, standardize the { title, entries } type
         */}
-        <Button
-          variant="clear"
-          typeVariant="t1"
-          typeColor={
-            Boolean(showSearchList && is2024) ? 'lightBlue' : undefined
-          }
-          typeFontFamily="instagram"
-          content="2024"
-          value="2024"
-          func={() => {
-            funcCategory('2024');
-          }}
-        />
+        <FlexItem grow>
+          <Button
+            variant="clear"
+            typeVariant="t1"
+            typeColor={
+              Boolean(showSearchList && is2024) ? 'lightBlue' : undefined
+            }
+            typeFontFamily="instagram"
+            content="2024"
+            value="2024"
+            func={() => {
+              funcCategory('2024');
+            }}
+            width="full"
+          />
+        </FlexItem>
 
-        <Button
-          variant="clear"
-          typeVariant="t1"
-          typeColor={
-            Boolean(showSearchList && is2023) ? 'lightBlue' : undefined
-          }
-          typeFontFamily="instagram"
-          content="2023"
-          value="2023"
-          func={() => {
-            funcCategory('2023');
-          }}
-        />
+        <FlexItem grow>
+          <Button
+            variant="clear"
+            typeVariant="t1"
+            typeColor={
+              Boolean(showSearchList && is2023) ? 'lightBlue' : undefined
+            }
+            typeFontFamily="instagram"
+            content="2023"
+            value="2023"
+            func={() => {
+              funcCategory('2023');
+            }}
+            width="full"
+          />
+        </FlexItem>
 
-        <Button
-          variant="clear"
-          typeVariant="t1"
-          typeColor={
-            Boolean(showSearchList && is2022) ? 'lightBlue' : undefined
-          }
-          typeFontFamily="instagram"
-          content="2022"
-          value="2022"
-          func={() => {
-            funcCategory('2022');
-          }}
-        />
+        <FlexItem grow>
+          <Button
+            variant="clear"
+            typeVariant="t1"
+            typeColor={
+              Boolean(showSearchList && is2022) ? 'lightBlue' : undefined
+            }
+            typeFontFamily="instagram"
+            content="2022"
+            value="2022"
+            func={() => {
+              funcCategory('2022');
+            }}
+            width="full"
+          />
+        </FlexItem>
 
-        <Button
-          variant="clear"
-          typeVariant="t1"
-          typeColor={
-            Boolean(showSearchList && is2021) ? 'lightBlue' : undefined
-          }
-          typeFontFamily="instagram"
-          content="2021"
-          value="2021"
-          func={() => {
-            funcCategory('2021');
-          }}
-        />
+        <FlexItem grow>
+          <Button
+            variant="clear"
+            typeVariant="t1"
+            typeColor={
+              Boolean(showSearchList && is2021) ? 'lightBlue' : undefined
+            }
+            typeFontFamily="instagram"
+            content="2021"
+            value="2021"
+            func={() => {
+              funcCategory('2021');
+            }}
+            width="full"
+          />
+        </FlexItem>
 
-        <Button
-          variant="clear"
-          typeVariant="t1"
-          typeColor={
-            Boolean(showSearchList && is2020) ? 'lightBlue' : undefined
-          }
-          typeFontFamily="instagram"
-          content="2020"
-          value="2020"
-          func={() => {
-            funcCategory('2020');
-          }}
-        />
+        <FlexItem grow>
+          <Button
+            variant="clear"
+            typeVariant="t1"
+            typeColor={
+              Boolean(showSearchList && is2020) ? 'lightBlue' : undefined
+            }
+            typeFontFamily="instagram"
+            content="2020"
+            value="2020"
+            func={() => {
+              funcCategory('2020');
+            }}
+            width="full"
+          />
+        </FlexItem>
       </Flex>
 
       {showSearchList ? (

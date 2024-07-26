@@ -6,8 +6,11 @@ import {
   ResultTile,
   useInstantGram,
 } from '../../compounds/blog/instant-gram';
+import { useEvents } from '../../../api';
 
 export const InstantGram = () => {
+  useEvents();
+
   const {
     handleCategory,
     showSearchList,

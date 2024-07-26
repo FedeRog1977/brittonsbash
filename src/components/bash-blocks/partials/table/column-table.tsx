@@ -14,7 +14,7 @@ export const ColumnTable: FC<ColumnTableProps> = ({
   leftColumn,
   rightColumns,
 }) => (
-  <div className={styles.container}>
+  <div className={styles.containerColumns}>
     <div className={styles.table}>
       <Flex direction="horizontal" alignHorizontal="apart">
         <Flex direction="vertical" gap="xs">

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { generateUniqueKey } from '../../../../utils';
-import { Flex, Typography } from '../../basics';
+import { Flex, FlexItem, Typography } from '../../basics';
 import styles from './table.module.scss';
 import { Row } from './types/row';
 
@@ -11,23 +11,29 @@ export type RowTableProps = {
 
 // TODO: segment these into the text content, and the styled table
 export const RowTable: FC<RowTableProps> = ({ titleRow, rows }) => (
-  <div className={styles.container}>
+  <div className={styles.containerRows}>
     <div className={styles.table}>
       <Flex direction="vertical" gap="xs">
         <Flex direction="horizontal" alignHorizontal="apart">
           {titleRow.leftItem != null ? (
-            <Typography variant="footnote" boldFace>
-              {titleRow.leftItem}
-            </Typography>
+            <FlexItem basis={4}>
+              <Typography variant="footnote" boldFace>
+                {titleRow.leftItem}
+              </Typography>
+            </FlexItem>
           ) : (
-            <Typography variant="footnote">
-              <>&nbsp;</>
-            </Typography>
+            <FlexItem basis={4}>
+              <Typography variant="footnote">
+                <>&nbsp;</>
+              </Typography>
+            </FlexItem>
           )}
 
-          <Typography variant="footnote" boldFace>
-            {titleRow.rightItem}
-          </Typography>
+          <FlexItem basis={8}>
+            <Typography variant="footnote" boldFace textAlign="right">
+              {titleRow.rightItem}
+            </Typography>
+          </FlexItem>
         </Flex>
 
         <Flex direction="vertical" gap="xs">
@@ -39,11 +45,17 @@ export const RowTable: FC<RowTableProps> = ({ titleRow, rows }) => (
                   direction="horizontal"
                   alignHorizontal="apart"
                 >
-                  <Typography variant="footnote" boldFace>
-                    {leftItem}
-                  </Typography>
+                  <FlexItem basis={4}>
+                    <Typography variant="footnote" boldFace>
+                      {leftItem}
+                    </Typography>
+                  </FlexItem>
 
-                  <Typography variant="footnote">{rightItem}</Typography>
+                  <FlexItem basis={8}>
+                    <Typography variant="footnote" textAlign="right">
+                      {rightItem}
+                    </Typography>
+                  </FlexItem>
                 </Flex>
               );
             }

@@ -1,16 +1,29 @@
 @use '../../reference' as reference;
 
-.container {
+// TODO: segment these to separate stylesheets
+.containerColumns {
   border-radius: reference.$corners-md;
   background-color: reference.$dark-grey;
   max-height: 300px;
   overflow-y: auto;
 
   @media (max-width: 768px) {
-    // This doesn't work for some reason
     border-radius: none;
     overflow-x: scroll;
     white-space: nowrap;
+  }
+}
+
+// TODO: segment these to separate stylesheets
+.containerRows {
+  border-radius: reference.$corners-md;
+  background-color: reference.$dark-grey;
+  max-height: 300px;
+  overflow-y: auto;
+
+  @media (max-width: 768px) {
+    border-radius: none;
+    overflow-x: scroll;
   }
 }
 
