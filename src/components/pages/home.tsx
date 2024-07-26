@@ -1,14 +1,12 @@
-import { ArticleTile, ImageTile, PageLayout, Spacing } from '../bash-blocks';
+import { ReactNode } from 'react';
+import { ArticleTile, ImageTile, PageLayout } from '../bash-blocks';
 import { homeContent } from '../compounds/home';
 
-export const Home = () => (
-  <PageLayout background={homeContent.background}>
-    <Spacing marginBottom="md">
-      <ImageTile {...homeContent.tileOne} />
-    </Spacing>
+export const Home = () => {
+  const content: ReactNode[] = [
+    <ImageTile {...homeContent.tileOne} />,
+    <ArticleTile {...homeContent.tileTwo} />,
+  ];
 
-    <Spacing marginBottom="md">
-      <ArticleTile {...homeContent.tileTwo} />
-    </Spacing>
-  </PageLayout>
-);
+  return <PageLayout background={homeContent.background}>{content}</PageLayout>;
+};

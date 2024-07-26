@@ -3,12 +3,8 @@ import {
   miamiViceContent,
   useMiamiVice,
 } from '../../compounds/blog/miami-vice';
-import {
-  FootnoteTile,
-  PageLayout,
-  Spacing,
-  VideoTile,
-} from '../../bash-blocks';
+import { FootnoteTile, PageLayout, VideoTile } from '../../bash-blocks';
+import { ReactNode } from 'react';
 
 export const MiamiVice = () => {
   const {
@@ -24,35 +20,29 @@ export const MiamiVice = () => {
     handleSelect,
   } = useMiamiVice();
 
+  const content: ReactNode[] = [
+    <SearchTile
+      funcCategory={handleCategory}
+      showSearchList={showSearchList}
+      videoData={videoData}
+      isFive={isFive}
+      isFour={isFour}
+      isThree={isThree}
+      isTwo={isTwo}
+      isOne={isOne}
+      funcSelect={handleSelect}
+    />,
+    <VideoTile
+      type="solid"
+      heading={video.heading}
+      subHeading={video.subHeading}
+      video={video.video}
+      controls
+    />,
+    <FootnoteTile {...miamiViceContent.tileTwo} />,
+  ];
+
   return (
-    <PageLayout background={miamiViceContent.background}>
-      <Spacing marginBottom="md">
-        <SearchTile
-          funcCategory={handleCategory}
-          showSearchList={showSearchList}
-          videoData={videoData}
-          isFive={isFive}
-          isFour={isFour}
-          isThree={isThree}
-          isTwo={isTwo}
-          isOne={isOne}
-          funcSelect={handleSelect}
-        />
-      </Spacing>
-
-      <Spacing marginBottom="md">
-        <VideoTile
-          type="solid"
-          heading={video.heading}
-          subHeading={video.subHeading}
-          video={video.video}
-          controls
-        />
-      </Spacing>
-
-      <Spacing marginBottom="md">
-        <FootnoteTile {...miamiViceContent.tileTwo} />
-      </Spacing>
-    </PageLayout>
+    <PageLayout background={miamiViceContent.background}>{content}</PageLayout>
   );
 };

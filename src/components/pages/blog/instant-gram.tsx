@@ -1,4 +1,5 @@
-import { FootnoteTile, PageLayout, Spacing } from '../../bash-blocks';
+import { ReactNode } from 'react';
+import { FootnoteTile, PageLayout } from '../../bash-blocks';
 import {
   instantGramContent,
   SearchTile,
@@ -25,36 +26,32 @@ export const InstantGram = () => {
     showMatrix,
   } = useInstantGram();
 
+  const content: ReactNode[] = [
+    <SearchTile
+      funcCategory={handleCategory}
+      showSearchList={showSearchList}
+      eventData={eventData}
+      is2024={is2024}
+      is2023={is2023}
+      is2022={is2022}
+      is2021={is2021}
+      is2020={is2020}
+      funcInput={handleInput}
+      funcButton={executeInput}
+      funcSelect={handleSelect}
+    />,
+    <ResultTile
+      refactoredEvent={refactoredEvent}
+      funcToggleElements={handleToggleElements}
+      showDescription={showDescription}
+      showMatrix={showMatrix}
+    />,
+    <FootnoteTile {...instantGramContent.tileOne} />,
+  ];
+
   return (
     <PageLayout background={instantGramContent.background}>
-      <Spacing marginTop="md" marginBottom="md">
-        <SearchTile
-          funcCategory={handleCategory}
-          showSearchList={showSearchList}
-          eventData={eventData}
-          is2024={is2024}
-          is2023={is2023}
-          is2022={is2022}
-          is2021={is2021}
-          is2020={is2020}
-          funcInput={handleInput}
-          funcButton={executeInput}
-          funcSelect={handleSelect}
-        />
-      </Spacing>
-
-      <Spacing marginBottom="md">
-        <ResultTile
-          refactoredEvent={refactoredEvent}
-          funcToggleElements={handleToggleElements}
-          showDescription={showDescription}
-          showMatrix={showMatrix}
-        />
-      </Spacing>
-
-      <Spacing marginBottom="md">
-        <FootnoteTile {...instantGramContent.tileOne} />
-      </Spacing>
+      {content}
     </PageLayout>
   );
 };

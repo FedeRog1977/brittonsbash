@@ -4,7 +4,8 @@ import {
   useWeather,
   weatherContent,
 } from '../../compounds/utilities/weather';
-import { FootnoteTile, PageLayout, Spacing } from '../../bash-blocks';
+import { FootnoteTile, PageLayout } from '../../bash-blocks';
+import { ReactNode } from 'react';
 
 export const Weather = () => {
   const {
@@ -17,23 +18,17 @@ export const Weather = () => {
     handleSelect,
   } = useWeather();
 
+  const content: ReactNode[] = [
+    <SearchTile
+      funcInput={handleInput}
+      funcButton={executeInput}
+      funcSelect={handleSelect}
+    />,
+    <ResultTitle title={title} subTitle={subTitle} lat={lat} lon={lon} />,
+    <FootnoteTile {...weatherContent.tileOne} />,
+  ];
+
   return (
-    <PageLayout background={weatherContent.background}>
-      <Spacing marginBottom="md">
-        <SearchTile
-          funcInput={handleInput}
-          funcButton={executeInput}
-          funcSelect={handleSelect}
-        />
-      </Spacing>
-
-      <Spacing marginBottom="md">
-        <ResultTitle title={title} subTitle={subTitle} lat={lat} lon={lon} />
-      </Spacing>
-
-      <Spacing marginBottom="md">
-        <FootnoteTile {...weatherContent.tileOne} />
-      </Spacing>
-    </PageLayout>
+    <PageLayout background={weatherContent.background}>{content}</PageLayout>
   );
 };

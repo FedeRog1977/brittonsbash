@@ -1,13 +1,31 @@
 @use '../../reference' as reference;
 
 .footer {
-  background-color: reference.$black-special;
-  text-align: center;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  color: reference.$light-grey;
-  padding: reference.$spacing-xl 0 reference.$spacing-xl 0;
+  @media (min-width: 768px) {
+    background-image: url('https://lewisbritton.com/images/general/background.jpg');
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+
+  @media (max-width: 768px) {
+    background-image: url('https://lewisbritton.com/images/general/background-mobile.jpg');
+    background-size: 100% auto;
+  }
+
+  &Content {
+    background-color: reference.$black-special;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: reference.$light-grey;
+    padding: reference.$spacing-xl 0 reference.$spacing-xl 0;
+  }
 
   &Logo {
     font-family: Audi-Light;

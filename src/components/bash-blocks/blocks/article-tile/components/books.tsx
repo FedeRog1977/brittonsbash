@@ -10,6 +10,7 @@ export const Books: FC<BooksProps> = ({ items }) => (
     direction="horizontal"
     alignHorizontal="center"
     alignVertical="top"
+    wrap
     rowGap="sm"
   >
     {items.map(({ heading, items }, index) => (

@@ -1,18 +1,15 @@
-import { ArticleTile, PageLayout, Spacing } from '../bash-blocks';
+import { ReactNode } from 'react';
+import { ArticleTile, PageLayout } from '../bash-blocks';
 import { libraryContent } from '../compounds/library';
 
-export const Library = () => (
-  <PageLayout background={libraryContent.background}>
-    <Spacing marginBottom="md">
-      <ArticleTile {...libraryContent.tileOne} />
-    </Spacing>
+export const Library = () => {
+  const content: ReactNode[] = [
+    <ArticleTile {...libraryContent.tileOne} />,
+    <ArticleTile {...libraryContent.tileTwo} />,
+    <ArticleTile {...libraryContent.tileThree} />,
+  ];
 
-    <Spacing marginBottom="md">
-      <ArticleTile {...libraryContent.tileTwo} />
-    </Spacing>
-
-    <Spacing marginBottom="md">
-      <ArticleTile {...libraryContent.tileThree} />
-    </Spacing>
-  </PageLayout>
-);
+  return (
+    <PageLayout background={libraryContent.background}>{content}</PageLayout>
+  );
+};
