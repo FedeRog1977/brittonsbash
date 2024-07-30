@@ -1,8 +1,8 @@
-import { VideoTileProps } from '../../../../bash-blocks';
+import { ResultTileProps } from '../components/result-tile';
 import { miamiViceContent } from '../content/miami-vice';
 
 export const compileMiamiVice = () => {
-  const allVideos: VideoTileProps[] = [];
+  const allVideos: ResultTileProps[] = [];
 
   miamiViceContent.tileOne.season1.forEach((video) => {
     allVideos.push(video);

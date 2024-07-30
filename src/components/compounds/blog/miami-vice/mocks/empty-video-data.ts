@@ -1,6 +1,6 @@
-import { VideoTileProps } from '../../../../bash-blocks';
+import { ResultTileProps } from '../components/result-tile';
 
-export const emptyVideoData: Pick<VideoTileProps, 'heading' | 'subHeading'>[] =
+export const emptyVideoData: Pick<ResultTileProps, 'heading' | 'subHeading'>[] =
   [
     {
       heading: '',

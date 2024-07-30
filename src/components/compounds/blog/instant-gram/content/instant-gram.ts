@@ -10,6 +10,8 @@ type InstantGramProps = {
 
 export const instantGramContent: InstantGramProps = {
   background: { type: 'ig', content: 'Instant Gram' },
+  // TODO: potentially feed data in from session here, rather than into the components directly
+  // So it matches the {{Page}}Content props like other pages which don't rely on API calls
   tileOne: {
     content: [
       {

@@ -1,9 +1,10 @@
 import {
+  ResultTile,
   SearchTile,
   miamiViceContent,
   useMiamiVice,
 } from '../../compounds/blog/miami-vice';
-import { FootnoteTile, PageLayout, VideoTile } from '../../bash-blocks';
+import { FootnoteTile, PageLayout } from '../../bash-blocks';
 import { ReactNode } from 'react';
 
 export const MiamiVice = () => {
@@ -32,12 +33,10 @@ export const MiamiVice = () => {
       isOne={isOne}
       funcSelect={handleSelect}
     />,
-    <VideoTile
-      type="solid"
+    <ResultTile
       heading={video.heading}
       subHeading={video.subHeading}
       video={video.video}
-      controls
     />,
     <FootnoteTile {...miamiViceContent.tileTwo} />,
   ];

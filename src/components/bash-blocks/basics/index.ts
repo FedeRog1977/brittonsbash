@@ -8,3 +8,4 @@ export * from './search';
 export * from './spacing';
 export * from './tile';
 export * from './typography';
+export * from './video';

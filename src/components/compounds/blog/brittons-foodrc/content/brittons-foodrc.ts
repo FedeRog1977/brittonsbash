@@ -438,6 +438,35 @@ export const brittonsFoodRCContent: BrittonsFoodRCProps = {
         ],
         tags: [],
       },
+      {
+        name: 'Seafood Gnocchi',
+        ingredients: [
+          {
+            title: 'Sauce',
+            content: [
+              'Olive oil',
+              '4 cloves of garlic',
+              '1/2 a red onion',
+              '1/2 a red pepper',
+              '1/2 a carrot',
+              '1/2 a stick of celery',
+              '3 salad tomatoes',
+              'Fresh rosemary',
+              'Water',
+            ],
+          },
+          { title: 'Seafood', content: ['King prawns', 'Mussels', 'Squid'] },
+          { title: 'Gnocchi', content: ['Fresh gnocchi (or make your own)'] },
+        ],
+        description: '',
+        images: [
+          {
+            url: 'https://lewisbritton.com/images/blog/brittons-foodrc/seafood-gnocchi/1.jpg',
+            alt: 'seafood-gnocchi-1',
+          },
+        ],
+        tags: [],
+      },
     ],
     pasta: [
       {

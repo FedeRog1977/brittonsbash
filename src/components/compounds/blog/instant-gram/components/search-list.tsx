@@ -1,8 +1,6 @@
 import { Button, Flex, FlexItem } from '../../../../bash-blocks';
 import { generateUniqueKey, isMobile } from '../../../../../utils';
 import { FC } from 'react';
-import { Grid } from '../../../../bash-blocks/basics/grid/grid';
-import { GridItem } from '../../../../bash-blocks/basics/grid/grid-item';
 import { Event } from '../types/event';
 
 type SearchListProps = {
@@ -11,7 +9,6 @@ type SearchListProps = {
 };
 
 export const SearchList: FC<SearchListProps> = ({ funcSelect, items }) => (
-  //TODO: carry this formatting over to other search-list's
   <Flex direction="horizontal" wrap>
     {items.map(({ id, prefix, names }, index) => (
       <FlexItem basis={{ xs: 12, sm: 4 }} grow>

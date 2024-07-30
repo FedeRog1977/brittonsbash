@@ -31,7 +31,7 @@ export const ImageMatrix: FC<ImageMatrixProps> = ({ items, columns }) => {
         {items.map(({ url, alt, description }, index) => (
           <FlexItem
             key={generateUniqueKey(index)}
-            basis={{ xs: 12, lg: items.length === 1 ? 12 : basis }}
+            basis={{ xs: 12, lg: basis }}
           >
             <Flex direction="vertical" alignHorizontal="center" gap="2xs">
               <a

@@ -1,18 +1,18 @@
 import {
   PageBackgroundProps,
   FootnoteTileProps,
-  VideoTileProps,
 } from '../../../../bash-blocks';
+import { ResultTileProps } from '../components/result-tile';
 
 type MiamiViceProps = {
   background: PageBackgroundProps;
   tileOne: {
-    season1: VideoTileProps[];
-    season2: VideoTileProps[];
-    season3: VideoTileProps[];
-    season4: VideoTileProps[];
-    season5: VideoTileProps[];
-    other: VideoTileProps[];
+    season1: ResultTileProps[];
+    season2: ResultTileProps[];
+    season3: ResultTileProps[];
+    season4: ResultTileProps[];
+    season5: ResultTileProps[];
+    other: ResultTileProps[];
   };
   tileTwo: FootnoteTileProps;
 };

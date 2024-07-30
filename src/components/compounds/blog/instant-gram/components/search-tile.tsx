@@ -40,7 +40,6 @@ export const SearchTile: FC<SearchTileProps> = ({
         placeholder="Lookup Events"
       />
 
-      {/* TODO: carry this formatting over to other search-tile's */}
       <Flex direction="horizontal" wrap>
         {/* TODO: change data to:
           {

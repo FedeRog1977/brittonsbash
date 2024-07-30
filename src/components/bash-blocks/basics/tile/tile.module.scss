@@ -19,6 +19,14 @@
 
   &Solid {
     background-color: reference.$black-special;
+
+    @media (min-width: 768px) {
+      border-radius: reference.$corners-xl;
+    }
+
+    @media (max-width: 768px) {
+      border-radius: none;
+    }
   }
 }
 

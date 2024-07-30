@@ -166,7 +166,7 @@ export const ResultTile: FC<ResultTileProps> = ({
         {showDescription ? (
           <>
             {refactoredEvent.features ? (
-              <ArticlePreface entries={refactoredEvent.features} />
+              <ArticlePreface entries={refactoredEvent.features} alphabetize />
             ) : null}
 
             <Typography variant="body" textAlign="justify" markdown>

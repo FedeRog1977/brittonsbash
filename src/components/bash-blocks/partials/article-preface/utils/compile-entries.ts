@@ -5,7 +5,8 @@ type ArticlePrefaceParsed = Pick<DataContentResponse, 'title'> & {
 };
 
 export const compileEntries = (
-  entries: DataContentResponse[]
+  entries: DataContentResponse[],
+  alphabetize: boolean
 ): ArticlePrefaceParsed[] => {
   const entriesParsed: ArticlePrefaceParsed[] = [];
 
@@ -14,7 +15,9 @@ export const compileEntries = (
       entriesParsed.push({
         title: entry.title,
         content: Array.isArray(entry.content)
-          ? entry.content.sort().join(', ')
+          ? alphabetize
+            ? entry.content.sort().join(', ')
+            : entry.content.join(', ')
           : entry.content,
       });
     }
