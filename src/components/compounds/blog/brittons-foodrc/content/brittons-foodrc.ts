@@ -20,6 +20,7 @@ type BrittonsFoodRCProps = {
 
 export const brittonsFoodRCContent: BrittonsFoodRCProps = {
   background: { content: 'BrittonsFoodRC' },
+  // TODO: move this to a data API in other repo and see this equivalent TODO in instant-gram.ts
   tileOne: {
     meat: [
       {
