@@ -1,8 +1,8 @@
 import { toSum, toFeet, toMiles } from '../../../../../utils/helpers';
 import { DataContentResponse } from '../../../../bash-blocks';
 import { Event } from '../types/event';
-import { Project } from '../types/project';
-import { CompiledEvent } from '../types/refactored-event';
+import { CompiledEvent } from '../types/compiled-event';
+import { Project } from '../../sport/types/project';
 
 export const compileEvent = (
   event: Event,

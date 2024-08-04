@@ -17,7 +17,7 @@ import { FC } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { Flex, Grid } from '../../../../bash-blocks/basics';
-import { CompiledEvent } from '../types/refactored-event';
+import { CompiledEvent } from '../types/compiled-event';
 
 type ResultTileProps = {
   compiledEvent: CompiledEvent;

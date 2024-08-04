@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import { isMobile, useShowElement } from '../../../../../utils';
+import { Project } from '../../sport/types/project';
 import { emptyEventData } from '../mocks/empty-event-data';
-import { Project } from '../types/project';
 import { compileEvent } from './compile-event';
 import { compileEventSports } from './compile-event-sports';
 import { compileEvents } from './compile-events';
