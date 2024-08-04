@@ -1,15 +1,14 @@
 import { toSum, toFeet, toMiles } from '../../../../../utils/helpers';
+import { DataContentResponse } from '../../../../bash-blocks';
 import { Event } from '../types/event';
 import { Project } from '../types/project';
-import { RefactoredEvent } from '../types/refactored-event';
+import { CompiledEvent } from '../types/refactored-event';
 
-export type CompiledEvent = {
-  event: Event;
-  sport: Project[];
-  showSport: boolean;
-};
-
-export const compileEvent = ({ event, sport, showSport }: CompiledEvent) => {
+export const compileEvent = (
+  event: Event,
+  sport: Project[],
+  showSport: boolean
+) => {
   const names: string[] = [];
   const distances: number[] = [];
   const elevations: number[] = [];
@@ -39,6 +38,65 @@ export const compileEvent = ({ event, sport, showSport }: CompiledEvent) => {
   event.names.forEach((name: string) => {
     names.push(name);
   });
+
+  const features: DataContentResponse[] = [
+    {
+      title: 'Countries',
+      content: event.features?.countries,
+    },
+    {
+      title: 'Cities',
+      content: event.features?.cities,
+    },
+    {
+      title: 'Districts',
+      content: event.features?.districts,
+    },
+    {
+      title: 'Attractions',
+      content: event.features?.attractions,
+    },
+    {
+      title: 'Accommodation',
+      content: event.features?.accommodation,
+    },
+    {
+      title: 'Supermarkets',
+      content: event.features?.supermarkets,
+    },
+    {
+      title: 'Shops',
+      content: event.features?.shops,
+    },
+    {
+      title: 'Consumables',
+      content: event.features?.consumables,
+    },
+    {
+      title: 'Cafés',
+      content: event.features?.cafes,
+    },
+    {
+      title: 'Bakeries',
+      content: event.features?.bakeries,
+    },
+    {
+      title: 'Gelaterias',
+      content: event.features?.gelaterias,
+    },
+    {
+      title: 'Restaurants',
+      content: event.features?.restaurants,
+    },
+    {
+      title: 'Bars',
+      content: event.features?.bars,
+    },
+    {
+      title: 'Nostalgia Effect',
+      content: event.features?.nostalgiaEffect,
+    },
+  ];
 
   if (sport.length === 0) {
     sport.push({
@@ -89,13 +147,12 @@ export const compileEvent = ({ event, sport, showSport }: CompiledEvent) => {
     });
   });
 
-  const refactoredEvent: RefactoredEvent = {
+  const compiledEvent: CompiledEvent = {
     prefix: event.prefix,
     names,
     startDate: event.startDate,
     endDate: event.endDate,
-    // TODO: amend data on this level to reflect new format
-    features: event.features,
+    features,
     description: event.description,
     images: event.images,
     distance: toMiles(distances.reduce(toSum)),
@@ -112,5 +169,5 @@ export const compileEvent = ({ event, sport, showSport }: CompiledEvent) => {
     showSport: showSport,
   };
 
-  return refactoredEvent;
+  return compiledEvent;
 };

@@ -1,7 +1,7 @@
 import { DataContentResponse } from '../../../../bash-blocks';
 import { Event } from './event';
 
-export type RefactoredEvent = {
+export type CompiledEvent = {
   prefix?: Event['prefix'];
   names: string[];
   startDate: Event['startDate'];

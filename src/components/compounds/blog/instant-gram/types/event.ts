@@ -1,4 +1,5 @@
-import { DataContentResponse, Img } from '../../../../bash-blocks';
+import { Img } from '../../../../bash-blocks';
+import { Features } from './features';
 
 export type Event = {
   id?: string;
@@ -6,8 +7,7 @@ export type Event = {
   names: string[];
   startDate: string;
   endDate?: string;
-  // TODO: amend data on this level to reflect new format
-  features?: DataContentResponse[];
+  features?: Features;
   description: string;
   images: Img[];
 };

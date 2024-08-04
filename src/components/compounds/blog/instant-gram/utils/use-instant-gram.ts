@@ -132,7 +132,7 @@ export const useInstantGram = () => {
     setShowSearchList(!showSearchList);
   };
 
-  const refactoredEvent = compileEvent({ event, sport, showSport });
+  const compiledEvent = compileEvent(event, sport, showSport);
 
   const handleCategory = (value: string) => {
     if (value === '2024') {
@@ -216,7 +216,7 @@ export const useInstantGram = () => {
     handleInput,
     executeInput,
     handleSelect,
-    refactoredEvent,
+    compiledEvent,
     handleToggleElements,
     showDescription,
     showMatrix,

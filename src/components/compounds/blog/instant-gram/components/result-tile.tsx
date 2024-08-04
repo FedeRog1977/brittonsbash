@@ -17,17 +17,17 @@ import { FC } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { Flex, Grid } from '../../../../bash-blocks/basics';
-import { RefactoredEvent } from '../types/refactored-event';
+import { CompiledEvent } from '../types/refactored-event';
 
 type ResultTileProps = {
-  refactoredEvent: RefactoredEvent;
+  compiledEvent: CompiledEvent;
   funcToggleElements: (value: string) => void;
   showDescription: boolean;
   showMatrix: boolean;
 };
 
 export const ResultTile: FC<ResultTileProps> = ({
-  refactoredEvent,
+  compiledEvent,
   funcToggleElements,
   showDescription,
   showMatrix,
@@ -38,14 +38,14 @@ export const ResultTile: FC<ResultTileProps> = ({
   return (
     <Tile type="solid">
       <Flex direction="vertical" gap={isMobile() ? 'xs' : 'md'}>
-        {refactoredEvent.prefix ? (
+        {compiledEvent.prefix ? (
           <Typography variant="t1" fontFamily="instagram" textAlign="center">
-            {refactoredEvent.prefix}:
+            {compiledEvent.prefix}:
           </Typography>
         ) : null}
 
-        {refactoredEvent.names.length > 1 ? (
-          refactoredEvent.names.map((name, index) => (
+        {compiledEvent.names.length > 1 ? (
+          compiledEvent.names.map((name, index) => (
             <Flex
               key={generateUniqueKey(index)}
               direction="horizontal"
@@ -69,7 +69,7 @@ export const ResultTile: FC<ResultTileProps> = ({
           ))
         ) : (
           <Typography variant="t1" fontFamily="instagram" textAlign="center">
-            {refactoredEvent.names[0]}
+            {compiledEvent.names[0]}
           </Typography>
         )}
 
@@ -79,68 +79,68 @@ export const ResultTile: FC<ResultTileProps> = ({
           color="mediumGrey"
           textAlign="center"
         >
-          {refactoredEvent.startDate}
-          {refactoredEvent.endDate ? (
-            <>&nbsp;&#8212;&nbsp;{refactoredEvent.endDate}</>
+          {compiledEvent.startDate}
+          {compiledEvent.endDate ? (
+            <>&nbsp;&#8212;&nbsp;{compiledEvent.endDate}</>
           ) : null}
         </Typography>
 
-        {refactoredEvent.showSport ? (
+        {compiledEvent.showSport ? (
           // TODO: move this to the hook
           <RowTable
             titleRow={{
-              leftItem: `${refactoredEvent.distance} | ${refactoredEvent.elevation}`,
-              rightItem: refactoredEvent.time,
+              leftItem: `${compiledEvent.distance} | ${compiledEvent.elevation}`,
+              rightItem: compiledEvent.time,
             }}
             rows={[
               {
-                leftItem: refactoredEvent.islands ? 'Islands' : undefined,
-                rightItem: refactoredEvent.islands
-                  ? refactoredEvent.islands
+                leftItem: compiledEvent.islands ? 'Islands' : undefined,
+                rightItem: compiledEvent.islands
+                  ? compiledEvent.islands
                   : undefined,
               },
               {
-                leftItem: refactoredEvent.munros ? 'Munros' : undefined,
-                rightItem: refactoredEvent.munros
-                  ? refactoredEvent.munros
+                leftItem: compiledEvent.munros ? 'Munros' : undefined,
+                rightItem: compiledEvent.munros
+                  ? compiledEvent.munros
                   : undefined,
               },
               {
-                leftItem: refactoredEvent.munroTops ? 'Munro Tops' : undefined,
-                rightItem: refactoredEvent.munroTops
-                  ? refactoredEvent.munroTops
+                leftItem: compiledEvent.munroTops ? 'Munro Tops' : undefined,
+                rightItem: compiledEvent.munroTops
+                  ? compiledEvent.munroTops
                   : undefined,
               },
               {
-                leftItem: refactoredEvent.corbetts ? 'Corbetts' : undefined,
-                rightItem: refactoredEvent.corbetts
-                  ? refactoredEvent.corbetts
+                leftItem: compiledEvent.corbetts ? 'Corbetts' : undefined,
+                rightItem: compiledEvent.corbetts
+                  ? compiledEvent.corbetts
                   : undefined,
               },
               {
-                leftItem: refactoredEvent.corbettTops
+                leftItem: compiledEvent.corbettTops
                   ? 'Corbett Tops'
                   : undefined,
-                rightItem: refactoredEvent.corbettTops
-                  ? refactoredEvent.corbettTops
+                rightItem: compiledEvent.corbettTops
+                  ? compiledEvent.corbettTops
                   : undefined,
               },
               {
-                leftItem: refactoredEvent.grahams ? 'Grahams' : undefined,
-                rightItem: refactoredEvent.grahams
-                  ? refactoredEvent.grahams
+                leftItem: compiledEvent.grahams ? 'Grahams' : undefined,
+                rightItem: compiledEvent.grahams
+                  ? compiledEvent.grahams
                   : undefined,
               },
               {
-                leftItem: refactoredEvent.subTwos ? 'SubTwos' : undefined,
-                rightItem: refactoredEvent.subTwos
-                  ? refactoredEvent.subTwos
+                leftItem: compiledEvent.subTwos ? 'SubTwos' : undefined,
+                rightItem: compiledEvent.subTwos
+                  ? compiledEvent.subTwos
                   : undefined,
               },
               {
-                leftItem: refactoredEvent.donalds ? 'Donalds' : undefined,
-                rightItem: refactoredEvent.donalds
-                  ? refactoredEvent.donalds
+                leftItem: compiledEvent.donalds ? 'Donalds' : undefined,
+                rightItem: compiledEvent.donalds
+                  ? compiledEvent.donalds
                   : undefined,
               },
             ]}
@@ -165,19 +165,19 @@ export const ResultTile: FC<ResultTileProps> = ({
 
         {showDescription ? (
           <>
-            {refactoredEvent.features ? (
-              <ArticlePreface entries={refactoredEvent.features} alphabetize />
+            {compiledEvent.features ? (
+              <ArticlePreface entries={compiledEvent.features} alphabetize />
             ) : null}
 
             <Typography variant="body" textAlign="justify" markdown>
-              {refactoredEvent.description}
+              {compiledEvent.description}
             </Typography>
           </>
         ) : null}
 
         {/* TODO: hidden component */}
         {isMobile() ? (
-          <ImageSlider slides={refactoredEvent.images} />
+          <ImageSlider slides={compiledEvent.images} />
         ) : (
           <Grid justifyContent="even">
             <Button
@@ -196,11 +196,11 @@ export const ResultTile: FC<ResultTileProps> = ({
           </Grid>
         )}
 
-        {showMatrix ? <ImageMatrix items={refactoredEvent.images} /> : null}
+        {showMatrix ? <ImageMatrix items={compiledEvent.images} /> : null}
 
         {showModal ? (
           <Modal isOpen={showModal} onClose={() => setShowModal(!showModal)}>
-            <ImageSlider slides={refactoredEvent.images} />
+            <ImageSlider slides={compiledEvent.images} />
           </Modal>
         ) : null}
       </Flex>

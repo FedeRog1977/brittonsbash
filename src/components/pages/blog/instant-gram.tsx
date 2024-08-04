@@ -23,7 +23,7 @@ export const InstantGram = () => {
     handleInput,
     executeInput,
     handleSelect,
-    refactoredEvent,
+    compiledEvent,
     handleToggleElements,
     showDescription,
     showMatrix,
@@ -44,7 +44,7 @@ export const InstantGram = () => {
       funcSelect={handleSelect}
     />,
     <ResultTile
-      refactoredEvent={refactoredEvent}
+      compiledEvent={compiledEvent}
       funcToggleElements={handleToggleElements}
       showDescription={showDescription}
       showMatrix={showMatrix}
