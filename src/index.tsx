@@ -24,7 +24,6 @@ import {
 } from './components';
 import { reportWebVitals } from './utils/react';
 import { useEvents, useHills, useRegions, useSport } from './api';
-import { compileFeatures } from './components/compounds/blog/travel/utils/compile-features';
 
 const triggerSession = () => {
   useEvents();
@@ -68,5 +67,3 @@ root.render(
 
 triggerSession();
 reportWebVitals();
-
-compileFeatures();
