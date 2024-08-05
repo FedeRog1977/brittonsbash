@@ -5,8 +5,8 @@ export const enrichMarkdown = (content: string) => {
     .replace(/`(?!`)/g, '&lsquo;')
     .replace(/``/g, '&ldquo;')
     .replace(/(?<!')'/g, '&rsquo;')
-    .replace(/-/g, '&rdquo;')
-    .replace(/''/g, '&mdash;')
+    .replace(/''/g, '&rdquo;')
+    .replace(/-/g, '&mdash;')
     .replace(/_\{([^::]+)\}/g, '<sub>$1</sub>')
     .replace(/\^\{([^::]+)\}/g, '<sup>$1</sup>');
 
