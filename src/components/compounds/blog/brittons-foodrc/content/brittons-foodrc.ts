@@ -265,7 +265,7 @@ export const brittonsFoodRCContent: BrittonsFoodRCProps = {
         description: '',
         images: [
           {
-            url: 'https://lewisbritton.com/images/blog/brittons-foodrc/chicken-roast/1.jpeg',
+            url: 'https://lewisbritton.com/images/blog/brittons-foodrc/chicken-roast/1.jpg',
             alt: 'chicken-roast-1',
           },
           // TODO: add more here to populate a nicer grid
@@ -312,6 +312,14 @@ export const brittonsFoodRCContent: BrittonsFoodRCProps = {
           {
             url: 'https://lewisbritton.com/images/blog/brittons-foodrc/chicken-stir-fry/2.jpg',
             alt: 'chicken-stir-fry-2',
+          },
+          {
+            url: 'https://lewisbritton.com/images/blog/brittons-foodrc/chicken-stir-fry/3.jpg',
+            alt: 'chicken-stir-fry-3',
+          },
+          {
+            url: 'https://lewisbritton.com/images/blog/brittons-foodrc/chicken-stir-fry/4.jpg',
+            alt: 'chicken-stir-fry-4',
           },
         ],
         tags: [],
@@ -516,7 +524,7 @@ export const brittonsFoodRCContent: BrittonsFoodRCProps = {
             alt: 'sausage-pasta-10',
           },
           {
-            url: 'https://lewisbritton.com/images/blog/brittons-foodrc/sausage-pasta/11.jpeg',
+            url: 'https://lewisbritton.com/images/blog/brittons-foodrc/sausage-pasta/11.jpg',
             alt: 'sausage-pasta-11',
           },
           {
@@ -610,15 +618,15 @@ export const brittonsFoodRCContent: BrittonsFoodRCProps = {
         description: '',
         images: [
           {
-            url: 'https://lewisbritton.com/images/blog/brittons-foodrc/simon-howie/1.jpeg',
+            url: 'https://lewisbritton.com/images/blog/brittons-foodrc/simon-howie/1.jpg',
             alt: 'simon-howie-1',
           },
           {
-            url: 'https://lewisbritton.com/images/blog/brittons-foodrc/simon-howie/2.jpeg',
+            url: 'https://lewisbritton.com/images/blog/brittons-foodrc/simon-howie/2.jpg',
             alt: 'simon-howie-2',
           },
           {
-            url: 'https://lewisbritton.com/images/blog/brittons-foodrc/simon-howie/3.jpeg',
+            url: 'https://lewisbritton.com/images/blog/brittons-foodrc/simon-howie/3.jpg',
             alt: 'simon-howie-3',
           },
         ],
