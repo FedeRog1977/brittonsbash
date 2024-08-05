@@ -65,13 +65,23 @@ export const ResultTile: FC<ResultTileProps> = ({
                 {index + 1}&nbsp;
               </Typography>
 
-              <Typography variant="t1" fontFamily="instagram" textAlign="left">
+              <Typography
+                variant="t1"
+                fontFamily="instagram"
+                textAlign="left"
+                markdown
+              >
                 {name}
               </Typography>
             </Flex>
           ))
         ) : (
-          <Typography variant="t1" fontFamily="instagram" textAlign="center">
+          <Typography
+            variant="t1"
+            fontFamily="instagram"
+            textAlign="center"
+            markdown
+          >
             {compiledEvent.names[0]}
           </Typography>
         )}

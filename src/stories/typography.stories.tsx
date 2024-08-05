@@ -39,7 +39,7 @@ const meta = {
   },
   args: {
     variant: 't1',
-    children: "Typography ^{1} _{2} ``hello''",
+    children: 'Typography',
     color: 'white',
     boldFace: false,
     italicize: false,
