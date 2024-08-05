@@ -248,7 +248,7 @@ export const compileFeatures = () => {
     countries: removeDuplicates(countries.sort()),
     cities: removeDuplicates(cities.sort()),
     districts: removeDuplicates(districts.sort()),
-    attractions: removeDuplicates(cities.sort()),
+    attractions: removeDuplicates(attractions.sort()),
     accommodation: removeDuplicates(accommodation.sort()),
     supermarkets: removeDuplicates(supermarkets.sort()),
     shops: removeDuplicates(shops.sort()),
