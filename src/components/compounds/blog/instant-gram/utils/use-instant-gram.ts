@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import { isMobile, useShowElement } from '../../../../../utils';
+import { RowTableProps } from '../../../../bash-blocks';
 import { Project } from '../../sport/types/project';
 import { emptyEventData } from '../mocks/empty-event-data';
 import { compileEvent } from './compile-event';
@@ -134,6 +135,47 @@ export const useInstantGram = () => {
 
   const compiledEvent = compileEvent(event, sport, showSport);
 
+  const eventSport: RowTableProps = {
+    titleRow: {
+      leftItem: 'Statistics',
+      rightItem: `${compiledEvent.distance} | ${compiledEvent.elevation} | ${compiledEvent.times}`,
+    },
+    rows: [
+      {
+        leftItem: 'Islands',
+        rightItem: compiledEvent.islands,
+      },
+      {
+        leftItem: 'Munros',
+        rightItem: compiledEvent.munros,
+      },
+      {
+        leftItem: 'Munro Tops',
+        rightItem: compiledEvent.munroTops,
+      },
+      {
+        leftItem: 'Corbetts',
+        rightItem: compiledEvent.corbetts,
+      },
+      {
+        leftItem: 'Corbett Tops',
+        rightItem: compiledEvent.corbettTops,
+      },
+      {
+        leftItem: 'Grahams',
+        rightItem: compiledEvent.grahams,
+      },
+      {
+        leftItem: 'SubTwos',
+        rightItem: compiledEvent.subTwos,
+      },
+      {
+        leftItem: 'Donalds',
+        rightItem: compiledEvent.donalds,
+      },
+    ],
+  };
+
   const handleCategory = (value: string) => {
     if (value === '2024') {
       setIs2024(true);
@@ -216,7 +258,10 @@ export const useInstantGram = () => {
     handleInput,
     executeInput,
     handleSelect,
+    // TODO: move all compiledEvent access to the hook,
+    // here from ResultTile, like summary
     compiledEvent,
+    eventSport,
     handleToggleElements,
     showDescription,
     showMatrix,

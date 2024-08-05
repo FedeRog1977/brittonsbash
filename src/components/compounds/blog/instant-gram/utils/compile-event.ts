@@ -13,27 +13,27 @@ export const compileEvent = (
   const distances: number[] = [];
   const elevations: number[] = [];
   const times: string[] = [];
-  const islandSetAggregate: string[] = [];
-  const munroSetAggregate: string[] = [];
-  const munroTopSetAggregate: string[] = [];
-  const corbettSetAggregate: string[] = [];
-  const corbettTopSetAggregate: string[] = [];
-  const grahamSetAggregate: string[] = [];
-  const subTwoSetAggregate: string[] = [];
-  const donaldSetAggregate: string[] = [];
+  const islands: string[] = [];
+  const munros: string[] = [];
+  const munroTops: string[] = [];
+  const corbetts: string[] = [];
+  const corbettTops: string[] = [];
+  const grahams: string[] = [];
+  const subTwos: string[] = [];
+  const donalds: string[] = [];
 
   names.pop();
   distances.pop();
   elevations.pop();
   times.pop();
-  islandSetAggregate.pop();
-  munroSetAggregate.pop();
-  munroTopSetAggregate.pop();
-  corbettSetAggregate.pop();
-  corbettTopSetAggregate.pop();
-  grahamSetAggregate.pop();
-  subTwoSetAggregate.pop();
-  donaldSetAggregate.pop();
+  islands.pop();
+  munros.pop();
+  munroTops.pop();
+  corbetts.pop();
+  corbettTops.pop();
+  grahams.pop();
+  subTwos.pop();
+  donalds.pop();
 
   event.names.forEach((name: string) => {
     names.push(name);
@@ -42,59 +42,59 @@ export const compileEvent = (
   const features: DataContentResponse[] = [
     {
       title: 'Countries',
-      content: event.features?.countries,
+      content: event.features?.countries?.sort(),
     },
     {
       title: 'Cities',
-      content: event.features?.cities,
+      content: event.features?.cities?.sort(),
     },
     {
       title: 'Districts',
-      content: event.features?.districts,
+      content: event.features?.districts?.sort(),
     },
     {
       title: 'Attractions',
-      content: event.features?.attractions,
+      content: event.features?.attractions?.sort(),
     },
     {
       title: 'Accommodation',
-      content: event.features?.accommodation,
+      content: event.features?.accommodation?.sort(),
     },
     {
       title: 'Supermarkets',
-      content: event.features?.supermarkets,
+      content: event.features?.supermarkets?.sort(),
     },
     {
       title: 'Shops',
-      content: event.features?.shops,
+      content: event.features?.shops?.sort(),
     },
     {
       title: 'Consumables',
-      content: event.features?.consumables,
+      content: event.features?.consumables?.sort(),
     },
     {
       title: 'Cafés',
-      content: event.features?.cafes,
+      content: event.features?.cafes?.sort(),
     },
     {
       title: 'Bakeries',
-      content: event.features?.bakeries,
+      content: event.features?.bakeries?.sort(),
     },
     {
       title: 'Gelaterias',
-      content: event.features?.gelaterias,
+      content: event.features?.gelaterias?.sort(),
     },
     {
       title: 'Restaurants',
-      content: event.features?.restaurants,
+      content: event.features?.restaurants?.sort(),
     },
     {
       title: 'Bars',
-      content: event.features?.bars,
+      content: event.features?.bars?.sort(),
     },
     {
       title: 'Nostalgia Effect',
-      content: event.features?.nostalgiaEffect,
+      content: event.features?.nostalgiaEffect?.sort(),
     },
   ];
 
@@ -121,29 +121,29 @@ export const compileEvent = (
     distances.push(sport.distance);
     elevations.push(sport.elevation);
     times.push(sport.time);
-    sport.islands?.forEach((islandSet: string) => {
-      islandSetAggregate.push(islandSet);
+    sport.islands?.forEach((island: string) => {
+      islands.push(island);
     });
-    sport.munros?.forEach((munroSet: string) => {
-      munroSetAggregate.push(munroSet);
+    sport.munros?.forEach((munro: string) => {
+      munros.push(munro);
     });
-    sport.munroTops?.forEach((munroTopSet: string) => {
-      munroTopSetAggregate.push(munroTopSet);
+    sport.munroTops?.forEach((munroTop: string) => {
+      munroTops.push(munroTop);
     });
-    sport.corbetts?.forEach((corbettSet: string) => {
-      corbettSetAggregate.push(corbettSet);
+    sport.corbetts?.forEach((corbett: string) => {
+      corbetts.push(corbett);
     });
-    sport.corbettTops?.forEach((corbettTopSet: string) => {
-      corbettTopSetAggregate.push(corbettTopSet);
+    sport.corbettTops?.forEach((corbettTop: string) => {
+      corbettTops.push(corbettTop);
     });
-    sport.grahams?.forEach((grahamSet: string) => {
-      grahamSetAggregate.push(grahamSet);
+    sport.grahams?.forEach((graham: string) => {
+      grahams.push(graham);
     });
-    sport.subTwos?.forEach((subTwoSet: string) => {
-      subTwoSetAggregate.push(subTwoSet);
+    sport.subTwos?.forEach((subTwo: string) => {
+      subTwos.push(subTwo);
     });
-    sport.donalds?.forEach((donaldSet: string) => {
-      donaldSetAggregate.push(donaldSet);
+    sport.donalds?.forEach((donald: string) => {
+      donalds.push(donald);
     });
   });
 
@@ -152,20 +152,20 @@ export const compileEvent = (
     names,
     startDate: event.startDate,
     endDate: event.endDate,
-    features,
+    features: event.features ? features : undefined,
     description: event.description,
     images: event.images,
     distance: toMiles(distances.reduce(toSum)),
     elevation: toFeet(elevations.reduce(toSum)),
-    time: times.join(', '),
-    islands: islandSetAggregate.join(', '),
-    munros: munroSetAggregate.join(', '),
-    munroTops: munroTopSetAggregate.join(', '),
-    corbetts: corbettSetAggregate.join(', '),
-    corbettTops: corbettTopSetAggregate.join(', '),
-    grahams: grahamSetAggregate.join(', '),
-    subTwos: subTwoSetAggregate.join(', '),
-    donalds: donaldSetAggregate.join(', '),
+    times: times.join(', '),
+    islands: islands.sort().join(', '),
+    munros: munros.sort().join(', '),
+    munroTops: munroTops.sort().join(', '),
+    corbetts: corbetts.sort().join(', '),
+    corbettTops: corbettTops.sort().join(', '),
+    grahams: grahams.sort().join(', '),
+    subTwos: subTwos.sort().join(', '),
+    donalds: donalds.sort().join(', '),
     showSport: showSport,
   };
 

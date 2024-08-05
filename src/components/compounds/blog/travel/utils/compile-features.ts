@@ -23,55 +23,42 @@ export const compileFeatures = () => {
     event.features?.countries?.forEach((country) => {
       countries.push(country);
     });
-
     event.features?.cities?.forEach((city) => {
       cities.push(city);
     });
-
     event.features?.districts?.forEach((district) => {
       districts.push(district);
     });
-
     event.features?.attractions?.forEach((attraction) => {
       attractions.push(attraction);
     });
-
     event.features?.accommodation?.forEach((accommodationIteration) => {
       accommodation.push(accommodationIteration);
     });
-
     event.features?.supermarkets?.forEach((supermarket) => {
       supermarkets.push(supermarket);
     });
-
     event.features?.shops?.forEach((shop) => {
       shops.push(shop);
     });
-
     event.features?.consumables?.forEach((consumable) => {
       consumables.push(consumable);
     });
-
     event.features?.cafes?.forEach((cafe) => {
       cafes.push(cafe);
     });
-
     event.features?.bakeries?.forEach((bakery) => {
       bakeries.push(bakery);
     });
-
     event.features?.gelaterias?.forEach((gelateria) => {
       gelaterias.push(gelateria);
     });
-
     event.features?.restaurants?.forEach((restaurant) => {
       restaurants.push(restaurant);
     });
-
     event.features?.bars?.forEach((bar) => {
       bars.push(bar);
     });
-
     event.features?.nostalgiaEffect?.forEach((nostalgiaEffectIteration) => {
       nostalgiaEffect.push(nostalgiaEffectIteration);
     });
@@ -81,55 +68,42 @@ export const compileFeatures = () => {
     event.features?.countries?.forEach((country) => {
       countries.push(country);
     });
-
     event.features?.cities?.forEach((city) => {
       cities.push(city);
     });
-
     event.features?.districts?.forEach((district) => {
       districts.push(district);
     });
-
     event.features?.attractions?.forEach((attraction) => {
       attractions.push(attraction);
     });
-
     event.features?.accommodation?.forEach((accommodationIteration) => {
       accommodation.push(accommodationIteration);
     });
-
     event.features?.supermarkets?.forEach((supermarket) => {
       supermarkets.push(supermarket);
     });
-
     event.features?.shops?.forEach((shop) => {
       shops.push(shop);
     });
-
     event.features?.consumables?.forEach((consumable) => {
       consumables.push(consumable);
     });
-
     event.features?.cafes?.forEach((cafe) => {
       cafes.push(cafe);
     });
-
     event.features?.bakeries?.forEach((bakery) => {
       bakeries.push(bakery);
     });
-
     event.features?.gelaterias?.forEach((gelateria) => {
       gelaterias.push(gelateria);
     });
-
     event.features?.restaurants?.forEach((restaurant) => {
       restaurants.push(restaurant);
     });
-
     event.features?.bars?.forEach((bar) => {
       bars.push(bar);
     });
-
     event.features?.nostalgiaEffect?.forEach((nostalgiaEffectIteration) => {
       nostalgiaEffect.push(nostalgiaEffectIteration);
     });
@@ -139,55 +113,42 @@ export const compileFeatures = () => {
     event.features?.countries?.forEach((country) => {
       countries.push(country);
     });
-
     event.features?.cities?.forEach((city) => {
       cities.push(city);
     });
-
     event.features?.districts?.forEach((district) => {
       districts.push(district);
     });
-
     event.features?.attractions?.forEach((attraction) => {
       attractions.push(attraction);
     });
-
     event.features?.accommodation?.forEach((accommodationIteration) => {
       accommodation.push(accommodationIteration);
     });
-
     event.features?.supermarkets?.forEach((supermarket) => {
       supermarkets.push(supermarket);
     });
-
     event.features?.shops?.forEach((shop) => {
       shops.push(shop);
     });
-
     event.features?.consumables?.forEach((consumable) => {
       consumables.push(consumable);
     });
-
     event.features?.cafes?.forEach((cafe) => {
       cafes.push(cafe);
     });
-
     event.features?.bakeries?.forEach((bakery) => {
       bakeries.push(bakery);
     });
-
     event.features?.gelaterias?.forEach((gelateria) => {
       gelaterias.push(gelateria);
     });
-
     event.features?.restaurants?.forEach((restaurant) => {
       restaurants.push(restaurant);
     });
-
     event.features?.bars?.forEach((bar) => {
       bars.push(bar);
     });
-
     event.features?.nostalgiaEffect?.forEach((nostalgiaEffectIteration) => {
       nostalgiaEffect.push(nostalgiaEffectIteration);
     });
@@ -197,55 +158,42 @@ export const compileFeatures = () => {
     event.features?.countries?.forEach((country) => {
       countries.push(country);
     });
-
     event.features?.cities?.forEach((city) => {
       cities.push(city);
     });
-
     event.features?.districts?.forEach((district) => {
       districts.push(district);
     });
-
     event.features?.attractions?.forEach((attraction) => {
       attractions.push(attraction);
     });
-
     event.features?.accommodation?.forEach((accommodationIteration) => {
       accommodation.push(accommodationIteration);
     });
-
     event.features?.supermarkets?.forEach((supermarket) => {
       supermarkets.push(supermarket);
     });
-
     event.features?.shops?.forEach((shop) => {
       shops.push(shop);
     });
-
     event.features?.consumables?.forEach((consumable) => {
       consumables.push(consumable);
     });
-
     event.features?.cafes?.forEach((cafe) => {
       cafes.push(cafe);
     });
-
     event.features?.bakeries?.forEach((bakery) => {
       bakeries.push(bakery);
     });
-
     event.features?.gelaterias?.forEach((gelateria) => {
       gelaterias.push(gelateria);
     });
-
     event.features?.restaurants?.forEach((restaurant) => {
       restaurants.push(restaurant);
     });
-
     event.features?.bars?.forEach((bar) => {
       bars.push(bar);
     });
-
     event.features?.nostalgiaEffect?.forEach((nostalgiaEffectIteration) => {
       nostalgiaEffect.push(nostalgiaEffectIteration);
     });
@@ -255,55 +203,42 @@ export const compileFeatures = () => {
     event.features?.countries?.forEach((country) => {
       countries.push(country);
     });
-
     event.features?.cities?.forEach((city) => {
       cities.push(city);
     });
-
     event.features?.districts?.forEach((district) => {
       districts.push(district);
     });
-
     event.features?.attractions?.forEach((attraction) => {
       attractions.push(attraction);
     });
-
     event.features?.accommodation?.forEach((accommodationIteration) => {
       accommodation.push(accommodationIteration);
     });
-
     event.features?.supermarkets?.forEach((supermarket) => {
       supermarkets.push(supermarket);
     });
-
     event.features?.shops?.forEach((shop) => {
       shops.push(shop);
     });
-
     event.features?.consumables?.forEach((consumable) => {
       consumables.push(consumable);
     });
-
     event.features?.cafes?.forEach((cafe) => {
       cafes.push(cafe);
     });
-
     event.features?.bakeries?.forEach((bakery) => {
       bakeries.push(bakery);
     });
-
     event.features?.gelaterias?.forEach((gelateria) => {
       gelaterias.push(gelateria);
     });
-
     event.features?.restaurants?.forEach((restaurant) => {
       restaurants.push(restaurant);
     });
-
     event.features?.bars?.forEach((bar) => {
       bars.push(bar);
     });
-
     event.features?.nostalgiaEffect?.forEach((nostalgiaEffectIteration) => {
       nostalgiaEffect.push(nostalgiaEffectIteration);
     });

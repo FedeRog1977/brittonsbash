@@ -5,21 +5,25 @@ import { DataContentResponse } from '../../reference';
 
 export type ArticlePrefaceProps = {
   entries: DataContentResponse[];
-  alphabetize?: boolean;
+  listStyle?: 'enumerate' | 'itemize';
 };
 
 export const ArticlePreface: FC<ArticlePrefaceProps> = ({
   entries,
-  alphabetize = false,
+  listStyle,
 }) => (
   <Flex direction="vertical" alignHorizontal="center" gap="md">
-    {compileEntries(entries, alphabetize).map(({ title, content }) => (
+    {compileEntries(entries, listStyle).map(({ title, content }) => (
       <Flex direction="vertical" alignHorizontal="center" gap="3xs">
         <Typography variant="body" boldFace>
           {title}
         </Typography>
 
-        <Typography variant="body" textAlign="center">
+        <Typography
+          variant="body"
+          textAlign={Boolean(listStyle) ? 'left' : 'center'}
+          markdown
+        >
           {content}
         </Typography>
       </Flex>

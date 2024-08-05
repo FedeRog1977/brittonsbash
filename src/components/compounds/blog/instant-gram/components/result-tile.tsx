@@ -7,6 +7,7 @@ import {
   Tile,
   Typography,
   RowTable,
+  RowTableProps,
 } from '../../../../bash-blocks';
 import {
   useShowElement,
@@ -21,6 +22,7 @@ import { CompiledEvent } from '../types/compiled-event';
 
 type ResultTileProps = {
   compiledEvent: CompiledEvent;
+  eventSport: RowTableProps;
   funcToggleElements: (value: string) => void;
   showDescription: boolean;
   showMatrix: boolean;
@@ -28,6 +30,7 @@ type ResultTileProps = {
 
 export const ResultTile: FC<ResultTileProps> = ({
   compiledEvent,
+  eventSport,
   funcToggleElements,
   showDescription,
   showMatrix,
@@ -86,65 +89,7 @@ export const ResultTile: FC<ResultTileProps> = ({
         </Typography>
 
         {compiledEvent.showSport ? (
-          // TODO: move this to the hook
-          <RowTable
-            titleRow={{
-              leftItem: `${compiledEvent.distance} | ${compiledEvent.elevation}`,
-              rightItem: compiledEvent.time,
-            }}
-            rows={[
-              {
-                leftItem: compiledEvent.islands ? 'Islands' : undefined,
-                rightItem: compiledEvent.islands
-                  ? compiledEvent.islands
-                  : undefined,
-              },
-              {
-                leftItem: compiledEvent.munros ? 'Munros' : undefined,
-                rightItem: compiledEvent.munros
-                  ? compiledEvent.munros
-                  : undefined,
-              },
-              {
-                leftItem: compiledEvent.munroTops ? 'Munro Tops' : undefined,
-                rightItem: compiledEvent.munroTops
-                  ? compiledEvent.munroTops
-                  : undefined,
-              },
-              {
-                leftItem: compiledEvent.corbetts ? 'Corbetts' : undefined,
-                rightItem: compiledEvent.corbetts
-                  ? compiledEvent.corbetts
-                  : undefined,
-              },
-              {
-                leftItem: compiledEvent.corbettTops
-                  ? 'Corbett Tops'
-                  : undefined,
-                rightItem: compiledEvent.corbettTops
-                  ? compiledEvent.corbettTops
-                  : undefined,
-              },
-              {
-                leftItem: compiledEvent.grahams ? 'Grahams' : undefined,
-                rightItem: compiledEvent.grahams
-                  ? compiledEvent.grahams
-                  : undefined,
-              },
-              {
-                leftItem: compiledEvent.subTwos ? 'SubTwos' : undefined,
-                rightItem: compiledEvent.subTwos
-                  ? compiledEvent.subTwos
-                  : undefined,
-              },
-              {
-                leftItem: compiledEvent.donalds ? 'Donalds' : undefined,
-                rightItem: compiledEvent.donalds
-                  ? compiledEvent.donalds
-                  : undefined,
-              },
-            ]}
-          />
+          <RowTable titleRow={eventSport.titleRow} rows={eventSport.rows} />
         ) : null}
 
         <Button
@@ -166,7 +111,7 @@ export const ResultTile: FC<ResultTileProps> = ({
         {showDescription ? (
           <>
             {compiledEvent.features ? (
-              <ArticlePreface entries={compiledEvent.features} alphabetize />
+              <ArticlePreface entries={compiledEvent.features} />
             ) : null}
 
             <Typography variant="body" textAlign="justify" markdown>
@@ -175,7 +120,6 @@ export const ResultTile: FC<ResultTileProps> = ({
           </>
         ) : null}
 
-        {/* TODO: hidden component */}
         {isMobile() ? (
           <ImageSlider slides={compiledEvent.images} />
         ) : (

@@ -56,7 +56,7 @@ export const ResultTile: FC<ResultTileProps> = ({
 
         {showDescription ? (
           <>
-            <ArticlePreface entries={food.ingredients} />
+            <ArticlePreface entries={food.ingredients} listStyle="itemize" />
 
             <Typography variant="body" textAlign="justify">
               {food.description}

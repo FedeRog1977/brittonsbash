@@ -11,7 +11,7 @@ export type CompiledEvent = {
   images: Event['images'];
   distance?: string;
   elevation?: string;
-  time?: string;
+  times?: string;
   islands?: string;
   munros?: string;
   munroTops?: string;
