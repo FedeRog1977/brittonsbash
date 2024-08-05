@@ -41,7 +41,14 @@ export const Typography: FC<TypographyProps> = ({
     [styles.paragraphMargins]: paragraphMargins,
   });
 
-  // TODO: write enrichMarkdown() for ' and ’, and ^{} and _{}, etc.
+  // TODO: write enrichMarkdown() for:
+  // ` -> ‘
+  // ' -> ’
+  // `` -> “
+  // '' -> ”
+  // - -> —
+  // ^{} -> <sup></sup>
+  // _{} -> <sub></sub>
   // TODO: write tagMap for proper tag mapping
   return typeof children === 'string' && markdown ? (
     <ReactMarkdown className={classNames} linkTarget="_blank">
