@@ -310,7 +310,7 @@ export const miamiViceContent: MiamiViceProps = {
         video: 'Z-Mcyx61jUs',
       },
       {
-        heading: 'Crockett&rsquo;s Theme – Jan Hammer',
+        heading: "Crockett's Theme – Jan Hammer",
         video: 'KOA2Is6Lh-I',
       },
       {
