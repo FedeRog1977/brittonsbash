@@ -3,7 +3,7 @@ import cx from 'classnames';
 import styles from './typography.module.scss';
 import ReactMarkdown from 'react-markdown';
 import { createElement, FC } from 'react';
-import { tagType } from './constants/tag-type';
+import { tagMap } from './constants/tag-map';
 import { TextStyle } from '../../reference';
 import { enrichMarkdown } from './utils/enrich-markdown';
 
@@ -48,7 +48,7 @@ export const Typography: FC<TypographyProps> = ({
       {enrichMarkdown(children)}
     </ReactMarkdown>
   ) : (
-    createElement(element ?? tagType[variant], {
+    createElement(element ?? tagMap[variant], {
       className: classNames,
       children,
     })
