@@ -42,7 +42,6 @@ export const Typography: FC<TypographyProps> = ({
     [styles.paragraphMargins]: paragraphMargins,
   });
 
-  // TODO: write tagMap for proper tag mapping
   return typeof children === 'string' && markdown ? (
     <ReactMarkdown className={classNames} linkTarget="_blank">
       {enrichMarkdown(children)}
