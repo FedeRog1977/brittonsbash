@@ -476,6 +476,32 @@ export const brittonsFoodRCContent: BrittonsFoodRCProps = {
         ],
         tags: [],
       },
+      {
+        name: 'Seafood Lentils',
+        ingredients: [
+          {
+            title: 'Sauce',
+            content: [],
+          },
+          { title: 'Seafood', content: ['King prawns', 'Mussels', 'Squid'] },
+        ],
+        description: '',
+        images: [
+          {
+            url: 'https://lewisbritton.com/images/blog/brittons-foodrc/seafood-lentils/1.jpg',
+            alt: 'seafood-lentils-1',
+          },
+          {
+            url: 'https://lewisbritton.com/images/blog/brittons-foodrc/seafood-lentils/2.jpg',
+            alt: 'seafood-lentils-2',
+          },
+          {
+            url: 'https://lewisbritton.com/images/blog/brittons-foodrc/seafood-lentils/3.jpg',
+            alt: 'seafood-lentils-3',
+          },
+        ],
+        tags: [],
+      },
     ],
     pasta: [
       {
