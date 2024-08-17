@@ -561,6 +561,18 @@ export const brittonsFoodRCContent: BrittonsFoodRCProps = {
         tags: [],
       },
       {
+        name: 'Seafood Pasta',
+        ingredients: [],
+        description: '',
+        images: [
+          {
+            url: 'https://lewisbritton.com/images/blog/brittons-foodrc/seafood-pasta/1.jpg',
+            alt: 'seafood-pasta-1',
+          },
+        ],
+        tags: [],
+      },
+      {
         name: 'Piperade Pasta',
         ingredients: [],
         description: '',
