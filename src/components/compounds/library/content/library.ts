@@ -10,12 +10,12 @@ type LibraryProps = {
   tileOne: ArticleTileProps;
   tileTwo: ArticleTileProps;
   tileThree: ArticleTileProps;
-  tileFour: ArticleTileProps;
+  // tileFour: ArticleTileProps;
 };
 
-const links = compileLinks();
+// const links = compileLinks();
 
-type linkGroup = { title: string; content: DataContentResponse[] };
+// type linkGroup = { title: string; content: DataContentResponse[] };
 
 export const libraryContent: LibraryProps = {
   background: { content: 'Library' },
@@ -172,26 +172,26 @@ export const libraryContent: LibraryProps = {
       },
     ],
   },
-  tileFour: {
-    type: 'solid',
-    heading: 'Web URLs',
-    subHeading: 'Links',
-    sections: [
-      {
-        component: 'books',
-        content: {
-          items: [
-            ...links.map((linkGroup: linkGroup) => ({
-              heading: linkGroup.title,
-              items: [
-                ...linkGroup.content.map(
-                  ({ content, href }) => `[${content}](${href})`
-                ),
-              ],
-            })),
-          ],
-        },
-      },
-    ],
-  },
+  // tileFour: {
+  //   type: 'solid',
+  //   heading: 'Web URLs',
+  //   subHeading: 'Links',
+  //   sections: [
+  //     {
+  //       component: 'books',
+  //       content: {
+  //         items: [
+  //           ...links.map((linkGroup: linkGroup) => ({
+  //             heading: linkGroup.title,
+  //             items: [
+  //               ...linkGroup.content.map(
+  //                 ({ content, href }) => `[${content}](${href})`
+  //               ),
+  //             ],
+  //           })),
+  //         ],
+  //       },
+  //     },
+  //   ],
+  // },
 };

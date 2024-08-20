@@ -5,7 +5,6 @@ export const useLinks = () => {
     'https://raw.githubusercontent.com/FedeRog1977/brittonsbash-content/master/data/links.data.json',
     'GET',
     undefined,
-    'links',
-    true
+    'links'
   );
 };

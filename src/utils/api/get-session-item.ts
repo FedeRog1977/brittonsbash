@@ -1,3 +1,2 @@
-export const getSessionItem = (storageId: string) => {
-  return JSON.parse(sessionStorage.getItem(storageId) as string);
-};
+export const getSessionItem = (storageId: string) =>
+  JSON.parse(sessionStorage.getItem(storageId) as string);

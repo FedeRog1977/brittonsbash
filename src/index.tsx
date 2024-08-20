@@ -28,10 +28,13 @@ import { useEvents, useHills, useLinks, useRegions, useSport } from './api';
 const triggerSession = () => {
   useEvents();
   useHills();
-  useLinks();
+  // useLinks();
   useRegions();
   useSport();
 };
+
+triggerSession();
+reportWebVitals();
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -65,6 +68,3 @@ root.render(
     </Routes>
   </HashRouter>
 );
-
-triggerSession();
-reportWebVitals();
