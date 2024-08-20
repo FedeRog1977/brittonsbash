@@ -1,7 +1,3 @@
 import { getSessionItem } from '../api';
 
-export const compileLinks = () => {
-  const links = getSessionItem('response-links');
-
-  return links;
-};
+export const compileLinks = () => getSessionItem('response-links');
