@@ -23,11 +23,12 @@ import {
   Conquest,
 } from './components';
 import { reportWebVitals } from './utils/react';
-import { useEvents, useHills, useRegions, useSport } from './api';
+import { useEvents, useHills, useLinks, useRegions, useSport } from './api';
 
 const triggerSession = () => {
   useEvents();
   useHills();
+  useLinks();
   useRegions();
   useSport();
 };

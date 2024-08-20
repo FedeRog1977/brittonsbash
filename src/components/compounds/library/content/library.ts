@@ -1,11 +1,21 @@
-import { ArticleTileProps, PageBackgroundProps } from '../../../bash-blocks';
+import { compileLinks } from '../../../../utils';
+import {
+  ArticleTileProps,
+  DataContentResponse,
+  PageBackgroundProps,
+} from '../../../bash-blocks';
 
 type LibraryProps = {
   background: PageBackgroundProps;
   tileOne: ArticleTileProps;
   tileTwo: ArticleTileProps;
   tileThree: ArticleTileProps;
+  tileFour: ArticleTileProps;
 };
+
+const links = compileLinks();
+
+type linkGroup = { title: string; content: DataContentResponse[] };
 
 export const libraryContent: LibraryProps = {
   background: { content: 'Library' },
@@ -157,6 +167,28 @@ export const libraryContent: LibraryProps = {
               heading: 'BF303 and BF201',
               items: ['Assignment (BF303)', 'Assignment (BF201)'],
             },
+          ],
+        },
+      },
+    ],
+  },
+  tileFour: {
+    type: 'solid',
+    heading: 'Web URLs',
+    subHeading: 'Links',
+    sections: [
+      {
+        component: 'books',
+        content: {
+          items: [
+            ...links.map((linkGroup: linkGroup) => ({
+              heading: linkGroup.title,
+              items: [
+                ...linkGroup.content.map(
+                  ({ content, href }) => `[${content}](${href})`
+                ),
+              ],
+            })),
           ],
         },
       },

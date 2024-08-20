@@ -7,6 +7,7 @@ export const Library = () => {
     <ArticleTile {...libraryContent.tileOne} />,
     <ArticleTile {...libraryContent.tileTwo} />,
     <ArticleTile {...libraryContent.tileThree} />,
+    <ArticleTile {...libraryContent.tileFour} />,
   ];
 
   return (
