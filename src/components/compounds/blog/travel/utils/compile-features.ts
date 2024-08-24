@@ -261,7 +261,5 @@ export const compileFeatures = () => {
     nostalgiaEffect: removeDuplicates(nostalgiaEffect.sort()),
   };
 
-  console.log(compiledFeatures);
-
   return compiledFeatures;
 };
