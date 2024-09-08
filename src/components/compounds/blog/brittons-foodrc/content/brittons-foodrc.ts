@@ -274,7 +274,28 @@ export const brittonsFoodRCContent: BrittonsFoodRCProps = {
       },
       {
         name: 'Chicken Stew',
-        ingredients: [],
+        ingredients: [
+          {
+            title: 'Meat And Vegetables',
+            content: [
+              '1 tbsp of olive oil',
+              '1/2 a red onion',
+              '1 leek',
+              'Brown mushrooms',
+              'Chicken breast',
+            ],
+          },
+          {
+            title: 'Sauce',
+            content: [
+              '150ml of chicken stock',
+              '150ml of creme friache',
+              '1 tsp of dijon mustard',
+              'Fresh chives',
+              'Fresh dill',
+            ],
+          },
+        ],
         description: '',
         images: [
           {
@@ -284,6 +305,22 @@ export const brittonsFoodRCContent: BrittonsFoodRCProps = {
           {
             url: 'https://lewisbritton.com/images/blog/brittons-foodrc/chicken-stew/2.jpg',
             alt: 'chicken-stew-2',
+          },
+          {
+            url: 'https://lewisbritton.com/images/blog/brittons-foodrc/chicken-stew/3.jpg',
+            alt: 'chicken-stew-3',
+          },
+          {
+            url: 'https://lewisbritton.com/images/blog/brittons-foodrc/chicken-stew/4.jpg',
+            alt: 'chicken-stew-4',
+          },
+          {
+            url: 'https://lewisbritton.com/images/blog/brittons-foodrc/chicken-stew/5.jpg',
+            alt: 'chicken-stew-5',
+          },
+          {
+            url: 'https://lewisbritton.com/images/blog/brittons-foodrc/chicken-stew/6.jpg',
+            alt: 'chicken-stew-6',
           },
         ],
         tags: [],
@@ -457,8 +494,8 @@ export const brittonsFoodRCContent: BrittonsFoodRCProps = {
               '4 cloves of garlic',
               '1/2 a red onion',
               '1/2 a red pepper',
-              '1/2 a carrot',
-              '1/2 a stick of celery',
+              'A small carrot',
+              'A stick of celery',
               '3 salad tomatoes',
               'Fresh rosemary',
               'Water',
