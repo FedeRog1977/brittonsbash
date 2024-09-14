@@ -3,8 +3,8 @@ import {
   AlignCrossAxis,
   AlignVertical,
   AlignMainAxis,
-} from '../../../reference';
-import { Common } from './common';
+} from '../../../reference/index.js';
+import { Common } from './common.js';
 
 export type Vertical = Common & {
   direction: 'vertical';

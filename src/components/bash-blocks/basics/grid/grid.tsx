@@ -5,7 +5,7 @@ import {
   SpacingConfig,
   getResponsiveAlignmentClassNames,
   getResponsiveSpacingClassNames,
-} from '../../reference';
+} from '../../reference/index.js';
 import { JustifyConfig } from '../../reference/types/justify-config.js';
 import { AlignConfig } from '../../reference/types/align-config.js';
 
@@ -55,24 +55,9 @@ export const Grid: FC<GridProps> = ({
   const classNames = cx(
     styles.grid,
     ...getResponsiveSpacingClassNames('spacing', styles, spacing),
-    ...getResponsiveAlignmentClassNames(
-      'justify',
-      'content',
-      styles,
-      justifyContent
-    ),
-    ...getResponsiveAlignmentClassNames(
-      'justify',
-      'items',
-      styles,
-      justifyItems
-    ),
-    ...getResponsiveAlignmentClassNames(
-      'align',
-      'content',
-      styles,
-      alignContent
-    ),
+    ...getResponsiveAlignmentClassNames('justify', 'content', styles, justifyContent),
+    ...getResponsiveAlignmentClassNames('justify', 'items', styles, justifyItems),
+    ...getResponsiveAlignmentClassNames('align', 'content', styles, alignContent),
     ...getResponsiveAlignmentClassNames('align', 'items', styles, alignItems)
   );
 

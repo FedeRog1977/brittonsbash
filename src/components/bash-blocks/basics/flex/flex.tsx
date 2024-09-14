@@ -1,10 +1,10 @@
 import cx from 'classnames';
 import { FC } from 'react';
-import { Horizontal } from './types/horizontal';
-import { Vertical } from './types/vertical';
+import { Horizontal } from './types/horizontal.js';
+import { Vertical } from './types/vertical.js';
 import styles from './flex.module.scss';
-import { toUpperCase } from '../../../../utils';
-import { getResponsiveSpacingClassNames } from '../../reference';
+import { toUpperCase } from '../../../../utils/index.js';
+import { getResponsiveSpacingClassNames } from '../../reference/index.js';
 
 type FlexProps = Horizontal | Vertical;
 

@@ -1,4 +1,4 @@
-import { setSessionItem } from './set-session-item';
+import { setSessionItem } from './set-session-item.js';
 
 export const getResponse = async (
   url: string,

@@ -1,4 +1,4 @@
-import { ArticleProps, TextStyle } from '../../components/bash-blocks';
+import { ArticleProps, TextStyle } from '../../components/bash-blocks/index.js';
 
 export const formatArticle = (
   sections: ArticleProps['sections'],
@@ -20,9 +20,7 @@ export const formatArticle = (
       boldFace: section.boldFace ? section.boldFace : boldFace,
       italicize: section.italicize ? section.italicize : italicize,
       smallCaps: section.smallCaps ? section.smallCaps : smallCaps,
-      textDecoration: section.textDecoration
-        ? section.textDecoration
-        : textDecoration,
+      textDecoration: section.textDecoration ? section.textDecoration : textDecoration,
       shadow: section.shadow ? section.shadow : shadow,
     });
   });

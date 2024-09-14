@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { isMobile } from '../../../../utils';
+import { isMobile } from '../../../../utils/index.js';
 
 export type VideoProps = {
   video: string;
@@ -11,8 +11,6 @@ export const Video: FC<VideoProps> = ({ video, controls = false }) => (
     frameBorder="none"
     width="100%"
     height={isMobile() ? '250px' : '750px'}
-    src={`https://www.youtube.com/embed/${video}${
-      controls ? '' : '?controls=0'
-    }`}
+    src={`https://www.youtube.com/embed/${video}${controls ? '' : '?controls=0'}`}
   />
 );

@@ -1,6 +1,6 @@
 import cx from 'classnames';
 import { FC } from 'react';
-import { toUpperCase } from '../../../../utils';
+import { toUpperCase } from '../../../../utils/index.js';
 import styles from './gradient.module.scss';
 
 export type GradientProps = {

@@ -1,4 +1,4 @@
-import { getResponse } from '../utils';
+import { getResponse } from '../utils/index.js';
 
 export const useLinks = () => {
   getResponse(

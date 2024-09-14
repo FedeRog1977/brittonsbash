@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { Img } from '../../reference';
-import { Typography } from '../typography';
+import { Img } from '../../reference/index.js';
+import { Typography } from '../typography/index.js';
 import styles from './image.module.scss';
 
 export const Image: FC<Img> = ({ url, alt, description }) => (
