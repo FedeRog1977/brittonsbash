@@ -1,1 +1,1 @@
-export * from './content/home';
+export * from './content/home.js';

@@ -1,3 +1,3 @@
-export * from './components/result-tile';
-export * from './components/search-tile';
-export * from './utils/use-sport';
+export * from './components/result-tile.js';
+export * from './components/search-tile.js';
+export * from './utils/use-sport.js';

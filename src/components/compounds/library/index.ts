@@ -1,1 +1,1 @@
-export * from './content/library';
+export * from './content/library.js';

@@ -1,1 +1,1 @@
-export * from './content/academia';
+export * from './content/academia.js';

@@ -1,2 +1,2 @@
-export * from './search-list';
-export * from './search';
+export * from './search-list.js';
+export * from './search.js';

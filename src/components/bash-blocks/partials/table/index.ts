@@ -1,2 +1,2 @@
-export * from './column-table';
-export * from './row-table';
+export * from './column-table.js';
+export * from './row-table.js';

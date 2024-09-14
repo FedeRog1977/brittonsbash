@@ -1,1 +1,1 @@
-export * from './image-tile';
+export * from './image-tile.js';

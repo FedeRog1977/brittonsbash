@@ -22,8 +22,8 @@ import {
   Weather,
   Conquest,
 } from './components';
-import { reportWebVitals } from './utils/react';
-import { useEvents, useHills, useLinks, useRegions, useSport } from './api';
+import { reportWebVitals } from './utils/react/report-web-vitals.js';
+import { useEvents, useHills, useLinks, useRegions, useSport } from './api/index.js';
 
 const triggerSession = () => {
   useEvents();
@@ -36,9 +36,7 @@ const triggerSession = () => {
 triggerSession();
 reportWebVitals();
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
   <HashRouter>

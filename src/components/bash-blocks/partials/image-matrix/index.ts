@@ -1,1 +1,1 @@
-export * from './image-matrix';
+export * from './image-matrix.js';

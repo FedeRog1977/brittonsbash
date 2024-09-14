@@ -31,14 +31,10 @@ export const Conquest = () => {
 
   const [showLandmasses, setShowLandmasses] = useState(false);
   const [showRoutesList, setShowRoutesList] = useState(false);
-  const [routesList, setRoutesList] = useState(
-    <RouteList {...({} as RouteListProps)} />
-  );
+  const [routesList, setRoutesList] = useState(<RouteList {...({} as RouteListProps)} />);
 
   const [showRouteMarker, setShowRouteMarker] = useState(false);
-  const [routeMarker, setRouteMarker] = useState(
-    <RouteMarker {...({} as RouteMarkerProps)} />
-  );
+  const [routeMarker, setRouteMarker] = useState(<RouteMarker {...({} as RouteMarkerProps)} />);
 
   const currLocClick = () => {
     if (showCurrLoc === false) {
@@ -78,11 +74,7 @@ export const Conquest = () => {
     setShowRouteMarker(false);
 
     for (var i in hills.landmasses) {
-      if (
-        hills.landmasses[i].name
-          .toLowerCase()
-          .includes(e.target.value.toLowerCase())
-      ) {
+      if (hills.landmasses[i].name.toLowerCase().includes(e.target.value.toLowerCase())) {
         setShowRoutesList(true);
         setRoutesList(
           <RouteList
@@ -101,9 +93,7 @@ export const Conquest = () => {
     for (var i in hills.landmasses) {
       for (var k in hills.landmasses[i].routes) {
         if (
-          hills.landmasses[i].routes[k].name
-            .toLowerCase()
-            .includes(e.target.value.toLowerCase())
+          hills.landmasses[i].routes[k].name.toLowerCase().includes(e.target.value.toLowerCase())
         ) {
           setShowRouteMarker(true);
           setRouteMarker(
@@ -175,10 +165,7 @@ export const Conquest = () => {
         center={formatCoordinates([205685, 755842])}
         minZoom={5}
         maxZoom={20}
-        maxBounds={[
-          formatCoordinates([-238375, 0]),
-          formatCoordinates([900000, 1376256]),
-        ]}
+        maxBounds={[formatCoordinates([-238375, 0]), formatCoordinates([900000, 1376256])]}
         attributionControl={false}
         zoom={10}
         scrollWheelZoom={true}

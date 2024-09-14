@@ -1,1 +1,1 @@
-export * from './bookshelf';
+export * from './bookshelf.js';
