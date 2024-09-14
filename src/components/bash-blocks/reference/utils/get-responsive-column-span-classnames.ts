@@ -1,5 +1,5 @@
-import { isDefined, toUpperCase } from '../../../../utils';
-import { ColumnSpanConfig } from '../types';
+import { isDefined, toUpperCase } from '../../../../utils/index.js';
+import { ColumnSpanConfig } from '../types/index.js';
 
 export const getResponsiveColumnSpanClassNames = (
   prefix: string,
@@ -11,17 +11,13 @@ export const getResponsiveColumnSpanClassNames = (
   }
 
   const config: ColumnSpanConfig =
-    typeof columnSpanConfig === 'number'
-      ? { xs: columnSpanConfig }
-      : columnSpanConfig;
+    typeof columnSpanConfig === 'number' ? { xs: columnSpanConfig } : columnSpanConfig;
 
   return Object.entries(config)
     .filter(([_, columnSpan]) => typeof columnSpan === 'number')
     .map(
       ([breakpoint, columnSpan]) =>
-        styles[
-          `${prefix}Breakpoint${toUpperCase(breakpoint)}ColumnSpan${columnSpan}`
-        ]
+        styles[`${prefix}Breakpoint${toUpperCase(breakpoint)}ColumnSpan${columnSpan}`]
     )
     .filter(isDefined);
 };

@@ -1,9 +1,9 @@
-import { generateUniqueKey, useShowElement } from '../../../../utils';
+import { generateUniqueKey, useShowElement } from '../../../../utils/index.js';
 import styles from './image-matrix.module.scss';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { Flex, FlexItem, Image, Typography } from '../../basics';
-import { ColumnSpan, Img } from '../../reference';
-import { Modal } from '../../blocks';
+import { Flex, FlexItem, Image, Typography } from '../../basics/index.js';
+import { ColumnSpan, Img } from '../../reference/index.js';
+import { Modal } from '../../blocks/index.js';
 import { FC, useState } from 'react';
 
 export type ImageMatrixProps = {
@@ -12,8 +12,7 @@ export type ImageMatrixProps = {
 };
 
 export const ImageMatrix: FC<ImageMatrixProps> = ({ items, columns }) => {
-  const { showElement: showModal, setShowElement: setShowModal } =
-    useShowElement();
+  const { showElement: showModal, setShowElement: setShowModal } = useShowElement();
 
   const basis: ColumnSpan = columns ? ((12 / columns) as ColumnSpan) : 3;
 
@@ -21,18 +20,9 @@ export const ImageMatrix: FC<ImageMatrixProps> = ({ items, columns }) => {
 
   return (
     <>
-      <Flex
-        direction="horizontal"
-        alignHorizontal="center"
-        alignVertical="center"
-        wrap
-        gap="2xs"
-      >
+      <Flex direction="horizontal" alignHorizontal="center" alignVertical="center" wrap gap="2xs">
         {items.map(({ url, alt, description }, index) => (
-          <FlexItem
-            key={generateUniqueKey(index)}
-            basis={{ xs: 12, lg: basis }}
-          >
+          <FlexItem key={generateUniqueKey(index)} basis={{ xs: 12, lg: basis }}>
             <Flex direction="vertical" alignHorizontal="center" gap="2xs">
               <a
                 onClick={() => {

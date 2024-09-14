@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { generateUniqueKey } from '../../../../utils';
-import { Flex, Typography } from '../../basics';
+import { generateUniqueKey } from '../../../../utils/index.js';
+import { Flex, Typography } from '../../basics/index.js';
 import styles from './table.module.scss';
-import { Column } from './types/column';
+import { Column } from './types/column.js';
 
 export type ColumnTableProps = {
   leftColumn: Column;
@@ -10,10 +10,7 @@ export type ColumnTableProps = {
 };
 
 // TODO: segment these into the text content, and the styled table
-export const ColumnTable: FC<ColumnTableProps> = ({
-  leftColumn,
-  rightColumns,
-}) => (
+export const ColumnTable: FC<ColumnTableProps> = ({ leftColumn, rightColumns }) => (
   <div className={styles.containerColumns}>
     <div className={styles.table}>
       <Flex direction="horizontal" alignHorizontal="apart">
@@ -23,11 +20,7 @@ export const ColumnTable: FC<ColumnTableProps> = ({
           </Typography>
 
           {leftColumn.entries?.map((entry, index) => (
-            <Typography
-              key={generateUniqueKey(index)}
-              variant="footnote"
-              boldFace
-            >
+            <Typography key={generateUniqueKey(index)} variant="footnote" boldFace>
               {entry}
             </Typography>
           ))}

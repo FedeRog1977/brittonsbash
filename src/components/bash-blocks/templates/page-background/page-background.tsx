@@ -1,4 +1,4 @@
-import { toUpperCase } from '../../../../utils';
+import { toUpperCase } from '../../../../utils/index.js';
 import styles from './page-background.module.scss';
 import cx from 'classnames';
 import { FC } from 'react';
@@ -6,22 +6,11 @@ import { FC } from 'react';
 export type PageBackgroundProps = {
   // TODO: clean up the order and naming of these
   // Also do this in the module
-  type?:
-    | 'std'
-    | 'logo'
-    | 'ig'
-    | 'sport'
-    | 'audi'
-    | 'miami'
-    | 'calligraphy'
-    | 'ibm';
+  type?: 'std' | 'logo' | 'ig' | 'sport' | 'audi' | 'miami' | 'calligraphy' | 'ibm';
   content: string;
 };
 
-export const PageBackground: FC<PageBackgroundProps> = ({
-  type = 'logo',
-  content,
-}) => {
+export const PageBackground: FC<PageBackgroundProps> = ({ type = 'logo', content }) => {
   const classNamesText = cx(styles.text, styles[`text${toUpperCase(type)}`]);
 
   return (

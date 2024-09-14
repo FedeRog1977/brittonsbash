@@ -1,5 +1,5 @@
-import { isDefined, toUpperCase } from '../../../../utils';
-import { AlignConfig, JustifyConfig } from '../types';
+import { isDefined, toUpperCase } from '../../../../utils/index.js';
+import { AlignConfig, JustifyConfig } from '../types/index.js';
 
 export const getResponsiveAlignmentClassNames = (
   prefix: string,
@@ -12,9 +12,7 @@ export const getResponsiveAlignmentClassNames = (
   }
 
   const config: JustifyConfig | AlignConfig =
-    typeof alignmentConfig === 'string'
-      ? { xs: alignmentConfig }
-      : alignmentConfig;
+    typeof alignmentConfig === 'string' ? { xs: alignmentConfig } : alignmentConfig;
 
   return Object.entries(config)
     .map(

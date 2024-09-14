@@ -1,11 +1,11 @@
 import styles from './button.module.scss';
 import cx from 'classnames';
-import { toUpperCase } from '../../../../utils';
-import { Flex, Typography } from '../../basics';
+import { toUpperCase } from '../../../../utils/index.js';
+import { Flex, Typography } from '../../basics/index.js';
 import { FC, ReactElement } from 'react';
-import { TextStyle, Url } from '../../reference';
-import { Grid } from '../../basics/grid/grid';
-import { GridItem } from '../../basics/grid/grid-item';
+import { TextStyle, Url } from '../../reference/index.js';
+import { Grid } from '../../basics/grid/grid.js';
+import { GridItem } from '../../basics/grid/grid-item.js';
 
 export type ButtonProps = {
   variant?: 'default' | 'clear' | 'solid' | 'inverse';
@@ -59,11 +59,7 @@ export const Button: FC<ButtonProps> = ({
 
   return (
     <button className={classNames} onClick={func} value={value}>
-      <Grid
-        justifyContent="between"
-        alignItems="center"
-        spacing={icon ? 'xs' : 'none'}
-      >
+      <Grid justifyContent="between" alignItems="center" spacing={icon ? 'xs' : 'none'}>
         <GridItem xs={icon ? 6 : 12}>
           <Flex
             direction={subContentTop ? 'vertical' : 'horizontal'}

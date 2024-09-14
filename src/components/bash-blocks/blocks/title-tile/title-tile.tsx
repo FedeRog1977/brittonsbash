@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import { generateUniqueKey } from '../../../../utils';
-import { Flex, Tile, Typography } from '../../basics';
-import { Items } from './types/items';
-import { Grid } from '../../basics/grid/grid';
-import { GridItem } from '../../basics/grid/grid-item';
+import { generateUniqueKey } from '../../../../utils/index.js';
+import { Flex, Tile, Typography } from '../../basics/index.js';
+import { Items } from './types/items.js';
+import { Grid } from '../../basics/grid/grid.js';
+import { GridItem } from '../../basics/grid/grid-item.js';
 
 export type TitleTileProps = {
   heading?: string;
@@ -11,11 +11,7 @@ export type TitleTileProps = {
   bodyItems?: Items[];
 };
 
-export const TitleTile: FC<TitleTileProps> = ({
-  heading,
-  titleItems,
-  bodyItems,
-}) => (
+export const TitleTile: FC<TitleTileProps> = ({ heading, titleItems, bodyItems }) => (
   <Tile type="clear">
     <Flex direction="vertical" gap="xs">
       {heading ? (
@@ -26,11 +22,7 @@ export const TitleTile: FC<TitleTileProps> = ({
 
       {titleItems
         ? titleItems.map(({ content, subContent }, index) => (
-            <Grid
-              key={generateUniqueKey(index)}
-              justifyContent="center"
-              spacing="xs"
-            >
+            <Grid key={generateUniqueKey(index)} justifyContent="center" spacing="xs">
               <GridItem xs={5}>
                 <Typography variant="h3" boldFace textAlign="right">
                   {content}
@@ -47,11 +39,7 @@ export const TitleTile: FC<TitleTileProps> = ({
 
       {bodyItems
         ? bodyItems.map(({ content, subContent }, index) => (
-            <Grid
-              key={generateUniqueKey(index)}
-              justifyContent="center"
-              spacing="xs"
-            >
+            <Grid key={generateUniqueKey(index)} justifyContent="center" spacing="xs">
               <GridItem xs={5}>
                 <Typography variant="body" boldFace textAlign="right">
                   {content}

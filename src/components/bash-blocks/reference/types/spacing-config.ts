@@ -1,6 +1,4 @@
-import { Breakpoints } from './breakpoints';
-import { SpacingSize } from './spacing-size';
+import { Breakpoints } from './breakpoints.js';
+import { SpacingSize } from './spacing-size.js';
 
-export type SpacingConfig =
-  | SpacingSize
-  | Partial<Record<Breakpoints, SpacingSize>>;
+export type SpacingConfig = SpacingSize | Partial<Record<Breakpoints, SpacingSize>>;

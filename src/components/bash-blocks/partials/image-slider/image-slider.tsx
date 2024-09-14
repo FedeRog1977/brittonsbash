@@ -7,9 +7,9 @@ import {
   faExchange,
 } from '@fortawesome/free-solid-svg-icons';
 import styles from './image-slider.module.scss';
-import { generateUniqueKey, isMobile } from '../../../../utils';
-import { Typography } from '../../basics';
-import { Img } from '../../reference';
+import { generateUniqueKey, isMobile } from '../../../../utils/index.js';
+import { Typography } from '../../basics/index.js';
+import { Img } from '../../reference/index.js';
 
 export type ImageSliderProps = {
   slides: Img[];
@@ -34,11 +34,7 @@ export const ImageSlider: FC<ImageSliderProps> = ({ slides }) => {
 
   return (
     <div className={styles.imageSlider}>
-      <FontAwesomeIcon
-        icon={faExchange}
-        className={styles.refresh}
-        onClick={() => setCurrent(0)}
-      />
+      <FontAwesomeIcon icon={faExchange} className={styles.refresh} onClick={() => setCurrent(0)} />
 
       <FontAwesomeIcon
         icon={faChevronCircleLeft}
@@ -90,11 +86,7 @@ export const ImageSlider: FC<ImageSliderProps> = ({ slides }) => {
           {slide.url ? (
             <>
               {index === current ? (
-                <img
-                  className={styles.imageSliderImage}
-                  src={slide.url}
-                  alt={slide.alt}
-                />
+                <img className={styles.imageSliderImage} src={slide.url} alt={slide.alt} />
               ) : null}
             </>
           ) : (

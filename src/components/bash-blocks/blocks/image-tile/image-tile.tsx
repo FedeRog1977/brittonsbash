@@ -1,12 +1,12 @@
 import { FC } from 'react';
-import { formatArticle, generateUniqueKey, isMobile } from '../../../../utils';
-import { Flex, Tile, Typography } from '../../basics';
-import { Article, Cta, CtaProps } from '../../partials';
-import { GradientProps } from '../../basics';
-import { ArticleProps } from '../../partials';
-import { Img, TextStyle } from '../../reference';
-import { Grid } from '../../basics/grid/grid';
-import { GridItem } from '../../basics/grid/grid-item';
+import { formatArticle, generateUniqueKey, isMobile } from '../../../../utils/index.js';
+import { Flex, Tile, Typography } from '../../basics/index.js';
+import { Article, Cta, CtaProps } from '../../partials/index.js';
+import { GradientProps } from '../../basics/index.js';
+import { ArticleProps } from '../../partials/index.js';
+import { Img, TextStyle } from '../../reference/index.js';
+import { Grid } from '../../basics/grid/grid.js';
+import { GridItem } from '../../basics/grid/grid-item.js';
 
 export type ImageTileProps = {
   imgDesktop?: Img;
@@ -33,12 +33,7 @@ export const ImageTile: FC<ImageTileProps> = ({
   const invertedTypeVariant = invert ? 'white' : 'mediumGrey';
 
   return (
-    <Tile
-      type="clear"
-      stacked
-      img={isMobile() ? imgMobile : imgDesktop}
-      gradient={gradient}
-    >
+    <Tile type="clear" stacked img={isMobile() ? imgMobile : imgDesktop} gradient={gradient}>
       <Grid justifyContent="center" alignItems="center">
         <GridItem xs={12} md={7}>
           <Typography variant="h4" color={invertedTypeVariant}>
@@ -86,12 +81,7 @@ export const ImageTile: FC<ImageTileProps> = ({
               gap="2xs"
             >
               {ctas?.map(({ content, href }, index) => (
-                <Cta
-                  key={generateUniqueKey(index)}
-                  content={content}
-                  href={href}
-                  invert={invert}
-                />
+                <Cta key={generateUniqueKey(index)} content={content} href={href} invert={invert} />
               ))}
             </Flex>
           </GridItem>

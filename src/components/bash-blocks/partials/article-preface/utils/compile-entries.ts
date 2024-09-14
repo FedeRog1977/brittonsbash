@@ -1,4 +1,4 @@
-import { DataContentResponse } from '../../../reference';
+import { DataContentResponse } from '../../../reference/index.js';
 
 type ArticlePrefaceParsed = Pick<DataContentResponse, 'title'> & {
   content: string;
@@ -18,9 +18,7 @@ export const compileEntries = (
               .map((entryIteration, index) => `${index + 1}. ${entryIteration}`)
               .join('\n\n')
           : listStyle === 'itemize'
-            ? entry.content
-                .map((entryIteration) => `* ${entryIteration}`)
-                .join('\n\n')
+            ? entry.content.map((entryIteration) => `* ${entryIteration}`).join('\n\n')
             : entry.content.join(', ')
         : entry.content;
 
