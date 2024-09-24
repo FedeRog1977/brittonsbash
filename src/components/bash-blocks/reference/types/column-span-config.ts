@@ -1,4 +1,4 @@
-import { ColumnSpan } from './column-span.js';
-import { Breakpoints } from './breakpoints.js';
+import { ColumnSpan } from './column-span';
+import { Breakpoints } from './breakpoints';
 
 export type ColumnSpanConfig = ColumnSpan | Partial<Record<Breakpoints, ColumnSpan>>;

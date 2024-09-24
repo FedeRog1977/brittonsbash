@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { compileBrittonsFoodRC } from './compile-brittons-foodrc.js';
-import { isMobile, useShowElement } from '../../../../../utils/index.js';
-import { emptyFoodData } from '../mocks/empty-food-data.js';
-import { brittonsFoodRCContent } from '../content/brittons-foodrc.js';
+import { compileBrittonsFoodRC } from './compile-brittons-foodrc';
+import { isMobile, useShowElement } from '../../../../../utils';
+import { emptyFoodData } from '../mocks/empty-food-data';
+import { brittonsFoodRCContent } from '../content/brittons-foodrc';
 
 export const useBrittonsFoodRC = () => {
   const allFood = compileBrittonsFoodRC();

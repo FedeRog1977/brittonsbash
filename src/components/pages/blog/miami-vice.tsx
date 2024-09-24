@@ -3,8 +3,8 @@ import {
   SearchTile,
   miamiViceContent,
   useMiamiVice,
-} from '../../compounds/blog/miami-vice/index.js';
-import { FootnoteTile, PageLayout } from '../../bash-blocks/index.js';
+} from '../../compounds/blog/miami-vice';
+import { FootnoteTile, PageLayout } from '../../bash-blocks';
 import { ReactNode } from 'react';
 
 export const MiamiVice = () => {

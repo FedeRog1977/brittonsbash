@@ -1,8 +1,8 @@
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FC } from 'react';
-import { toTemperature } from '../../../../../utils/index.js';
-import { Color, Typography, Spacing } from '../../../../bash-blocks/index.js';
+import { toTemperature } from '../../../../../utils';
+import { Color, Typography, Spacing } from '../../../../bash-blocks';
 
 type TemperatureProps = {
   temp: number;

@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { generateUniqueKey, useShowElement } from '../../../../utils/index.js';
-import { Background, Flex, Spacing, Typography } from '../../basics/index.js';
-import { Button } from '../button/index.js';
+import { generateUniqueKey, useShowElement } from '../../../../utils';
+import { Background, Flex, Spacing, Typography } from '../../basics';
+import { Button } from '../button';
 
 export type BookshelfProps = {
   heading: string;

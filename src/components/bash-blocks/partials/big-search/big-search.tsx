@@ -1,12 +1,12 @@
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FC } from 'react';
-import { generateUniqueKey, isMobile } from '../../../../utils/index.js';
-import { Flex, Search, SearchList } from '../../basics/index.js';
-import { Button } from '../button/button.js';
-import { SearchProps } from '../../basics/index.js';
-import { Grid } from '../../basics/grid/grid.js';
-import { GridItem } from '../../basics/grid/grid-item.js';
+import { generateUniqueKey, isMobile } from '../../../../utils';
+import { Flex, Search, SearchList } from '../../basics';
+import { Button } from '../button/button';
+import { SearchProps } from '../../basics';
+import { Grid } from '../../basics/grid/grid';
+import { GridItem } from '../../basics/grid/grid-item';
 
 export type BigSearchProps = {
   funcInput: SearchProps['func'];

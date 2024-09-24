@@ -1,4 +1,4 @@
-import { toUpperCase } from '../../../../../utils/index.js';
+import { toUpperCase } from '../../../../../utils';
 
 export const getPositionClassName = (
   styles: Record<string, string>,

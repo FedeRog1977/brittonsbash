@@ -1,7 +1,7 @@
-import { getSessionItem } from '../../../../../utils/api/index.js';
-import { removeDuplicates, toMiles, toFeet } from '../../../../../utils/index.js';
-import { CompiledProject } from '../types/compiled-project.js';
-import { Project } from '../types/project.js';
+import { getSessionItem } from '../../../../../utils/api';
+import { removeDuplicates, toMiles, toFeet } from '../../../../../utils';
+import { CompiledProject } from '../types/compiled-project';
+import { Project } from '../types/project';
 
 // TODO: make this fix
 // type CompiledProjects = {

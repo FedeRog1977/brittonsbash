@@ -1,10 +1,5 @@
-import {
-  AlignCrossAxis,
-  AlignHorizontal,
-  AlignMainAxis,
-  AlignVertical,
-} from '../../../reference/index.js';
-import { Common } from './common.js';
+import { AlignCrossAxis, AlignHorizontal, AlignMainAxis, AlignVertical } from '../../../reference';
+import { Common } from './common';
 
 export type Horizontal = Common & {
   direction: 'horizontal';

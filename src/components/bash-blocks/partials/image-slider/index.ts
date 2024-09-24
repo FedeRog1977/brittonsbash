@@ -1,1 +1,1 @@
-export * from './image-slider.js';
+export * from './image-slider';

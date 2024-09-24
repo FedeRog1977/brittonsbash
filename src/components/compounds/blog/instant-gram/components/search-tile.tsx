@@ -1,8 +1,8 @@
-import { Button, Flex, FlexItem, Tile } from '../../../../bash-blocks/index.js';
-import { Event } from '../types/event.js';
+import { Button, Flex, FlexItem, Tile } from '../../../../bash-blocks';
+import { Event } from '../types/event';
 import { FC } from 'react';
-import { SearchList } from './search-list.js';
-import { BigSearch } from '../../../../bash-blocks/index.js';
+import { SearchList } from './search-list';
+import { BigSearch } from '../../../../bash-blocks';
 
 type SearchTileProps = {
   funcCategory: (value: string) => void;

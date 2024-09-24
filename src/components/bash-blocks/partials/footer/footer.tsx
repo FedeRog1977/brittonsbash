@@ -1,5 +1,5 @@
 import styles from './footer.module.scss';
-import { Typography, Flex } from '../../basics/index.js';
+import { Typography, Flex } from '../../basics';
 import { FC } from 'react';
 
 export const Footer: FC = () => (

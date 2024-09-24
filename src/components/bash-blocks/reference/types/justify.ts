@@ -1,3 +1,3 @@
-import { AlignHorizontal } from './align-horizontal.js';
+import { AlignHorizontal } from './align-horizontal';
 
 export type Justify = AlignHorizontal | 'stretch' | 'between' | 'around' | 'even';

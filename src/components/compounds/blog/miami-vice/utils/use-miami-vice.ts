@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { compileMiamiVice } from '../utils/compile-miami-vice.js';
-import { useShowElement } from '../../../../../utils/index.js';
-import { emptyVideoData } from '../mocks/empty-video-data.js';
-import { miamiViceContent } from '../content/miami-vice.js';
+import { compileMiamiVice } from '../utils/compile-miami-vice';
+import { useShowElement } from '../../../../../utils';
+import { emptyVideoData } from '../mocks/empty-video-data';
+import { miamiViceContent } from '../content/miami-vice';
 
 export const useMiamiVice = () => {
   const allVideos = compileMiamiVice();

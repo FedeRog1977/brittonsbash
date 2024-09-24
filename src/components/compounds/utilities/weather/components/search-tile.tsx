@@ -1,5 +1,5 @@
-import { BigSearch, Tile } from '../../../../bash-blocks/index.js';
-import { compileHills } from '../../../../../utils/index.js';
+import { BigSearch, Tile } from '../../../../bash-blocks';
+import { compileHills } from '../../../../../utils';
 import { FC } from 'react';
 
 type SearchTile = {

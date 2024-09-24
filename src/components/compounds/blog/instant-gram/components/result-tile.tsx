@@ -10,12 +10,12 @@ import {
   RowTableProps,
   Flex,
   Grid,
-} from '../../../../bash-blocks/index.js';
-import { useShowElement, generateUniqueKey, isMobile } from '../../../../../utils/index.js';
+} from '../../../../bash-blocks';
+import { useShowElement, generateUniqueKey, isMobile } from '../../../../../utils';
 import { FC } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import { CompiledEvent } from '../types/compiled-event.js';
+import { CompiledEvent } from '../types/compiled-event';
 
 type ResultTileProps = {
   compiledEvent: CompiledEvent;

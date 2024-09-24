@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { Body } from '../components/body.js';
-import { Books } from '../components/books.js';
-import { Images } from '../components/images.js';
-import { Section } from '../types/section.js';
+import { Body } from '../components/body';
+import { Books } from '../components/books';
+import { Images } from '../components/images';
+import { Section } from '../types/section';
 
 export const getContent: FC<Section> = (section) => (
   <>

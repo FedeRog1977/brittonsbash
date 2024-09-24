@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
-import { ArticleTile, PageLayout, TitleTile } from '../bash-blocks/index.js';
-import { employmentContent } from '../compounds/employment/index.js';
+import { ArticleTile, PageLayout, TitleTile } from '../bash-blocks';
+import { employmentContent } from '../compounds/employment';
 
 export const Employment = () => {
   const content: ReactNode[] = [

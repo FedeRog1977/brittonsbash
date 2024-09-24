@@ -1,4 +1,4 @@
-import { PageLayout, Tile } from '../../bash-blocks/index.js';
+import { PageLayout, Tile } from '../../bash-blocks';
 
 export const Media = () => (
   <PageLayout background={{ content: 'Media' }}>

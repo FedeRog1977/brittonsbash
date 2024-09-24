@@ -1,1 +1,1 @@
-export * from './report-web-vitals.js';
+export * from './report-web-vitals';

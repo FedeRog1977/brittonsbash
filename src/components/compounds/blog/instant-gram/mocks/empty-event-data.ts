@@ -1,4 +1,4 @@
-import { Event } from '../types/event.js';
+import { Event } from '../types/event';
 
 export const emptyEventData: (Pick<Event, 'prefix' | 'names'> & {
   id: string;

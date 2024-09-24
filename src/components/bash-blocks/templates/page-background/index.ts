@@ -1,1 +1,1 @@
-export * from './page-background.js';
+export * from './page-background';

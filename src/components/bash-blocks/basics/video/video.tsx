@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { isMobile } from '../../../../utils/index.js';
+import { isMobile } from '../../../../utils';
 
 export type VideoProps = {
   video: string;
@@ -8,6 +8,7 @@ export type VideoProps = {
 
 export const Video: FC<VideoProps> = ({ video, controls = false }) => (
   <iframe
+    title={`yt-${video}`}
     frameBorder="none"
     width="100%"
     height={isMobile() ? '250px' : '750px'}

@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import { generateUniqueKey } from '../../../../utils/index.js';
-import { Flex, Tile, Typography } from '../../basics/index.js';
-import { Items } from './types/items.js';
-import { Grid } from '../../basics/grid/grid.js';
-import { GridItem } from '../../basics/grid/grid-item.js';
+import { generateUniqueKey } from '../../../../utils';
+import { Flex, Tile, Typography } from '../../basics';
+import { Items } from './types/items';
+import { Grid } from '../../basics/grid/grid';
+import { GridItem } from '../../basics/grid/grid-item';
 
 export type TitleTileProps = {
   heading?: string;

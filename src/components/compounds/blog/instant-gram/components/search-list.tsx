@@ -1,7 +1,7 @@
-import { Button, Flex, FlexItem } from '../../../../bash-blocks/index.js';
-import { generateUniqueKey, isMobile } from '../../../../../utils/index.js';
+import { Button, Flex, FlexItem } from '../../../../bash-blocks';
+import { generateUniqueKey } from '../../../../../utils';
 import { FC } from 'react';
-import { Event } from '../types/event.js';
+import { Event } from '../types/event';
 
 type SearchListProps = {
   funcSelect: (() => void) | ((e: any) => void);

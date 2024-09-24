@@ -1,1 +1,1 @@
-export * from './content/think-flow.js';
+export * from './content/think-flow';

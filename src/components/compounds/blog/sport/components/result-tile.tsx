@@ -1,4 +1,4 @@
-import { isMobile } from '../../../../../utils/index.js';
+import { isMobile } from '../../../../../utils';
 import {
   Typography,
   Tile,
@@ -6,7 +6,7 @@ import {
   Button,
   ColumnTableProps,
   Flex,
-} from '../../../../bash-blocks/index.js';
+} from '../../../../bash-blocks';
 import { FC } from 'react';
 
 export type ResultTileProps = {

@@ -1,7 +1,7 @@
-import { getSessionItem } from '../../../../../utils/api/index.js';
-import { toFeet, toMiles } from '../../../../../utils/index.js';
-import { CompiledMiles } from '../types/compiled-miles.js';
-import { Miles } from '../types/miles.js';
+import { getSessionItem } from '../../../../../utils/api';
+import { toFeet, toMiles } from '../../../../../utils';
+import { CompiledMiles } from '../types/compiled-miles';
+import { Miles } from '../types/miles';
 
 export const compileMiles = () => {
   const sport = getSessionItem('response-sport');

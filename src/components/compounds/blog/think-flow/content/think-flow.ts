@@ -1,4 +1,4 @@
-import { ArticleTileProps, PageBackgroundProps } from '../../../../bash-blocks/index.js';
+import { ArticleTileProps, PageBackgroundProps } from '../../../../bash-blocks';
 
 type ThinkFlowProps = {
   background: PageBackgroundProps;

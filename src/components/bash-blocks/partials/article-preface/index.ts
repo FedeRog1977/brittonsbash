@@ -1,1 +1,1 @@
-export * from './article-preface.js';
+export * from './article-preface';

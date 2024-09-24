@@ -1,8 +1,8 @@
-import { generateUniqueKey, isMobile } from '../../../../../utils/index.js';
-import { Flex, FlexItem } from '../../../../bash-blocks/index.js';
-import { useOpenWeatherCall } from '../api/open-weather.js';
-import { ColumnHourlyDense } from './column-hourly-dense.js';
-import { ColumnHourly } from './column-hourly.js';
+import { generateUniqueKey, isMobile } from '../../../../../utils';
+import { Flex, FlexItem } from '../../../../bash-blocks';
+import { useOpenWeatherCall } from '../api/open-weather';
+import { ColumnHourlyDense } from './column-hourly-dense';
+import { ColumnHourly } from './column-hourly';
 
 export const Hourly = ({ latIn, lonIn }: any) => {
   const { hourlyResult } = useOpenWeatherCall(latIn, lonIn);

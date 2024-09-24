@@ -1,21 +1,15 @@
-// import { compileLinks } from '../../../../utils/index.js';
-import {
-  ArticleTileProps,
-  DataContentResponse,
-  PageBackgroundProps,
-} from '../../../bash-blocks/index.js';
+import { brittonsBashContentFacade } from '../../../../new-facades/brittonsbash-content-facade';
+import { ArticleTileProps, PageBackgroundProps } from '../../../bash-blocks';
 
 type LibraryProps = {
   background: PageBackgroundProps;
   tileOne: ArticleTileProps;
   tileTwo: ArticleTileProps;
   tileThree: ArticleTileProps;
-  // tileFour: ArticleTileProps;
+  tileFour: ArticleTileProps;
 };
 
-// const links = compileLinks();
-
-// type linkGroup = { title: string; content: DataContentResponse[] };
+const links = await brittonsBashContentFacade.getLinks();
 
 export const libraryContent: LibraryProps = {
   background: { content: 'Library' },
@@ -162,26 +156,22 @@ export const libraryContent: LibraryProps = {
       },
     ],
   },
-  // tileFour: {
-  //   type: 'solid',
-  //   heading: 'Web URLs',
-  //   subHeading: 'Links',
-  //   sections: [
-  //     {
-  //       component: 'books',
-  //       content: {
-  //         items: [
-  //           ...links.map((linkGroup: linkGroup) => ({
-  //             heading: linkGroup.title,
-  //             items: [
-  //               ...linkGroup.content.map(
-  //                 ({ content, href }) => `[${content}](${href})`
-  //               ),
-  //             ],
-  //           })),
-  //         ],
-  //       },
-  //     },
-  //   ],
-  // },
+  tileFour: {
+    type: 'solid',
+    heading: 'Web URLs',
+    subHeading: 'Links',
+    sections: [
+      {
+        component: 'books',
+        content: {
+          items: [
+            ...links.map((linkGroup) => ({
+              heading: linkGroup.title,
+              items: [...linkGroup.content.map(({ content, href }) => `[${content}](${href})`)],
+            })),
+          ],
+        },
+      },
+    ],
+  },
 };

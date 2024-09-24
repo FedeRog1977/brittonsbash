@@ -1,2 +1,2 @@
-export * from './page-background/index.js';
-export * from './page-layout/index.js';
+export * from './page-background';
+export * from './page-layout';

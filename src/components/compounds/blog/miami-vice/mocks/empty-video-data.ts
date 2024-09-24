@@ -1,4 +1,4 @@
-import { ResultTileProps } from '../components/result-tile.js';
+import { ResultTileProps } from '../components/result-tile';
 
 export const emptyVideoData: Pick<ResultTileProps, 'heading' | 'subHeading'>[] = [
   {

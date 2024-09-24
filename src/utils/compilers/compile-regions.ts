@@ -1,3 +1,3 @@
-import { getSessionItem } from '../api/index.js';
+import { getSessionItem } from '../api';
 
 export const compileRegions = () => getSessionItem('response-regions');

@@ -1,4 +1,4 @@
-import { ArticleProps, TextStyle } from '../../components/bash-blocks/index.js';
+import { ArticleProps, TextStyle } from '../../components/bash-blocks';
 
 export const formatArticle = (
   sections: ArticleProps['sections'],

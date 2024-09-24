@@ -8,15 +8,15 @@ import {
 } from 'react-leaflet';
 import './styles-temp.scss';
 import { useState } from 'react';
-import { compileHills, formatCoordinates } from '../../../../utils/index.js';
+import { compileHills, formatCoordinates } from '../../../../utils';
 // import L from 'leaflet'
 import * as L from 'leaflet';
-import { useOrdnanceSurveyCall } from './api/ordnance-survey.js';
-import { RouteList, RouteListProps } from './components/route-list.js';
-import { RouteMarker, RouteMarkerProps } from './components/route-marker.js';
-import { LandmassList } from './components/landmass-list.js';
-import { LocationMarker } from './components/location-marker.js';
-import { HillMarkers } from './components/hill-markers.js';
+import { useOrdnanceSurveyCall } from './api/ordnance-survey';
+import { RouteList, RouteListProps } from './components/route-list';
+import { RouteMarker, RouteMarkerProps } from './components/route-marker';
+import { LandmassList } from './components/landmass-list';
+import { LocationMarker } from './components/location-marker';
+import { HillMarkers } from './components/hill-markers';
 
 export const Conquest = () => {
   const hills = compileHills();

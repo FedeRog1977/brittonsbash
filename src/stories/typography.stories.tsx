@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Typography as TypographyComponent } from '../components/bash-blocks/index.js';
+import { Typography as TypographyComponent } from '../components/bash-blocks';
 
 const meta = {
   title: 'Basics / Typography',

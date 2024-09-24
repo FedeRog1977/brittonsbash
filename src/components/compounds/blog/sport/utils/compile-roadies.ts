@@ -1,7 +1,7 @@
-import { getSessionItem } from '../../../../../utils/api/index.js';
-import { toMiles, toFeet } from '../../../../../utils/index.js';
-import { CompiledRoadie } from '../types/compiled-roadie.js';
-import { Roadie } from '../types/roadie.js';
+import { getSessionItem } from '../../../../../utils/api';
+import { toMiles, toFeet } from '../../../../../utils';
+import { CompiledRoadie } from '../types/compiled-roadie';
+import { Roadie } from '../types/roadie';
 
 export const compileRoadies = () => {
   const sport = getSessionItem('response-sport');

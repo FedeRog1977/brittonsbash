@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { formatItems, generateUniqueKey } from '../../../../../utils/index.js';
-import { BookshelfProps, Bookshelf } from '../../../partials/index.js';
-import { Flex, FlexItem } from '../../../basics/index.js';
+import { formatItems, generateUniqueKey } from '../../../../../utils';
+import { BookshelfProps, Bookshelf } from '../../../partials';
+import { Flex, FlexItem } from '../../../basics';
 
 export type BooksProps = { items: BookshelfProps[] };
 

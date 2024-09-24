@@ -1,3 +1,2 @@
-export * from './compile-hills.js';
-export * from './compile-links.js';
-export * from './compile-regions.js';
+export * from './compile-hills';
+export * from './compile-regions';

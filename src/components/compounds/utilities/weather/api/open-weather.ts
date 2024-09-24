@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { getResponse, getSessionItem } from '../../../../../utils/index.js';
-import { Daily } from '../types/daily.js';
-import { Hourly } from '../types/hourly.js';
+import { getResponse, getSessionItem } from '../../../../../utils';
+import { Daily } from '../types/daily';
+import { Hourly } from '../types/hourly';
 
 export const useOpenWeatherCall = (latIn: number, lonIn: number) => {
   const [dailyResult, setDailyResult] = useState<Daily[]>([]);

@@ -1,4 +1,4 @@
-import { ColumnSpan } from '../types/index.js';
+import { ColumnSpan } from '../types';
 
 // TODO: find out if this is unused
 export const getColumnSpanForColumnCount = (colCount: 1 | 2 | 3 | 4): ColumnSpan => {

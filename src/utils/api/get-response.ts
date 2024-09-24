@@ -1,4 +1,4 @@
-import { setSessionItem } from './set-session-item.js';
+import { setSessionItem } from './set-session-item';
 
 export const getResponse = async (
   url: string,
@@ -17,9 +17,11 @@ export const getResponse = async (
             ? setSessionItem(`response-${groupKey}`, data)
             : Object.keys(data).filter((key) => {
                 setSessionItem(`response-${key}`, data[key]);
+                return null;
               });
       })
       .then(() => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         callback ? callback() : () => {};
       })
       .catch((error: Error) => {

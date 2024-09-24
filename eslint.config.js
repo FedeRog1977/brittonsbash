@@ -1,3 +1,3 @@
-import config from './src/new-utils/eslint/index.js';
+import config from './src/utils/eslint';
 
 export default config;

@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react';
-import { Footer, Header } from '../../partials/index.js';
-import { PageBackground, PageBackgroundProps } from '../page-background/index.js';
-import { Spacing } from '../../basics/index.js';
+import { Footer, Header } from '../../partials';
+import { PageBackground, PageBackgroundProps } from '../page-background';
+import { Spacing } from '../../basics';
 
 export type PageLayoutProps = {
   background?: PageBackgroundProps;

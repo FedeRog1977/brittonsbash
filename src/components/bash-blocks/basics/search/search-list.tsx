@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { generateUniqueKey } from '../../../../utils/index.js';
+import { generateUniqueKey } from '../../../../utils';
 import styles from './search.module.scss';
 
 export type SearchListProps = {

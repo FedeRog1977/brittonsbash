@@ -1,1 +1,1 @@
-export * from './content/media.js';
+export * from './content/media';

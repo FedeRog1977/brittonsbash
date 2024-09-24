@@ -1,5 +1,5 @@
-import { isDefined, toUpperCase } from '../../../../../utils/index.js';
-import { Order } from '../types/order.js';
+import { isDefined, toUpperCase } from '../../../../../utils';
+import { Order } from '../types/order';
 
 export const getOrderClassNames = (
   styles: Record<string, string>,

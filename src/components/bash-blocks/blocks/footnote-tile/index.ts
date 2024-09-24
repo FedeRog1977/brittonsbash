@@ -1,1 +1,1 @@
-export * from './footnote-tile.js';
+export * from './footnote-tile';

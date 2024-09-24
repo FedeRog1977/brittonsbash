@@ -1,11 +1,11 @@
 import globals from 'globals';
-import coreModule from './core/module.js';
-import importModule from './import/module.js';
-import jestModule from './jest/module.js';
-import jsxA11yModule from './jsx-a11y/module.js';
-import reactModule from './react/module.js';
-import storybookModule from './storybook/module.js';
-import typescriptModule from './typescript/module.js';
+import coreModule from './core/module';
+import importModule from './import/module';
+import jestModule from './jest/module';
+import jsxA11yModule from './jsx-a11y/module';
+import reactModule from './react/module';
+import storybookModule from './storybook/module';
+import typescriptModule from './typescript/module';
 
 export default [
   {

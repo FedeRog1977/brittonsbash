@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { generateUniqueKey } from '../../../../utils/index.js';
-import { Flex, FlexItem, Typography } from '../../basics/index.js';
+import { generateUniqueKey } from '../../../../utils';
+import { Flex, FlexItem, Typography } from '../../basics';
 import styles from './table.module.scss';
-import { Row } from './types/row.js';
+import { Row } from './types/row';
 
 export type RowTableProps = {
   titleRow: Row;

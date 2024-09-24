@@ -1,4 +1,4 @@
-import { toUpperCase } from '../../../../utils/index.js';
+import { toUpperCase } from '../../../../utils';
 import styles from './page-background.module.scss';
 import cx from 'classnames';
 import { FC } from 'react';

@@ -1,5 +1,5 @@
-import { Button, Flex, FlexItem } from '../../../../bash-blocks/index.js';
-import { generateUniqueKey } from '../../../../../utils/index.js';
+import { Button, Flex, FlexItem } from '../../../../bash-blocks';
+import { generateUniqueKey } from '../../../../../utils';
 import { FC } from 'react';
 
 export type SearchListProps = {

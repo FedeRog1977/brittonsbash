@@ -1,4 +1,4 @@
-import { PageLayout } from '../bash-blocks/index.js';
+import { PageLayout } from '../bash-blocks';
 
 // TODO: style this
 export const ErrorPage = () => (

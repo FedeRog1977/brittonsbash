@@ -1,3 +1,3 @@
-export * from './format-article.js';
-export * from './format-coordinates.js';
-export * from './format-items.js';
+export * from './format-article';
+export * from './format-coordinates';
+export * from './format-items';

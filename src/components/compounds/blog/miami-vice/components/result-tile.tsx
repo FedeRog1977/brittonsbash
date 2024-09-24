@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { Flex, Tile, Typography, Video, VideoProps } from '../../../../bash-blocks/index.js';
-import { isMobile } from '../../../../../utils/index.js';
+import { Flex, Tile, Typography, Video, VideoProps } from '../../../../bash-blocks';
+import { isMobile } from '../../../../../utils';
 
 export type ResultTileProps = {
   heading: string;

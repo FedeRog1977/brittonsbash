@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { formatArticle } from '../../../../../utils/index.js';
-import { Typography } from '../../../basics/index.js';
-import { Article, ArticleProps } from '../../../partials/index.js';
+import { formatArticle } from '../../../../../utils';
+import { Typography } from '../../../basics';
+import { Article, ArticleProps } from '../../../partials';
 
 export type BodyProps = { body: string | ArticleProps['sections'] };
 

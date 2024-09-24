@@ -1,4 +1,4 @@
-import { appendScript, appendStyle } from '../../../../../utils/index.js';
+import { appendScript, appendStyle } from '../../../../../utils';
 
 export const useOrdnanceSurveyCall = () => {
   appendStyle('https://unpkg.com/leaflet@1.9.4/dist/leaflet.css');

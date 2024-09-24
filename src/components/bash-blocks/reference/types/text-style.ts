@@ -1,6 +1,6 @@
 import { ElementType, ReactElement, ReactNode } from 'react';
-import { AlignHorizontal } from './align-horizontal.js';
-import { Color } from './color.js';
+import { AlignHorizontal } from './align-horizontal';
+import { Color } from './color';
 
 export type TextStyle = {
   variant: 't1' | 't2' | 'h1' | 'h2' | 'h3' | 'h4' | 'body' | 'caption' | 'footnote' | 'tiny';

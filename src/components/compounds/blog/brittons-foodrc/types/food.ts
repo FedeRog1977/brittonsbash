@@ -1,4 +1,4 @@
-import { ArticlePrefaceProps } from '../../../../bash-blocks/index.js';
+import { ArticlePrefaceProps } from '../../../../bash-blocks';
 
 export type Food = {
   name: string;

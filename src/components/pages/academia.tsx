@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
-import { ArticleTile, PageLayout, TitleTile } from '../bash-blocks/index.js';
-import { academiaContent } from '../compounds/academia/index.js';
+import { ArticleTile, PageLayout, TitleTile } from '../bash-blocks';
+import { academiaContent } from '../compounds/academia';
 
 export const Academia = () => {
   const content: ReactNode[] = [

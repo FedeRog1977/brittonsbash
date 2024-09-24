@@ -1,5 +1,5 @@
-import { DataContentResponse } from '../../../../bash-blocks/index.js';
-import { Event } from './event.js';
+import { DataContentResponse } from '../../../../bash-blocks';
+import { Event } from './event';
 
 export type CompiledEvent = {
   prefix?: Event['prefix'];

@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { toFeet, toMiles, toSpeed } from '../../../../../utils/index.js';
-import { ColumnTableProps } from '../../../../bash-blocks/index.js';
-import { Miles } from '../types/miles.js';
-import { Project } from '../types/project.js';
-import { Roadie } from '../types/roadie.js';
-import { compileMiles } from './compile-miles.js';
-import { compileProjects } from './compile-projects.js';
-import { compileRoadies } from './compile-roadies.js';
+import { toFeet, toMiles, toSpeed } from '../../../../../utils';
+import { ColumnTableProps } from '../../../../bash-blocks';
+import { Miles } from '../types/miles';
+import { Project } from '../types/project';
+import { Roadie } from '../types/roadie';
+import { compileMiles } from './compile-miles';
+import { compileProjects } from './compile-projects';
+import { compileRoadies } from './compile-roadies';
 
 export const useSport = () => {
   const compiledRoadies = compileRoadies();

@@ -3,8 +3,8 @@ import {
   SearchTile,
   useWeather,
   weatherContent,
-} from '../../compounds/utilities/weather/index.js';
-import { FootnoteTile, PageLayout } from '../../bash-blocks/index.js';
+} from '../../compounds/utilities/weather';
+import { FootnoteTile, PageLayout } from '../../bash-blocks';
 import { ReactNode } from 'react';
 
 export const Weather = () => {

@@ -1,4 +1,4 @@
-import { PageLayout, Tile } from '../../bash-blocks/index.js';
+import { PageLayout, Tile } from '../../bash-blocks';
 
 export const Allroad = () => (
   <PageLayout background={{ type: 'audi', content: 'allroad quattro' }}>

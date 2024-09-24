@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
-import { isMobile, useShowElement } from '../../../../../utils/index.js';
-import { RowTableProps } from '../../../../bash-blocks/index.js';
-import { Project } from '../../sport/types/project.js';
-import { emptyEventData } from '../mocks/empty-event-data.js';
-import { compileEvent } from './compile-event.js';
-import { compileEventSports } from './compile-event-sports.js';
-import { compileEvents } from './compile-events.js';
-import { Event } from '../types/event.js';
+import { isMobile, useShowElement } from '../../../../../utils';
+import { RowTableProps } from '../../../../bash-blocks';
+import { Project } from '../../sport/types/project';
+import { emptyEventData } from '../mocks/empty-event-data';
+import { compileEvent } from './compile-event';
+import { compileEventSports } from './compile-event-sports';
+import { compileEvents } from './compile-events';
+import { Event } from '../types/event';
 
 export const useInstantGram = () => {
   const location = useLocation();

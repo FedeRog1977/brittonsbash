@@ -1,6 +1,6 @@
-import { BodyProps } from '../components/body.js';
-import { BooksProps } from '../components/books.js';
-import { ImagesProps } from '../components/images.js';
+import { BodyProps } from '../components/body';
+import { BooksProps } from '../components/books';
+import { ImagesProps } from '../components/images';
 
 type OrderedSection<T extends string, P extends object> = {
   component: T;

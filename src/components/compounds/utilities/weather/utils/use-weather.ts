@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { compileHills, toCoords, toFeet } from '../../../../../utils/index.js';
+import { compileHills, toCoords, toFeet } from '../../../../../utils';
 
 export const useWeather = () => {
   const hills = compileHills();

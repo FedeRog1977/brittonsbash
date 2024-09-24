@@ -1,12 +1,12 @@
 import { FC } from 'react';
-import { formatArticle, generateUniqueKey, isMobile } from '../../../../utils/index.js';
-import { Flex, Tile, Typography } from '../../basics/index.js';
-import { Article, Cta, CtaProps } from '../../partials/index.js';
-import { GradientProps } from '../../basics/index.js';
-import { ArticleProps } from '../../partials/index.js';
-import { Img, TextStyle } from '../../reference/index.js';
-import { Grid } from '../../basics/grid/grid.js';
-import { GridItem } from '../../basics/grid/grid-item.js';
+import { formatArticle, generateUniqueKey, isMobile } from '../../../../utils';
+import { Flex, Tile, Typography } from '../../basics';
+import { Article, Cta, CtaProps } from '../../partials';
+import { GradientProps } from '../../basics';
+import { ArticleProps } from '../../partials';
+import { Img, TextStyle } from '../../reference';
+import { Grid } from '../../basics/grid/grid';
+import { GridItem } from '../../basics/grid/grid-item';
 
 export type ImageTileProps = {
   imgDesktop?: Img;

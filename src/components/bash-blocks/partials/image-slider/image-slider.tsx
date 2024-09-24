@@ -7,9 +7,9 @@ import {
   faExchange,
 } from '@fortawesome/free-solid-svg-icons';
 import styles from './image-slider.module.scss';
-import { generateUniqueKey, isMobile } from '../../../../utils/index.js';
-import { Typography } from '../../basics/index.js';
-import { Img } from '../../reference/index.js';
+import { generateUniqueKey, isMobile } from '../../../../utils';
+import { Typography } from '../../basics';
+import { Img } from '../../reference';
 
 export type ImageSliderProps = {
   slides: Img[];

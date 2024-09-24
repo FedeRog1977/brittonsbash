@@ -1,3 +1,3 @@
-import { AlignVertical } from './align-vertical.js';
+import { AlignVertical } from './align-vertical';
 
 export type Align = AlignVertical | 'stretch';

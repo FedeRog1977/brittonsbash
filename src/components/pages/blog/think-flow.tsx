@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
-import { ArticleTile, PageLayout } from '../../bash-blocks/index.js';
-import { thinkFlowContent } from '../../compounds/blog/think-flow/index.js';
+import { ArticleTile, PageLayout } from '../../bash-blocks';
+import { thinkFlowContent } from '../../compounds/blog/think-flow';
 
 export const ThinkFlow = () => {
   const content: ReactNode[] = [<ArticleTile {...thinkFlowContent.tileOne} />];

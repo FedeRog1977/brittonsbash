@@ -1,1 +1,1 @@
-export * from './spacing.js';
+export * from './spacing';

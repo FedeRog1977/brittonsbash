@@ -1,3 +1,3 @@
-export * from './get-response.js';
-export * from './get-session-item.js';
-export * from './set-session-item.js';
+export * from './get-response';
+export * from './get-session-item';
+export * from './set-session-item';

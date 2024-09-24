@@ -1,4 +1,4 @@
-import { getResponse } from '../utils/index.js';
+import { getResponse } from '../utils';
 
 export const useEvents = () => {
   getResponse(

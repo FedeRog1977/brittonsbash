@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import { toDate, toPrecipitation, toBearing, toSpeed } from '../../../../../utils/index.js';
-import { Flex, Typography } from '../../../../bash-blocks/index.js';
-import { Daily } from '../types/daily.js';
-import { ConditionIcon } from './condition-icon.js';
-import { Temperature } from './temperature.js';
+import { toDate, toPrecipitation, toBearing, toSpeed } from '../../../../../utils';
+import { Flex, Typography } from '../../../../bash-blocks';
+import { Daily } from '../types/daily';
+import { ConditionIcon } from './condition-icon';
+import { Temperature } from './temperature';
 
 // Sort order of props
 type DailyPartial = Omit<

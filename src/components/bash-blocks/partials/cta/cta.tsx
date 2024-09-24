@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Button, ButtonProps } from '../button//index.js';
+import { Button, ButtonProps } from '../button/';
 
 export type CtaProps = {
   content: string;

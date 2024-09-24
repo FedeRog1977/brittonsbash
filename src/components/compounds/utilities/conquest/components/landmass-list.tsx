@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { compileHills, generateUniqueKey } from '../../../../../utils/index.js';
+import { compileHills, generateUniqueKey } from '../../../../../utils';
 
 type LandmassListProps = {
   id: string;

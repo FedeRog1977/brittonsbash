@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { generateUniqueKey } from '../../../../utils/index.js';
-import { Flex, Typography } from '../../basics/index.js';
+import { generateUniqueKey } from '../../../../utils';
+import { Flex, Typography } from '../../basics';
 import styles from './table.module.scss';
-import { Column } from './types/column.js';
+import { Column } from './types/column';
 
 export type ColumnTableProps = {
   leftColumn: Column;

@@ -1,1 +1,1 @@
-export * from './big-search.js';
+export * from './big-search';

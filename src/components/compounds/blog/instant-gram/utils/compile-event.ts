@@ -1,8 +1,8 @@
-import { toSum, toFeet, toMiles } from '../../../../../utils/index.js';
-import { DataContentResponse } from '../../../../bash-blocks/index.js';
-import { Event } from '../types/event.js';
-import { CompiledEvent } from '../types/compiled-event.js';
-import { Project } from '../../sport/types/project.js';
+import { toSum, toFeet, toMiles } from '../../../../../utils';
+import { DataContentResponse } from '../../../../bash-blocks';
+import { Event } from '../types/event';
+import { CompiledEvent } from '../types/compiled-event';
+import { Project } from '../../sport/types/project';
 
 export const compileEvent = (event: Event, sport: Project[], showSport: boolean) => {
   const names: string[] = [];

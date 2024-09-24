@@ -1,7 +1,7 @@
-import { Button, Flex, FlexItem, Tile } from '../../../../bash-blocks/index.js';
+import { Button, Flex, FlexItem, Tile } from '../../../../bash-blocks';
 import { FC } from 'react';
-import { SearchList } from './search-list.js';
-import { Food } from '../types/food.js';
+import { SearchList } from './search-list';
+import { Food } from '../types/food';
 
 export type SearchTileProps = {
   funcCategory: (value: string) => void;

@@ -1,12 +1,12 @@
 import { ReactNode } from 'react';
-import { FootnoteTile, PageLayout } from '../../bash-blocks/index.js';
+import { FootnoteTile, PageLayout } from '../../bash-blocks';
 import {
   ResultTile,
   SearchTile,
   brittonsFoodRCContent,
   useBrittonsFoodRC,
-} from '../../compounds/blog/brittons-foodrc/index.js';
-import { Food } from '../../compounds/blog/brittons-foodrc/types/food.js';
+} from '../../compounds/blog/brittons-foodrc';
+import { Food } from '../../compounds/blog/brittons-foodrc/types/food';
 
 export const BrittonsFoodRC = () => {
   const {

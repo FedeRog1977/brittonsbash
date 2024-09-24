@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { Flex, Tile, Typography } from '../../../../bash-blocks/index.js';
-import { WeatherDaily } from './daily.js';
-import { isMobile } from '../../../../../utils/index.js';
+import { Flex, Tile, Typography } from '../../../../bash-blocks';
+import { WeatherDaily } from './daily';
+import { isMobile } from '../../../../../utils';
 
 type ResultTileProps = {
   title: string;

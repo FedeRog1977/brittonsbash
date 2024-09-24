@@ -5,9 +5,9 @@ import {
   SpacingConfig,
   getResponsiveAlignmentClassNames,
   getResponsiveSpacingClassNames,
-} from '../../reference/index.js';
-import { JustifyConfig } from '../../reference/types/justify-config.js';
-import { AlignConfig } from '../../reference/types/align-config.js';
+} from '../../reference';
+import { JustifyConfig } from '../../reference/types/justify-config';
+import { AlignConfig } from '../../reference/types/align-config';
 
 // Reminder: https://developer.mozilla.org/en-US/docs/Web/CSS/grid
 // Reminder: https://css-tricks.com/snippets/css/complete-guide-grid/

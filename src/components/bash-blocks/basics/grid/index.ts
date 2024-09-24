@@ -1,2 +1,2 @@
-export * from './grid.js';
-export * from './grid-item.js';
+export * from './grid';
+export * from './grid-item';

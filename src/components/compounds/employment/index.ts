@@ -1,1 +1,1 @@
-export * from './content/employment.js';
+export * from './content/employment';

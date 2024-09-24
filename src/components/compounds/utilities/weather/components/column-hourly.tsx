@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import { toDate, toPrecipitation, toBearing, toSpeed } from '../../../../../utils/index.js';
-import { Flex, FlexItem, Typography } from '../../../../bash-blocks/index.js';
-import { Hourly } from '../types/hourly.js';
-import { ConditionIcon } from './condition-icon.js';
-import { Temperature } from './temperature.js';
+import { toDate, toPrecipitation, toBearing, toSpeed } from '../../../../../utils';
+import { Flex, FlexItem, Typography } from '../../../../bash-blocks';
+import { Hourly } from '../types/hourly';
+import { ConditionIcon } from './condition-icon';
+import { Temperature } from './temperature';
 
 // Sort order of props
 type HourlyPartial = Omit<

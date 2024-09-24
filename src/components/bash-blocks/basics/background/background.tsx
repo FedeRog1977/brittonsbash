@@ -1,8 +1,8 @@
 import cx from 'classnames';
 import { FC, ReactNode } from 'react';
 import styles from './background.module.scss';
-import { toUpperCase } from '../../../../utils/index.js';
-import { Color } from '../../reference/index.js';
+import { toUpperCase } from '../../../../utils';
+import { Color } from '../../reference';
 
 export type BackgroundProps = {
   children: ReactNode;

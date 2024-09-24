@@ -1,13 +1,13 @@
 import { ReactNode } from 'react';
-import { ArticleTile, PageLayout } from '../bash-blocks/index.js';
-import { libraryContent } from '../compounds/library/index.js';
+import { ArticleTile, PageLayout } from '../bash-blocks';
+import { libraryContent } from '../compounds/library';
 
 export const Library = () => {
   const content: ReactNode[] = [
     <ArticleTile {...libraryContent.tileOne} />,
     <ArticleTile {...libraryContent.tileTwo} />,
     <ArticleTile {...libraryContent.tileThree} />,
-    // <ArticleTile {...libraryContent.tileFour} />,
+    <ArticleTile {...libraryContent.tileFour} />,
   ];
 
   return <PageLayout background={libraryContent.background}>{content}</PageLayout>;

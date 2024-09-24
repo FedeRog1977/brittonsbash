@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { ImageMatrix, ImageMatrixProps } from '../../../partials/index.js';
+import { ImageMatrix, ImageMatrixProps } from '../../../partials';
 
 export type ImagesProps = { items: ImageMatrixProps['items'] };
 

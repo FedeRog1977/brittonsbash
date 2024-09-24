@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { isMobile, useShowElement } from '../../../../../utils/index.js';
+import { isMobile, useShowElement } from '../../../../../utils';
 import {
   ArticlePreface,
   Button,
@@ -10,10 +10,10 @@ import {
   Modal,
   Tile,
   Typography,
-} from '../../../../bash-blocks/index.js';
+} from '../../../../bash-blocks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import { Food } from '../types/food.js';
+import { Food } from '../types/food';
 
 type ResultTileProps = {
   food: Food;

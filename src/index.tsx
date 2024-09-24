@@ -21,20 +21,13 @@ import {
   GraphicDesign,
   Weather,
   Conquest,
-} from './components/index.js';
-import { reportWebVitals } from './utils/index.js';
-import {
-  useEvents,
-  useHills,
-  // useLinks,
-  useRegions,
-  useSport,
-} from './api/index.js';
+} from './components';
+import { reportWebVitals } from './utils';
+import { useEvents, useHills, useRegions, useSport } from './api';
 
 const TriggerSession = () => {
   useEvents();
   useHills();
-  // useLinks();
   useRegions();
   useSport();
 };

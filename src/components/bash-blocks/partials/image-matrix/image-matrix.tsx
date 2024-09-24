@@ -1,9 +1,9 @@
-import { generateUniqueKey, useShowElement } from '../../../../utils/index.js';
+import { generateUniqueKey, useShowElement } from '../../../../utils';
 import styles from './image-matrix.module.scss';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { Flex, FlexItem, Image, Typography } from '../../basics/index.js';
-import { ColumnSpan, Img } from '../../reference/index.js';
-import { Modal } from '../../blocks/index.js';
+import { Flex, FlexItem, Image, Typography } from '../../basics';
+import { ColumnSpan, Img } from '../../reference';
+import { Modal } from '../../blocks';
 import { FC, useState } from 'react';
 
 export type ImageMatrixProps = {

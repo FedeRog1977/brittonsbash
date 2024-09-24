@@ -1,8 +1,4 @@
-import {
-  ArticleTileProps,
-  PageBackgroundProps,
-  TitleTileProps,
-} from '../../../bash-blocks/index.js';
+import { ArticleTileProps, PageBackgroundProps, TitleTileProps } from '../../../bash-blocks';
 
 type AcademiaProps = {
   background: PageBackgroundProps;
