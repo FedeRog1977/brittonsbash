@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
     "jsx": "react-jsx",
-    "incremental": true,
-    "target": "ESNext",
+    // "incremental": true,
+    // "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "NodeNext",
-    "resolveJsonModule": true,
+    // "resolveJsonModule": true,
     "allowJs": true,
     "declaration": true,
     "declarationMap": true,
@@ -18,6 +18,15 @@
     "skipLibCheck": true,
     "preserveWatchOutput": true
   },
-  "include": ["./src/**/*"],
+  // "compilerOptions": {
+  //   "target": "es5",
+  //   "lib": ["dom", "dom.iterable", "esnext"],
+  //   "allowJs": true,
+  //   "skipLibCheck": true,
+  //   "esModuleInterop": true,
+  //   "noEmit": true,
+  //   "jsx": "react-jsx"
+  // },
+  "include": ["./src/**", "./src/index.tsx"],
   "exclude": ["node_modules"]
 }
