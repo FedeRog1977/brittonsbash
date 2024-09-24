@@ -25,6 +25,8 @@ import {
 import { reportWebVitals } from './utils';
 import { useEvents, useHills, useRegions, useSport } from './api';
 
+// TODO: replace all of these with their according
+// services and implementations
 const TriggerSession = () => {
   useEvents();
   useHills();

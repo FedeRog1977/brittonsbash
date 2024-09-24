@@ -1,15 +1,14 @@
 import { UrlGroup } from '../utils/types';
 
-type BrittonsBashContentService = {
+type BrittonsBashContent = {
   getLinks: () => Promise<UrlGroup[]>;
 };
 
-export class ClientBrittonsBashContentService implements BrittonsBashContentService {
-  // Base URL: https://raw.githubusercontent.com/FedeRog1977
+export class BrittonsBashContentClient implements BrittonsBashContent {
   private readonly baseUrl: string;
 
   private get linksUrl(): string {
-    return `${this.baseUrl}/brittonsbash-content/master/data/links.data.json`;
+    return `${this.baseUrl}links.data.json`;
   }
 
   public constructor(baseUrl: string) {

@@ -16,7 +16,6 @@ export const SearchList: FC<SearchListProps> = ({ funcSelect, items }) => (
           key={generateUniqueKey(index)}
           variant="clear"
           typeVariant="h4"
-          typeFontFamily="instagram"
           value={names.join(' - ')}
           func={funcSelect}
           width="full"

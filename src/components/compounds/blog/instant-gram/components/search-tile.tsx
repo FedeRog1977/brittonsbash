@@ -49,7 +49,6 @@ export const SearchTile: FC<SearchTileProps> = ({
             variant="clear"
             typeVariant="t1"
             typeColor={Boolean(showSearchList && is2024) ? 'lightBlue' : undefined}
-            typeFontFamily="instagram"
             content="2024"
             value="2024"
             func={() => {
@@ -64,7 +63,6 @@ export const SearchTile: FC<SearchTileProps> = ({
             variant="clear"
             typeVariant="t1"
             typeColor={Boolean(showSearchList && is2023) ? 'lightBlue' : undefined}
-            typeFontFamily="instagram"
             content="2023"
             value="2023"
             func={() => {
@@ -79,7 +77,6 @@ export const SearchTile: FC<SearchTileProps> = ({
             variant="clear"
             typeVariant="t1"
             typeColor={Boolean(showSearchList && is2022) ? 'lightBlue' : undefined}
-            typeFontFamily="instagram"
             content="2022"
             value="2022"
             func={() => {
@@ -94,7 +91,6 @@ export const SearchTile: FC<SearchTileProps> = ({
             variant="clear"
             typeVariant="t1"
             typeColor={Boolean(showSearchList && is2021) ? 'lightBlue' : undefined}
-            typeFontFamily="instagram"
             content="2021"
             value="2021"
             func={() => {
@@ -109,7 +105,6 @@ export const SearchTile: FC<SearchTileProps> = ({
             variant="clear"
             typeVariant="t1"
             typeColor={Boolean(showSearchList && is2020) ? 'lightBlue' : undefined}
-            typeFontFamily="instagram"
             content="2020"
             value="2020"
             func={() => {

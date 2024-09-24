@@ -1,4 +1,4 @@
-import { brittonsBashContentFacade } from '../../../../new-facades/brittonsbash-content-facade';
+import { brittonsBashContentFacade } from '../../../../new-implementations';
 import { ArticleTileProps, PageBackgroundProps } from '../../../bash-blocks';
 
 type LibraryProps = {

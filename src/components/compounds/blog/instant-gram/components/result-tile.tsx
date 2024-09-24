@@ -38,36 +38,31 @@ export const ResultTile: FC<ResultTileProps> = ({
     <Tile type="solid">
       <Flex direction="vertical" gap={isMobile() ? 'xs' : 'md'}>
         {compiledEvent.prefix ? (
-          <Typography variant="t1" fontFamily="instagram" textAlign="center">
-            {compiledEvent.prefix}:
-          </Typography>
+          <Typography variant="t1">{compiledEvent.prefix}:</Typography>
         ) : null}
 
-        {compiledEvent.names.length > 1 ? (
-          compiledEvent.names.map((name, index) => (
-            <Flex
-              key={generateUniqueKey(index)}
-              direction="horizontal"
-              alignHorizontal="center"
-              gap="xs"
-            >
-              <Typography variant="t1" fontFamily="instagram" color="mediumGrey" textAlign="right">
-                Part&nbsp;
-                {index + 1}&nbsp;
-              </Typography>
+        <Flex direction="vertical" rowGap="3xs">
+          {compiledEvent.names.length > 1 ? (
+            compiledEvent.names.map((name, index) => (
+              <Flex key={generateUniqueKey(index)} direction="horizontal" gap="xs">
+                <Typography variant="h1" color="mediumGrey" textAlign="right">
+                  Part&nbsp;
+                  {index + 1}
+                </Typography>
 
-              <Typography variant="t1" fontFamily="instagram" textAlign="left" markdown>
-                {name}
-              </Typography>
-            </Flex>
-          ))
-        ) : (
-          <Typography variant="t1" fontFamily="instagram" textAlign="center" markdown>
-            {compiledEvent.names[0]}
-          </Typography>
-        )}
+                <Typography variant="h1" textAlign="left" markdown>
+                  {name}
+                </Typography>
+              </Flex>
+            ))
+          ) : (
+            <Typography variant="t1" markdown>
+              {compiledEvent.names[0]}
+            </Typography>
+          )}
+        </Flex>
 
-        <Typography variant="h4" fontFamily="instagram" color="mediumGrey" textAlign="center">
+        <Typography variant="h4" color="mediumGrey">
           {compiledEvent.startDate}
           {compiledEvent.endDate ? <>&nbsp;&#8212;&nbsp;{compiledEvent.endDate}</> : null}
         </Typography>
