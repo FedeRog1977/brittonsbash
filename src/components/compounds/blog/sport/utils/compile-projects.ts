@@ -1,11 +1,7 @@
-import { getSessionItem } from '../../../../../utils/api';
-import {
-  removeDuplicates,
-  toMiles,
-  toFeet,
-} from '../../../../../utils/helpers';
-import { CompiledProject } from '../types/compiled-project';
-import { Project } from '../types/project';
+import { getSessionItem } from '../../../../../utils/api/index.js';
+import { removeDuplicates, toMiles, toFeet } from '../../../../../utils/index.js';
+import { CompiledProject } from '../types/compiled-project.js';
+import { Project } from '../types/project.js';
 
 // TODO: make this fix
 // type CompiledProjects = {
@@ -908,9 +904,7 @@ export const compileProjects = () => {
   };
 
   const distance: CompiledProject['distance'] = {
-    total: toMiles(
-      distance2024 + distance2023 + distance2022 + distance2021 + distance2020
-    ),
+    total: toMiles(distance2024 + distance2023 + distance2022 + distance2021 + distance2020),
     2024: toMiles(distance2024),
     2023: toMiles(distance2023),
     2022: toMiles(distance2022),
@@ -919,13 +913,7 @@ export const compileProjects = () => {
   };
 
   const elevation: CompiledProject['elevation'] = {
-    total: toFeet(
-      elevation2024 +
-        elevation2023 +
-        elevation2022 +
-        elevation2021 +
-        elevation2020
-    ),
+    total: toFeet(elevation2024 + elevation2023 + elevation2022 + elevation2021 + elevation2020),
     2024: toFeet(elevation2024),
     2023: toFeet(elevation2023),
     2022: toFeet(elevation2022),

@@ -8,17 +8,14 @@ import {
   Typography,
   RowTable,
   RowTableProps,
-} from '../../../../bash-blocks';
-import {
-  useShowElement,
-  generateUniqueKey,
-  isMobile,
-} from '../../../../../utils';
+  Flex,
+  Grid,
+} from '../../../../bash-blocks/index.js';
+import { useShowElement, generateUniqueKey, isMobile } from '../../../../../utils/index.js';
 import { FC } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import { Flex, Grid } from '../../../../bash-blocks/basics';
-import { CompiledEvent } from '../types/compiled-event';
+import { CompiledEvent } from '../types/compiled-event.js';
 
 type ResultTileProps = {
   compiledEvent: CompiledEvent;
@@ -35,8 +32,7 @@ export const ResultTile: FC<ResultTileProps> = ({
   showDescription,
   showMatrix,
 }) => {
-  const { showElement: showModal, setShowElement: setShowModal } =
-    useShowElement();
+  const { showElement: showModal, setShowElement: setShowModal } = useShowElement();
 
   return (
     <Tile type="solid">
@@ -55,47 +51,25 @@ export const ResultTile: FC<ResultTileProps> = ({
               alignHorizontal="center"
               gap="xs"
             >
-              <Typography
-                variant="t1"
-                fontFamily="instagram"
-                color="mediumGrey"
-                textAlign="right"
-              >
+              <Typography variant="t1" fontFamily="instagram" color="mediumGrey" textAlign="right">
                 Part&nbsp;
                 {index + 1}&nbsp;
               </Typography>
 
-              <Typography
-                variant="t1"
-                fontFamily="instagram"
-                textAlign="left"
-                markdown
-              >
+              <Typography variant="t1" fontFamily="instagram" textAlign="left" markdown>
                 {name}
               </Typography>
             </Flex>
           ))
         ) : (
-          <Typography
-            variant="t1"
-            fontFamily="instagram"
-            textAlign="center"
-            markdown
-          >
+          <Typography variant="t1" fontFamily="instagram" textAlign="center" markdown>
             {compiledEvent.names[0]}
           </Typography>
         )}
 
-        <Typography
-          variant="h4"
-          fontFamily="instagram"
-          color="mediumGrey"
-          textAlign="center"
-        >
+        <Typography variant="h4" fontFamily="instagram" color="mediumGrey" textAlign="center">
           {compiledEvent.startDate}
-          {compiledEvent.endDate ? (
-            <>&nbsp;&#8212;&nbsp;{compiledEvent.endDate}</>
-          ) : null}
+          {compiledEvent.endDate ? <>&nbsp;&#8212;&nbsp;{compiledEvent.endDate}</> : null}
         </Typography>
 
         {compiledEvent.showSport ? (
@@ -120,9 +94,7 @@ export const ResultTile: FC<ResultTileProps> = ({
 
         {showDescription ? (
           <>
-            {compiledEvent.features ? (
-              <ArticlePreface entries={compiledEvent.features} />
-            ) : null}
+            {compiledEvent.features ? <ArticlePreface entries={compiledEvent.features} /> : null}
 
             <Typography variant="body" textAlign="justify" markdown>
               {compiledEvent.description}

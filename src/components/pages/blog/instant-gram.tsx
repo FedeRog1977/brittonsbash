@@ -1,12 +1,12 @@
 import { ReactNode } from 'react';
-import { FootnoteTile, PageLayout } from '../../bash-blocks';
+import { FootnoteTile, PageLayout } from '../../bash-blocks/index.js';
 import {
   instantGramContent,
   SearchTile,
   ResultTile,
   useInstantGram,
-} from '../../compounds/blog/instant-gram';
-import { useEvents } from '../../../api';
+} from '../../compounds/blog/instant-gram/index.js';
+import { useEvents } from '../../../api/index.js';
 
 export const InstantGram = () => {
   useEvents();
@@ -54,9 +54,5 @@ export const InstantGram = () => {
     <FootnoteTile {...instantGramContent.tileOne} />,
   ];
 
-  return (
-    <PageLayout background={instantGramContent.background}>
-      {content}
-    </PageLayout>
-  );
+  return <PageLayout background={instantGramContent.background}>{content}</PageLayout>;
 };

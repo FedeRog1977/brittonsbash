@@ -1,7 +1,22 @@
 {
-  "extends": "./src/new-config/typescript/tsconfig.json",
   "compilerOptions": {
-    "outDir": "./dist"
+    "jsx": "react-jsx",
+    "incremental": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "NodeNext",
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "skipLibCheck": true,
+    "preserveWatchOutput": true
   },
   "include": ["./src/**/*"],
   "exclude": ["node_modules"]

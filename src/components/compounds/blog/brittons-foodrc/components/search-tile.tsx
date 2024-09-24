@@ -1,7 +1,7 @@
-import { Button, Flex, FlexItem, Tile } from '../../../../bash-blocks';
+import { Button, Flex, FlexItem, Tile } from '../../../../bash-blocks/index.js';
 import { FC } from 'react';
-import { SearchList } from './search-list';
-import { Food } from '../types/food';
+import { SearchList } from './search-list.js';
+import { Food } from '../types/food.js';
 
 export type SearchTileProps = {
   funcCategory: (value: string) => void;
@@ -37,9 +37,7 @@ export const SearchTile: FC<SearchTileProps> = ({
           <Button
             variant="clear"
             typeVariant="t1"
-            typeColor={
-              Boolean(showSearchList && isMeat) ? 'lightBlue' : undefined
-            }
+            typeColor={Boolean(showSearchList && isMeat) ? 'lightBlue' : undefined}
             typeFontFamily="calligraphy"
             content="Meat"
             func={() => funcCategory('Meat')}
@@ -51,9 +49,7 @@ export const SearchTile: FC<SearchTileProps> = ({
           <Button
             variant="clear"
             typeVariant="t1"
-            typeColor={
-              Boolean(showSearchList && isPoultry) ? 'lightBlue' : undefined
-            }
+            typeColor={Boolean(showSearchList && isPoultry) ? 'lightBlue' : undefined}
             typeFontFamily="calligraphy"
             content="Poultry"
             func={() => funcCategory('Poultry')}
@@ -65,9 +61,7 @@ export const SearchTile: FC<SearchTileProps> = ({
           <Button
             variant="clear"
             typeVariant="t1"
-            typeColor={
-              Boolean(showSearchList && isFish) ? 'lightBlue' : undefined
-            }
+            typeColor={Boolean(showSearchList && isFish) ? 'lightBlue' : undefined}
             typeFontFamily="calligraphy"
             content="Fish"
             func={() => funcCategory('Fish')}
@@ -79,9 +73,7 @@ export const SearchTile: FC<SearchTileProps> = ({
           <Button
             variant="clear"
             typeVariant="t1"
-            typeColor={
-              Boolean(showSearchList && isPasta) ? 'lightBlue' : undefined
-            }
+            typeColor={Boolean(showSearchList && isPasta) ? 'lightBlue' : undefined}
             typeFontFamily="calligraphy"
             content="Pasta"
             func={() => funcCategory('Pasta')}
@@ -93,9 +85,7 @@ export const SearchTile: FC<SearchTileProps> = ({
           <Button
             variant="clear"
             typeVariant="t1"
-            typeColor={
-              Boolean(showSearchList && isBread) ? 'lightBlue' : undefined
-            }
+            typeColor={Boolean(showSearchList && isBread) ? 'lightBlue' : undefined}
             typeFontFamily="calligraphy"
             content="Bread"
             func={() => funcCategory('Bread')}
@@ -107,9 +97,7 @@ export const SearchTile: FC<SearchTileProps> = ({
           <Button
             variant="clear"
             typeVariant="t1"
-            typeColor={
-              Boolean(showSearchList && isSweet) ? 'lightBlue' : undefined
-            }
+            typeColor={Boolean(showSearchList && isSweet) ? 'lightBlue' : undefined}
             typeFontFamily="calligraphy"
             content="Sweet"
             func={() => funcCategory('Sweet')}
@@ -121,9 +109,7 @@ export const SearchTile: FC<SearchTileProps> = ({
           <Button
             variant="clear"
             typeVariant="t1"
-            typeColor={
-              Boolean(showSearchList && isMisc) ? 'lightBlue' : undefined
-            }
+            typeColor={Boolean(showSearchList && isMisc) ? 'lightBlue' : undefined}
             typeFontFamily="calligraphy"
             content="Misc"
             func={() => funcCategory('Misc')}
@@ -132,9 +118,7 @@ export const SearchTile: FC<SearchTileProps> = ({
         </FlexItem>
       </Flex>
 
-      {showSearchList ? (
-        <SearchList funcSelect={funcSelect} items={foodData} />
-      ) : null}
+      {showSearchList ? <SearchList funcSelect={funcSelect} items={foodData} /> : null}
     </Flex>
   </Tile>
 );

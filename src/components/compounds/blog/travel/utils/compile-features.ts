@@ -1,6 +1,6 @@
-import { getSessionItem, removeDuplicates } from '../../../../../utils';
-import { Event } from '../../instant-gram/types/event';
-import { Features } from '../../instant-gram/types/features';
+import { getSessionItem, removeDuplicates } from '../../../../../utils/index.js';
+import { Event } from '../../instant-gram/types/event.js';
+import { Features } from '../../instant-gram/types/features.js';
 
 export const compileFeatures = () => {
   const events = getSessionItem('response-events');

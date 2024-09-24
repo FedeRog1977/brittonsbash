@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { isMobile, useShowElement } from '../../../../../utils';
+import { isMobile, useShowElement } from '../../../../../utils/index.js';
 import {
   ArticlePreface,
   Button,
@@ -10,10 +10,10 @@ import {
   Modal,
   Tile,
   Typography,
-} from '../../../../bash-blocks';
+} from '../../../../bash-blocks/index.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import { Food } from '../types/food';
+import { Food } from '../types/food.js';
 
 type ResultTileProps = {
   food: Food;
@@ -28,8 +28,7 @@ export const ResultTile: FC<ResultTileProps> = ({
   showDescription,
   showMatrix,
 }) => {
-  const { showElement: showModal, setShowElement: setShowModal } =
-    useShowElement();
+  const { showElement: showModal, setShowElement: setShowModal } = useShowElement();
 
   return (
     <Tile type="solid">

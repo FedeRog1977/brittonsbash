@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ImageTile as ImageTileComponent } from '../components/bash-blocks';
+import { ImageTile as ImageTileComponent } from '../components/bash-blocks/index.js';
 
 const meta = {
   title: 'Blocks / ImageTile',

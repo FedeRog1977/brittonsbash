@@ -1,4 +1,4 @@
-import { Food } from '../types/food';
+import { Food } from '../types/food.js';
 
 export const emptyFoodData: Food[] = [
   {

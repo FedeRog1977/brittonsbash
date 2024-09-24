@@ -1,4 +1,4 @@
-import { isMobile } from '../../../../../utils';
+import { isMobile } from '../../../../../utils/index.js';
 import {
   Typography,
   Tile,
@@ -6,7 +6,7 @@ import {
   Button,
   ColumnTableProps,
   Flex,
-} from '../../../../bash-blocks';
+} from '../../../../bash-blocks/index.js';
 import { FC } from 'react';
 
 export type ResultTileProps = {
@@ -44,12 +44,7 @@ export const ResultTile: FC<ResultTileProps> = ({
         {title}
       </Typography>
 
-      <Typography
-        variant="h4"
-        fontFamily="sport"
-        color="mediumGrey"
-        textAlign="center"
-      >
+      <Typography variant="h4" fontFamily="sport" color="mediumGrey" textAlign="center">
         {subTitle}
       </Typography>
 
@@ -61,19 +56,13 @@ export const ResultTile: FC<ResultTileProps> = ({
         Summary
       </Typography>
 
-      <ColumnTable
-        leftColumn={summary.leftColumn}
-        rightColumns={summary.rightColumns}
-      />
+      <ColumnTable leftColumn={summary.leftColumn} rightColumns={summary.rightColumns} />
 
       <Typography variant="h2" fontFamily="sport">
         Routes
       </Typography>
 
-      <ColumnTable
-        leftColumn={routes.leftColumn}
-        rightColumns={routes.rightColumns}
-      />
+      <ColumnTable leftColumn={routes.leftColumn} rightColumns={routes.rightColumns} />
 
       <Flex direction="horizontal" alignHorizontal="apart" wrap>
         <Button
@@ -127,10 +116,7 @@ export const ResultTile: FC<ResultTileProps> = ({
         />
       </Flex>
 
-      <ColumnTable
-        leftColumn={activities.leftColumn}
-        rightColumns={activities.rightColumns}
-      />
+      <ColumnTable leftColumn={activities.leftColumn} rightColumns={activities.rightColumns} />
     </Flex>
   </Tile>
 );

@@ -1,14 +1,9 @@
 import { FC } from 'react';
-import {
-  toDate,
-  toPrecipitation,
-  toBearing,
-  toSpeed,
-} from '../../../../../utils';
-import { Flex, Typography } from '../../../../bash-blocks';
-import { Hourly } from '../types/hourly';
-import { ConditionIcon } from './condition-icon';
-import { Temperature } from './temperature';
+import { toDate, toPrecipitation, toBearing, toSpeed } from '../../../../../utils/index.js';
+import { Flex, Typography } from '../../../../bash-blocks/index.js';
+import { Hourly } from '../types/hourly.js';
+import { ConditionIcon } from './condition-icon.js';
+import { Temperature } from './temperature.js';
 
 // Sort order of props
 type HourlyPartial = Omit<
@@ -42,11 +37,7 @@ export const ColumnHourlyDense: FC<ColumnHourlyDenseProps> = ({
 }) => {
   const { hour } = toDate(dt);
   const precipitation = toPrecipitation(pop);
-  const {
-    bearingFormatted: bearing,
-    bearingCompass,
-    bearingArrow,
-  } = toBearing(windDeg);
+  const { bearingFormatted: bearing, bearingCompass, bearingArrow } = toBearing(windDeg);
   const speed = toSpeed(windSpeed, true);
   const gusts = toSpeed(windGust, true);
 

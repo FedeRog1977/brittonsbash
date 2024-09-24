@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
-import { ArticleTile, PageLayout, TitleTile } from '../bash-blocks';
-import { employmentContent } from '../compounds/employment';
+import { ArticleTile, PageLayout, TitleTile } from '../bash-blocks/index.js';
+import { employmentContent } from '../compounds/employment/index.js';
 
 export const Employment = () => {
   const content: ReactNode[] = [
@@ -9,7 +9,5 @@ export const Employment = () => {
     <ArticleTile {...employmentContent.tileThree} />,
   ];
 
-  return (
-    <PageLayout background={employmentContent.background}>{content}</PageLayout>
-  );
+  return <PageLayout background={employmentContent.background}>{content}</PageLayout>;
 };

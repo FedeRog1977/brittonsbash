@@ -1,7 +1,4 @@
-import {
-  PageBackgroundProps,
-  FootnoteTileProps,
-} from '../../../../bash-blocks';
+import { PageBackgroundProps, FootnoteTileProps } from '../../../../bash-blocks/index.js';
 
 type InstantGramProps = {
   background: PageBackgroundProps;

@@ -3,8 +3,8 @@ import {
   SearchTile,
   useWeather,
   weatherContent,
-} from '../../compounds/utilities/weather';
-import { FootnoteTile, PageLayout } from '../../bash-blocks';
+} from '../../compounds/utilities/weather/index.js';
+import { FootnoteTile, PageLayout } from '../../bash-blocks/index.js';
 import { ReactNode } from 'react';
 
 export const Weather = () => {
@@ -19,16 +19,10 @@ export const Weather = () => {
   } = useWeather();
 
   const content: ReactNode[] = [
-    <SearchTile
-      funcInput={handleInput}
-      funcButton={executeInput}
-      funcSelect={handleSelect}
-    />,
-    <ResultTitle title={title} subTitle={subTitle} lat={lat} lon={lon} />,
+    <SearchTile funcInput={handleInput} funcButton={executeInput} funcSelect={handleSelect} />,
+    <ResultTitle title={title} subTitle={subTitle} lat={lat as number} lon={lon as number} />,
     <FootnoteTile {...weatherContent.tileOne} />,
   ];
 
-  return (
-    <PageLayout background={weatherContent.background}>{content}</PageLayout>
-  );
+  return <PageLayout background={weatherContent.background}>{content}</PageLayout>;
 };

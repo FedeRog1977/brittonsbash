@@ -5,11 +5,11 @@ import {
   toBearing,
   toSpeed,
   toSentenceCase,
-} from '../../../../../utils';
-import { Flex, FlexItem, Typography } from '../../../../bash-blocks';
-import { Daily } from '../types/daily';
-import { ConditionIcon } from './condition-icon';
-import { Temperature } from './temperature';
+} from '../../../../../utils/index.js';
+import { Flex, FlexItem, Typography } from '../../../../bash-blocks/index.js';
+import { Daily } from '../types/daily.js';
+import { ConditionIcon } from './condition-icon.js';
+import { Temperature } from './temperature.js';
 
 // TODO: sort order of props
 type DailyPartial = Omit<
@@ -41,11 +41,7 @@ export const ColumnDaily: FC<ColumnDailyProps> = ({
   const precipitation = toPrecipitation(pop);
   const { time: sunrise } = toDate(sr);
   const { time: sunset } = toDate(ss);
-  const {
-    bearingFormatted: bearing,
-    bearingCompass,
-    bearingArrow,
-  } = toBearing(windDeg);
+  const { bearingFormatted: bearing, bearingCompass, bearingArrow } = toBearing(windDeg);
   const speed = toSpeed(windSpeed, true);
 
   return (
@@ -54,9 +50,7 @@ export const ColumnDaily: FC<ColumnDailyProps> = ({
         <Typography variant="h4">{weekday}</Typography>
         <Typography variant="body">{dayOfMonth}</Typography>
         <ConditionIcon variant={icon} />
-        <Typography variant="body">
-          {`${precipitation} ${toSentenceCase(description)}`}
-        </Typography>
+        <Typography variant="body">{`${precipitation} ${toSentenceCase(description)}`}</Typography>
       </Flex>
 
       <Flex direction="vertical" alignHorizontal="center" gap="2xs">
@@ -88,12 +82,8 @@ export const ColumnDaily: FC<ColumnDailyProps> = ({
       </Flex>
 
       <Flex direction="vertical" alignHorizontal="center" gap="2xs">
-        <Typography variant="footnote">
-          {`Pressure: ${pressure + 'mb'}`}
-        </Typography>
-        <Typography variant="footnote">
-          {`Humidity: ${humidity + '%'}`}
-        </Typography>
+        <Typography variant="footnote">{`Pressure: ${pressure + 'mb'}`}</Typography>
+        <Typography variant="footnote">{`Humidity: ${humidity + '%'}`}</Typography>
         <Typography variant="footnote">{`Dew Pt.: ${dp}`}</Typography>
         <Typography variant="footnote">{`UV Index: ${uvi}`}</Typography>
       </Flex>

@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { compileBrittonsFoodRC } from './compile-brittons-foodrc';
-import { isMobile, useShowElement } from '../../../../../utils';
-import { emptyFoodData } from '../mocks/empty-food-data';
-import { brittonsFoodRCContent } from '../content/brittons-foodrc';
+import { compileBrittonsFoodRC } from './compile-brittons-foodrc.js';
+import { isMobile, useShowElement } from '../../../../../utils/index.js';
+import { emptyFoodData } from '../mocks/empty-food-data.js';
+import { brittonsFoodRCContent } from '../content/brittons-foodrc.js';
 
 export const useBrittonsFoodRC = () => {
   const allFood = compileBrittonsFoodRC();
@@ -16,8 +16,7 @@ export const useBrittonsFoodRC = () => {
   const [isSweet, setIsSweet] = useState(false);
   const [isMisc, setIsMisc] = useState(false);
 
-  const { showElement: showSearchList, setShowElement: setShowSearchList } =
-    useShowElement();
+  const { showElement: showSearchList, setShowElement: setShowSearchList } = useShowElement();
   const [foodData, setFoodData] = useState(emptyFoodData);
 
   const handleCategory = (value: string) => {
@@ -102,7 +101,7 @@ export const useBrittonsFoodRC = () => {
 
   const handleSelect = (e: any) => {
     for (var i in allFood) {
-      const fullName = allFood[i].name;
+      const fullName = allFood[i]?.name;
 
       if (fullName === e.currentTarget.value) {
         setFood(allFood[i]);
@@ -112,10 +111,8 @@ export const useBrittonsFoodRC = () => {
     setShowSearchList(!showSearchList);
   };
 
-  const { showElement: showDescription, setShowElement: setShowDescription } =
-    useShowElement();
-  const { showElement: showMatrix, setShowElement: setShowMatrix } =
-    useShowElement();
+  const { showElement: showDescription, setShowElement: setShowDescription } = useShowElement();
+  const { showElement: showMatrix, setShowElement: setShowMatrix } = useShowElement();
 
   useEffect(() => {
     setShowMatrix(!isMobile() && true);

@@ -1,11 +1,12 @@
 import { ReactNode } from 'react';
-import { FootnoteTile, PageLayout } from '../../bash-blocks';
+import { FootnoteTile, PageLayout } from '../../bash-blocks/index.js';
 import {
   ResultTile,
   SearchTile,
   brittonsFoodRCContent,
   useBrittonsFoodRC,
-} from '../../compounds/blog/brittons-foodrc';
+} from '../../compounds/blog/brittons-foodrc/index.js';
+import { Food } from '../../compounds/blog/brittons-foodrc/types/food.js';
 
 export const BrittonsFoodRC = () => {
   const {
@@ -41,7 +42,7 @@ export const BrittonsFoodRC = () => {
       funcSelect={handleSelect}
     />,
     <ResultTile
-      food={food}
+      food={food as Food}
       funcToggleElements={handleToggleElements}
       showDescription={showDescription}
       showMatrix={showMatrix}

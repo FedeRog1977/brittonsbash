@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { toFeet, toMiles, toSpeed } from '../../../../../utils';
-import { ColumnTableProps } from '../../../../bash-blocks';
-import { Miles } from '../types/miles';
-import { Project } from '../types/project';
-import { Roadie } from '../types/roadie';
-import { compileMiles } from './compile-miles';
-import { compileProjects } from './compile-projects';
-import { compileRoadies } from './compile-roadies';
+import { toFeet, toMiles, toSpeed } from '../../../../../utils/index.js';
+import { ColumnTableProps } from '../../../../bash-blocks/index.js';
+import { Miles } from '../types/miles.js';
+import { Project } from '../types/project.js';
+import { Roadie } from '../types/roadie.js';
+import { compileMiles } from './compile-miles.js';
+import { compileProjects } from './compile-projects.js';
+import { compileRoadies } from './compile-roadies.js';
 
 export const useSport = () => {
   const compiledRoadies = compileRoadies();
@@ -91,15 +91,7 @@ export const useSport = () => {
         }
       : isProjects
         ? {
-            entries: [
-              'Unique',
-              'Total',
-              '2024',
-              '2023',
-              '2022',
-              '2021',
-              '2020',
-            ],
+            entries: ['Unique', 'Total', '2024', '2023', '2022', '2021', '2020'],
           }
         : {
             entries: ['Total', '2024', '2023', '2022', '2021', '2020'],
@@ -312,34 +304,24 @@ export const useSport = () => {
   const activities2024: ColumnTableProps = {
     leftColumn: isRoadies
       ? {
-          entries: sportData.roadies[2024].map(
-            ({ name }: Roadie | Project | Miles) => name
-          ),
+          entries: sportData.roadies[2024].map(({ name }: Roadie | Project | Miles) => name),
         }
       : isProjects
         ? {
-            entries: sportData.projects[2024].map(
-              ({ name }: Roadie | Project | Miles) => name
-            ),
+            entries: sportData.projects[2024].map(({ name }: Roadie | Project | Miles) => name),
           }
         : {
-            entries: sportData.miles[2024].map(
-              ({ name }: Roadie | Project | Miles) => name
-            ),
+            entries: sportData.miles[2024].map(({ name }: Roadie | Project | Miles) => name),
           },
     rightColumns: isRoadies
       ? [
           {
             title: 'Distance',
-            entries: sportData.roadies[2024].map(({ distance }: Roadie) =>
-              toMiles(distance)
-            ),
+            entries: sportData.roadies[2024].map(({ distance }: Roadie) => toMiles(distance)),
           },
           {
             title: 'Elevation',
-            entries: sportData.roadies[2024].map(({ elevation }: Roadie) =>
-              toFeet(elevation)
-            ),
+            entries: sportData.roadies[2024].map(({ elevation }: Roadie) => toFeet(elevation)),
           },
           {
             title: 'Time',
@@ -357,35 +339,25 @@ export const useSport = () => {
         ? [
             {
               title: 'Distance',
-              entries: sportData.projects[2024].map(({ distance }: Project) =>
-                toMiles(distance)
-              ),
+              entries: sportData.projects[2024].map(({ distance }: Project) => toMiles(distance)),
             },
             {
               title: 'Elevation',
-              entries: sportData.projects[2024].map(({ elevation }: Project) =>
-                toFeet(elevation)
-              ),
+              entries: sportData.projects[2024].map(({ elevation }: Project) => toFeet(elevation)),
             },
             {
               title: 'Time',
-              entries: sportData.projects[2024].map(
-                ({ time }: Project) => time
-              ),
+              entries: sportData.projects[2024].map(({ time }: Project) => time),
             },
           ]
         : [
             {
               title: 'Distance',
-              entries: sportData.miles[2024].map(({ distance }: Miles) =>
-                toMiles(distance)
-              ),
+              entries: sportData.miles[2024].map(({ distance }: Miles) => toMiles(distance)),
             },
             {
               title: 'Elevation',
-              entries: sportData.miles[2024].map(({ elevation }: Miles) =>
-                toFeet(elevation)
-              ),
+              entries: sportData.miles[2024].map(({ elevation }: Miles) => toFeet(elevation)),
             },
             {
               title: 'Time',
@@ -397,34 +369,24 @@ export const useSport = () => {
   const activities2023: ColumnTableProps = {
     leftColumn: isRoadies
       ? {
-          entries: sportData.roadies[2023].map(
-            ({ name }: Roadie | Project | Miles) => name
-          ),
+          entries: sportData.roadies[2023].map(({ name }: Roadie | Project | Miles) => name),
         }
       : isProjects
         ? {
-            entries: sportData.projects[2023].map(
-              ({ name }: Roadie | Project | Miles) => name
-            ),
+            entries: sportData.projects[2023].map(({ name }: Roadie | Project | Miles) => name),
           }
         : {
-            entries: sportData.miles[2023].map(
-              ({ name }: Roadie | Project | Miles) => name
-            ),
+            entries: sportData.miles[2023].map(({ name }: Roadie | Project | Miles) => name),
           },
     rightColumns: isRoadies
       ? [
           {
             title: 'Distance',
-            entries: sportData.roadies[2023].map(({ distance }: Roadie) =>
-              toMiles(distance)
-            ),
+            entries: sportData.roadies[2023].map(({ distance }: Roadie) => toMiles(distance)),
           },
           {
             title: 'Elevation',
-            entries: sportData.roadies[2023].map(({ elevation }: Roadie) =>
-              toFeet(elevation)
-            ),
+            entries: sportData.roadies[2023].map(({ elevation }: Roadie) => toFeet(elevation)),
           },
           {
             title: 'Time',
@@ -442,35 +404,25 @@ export const useSport = () => {
         ? [
             {
               title: 'Distance',
-              entries: sportData.projects[2023].map(({ distance }: Project) =>
-                toMiles(distance)
-              ),
+              entries: sportData.projects[2023].map(({ distance }: Project) => toMiles(distance)),
             },
             {
               title: 'Elevation',
-              entries: sportData.projects[2023].map(({ elevation }: Project) =>
-                toFeet(elevation)
-              ),
+              entries: sportData.projects[2023].map(({ elevation }: Project) => toFeet(elevation)),
             },
             {
               title: 'Time',
-              entries: sportData.projects[2023].map(
-                ({ time }: Project) => time
-              ),
+              entries: sportData.projects[2023].map(({ time }: Project) => time),
             },
           ]
         : [
             {
               title: 'Distance',
-              entries: sportData.miles[2023].map(({ distance }: Miles) =>
-                toMiles(distance)
-              ),
+              entries: sportData.miles[2023].map(({ distance }: Miles) => toMiles(distance)),
             },
             {
               title: 'Elevation',
-              entries: sportData.miles[2023].map(({ elevation }: Miles) =>
-                toFeet(elevation)
-              ),
+              entries: sportData.miles[2023].map(({ elevation }: Miles) => toFeet(elevation)),
             },
             {
               title: 'Time',
@@ -482,34 +434,24 @@ export const useSport = () => {
   const activities2022: ColumnTableProps = {
     leftColumn: isRoadies
       ? {
-          entries: sportData.roadies[2022].map(
-            ({ name }: Roadie | Project | Miles) => name
-          ),
+          entries: sportData.roadies[2022].map(({ name }: Roadie | Project | Miles) => name),
         }
       : isProjects
         ? {
-            entries: sportData.projects[2022].map(
-              ({ name }: Roadie | Project | Miles) => name
-            ),
+            entries: sportData.projects[2022].map(({ name }: Roadie | Project | Miles) => name),
           }
         : {
-            entries: sportData.miles[2022].map(
-              ({ name }: Roadie | Project | Miles) => name
-            ),
+            entries: sportData.miles[2022].map(({ name }: Roadie | Project | Miles) => name),
           },
     rightColumns: isRoadies
       ? [
           {
             title: 'Distance',
-            entries: sportData.roadies[2022].map(({ distance }: Roadie) =>
-              toMiles(distance)
-            ),
+            entries: sportData.roadies[2022].map(({ distance }: Roadie) => toMiles(distance)),
           },
           {
             title: 'Elevation',
-            entries: sportData.roadies[2022].map(({ elevation }: Roadie) =>
-              toFeet(elevation)
-            ),
+            entries: sportData.roadies[2022].map(({ elevation }: Roadie) => toFeet(elevation)),
           },
           {
             title: 'Time',
@@ -527,35 +469,25 @@ export const useSport = () => {
         ? [
             {
               title: 'Distance',
-              entries: sportData.projects[2022].map(({ distance }: Project) =>
-                toMiles(distance)
-              ),
+              entries: sportData.projects[2022].map(({ distance }: Project) => toMiles(distance)),
             },
             {
               title: 'Elevation',
-              entries: sportData.projects[2022].map(({ elevation }: Project) =>
-                toFeet(elevation)
-              ),
+              entries: sportData.projects[2022].map(({ elevation }: Project) => toFeet(elevation)),
             },
             {
               title: 'Time',
-              entries: sportData.projects[2022].map(
-                ({ time }: Project) => time
-              ),
+              entries: sportData.projects[2022].map(({ time }: Project) => time),
             },
           ]
         : [
             {
               title: 'Distance',
-              entries: sportData.miles[2022].map(({ distance }: Miles) =>
-                toMiles(distance)
-              ),
+              entries: sportData.miles[2022].map(({ distance }: Miles) => toMiles(distance)),
             },
             {
               title: 'Elevation',
-              entries: sportData.miles[2022].map(({ elevation }: Miles) =>
-                toFeet(elevation)
-              ),
+              entries: sportData.miles[2022].map(({ elevation }: Miles) => toFeet(elevation)),
             },
             {
               title: 'Time',
@@ -567,34 +499,24 @@ export const useSport = () => {
   const activities2021: ColumnTableProps = {
     leftColumn: isRoadies
       ? {
-          entries: sportData.roadies[2021].map(
-            ({ name }: Roadie | Project | Miles) => name
-          ),
+          entries: sportData.roadies[2021].map(({ name }: Roadie | Project | Miles) => name),
         }
       : isProjects
         ? {
-            entries: sportData.projects[2021].map(
-              ({ name }: Roadie | Project | Miles) => name
-            ),
+            entries: sportData.projects[2021].map(({ name }: Roadie | Project | Miles) => name),
           }
         : {
-            entries: sportData.miles[2021].map(
-              ({ name }: Roadie | Project | Miles) => name
-            ),
+            entries: sportData.miles[2021].map(({ name }: Roadie | Project | Miles) => name),
           },
     rightColumns: isRoadies
       ? [
           {
             title: 'Distance',
-            entries: sportData.roadies[2021].map(({ distance }: Roadie) =>
-              toMiles(distance)
-            ),
+            entries: sportData.roadies[2021].map(({ distance }: Roadie) => toMiles(distance)),
           },
           {
             title: 'Elevation',
-            entries: sportData.roadies[2021].map(({ elevation }: Roadie) =>
-              toFeet(elevation)
-            ),
+            entries: sportData.roadies[2021].map(({ elevation }: Roadie) => toFeet(elevation)),
           },
           {
             title: 'Time',
@@ -612,35 +534,25 @@ export const useSport = () => {
         ? [
             {
               title: 'Distance',
-              entries: sportData.projects[2021].map(({ distance }: Project) =>
-                toMiles(distance)
-              ),
+              entries: sportData.projects[2021].map(({ distance }: Project) => toMiles(distance)),
             },
             {
               title: 'Elevation',
-              entries: sportData.projects[2021].map(({ elevation }: Project) =>
-                toFeet(elevation)
-              ),
+              entries: sportData.projects[2021].map(({ elevation }: Project) => toFeet(elevation)),
             },
             {
               title: 'Time',
-              entries: sportData.projects[2021].map(
-                ({ time }: Project) => time
-              ),
+              entries: sportData.projects[2021].map(({ time }: Project) => time),
             },
           ]
         : [
             {
               title: 'Distance',
-              entries: sportData.miles[2021].map(({ distance }: Miles) =>
-                toMiles(distance)
-              ),
+              entries: sportData.miles[2021].map(({ distance }: Miles) => toMiles(distance)),
             },
             {
               title: 'Elevation',
-              entries: sportData.miles[2021].map(({ elevation }: Miles) =>
-                toFeet(elevation)
-              ),
+              entries: sportData.miles[2021].map(({ elevation }: Miles) => toFeet(elevation)),
             },
             {
               title: 'Time',
@@ -652,34 +564,24 @@ export const useSport = () => {
   const activities2020: ColumnTableProps = {
     leftColumn: isRoadies
       ? {
-          entries: sportData.roadies[2020].map(
-            ({ name }: Roadie | Project | Miles) => name
-          ),
+          entries: sportData.roadies[2020].map(({ name }: Roadie | Project | Miles) => name),
         }
       : isProjects
         ? {
-            entries: sportData.projects[2020].map(
-              ({ name }: Roadie | Project | Miles) => name
-            ),
+            entries: sportData.projects[2020].map(({ name }: Roadie | Project | Miles) => name),
           }
         : {
-            entries: sportData.miles[2020].map(
-              ({ name }: Roadie | Project | Miles) => name
-            ),
+            entries: sportData.miles[2020].map(({ name }: Roadie | Project | Miles) => name),
           },
     rightColumns: isRoadies
       ? [
           {
             title: 'Distance',
-            entries: sportData.roadies[2020].map(({ distance }: Roadie) =>
-              toMiles(distance)
-            ),
+            entries: sportData.roadies[2020].map(({ distance }: Roadie) => toMiles(distance)),
           },
           {
             title: 'Elevation',
-            entries: sportData.roadies[2020].map(({ elevation }: Roadie) =>
-              toFeet(elevation)
-            ),
+            entries: sportData.roadies[2020].map(({ elevation }: Roadie) => toFeet(elevation)),
           },
           {
             title: 'Time',
@@ -697,35 +599,25 @@ export const useSport = () => {
         ? [
             {
               title: 'Distance',
-              entries: sportData.projects[2020].map(({ distance }: Project) =>
-                toMiles(distance)
-              ),
+              entries: sportData.projects[2020].map(({ distance }: Project) => toMiles(distance)),
             },
             {
               title: 'Elevation',
-              entries: sportData.projects[2020].map(({ elevation }: Project) =>
-                toFeet(elevation)
-              ),
+              entries: sportData.projects[2020].map(({ elevation }: Project) => toFeet(elevation)),
             },
             {
               title: 'Time',
-              entries: sportData.projects[2020].map(
-                ({ time }: Project) => time
-              ),
+              entries: sportData.projects[2020].map(({ time }: Project) => time),
             },
           ]
         : [
             {
               title: 'Distance',
-              entries: sportData.miles[2020].map(({ distance }: Miles) =>
-                toMiles(distance)
-              ),
+              entries: sportData.miles[2020].map(({ distance }: Miles) => toMiles(distance)),
             },
             {
               title: 'Elevation',
-              entries: sportData.miles[2020].map(({ elevation }: Miles) =>
-                toFeet(elevation)
-              ),
+              entries: sportData.miles[2020].map(({ elevation }: Miles) => toFeet(elevation)),
             },
             {
               title: 'Time',

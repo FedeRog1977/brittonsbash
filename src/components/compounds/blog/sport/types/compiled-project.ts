@@ -1,8 +1,5 @@
-import {
-  AggregationNumerical,
-  AggregationAlphabetical,
-} from '../../../../bash-blocks';
-import { Project } from './project';
+import { AggregationNumerical, AggregationAlphabetical } from '../../../../bash-blocks/index.js';
+import { Project } from './project.js';
 
 export type CompiledProject = {
   projects: {

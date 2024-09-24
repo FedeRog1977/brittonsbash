@@ -1,6 +1,6 @@
-import { getSessionItem, removeDuplicates } from '../../../../../utils';
-import { Img } from '../../../../bash-blocks';
-import { Event } from '../../instant-gram/types/event';
+import { getSessionItem, removeDuplicates } from '../../../../../utils/index.js';
+import { Img } from '../../../../bash-blocks/index.js';
+import { Event } from '../../instant-gram/types/event.js';
 
 export const compileImages = () => {
   const events = getSessionItem('response-events');

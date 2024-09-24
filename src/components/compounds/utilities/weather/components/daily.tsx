@@ -1,13 +1,9 @@
-import { Button, Flex, FlexItem } from '../../../../bash-blocks';
-import {
-  useShowElement,
-  generateUniqueKey,
-  isMobile,
-} from '../../../../../utils';
-import { ColumnDaily } from './column-daily';
-import { Hourly } from './hourly';
-import { ColumnDailyDense } from './column-daily-dense';
-import { useOpenWeatherCall } from '../api/open-weather';
+import { Button, Flex, FlexItem } from '../../../../bash-blocks/index.js';
+import { useShowElement, generateUniqueKey, isMobile } from '../../../../../utils/index.js';
+import { ColumnDaily } from './column-daily.js';
+import { Hourly } from './hourly.js';
+import { ColumnDailyDense } from './column-daily-dense.js';
+import { useOpenWeatherCall } from '../api/open-weather.js';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 

@@ -1,14 +1,9 @@
-import { FC, ReactElement } from 'react';
-import {
-  toDate,
-  toPrecipitation,
-  toBearing,
-  toSpeed,
-} from '../../../../../utils';
-import { Flex, Typography } from '../../../../bash-blocks';
-import { Daily } from '../types/daily';
-import { ConditionIcon } from './condition-icon';
-import { Temperature } from './temperature';
+import { FC } from 'react';
+import { toDate, toPrecipitation, toBearing, toSpeed } from '../../../../../utils/index.js';
+import { Flex, Typography } from '../../../../bash-blocks/index.js';
+import { Daily } from '../types/daily.js';
+import { ConditionIcon } from './condition-icon.js';
+import { Temperature } from './temperature.js';
 
 // Sort order of props
 type DailyPartial = Omit<
@@ -41,11 +36,7 @@ export const ColumnDailyDense: FC<ColumnDailyDenseProps> = ({
 }) => {
   const { weekdayPartial, dayOfMonthPartial } = toDate(dt);
   const precipitation = toPrecipitation(pop);
-  const {
-    bearingFormatted: bearing,
-    bearingCompass,
-    bearingArrow,
-  } = toBearing(windDeg);
+  const { bearingFormatted: bearing, bearingCompass, bearingArrow } = toBearing(windDeg);
   const speed = toSpeed(windSpeed, true);
 
   return (

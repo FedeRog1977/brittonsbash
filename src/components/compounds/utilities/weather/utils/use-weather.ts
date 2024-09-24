@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { compileHills, toCoords, toFeet } from '../../../../../utils';
+import { compileHills, toCoords, toFeet } from '../../../../../utils/index.js';
 
 export const useWeather = () => {
   const hills = compileHills();
@@ -41,11 +41,7 @@ export const useWeather = () => {
 
   const handleSelect = (e: any) => {
     for (var i in hills.munros) {
-      if (
-        hills.munros[i].name
-          .toLowerCase()
-          .includes(e.target.value.toLowerCase())
-      ) {
+      if (hills.munros[i].name.toLowerCase().includes(e.target.value.toLowerCase())) {
         setName(hills.munros[i].name.toLowerCase());
         setLat(hills.munros[i].lat);
         setLon(hills.munros[i].lon);
@@ -65,9 +61,7 @@ export const useWeather = () => {
         setLon(lon);
         setTitleLocation('Your Location');
         setSubTitle(`${latFormatted}, ${lonFormatted}`);
-      } else if (
-        hills.munros[i].name.toLowerCase().includes(searchField.toLowerCase())
-      ) {
+      } else if (hills.munros[i].name.toLowerCase().includes(searchField.toLowerCase())) {
         setName(hills.munros[i].name.toLowerCase());
         setLat(hills.munros[i].lat);
         setLon(hills.munros[i].lon);
@@ -82,9 +76,7 @@ export const useWeather = () => {
     setTitle(titleLocation);
 
     if (searchField !== '') {
-      setSubTitle(
-        `Munro at ${toFeet(elevation)} - ${latFormatted}, ${lonFormatted}`
-      );
+      setSubTitle(`Munro at ${toFeet(elevation)} - ${latFormatted}, ${lonFormatted}`);
       setSubSubTitle(mark);
     } else if (!searchField.toLowerCase().includes(name)) {
       setSubTitle(`${latFormatted}, ${lonFormatted}`);

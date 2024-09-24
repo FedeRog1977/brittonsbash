@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button as ButtonComponent } from '../components/bash-blocks';
+import { Button as ButtonComponent } from '../components/bash-blocks/index.js';
 import { fn } from '@storybook/test';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,18 +18,7 @@ const meta = {
     },
     typeVariant: {
       control: 'select',
-      options: [
-        't1',
-        't2',
-        'h1',
-        'h2',
-        'h3',
-        'h4',
-        'body',
-        'caption',
-        'footnote',
-        'tiny',
-      ],
+      options: ['t1', 't2', 'h1', 'h2', 'h3', 'h4', 'body', 'caption', 'footnote', 'tiny'],
     },
     typeColor: {
       control: 'select',
@@ -113,9 +102,7 @@ export const Spaced: StoryObj<typeof meta> = {
     width: 'full',
   },
   render: ({ ...args }) => {
-    const [handleIcon, setHandleIcon] = useState(
-      <FontAwesomeIcon icon={faChevronDown} />
-    );
+    const [handleIcon, setHandleIcon] = useState(<FontAwesomeIcon icon={faChevronDown} />);
 
     return (
       <div style={{ width: '1000px' }}>

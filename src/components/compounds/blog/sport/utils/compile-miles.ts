@@ -1,7 +1,7 @@
-import { getSessionItem } from '../../../../../utils/api';
-import { toFeet, toMiles } from '../../../../../utils/helpers';
-import { CompiledMiles } from '../types/compiled-miles';
-import { Miles } from '../types/miles';
+import { getSessionItem } from '../../../../../utils/api/index.js';
+import { toFeet, toMiles } from '../../../../../utils/index.js';
+import { CompiledMiles } from '../types/compiled-miles.js';
+import { Miles } from '../types/miles.js';
 
 export const compileMiles = () => {
   const sport = getSessionItem('response-sport');
@@ -152,12 +152,7 @@ export const compileMiles = () => {
       : (waterfoots2020 = waterfoots2020 + 0);
   });
 
-  windfarmsTotal =
-    windfarms2024 +
-    windfarms2023 +
-    windfarms2022 +
-    windfarms2021 +
-    windfarms2020;
+  windfarmsTotal = windfarms2024 + windfarms2023 + windfarms2022 + windfarms2021 + windfarms2020;
   thorntonhallsTotal =
     thorntonhalls2024 +
     thorntonhalls2023 +
@@ -165,11 +160,7 @@ export const compileMiles = () => {
     thorntonhalls2021 +
     thorntonhalls2020;
   waterfootsTotal =
-    waterfoots2024 +
-    waterfoots2023 +
-    waterfoots2022 +
-    waterfoots2021 +
-    waterfoots2020;
+    waterfoots2024 + waterfoots2023 + waterfoots2022 + waterfoots2021 + waterfoots2020;
 
   const windfarms: CompiledMiles['windfarms'] = {
     total: windfarmsTotal,
@@ -199,9 +190,7 @@ export const compileMiles = () => {
   };
 
   const distance: CompiledMiles['distance'] = {
-    total: toMiles(
-      distance2024 + distance2023 + distance2022 + distance2021 + distance2020
-    ),
+    total: toMiles(distance2024 + distance2023 + distance2022 + distance2021 + distance2020),
     2024: toMiles(distance2024),
     2023: toMiles(distance2023),
     2022: toMiles(distance2022),
@@ -210,13 +199,7 @@ export const compileMiles = () => {
   };
 
   const elevation: CompiledMiles['elevation'] = {
-    total: toFeet(
-      elevation2024 +
-        elevation2023 +
-        elevation2022 +
-        elevation2021 +
-        elevation2020
-    ),
+    total: toFeet(elevation2024 + elevation2023 + elevation2022 + elevation2021 + elevation2020),
     2024: toFeet(elevation2024),
     2023: toFeet(elevation2023),
     2022: toFeet(elevation2022),

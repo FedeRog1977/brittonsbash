@@ -1,5 +1,5 @@
-import { Img } from '../../../../bash-blocks';
-import { Features } from './features';
+import { Img } from '../../../../bash-blocks/index.js';
+import { Features } from './features.js';
 
 export type Event = {
   id?: string;

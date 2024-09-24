@@ -1,5 +1,5 @@
-import { ResultTileProps } from '../components/result-tile';
-import { miamiViceContent } from '../content/miami-vice';
+import { ResultTileProps } from '../components/result-tile.js';
+import { miamiViceContent } from '../content/miami-vice.js';
 
 export const compileMiamiVice = () => {
   const allVideos: ResultTileProps[] = [];

@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { Flex, Tile, Typography } from '../../../../bash-blocks';
-import { WeatherDaily } from './daily';
-import { isMobile } from '../../../../../utils';
+import { Flex, Tile, Typography } from '../../../../bash-blocks/index.js';
+import { WeatherDaily } from './daily.js';
+import { isMobile } from '../../../../../utils/index.js';
 
 type ResultTileProps = {
   title: string;
@@ -11,13 +11,7 @@ type ResultTileProps = {
   lon: number;
 };
 
-export const ResultTitle: FC<ResultTileProps> = ({
-  title,
-  subTitle,
-  subSubTitle,
-  lat,
-  lon,
-}) => (
+export const ResultTitle: FC<ResultTileProps> = ({ title, subTitle, subSubTitle, lat, lon }) => (
   <Tile type="solid">
     <Flex direction="vertical" gap={isMobile() ? 'xs' : 'md'}>
       <Typography variant="h1" textAlign="center">

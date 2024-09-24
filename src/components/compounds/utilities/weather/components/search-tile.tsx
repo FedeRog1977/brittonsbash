@@ -1,5 +1,5 @@
-import { BigSearch, Tile } from '../../../../bash-blocks';
-import { compileHills } from '../../../../../utils';
+import { BigSearch, Tile } from '../../../../bash-blocks/index.js';
+import { compileHills } from '../../../../../utils/index.js';
 import { FC } from 'react';
 
 type SearchTile = {
@@ -8,11 +8,7 @@ type SearchTile = {
   funcSelect: (e: any) => void;
 };
 
-export const SearchTile: FC<SearchTile> = ({
-  funcInput,
-  funcButton,
-  funcSelect,
-}) => {
+export const SearchTile: FC<SearchTile> = ({ funcInput, funcButton, funcSelect }) => {
   const hills = compileHills();
 
   return (

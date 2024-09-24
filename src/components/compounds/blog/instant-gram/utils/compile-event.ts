@@ -1,14 +1,10 @@
-import { toSum, toFeet, toMiles } from '../../../../../utils/helpers';
-import { DataContentResponse } from '../../../../bash-blocks';
-import { Event } from '../types/event';
-import { CompiledEvent } from '../types/compiled-event';
-import { Project } from '../../sport/types/project';
+import { toSum, toFeet, toMiles } from '../../../../../utils/index.js';
+import { DataContentResponse } from '../../../../bash-blocks/index.js';
+import { Event } from '../types/event.js';
+import { CompiledEvent } from '../types/compiled-event.js';
+import { Project } from '../../sport/types/project.js';
 
-export const compileEvent = (
-  event: Event,
-  sport: Project[],
-  showSport: boolean
-) => {
+export const compileEvent = (event: Event, sport: Project[], showSport: boolean) => {
   const names: string[] = [];
   const distances: number[] = [];
   const elevations: number[] = [];

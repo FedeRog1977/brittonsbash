@@ -2,7 +2,7 @@ import {
   ArticleTileProps,
   PageBackgroundProps,
   TitleTileProps,
-} from '../../../bash-blocks';
+} from '../../../bash-blocks/index.js';
 
 type EmploymentProps = {
   background: PageBackgroundProps;
@@ -17,8 +17,7 @@ export const employmentContent: EmploymentProps = {
     titleItems: [
       {
         content: 'View / Download',
-        subContent:
-          '[Curriculum Vitæ](https://lewisbritton.com/documents/employment/cv.pdf)',
+        subContent: '[Curriculum Vitæ](https://lewisbritton.com/documents/employment/cv.pdf)',
       },
     ],
   },
@@ -43,8 +42,7 @@ export const employmentContent: EmploymentProps = {
           body: [
             {
               variant: 'h3',
-              children:
-                'Scottish Power UK PLC | Software Engineer | 2022–Present',
+              children: 'Scottish Power UK PLC | Software Engineer | 2022–Present',
             },
             {
               variant: 'body',

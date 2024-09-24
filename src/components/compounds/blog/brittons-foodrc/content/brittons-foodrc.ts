@@ -1,8 +1,5 @@
-import { Food } from '../types/food';
-import {
-  PageBackgroundProps,
-  FootnoteTileProps,
-} from '../../../../bash-blocks';
+import { Food } from '../types/food.js';
+import { PageBackgroundProps, FootnoteTileProps } from '../../../../bash-blocks/index.js';
 
 type BrittonsFoodRCProps = {
   background: PageBackgroundProps;

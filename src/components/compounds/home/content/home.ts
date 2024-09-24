@@ -2,7 +2,7 @@ import {
   ArticleTileProps,
   PageBackgroundProps,
   ImageTileProps,
-} from '../../../bash-blocks';
+} from '../../../bash-blocks/index.js';
 
 type HomeProps = {
   background: PageBackgroundProps;

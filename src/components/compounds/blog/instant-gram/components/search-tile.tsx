@@ -1,9 +1,8 @@
-import { Button, Flex, FlexItem, Tile } from '../../../../bash-blocks';
-import { Event } from '../types/event';
+import { Button, Flex, FlexItem, Tile } from '../../../../bash-blocks/index.js';
+import { Event } from '../types/event.js';
 import { FC } from 'react';
-import { SearchList } from './search-list';
-import { BigSearch } from '../../../../bash-blocks';
-import { isMobile } from '../../../../../utils';
+import { SearchList } from './search-list.js';
+import { BigSearch } from '../../../../bash-blocks/index.js';
 
 type SearchTileProps = {
   funcCategory: (value: string) => void;
@@ -34,11 +33,7 @@ export const SearchTile: FC<SearchTileProps> = ({
 }) => (
   <Tile type="solid">
     <Flex direction="vertical" gap="md">
-      <BigSearch
-        funcInput={funcInput}
-        funcButton={funcButton}
-        placeholder="Lookup Events"
-      />
+      <BigSearch funcInput={funcInput} funcButton={funcButton} placeholder="Lookup Events" />
 
       <Flex direction="horizontal" wrap>
         {/* TODO: change data to:
@@ -53,9 +48,7 @@ export const SearchTile: FC<SearchTileProps> = ({
           <Button
             variant="clear"
             typeVariant="t1"
-            typeColor={
-              Boolean(showSearchList && is2024) ? 'lightBlue' : undefined
-            }
+            typeColor={Boolean(showSearchList && is2024) ? 'lightBlue' : undefined}
             typeFontFamily="instagram"
             content="2024"
             value="2024"
@@ -70,9 +63,7 @@ export const SearchTile: FC<SearchTileProps> = ({
           <Button
             variant="clear"
             typeVariant="t1"
-            typeColor={
-              Boolean(showSearchList && is2023) ? 'lightBlue' : undefined
-            }
+            typeColor={Boolean(showSearchList && is2023) ? 'lightBlue' : undefined}
             typeFontFamily="instagram"
             content="2023"
             value="2023"
@@ -87,9 +78,7 @@ export const SearchTile: FC<SearchTileProps> = ({
           <Button
             variant="clear"
             typeVariant="t1"
-            typeColor={
-              Boolean(showSearchList && is2022) ? 'lightBlue' : undefined
-            }
+            typeColor={Boolean(showSearchList && is2022) ? 'lightBlue' : undefined}
             typeFontFamily="instagram"
             content="2022"
             value="2022"
@@ -104,9 +93,7 @@ export const SearchTile: FC<SearchTileProps> = ({
           <Button
             variant="clear"
             typeVariant="t1"
-            typeColor={
-              Boolean(showSearchList && is2021) ? 'lightBlue' : undefined
-            }
+            typeColor={Boolean(showSearchList && is2021) ? 'lightBlue' : undefined}
             typeFontFamily="instagram"
             content="2021"
             value="2021"
@@ -121,9 +108,7 @@ export const SearchTile: FC<SearchTileProps> = ({
           <Button
             variant="clear"
             typeVariant="t1"
-            typeColor={
-              Boolean(showSearchList && is2020) ? 'lightBlue' : undefined
-            }
+            typeColor={Boolean(showSearchList && is2020) ? 'lightBlue' : undefined}
             typeFontFamily="instagram"
             content="2020"
             value="2020"
@@ -135,9 +120,7 @@ export const SearchTile: FC<SearchTileProps> = ({
         </FlexItem>
       </Flex>
 
-      {showSearchList ? (
-        <SearchList funcSelect={funcSelect} items={eventData} />
-      ) : null}
+      {showSearchList ? <SearchList funcSelect={funcSelect} items={eventData} /> : null}
     </Flex>
   </Tile>
 );

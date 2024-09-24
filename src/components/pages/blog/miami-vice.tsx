@@ -3,8 +3,8 @@ import {
   SearchTile,
   miamiViceContent,
   useMiamiVice,
-} from '../../compounds/blog/miami-vice';
-import { FootnoteTile, PageLayout } from '../../bash-blocks';
+} from '../../compounds/blog/miami-vice/index.js';
+import { FootnoteTile, PageLayout } from '../../bash-blocks/index.js';
 import { ReactNode } from 'react';
 
 export const MiamiVice = () => {
@@ -34,14 +34,12 @@ export const MiamiVice = () => {
       funcSelect={handleSelect}
     />,
     <ResultTile
-      heading={video.heading}
-      subHeading={video.subHeading}
-      video={video.video}
+      heading={video?.heading as string}
+      subHeading={video?.subHeading}
+      video={video?.video as string}
     />,
     <FootnoteTile {...miamiViceContent.tileTwo} />,
   ];
 
-  return (
-    <PageLayout background={miamiViceContent.background}>{content}</PageLayout>
-  );
+  return <PageLayout background={miamiViceContent.background}>{content}</PageLayout>;
 };

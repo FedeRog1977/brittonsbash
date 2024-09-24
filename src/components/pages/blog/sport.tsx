@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
-import { PageLayout } from '../../bash-blocks';
-import { ResultTile, SearchTile, useSport } from '../../compounds/blog/sport';
+import { PageLayout } from '../../bash-blocks/index.js';
+import { ResultTile, SearchTile, useSport } from '../../compounds/blog/sport/index.js';
 
 export const Sport = () => {
   const {
@@ -45,9 +45,5 @@ export const Sport = () => {
     />,
   ];
 
-  return (
-    <PageLayout background={{ type: 'sport', content: 'Sport' }}>
-      {content}
-    </PageLayout>
-  );
+  return <PageLayout background={{ type: 'sport', content: 'Sport' }}>{content}</PageLayout>;
 };

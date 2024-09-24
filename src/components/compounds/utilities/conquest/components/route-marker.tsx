@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Marker, Popup } from 'react-leaflet';
-import { generateUniqueKey } from '../../../../../utils';
+import { generateUniqueKey } from '../../../../../utils/index.js';
 
 export type RouteMarkerProps = {
   name: string;

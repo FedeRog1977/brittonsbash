@@ -1,24 +1,14 @@
 import { FC } from 'react';
-import {
-  toDate,
-  toPrecipitation,
-  toBearing,
-  toSpeed,
-} from '../../../../../utils';
-import { Flex, FlexItem, Typography } from '../../../../bash-blocks';
-import { Hourly } from '../types/hourly';
-import { ConditionIcon } from './condition-icon';
-import { Temperature } from './temperature';
+import { toDate, toPrecipitation, toBearing, toSpeed } from '../../../../../utils/index.js';
+import { Flex, FlexItem, Typography } from '../../../../bash-blocks/index.js';
+import { Hourly } from '../types/hourly.js';
+import { ConditionIcon } from './condition-icon.js';
+import { Temperature } from './temperature.js';
 
 // Sort order of props
 type HourlyPartial = Omit<
   Hourly,
-  | 'feels_like'
-  | 'dew_point'
-  | 'clouds'
-  | 'wind_speed'
-  | 'wind_deg'
-  | 'wind_gust'
+  'feels_like' | 'dew_point' | 'clouds' | 'wind_speed' | 'wind_deg' | 'wind_gust'
 >;
 
 type ColumnHourlyProps = Required<HourlyPartial> & {
@@ -46,11 +36,7 @@ export const ColumnHourly: FC<ColumnHourlyProps> = ({
 }) => {
   const { hour } = toDate(dt);
   const precipitation = toPrecipitation(pop);
-  const {
-    bearingFormatted: bearing,
-    bearingCompass,
-    bearingArrow,
-  } = toBearing(windDeg);
+  const { bearingFormatted: bearing, bearingCompass, bearingArrow } = toBearing(windDeg);
   const speed = toSpeed(windSpeed, true);
   const gusts = toSpeed(windGust, true);
 
@@ -80,16 +66,10 @@ export const ColumnHourly: FC<ColumnHourlyProps> = ({
       </Flex>
 
       <Flex direction="vertical" alignHorizontal="center" gap="2xs">
-        <Typography variant="footnote">
-          {`Pressure: ${pressure + 'mb'}`}
-        </Typography>
-        <Typography variant="footnote">
-          {`Humidity: ${humidity + '%'}`}
-        </Typography>
+        <Typography variant="footnote">{`Pressure: ${pressure + 'mb'}`}</Typography>
+        <Typography variant="footnote">{`Humidity: ${humidity + '%'}`}</Typography>
         <Typography variant="footnote">{`Dew Pt.: ${dp}`}</Typography>
-        <Typography variant="footnote">
-          {`Visibility: ${visibility / 100 + '%'}`}
-        </Typography>
+        <Typography variant="footnote">{`Visibility: ${visibility / 100 + '%'}`}</Typography>
         <Typography variant="footnote">{`UV Index: ${uvi}`}</Typography>
       </Flex>
     </Flex>

@@ -21,11 +21,17 @@ import {
   GraphicDesign,
   Weather,
   Conquest,
-} from './components';
-import { reportWebVitals } from './utils/react/report-web-vitals.js';
-import { useEvents, useHills, useLinks, useRegions, useSport } from './api/index.js';
+} from './components/index.js';
+import { reportWebVitals } from './utils/index.js';
+import {
+  useEvents,
+  useHills,
+  // useLinks,
+  useRegions,
+  useSport,
+} from './api/index.js';
 
-const triggerSession = () => {
+const TriggerSession = () => {
   useEvents();
   useHills();
   // useLinks();
@@ -33,7 +39,7 @@ const triggerSession = () => {
   useSport();
 };
 
-triggerSession();
+TriggerSession();
 reportWebVitals();
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);

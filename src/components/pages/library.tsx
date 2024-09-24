@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
-import { ArticleTile, PageLayout } from '../bash-blocks';
-import { libraryContent } from '../compounds/library';
+import { ArticleTile, PageLayout } from '../bash-blocks/index.js';
+import { libraryContent } from '../compounds/library/index.js';
 
 export const Library = () => {
   const content: ReactNode[] = [
@@ -10,7 +10,5 @@ export const Library = () => {
     // <ArticleTile {...libraryContent.tileFour} />,
   ];
 
-  return (
-    <PageLayout background={libraryContent.background}>{content}</PageLayout>
-  );
+  return <PageLayout background={libraryContent.background}>{content}</PageLayout>;
 };

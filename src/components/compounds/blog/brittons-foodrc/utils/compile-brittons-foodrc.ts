@@ -1,5 +1,5 @@
-import { brittonsFoodRCContent } from '../content/brittons-foodrc';
-import { Food } from '../types/food';
+import { brittonsFoodRCContent } from '../content/brittons-foodrc.js';
+import { Food } from '../types/food.js';
 
 export const compileBrittonsFoodRC = () => {
   const allFood: Food[] = [];

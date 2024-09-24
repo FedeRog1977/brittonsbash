@@ -1,8 +1,5 @@
-import {
-  AggregationNumerical,
-  AggregationAlphabetical,
-} from '../../../../bash-blocks';
-import { Miles } from './miles';
+import { AggregationNumerical, AggregationAlphabetical } from '../../../../bash-blocks/index.js';
+import { Miles } from './miles.js';
 
 export type CompiledMiles = {
   miles: {

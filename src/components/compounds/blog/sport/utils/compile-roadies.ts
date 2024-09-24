@@ -1,7 +1,7 @@
-import { getSessionItem } from '../../../../../utils/api';
-import { toMiles, toFeet } from '../../../../../utils/helpers';
-import { CompiledRoadie } from '../types/compiled-roadie';
-import { Roadie } from '../types/roadie';
+import { getSessionItem } from '../../../../../utils/api/index.js';
+import { toMiles, toFeet } from '../../../../../utils/index.js';
+import { CompiledRoadie } from '../types/compiled-roadie.js';
+import { Roadie } from '../types/roadie.js';
 
 export const compileRoadies = () => {
   const sport = getSessionItem('response-sport');
@@ -229,32 +229,17 @@ export const compileRoadies = () => {
       : (thorntonhalls2020 = thorntonhalls2020 + 0);
   });
 
-  centuriesTotal =
-    centuries2024 +
-    centuries2023 +
-    centuries2022 +
-    centuries2021 +
-    centuries2020;
+  centuriesTotal = centuries2024 + centuries2023 + centuries2022 + centuries2021 + centuries2020;
   strathavensTotal =
-    strathavens2024 +
-    strathavens2023 +
-    strathavens2022 +
-    strathavens2021 +
-    strathavens2020;
+    strathavens2024 + strathavens2023 + strathavens2022 + strathavens2021 + strathavens2020;
   fenwickWindfarmsTotal =
     fenwickWindfarms2024 +
     fenwickWindfarms2023 +
     fenwickWindfarms2022 +
     fenwickWindfarms2021 +
     fenwickWindfarms2020;
-  fenwicksTotal =
-    fenwicks2024 + fenwicks2023 + fenwicks2022 + fenwicks2021 + fenwicks2020;
-  windfarmsTotal =
-    windfarms2024 +
-    windfarms2023 +
-    windfarms2022 +
-    windfarms2021 +
-    windfarms2020;
+  fenwicksTotal = fenwicks2024 + fenwicks2023 + fenwicks2022 + fenwicks2021 + fenwicks2020;
+  windfarmsTotal = windfarms2024 + windfarms2023 + windfarms2022 + windfarms2021 + windfarms2020;
   thorntonhallsTotal =
     thorntonhalls2024 +
     thorntonhalls2023 +
@@ -317,9 +302,7 @@ export const compileRoadies = () => {
   };
 
   const distance: CompiledRoadie['distance'] = {
-    total: toMiles(
-      distance2024 + distance2023 + distance2022 + distance2021 + distance2020
-    ),
+    total: toMiles(distance2024 + distance2023 + distance2022 + distance2021 + distance2020),
     2024: toMiles(distance2024),
     2023: toMiles(distance2023),
     2022: toMiles(distance2022),
@@ -328,13 +311,7 @@ export const compileRoadies = () => {
   };
 
   const elevation: CompiledRoadie['elevation'] = {
-    total: toFeet(
-      elevation2024 +
-        elevation2023 +
-        elevation2022 +
-        elevation2021 +
-        elevation2020
-    ),
+    total: toFeet(elevation2024 + elevation2023 + elevation2022 + elevation2021 + elevation2020),
     2024: toFeet(elevation2024),
     2023: toFeet(elevation2023),
     2022: toFeet(elevation2022),

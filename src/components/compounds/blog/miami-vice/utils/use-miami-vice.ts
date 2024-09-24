@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { compileMiamiVice } from '../utils/compile-miami-vice';
-import { useShowElement } from '../../../../../utils';
-import { emptyVideoData } from '../mocks/empty-video-data';
-import { miamiViceContent } from '../content/miami-vice';
+import { compileMiamiVice } from '../utils/compile-miami-vice.js';
+import { useShowElement } from '../../../../../utils/index.js';
+import { emptyVideoData } from '../mocks/empty-video-data.js';
+import { miamiViceContent } from '../content/miami-vice.js';
 
 export const useMiamiVice = () => {
   const allVideos = compileMiamiVice();
@@ -14,8 +14,7 @@ export const useMiamiVice = () => {
   const [isTwo, setIsTwo] = useState(false);
   const [isOne, setIsOne] = useState(false);
 
-  const { showElement: showSearchList, setShowElement: setShowSearchList } =
-    useShowElement();
+  const { showElement: showSearchList, setShowElement: setShowSearchList } = useShowElement();
   const [videoData, setVideoData] = useState(emptyVideoData);
 
   const handleCategory = (value: string) => {
@@ -68,7 +67,7 @@ export const useMiamiVice = () => {
 
   const handleSelect = (e: any) => {
     for (var i in allVideos) {
-      const fullName = allVideos[i].heading;
+      const fullName = allVideos[i]?.heading;
 
       if (fullName === e.currentTarget.value) {
         setVideo(allVideos[i]);

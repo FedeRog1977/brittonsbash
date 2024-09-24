@@ -1,7 +1,7 @@
-import { Button, Flex, FlexItem, Tile } from '../../../../bash-blocks';
+import { Button, Flex, FlexItem, Tile } from '../../../../bash-blocks/index.js';
 import { FC } from 'react';
-import { SearchList } from './search-list';
-import { ResultTileProps } from './result-tile';
+import { SearchList } from './search-list.js';
+import { ResultTileProps } from './result-tile.js';
 
 export type SearchTileProps = {
   funcCategory: (value: string) => void;
@@ -41,9 +41,7 @@ export const SearchTile: FC<SearchTileProps> = ({
           <Button
             variant="clear"
             typeVariant="t1"
-            typeColor={
-              Boolean(showSearchList && isOne) ? 'lightBlue' : undefined
-            }
+            typeColor={Boolean(showSearchList && isOne) ? 'lightBlue' : undefined}
             typeFontFamily="miami"
             content="ONE"
             subContent="Season"
@@ -57,9 +55,7 @@ export const SearchTile: FC<SearchTileProps> = ({
           <Button
             variant="clear"
             typeVariant="t1"
-            typeColor={
-              Boolean(showSearchList && isTwo) ? 'lightBlue' : undefined
-            }
+            typeColor={Boolean(showSearchList && isTwo) ? 'lightBlue' : undefined}
             typeFontFamily="miami"
             content="TWO"
             subContent="Season"
@@ -73,9 +69,7 @@ export const SearchTile: FC<SearchTileProps> = ({
           <Button
             variant="clear"
             typeVariant="t1"
-            typeColor={
-              Boolean(showSearchList && isThree) ? 'lightBlue' : undefined
-            }
+            typeColor={Boolean(showSearchList && isThree) ? 'lightBlue' : undefined}
             typeFontFamily="miami"
             content="THREE"
             subContent="Season"
@@ -89,9 +83,7 @@ export const SearchTile: FC<SearchTileProps> = ({
           <Button
             variant="clear"
             typeVariant="t1"
-            typeColor={
-              Boolean(showSearchList && isFour) ? 'lightBlue' : undefined
-            }
+            typeColor={Boolean(showSearchList && isFour) ? 'lightBlue' : undefined}
             typeFontFamily="miami"
             content="FOUR"
             subContent="Season"
@@ -105,9 +97,7 @@ export const SearchTile: FC<SearchTileProps> = ({
           <Button
             variant="clear"
             typeVariant="t1"
-            typeColor={
-              Boolean(showSearchList && isFive) ? 'lightBlue' : undefined
-            }
+            typeColor={Boolean(showSearchList && isFive) ? 'lightBlue' : undefined}
             typeFontFamily="miami"
             content="FIVE"
             subContent="Season"
@@ -118,9 +108,7 @@ export const SearchTile: FC<SearchTileProps> = ({
         </FlexItem>
       </Flex>
 
-      {showSearchList ? (
-        <SearchList funcSelect={funcSelect} items={videoData} />
-      ) : null}
+      {showSearchList ? <SearchList funcSelect={funcSelect} items={videoData} /> : null}
     </Flex>
   </Tile>
 );

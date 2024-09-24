@@ -1,8 +1,5 @@
-import {
-  AggregationAlphabetical,
-  AggregationNumerical,
-} from '../../../../bash-blocks';
-import { Roadie } from './roadie';
+import { AggregationAlphabetical, AggregationNumerical } from '../../../../bash-blocks/index.js';
+import { Roadie } from './roadie.js';
 
 export type CompiledRoadie = {
   roadies: {

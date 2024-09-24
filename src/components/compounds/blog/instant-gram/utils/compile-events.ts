@@ -1,5 +1,5 @@
-import { getSessionItem } from '../../../../../utils/api';
-import { Event } from '../types/event';
+import { getSessionItem } from '../../../../../utils/api/index.js';
+import { Event } from '../types/event.js';
 
 export const compileEvents = () => {
   const events = getSessionItem('response-events');

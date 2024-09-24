@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { compileHills } from '../../../../../utils';
-import { HillMarkerArray } from './hill-marker-array';
+import { compileHills } from '../../../../../utils/index.js';
+import { HillMarkerArray } from './hill-marker-array.js';
 
 export type HillMarkerProps = {
   type: 'Munro' | 'Corbett' | 'Munro Top' | 'Corbett Top';

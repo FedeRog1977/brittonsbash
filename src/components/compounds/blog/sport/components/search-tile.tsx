@@ -1,13 +1,8 @@
-import {
-  faBiking,
-  faMountainSun,
-  faWalking,
-  faTrophy,
-} from '@fortawesome/free-solid-svg-icons';
+import { faBiking, faMountainSun, faWalking, faTrophy } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FC } from 'react';
-import { Tile, Button, Flex, FlexItem } from '../../../../bash-blocks';
-import { isMobile } from '../../../../../utils';
+import { Tile, Button, Flex, FlexItem } from '../../../../bash-blocks/index.js';
+import { isMobile } from '../../../../../utils/index.js';
 
 export type SearchTileProps = {
   funcCategory: (e: any) => void;

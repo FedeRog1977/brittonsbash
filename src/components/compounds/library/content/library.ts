@@ -1,9 +1,9 @@
-import { compileLinks } from '../../../../utils';
+// import { compileLinks } from '../../../../utils/index.js';
 import {
   ArticleTileProps,
   DataContentResponse,
   PageBackgroundProps,
-} from '../../../bash-blocks';
+} from '../../../bash-blocks/index.js';
 
 type LibraryProps = {
   background: PageBackgroundProps;
@@ -81,21 +81,11 @@ export const libraryContent: LibraryProps = {
             },
             {
               heading: 'CS991',
-              items: [
-                'Assignment I',
-                'Assignment I (Code)',
-                'Assignment II (Code)',
-              ],
+              items: ['Assignment I', 'Assignment I (Code)', 'Assignment II (Code)'],
             },
             {
               heading: 'CS990',
-              items: [
-                'Assignment I',
-                'Assignment II',
-                'Assignment II (Code)',
-                'Labs',
-                'Lectures',
-              ],
+              items: ['Assignment I', 'Assignment II', 'Assignment II (Code)', 'Labs', 'Lectures'],
             },
             {
               heading: 'CS978',

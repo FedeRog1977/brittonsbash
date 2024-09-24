@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { Marker, Popup } from 'react-leaflet';
-import { generateUniqueKey, toCoords, toFeet } from '../../../../../utils';
-import { Flex, Typography } from '../../../../bash-blocks';
-import { HillMarkerProps } from './hill-markers';
+import { generateUniqueKey, toCoords, toFeet } from '../../../../../utils/index.js';
+import { Flex, Typography } from '../../../../bash-blocks/index.js';
+import { HillMarkerProps } from './hill-markers.js';
 
 type HillMarkerArrayProps = {
   hills: {

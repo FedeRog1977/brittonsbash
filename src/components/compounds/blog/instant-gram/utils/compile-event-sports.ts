@@ -1,5 +1,5 @@
-import { getSessionItem } from '../../../../../utils/api';
-import { Project } from '../../sport/types/project';
+import { getSessionItem } from '../../../../../utils/api/index.js';
+import { Project } from '../../sport/types/project.js';
 
 export const compileEventSports = () => {
   const sport = getSessionItem('response-sport');

@@ -1,8 +1,5 @@
-import {
-  PageBackgroundProps,
-  FootnoteTileProps,
-} from '../../../../bash-blocks';
-import { ResultTileProps } from '../components/result-tile';
+import { PageBackgroundProps, FootnoteTileProps } from '../../../../bash-blocks/index.js';
+import { ResultTileProps } from '../components/result-tile.js';
 
 type MiamiViceProps = {
   background: PageBackgroundProps;
