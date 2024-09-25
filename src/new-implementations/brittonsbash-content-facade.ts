@@ -1,4 +1,5 @@
 import { BrittonsBashContentClient } from '../new-services';
+import { baseUrls } from '../utils';
 import { UrlGroup } from '../utils/types';
 
 type BrittonsBashContentFacade = {
@@ -6,9 +7,7 @@ type BrittonsBashContentFacade = {
 };
 
 const getBrittonsBashContentFacade = (): BrittonsBashContentFacade => {
-  return new BrittonsBashContentClient(
-    'https://raw.githubusercontent.com/FedeRog1977/brittonsbash-content/master/data/'
-  );
+  return new BrittonsBashContentClient(baseUrls.brittonsBashContent);
 };
 
 export const brittonsBashContentFacade = getBrittonsBashContentFacade();
