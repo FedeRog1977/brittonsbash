@@ -1,6 +1,6 @@
 import type { Preview } from '@storybook/react';
-import '../src/components/bash-blocks/reference/styles/_global.scss';
-import '../src/components/bash-blocks/reference/styles/_fonts.scss';
+import '../src/components/reference/styles/_global.scss';
+import '../src/components/reference/styles/_fonts.scss';
 
 const preview: Preview = {
   parameters: {

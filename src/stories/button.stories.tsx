@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button as ButtonComponent } from '../components/bash-blocks';
+import { Button as ButtonComponent } from '../components';
 import { fn } from '@storybook/test';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

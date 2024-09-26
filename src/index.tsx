@@ -1,29 +1,29 @@
-import './components/bash-blocks/reference/styles/_global.scss';
-import './components/bash-blocks/reference/styles/_fonts.scss';
+import './components/reference/styles/_global.scss';
+import './components/reference/styles/_fonts.scss';
 import ReactDOM from 'react-dom/client';
 import { HashRouter, Route, Routes } from 'react-router-dom';
+import { reportWebVitals } from './utils';
+import { useEvents, useHills, useRegions, useSport } from './legacy-api';
 import {
   Academia,
-  ErrorPage,
-  Home,
-  Employment,
-  Library,
-  InstantGram,
-  Sport,
   Allroad,
   BrittonsFoodRC,
+  Conquest,
+  Employment,
+  Error,
   FoundingFathers,
+  GentlemenWhoCafe,
+  GraphicDesign,
+  Home,
+  InstantGram,
+  Library,
   Media,
   MiamiVice,
   Ricing,
+  Sport,
   ThinkFlow,
-  GentlemenWhoCafe,
-  GraphicDesign,
   Weather,
-  Conquest,
-} from './components';
-import { reportWebVitals } from './utils';
-import { useEvents, useHills, useRegions, useSport } from './api';
+} from './application';
 
 // TODO: replace all of these with their according
 // services and implementations
@@ -63,7 +63,7 @@ root.render(
         <Route path="weather" element={<Weather />} />
         <Route path="conquest" element={<Conquest />} />
       </Route>
-      <Route path="*" element={<ErrorPage />} />
+      <Route path="*" element={<Error />} />
     </Routes>
   </HashRouter>
 );
