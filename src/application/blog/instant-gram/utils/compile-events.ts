@@ -1,27 +1,29 @@
+import { brittonsBashContentFacade } from '../../../../implementations';
 import { getSessionItem } from '../../../../utils';
-import { Event } from '../types/event';
+import { Event } from '../../../../utils/types';
+
+const events = await brittonsBashContentFacade.getEvents();
 
 export const compileEvents = () => {
-  const events = getSessionItem('response-events');
   const eventsParsed: Event[] = [];
 
-  events[2024].forEach((event: Event) => {
+  events[2024].forEach((event) => {
     eventsParsed.push(event);
   });
 
-  events[2023].forEach((event: Event) => {
+  events[2023].forEach((event) => {
     eventsParsed.push(event);
   });
 
-  events[2022].forEach((event: Event) => {
+  events[2022].forEach((event) => {
     eventsParsed.push(event);
   });
 
-  events[2021].forEach((event: Event) => {
+  events[2021].forEach((event) => {
     eventsParsed.push(event);
   });
 
-  events[2020].forEach((event: Event) => {
+  events[2020].forEach((event) => {
     eventsParsed.push(event);
   });
 

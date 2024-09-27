@@ -1,14 +1,11 @@
 import { ReactNode } from 'react';
 import { FootnoteTile, PageLayout } from '../../../components';
-import { useEvents } from '../../../legacy-api';
 import { useInstantGram } from './utils/use-instant-gram';
 import { SearchTile } from './components/search-tile';
 import { ResultTile } from './components/result-tile';
 import { instantGramContent } from './content/instant-gram-content';
 
 export const InstantGram = () => {
-  useEvents();
-
   const {
     handleCategory,
     showSearchList,

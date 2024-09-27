@@ -1,8 +1,9 @@
 import { BrittonsBashContentClient } from '../services';
 import { baseUrls } from '../utils';
-import { UrlGroup } from '../utils/types';
+import { EventsAggregateTemp, UrlGroup } from '../utils/types';
 
 type BrittonsBashContentFacade = {
+  getEvents: () => Promise<EventsAggregateTemp>;
   getLinks: () => Promise<UrlGroup[]>;
 };
 

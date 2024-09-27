@@ -1,5 +1,4 @@
-// TODO: replace this with the type in utils/types
-import { Img } from '../../../../components';
+import { Img } from './img';
 import { Features } from './features';
 
 export type Event = {
