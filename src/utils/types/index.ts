@@ -3,5 +3,7 @@ export * from './event';
 export * from './events-aggregate-temp';
 export * from './features';
 export * from './generic-data-content';
+export * from './hills';
+export * from './img';
 export * from './url-group';
 export * from './url';

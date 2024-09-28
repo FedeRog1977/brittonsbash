@@ -1,9 +1,10 @@
-import { getSessionItem, removeDuplicates } from '../../../../utils';
 import { Img } from '../../../../components';
 import { Event } from '../../instant-gram/types/event';
+import { brittonsBashContentFacade } from '../../../../implementations';
+
+const events = await brittonsBashContentFacade.getEvents();
 
 export const compileImages = () => {
-  const events = getSessionItem('response-events');
   const images: Img[] = [];
 
   events[2024].forEach((event: Event) => {

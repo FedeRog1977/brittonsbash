@@ -1,3 +1,5 @@
+import { Event } from './event';
+
 export type EventsAggregateTemp = {
   2020: Event[];
   2021: Event[];

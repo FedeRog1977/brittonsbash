@@ -1,10 +1,13 @@
 import { BrittonsBashContentClient } from '../services';
-import { baseUrls } from '../utils';
-import { EventsAggregateTemp, UrlGroup } from '../utils/types';
+import { baseUrls, Hills } from '../utils';
+import { EventsAggregateTemp, UrlGroup } from '../utils';
 
 type BrittonsBashContentFacade = {
   getEvents: () => Promise<EventsAggregateTemp>;
+  getHills: () => Promise<Hills>;
   getLinks: () => Promise<UrlGroup[]>;
+  // getRegions: () => Promise<>;
+  // getSport: () => Promise<>;
 };
 
 const getBrittonsBashContentFacade = (): BrittonsBashContentFacade => {

@@ -1,7 +1,8 @@
-import { Event, EventsAggregateTemp, UrlGroup } from '../utils/types';
+import { Event, EventsAggregateTemp, Hills, UrlGroup } from '../utils';
 
 type BrittonsBashContent = {
   getEvents: () => Promise<EventsAggregateTemp>;
+  getHills: () => Promise<Hills>;
   getLinks: () => Promise<UrlGroup[]>;
 };
 
@@ -10,6 +11,10 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
 
   private get linksUrl(): string {
     return `${this.baseUrl}/links.data.json`;
+  }
+
+  private get hillsUrl(): string {
+    return `${this.baseUrl}/hills.data.json`;
   }
 
   private get eventsUrl(): string {
@@ -41,6 +46,26 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
     }
   }
   // ---
+
+  public async getHills(): Promise<Hills> {
+    const apiUrl = this.hillsUrl;
+
+    const response = await fetch(apiUrl);
+
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+
+    const parsedResponse: Hills = await response.json();
+
+    try {
+      return parsedResponse;
+    } catch (error: unknown) {
+      console.log(error);
+
+      throw new Error('Invalid hills data received');
+    }
+  }
 
   public async getLinks(): Promise<UrlGroup[]> {
     const apiUrl = this.linksUrl;

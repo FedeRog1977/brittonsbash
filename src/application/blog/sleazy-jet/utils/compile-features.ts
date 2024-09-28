@@ -1,9 +1,11 @@
-import { getSessionItem, removeDuplicates } from '../../../../utils';
+import { brittonsBashContentFacade } from '../../../../implementations';
+import { removeDuplicates } from '../../../../utils';
 import { Event } from '../../instant-gram/types/event';
 import { Features } from '../../instant-gram/types/features';
 
+const events = await brittonsBashContentFacade.getEvents();
+
 export const compileFeatures = () => {
-  const events = getSessionItem('response-events');
   const countries: string[] = [];
   const cities: string[] = [];
   const districts: string[] = [];

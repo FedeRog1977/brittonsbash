@@ -3,7 +3,7 @@ import './components/reference/styles/_fonts.scss';
 import ReactDOM from 'react-dom/client';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import { reportWebVitals } from './utils';
-import { useEvents, useHills, useRegions, useSport } from './legacy-api';
+import { useRegions, useSport } from './legacy-api';
 import {
   Academia,
   Allroad,
@@ -28,8 +28,6 @@ import {
 // TODO: replace all of these with their according
 // services and implementations
 const TriggerSession = () => {
-  useEvents();
-  useHills();
   useRegions();
   useSport();
 };

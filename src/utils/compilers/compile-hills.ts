@@ -1,3 +1,5 @@
-import { getSessionItem } from '../api';
+import { brittonsBashContentFacade } from '../../implementations';
 
-export const compileHills = () => getSessionItem('response-hills');
+const hills = await brittonsBashContentFacade.getHills();
+
+export const compileHills = () => hills;
