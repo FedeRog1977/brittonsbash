@@ -1,12 +1,12 @@
 import { BigSearch, Button, Flex, FlexItem, Tile } from '../../../../components';
-import { Event } from '../types/event';
+import { Event } from '../../../../utils';
 import { FC } from 'react';
 import { SearchList } from './search-list';
 
 type SearchTileProps = {
   funcCategory: (value: string) => void;
   showSearchList: boolean;
-  eventData: (Pick<Event, 'prefix' | 'names'> & { id: string })[];
+  eventData: Partial<Event>[];
   is2024: boolean;
   is2023: boolean;
   is2022: boolean;

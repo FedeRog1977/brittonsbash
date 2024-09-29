@@ -6,9 +6,9 @@ export type RouteMarkerProps = {
   name: string;
   dist: number;
   elev: number;
-  time: string;
-  munrosIn: [];
-  corbettsIn: [];
+  time: number;
+  munrosIn: string[];
+  corbettsIn: string[];
   latIn: number;
   lonIn: number;
 };

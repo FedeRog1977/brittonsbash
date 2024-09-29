@@ -1,10 +1,10 @@
 import { FC } from 'react';
-import { generateUniqueKey } from '../../../../utils';
+import { generateUniqueKey, Route } from '../../../../utils';
 
 export type RouteListProps = {
   id: string;
   func: (e: any) => void;
-  landmassRoutes: [];
+  landmassRoutes: Route[];
 };
 
 export const RouteList: FC<RouteListProps> = ({ id, func, landmassRoutes }) => {

@@ -1,8 +1,6 @@
-import { Event } from '../types/event';
+import { Event } from '../../../../utils';
 
-export const emptyEventData: (Pick<Event, 'prefix' | 'names'> & {
-  id: string;
-})[] = [
+export const emptyEventData: Partial<Event>[] = [
   {
     id: '',
     names: [''],

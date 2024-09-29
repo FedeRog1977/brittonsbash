@@ -1,11 +1,11 @@
 import { Button, Flex, FlexItem } from '../../../../components';
 import { generateUniqueKey } from '../../../../utils';
 import { FC } from 'react';
-import { Event } from '../types/event';
+import { Event } from '../../../../utils';
 
 type SearchListProps = {
   funcSelect: (() => void) | ((e: any) => void);
-  items: (Pick<Event, 'prefix' | 'names'> & { id: string })[];
+  items: Partial<Event>[];
 };
 
 export const SearchList: FC<SearchListProps> = ({ funcSelect, items }) => (
@@ -16,7 +16,7 @@ export const SearchList: FC<SearchListProps> = ({ funcSelect, items }) => (
           key={generateUniqueKey(index)}
           variant="clear"
           typeVariant="h4"
-          value={names.join(' - ')}
+          value={names?.join(' - ')}
           func={funcSelect}
           width="full"
           // TODO: sort this formatting
@@ -24,12 +24,10 @@ export const SearchList: FC<SearchListProps> = ({ funcSelect, items }) => (
           content={
             <>
               {prefix ? <div>{prefix}</div> : null}
-              {names.map((name) => (
-                <div>{name}</div>
-              ))}
+              {names?.map((name) => <div>{name}</div>)}
             </>
           }
-          subContent={id.slice(-2)}
+          subContent={id?.slice(-2)}
           subContentTop
           padding="coarse"
         />

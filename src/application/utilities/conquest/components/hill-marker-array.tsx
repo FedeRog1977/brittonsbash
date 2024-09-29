@@ -1,22 +1,11 @@
 import { FC } from 'react';
 import { Marker, Popup } from 'react-leaflet';
-import { generateUniqueKey, toCoords, toFeet } from '../../../../utils';
+import { generateUniqueKey, Hill, toCoords, toFeet } from '../../../../utils';
 import { Flex, Typography } from '../../../../components';
 import { HillMarkerProps } from './hill-markers';
 
 type HillMarkerArrayProps = {
-  hills: {
-    name: string;
-    lat: number;
-    lon: number;
-    OSgrid: string;
-    elevation: number;
-    prominence: number;
-    isolation: number;
-    summit: string;
-    image: string;
-    type: string;
-  }[];
+  hills: Hill[];
 } & HillMarkerProps;
 
 export const HillMarkerArray: FC<HillMarkerArrayProps> = ({ hills, type }) => (
