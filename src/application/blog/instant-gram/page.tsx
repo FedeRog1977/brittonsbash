@@ -4,6 +4,10 @@ import { useInstantGram } from './utils/use-instant-gram';
 import { SearchTile } from './components/search-tile';
 import { ResultTile } from './components/result-tile';
 import { instantGramContent } from './content/instant-gram-content';
+import { brittonsBashContentFacade } from '../../../implementations';
+
+const mappedEventSports = await brittonsBashContentFacade.getMappedEventSports();
+const mappedEvents = await brittonsBashContentFacade.getMappedEvents();
 
 export const InstantGram = () => {
   const {
@@ -18,12 +22,12 @@ export const InstantGram = () => {
     handleInput,
     executeInput,
     handleSelect,
-    compiledEvent,
+    mappedEvent,
     eventSport,
     handleToggleElements,
     showDescription,
     showMatrix,
-  } = useInstantGram();
+  } = useInstantGram(mappedEventSports, mappedEvents);
 
   const content: ReactNode[] = [
     <SearchTile
@@ -40,7 +44,7 @@ export const InstantGram = () => {
       funcSelect={handleSelect}
     />,
     <ResultTile
-      compiledEvent={compiledEvent}
+      mappedEvent={mappedEvent}
       eventSport={eventSport}
       funcToggleElements={handleToggleElements}
       showDescription={showDescription}

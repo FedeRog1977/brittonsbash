@@ -1,13 +1,27 @@
 import { BrittonsBashContentClient } from '../services';
 import { baseUrls } from '../utils/constants';
-import { Events, Hills, Regions, Sport, UrlGroup } from '../utils/types';
+import {
+  Events,
+  Hills,
+  MappedEvents,
+  MappedMiles,
+  MappedProjects,
+  MappedRoadies,
+  Project,
+  Regions,
+  UrlGroup,
+} from '../utils/types';
 
 type BrittonsBashContentFacade = {
   getEvents: () => Promise<Events>;
   getHills: () => Promise<Hills>;
   getLinks: () => Promise<UrlGroup[]>;
+  getMappedEventSports: () => Promise<Project[]>;
+  getMappedEvents: () => Promise<MappedEvents>;
+  getMappedMiles: () => Promise<MappedMiles>;
+  getMappedProjects: () => Promise<MappedProjects>;
+  getMappedRoadies: () => Promise<MappedRoadies>;
   getRegions: () => Promise<Regions>;
-  getSport: () => Promise<Sport>;
 };
 
 const getBrittonsBashContentFacade = (): BrittonsBashContentFacade => {

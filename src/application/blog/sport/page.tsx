@@ -1,8 +1,13 @@
 import { ReactNode } from 'react';
 import { PageLayout } from '../../../components';
+import { brittonsBashContentFacade } from '../../../implementations';
 import { ResultTile } from './components/result-tile';
 import { SearchTile } from './components/search-tile';
 import { useSport } from './utils/use-sport';
+
+const mappedMiles = await brittonsBashContentFacade.getMappedMiles();
+const mappedProjects = await brittonsBashContentFacade.getMappedProjects();
+const mappedRoadies = await brittonsBashContentFacade.getMappedRoadies();
 
 export const Sport = () => {
   const {
@@ -22,7 +27,7 @@ export const Sport = () => {
     is2022,
     is2021,
     is2020,
-  } = useSport();
+  } = useSport(mappedMiles, mappedProjects, mappedRoadies);
 
   const content: ReactNode[] = [
     <SearchTile

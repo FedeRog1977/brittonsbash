@@ -1,13 +1,31 @@
-import { Events, Hills, UrlGroup } from '../utils/types';
+import {
+  Events,
+  Hills,
+  MappedEvents,
+  MappedMiles,
+  MappedProjects,
+  MappedRoadies,
+  Project,
+  UrlGroup,
+} from '../utils/types';
 import { Regions } from '../utils/types/regions';
 import { Sport } from '../utils/types/sport';
+import { mapEventSports } from './utils/map-event-sports';
+import { mapEvents } from './utils/map-events';
+import { mapMiles } from './utils/map-miles';
+import { mapProjects } from './utils/map-projects';
+import { mapRoadies } from './utils/map-roadies';
 
 type BrittonsBashContent = {
   getEvents: () => Promise<Events>;
   getHills: () => Promise<Hills>;
   getLinks: () => Promise<UrlGroup[]>;
+  getMappedEventSports: () => Promise<Project[]>;
+  getMappedEvents: () => Promise<MappedEvents>;
+  getMappedMiles: () => Promise<MappedMiles>;
+  getMappedProjects: () => Promise<MappedProjects>;
+  getMappedRoadies: () => Promise<MappedRoadies>;
   getRegions: () => Promise<Regions>;
-  getSport: () => Promise<Sport>;
 };
 
 export class BrittonsBashContentClient implements BrittonsBashContent {
@@ -97,6 +115,116 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
     }
   }
 
+  public async getMappedEventSports(): Promise<Project[]> {
+    const apiUrl = this.sportUrl;
+
+    const response = await fetch(apiUrl);
+
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+
+    const parsedResponse: Sport = await response.json();
+
+    const mappedParsedResponse: Project[] = mapEventSports(parsedResponse);
+
+    try {
+      return mappedParsedResponse;
+    } catch (error: unknown) {
+      console.log(error);
+
+      throw new Error('Invalid sport data received');
+    }
+  }
+
+  public async getMappedEvents(): Promise<MappedEvents> {
+    const apiUrl = this.eventsUrl;
+
+    const response = await fetch(apiUrl);
+
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+
+    const parsedResponse: Events = await response.json();
+
+    const mappedParsedResponse: MappedEvents = mapEvents(parsedResponse);
+
+    try {
+      return mappedParsedResponse;
+    } catch (error: unknown) {
+      console.log(error);
+
+      throw new Error('Invalid event data received');
+    }
+  }
+
+  public async getMappedMiles(): Promise<MappedMiles> {
+    const apiUrl = this.sportUrl;
+
+    const response = await fetch(apiUrl);
+
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+
+    const parsedResponse: Sport = await response.json();
+
+    const mappedParsedResponse: MappedMiles = mapMiles(parsedResponse);
+
+    try {
+      return mappedParsedResponse;
+    } catch (error: unknown) {
+      console.log(error);
+
+      throw new Error('Invalid sport data received');
+    }
+  }
+
+  public async getMappedProjects(): Promise<MappedProjects> {
+    const apiUrl = this.sportUrl;
+
+    const response = await fetch(apiUrl);
+
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+
+    const parsedResponse: Sport = await response.json();
+
+    const mappedParsedResponse: MappedProjects = mapProjects(parsedResponse);
+
+    try {
+      return mappedParsedResponse;
+    } catch (error: unknown) {
+      console.log(error);
+
+      throw new Error('Invalid sport data received');
+    }
+  }
+
+  public async getMappedRoadies(): Promise<MappedRoadies> {
+    const apiUrl = this.sportUrl;
+
+    const response = await fetch(apiUrl);
+
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+
+    const parsedResponse: Sport = await response.json();
+
+    const mappedParsedResponse: MappedRoadies = mapRoadies(parsedResponse);
+
+    try {
+      return mappedParsedResponse;
+    } catch (error: unknown) {
+      console.log(error);
+
+      throw new Error('Invalid sport data received');
+    }
+  }
+
   public async getRegions(): Promise<Regions> {
     const apiUrl = this.regionsUrl;
 
@@ -114,26 +242,6 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
       console.log(error);
 
       throw new Error('Invalid regions data received');
-    }
-  }
-
-  public async getSport(): Promise<Sport> {
-    const apiUrl = this.sportUrl;
-
-    const response = await fetch(apiUrl);
-
-    if (!response.ok) {
-      throw new Error(response.statusText);
-    }
-
-    const parsedResponse: Sport = await response.json();
-
-    try {
-      return parsedResponse;
-    } catch (error: unknown) {
-      console.log(error);
-
-      throw new Error('Invalid sport data received');
     }
   }
 }

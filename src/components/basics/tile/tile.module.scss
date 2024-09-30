@@ -9,8 +9,7 @@
   }
 
   @media (max-width: 768px) {
-    padding: reference.$spacing-md reference.$spacing-sm reference.$spacing-md
-      reference.$spacing-sm;
+    padding: reference.$spacing-md reference.$spacing-sm reference.$spacing-md reference.$spacing-sm;
   }
 
   &Clear {
@@ -21,7 +20,7 @@
     background-color: reference.$black-special;
 
     @media (min-width: 768px) {
-      border-radius: reference.$corners-xl;
+      // border-radius: reference.$corners-xl;
     }
 
     @media (max-width: 768px) {

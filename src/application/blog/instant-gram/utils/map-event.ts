@@ -1,10 +1,7 @@
 import { toSum, toFeet, toMiles } from '../../../../utils';
-import { DataContentResponse } from '../../../../components';
-import { Event } from '../types/event';
-import { CompiledEvent } from '../types/compiled-event';
-import { Project } from '../../sport/types/project';
+import { GenericDataContent, MappedEvent, Project, Event } from '../../../../utils/types';
 
-export const compileEvent = (event: Event, sport: Project[], showSport: boolean) => {
+export const mapEvent = (event: Event, sport: Project[], showSport: boolean): MappedEvent => {
   const names: string[] = [];
   const distances: number[] = [];
   const elevations: number[] = [];
@@ -35,7 +32,7 @@ export const compileEvent = (event: Event, sport: Project[], showSport: boolean)
     names.push(name);
   });
 
-  const features: DataContentResponse[] = [
+  const features: GenericDataContent[] = [
     {
       title: 'Countries',
       content: event.features?.countries?.sort(),
@@ -143,7 +140,7 @@ export const compileEvent = (event: Event, sport: Project[], showSport: boolean)
     });
   });
 
-  const compiledEvent: CompiledEvent = {
+  return {
     prefix: event.prefix,
     names,
     startDate: event.startDate,
@@ -164,6 +161,4 @@ export const compileEvent = (event: Event, sport: Project[], showSport: boolean)
     donalds: donalds.sort().join(', '),
     showSport: showSport,
   };
-
-  return compiledEvent;
 };

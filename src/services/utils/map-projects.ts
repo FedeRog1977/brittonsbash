@@ -1,37 +1,12 @@
-import { getSessionItem, removeDuplicates, toMiles, toFeet } from '../../../../utils';
-import { CompiledProject } from '../types/compiled-project';
-import { Project } from '../types/project';
+import { removeDuplicates, toMiles, toFeet } from '../../utils';
+import { MappedProjects, Project, Sport } from '../../utils/types';
 
-// TODO: make this fix
-// type CompiledProjects = {
-//   projects: {
-//     2024: Project[];
-//     2023: Project[];
-//     2022: Project[];
-//     2021: Project[];
-//     2020: Project[];
-//   };
-//   occurrences: AggregationNumerical;
-//   distance: AggregationAlphabetical;
-//   elevation: AggregationAlphabetical;
-//   islands: Aggregation;
-//   munros: Aggregation;
-//   munroTops: Aggregation;
-//   corbetts: Aggregation;
-//   corbettTops: Aggregation;
-//   grahams: Aggregation;
-//   subTwos: Aggregation;
-//   donalds: Aggregation;
-// };
-
-export const compileProjects = () => {
-  const sport = getSessionItem('response-sport');
-
+export const mapProjects = (sport: Sport): MappedProjects => {
   // type SportDataKeys = keyof typeof sport;
 
   // const years = Object.keys(sport)
 
-  // const Projects: CompiledProjects['projects'] = Object.keys(sport).reduce(
+  // const Projects: MappedProjects['projects'] = Object.keys(sport).reduce(
   //     (object, key) => {
   //         return {
   //             ...object,
@@ -41,7 +16,7 @@ export const compileProjects = () => {
   //     {}
   // )
 
-  // const Occurrences: CompiledProjects['occurrences'] = Object.keys(
+  // const Occurrences: MappedProjects['occurrences'] = Object.keys(
   //     sport
   // ).reduce((object, key) => {
   //     let total = 0
@@ -57,7 +32,7 @@ export const compileProjects = () => {
   //     }
   // }, {})
 
-  // const Distance: CompiledProjects['distance'] = Object.keys(sport).reduce(
+  // const Distance: MappedProjects['distance'] = Object.keys(sport).reduce(
   //     (object, key) => {
   //         let total = 0
   //         let yearTotal = 0
@@ -81,7 +56,7 @@ export const compileProjects = () => {
   //     {}
   // )
 
-  // const Elevation: CompiledProjects['elevation'] = Object.keys(sport).reduce(
+  // const Elevation: MappedProjects['elevation'] = Object.keys(sport).reduce(
   //     (object, key) => {
   //         let total = 0
   //         let yearTotal = 0
@@ -105,7 +80,7 @@ export const compileProjects = () => {
   //     {}
   // )
 
-  // const Islands: CompiledProjects['islands'] = Object.keys(sport).reduce(
+  // const Islands: MappedProjects['islands'] = Object.keys(sport).reduce(
   //     (object, key) => {
   //         let total: string[] = []
   //         let yearTotal: string[] = []
@@ -133,7 +108,7 @@ export const compileProjects = () => {
   //     {}
   // )
 
-  // const Munros: CompiledProjects['munros'] = Object.keys(sport).reduce(
+  // const Munros: MappedProjects['munros'] = Object.keys(sport).reduce(
   //     (object, key) => {
   //         let total: string[] = []
   //         let yearTotal: string[] = []
@@ -161,7 +136,7 @@ export const compileProjects = () => {
   //     {}
   // )
 
-  // const MunroTops: CompiledProjects['munroTops'] = Object.keys(sport).reduce(
+  // const MunroTops: MappedProjects['munroTops'] = Object.keys(sport).reduce(
   //     (object, key) => {
   //         let total: string[] = []
   //         let yearTotal: string[] = []
@@ -193,7 +168,7 @@ export const compileProjects = () => {
   //     {}
   // )
 
-  // const Corbetts: CompiledProjects['corbetts'] = Object.keys(sport).reduce(
+  // const Corbetts: MappedProjects['corbetts'] = Object.keys(sport).reduce(
   //     (object, key) => {
   //         let total: string[] = []
   //         let yearTotal: string[] = []
@@ -221,7 +196,7 @@ export const compileProjects = () => {
   //     {}
   // )
 
-  // const CorbettTops: CompiledProjects['corbettTops'] = Object.keys(
+  // const CorbettTops: MappedProjects['corbettTops'] = Object.keys(
   //     sport
   // ).reduce((object, key) => {
   //     let total: string[] = []
@@ -252,7 +227,7 @@ export const compileProjects = () => {
   //     }
   // }, {})
 
-  // const Grahams: CompiledProjects['grahams'] = Object.keys(sport).reduce(
+  // const Grahams: MappedProjects['grahams'] = Object.keys(sport).reduce(
   //     (object, key) => {
   //         let total: string[] = []
   //         let yearTotal: string[] = []
@@ -280,7 +255,7 @@ export const compileProjects = () => {
   //     {}
   // )
 
-  // const SubTwos: CompiledProjects['subTwos'] = Object.keys(sport).reduce(
+  // const SubTwos: MappedProjects['subTwos'] = Object.keys(sport).reduce(
   //     (object, key) => {
   //         let total: string[] = []
   //         let yearTotal: string[] = []
@@ -308,7 +283,7 @@ export const compileProjects = () => {
   //     {}
   // )
 
-  // const Donalds: CompiledProjects['donalds'] = Object.keys(sport).reduce(
+  // const Donalds: MappedProjects['donalds'] = Object.keys(sport).reduce(
   //     (object, key) => {
   //         let total: string[] = []
   //         let yearTotal: string[] = []
@@ -351,7 +326,7 @@ export const compileProjects = () => {
   //     Donalds,
   // })
 
-  // const compiledProjectsTemp: CompiledProjects = {
+  // const MappedProjectsTemp: MappedProjects = {
   //     Projects,
   //     Occurrences,
   //     Distance,
@@ -368,7 +343,7 @@ export const compileProjects = () => {
 
   // Old gen:
 
-  const projects: CompiledProject['projects'] = {
+  const projects: MappedProjects['projects'] = {
     2024: sport[2024].projects,
     2023: sport[2023].projects,
     2022: sport[2022].projects,
@@ -376,7 +351,7 @@ export const compileProjects = () => {
     2020: sport[2020].projects,
   };
 
-  const number: CompiledProject['number'] = {
+  const number: MappedProjects['number'] = {
     total:
       sport[2024].projects.length +
       sport[2023].projects.length +
@@ -734,7 +709,7 @@ export const compileProjects = () => {
     donaldsTotal.push(donald);
   });
 
-  const islands: CompiledProject['islands'] = {
+  const islands: MappedProjects['islands'] = {
     names: {
       total: islandsTotal.sort(),
       unique: removeDuplicates(islandsTotal).sort(),
@@ -755,7 +730,7 @@ export const compileProjects = () => {
     },
   };
 
-  const munros: CompiledProject['munros'] = {
+  const munros: MappedProjects['munros'] = {
     names: {
       total: munrosTotal.sort(),
       unique: removeDuplicates(munrosTotal).sort(),
@@ -776,7 +751,7 @@ export const compileProjects = () => {
     },
   };
 
-  const munroTops: CompiledProject['munroTops'] = {
+  const munroTops: MappedProjects['munroTops'] = {
     names: {
       total: munroTopsTotal.sort(),
       unique: removeDuplicates(munroTopsTotal).sort(),
@@ -797,7 +772,7 @@ export const compileProjects = () => {
     },
   };
 
-  const corbetts: CompiledProject['corbetts'] = {
+  const corbetts: MappedProjects['corbetts'] = {
     names: {
       total: corbettsTotal.sort(),
       unique: removeDuplicates(corbettsTotal).sort(),
@@ -818,7 +793,7 @@ export const compileProjects = () => {
     },
   };
 
-  const corbettTops: CompiledProject['corbettTops'] = {
+  const corbettTops: MappedProjects['corbettTops'] = {
     names: {
       total: corbettTopsTotal.sort(),
       unique: removeDuplicates(corbettTopsTotal).sort(),
@@ -839,7 +814,7 @@ export const compileProjects = () => {
     },
   };
 
-  const grahams: CompiledProject['grahams'] = {
+  const grahams: MappedProjects['grahams'] = {
     names: {
       total: grahamsTotal.sort(),
       unique: removeDuplicates(grahamsTotal).sort(),
@@ -860,7 +835,7 @@ export const compileProjects = () => {
     },
   };
 
-  const subTwos: CompiledProject['subTwos'] = {
+  const subTwos: MappedProjects['subTwos'] = {
     names: {
       total: subTwosTotal.sort(),
       unique: removeDuplicates(subTwosTotal).sort(),
@@ -881,7 +856,7 @@ export const compileProjects = () => {
     },
   };
 
-  const donalds: CompiledProject['donalds'] = {
+  const donalds: MappedProjects['donalds'] = {
     names: {
       total: donaldsTotal.sort(),
       unique: removeDuplicates(donaldsTotal).sort(),
@@ -902,7 +877,7 @@ export const compileProjects = () => {
     },
   };
 
-  const distance: CompiledProject['distance'] = {
+  const distance: MappedProjects['distance'] = {
     total: toMiles(distance2024 + distance2023 + distance2022 + distance2021 + distance2020),
     2024: toMiles(distance2024),
     2023: toMiles(distance2023),
@@ -911,7 +886,7 @@ export const compileProjects = () => {
     2020: toMiles(distance2020),
   };
 
-  const elevation: CompiledProject['elevation'] = {
+  const elevation: MappedProjects['elevation'] = {
     total: toFeet(elevation2024 + elevation2023 + elevation2022 + elevation2021 + elevation2020),
     2024: toFeet(elevation2024),
     2023: toFeet(elevation2023),
@@ -920,7 +895,7 @@ export const compileProjects = () => {
     2020: toFeet(elevation2020),
   };
 
-  const compiledProjects: CompiledProject = {
+  return {
     projects,
     number,
     distance,
@@ -934,6 +909,4 @@ export const compileProjects = () => {
     subTwos,
     donalds,
   };
-
-  return compiledProjects;
 };

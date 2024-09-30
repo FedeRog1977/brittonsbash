@@ -1,7 +1,8 @@
-import { AggregationNumerical, AggregationAlphabetical } from '../../../../components';
-import { Miles } from '../../../../utils/types';
+import { AggregationAlphabetical } from './aggregation-alphabetical';
+import { AggregationNumerical } from './aggregation-numerical';
+import { Miles } from './miles';
 
-export type CompiledMiles = {
+export type MappedMiles = {
   miles: {
     2020: Miles[];
     2021: Miles[];

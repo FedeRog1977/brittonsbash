@@ -1,7 +1,8 @@
-import { AggregationNumerical, AggregationAlphabetical } from '../../../../components';
+import { AggregationAlphabetical } from './aggregation-alphabetical';
+import { AggregationNumerical } from './aggregation-numerical';
 import { Roadie } from './roadie';
 
-export type CompiledRoadie = {
+export type MappedRoadies = {
   roadies: {
     2020: Roadie[];
     2021: Roadie[];

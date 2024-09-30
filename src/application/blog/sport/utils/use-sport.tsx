@@ -1,23 +1,25 @@
 import { useState } from 'react';
 import { toFeet, toMiles, toSpeed } from '../../../../utils';
 import { ColumnTableProps } from '../../../../components';
-import { Miles } from '../../../../utils/types';
-import { Project } from '../../../../utils/types';
-import { Roadie } from '../../../../utils/types';
-import { compileMiles } from './compile-miles';
-import { compileProjects } from './compile-projects';
-import { compileRoadies } from './compile-roadies';
+import {
+  MappedMiles,
+  MappedProjects,
+  MappedRoadies,
+  Miles,
+  Project,
+  Roadie,
+} from '../../../../utils/types';
 
-export const useSport = () => {
-  const compiledRoadies = compileRoadies();
-  const compiledProjects = compileProjects();
-  const compiledMiles = compileMiles();
-
+export const useSport = (
+  mappedMiles: MappedMiles,
+  mappedProjects: MappedProjects,
+  mappedRoadies: MappedRoadies
+) => {
   const [isRoadies, setIsRoadies] = useState(true);
   const [isProjects, setIsProjects] = useState(false);
   const [isMiles, setIsMiles] = useState(false);
 
-  const [sportData, setSportData]: any = useState(compiledRoadies);
+  const [sportData, setSportData]: any = useState(mappedRoadies);
 
   const title: string = isRoadies
     ? 'Roadies'
@@ -636,7 +638,7 @@ export const useSport = () => {
 
   const handleCategory = (e: any) => {
     if (e.currentTarget.value === 'roadies') {
-      setSportData(compiledRoadies);
+      setSportData(mappedRoadies);
       setIsRoadies(true);
       setIsProjects(false);
       setIsMiles(false);
@@ -647,7 +649,7 @@ export const useSport = () => {
       setIs2021(false);
       setIs2020(false);
     } else if (e.currentTarget.value === 'projects') {
-      setSportData(compiledProjects);
+      setSportData(mappedProjects);
       setIsRoadies(false);
       setIsProjects(true);
       setIsMiles(false);
@@ -658,7 +660,7 @@ export const useSport = () => {
       setIs2021(false);
       setIs2020(false);
     } else if (e.currentTarget.value === 'miles') {
-      setSportData(compiledMiles);
+      setSportData(mappedMiles);
       setIsRoadies(false);
       setIsProjects(false);
       setIsMiles(true);
@@ -670,7 +672,7 @@ export const useSport = () => {
       setIs2020(false);
     } else if (e.currentTarget.value === 'tennis') {
     } else {
-      setSportData(compiledRoadies);
+      setSportData(mappedRoadies);
       setIsRoadies(true);
       setIsProjects(false);
       setIsMiles(false);

@@ -1,11 +1,8 @@
-import { getSessionItem, toFeet, toMiles } from '../../../../utils';
-import { CompiledMiles } from '../types/compiled-miles';
-import { Miles } from '../../../../utils/types';
+import { toFeet, toMiles } from '../../utils';
+import { MappedMiles, Miles, Sport } from '../../utils/types';
 
-export const compileMiles = () => {
-  const sport = getSessionItem('response-sport');
-
-  const miles: CompiledMiles['miles'] = {
+export const mapMiles = (sport: Sport): MappedMiles => {
+  const miles: MappedMiles['miles'] = {
     2024: sport[2024].miles,
     2023: sport[2023].miles,
     2022: sport[2022].miles,
@@ -13,7 +10,7 @@ export const compileMiles = () => {
     2020: sport[2020].miles,
   };
 
-  const number: CompiledMiles['number'] = {
+  const number: MappedMiles['number'] = {
     total:
       sport[2024].miles.length +
       sport[2023].miles.length +
@@ -161,7 +158,7 @@ export const compileMiles = () => {
   waterfootsTotal =
     waterfoots2024 + waterfoots2023 + waterfoots2022 + waterfoots2021 + waterfoots2020;
 
-  const windfarms: CompiledMiles['windfarms'] = {
+  const windfarms: MappedMiles['windfarms'] = {
     total: windfarmsTotal,
     2024: windfarms2024,
     2023: windfarms2023,
@@ -170,7 +167,7 @@ export const compileMiles = () => {
     2020: windfarms2020,
   };
 
-  const thorntonhalls: CompiledMiles['thorntonhalls'] = {
+  const thorntonhalls: MappedMiles['thorntonhalls'] = {
     total: thorntonhallsTotal,
     2024: thorntonhalls2024,
     2023: thorntonhalls2023,
@@ -179,7 +176,7 @@ export const compileMiles = () => {
     2020: thorntonhalls2020,
   };
 
-  const waterfoots: CompiledMiles['waterfoots'] = {
+  const waterfoots: MappedMiles['waterfoots'] = {
     total: waterfootsTotal,
     2024: waterfoots2024,
     2023: waterfoots2023,
@@ -188,7 +185,7 @@ export const compileMiles = () => {
     2020: waterfoots2020,
   };
 
-  const distance: CompiledMiles['distance'] = {
+  const distance: MappedMiles['distance'] = {
     total: toMiles(distance2024 + distance2023 + distance2022 + distance2021 + distance2020),
     2024: toMiles(distance2024),
     2023: toMiles(distance2023),
@@ -197,7 +194,7 @@ export const compileMiles = () => {
     2020: toMiles(distance2020),
   };
 
-  const elevation: CompiledMiles['elevation'] = {
+  const elevation: MappedMiles['elevation'] = {
     total: toFeet(elevation2024 + elevation2023 + elevation2022 + elevation2021 + elevation2020),
     2024: toFeet(elevation2024),
     2023: toFeet(elevation2023),
@@ -206,7 +203,7 @@ export const compileMiles = () => {
     2020: toFeet(elevation2020),
   };
 
-  const compiledMiles: CompiledMiles = {
+  return {
     miles,
     number,
     distance,
@@ -215,7 +212,4 @@ export const compileMiles = () => {
     thorntonhalls,
     waterfoots,
   };
-
-  // console.log('All Miles:\n\n', compiledMiles)
-  return compiledMiles;
 };

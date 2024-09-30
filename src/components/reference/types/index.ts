@@ -1,6 +1,3 @@
-export * from './aggregation';
-export * from './aggregation-alphabetical';
-export * from './aggregation-numerical';
 export * from './align-config';
 export * from './align-cross-axis';
 export * from './align-horizontal';

@@ -1,13 +1,12 @@
-// TODO: replace this with the type in utils/types
-import { DataContentResponse } from '../../../../components';
+import { GenericDataContent } from './generic-data-content';
 import { Event } from './event';
 
-export type CompiledEvent = {
+export type MappedEvent = {
   prefix?: Event['prefix'];
   names: string[];
   startDate: Event['startDate'];
   endDate?: Event['endDate'];
-  features?: DataContentResponse[];
+  features?: GenericDataContent[];
   description: Event['description'];
   images: Event['images'];
   distance?: string;

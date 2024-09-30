@@ -1,27 +1,23 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import { RowTableProps } from '../../../../components';
-import { compileEvent } from './compile-event';
-import { compileEventSports } from './compile-event-sports';
-import { compileEvents } from './compile-events';
-import { Event } from '../types/event';
+import { mapEvent } from './map-event';
 import { isMobile, useShowElement } from '../../../../utils';
 import { emptyEventData } from '../mocks/empty-event-data';
-import { Project } from '../../sport/types/project';
+import { MappedEvents, Project } from '../../../../utils/types';
 
-export const useInstantGram = () => {
+export const useInstantGram = (mappedEventSport: Project[], mappedEvents: MappedEvents) => {
   const location = useLocation();
   const [url, setUrl] = useState('');
   const [searchParamsHandler, setSearchParamsHandler] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const { events, eventsParsed } = compileEvents();
-  const allSport = compileEventSports();
+  const { events, mappedEvents: mappedEventsUnpacked } = mappedEvents;
   const sportOnEvent: Project[] = [];
 
   const [searchField, setSearchField] = useState('');
 
-  const [event, setEvent] = useState(eventsParsed[0]);
+  const [event, setEvent] = useState(mappedEventsUnpacked[0]);
   const [sport, setSport] = useState<Project[]>([]);
   const [showSport, setShowSport] = useState(false);
 
@@ -40,9 +36,9 @@ export const useInstantGram = () => {
 
   useEffect(() => {
     if (location.search === '') {
-      for (var i in allSport) {
-        if (eventsParsed[0]?.names.includes(allSport[i]?.name as string)) {
-          sportOnEvent.push(allSport[i] as Project);
+      for (var i in mappedEventSport) {
+        if (mappedEventsUnpacked[0]?.names.includes(mappedEventSport[i]?.name)) {
+          sportOnEvent.push(mappedEventSport[i]);
           setSport(sportOnEvent);
           setShowSport(true);
         }
@@ -50,15 +46,15 @@ export const useInstantGram = () => {
     } else {
       setUrl(`${location.pathname}${location.search}`);
 
-      for (var i in eventsParsed) {
-        if (location.search === `?${eventsParsed[i]?.id?.toLowerCase()}=`) {
-          setEvent(eventsParsed[i]);
+      for (var i in mappedEventsUnpacked) {
+        if (location.search === `?${mappedEventsUnpacked[i]?.id?.toLowerCase()}`) {
+          setEvent(mappedEventsUnpacked[i]);
           setSport([] as Project[]);
           setShowSport(false);
 
-          for (var j in allSport) {
-            if (eventsParsed[i]?.names.includes(allSport[j]?.name as string)) {
-              sportOnEvent.push(allSport[j] as Project);
+          for (var j in mappedEventSport) {
+            if (mappedEventsUnpacked[i]?.names.includes(mappedEventSport[j]?.name)) {
+              sportOnEvent.push(mappedEventSport[j]);
               setSport(sportOnEvent);
               setShowSport(true);
             }
@@ -71,21 +67,21 @@ export const useInstantGram = () => {
   const handleInput = (e: any) => {
     setSearchField(e.target.value.toLowerCase());
 
-    for (var i in eventsParsed) {
+    for (var i in mappedEventsUnpacked) {
       if (searchField === '') {
         setEventHandler(event);
         setSportHandler(sport);
         setShowSportHandler(showSport);
-      } else if (eventsParsed[i]?.names.join(' - ').toLowerCase().includes(searchField)) {
-        setSearchParamsHandler(eventsParsed[i]?.id?.toLowerCase() ?? '');
+      } else if (mappedEventsUnpacked[i]?.names.join(' - ').toLowerCase().includes(searchField)) {
+        setSearchParamsHandler(mappedEventsUnpacked[i]?.id?.toLowerCase() ?? '');
 
-        setEventHandler(eventsParsed[i]);
+        setEventHandler(mappedEventsUnpacked[i]);
         setSportHandler([] as Project[]);
         setShowSportHandler(false);
 
-        for (var j in allSport) {
-          if (eventsParsed[i]?.names.includes(allSport[j]?.name as string)) {
-            sportOnEvent.push(allSport[j] as Project);
+        for (var j in mappedEventSport) {
+          if (mappedEventsUnpacked[i]?.names.includes(mappedEventSport[j]?.name)) {
+            sportOnEvent.push(mappedEventSport[j]);
             setSportHandler(sportOnEvent);
             setShowSportHandler(true);
           }
@@ -108,19 +104,19 @@ export const useInstantGram = () => {
   };
 
   const handleSelect = (e: any) => {
-    for (var i in eventsParsed) {
-      if (eventsParsed[i]?.names.join(' - ').includes(e.currentTarget.value)) {
-        setEvent(eventsParsed[i]);
+    for (var i in mappedEventsUnpacked) {
+      if (mappedEventsUnpacked[i]?.names.join(' - ').includes(e.currentTarget.value)) {
+        setEvent(mappedEventsUnpacked[i]);
         setSport([] as Project[]);
         setShowSport(false);
 
-        const search = `?${eventsParsed[i]?.id?.toLowerCase()}=`;
+        const search = `?${mappedEventsUnpacked[i]?.id?.toLowerCase()}`;
         setUrl(`${location.pathname}${search}`);
-        setSearchParams(eventsParsed[i]?.id?.toLowerCase());
+        setSearchParams(mappedEventsUnpacked[i]?.id?.toLowerCase());
 
-        for (var j in allSport) {
-          if (eventsParsed[i]?.names.includes(allSport[j]?.name as string)) {
-            sportOnEvent.push(allSport[j] as Project);
+        for (var j in mappedEventSport) {
+          if (mappedEventsUnpacked[i]?.names.includes(mappedEventSport[j]?.name)) {
+            sportOnEvent.push(mappedEventSport[j]);
             setSport(sportOnEvent);
             setShowSport(true);
           }
@@ -131,45 +127,45 @@ export const useInstantGram = () => {
     setShowSearchList(!showSearchList);
   };
 
-  const compiledEvent = compileEvent(event as Event, sport, showSport);
+  const mappedEvent = mapEvent(event, sport, showSport);
 
   const eventSport: RowTableProps = {
     titleRow: {
       leftItem: 'Statistics',
-      rightItem: `${compiledEvent.distance} | ${compiledEvent.elevation} | ${compiledEvent.times}`,
+      rightItem: `${mappedEvent.distance} | ${mappedEvent.elevation} | ${mappedEvent.times}`,
     },
     rows: [
       {
         leftItem: 'Islands',
-        rightItem: compiledEvent.islands,
+        rightItem: mappedEvent.islands,
       },
       {
         leftItem: 'Munros',
-        rightItem: compiledEvent.munros,
+        rightItem: mappedEvent.munros,
       },
       {
         leftItem: 'Munro Tops',
-        rightItem: compiledEvent.munroTops,
+        rightItem: mappedEvent.munroTops,
       },
       {
         leftItem: 'Corbetts',
-        rightItem: compiledEvent.corbetts,
+        rightItem: mappedEvent.corbetts,
       },
       {
         leftItem: 'Corbett Tops',
-        rightItem: compiledEvent.corbettTops,
+        rightItem: mappedEvent.corbettTops,
       },
       {
         leftItem: 'Grahams',
-        rightItem: compiledEvent.grahams,
+        rightItem: mappedEvent.grahams,
       },
       {
         leftItem: 'SubTwos',
-        rightItem: compiledEvent.subTwos,
+        rightItem: mappedEvent.subTwos,
       },
       {
         leftItem: 'Donalds',
-        rightItem: compiledEvent.donalds,
+        rightItem: mappedEvent.donalds,
       },
     ],
   };
@@ -240,8 +236,7 @@ export const useInstantGram = () => {
   };
 
   return {
-    // Need for URL logic has been removed
-    // Keeping it here for the time-being
+    // Need for URL logic has been removed, keeping it here for the time-being
     url,
     handleCategory,
     showSearchList,
@@ -254,9 +249,7 @@ export const useInstantGram = () => {
     handleInput,
     executeInput,
     handleSelect,
-    // TODO: move all compiledEvent access to the hook,
-    // here from ResultTile, like summary
-    compiledEvent,
+    mappedEvent,
     eventSport,
     handleToggleElements,
     showDescription,

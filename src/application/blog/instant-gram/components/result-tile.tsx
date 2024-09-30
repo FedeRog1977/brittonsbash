@@ -15,10 +15,10 @@ import { useShowElement, generateUniqueKey, isMobile } from '../../../../utils';
 import { FC } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import { CompiledEvent } from '../types/compiled-event';
+import { MappedEvent } from '../../../../utils/types';
 
 type ResultTileProps = {
-  compiledEvent: CompiledEvent;
+  mappedEvent: MappedEvent;
   eventSport: RowTableProps;
   funcToggleElements: (value: string) => void;
   showDescription: boolean;
@@ -26,7 +26,7 @@ type ResultTileProps = {
 };
 
 export const ResultTile: FC<ResultTileProps> = ({
-  compiledEvent,
+  mappedEvent,
   eventSport,
   funcToggleElements,
   showDescription,
@@ -37,13 +37,11 @@ export const ResultTile: FC<ResultTileProps> = ({
   return (
     <Tile type="solid">
       <Flex direction="vertical" gap={isMobile() ? 'xs' : 'md'}>
-        {compiledEvent.prefix ? (
-          <Typography variant="t1">{compiledEvent.prefix}:</Typography>
-        ) : null}
+        {mappedEvent.prefix ? <Typography variant="t1">{mappedEvent.prefix}:</Typography> : null}
 
         <Flex direction="vertical" rowGap="3xs">
-          {compiledEvent.names.length > 1 ? (
-            compiledEvent.names.map((name, index) => (
+          {mappedEvent.names.length > 1 ? (
+            mappedEvent.names.map((name, index) => (
               <Flex key={generateUniqueKey(index)} direction="horizontal" gap="xs">
                 <Typography variant="h1" color="mediumGrey" textAlign="right">
                   Part&nbsp;
@@ -57,17 +55,17 @@ export const ResultTile: FC<ResultTileProps> = ({
             ))
           ) : (
             <Typography variant="t1" markdown>
-              {compiledEvent.names[0]}
+              {mappedEvent.names[0]}
             </Typography>
           )}
         </Flex>
 
         <Typography variant="h4" color="mediumGrey">
-          {compiledEvent.startDate}
-          {compiledEvent.endDate ? <>&nbsp;&#8212;&nbsp;{compiledEvent.endDate}</> : null}
+          {mappedEvent.startDate}
+          {mappedEvent.endDate ? <>&nbsp;&#8212;&nbsp;{mappedEvent.endDate}</> : null}
         </Typography>
 
-        {compiledEvent.showSport ? (
+        {mappedEvent.showSport ? (
           <RowTable titleRow={eventSport.titleRow} rows={eventSport.rows} />
         ) : null}
 
@@ -89,16 +87,16 @@ export const ResultTile: FC<ResultTileProps> = ({
 
         {showDescription ? (
           <>
-            {compiledEvent.features ? <ArticlePreface entries={compiledEvent.features} /> : null}
+            {mappedEvent.features ? <ArticlePreface entries={mappedEvent.features} /> : null}
 
             <Typography variant="body" textAlign="justify" markdown>
-              {compiledEvent.description}
+              {mappedEvent.description}
             </Typography>
           </>
         ) : null}
 
         {isMobile() ? (
-          <ImageSlider slides={compiledEvent.images} />
+          <ImageSlider slides={mappedEvent.images} />
         ) : (
           <Grid justifyContent="even">
             <Button
@@ -117,11 +115,11 @@ export const ResultTile: FC<ResultTileProps> = ({
           </Grid>
         )}
 
-        {showMatrix ? <ImageMatrix items={compiledEvent.images} /> : null}
+        {showMatrix ? <ImageMatrix items={mappedEvent.images} /> : null}
 
         {showModal ? (
           <Modal isOpen={showModal} onClose={() => setShowModal(!showModal)}>
-            <ImageSlider slides={compiledEvent.images} />
+            <ImageSlider slides={mappedEvent.images} />
           </Modal>
         ) : null}
       </Flex>

@@ -1,7 +1,8 @@
-import { AggregationNumerical, AggregationAlphabetical } from '../../../../components';
-import { Project } from '../../../../utils/types';
+import { AggregationAlphabetical } from './aggregation-alphabetical';
+import { AggregationNumerical } from './aggregation-numerical';
+import { Project } from './project';
 
-export type CompiledProject = {
+export type MappedProjects = {
   projects: {
     2020: Project[];
     2021: Project[];
