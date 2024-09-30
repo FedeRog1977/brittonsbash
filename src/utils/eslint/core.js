@@ -1,5 +1,3 @@
-import rules from './rules.js.js.js';
-
 export default {
   rules: {
     'array-bracket-newline': 'off',

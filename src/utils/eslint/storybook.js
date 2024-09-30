@@ -1,5 +1,3 @@
-import rules from './rules.js.js';
-
 export default {
   rules: {
     'react/jsx-props-no-spreading': 'off',

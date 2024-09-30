@@ -1,6 +1,5 @@
 import plugin from '@typescript-eslint/eslint-plugin';
 import parser from '@typescript-eslint/parser';
-import rules from './rules.js.js';
 
 export default {
   languageOptions: {
