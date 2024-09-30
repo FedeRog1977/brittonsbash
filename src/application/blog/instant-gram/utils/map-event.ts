@@ -1,5 +1,6 @@
 import { toSum, toFeet, toMiles } from '../../../../utils';
-import { GenericDataContent, MappedEvent, Project, Event } from '../../../../utils/types';
+import { MappedEvent, Project, Event, Features } from '../../../../utils/types';
+import { mapEventFeaturesReadable } from './map-event-features-readable';
 
 export const mapEvent = (event: Event, sport: Project[], showSport: boolean): MappedEvent => {
   const names: string[] = [];
@@ -32,65 +33,7 @@ export const mapEvent = (event: Event, sport: Project[], showSport: boolean): Ma
     names.push(name);
   });
 
-  // TODO: update to reflect new additions in Features type
-  const features: GenericDataContent[] = [
-    {
-      title: 'Countries',
-      content: event.features?.countries?.sort(),
-    },
-    {
-      title: 'Cities',
-      content: event.features?.cities?.sort(),
-    },
-    {
-      title: 'Districts',
-      content: event.features?.districts?.sort(),
-    },
-    {
-      title: 'Attractions',
-      content: event.features?.attractions?.sort(),
-    },
-    {
-      title: 'Accommodation',
-      content: event.features?.accommodation?.sort(),
-    },
-    {
-      title: 'Supermarkets',
-      content: event.features?.supermarkets?.sort(),
-    },
-    {
-      title: 'Shops',
-      content: event.features?.shops?.sort(),
-    },
-    {
-      title: 'Consumables',
-      content: event.features?.consumables?.sort(),
-    },
-    {
-      title: 'Cafés',
-      content: event.features?.cafes?.sort(),
-    },
-    {
-      title: 'Bakeries',
-      content: event.features?.bakeries?.sort(),
-    },
-    {
-      title: 'Gelaterias',
-      content: event.features?.gelaterias?.sort(),
-    },
-    {
-      title: 'Restaurants',
-      content: event.features?.restaurants?.sort(),
-    },
-    {
-      title: 'Bars',
-      content: event.features?.bars?.sort(),
-    },
-    {
-      title: 'Nostalgia Effect',
-      content: event.features?.nostalgiaEffect?.sort(),
-    },
-  ];
+  const features = event.features ? mapEventFeaturesReadable(event.features) : undefined;
 
   if (sport.length === 0) {
     sport.push({
@@ -146,7 +89,7 @@ export const mapEvent = (event: Event, sport: Project[], showSport: boolean): Ma
     names,
     startDate: event.startDate,
     endDate: event.endDate,
-    features: event.features ? features : undefined,
+    features,
     description: event.description,
     images: event.images,
     distance: toMiles(distances.reduce(toSum)),
