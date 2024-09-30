@@ -1,6 +1,6 @@
 import { getSessionItem, toFeet, toMiles } from '../../../../utils';
 import { CompiledMiles } from '../types/compiled-miles';
-import { Miles } from '../types/miles';
+import { Miles } from '../../../../utils/types';
 
 export const compileMiles = () => {
   const sport = getSessionItem('response-sport');

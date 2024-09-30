@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { Marker, Popup } from 'react-leaflet';
-import { generateUniqueKey, Hill, toCoords, toFeet } from '../../../../utils';
+import { generateUniqueKey, toCoords, toFeet } from '../../../../utils';
+import { Hill } from '../../../../utils/types';
 import { Flex, Typography } from '../../../../components';
 import { HillMarkerProps } from './hill-markers';
 

@@ -3,7 +3,6 @@ import './components/reference/styles/_fonts.scss';
 import ReactDOM from 'react-dom/client';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import { reportWebVitals } from './utils';
-import { useRegions, useSport } from './legacy-api';
 import {
   Academia,
   Allroad,
@@ -25,14 +24,6 @@ import {
   Weather,
 } from './application';
 
-// TODO: replace all of these with their according
-// services and implementations
-const TriggerSession = () => {
-  useRegions();
-  useSport();
-};
-
-TriggerSession();
 reportWebVitals();
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);

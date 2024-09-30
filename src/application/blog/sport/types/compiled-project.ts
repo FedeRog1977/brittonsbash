@@ -1,5 +1,5 @@
 import { AggregationNumerical, AggregationAlphabetical } from '../../../../components';
-import { Project } from './project';
+import { Project } from '../../../../utils/types';
 
 export type CompiledProject = {
   projects: {

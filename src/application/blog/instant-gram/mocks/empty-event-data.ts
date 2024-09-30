@@ -1,4 +1,4 @@
-import { Event } from '../../../../utils';
+import { Event } from '../../../../utils/types';
 
 export const emptyEventData: Partial<Event>[] = [
   {

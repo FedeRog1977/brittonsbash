@@ -1,5 +1,5 @@
 import { brittonsBashContentFacade } from '../../../../implementations';
-import { Event } from '../../../../utils';
+import { Event } from '../../../../utils/types';
 
 const events = await brittonsBashContentFacade.getEvents();
 

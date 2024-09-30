@@ -1,9 +1,11 @@
 import { useState } from 'react';
-import { compileHills, toCoords, toFeet } from '../../../../utils';
+import { brittonsBashContentFacade } from '../../../../implementations';
+import { toCoords, toFeet } from '../../../../utils';
+
+// TODO: all facade uses should be in their respective page.tsx's
+const hills = await brittonsBashContentFacade.getHills();
 
 export const useWeather = () => {
-  const hills = compileHills();
-
   const [lat, setLat] = useState<number>(0);
   const [lon, setLon] = useState<number>(0);
 

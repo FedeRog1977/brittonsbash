@@ -1,9 +1,13 @@
-import { Event, EventsAggregateTemp, Hills, UrlGroup } from '../utils';
+import { Events, Hills, UrlGroup } from '../utils/types';
+import { Regions } from '../utils/types/regions';
+import { Sport } from '../utils/types/sport';
 
 type BrittonsBashContent = {
-  getEvents: () => Promise<EventsAggregateTemp>;
+  getEvents: () => Promise<Events>;
   getHills: () => Promise<Hills>;
   getLinks: () => Promise<UrlGroup[]>;
+  getRegions: () => Promise<Regions>;
+  getSport: () => Promise<Sport>;
 };
 
 export class BrittonsBashContentClient implements BrittonsBashContent {
@@ -21,12 +25,19 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
     return `${this.baseUrl}/events.data.json`;
   }
 
+  private get regionsUrl(): string {
+    return `${this.baseUrl}/regions.data.json`;
+  }
+
+  private get sportUrl(): string {
+    return `${this.baseUrl}/sport.data.json`;
+  }
+
   public constructor(baseUrl: string) {
     this.baseUrl = baseUrl;
   }
 
-  // NOTE: this is a temporary service implementation as it will be moved to it's own service type
-  public async getEvents(): Promise<EventsAggregateTemp> {
+  public async getEvents(): Promise<Events> {
     const apiUrl = this.eventsUrl;
 
     const response = await fetch(apiUrl);
@@ -35,7 +46,7 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
       throw new Error(response.statusText);
     }
 
-    const parsedResponse: EventsAggregateTemp = await response.json();
+    const parsedResponse: Events = await response.json();
 
     try {
       return parsedResponse;
@@ -45,7 +56,6 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
       throw new Error('Invalid events data received');
     }
   }
-  // ---
 
   public async getHills(): Promise<Hills> {
     const apiUrl = this.hillsUrl;
@@ -84,6 +94,46 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
       console.log(error);
 
       throw new Error('Invalid links data received');
+    }
+  }
+
+  public async getRegions(): Promise<Regions> {
+    const apiUrl = this.regionsUrl;
+
+    const response = await fetch(apiUrl);
+
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+
+    const parsedResponse: Regions = await response.json();
+
+    try {
+      return parsedResponse;
+    } catch (error: unknown) {
+      console.log(error);
+
+      throw new Error('Invalid regions data received');
+    }
+  }
+
+  public async getSport(): Promise<Sport> {
+    const apiUrl = this.sportUrl;
+
+    const response = await fetch(apiUrl);
+
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+
+    const parsedResponse: Sport = await response.json();
+
+    try {
+      return parsedResponse;
+    } catch (error: unknown) {
+      console.log(error);
+
+      throw new Error('Invalid sport data received');
     }
   }
 }

@@ -1,5 +1,6 @@
 import { FC } from 'react';
-import { generateUniqueKey, Route } from '../../../../utils';
+import { generateUniqueKey } from '../../../../utils';
+import { Route } from '../../../../utils/types';
 
 export type RouteListProps = {
   id: string;

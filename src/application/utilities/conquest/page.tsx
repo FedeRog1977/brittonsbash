@@ -8,7 +8,7 @@ import {
 } from 'react-leaflet';
 import './styles-temp.scss';
 import { useState } from 'react';
-import { compileHills, formatCoordinates } from '../../../utils';
+import { formatCoordinates } from '../../../utils';
 // import L from 'leaflet'
 import * as L from 'leaflet';
 import { RouteList, RouteListProps } from './components/route-list';
@@ -17,10 +17,11 @@ import { LandmassList } from './components/landmass-list';
 import { LocationMarker } from './components/location-marker';
 import { HillMarkers } from './components/hill-markers';
 import { useOrdnanceSurveyCall } from './ordnance-survey-temp';
+import { brittonsBashContentFacade } from '../../../implementations';
+
+const hills = await brittonsBashContentFacade.getHills();
 
 export const Conquest = () => {
-  const hills = compileHills();
-
   const apiUrl = useOrdnanceSurveyCall();
 
   const [showCurrLoc, setShowCurrLoc] = useState(false);

@@ -1,5 +1,5 @@
 import { BigSearch, Button, Flex, FlexItem, Tile } from '../../../../components';
-import { Event } from '../../../../utils';
+import { Event } from '../../../../utils/types';
 import { FC } from 'react';
 import { SearchList } from './search-list';
 

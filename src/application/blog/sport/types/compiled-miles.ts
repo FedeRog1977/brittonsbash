@@ -1,5 +1,5 @@
 import { AggregationNumerical, AggregationAlphabetical } from '../../../../components';
-import { Miles } from './miles';
+import { Miles } from '../../../../utils/types';
 
 export type CompiledMiles = {
   miles: {

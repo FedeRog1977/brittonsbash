@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { toFeet, toMiles, toSpeed } from '../../../../utils';
 import { ColumnTableProps } from '../../../../components';
-import { Miles } from '../types/miles';
-import { Project } from '../types/project';
-import { Roadie } from '../types/roadie';
+import { Miles } from '../../../../utils/types';
+import { Project } from '../../../../utils/types';
+import { Roadie } from '../../../../utils/types';
 import { compileMiles } from './compile-miles';
 import { compileProjects } from './compile-projects';
 import { compileRoadies } from './compile-roadies';

@@ -1,7 +1,7 @@
 import { Button, Flex, FlexItem } from '../../../../components';
 import { generateUniqueKey } from '../../../../utils';
 import { FC } from 'react';
-import { Event } from '../../../../utils';
+import { Event } from '../../../../utils/types';
 
 type SearchListProps = {
   funcSelect: (() => void) | ((e: any) => void);

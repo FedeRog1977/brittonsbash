@@ -3,6 +3,7 @@ import { removeDuplicates } from '../../../../utils';
 import { Event } from '../../instant-gram/types/event';
 import { Features } from '../../instant-gram/types/features';
 
+// TODO: move this to mapper in service
 const events = await brittonsBashContentFacade.getEvents();
 
 export const compileFeatures = () => {

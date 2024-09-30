@@ -1,5 +1,9 @@
 import { FC } from 'react';
-import { compileHills, generateUniqueKey } from '../../../../utils';
+import { brittonsBashContentFacade } from '../../../../implementations';
+import { generateUniqueKey } from '../../../../utils';
+
+// TODO: all facade uses should be in their respective page.tsx's
+const hills = await brittonsBashContentFacade.getHills();
 
 type LandmassListProps = {
   id: string;
@@ -7,11 +11,9 @@ type LandmassListProps = {
 };
 
 export const LandmassList: FC<LandmassListProps> = ({ id, func }: any) => {
-  const hills = compileHills();
-
   const routes = hills.landmasses.map(
-    // Requires significant work
-    ({ name, subtype, subsubtype }: any, index: number) => (
+    // TODO: requires significant work
+    ({ name }, index) => (
       <option key={generateUniqueKey(index)} value={name}>
         {name}
       </option>
