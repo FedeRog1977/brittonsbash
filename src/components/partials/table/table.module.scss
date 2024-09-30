@@ -1,9 +1,9 @@
-@use '../../reference' as reference;
+@use '../../reference/styles' as styles;
 
 // TODO: segment these to separate stylesheets
 .containerColumns {
-  border-radius: reference.$corners-md;
-  background-color: reference.$dark-grey;
+  border-radius: styles.$corners-md;
+  background-color: styles.$dark-grey;
   max-height: 300px;
   overflow-y: auto;
 
@@ -16,8 +16,8 @@
 
 // TODO: segment these to separate stylesheets
 .containerRows {
-  border-radius: reference.$corners-md;
-  background-color: reference.$dark-grey;
+  border-radius: styles.$corners-md;
+  background-color: styles.$dark-grey;
   max-height: 300px;
   overflow-y: auto;
 

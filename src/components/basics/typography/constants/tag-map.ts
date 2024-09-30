@@ -1,5 +1,5 @@
 import { ElementType } from 'react';
-import { TextStyle } from '../../../reference';
+import { TextStyle } from '../../../reference/types';
 
 export const tagMap: Record<TextStyle['variant'], ElementType> = {
   t1: 'h1',

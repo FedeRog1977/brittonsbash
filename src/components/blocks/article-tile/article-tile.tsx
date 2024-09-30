@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Flex, Tile, TileProps, Typography } from '../../basics';
 import { getContent } from './utils/get-content';
 import { Section } from './types/section';
-import { TextStyle } from '../../reference';
+import { TextStyle } from '../../reference/types';
 
 export type ArticleTileProps = {
   type?: TileProps['type'];

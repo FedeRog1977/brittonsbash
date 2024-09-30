@@ -1,4 +1,4 @@
-@use '../../reference' as reference;
+@use '../../reference/styles' as styles;
 
 button {
   border: 0 none !important;
@@ -16,46 +16,46 @@ button {
 
 .variant {
   &Default {
-    background-color: reference.$apple-blue-60;
-    border-radius: reference.$corners-sm;
-    transition: background-color reference.$transition-long;
+    background-color: styles.$apple-blue-60;
+    border-radius: styles.$corners-sm;
+    transition: background-color styles.$transition-long;
 
     &:hover {
-      background-color: reference.$apple-blue;
-      transition: background-color reference.$transition-long;
+      background-color: styles.$apple-blue;
+      transition: background-color styles.$transition-long;
     }
   }
 
   &Clear {
-    background-color: reference.$transparent;
-    border-radius: reference.$corners-lg;
-    transition: background-color reference.$transition-long;
+    background-color: styles.$transparent;
+    border-radius: styles.$corners-lg;
+    transition: background-color styles.$transition-long;
 
     &:hover {
-      background-color: reference.$dark-grey;
-      transition: background-color reference.$transition-long;
+      background-color: styles.$dark-grey;
+      transition: background-color styles.$transition-long;
     }
   }
 
   &Solid {
-    background-color: reference.$dark-grey-60;
-    border-radius: reference.$corners-lg;
-    transition: background-color reference.$transition-long;
+    background-color: styles.$dark-grey-60;
+    border-radius: styles.$corners-lg;
+    transition: background-color styles.$transition-long;
 
     &:hover {
-      background-color: reference.$dark-grey;
-      transition: background-color reference.$transition-long;
+      background-color: styles.$dark-grey;
+      transition: background-color styles.$transition-long;
     }
   }
 
   &Inverse {
-    background-color: reference.$transparent;
-    border-radius: reference.$corners-lg;
-    transition: background-color reference.$transition-long;
+    background-color: styles.$transparent;
+    border-radius: styles.$corners-lg;
+    transition: background-color styles.$transition-long;
 
     &:hover {
-      background-color: reference.$darker-grey-60;
-      transition: background-color reference.$transition-long;
+      background-color: styles.$darker-grey-60;
+      transition: background-color styles.$transition-long;
     }
   }
 }
@@ -92,15 +92,15 @@ button {
   padding-left: 0;
   padding-right: 0;
   transition:
-    background-color reference.$transition-long,
-    padding reference.$transition-long;
+    background-color styles.$transition-long,
+    padding styles.$transition-long;
 
   &:hover {
     padding-left: 15px;
     padding-right: 15px;
     transition:
-      background-color reference.$transition-long,
-      padding reference.$transition-long;
+      background-color styles.$transition-long,
+      padding styles.$transition-long;
 
     @media (max-width: 768px) {
       padding-left: 7.5px;

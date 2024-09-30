@@ -1,12 +1,12 @@
-@use '../../reference/' as reference;
+@use '../../reference/styles' as styles;
 
 .modal {
   max-width: 1440px;
   max-height: 1440px;
 
   &Solid {
-    background-color: reference.$lighter-grey;
-    box-shadow: reference.$shadow-x-bold;
+    background-color: styles.$lighter-grey;
+    box-shadow: styles.$shadow-x-bold;
   }
 }
 
@@ -20,7 +20,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: reference.$darker-grey-60;
+  background-color: styles.$darker-grey-60;
 }
 
 .close {
@@ -32,19 +32,19 @@
 
   &Icon {
     font-size: 24px;
-    color: reference.$darker-grey;
+    color: styles.$darker-grey;
     cursor: pointer;
     user-select: none;
-    transition: color reference.$transition-long;
+    transition: color styles.$transition-long;
 
     &:hover {
-      color: reference.$light-blue;
-      transition: color reference.$transition-long;
+      color: styles.$light-blue;
+      transition: color styles.$transition-long;
     }
 
     &:active {
       transform: scale(0.99);
-      transition: transform reference.$transition-short;
+      transition: transform styles.$transition-short;
     }
 
     @media (max-width: 768px) {

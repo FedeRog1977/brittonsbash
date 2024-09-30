@@ -1,8 +1,8 @@
 import cx from 'classnames';
 import { FC, ReactNode } from 'react';
 import styles from './flex-item.module.scss';
-import { ColumnSpanConfig } from '../../reference';
-import { getResponsiveColumnSpanClassNames } from '../../reference/utils/get-responsive-column-span-classnames';
+import { ColumnSpanConfig } from '../../reference/types';
+import { getResponsiveColumnSpanClassNames } from '../../reference/utils';
 
 export type FlexItemProps = {
   children: ReactNode;

@@ -1,4 +1,4 @@
-@use '../../reference' as reference;
+@use '../../reference/styles' as styles;
 
 .typography {
   margin: 0;
@@ -636,39 +636,39 @@
 
 .color {
   &Black {
-    color: reference.$black;
+    color: styles.$black;
   }
 
   &DarkerGrey {
-    color: reference.$darker-grey;
+    color: styles.$darker-grey;
   }
 
   &DarkGrey {
-    color: reference.$dark-grey;
+    color: styles.$dark-grey;
   }
 
   &MediumGrey {
-    color: reference.$medium-grey;
+    color: styles.$medium-grey;
   }
 
   &LightGrey {
-    color: reference.$light-grey;
+    color: styles.$light-grey;
   }
 
   &LighterGrey {
-    color: reference.$lighter-grey;
+    color: styles.$lighter-grey;
   }
 
   &LightBlue {
-    color: reference.$light-blue;
+    color: styles.$light-blue;
   }
 
   &White {
-    color: reference.$white;
+    color: styles.$white;
   }
 
   &Transparent {
-    color: reference.$transparent;
+    color: styles.$transparent;
   }
 }
 
@@ -683,18 +683,18 @@
 }
 
 .shadow {
-  text-shadow: 0px 0px 5px reference.$darker-grey;
+  text-shadow: 0px 0px 5px styles.$darker-grey;
 }
 
 a {
   // TODO: move this to nest within individual styles
-  color: reference.$white;
+  color: styles.$white;
   text-decoration: none;
-  transition: color reference.$transition-long;
+  transition: color styles.$transition-long;
 
   &:hover {
-    color: reference.$light-blue;
-    transition: color reference.$transition-long;
+    color: styles.$light-blue;
+    transition: color styles.$transition-long;
     cursor: pointer;
   }
 }

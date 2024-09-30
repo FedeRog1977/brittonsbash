@@ -1,11 +1,11 @@
-@use '../../reference' as reference;
+@use '../../reference/styles' as styles;
 
 .header {
-  background-color: reference.$black-special;
+  background-color: styles.$black-special;
   backdrop-filter: saturate(180%) blur(10px);
   display: grid;
   align-items: center;
-  color: reference.$white;
+  color: styles.$white;
   position: absolute;
   top: 0px;
   z-index: 1500;
@@ -22,17 +22,17 @@
 
   &Content {
     font-family: Audi-Light;
-    color: reference.$white;
+    color: styles.$white;
 
     a {
       text-decoration: none;
-      color: reference.$white;
-      transition: color reference.$transition-long;
+      color: styles.$white;
+      transition: color styles.$transition-long;
     }
 
     a:hover {
-      color: reference.$light-blue;
-      transition: color reference.$transition-long;
+      color: styles.$light-blue;
+      transition: color styles.$transition-long;
       cursor: pointer;
     }
 
@@ -64,7 +64,7 @@
 }
 
 .subheader {
-  background-color: reference.$black-special;
+  background-color: styles.$black-special;
   backdrop-filter: saturate(180%) blur(10px);
   display: grid;
   align-items: center;
@@ -85,19 +85,19 @@
 
   &Content {
     font-family: Audi-Light;
-    color: reference.$white;
+    color: styles.$white;
     padding-top: 24px;
     padding-bottom: 24px;
 
     a {
       text-decoration: none;
-      color: reference.$white;
-      transition: color reference.$transition-long;
+      color: styles.$white;
+      transition: color styles.$transition-long;
     }
 
     a:hover {
-      color: reference.$light-blue;
-      transition: color reference.$transition-long;
+      color: styles.$light-blue;
+      transition: color styles.$transition-long;
       cursor: pointer;
     }
 

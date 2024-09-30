@@ -1,10 +1,10 @@
 import { FC } from 'react';
 import { Flex, Typography } from '../../basics';
 import { compileEntries } from './utils/compile-entries';
-import { DataContentResponse } from '../../reference';
+import { GenericDataContent } from '../../../utils/types';
 
 export type ArticlePrefaceProps = {
-  entries: DataContentResponse[];
+  entries: GenericDataContent[];
   listStyle?: 'enumerate' | 'itemize';
 };
 

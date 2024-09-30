@@ -1,4 +1,4 @@
-@use '../../reference' as reference;
+@use '../../reference/styles' as styles;
 
 .footer {
   @media (min-width: 768px) {
@@ -18,13 +18,13 @@
   }
 
   &Content {
-    background-color: reference.$black-special;
+    background-color: styles.$black-special;
     text-align: center;
     display: grid;
     justify-content: center;
     align-items: center;
-    color: reference.$light-grey;
-    padding: reference.$spacing-xl 0 reference.$spacing-xl 0;
+    color: styles.$light-grey;
+    padding: styles.$spacing-xl 0 styles.$spacing-xl 0;
   }
 
   &Logo {

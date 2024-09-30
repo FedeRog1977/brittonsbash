@@ -1,4 +1,4 @@
-@use '../../reference' as reference;
+@use '../../reference/styles' as styles;
 
 .background {
   @media (min-width: 768px) {
@@ -23,8 +23,8 @@
 }
 
 .text {
-  color: reference.$lighter-grey;
-  background-image: reference.$gradient-dark-60-bottom-top;
+  color: styles.$lighter-grey;
+  background-image: styles.$gradient-dark-60-bottom-top;
   display: grid;
   align-items: end;
   position: absolute;

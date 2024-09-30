@@ -2,7 +2,7 @@ import { generateUniqueKey, useShowElement } from '../../../utils';
 import styles from './image-matrix.module.scss';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Flex, FlexItem, Image, Typography } from '../../basics';
-import { ColumnSpan } from '../../reference';
+import { ColumnSpan } from '../../reference/types';
 import { Modal } from '../../blocks';
 import { FC, useState } from 'react';
 import { Img } from '../../../utils/types';

@@ -1,4 +1,5 @@
-import { ArticleProps, TextStyle } from '../../components';
+import { ArticleProps } from '../../components/partials';
+import { TextStyle } from '../../components/reference/types';
 
 export const formatArticle = (
   sections: ArticleProps['sections'],

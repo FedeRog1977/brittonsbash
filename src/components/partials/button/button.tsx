@@ -3,9 +3,10 @@ import cx from 'classnames';
 import { toUpperCase } from '../../../utils';
 import { Flex, Typography } from '../../basics';
 import { FC, ReactElement } from 'react';
-import { TextStyle, Url } from '../../reference';
+import { TextStyle } from '../../reference/types';
 import { Grid } from '../../basics/grid/grid';
 import { GridItem } from '../../basics/grid/grid-item';
+import { Url } from '../../../utils/types';
 
 export type ButtonProps = {
   variant?: 'default' | 'clear' | 'solid' | 'inverse';
@@ -53,7 +54,7 @@ export const Button: FC<ButtonProps> = ({
   if (typeof content === 'string' && link)
     return (
       <Typography variant={typeVariant} markdown>
-        {`[${content}](${link.url})`}
+        {`[${content}](${link.content})`}
       </Typography>
     );
 

@@ -2,7 +2,7 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FC } from 'react';
 import { toTemperature } from '../../../../utils';
-import { Color, Typography, Spacing } from '../../../../components';
+import { Spacing, Typography, TypographyProps } from '../../../../components';
 
 type TemperatureProps = {
   temp: number;
@@ -11,7 +11,7 @@ type TemperatureProps = {
 
 export const Temperature: FC<TemperatureProps> = ({ temp, icon }) => {
   let backgroundColor = undefined;
-  let fontColor: Color | undefined = undefined;
+  let fontColor: TypographyProps['color'] | undefined = undefined;
 
   if (temp >= 30) {
     backgroundColor = 'rgba(238, 40, 0, 0.8)';

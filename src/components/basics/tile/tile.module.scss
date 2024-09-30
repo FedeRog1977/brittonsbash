@@ -1,26 +1,26 @@
-@use '../../reference' as reference;
+@use '../../reference/styles' as styles;
 
 .tile {
   max-width: 1728px;
   margin: 0 auto 0 auto;
 
   @media (min-width: 768px) {
-    padding: reference.$spacing-xl 0 reference.$spacing-xl 0;
+    padding: styles.$spacing-xl 0 styles.$spacing-xl 0;
   }
 
   @media (max-width: 768px) {
-    padding: reference.$spacing-md reference.$spacing-sm reference.$spacing-md reference.$spacing-sm;
+    padding: styles.$spacing-md styles.$spacing-sm styles.$spacing-md styles.$spacing-sm;
   }
 
   &Clear {
-    background-color: reference.$transparent;
+    background-color: styles.$transparent;
   }
 
   &Solid {
-    background-color: reference.$black-special;
+    background-color: styles.$black-special;
 
     @media (min-width: 768px) {
-      // border-radius: reference.$corners-xl;
+      // border-radius: styles.$corners-xl;
     }
 
     @media (max-width: 768px) {
@@ -34,7 +34,7 @@
   margin: 0 auto 0 auto;
 
   @media (min-width: 768px) {
-    border-radius: reference.$corners-xl;
+    border-radius: styles.$corners-xl;
   }
 
   @media (max-width: 768px) {
@@ -51,7 +51,7 @@
   }
 
   @media (max-width: 768px) {
-    padding: 0 reference.$spacing-sm 0 reference.$spacing-sm;
+    padding: 0 styles.$spacing-sm 0 styles.$spacing-sm;
   }
 }
 

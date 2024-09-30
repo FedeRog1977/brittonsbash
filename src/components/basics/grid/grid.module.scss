@@ -1,4 +1,4 @@
-@use '../../reference/' as reference;
+@use '../../reference/mixins' as mixins;
 
 .grid {
   display: flex;
@@ -6,7 +6,7 @@
   min-width: 100%;
 }
 
-@include reference.responsive-spacing('spacing') using ($spacing-variable) {
+@include mixins.responsive-spacing('spacing') using ($spacing-variable) {
   margin: -0.5 * $spacing-variable;
 
   > * {
@@ -14,24 +14,12 @@
   }
 }
 
-@include reference.responsive-alignment('justify') using ($justify-variable) {
-  @include reference.custom-attribute(
-    'Content',
-    'justify-content',
-    $justify-variable
-  );
-  @include reference.custom-attribute(
-    'Items',
-    'justify-items',
-    $justify-variable
-  );
+@include mixins.responsive-alignment('justify') using ($justify-variable) {
+  @include mixins.custom-attribute('Content', 'justify-content', $justify-variable);
+  @include mixins.custom-attribute('Items', 'justify-items', $justify-variable);
 }
 
-@include reference.responsive-alignment('align') using ($align-variable) {
-  @include reference.custom-attribute(
-    'Content',
-    'align-content',
-    $align-variable
-  );
-  @include reference.custom-attribute('Items', 'align-items', $align-variable);
+@include mixins.responsive-alignment('align') using ($align-variable) {
+  @include mixins.custom-attribute('Content', 'align-content', $align-variable);
+  @include mixins.custom-attribute('Items', 'align-items', $align-variable);
 }

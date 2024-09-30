@@ -1,11 +1,11 @@
 import cx from 'classnames';
 import { FC, ReactNode } from 'react';
 import styles from './grid-item.module.scss';
-import { ColumnSpan } from '../../reference';
+import { ColumnSpan } from '../../reference/types';
 import { Order } from './types/order';
 import { getOrderClassNames } from './utils/get-order-classnames';
 import { getPositionClassName } from './utils/get-position-classnames';
-import { getResponsiveColumnSpanClassNames } from '../../reference/utils/get-responsive-column-span-classnames';
+import { getResponsiveColumnSpanClassNames } from '../../reference/utils';
 
 export type GridItemProps = {
   children: ReactNode;

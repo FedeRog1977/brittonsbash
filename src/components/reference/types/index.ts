@@ -1,4 +1,3 @@
-// TODO: discontinue in favour of utils/types
 export * from './align-config';
 export * from './align-cross-axis';
 export * from './align-horizontal';
@@ -9,11 +8,9 @@ export * from './breakpoints';
 export * from './color';
 export * from './column-span';
 export * from './column-span-config';
-export * from './data-content-response';
 export * from './justify-config';
 export * from './margin';
 export * from './padding';
 export * from './spacing-size';
 export * from './spacing-config';
 export * from './text-style';
-export * from './url';

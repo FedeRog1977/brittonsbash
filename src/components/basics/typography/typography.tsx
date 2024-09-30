@@ -4,7 +4,7 @@ import styles from './typography.module.scss';
 import ReactMarkdown from 'react-markdown';
 import { createElement, FC } from 'react';
 import { tagMap } from './constants/tag-map';
-import { TextStyle } from '../../reference';
+import { TextStyle } from '../../reference/types';
 import { enrichMarkdown } from './utils/enrich-markdown';
 
 export type TypographyProps = TextStyle;

@@ -3,7 +3,7 @@ import { Button as ButtonComponent } from '../components';
 import { fn } from '@storybook/test';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ReactElement, useState } from 'react';
+import { useState } from 'react';
 
 const meta = {
   title: 'Partials / Button',
@@ -40,7 +40,7 @@ const meta = {
     icon: { control: false },
     value: { control: 'text' },
     func: { control: false },
-    link: { url: { control: 'text' } },
+    link: { content: { control: 'text' } },
     space: { control: 'boolean' },
     width: { control: 'select' },
     padding: { control: 'select' },

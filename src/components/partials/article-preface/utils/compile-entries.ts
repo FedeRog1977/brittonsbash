@@ -1,11 +1,11 @@
-import { DataContentResponse } from '../../../reference';
+import { GenericDataContent } from '../../../../utils/types';
 
-type ArticlePrefaceParsed = Pick<DataContentResponse, 'title'> & {
+type ArticlePrefaceParsed = Pick<GenericDataContent, 'title'> & {
   content: string;
 };
 
 export const compileEntries = (
-  entries: DataContentResponse[],
+  entries: GenericDataContent[],
   listStyle?: 'enumerate' | 'itemize'
 ): ArticlePrefaceParsed[] => {
   const entriesParsed: ArticlePrefaceParsed[] = [];

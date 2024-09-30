@@ -1,4 +1,4 @@
-@use '../../reference' as reference;
+@use '../../reference/styles' as styles;
 
 // TODO: fix naming convention
 .imageSlider {
@@ -34,7 +34,7 @@
   &Caption {
     position: absolute;
     z-index: 10;
-    text-shadow: 0px 0px 5px reference.$darker-grey;
+    text-shadow: 0px 0px 5px styles.$darker-grey;
     bottom: 24px;
     left: 24px;
     max-width: 75%;
@@ -49,7 +49,7 @@
   &Index {
     position: absolute;
     z-index: 10;
-    text-shadow: 0px 0px 5px reference.$darker-grey;
+    text-shadow: 0px 0px 5px styles.$darker-grey;
     bottom: 24px;
     right: 24px;
     max-width: 25%;
@@ -65,12 +65,12 @@
 .leftArrow,
 .rightArrow,
 .refresh {
-  color: reference.$darker-grey-60;
+  color: styles.$darker-grey-60;
   position: absolute;
   z-index: 10;
   cursor: pointer;
   user-select: none;
-  transition: color reference.$transition-long;
+  transition: color styles.$transition-long;
 }
 
 .leftArrow {
@@ -80,7 +80,7 @@
 
   @media (max-width: 768px) {
     font-size: 24px;
-    color: reference.$darker-grey-60;
+    color: styles.$darker-grey-60;
     top: 45%;
     left: 12px;
   }
@@ -93,7 +93,7 @@
 
   @media (max-width: 768px) {
     font-size: 24px;
-    color: reference.$darker-grey-60;
+    color: styles.$darker-grey-60;
     top: 45%;
     right: 12px;
   }
@@ -108,20 +108,20 @@
     font-size: 16px;
     top: 16px;
     right: 12px;
-    color: reference.$darker-grey-60;
+    color: styles.$darker-grey-60;
   }
 }
 
 .leftArrow:hover,
 .rightArrow:hover,
 .refresh:hover {
-  color: reference.$light-grey;
-  transition: color reference.$transition-long;
+  color: styles.$light-grey;
+  transition: color styles.$transition-long;
 }
 
 .leftArrow:active,
 .rightArrow:active,
 .refresh:active {
   transform: scale(0.99);
-  transition: transform reference.$transition-short;
+  transition: transform styles.$transition-short;
 }

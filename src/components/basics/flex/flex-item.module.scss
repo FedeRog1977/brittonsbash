@@ -1,4 +1,4 @@
-@use '../../reference' as reference;
+@use '../../reference/mixins' as mixins;
 
 .flexItem {
   flex-grow: 0;
@@ -8,6 +8,6 @@
   flex-grow: 1;
 }
 
-@include reference.responsive-column-span('basis') using ($percentage) {
+@include mixins.responsive-column-span('basis') using ($percentage) {
   flex-basis: $percentage;
 }
