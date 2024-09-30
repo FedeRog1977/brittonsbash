@@ -1,6 +1,8 @@
 import {
   Events,
+  Features,
   Hills,
+  Img,
   MappedEvents,
   MappedMiles,
   MappedProjects,
@@ -10,6 +12,8 @@ import {
 } from '../utils/types';
 import { Regions } from '../utils/types/regions';
 import { Sport } from '../utils/types/sport';
+import { mapEventFeatures } from './utils/map-event-features';
+import { mapEventImages } from './utils/map-event-images';
 import { mapEventSports } from './utils/map-event-sports';
 import { mapEvents } from './utils/map-events';
 import { mapMiles } from './utils/map-miles';
@@ -20,6 +24,8 @@ type BrittonsBashContent = {
   getEvents: () => Promise<Events>;
   getHills: () => Promise<Hills>;
   getLinks: () => Promise<UrlGroup[]>;
+  getMappedEventFeatures: () => Promise<Features>;
+  getMappedEventImages: () => Promise<Img[]>;
   getMappedEventSports: () => Promise<Project[]>;
   getMappedEvents: () => Promise<MappedEvents>;
   getMappedMiles: () => Promise<MappedMiles>;
@@ -112,6 +118,50 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
       console.log(error);
 
       throw new Error('Invalid links data received');
+    }
+  }
+
+  public async getMappedEventFeatures(): Promise<Features> {
+    const apiUrl = this.eventsUrl;
+
+    const response = await fetch(apiUrl);
+
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+
+    const parsedResponse: Events = await response.json();
+
+    const mappedParsedResponse: Features = mapEventFeatures(parsedResponse);
+
+    try {
+      return mappedParsedResponse;
+    } catch (error: unknown) {
+      console.log(error);
+
+      throw new Error('Invalid event data received');
+    }
+  }
+
+  public async getMappedEventImages(): Promise<Img[]> {
+    const apiUrl = this.eventsUrl;
+
+    const response = await fetch(apiUrl);
+
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+
+    const parsedResponse: Events = await response.json();
+
+    const mappedParsedResponse: Img[] = mapEventImages(parsedResponse);
+
+    try {
+      return mappedParsedResponse;
+    } catch (error: unknown) {
+      console.log(error);
+
+      throw new Error('Invalid event data received');
     }
   }
 

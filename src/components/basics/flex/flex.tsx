@@ -4,7 +4,7 @@ import { Horizontal } from './types/horizontal';
 import { Vertical } from './types/vertical';
 import styles from './flex.module.scss';
 import { toUpperCase } from '../../../utils';
-import { getResponsiveSpacingClassNames } from '../../reference';
+import { getResponsiveSpacingClassNames } from '../../reference/utils/get-responsive-spacing-classnames';
 
 type FlexProps = Horizontal | Vertical;
 

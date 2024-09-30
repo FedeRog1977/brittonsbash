@@ -4,9 +4,10 @@ import { Flex, Tile, Typography } from '../../basics';
 import { Article, Cta, CtaProps } from '../../partials';
 import { GradientProps } from '../../basics';
 import { ArticleProps } from '../../partials';
-import { Img, TextStyle } from '../../reference';
+import { TextStyle } from '../../reference';
 import { Grid } from '../../basics/grid/grid';
 import { GridItem } from '../../basics/grid/grid-item';
+import { Img } from '../../../utils/types';
 
 export type ImageTileProps = {
   imgDesktop?: Img;

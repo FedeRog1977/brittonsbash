@@ -1,13 +1,11 @@
 import cx from 'classnames';
 import { FC, ReactNode } from 'react';
 import styles from './grid.module.scss';
-import {
-  SpacingConfig,
-  getResponsiveAlignmentClassNames,
-  getResponsiveSpacingClassNames,
-} from '../../reference';
+import { SpacingConfig } from '../../reference';
 import { JustifyConfig } from '../../reference/types/justify-config';
 import { AlignConfig } from '../../reference/types/align-config';
+import { getResponsiveAlignmentClassNames } from '../../reference/utils/get-responsive-alignment-classnames';
+import { getResponsiveSpacingClassNames } from '../../reference/utils/get-responsive-spacing-classnames';
 
 // Reminder: https://developer.mozilla.org/en-US/docs/Web/CSS/grid
 // Reminder: https://css-tricks.com/snippets/css/complete-guide-grid/

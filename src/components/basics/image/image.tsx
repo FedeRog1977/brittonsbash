@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Img } from '../../reference';
+import { Img } from '../../../utils/types';
 import { Typography } from '../typography';
 import styles from './image.module.scss';
 

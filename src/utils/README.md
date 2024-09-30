@@ -9,10 +9,17 @@ Here, "`utils`" is used as a parent terms of all of it's usual siblings, meaning
 These include, and are exhausted by:
 
 - `api`
-- `compilers`
+- `components`
+- `constants`
+- `content`
+- `eslint` (special)
+- `fonts`
 - `formatters`
 - `helpers`
 - `hooks`
+- `mixins`
+- `mocks`
 - `react`
-
-In summary, this means that common `utils` here will all be found under their unique child directory. Whereas, in non-common nested component directories, all `utils` simply appear under a shared `utils` directory. This means that, for example, `use-{{hook}}.ts` may appear in a shared directory with `compile-{{compiler}}.ts`.
+- `styles`
+- `types`
+- `utils`

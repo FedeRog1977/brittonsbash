@@ -32,6 +32,7 @@ export const mapEvent = (event: Event, sport: Project[], showSport: boolean): Ma
     names.push(name);
   });
 
+  // TODO: update to reflect new additions in Features type
   const features: GenericDataContent[] = [
     {
       title: 'Countries',

@@ -4,8 +4,8 @@ import { toUpperCase } from '../../../utils';
 import { Gradient } from '../gradient';
 import { Image } from '../image';
 import { FC, ReactNode } from 'react';
-import { Img } from '../../reference';
 import { GradientProps } from '../gradient';
+import { Img } from '../../../utils/types';
 
 export type TileProps = {
   type: 'clear' | 'solid';

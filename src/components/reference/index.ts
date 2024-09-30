@@ -1,3 +1,2 @@
-export * from './components';
+// TODO: discontinue
 export * from './types';
-export * from './utils';

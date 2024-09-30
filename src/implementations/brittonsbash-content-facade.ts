@@ -2,7 +2,9 @@ import { BrittonsBashContentClient } from '../services';
 import { baseUrls } from '../utils/constants';
 import {
   Events,
+  Features,
   Hills,
+  Img,
   MappedEvents,
   MappedMiles,
   MappedProjects,
@@ -16,6 +18,8 @@ type BrittonsBashContentFacade = {
   getEvents: () => Promise<Events>;
   getHills: () => Promise<Hills>;
   getLinks: () => Promise<UrlGroup[]>;
+  getMappedEventFeatures: () => Promise<Features>;
+  getMappedEventImages: () => Promise<Img[]>;
   getMappedEventSports: () => Promise<Project[]>;
   getMappedEvents: () => Promise<MappedEvents>;
   getMappedMiles: () => Promise<MappedMiles>;

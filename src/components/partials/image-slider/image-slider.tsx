@@ -9,7 +9,7 @@ import {
 import styles from './image-slider.module.scss';
 import { generateUniqueKey, isMobile } from '../../../utils';
 import { Typography } from '../../basics';
-import { Img } from '../../reference';
+import { Img } from '../../../utils/types';
 
 export type ImageSliderProps = {
   slides: Img[];

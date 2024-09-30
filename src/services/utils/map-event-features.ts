@@ -1,12 +1,7 @@
-import { brittonsBashContentFacade } from '../../../../implementations';
-import { removeDuplicates } from '../../../../utils';
-import { Event } from '../../instant-gram/types/event';
-import { Features } from '../../instant-gram/types/features';
+import { removeDuplicates } from '../../utils';
+import { Event, Events, Features } from '../../utils/types';
 
-// TODO: move this to mapper in service
-const events = await brittonsBashContentFacade.getEvents();
-
-export const compileFeatures = () => {
+export const mapEventFeatures = (events: Events): Features => {
   const countries: string[] = [];
   const cities: string[] = [];
   const districts: string[] = [];
@@ -247,7 +242,8 @@ export const compileFeatures = () => {
     });
   });
 
-  const compiledFeatures: Features = {
+  // TODO: update to reflect new additions in Features type
+  return {
     countries: removeDuplicates(countries.sort()),
     cities: removeDuplicates(cities.sort()),
     districts: removeDuplicates(districts.sort()),
@@ -263,6 +259,4 @@ export const compileFeatures = () => {
     bars: removeDuplicates(bars.sort()),
     nostalgiaEffect: removeDuplicates(nostalgiaEffect.sort()),
   };
-
-  return compiledFeatures;
 };
