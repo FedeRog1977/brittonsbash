@@ -8,9 +8,7 @@ import { MappedEvents, Project } from '../../../../utils/types';
 
 export const useInstantGram = (mappedEventSport: Project[], mappedEvents: MappedEvents) => {
   const location = useLocation();
-  const [url, setUrl] = useState('');
   const [searchParamsHandler, setSearchParamsHandler] = useState('');
-  const [searchParams, setSearchParams] = useSearchParams();
 
   const { events, mappedEvents: mappedEventsUnpacked } = mappedEvents;
   const sportOnEvent: Project[] = [];
@@ -34,7 +32,11 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
   const { showElement: showSearchList, setShowElement: setShowSearchList } = useShowElement();
   const [eventData, setEventData] = useState(emptyEventData);
 
+  const searchParams = new URLSearchParams(window.location.href);
+
   useEffect(() => {
+    // TODO: move back to URLSearchParams like setter
+    // if (searchParams.get('event') === null) {
     if (location.search === '') {
       for (var i in mappedEventSport) {
         if (mappedEventsUnpacked[0]?.names.includes(mappedEventSport[i]?.name)) {
@@ -44,10 +46,10 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
         }
       }
     } else {
-      setUrl(`${location.pathname}${location.search}`);
-
       for (var i in mappedEventsUnpacked) {
-        if (location.search === `?${mappedEventsUnpacked[i]?.id?.toLowerCase()}`) {
+        // TODO: move back to URLSearchParams like setter
+        // if (searchParams.get('event') === mappedEventsUnpacked[i]?.id?.toLowerCase()) {
+        if (location.search.includes(`${mappedEventsUnpacked[i]?.id?.toLowerCase()}`)) {
           setEvent(mappedEventsUnpacked[i]);
           setSport([] as Project[]);
           setShowSport(false);
@@ -62,7 +64,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
         }
       }
     }
-  }, [searchParams]);
+  }, []);
 
   const handleInput = (e: any) => {
     setSearchField(e.target.value.toLowerCase());
@@ -74,7 +76,6 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
         setShowSportHandler(showSport);
       } else if (mappedEventsUnpacked[i]?.names.join(' - ').toLowerCase().includes(searchField)) {
         setSearchParamsHandler(mappedEventsUnpacked[i]?.id?.toLowerCase() ?? '');
-
         setEventHandler(mappedEventsUnpacked[i]);
         setSportHandler([] as Project[]);
         setShowSportHandler(false);
@@ -96,7 +97,8 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
       setSport(sport);
       setShowSport(showSport);
     } else {
-      setSearchParams(searchParamsHandler);
+      searchParams.append('event', searchParamsHandler);
+
       setEvent(eventHandler);
       setSport(sportHandler);
       setShowSport(showSportHandler);
@@ -106,13 +108,11 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
   const handleSelect = (e: any) => {
     for (var i in mappedEventsUnpacked) {
       if (mappedEventsUnpacked[i]?.names.join(' - ').includes(e.currentTarget.value)) {
+        searchParams.append('event', `${mappedEventsUnpacked[i]?.id?.toLowerCase()}`);
+
         setEvent(mappedEventsUnpacked[i]);
         setSport([] as Project[]);
         setShowSport(false);
-
-        const search = `?${mappedEventsUnpacked[i]?.id?.toLowerCase()}`;
-        setUrl(`${location.pathname}${search}`);
-        setSearchParams(mappedEventsUnpacked[i]?.id?.toLowerCase());
 
         for (var j in mappedEventSport) {
           if (mappedEventsUnpacked[i]?.names.includes(mappedEventSport[j]?.name)) {
@@ -126,6 +126,17 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
 
     setShowSearchList(!showSearchList);
   };
+
+  console.log(
+    'FULL_LOCATION::::',
+    window.location.href,
+    '\nPATHNAME::::',
+    location.pathname,
+    '\nSEARCH::::',
+    location.search,
+    '\nSEARCH_PARAMS::::',
+    searchParams.get('event')
+  );
 
   const mappedEvent = mapEvent(event, sport, showSport);
 
@@ -236,8 +247,6 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
   };
 
   return {
-    // Need for URL logic has been removed, keeping it here for the time-being
-    url,
     handleCategory,
     showSearchList,
     eventData,
