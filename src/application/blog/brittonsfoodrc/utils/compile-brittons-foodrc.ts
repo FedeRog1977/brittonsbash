@@ -1,6 +1,7 @@
 import { brittonsFoodRCContent } from '../content/brittonsfoodrc-content';
 import { Food } from '../types/food';
 
+// TODO: discontinue this once recipe API is implemented
 export const compileBrittonsFoodRC = () => {
   const allFood: Food[] = [];
 
