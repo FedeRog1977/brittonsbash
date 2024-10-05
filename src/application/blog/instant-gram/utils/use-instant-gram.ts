@@ -7,13 +7,15 @@ import { emptyEventData } from '../mocks/empty-event-data';
 import { MappedEvents, Project } from '../../../../utils/types';
 
 export const useInstantGram = (mappedEventSport: Project[], mappedEvents: MappedEvents) => {
+  // Note to self: https://reactrouter.com/en/main/hooks/use-search-params
   const location = useLocation();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [searchParamsHandler, setSearchParamsHandler] = useState('');
+
+  const [searchField, setSearchField] = useState('');
 
   const { events, mappedEvents: mappedEventsUnpacked } = mappedEvents;
   const sportOnEvent: Project[] = [];
-
-  const [searchField, setSearchField] = useState('');
 
   const [event, setEvent] = useState(mappedEventsUnpacked[0]);
   const [sport, setSport] = useState<Project[]>([]);
@@ -32,11 +34,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
   const { showElement: showSearchList, setShowElement: setShowSearchList } = useShowElement();
   const [eventData, setEventData] = useState(emptyEventData);
 
-  const searchParams = new URLSearchParams(window.location.href);
-
   useEffect(() => {
-    // TODO: move back to URLSearchParams like setter
-    // if (searchParams.get('event') === null) {
     if (location.search === '') {
       for (var i in mappedEventSport) {
         if (mappedEventsUnpacked[0]?.names.includes(mappedEventSport[i]?.name)) {
@@ -45,21 +43,20 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
           setShowSport(true);
         }
       }
-    } else {
-      for (var i in mappedEventsUnpacked) {
-        // TODO: move back to URLSearchParams like setter
-        // if (searchParams.get('event') === mappedEventsUnpacked[i]?.id?.toLowerCase()) {
-        if (location.search.includes(`${mappedEventsUnpacked[i]?.id?.toLowerCase()}`)) {
-          setEvent(mappedEventsUnpacked[i]);
-          setSport([] as Project[]);
-          setShowSport(false);
+    }
 
-          for (var j in mappedEventSport) {
-            if (mappedEventsUnpacked[i]?.names.includes(mappedEventSport[j]?.name)) {
-              sportOnEvent.push(mappedEventSport[j]);
-              setSport(sportOnEvent);
-              setShowSport(true);
-            }
+    for (var i in mappedEventsUnpacked) {
+      // if (searchParams.get('event') === mappedEventsUnpacked[i]?.id?.toLowerCase()) {
+      if (location.search.includes(`${mappedEventsUnpacked[i]?.id?.toLowerCase()}`)) {
+        setEvent(mappedEventsUnpacked[i]);
+        setSport([] as Project[]);
+        setShowSport(false);
+
+        for (var j in mappedEventSport) {
+          if (mappedEventsUnpacked[i]?.names.includes(mappedEventSport[j]?.name)) {
+            sportOnEvent.push(mappedEventSport[j]);
+            setSport(sportOnEvent);
+            setShowSport(true);
           }
         }
       }
@@ -76,6 +73,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
         setShowSportHandler(showSport);
       } else if (mappedEventsUnpacked[i]?.names.join(' - ').toLowerCase().includes(searchField)) {
         setSearchParamsHandler(mappedEventsUnpacked[i]?.id?.toLowerCase() ?? '');
+
         setEventHandler(mappedEventsUnpacked[i]);
         setSportHandler([] as Project[]);
         setShowSportHandler(false);
@@ -97,7 +95,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
       setSport(sport);
       setShowSport(showSport);
     } else {
-      searchParams.append('event', searchParamsHandler);
+      setSearchParams({ event: searchParamsHandler });
 
       setEvent(eventHandler);
       setSport(sportHandler);
@@ -108,7 +106,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
   const handleSelect = (e: any) => {
     for (var i in mappedEventsUnpacked) {
       if (mappedEventsUnpacked[i]?.names.join(' - ').includes(e.currentTarget.value)) {
-        searchParams.append('event', `${mappedEventsUnpacked[i]?.id?.toLowerCase()}`);
+        setSearchParams({ event: `${mappedEventsUnpacked[i]?.id?.toLowerCase()}` });
 
         setEvent(mappedEventsUnpacked[i]);
         setSport([] as Project[]);
@@ -127,15 +125,24 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
     setShowSearchList(!showSearchList);
   };
 
+  // Note to self
+  const pathname = location.pathname;
+  const search = location.search;
+  const pathnameWithSearch = `${location.pathname}${location.search}`;
+  const pathNameWithSearchParams = `${location.pathname}?event=${searchParams.get('event')}`;
+  const doMatch = pathnameWithSearch === pathNameWithSearchParams;
+
   console.log(
-    'FULL_LOCATION::::',
-    window.location.href,
-    '\nPATHNAME::::',
-    location.pathname,
-    '\nSEARCH::::',
-    location.search,
-    '\nSEARCH_PARAMS::::',
-    searchParams.get('event')
+    '\nPATHNAME::',
+    pathname,
+    '\nSEARCH::',
+    search,
+    '\nPATHNAME_WITH_SEARCH::',
+    pathnameWithSearch,
+    '\nPATHNAME_WITH_SEARCH_PARAMS::',
+    pathNameWithSearchParams,
+    '\nDO_MATCH::',
+    doMatch
   );
 
   const mappedEvent = mapEvent(event, sport, showSport);
