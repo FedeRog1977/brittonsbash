@@ -43,12 +43,12 @@ export const ResultTile: FC<ResultTileProps> = ({
           {mappedEvent.names.length > 1 ? (
             mappedEvent.names.map((name, index) => (
               <Flex key={generateUniqueKey(index)} direction="horizontal" gap="xs">
-                <Typography variant="h1" color="mediumGrey" textAlign="right">
+                <Typography variant="t2" color="mediumGrey" textAlign="right">
                   Part&nbsp;
                   {index + 1}
                 </Typography>
 
-                <Typography variant="h1" textAlign="left" markdown>
+                <Typography variant="t2" textAlign="left" markdown>
                   {name}
                 </Typography>
               </Flex>

@@ -40,7 +40,7 @@ export const SearchTile: FC<SearchTileProps> = ({
         <FlexItem grow>
           <Button
             variant="clear"
-            typeVariant="t1"
+            typeVariant="t2"
             typeColor={Boolean(showSearchList && isOne) ? 'lightBlue' : undefined}
             typeFontFamily="miami"
             content="ONE"
@@ -54,7 +54,7 @@ export const SearchTile: FC<SearchTileProps> = ({
         <FlexItem grow>
           <Button
             variant="clear"
-            typeVariant="t1"
+            typeVariant="t2"
             typeColor={Boolean(showSearchList && isTwo) ? 'lightBlue' : undefined}
             typeFontFamily="miami"
             content="TWO"
@@ -68,7 +68,7 @@ export const SearchTile: FC<SearchTileProps> = ({
         <FlexItem grow>
           <Button
             variant="clear"
-            typeVariant="t1"
+            typeVariant="t2"
             typeColor={Boolean(showSearchList && isThree) ? 'lightBlue' : undefined}
             typeFontFamily="miami"
             content="THREE"
@@ -82,7 +82,7 @@ export const SearchTile: FC<SearchTileProps> = ({
         <FlexItem grow>
           <Button
             variant="clear"
-            typeVariant="t1"
+            typeVariant="t2"
             typeColor={Boolean(showSearchList && isFour) ? 'lightBlue' : undefined}
             typeFontFamily="miami"
             content="FOUR"
@@ -96,7 +96,7 @@ export const SearchTile: FC<SearchTileProps> = ({
         <FlexItem grow>
           <Button
             variant="clear"
-            typeVariant="t1"
+            typeVariant="t2"
             typeColor={Boolean(showSearchList && isFive) ? 'lightBlue' : undefined}
             typeFontFamily="miami"
             content="FIVE"

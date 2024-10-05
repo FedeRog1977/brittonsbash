@@ -36,7 +36,7 @@ export const SearchTile: FC<SearchTileProps> = ({
         <FlexItem grow>
           <Button
             variant="clear"
-            typeVariant="t1"
+            typeVariant="t2"
             typeColor={Boolean(showSearchList && isMeat) ? 'lightBlue' : undefined}
             typeFontFamily="calligraphy"
             content="Meat"
@@ -48,7 +48,7 @@ export const SearchTile: FC<SearchTileProps> = ({
         <FlexItem grow>
           <Button
             variant="clear"
-            typeVariant="t1"
+            typeVariant="t2"
             typeColor={Boolean(showSearchList && isPoultry) ? 'lightBlue' : undefined}
             typeFontFamily="calligraphy"
             content="Poultry"
@@ -60,7 +60,7 @@ export const SearchTile: FC<SearchTileProps> = ({
         <FlexItem grow>
           <Button
             variant="clear"
-            typeVariant="t1"
+            typeVariant="t2"
             typeColor={Boolean(showSearchList && isFish) ? 'lightBlue' : undefined}
             typeFontFamily="calligraphy"
             content="Fish"
@@ -72,7 +72,7 @@ export const SearchTile: FC<SearchTileProps> = ({
         <FlexItem grow>
           <Button
             variant="clear"
-            typeVariant="t1"
+            typeVariant="t2"
             typeColor={Boolean(showSearchList && isPasta) ? 'lightBlue' : undefined}
             typeFontFamily="calligraphy"
             content="Pasta"
@@ -84,7 +84,7 @@ export const SearchTile: FC<SearchTileProps> = ({
         <FlexItem grow>
           <Button
             variant="clear"
-            typeVariant="t1"
+            typeVariant="t2"
             typeColor={Boolean(showSearchList && isBread) ? 'lightBlue' : undefined}
             typeFontFamily="calligraphy"
             content="Bread"
@@ -96,7 +96,7 @@ export const SearchTile: FC<SearchTileProps> = ({
         <FlexItem grow>
           <Button
             variant="clear"
-            typeVariant="t1"
+            typeVariant="t2"
             typeColor={Boolean(showSearchList && isSweet) ? 'lightBlue' : undefined}
             typeFontFamily="calligraphy"
             content="Sweet"
@@ -108,7 +108,7 @@ export const SearchTile: FC<SearchTileProps> = ({
         <FlexItem grow>
           <Button
             variant="clear"
-            typeVariant="t1"
+            typeVariant="t2"
             typeColor={Boolean(showSearchList && isMisc) ? 'lightBlue' : undefined}
             typeFontFamily="calligraphy"
             content="Misc"

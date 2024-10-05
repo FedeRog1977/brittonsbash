@@ -46,7 +46,7 @@ export const SearchTile: FC<SearchTileProps> = ({
         <FlexItem grow>
           <Button
             variant="clear"
-            typeVariant="t1"
+            typeVariant="t2"
             typeColor={Boolean(showSearchList && is2024) ? 'lightBlue' : undefined}
             content="2024"
             value="2024"
@@ -60,7 +60,7 @@ export const SearchTile: FC<SearchTileProps> = ({
         <FlexItem grow>
           <Button
             variant="clear"
-            typeVariant="t1"
+            typeVariant="t2"
             typeColor={Boolean(showSearchList && is2023) ? 'lightBlue' : undefined}
             content="2023"
             value="2023"
@@ -74,7 +74,7 @@ export const SearchTile: FC<SearchTileProps> = ({
         <FlexItem grow>
           <Button
             variant="clear"
-            typeVariant="t1"
+            typeVariant="t2"
             typeColor={Boolean(showSearchList && is2022) ? 'lightBlue' : undefined}
             content="2022"
             value="2022"
@@ -88,7 +88,7 @@ export const SearchTile: FC<SearchTileProps> = ({
         <FlexItem grow>
           <Button
             variant="clear"
-            typeVariant="t1"
+            typeVariant="t2"
             typeColor={Boolean(showSearchList && is2021) ? 'lightBlue' : undefined}
             content="2021"
             value="2021"
@@ -102,7 +102,7 @@ export const SearchTile: FC<SearchTileProps> = ({
         <FlexItem grow>
           <Button
             variant="clear"
-            typeVariant="t1"
+            typeVariant="t2"
             typeColor={Boolean(showSearchList && is2020) ? 'lightBlue' : undefined}
             content="2020"
             value="2020"
