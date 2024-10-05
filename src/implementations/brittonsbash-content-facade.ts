@@ -1,6 +1,7 @@
 import { BrittonsBashContentClient } from '../services';
 import { baseUrls } from '../utils/constants';
 import {
+  Culinary,
   Events,
   Features,
   Hills,
@@ -15,6 +16,7 @@ import {
 } from '../utils/types';
 
 type BrittonsBashContentFacade = {
+  getCulinary: () => Promise<Culinary>;
   getEvents: () => Promise<Events>;
   getHills: () => Promise<Hills>;
   getLinks: () => Promise<UrlGroup[]>;

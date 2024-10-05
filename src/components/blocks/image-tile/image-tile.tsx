@@ -41,7 +41,7 @@ export const ImageTile: FC<ImageTileProps> = ({
             {subHeading}
           </Typography>
 
-          <Typography variant="t1" color={invertedTypeVariant} paragraphMargins>
+          <Typography variant="t2" color={invertedTypeVariant} paragraphMargins>
             {heading}
           </Typography>
 

@@ -33,9 +33,7 @@ export const ResultTile: FC<ResultTileProps> = ({
   return (
     <Tile type="solid">
       <Flex direction="vertical" gap={isMobile() ? 'xs' : 'md'}>
-        <Typography variant="h1" fontFamily="calligraphy" textAlign="center">
-          {food.name}
-        </Typography>
+        <Typography variant="t1">{food.name}</Typography>
 
         <Button
           variant="clear"

@@ -1,6 +1,7 @@
 export * from './aggregation-alphabetical';
 export * from './aggregation-numerical';
 export * from './aggregation';
+export * from './culinary';
 export * from './mapped-event';
 export * from './event';
 export * from './events';

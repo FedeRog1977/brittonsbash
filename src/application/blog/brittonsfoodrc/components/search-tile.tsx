@@ -38,7 +38,6 @@ export const SearchTile: FC<SearchTileProps> = ({
             variant="clear"
             typeVariant="t2"
             typeColor={Boolean(showSearchList && isMeat) ? 'lightBlue' : undefined}
-            typeFontFamily="calligraphy"
             content="Meat"
             func={() => funcCategory('Meat')}
             width="full"
@@ -50,7 +49,6 @@ export const SearchTile: FC<SearchTileProps> = ({
             variant="clear"
             typeVariant="t2"
             typeColor={Boolean(showSearchList && isPoultry) ? 'lightBlue' : undefined}
-            typeFontFamily="calligraphy"
             content="Poultry"
             func={() => funcCategory('Poultry')}
             width="full"
@@ -62,7 +60,6 @@ export const SearchTile: FC<SearchTileProps> = ({
             variant="clear"
             typeVariant="t2"
             typeColor={Boolean(showSearchList && isFish) ? 'lightBlue' : undefined}
-            typeFontFamily="calligraphy"
             content="Fish"
             func={() => funcCategory('Fish')}
             width="full"
@@ -74,7 +71,6 @@ export const SearchTile: FC<SearchTileProps> = ({
             variant="clear"
             typeVariant="t2"
             typeColor={Boolean(showSearchList && isPasta) ? 'lightBlue' : undefined}
-            typeFontFamily="calligraphy"
             content="Pasta"
             func={() => funcCategory('Pasta')}
             width="full"
@@ -86,7 +82,6 @@ export const SearchTile: FC<SearchTileProps> = ({
             variant="clear"
             typeVariant="t2"
             typeColor={Boolean(showSearchList && isBread) ? 'lightBlue' : undefined}
-            typeFontFamily="calligraphy"
             content="Bread"
             func={() => funcCategory('Bread')}
             width="full"
@@ -98,7 +93,6 @@ export const SearchTile: FC<SearchTileProps> = ({
             variant="clear"
             typeVariant="t2"
             typeColor={Boolean(showSearchList && isSweet) ? 'lightBlue' : undefined}
-            typeFontFamily="calligraphy"
             content="Sweet"
             func={() => funcCategory('Sweet')}
             width="full"
@@ -110,7 +104,6 @@ export const SearchTile: FC<SearchTileProps> = ({
             variant="clear"
             typeVariant="t2"
             typeColor={Boolean(showSearchList && isMisc) ? 'lightBlue' : undefined}
-            typeFontFamily="calligraphy"
             content="Misc"
             func={() => funcCategory('Misc')}
             width="full"

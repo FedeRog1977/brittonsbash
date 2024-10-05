@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { FootnoteTile, PageLayout } from '../../../components';
+import { ArticleTile, FootnoteTile, PageLayout } from '../../../components';
 import { ResultTile } from './components/result-tile';
 import { Food } from './types/food';
 import { useBrittonsFoodRC } from './utils/use-brittons-foodrc';
@@ -45,7 +45,12 @@ export const BrittonsFoodRC = () => {
       showDescription={showDescription}
       showMatrix={showMatrix}
     />,
-    <FootnoteTile {...brittonsFoodRCContent.tileTwo} />,
+    <ArticleTile {...brittonsFoodRCContent.tileTwo} />,
+    <ArticleTile {...brittonsFoodRCContent.tileThree} />,
+    <ArticleTile {...brittonsFoodRCContent.tileFour} />,
+    <ArticleTile {...brittonsFoodRCContent.tileFive} />,
+    <ArticleTile {...brittonsFoodRCContent.tileSix} />,
+    <FootnoteTile {...brittonsFoodRCContent.tileSeven} />,
   ];
 
   return (

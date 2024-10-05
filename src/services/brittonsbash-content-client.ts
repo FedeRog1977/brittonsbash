@@ -1,4 +1,5 @@
 import {
+  Culinary,
   Events,
   Features,
   Hills,
@@ -21,6 +22,7 @@ import { mapProjects } from './utils/map-projects';
 import { mapRoadies } from './utils/map-roadies';
 
 type BrittonsBashContent = {
+  getCulinary: () => Promise<Culinary>;
   getEvents: () => Promise<Events>;
   getHills: () => Promise<Hills>;
   getLinks: () => Promise<UrlGroup[]>;
@@ -37,16 +39,20 @@ type BrittonsBashContent = {
 export class BrittonsBashContentClient implements BrittonsBashContent {
   private readonly baseUrl: string;
 
-  private get linksUrl(): string {
-    return `${this.baseUrl}/links.data.json`;
+  private get culinaryUrl(): string {
+    return `${this.baseUrl}/culinary.data.json`;
+  }
+
+  private get eventsUrl(): string {
+    return `${this.baseUrl}/events.data.json`;
   }
 
   private get hillsUrl(): string {
     return `${this.baseUrl}/hills.data.json`;
   }
 
-  private get eventsUrl(): string {
-    return `${this.baseUrl}/events.data.json`;
+  private get linksUrl(): string {
+    return `${this.baseUrl}/links.data.json`;
   }
 
   private get regionsUrl(): string {
@@ -59,6 +65,26 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
 
   public constructor(baseUrl: string) {
     this.baseUrl = baseUrl;
+  }
+
+  public async getCulinary(): Promise<Culinary> {
+    const apiUrl = this.culinaryUrl;
+
+    const response = await fetch(apiUrl);
+
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+
+    const parsedResponse: Culinary = await response.json();
+
+    try {
+      return parsedResponse;
+    } catch (error: unknown) {
+      console.log(error);
+
+      throw new Error('Invalid events data received');
+    }
   }
 
   public async getEvents(): Promise<Events> {

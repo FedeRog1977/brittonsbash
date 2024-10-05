@@ -17,8 +17,7 @@ export const SearchList: FC<SearchListProps> = ({ funcSelect, items }) => (
         <Button
           key={generateUniqueKey(index)}
           variant="clear"
-          typeVariant="h2"
-          typeFontFamily="calligraphy"
+          typeVariant="h4"
           value={name}
           func={funcSelect}
           width="full"
