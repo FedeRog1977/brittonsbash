@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
-import { RowTableProps } from '../../../../components';
 import { mapEvent } from './map-event';
 import { isMobile, useShowElement } from '../../../../utils';
 import { emptyEventData } from '../mocks/empty-event-data';
@@ -46,7 +45,6 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
     }
 
     for (var i in mappedEventsUnpacked) {
-      // if (searchParams.get('event') === mappedEventsUnpacked[i]?.id?.toLowerCase()) {
       if (location.search.includes(`${mappedEventsUnpacked[i]?.id?.toLowerCase()}`)) {
         setEvent(mappedEventsUnpacked[i]);
         setSport([] as Project[]);
@@ -71,7 +69,11 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
         setEventHandler(event);
         setSportHandler(sport);
         setShowSportHandler(showSport);
-      } else if (mappedEventsUnpacked[i]?.names.join(' - ').toLowerCase().includes(searchField)) {
+      } else if (
+        `${mappedEventsUnpacked[i]?.prefix} ${mappedEventsUnpacked[i]?.names.join(' ').toLowerCase()}`.includes(
+          searchField
+        )
+      ) {
         setSearchParamsHandler(mappedEventsUnpacked[i]?.id?.toLowerCase() ?? '');
 
         setEventHandler(mappedEventsUnpacked[i]);
@@ -123,69 +125,6 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
     }
 
     setShowSearchList(!showSearchList);
-  };
-
-  // Note to self
-  const pathname = location.pathname;
-  const search = location.search;
-  const pathnameWithSearch = `${location.pathname}${location.search}`;
-  const pathNameWithSearchParams = `${location.pathname}?event=${searchParams.get('event')}`;
-  const doMatch = pathnameWithSearch === pathNameWithSearchParams;
-
-  console.log(
-    '\nPATHNAME::',
-    pathname,
-    '\nSEARCH::',
-    search,
-    '\nPATHNAME_WITH_SEARCH::',
-    pathnameWithSearch,
-    '\nPATHNAME_WITH_SEARCH_PARAMS::',
-    pathNameWithSearchParams,
-    '\nDO_MATCH::',
-    doMatch
-  );
-
-  const mappedEvent = mapEvent(event, sport, showSport);
-
-  const eventSport: RowTableProps = {
-    titleRow: {
-      leftItem: 'Statistics',
-      rightItem: `${mappedEvent.distance} | ${mappedEvent.elevation} | ${mappedEvent.times}`,
-    },
-    rows: [
-      {
-        leftItem: 'Islands',
-        rightItem: mappedEvent.islands,
-      },
-      {
-        leftItem: 'Munros',
-        rightItem: mappedEvent.munros,
-      },
-      {
-        leftItem: 'Munro Tops',
-        rightItem: mappedEvent.munroTops,
-      },
-      {
-        leftItem: 'Corbetts',
-        rightItem: mappedEvent.corbetts,
-      },
-      {
-        leftItem: 'Corbett Tops',
-        rightItem: mappedEvent.corbettTops,
-      },
-      {
-        leftItem: 'Grahams',
-        rightItem: mappedEvent.grahams,
-      },
-      {
-        leftItem: 'SubTwos',
-        rightItem: mappedEvent.subTwos,
-      },
-      {
-        leftItem: 'Donalds',
-        rightItem: mappedEvent.donalds,
-      },
-    ],
   };
 
   const handleCategory = (value: string) => {
@@ -240,7 +179,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
   const { showElement: showMatrix, setShowElement: setShowMatrix } = useShowElement();
 
   useEffect(() => {
-    setShowMatrix(!isMobile() && true);
+    setShowMatrix(!isMobile());
   }, []);
 
   const handleToggleElements = (value: string) => {
@@ -252,6 +191,29 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
     }
     // Modal cannot be handled here
   };
+
+  const mappedEvent = mapEvent(event, sport, showSport);
+
+  // Note to self
+  const pathname = location.pathname;
+  const search = location.search;
+  const pathnameWithSearch = `${location.pathname}${location.search}`;
+  const pathNameWithSearchParams = `${location.pathname}?event=${searchParams.get('event')}`;
+  const doMatch = pathnameWithSearch === pathNameWithSearchParams;
+
+  console.log(
+    '\nPATHNAME::',
+    pathname,
+    '\nSEARCH::',
+    search,
+    '\nPATHNAME_WITH_SEARCH::',
+    pathnameWithSearch,
+    '\nPATHNAME_WITH_SEARCH_PARAMS::',
+    pathNameWithSearchParams,
+    '\nDO_MATCH::',
+    doMatch
+  );
+  // ---
 
   return {
     handleCategory,
@@ -266,7 +228,6 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
     executeInput,
     handleSelect,
     mappedEvent,
-    eventSport,
     handleToggleElements,
     showDescription,
     showMatrix,

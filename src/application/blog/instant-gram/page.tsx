@@ -23,7 +23,6 @@ export const InstantGram = () => {
     executeInput,
     handleSelect,
     mappedEvent,
-    eventSport,
     handleToggleElements,
     showDescription,
     showMatrix,
@@ -45,7 +44,6 @@ export const InstantGram = () => {
     />,
     <ResultTile
       mappedEvent={mappedEvent}
-      eventSport={eventSport}
       funcToggleElements={handleToggleElements}
       showDescription={showDescription}
       showMatrix={showMatrix}

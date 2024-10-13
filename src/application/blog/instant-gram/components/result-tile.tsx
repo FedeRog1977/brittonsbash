@@ -7,7 +7,6 @@ import {
   Tile,
   Typography,
   RowTable,
-  RowTableProps,
   Flex,
   Grid,
 } from '../../../../components';
@@ -19,7 +18,6 @@ import { MappedEvent } from '../../../../utils/types';
 
 type ResultTileProps = {
   mappedEvent: MappedEvent;
-  eventSport: RowTableProps;
   funcToggleElements: (value: string) => void;
   showDescription: boolean;
   showMatrix: boolean;
@@ -27,7 +25,6 @@ type ResultTileProps = {
 
 export const ResultTile: FC<ResultTileProps> = ({
   mappedEvent,
-  eventSport,
   funcToggleElements,
   showDescription,
   showMatrix,
@@ -66,7 +63,46 @@ export const ResultTile: FC<ResultTileProps> = ({
         </Typography>
 
         {mappedEvent.showSport ? (
-          <RowTable titleRow={eventSport.titleRow} rows={eventSport.rows} />
+          <RowTable
+            titleRow={{
+              leftItem: 'Statistics',
+              rightItem: `${mappedEvent.distance} | ${mappedEvent.elevation} | ${mappedEvent.times}`,
+            }}
+            rows={[
+              {
+                leftItem: 'Islands',
+                rightItem: mappedEvent.islands,
+              },
+              {
+                leftItem: 'Munros',
+                rightItem: mappedEvent.munros,
+              },
+              {
+                leftItem: 'Munro Tops',
+                rightItem: mappedEvent.munroTops,
+              },
+              {
+                leftItem: 'Corbetts',
+                rightItem: mappedEvent.corbetts,
+              },
+              {
+                leftItem: 'Corbett Tops',
+                rightItem: mappedEvent.corbettTops,
+              },
+              {
+                leftItem: 'Grahams',
+                rightItem: mappedEvent.grahams,
+              },
+              {
+                leftItem: 'SubTwos',
+                rightItem: mappedEvent.subTwos,
+              },
+              {
+                leftItem: 'Donalds',
+                rightItem: mappedEvent.donalds,
+              },
+            ]}
+          />
         ) : null}
 
         <Button
