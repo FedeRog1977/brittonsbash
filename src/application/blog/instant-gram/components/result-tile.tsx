@@ -9,6 +9,7 @@ import {
   RowTable,
   Flex,
   Grid,
+  Spacing,
 } from '../../../../components';
 import { useShowElement, generateUniqueKey, isMobile } from '../../../../utils';
 import { FC } from 'react';
@@ -34,101 +35,109 @@ export const ResultTile: FC<ResultTileProps> = ({
   return (
     <Tile type="solid">
       <Flex direction="vertical" gap={isMobile() ? 'xs' : 'md'}>
-        {mappedEvent.prefix ? <Typography variant="t1">{mappedEvent.prefix}:</Typography> : null}
+        <Spacing marginX={isMobile() ? 'none' : '4xl'}>
+          {mappedEvent.prefix ? <Typography variant="t1">{mappedEvent.prefix}:</Typography> : null}
 
-        <Flex direction="vertical" rowGap="3xs">
-          {mappedEvent.names.length > 1 ? (
-            mappedEvent.names.map((name, index) => (
-              <Flex key={generateUniqueKey(index)} direction="horizontal" gap="xs">
-                <Typography variant="t2" color="mediumGrey" textAlign="right">
-                  Part&nbsp;
-                  {index + 1}
-                </Typography>
+          <Flex direction="vertical" rowGap="3xs">
+            {mappedEvent.names.length > 1 ? (
+              mappedEvent.names.map((name, index) => (
+                <Flex key={generateUniqueKey(index)} direction="horizontal" gap="xs">
+                  <Typography variant="t2" color="mediumGrey" textAlign="right">
+                    Part&nbsp;
+                    {index + 1}
+                  </Typography>
 
-                <Typography variant="t2" textAlign="left" markdown>
-                  {name}
-                </Typography>
-              </Flex>
-            ))
-          ) : (
-            <Typography variant="t1" markdown>
-              {mappedEvent.names[0]}
-            </Typography>
-          )}
-        </Flex>
+                  <Typography variant="t2" textAlign="left" markdown>
+                    {name}
+                  </Typography>
+                </Flex>
+              ))
+            ) : (
+              <Typography variant="t1" markdown>
+                {mappedEvent.names[0]}
+              </Typography>
+            )}
+          </Flex>
+        </Spacing>
 
-        <Typography variant="h4" color="mediumGrey">
-          {mappedEvent.startDate}
-          {mappedEvent.endDate ? <>&nbsp;&#8212;&nbsp;{mappedEvent.endDate}</> : null}
-        </Typography>
+        <Spacing marginX={isMobile() ? 'none' : '4xl'}>
+          <Typography variant="h4" color="mediumGrey">
+            {mappedEvent.startDate}
+            {mappedEvent.endDate ? <>&nbsp;&#8212;&nbsp;{mappedEvent.endDate}</> : null}
+          </Typography>
+        </Spacing>
 
         {mappedEvent.showSport ? (
-          <RowTable
-            titleRow={{
-              leftItem: 'Statistics',
-              rightItem: `${mappedEvent.distance} | ${mappedEvent.elevation} | ${mappedEvent.times}`,
-            }}
-            rows={[
-              {
-                leftItem: 'Islands',
-                rightItem: mappedEvent.islands,
-              },
-              {
-                leftItem: 'Munros',
-                rightItem: mappedEvent.munros,
-              },
-              {
-                leftItem: 'Munro Tops',
-                rightItem: mappedEvent.munroTops,
-              },
-              {
-                leftItem: 'Corbetts',
-                rightItem: mappedEvent.corbetts,
-              },
-              {
-                leftItem: 'Corbett Tops',
-                rightItem: mappedEvent.corbettTops,
-              },
-              {
-                leftItem: 'Grahams',
-                rightItem: mappedEvent.grahams,
-              },
-              {
-                leftItem: 'SubTwos',
-                rightItem: mappedEvent.subTwos,
-              },
-              {
-                leftItem: 'Donalds',
-                rightItem: mappedEvent.donalds,
-              },
-            ]}
-          />
+          <Spacing marginX={isMobile() ? 'none' : '4xl'}>
+            <RowTable
+              titleRow={{
+                leftItem: 'Statistics',
+                rightItem: `${mappedEvent.distance} | ${mappedEvent.elevation} | ${mappedEvent.times}`,
+              }}
+              rows={[
+                {
+                  leftItem: 'Islands',
+                  rightItem: mappedEvent.islands,
+                },
+                {
+                  leftItem: 'Munros',
+                  rightItem: mappedEvent.munros,
+                },
+                {
+                  leftItem: 'Munro Tops',
+                  rightItem: mappedEvent.munroTops,
+                },
+                {
+                  leftItem: 'Corbetts',
+                  rightItem: mappedEvent.corbetts,
+                },
+                {
+                  leftItem: 'Corbett Tops',
+                  rightItem: mappedEvent.corbettTops,
+                },
+                {
+                  leftItem: 'Grahams',
+                  rightItem: mappedEvent.grahams,
+                },
+                {
+                  leftItem: 'SubTwos',
+                  rightItem: mappedEvent.subTwos,
+                },
+                {
+                  leftItem: 'Donalds',
+                  rightItem: mappedEvent.donalds,
+                },
+              ]}
+            />
+          </Spacing>
         ) : null}
 
-        <Button
-          variant="clear"
-          typeColor={showDescription ? 'lightBlue' : undefined}
-          content={showDescription ? 'Read less' : 'Read more'}
-          icon={
-            showDescription ? (
-              <FontAwesomeIcon icon={faChevronUp} />
-            ) : (
-              <FontAwesomeIcon icon={faChevronDown} />
-            )
-          }
-          func={() => funcToggleElements('description')}
-          width="full"
-          transition
-        />
+        <Spacing marginX={isMobile() ? 'none' : '4xl'}>
+          <Button
+            variant="clear"
+            typeColor={showDescription ? 'lightBlue' : undefined}
+            content={showDescription ? 'Read less' : 'Read more'}
+            icon={
+              showDescription ? (
+                <FontAwesomeIcon icon={faChevronUp} />
+              ) : (
+                <FontAwesomeIcon icon={faChevronDown} />
+              )
+            }
+            func={() => funcToggleElements('description')}
+            width="full"
+            transition
+          />
+        </Spacing>
 
         {showDescription ? (
-          <>
+          <Spacing marginX="4xl">
             {mappedEvent.features ? <ArticlePreface entries={mappedEvent.features} /> : null}
 
             <Typography variant="body" textAlign="justify" markdown>
               {mappedEvent.description}
             </Typography>
-          </>
+          </Spacing>
         ) : null}
 
         {isMobile() ? (
