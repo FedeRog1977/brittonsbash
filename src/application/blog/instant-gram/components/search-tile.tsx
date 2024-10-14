@@ -35,14 +35,6 @@ export const SearchTile: FC<SearchTileProps> = ({
       <BigSearch funcInput={funcInput} funcButton={funcButton} placeholder="Lookup Events" />
 
       <Flex direction="horizontal" wrap>
-        {/* TODO: change data to:
-          {
-            "title": "2024",
-            "entries": []
-          }
-          so this can be mapped
-          And with this, standardize the { title, entries } type
-        */}
         <FlexItem grow>
           <Button
             variant="clear"

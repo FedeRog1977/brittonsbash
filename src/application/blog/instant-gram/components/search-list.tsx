@@ -19,11 +19,9 @@ export const SearchList: FC<SearchListProps> = ({ funcSelect, items }) => (
           value={names?.join(' - ')}
           func={funcSelect}
           width="full"
-          // TODO: sort this formatting
-          // content={`${prefix ?? ''}\n${names.map((name) => [name].join('<br>'))}`}
           content={
             <>
-              {prefix ? <div>{prefix}</div> : null}
+              {prefix ? <div>{prefix}:</div> : null}
               {names?.map((name) => <div>{name}</div>)}
             </>
           }

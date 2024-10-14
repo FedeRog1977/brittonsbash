@@ -4,6 +4,12 @@ import { mapEvent } from './map-event';
 import { isMobile, useShowElement } from '../../../../utils';
 import { emptyEventData } from '../mocks/empty-event-data';
 import { MappedEvents, Project } from '../../../../utils/types';
+import { brittonsBashContentFacade } from '../../../../implementations';
+
+console.log(
+  await brittonsBashContentFacade.getEventNames(),
+  await brittonsBashContentFacade.getEvent('2024', 'e2024041')
+);
 
 export const useInstantGram = (mappedEventSport: Project[], mappedEvents: MappedEvents) => {
   // Note to self: https://reactrouter.com/en/main/hooks/use-search-params

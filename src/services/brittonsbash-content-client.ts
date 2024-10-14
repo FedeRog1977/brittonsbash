@@ -1,5 +1,6 @@
 import {
   Culinary,
+  Event,
   Events,
   Features,
   Hills,
@@ -24,6 +25,8 @@ import { mapRoadies } from './utils/map-roadies';
 type BrittonsBashContent = {
   getCulinary: () => Promise<Culinary>;
   getEvents: () => Promise<Events>;
+  getEventNames: () => Promise<Partial<Events>>;
+  getEvent: (year: string, event: string) => Promise<Event>;
   getHills: () => Promise<Hills>;
   getLinks: () => Promise<UrlGroup[]>;
   getMappedEventFeatures: () => Promise<Features>;
@@ -45,6 +48,10 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
 
   private get eventsUrl(): string {
     return `${this.baseUrl}/events.data.json`;
+  }
+
+  private get eventUrl(): string {
+    return `${this.baseUrl}/events/:year/:event.json`;
   }
 
   private get hillsUrl(): string {
@@ -87,6 +94,7 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
     }
   }
 
+  // TODO: discontinue in favour of getEvent() when ready
   public async getEvents(): Promise<Events> {
     const apiUrl = this.eventsUrl;
 
@@ -104,6 +112,46 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
       console.log(error);
 
       throw new Error('Invalid events data received');
+    }
+  }
+
+  public async getEventNames(): Promise<Partial<Events>> {
+    const apiUrl = this.eventUrl.replace(':year/:event.json', 'names.json');
+
+    const response = await fetch(apiUrl);
+
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+
+    const parsedResponse: Partial<Events> = await response.json();
+
+    try {
+      return parsedResponse;
+    } catch (error: unknown) {
+      console.log(error);
+
+      throw new Error('Invalid event names data received');
+    }
+  }
+
+  public async getEvent(year: string, event: string): Promise<Event> {
+    const apiUrl = this.eventUrl.replace(':year', year).replace(':event', event);
+
+    const response = await fetch(apiUrl);
+
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+
+    const parsedResponse: Event = await response.json();
+
+    try {
+      return parsedResponse;
+    } catch (error: unknown) {
+      console.log(error);
+
+      throw new Error('Invalid event data received');
     }
   }
 
