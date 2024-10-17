@@ -25,7 +25,7 @@ import { mapRoadies } from './utils/map-roadies';
 type BrittonsBashContent = {
   getCulinary: () => Promise<Culinary>;
   getEvents: () => Promise<Events>;
-  getEventNames: () => Promise<Partial<Events>>;
+  getEventNames: (year: string) => Promise<Array<Partial<Event>>>;
   getEvent: (year: string, event: string) => Promise<Event>;
   getHills: () => Promise<Hills>;
   getLinks: () => Promise<UrlGroup[]>;
@@ -115,8 +115,8 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
     }
   }
 
-  public async getEventNames(): Promise<Partial<Events>> {
-    const apiUrl = this.eventUrl.replace(':year/:event.json', 'names.json');
+  public async getEventNames(year: string): Promise<Array<Partial<Event>>> {
+    const apiUrl = this.eventUrl.replace(':year', year).replace('/:event.json', '/names.json');
 
     const response = await fetch(apiUrl);
 
@@ -124,7 +124,7 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
       throw new Error(response.statusText);
     }
 
-    const parsedResponse: Partial<Events> = await response.json();
+    const parsedResponse: Array<Partial<Event>> = await response.json();
 
     try {
       return parsedResponse;

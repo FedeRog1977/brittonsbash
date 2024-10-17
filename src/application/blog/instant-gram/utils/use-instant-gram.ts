@@ -2,14 +2,19 @@ import { useEffect, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import { mapEvent } from './map-event';
 import { isMobile, useShowElement } from '../../../../utils';
-import { emptyEventData } from '../mocks/empty-event-data';
 import { MappedEvents, Project } from '../../../../utils/types';
 import { brittonsBashContentFacade } from '../../../../implementations';
 
 console.log(
-  await brittonsBashContentFacade.getEventNames(),
+  await brittonsBashContentFacade.getEventNames('2024'),
   await brittonsBashContentFacade.getEvent('2024', 'e2024041')
 );
+
+const eventNames2024 = await brittonsBashContentFacade.getEventNames('2024');
+const eventNames2023 = await brittonsBashContentFacade.getEventNames('2023');
+const eventNames2022 = await brittonsBashContentFacade.getEventNames('2022');
+const eventNames2021 = await brittonsBashContentFacade.getEventNames('2021');
+const eventNames2020 = await brittonsBashContentFacade.getEventNames('2020');
 
 export const useInstantGram = (mappedEventSport: Project[], mappedEvents: MappedEvents) => {
   // Note to self: https://reactrouter.com/en/main/hooks/use-search-params
@@ -37,7 +42,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
   const [is2020, setIs2020] = useState(false);
 
   const { showElement: showSearchList, setShowElement: setShowSearchList } = useShowElement();
-  const [eventData, setEventData] = useState(emptyEventData);
+  const [eventData, setEventData] = useState(eventNames2024);
 
   useEffect(() => {
     if (location.search === '') {
@@ -133,6 +138,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
     setShowSearchList(!showSearchList);
   };
 
+  // TODO: move year to e.target.value to feed that into facade
   const handleCategory = (value: string) => {
     if (value === '2024') {
       setIs2024(true);
@@ -141,7 +147,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
       setIs2021(false);
       setIs2020(false);
       setShowSearchList(!showSearchList);
-      setEventData(events[2024]);
+      setEventData(eventNames2024);
     }
     if (value === '2023') {
       setIs2024(false);
@@ -150,7 +156,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
       setIs2021(false);
       setIs2020(false);
       setShowSearchList(!showSearchList);
-      setEventData(events[2023]);
+      setEventData(eventNames2023);
     }
     if (value === '2022') {
       setIs2024(false);
@@ -159,7 +165,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
       setIs2021(false);
       setIs2020(false);
       setShowSearchList(!showSearchList);
-      setEventData(events[2022]);
+      setEventData(eventNames2022);
     }
     if (value === '2021') {
       setIs2024(false);
@@ -168,7 +174,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
       setIs2021(true);
       setIs2020(false);
       setShowSearchList(!showSearchList);
-      setEventData(events[2021]);
+      setEventData(eventNames2021);
     }
     if (value === '2020') {
       setIs2024(false);
@@ -177,7 +183,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
       setIs2021(false);
       setIs2020(true);
       setShowSearchList(!showSearchList);
-      setEventData(events[2020]);
+      setEventData(eventNames2020);
     }
   };
 

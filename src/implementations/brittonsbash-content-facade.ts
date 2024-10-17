@@ -19,7 +19,7 @@ import {
 type BrittonsBashContentFacade = {
   getCulinary: () => Promise<Culinary>;
   getEvents: () => Promise<Events>;
-  getEventNames: () => Promise<Partial<Events>>;
+  getEventNames: (year: string) => Promise<Array<Partial<Event>>>;
   getEvent: (year: string, event: string) => Promise<Event>;
   getHills: () => Promise<Hills>;
   getLinks: () => Promise<UrlGroup[]>;
