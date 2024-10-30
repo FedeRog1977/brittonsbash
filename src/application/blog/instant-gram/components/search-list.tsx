@@ -17,6 +17,7 @@ export const SearchList: FC<SearchListProps> = ({ funcSelect, items }) => (
           variant="clear"
           typeVariant="h4"
           value={names?.join(' - ')}
+          // value={`${id?.split('').slice(1, 5).join('')}-${id?.toLocaleLowerCase()}`}
           func={funcSelect}
           width="full"
           content={

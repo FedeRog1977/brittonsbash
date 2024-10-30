@@ -7,7 +7,6 @@ import {
   Features,
   Hills,
   Img,
-  MappedEvents,
   MappedMiles,
   MappedProjects,
   MappedRoadies,
@@ -26,7 +25,7 @@ type BrittonsBashContentFacade = {
   getMappedEventFeatures: () => Promise<Features>;
   getMappedEventImages: () => Promise<Img[]>;
   getMappedEventSports: () => Promise<Project[]>;
-  getMappedEvents: () => Promise<MappedEvents>;
+  getMappedEvents: () => Promise<Event[]>;
   getMappedMiles: () => Promise<MappedMiles>;
   getMappedProjects: () => Promise<MappedProjects>;
   getMappedRoadies: () => Promise<MappedRoadies>;

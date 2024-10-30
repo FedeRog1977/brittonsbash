@@ -2,13 +2,8 @@ import { useEffect, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import { mapEvent } from './map-event';
 import { isMobile, useShowElement } from '../../../../utils';
-import { MappedEvents, Project } from '../../../../utils/types';
+import { Event, Project } from '../../../../utils/types';
 import { brittonsBashContentFacade } from '../../../../implementations';
-
-console.log(
-  await brittonsBashContentFacade.getEventNames('2024'),
-  await brittonsBashContentFacade.getEvent('2024', 'e2024041')
-);
 
 const eventNames2024 = await brittonsBashContentFacade.getEventNames('2024');
 const eventNames2023 = await brittonsBashContentFacade.getEventNames('2023');
@@ -16,7 +11,7 @@ const eventNames2022 = await brittonsBashContentFacade.getEventNames('2022');
 const eventNames2021 = await brittonsBashContentFacade.getEventNames('2021');
 const eventNames2020 = await brittonsBashContentFacade.getEventNames('2020');
 
-export const useInstantGram = (mappedEventSport: Project[], mappedEvents: MappedEvents) => {
+export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Event[]) => {
   // Note to self: https://reactrouter.com/en/main/hooks/use-search-params
   const location = useLocation();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -24,10 +19,9 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
 
   const [searchField, setSearchField] = useState('');
 
-  const { events, mappedEvents: mappedEventsUnpacked } = mappedEvents;
   const sportOnEvent: Project[] = [];
 
-  const [event, setEvent] = useState(mappedEventsUnpacked[0]);
+  const [event, setEvent] = useState(mappedEvents[0]);
   const [sport, setSport] = useState<Project[]>([]);
   const [showSport, setShowSport] = useState(false);
 
@@ -47,7 +41,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
   useEffect(() => {
     if (location.search === '') {
       for (var i in mappedEventSport) {
-        if (mappedEventsUnpacked[0]?.names.includes(mappedEventSport[i]?.name)) {
+        if (mappedEvents[0]?.names.includes(mappedEventSport[i]?.name)) {
           sportOnEvent.push(mappedEventSport[i]);
           setSport(sportOnEvent);
           setShowSport(true);
@@ -55,14 +49,14 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
       }
     }
 
-    for (var i in mappedEventsUnpacked) {
-      if (location.search.includes(`${mappedEventsUnpacked[i]?.id?.toLowerCase()}`)) {
-        setEvent(mappedEventsUnpacked[i]);
+    for (var i in mappedEvents) {
+      if (location.search.includes(`${mappedEvents[i]?.id?.toLowerCase()}`)) {
+        setEvent(mappedEvents[i]);
         setSport([] as Project[]);
         setShowSport(false);
 
         for (var j in mappedEventSport) {
-          if (mappedEventsUnpacked[i]?.names.includes(mappedEventSport[j]?.name)) {
+          if (mappedEvents[i]?.names.includes(mappedEventSport[j]?.name)) {
             sportOnEvent.push(mappedEventSport[j]);
             setSport(sportOnEvent);
             setShowSport(true);
@@ -75,24 +69,24 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
   const handleInput = (e: any) => {
     setSearchField(e.target.value.toLowerCase());
 
-    for (var i in mappedEventsUnpacked) {
+    for (var i in mappedEvents) {
       if (searchField === '') {
         setEventHandler(event);
         setSportHandler(sport);
         setShowSportHandler(showSport);
       } else if (
-        `${mappedEventsUnpacked[i]?.prefix} ${mappedEventsUnpacked[i]?.names.join(' ').toLowerCase()}`.includes(
+        `${mappedEvents[i]?.prefix} ${mappedEvents[i]?.names.join(' ').toLowerCase()}`.includes(
           searchField
         )
       ) {
-        setSearchParamsHandler(mappedEventsUnpacked[i]?.id?.toLowerCase() ?? '');
+        setSearchParamsHandler(mappedEvents[i]?.id?.toLowerCase() ?? '');
 
-        setEventHandler(mappedEventsUnpacked[i]);
+        setEventHandler(mappedEvents[i]);
         setSportHandler([] as Project[]);
         setShowSportHandler(false);
 
         for (var j in mappedEventSport) {
-          if (mappedEventsUnpacked[i]?.names.includes(mappedEventSport[j]?.name)) {
+          if (mappedEvents[i]?.names.includes(mappedEventSport[j]?.name)) {
             sportOnEvent.push(mappedEventSport[j]);
             setSportHandler(sportOnEvent);
             setShowSportHandler(true);
@@ -117,16 +111,16 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
   };
 
   const handleSelect = (e: any) => {
-    for (var i in mappedEventsUnpacked) {
-      if (mappedEventsUnpacked[i]?.names.join(' - ').includes(e.currentTarget.value)) {
-        setSearchParams({ event: `${mappedEventsUnpacked[i]?.id?.toLowerCase()}` });
+    for (var i in mappedEvents) {
+      if (mappedEvents[i]?.names.join(' - ').includes(e.currentTarget.value)) {
+        setSearchParams({ event: `${mappedEvents[i]?.id?.toLowerCase()}` });
 
-        setEvent(mappedEventsUnpacked[i]);
+        setEvent(mappedEvents[i]);
         setSport([] as Project[]);
         setShowSport(false);
 
         for (var j in mappedEventSport) {
-          if (mappedEventsUnpacked[i]?.names.includes(mappedEventSport[j]?.name)) {
+          if (mappedEvents[i]?.names.includes(mappedEventSport[j]?.name)) {
             sportOnEvent.push(mappedEventSport[j]);
             setSport(sportOnEvent);
             setShowSport(true);
@@ -137,6 +131,19 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Mapped
 
     setShowSearchList(!showSearchList);
   };
+
+  // const handleSelect = async (e: any) => {
+  //   const parsedText: string[] = e.currentTarget.value.split('-');
+  //   const fetchedEvent = await brittonsBashContentFacade.getEvent(parsedText[0], parsedText[1]);
+
+  //   setEvent(fetchedEvent);
+  //   setShowSearchList(!showSearchList);
+
+  //   console.log(
+  //     await brittonsBashContentFacade.getEventNames('2024'),
+  //     await brittonsBashContentFacade.getEvent('2024', 'e2024041')
+  //   );
+  // };
 
   // TODO: move year to e.target.value to feed that into facade
   const handleCategory = (value: string) => {

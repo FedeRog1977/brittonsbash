@@ -112,7 +112,7 @@ export const ResultTile: FC<ResultTileProps> = ({
           </Spacing>
         ) : null}
 
-        <Spacing marginX={isMobile() ? 'none' : '4xl'}>
+        {/* <Spacing marginX={isMobile() ? 'none' : '4xl'}>
           <Button
             variant="clear"
             typeColor={showDescription ? 'lightBlue' : undefined}
@@ -128,17 +128,19 @@ export const ResultTile: FC<ResultTileProps> = ({
             width="full"
             transition
           />
+        </Spacing> */}
+
+        {/* {showDescription ? ( */}
+        <Spacing marginX="4xl">
+          {mappedEvent.features ? <ArticlePreface entries={mappedEvent.features} /> : null}
         </Spacing>
 
-        {showDescription ? (
-          <Spacing marginX="4xl">
-            {mappedEvent.features ? <ArticlePreface entries={mappedEvent.features} /> : null}
-
-            <Typography variant="body" textAlign="justify" markdown>
-              {mappedEvent.description}
-            </Typography>
-          </Spacing>
-        ) : null}
+        <Spacing marginX="4xl">
+          <Typography variant="body" textAlign="justify" markdown>
+            {mappedEvent.description}
+          </Typography>
+        </Spacing>
+        {/* ) : null} */}
 
         {isMobile() ? (
           <ImageSlider slides={mappedEvent.images} />

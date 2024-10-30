@@ -5,7 +5,6 @@ import {
   Features,
   Hills,
   Img,
-  MappedEvents,
   MappedMiles,
   MappedProjects,
   MappedRoadies,
@@ -32,7 +31,7 @@ type BrittonsBashContent = {
   getMappedEventFeatures: () => Promise<Features>;
   getMappedEventImages: () => Promise<Img[]>;
   getMappedEventSports: () => Promise<Project[]>;
-  getMappedEvents: () => Promise<MappedEvents>;
+  getMappedEvents: () => Promise<Event[]>;
   getMappedMiles: () => Promise<MappedMiles>;
   getMappedProjects: () => Promise<MappedProjects>;
   getMappedRoadies: () => Promise<MappedRoadies>;
@@ -145,6 +144,8 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
     }
 
     const parsedResponse: Event = await response.json();
+
+    // TODO: query sports API URLs here and map sport data to new MappedEvent object type
 
     try {
       return parsedResponse;
@@ -261,7 +262,7 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
     }
   }
 
-  public async getMappedEvents(): Promise<MappedEvents> {
+  public async getMappedEvents(): Promise<Event[]> {
     const apiUrl = this.eventsUrl;
 
     const response = await fetch(apiUrl);
@@ -272,7 +273,7 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
 
     const parsedResponse: Events = await response.json();
 
-    const mappedParsedResponse: MappedEvents = mapEvents(parsedResponse);
+    const mappedParsedResponse: Event[] = mapEvents(parsedResponse);
 
     try {
       return mappedParsedResponse;
