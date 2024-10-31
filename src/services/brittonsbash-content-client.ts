@@ -155,7 +155,8 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
 
     const sportGroup = 'projects';
     const sportYear = parsedResponse.id?.split('').slice(1, 5).join('') as string;
-    const sportSport = `(?:\/.*)?-${parsedResponse.id?.toLocaleLowerCase()}`;
+    // TODO: remove hard-coded prefix
+    const sportSport = `p2024035-${parsedResponse.id?.toLocaleLowerCase()}`;
 
     const sport: Project | undefined = (await this.getSport(
       sportGroup,
