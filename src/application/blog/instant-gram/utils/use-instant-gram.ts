@@ -5,6 +5,12 @@ import { isMobile, useShowElement } from '../../../../utils';
 import { Event, Project } from '../../../../utils/types';
 import { brittonsBashContentFacade } from '../../../../implementations';
 
+console.log(
+  await brittonsBashContentFacade.getEventNames('2024'),
+  await brittonsBashContentFacade.getEvent('2024', 'e2024042'),
+  await brittonsBashContentFacade.getSport('roadies', '2024', 'r2024034')
+);
+
 const eventNames2024 = await brittonsBashContentFacade.getEventNames('2024');
 const eventNames2023 = await brittonsBashContentFacade.getEventNames('2023');
 const eventNames2022 = await brittonsBashContentFacade.getEventNames('2022');
@@ -138,11 +144,6 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Event[
 
   //   setEvent(fetchedEvent);
   //   setShowSearchList(!showSearchList);
-
-  //   console.log(
-  //     await brittonsBashContentFacade.getEventNames('2024'),
-  //     await brittonsBashContentFacade.getEvent('2024', 'e2024041')
-  //   );
   // };
 
   // TODO: move year to e.target.value to feed that into facade

@@ -1,5 +1,6 @@
 import { Img } from './img';
 import { Features } from './features';
+import { Project } from './project';
 
 export type Event = {
   id?: string;
@@ -10,4 +11,5 @@ export type Event = {
   features?: Features;
   description: string;
   images: Img[];
+  sport?: Project;
 };

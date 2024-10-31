@@ -20,6 +20,7 @@ export * from './region';
 export * from './regions';
 export * from './roadie';
 export * from './route';
+export * from './sport-options';
 export * from './sport';
 export * from './url-group';
 export * from './url';

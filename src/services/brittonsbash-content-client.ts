@@ -8,7 +8,10 @@ import {
   MappedMiles,
   MappedProjects,
   MappedRoadies,
+  Miles,
   Project,
+  Roadie,
+  SportOptions,
   UrlGroup,
 } from '../utils/types';
 import { Regions } from '../utils/types/regions';
@@ -36,6 +39,7 @@ type BrittonsBashContent = {
   getMappedProjects: () => Promise<MappedProjects>;
   getMappedRoadies: () => Promise<MappedRoadies>;
   getRegions: () => Promise<Regions>;
+  getSport: (group: SportOptions, year: string, sport: string) => Promise<Miles | Project | Roadie>;
 };
 
 export class BrittonsBashContentClient implements BrittonsBashContent {
@@ -65,8 +69,12 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
     return `${this.baseUrl}/regions.data.json`;
   }
 
-  private get sportUrl(): string {
+  private get sportsUrl(): string {
     return `${this.baseUrl}/sport.data.json`;
+  }
+
+  private get sportUrl(): string {
+    return `${this.baseUrl}/sport/:group/:year/:sport.json`;
   }
 
   public constructor(baseUrl: string) {
@@ -143,11 +151,25 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
       throw new Error(response.statusText);
     }
 
-    const parsedResponse: Event = await response.json();
+    const parsedResponse: Omit<Event, 'sport'> = await response.json();
 
-    // TODO: query sports API URLs here and map sport data to new MappedEvent object type
+    const sportGroup = 'projects';
+    const sportYear = parsedResponse.id?.split('').slice(1, 5).join('') as string;
+    const sportSport = `(?:\/.*)?-${parsedResponse.id?.toLocaleLowerCase()}`;
+
+    const sport: Project | undefined = (await this.getSport(
+      sportGroup,
+      sportYear,
+      sportSport
+    )) as Project;
+
+    const mappedParsedResponse: Event = { ...parsedResponse, sport };
 
     try {
+      if (sport) {
+        return mappedParsedResponse;
+      }
+
       return parsedResponse;
     } catch (error: unknown) {
       console.log(error);
@@ -241,7 +263,7 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
   }
 
   public async getMappedEventSports(): Promise<Project[]> {
-    const apiUrl = this.sportUrl;
+    const apiUrl = this.sportsUrl;
 
     const response = await fetch(apiUrl);
 
@@ -285,7 +307,7 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
   }
 
   public async getMappedMiles(): Promise<MappedMiles> {
-    const apiUrl = this.sportUrl;
+    const apiUrl = this.sportsUrl;
 
     const response = await fetch(apiUrl);
 
@@ -307,7 +329,7 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
   }
 
   public async getMappedProjects(): Promise<MappedProjects> {
-    const apiUrl = this.sportUrl;
+    const apiUrl = this.sportsUrl;
 
     const response = await fetch(apiUrl);
 
@@ -329,7 +351,7 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
   }
 
   public async getMappedRoadies(): Promise<MappedRoadies> {
-    const apiUrl = this.sportUrl;
+    const apiUrl = this.sportsUrl;
 
     const response = await fetch(apiUrl);
 
@@ -367,6 +389,33 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
       console.log(error);
 
       throw new Error('Invalid regions data received');
+    }
+  }
+
+  public async getSport(
+    group: SportOptions,
+    year: string,
+    sport: string
+  ): Promise<Miles | Project | Roadie> {
+    const apiUrl = this.sportUrl
+      .replace(':group', group)
+      .replace(':year', year)
+      .replace(':sport', sport);
+
+    const response = await fetch(apiUrl);
+
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+
+    const parsedResponse: Miles | Project | Roadie = await response.json();
+
+    try {
+      return parsedResponse;
+    } catch (error: unknown) {
+      console.log(error);
+
+      throw new Error('Invalid sport data received');
     }
   }
 }

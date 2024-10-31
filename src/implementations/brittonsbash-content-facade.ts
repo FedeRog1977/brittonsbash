@@ -10,8 +10,11 @@ import {
   MappedMiles,
   MappedProjects,
   MappedRoadies,
+  Miles,
   Project,
   Regions,
+  Roadie,
+  SportOptions,
   UrlGroup,
 } from '../utils/types';
 
@@ -30,6 +33,7 @@ type BrittonsBashContentFacade = {
   getMappedProjects: () => Promise<MappedProjects>;
   getMappedRoadies: () => Promise<MappedRoadies>;
   getRegions: () => Promise<Regions>;
+  getSport: (group: SportOptions, year: string, sport: string) => Promise<Miles | Project | Roadie>;
 };
 
 const getBrittonsBashContentFacade = (): BrittonsBashContentFacade => {
