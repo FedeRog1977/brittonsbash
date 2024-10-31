@@ -39,7 +39,11 @@ type BrittonsBashContent = {
   getMappedProjects: () => Promise<MappedProjects>;
   getMappedRoadies: () => Promise<MappedRoadies>;
   getRegions: () => Promise<Regions>;
-  getSport: (group: SportOptions, year: string, sport: string) => Promise<Miles | Project | Roadie>;
+  getSport: (
+    group: SportOptions,
+    year: string,
+    sport: string
+  ) => Promise<Miles | Project | Project[] | Roadie>;
 };
 
 export class BrittonsBashContentClient implements BrittonsBashContent {
@@ -153,25 +157,22 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
 
     const parsedResponse: Omit<Event, 'sport'> = await response.json();
 
-    const sportGroup = 'projects';
-    const sportYear = parsedResponse.id?.split('').slice(1, 5).join('') as string;
-    // TODO: remove hard-coded prefix
-    const sportSport = `p2024035-${parsedResponse.id?.toLocaleLowerCase()}`;
-
-    const sport: Project | undefined = (await this.getSport(
-      sportGroup,
-      sportYear,
-      sportSport
-    )) as Project;
-
-    const mappedParsedResponse: Event = { ...parsedResponse, sport };
-
     try {
-      if (sport) {
-        return mappedParsedResponse;
-      }
+      try {
+        const sport = (await this.getSport(
+          'projects',
+          parsedResponse.id.split('').slice(1, 5).join(''),
+          `p${parsedResponse.id}`
+        )) as Project | Project[];
 
-      return parsedResponse;
+        const mappedParsedResponse: Event = { ...parsedResponse, sport };
+
+        return mappedParsedResponse;
+      } catch {
+        console.log(`No sport data found for ${parsedResponse.id}, event returned without sport`);
+
+        return parsedResponse;
+      }
     } catch (error: unknown) {
       console.log(error);
 
@@ -397,7 +398,7 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
     group: SportOptions,
     year: string,
     sport: string
-  ): Promise<Miles | Project | Roadie> {
+  ): Promise<Miles | Project | Project[] | Roadie> {
     const apiUrl = this.sportUrl
       .replace(':group', group)
       .replace(':year', year)

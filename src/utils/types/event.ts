@@ -3,7 +3,7 @@ import { Features } from './features';
 import { Project } from './project';
 
 export type Event = {
-  id?: string;
+  id: string;
   prefix?: string;
   names: string[];
   startDate: string;
@@ -11,5 +11,5 @@ export type Event = {
   features?: Features;
   description: string;
   images: Img[];
-  sport?: Project;
+  sport?: Project | Project[];
 };

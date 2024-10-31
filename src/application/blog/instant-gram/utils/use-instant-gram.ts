@@ -5,11 +5,7 @@ import { isMobile, useShowElement } from '../../../../utils';
 import { Event, Project } from '../../../../utils/types';
 import { brittonsBashContentFacade } from '../../../../implementations';
 
-console.log(
-  await brittonsBashContentFacade.getEventNames('2024'),
-  await brittonsBashContentFacade.getEvent('2024', 'e2024042'),
-  await brittonsBashContentFacade.getSport('roadies', '2024', 'r2024034')
-);
+console.log(await brittonsBashContentFacade.getEvent('2024', 'e2024035'));
 
 const eventNames2024 = await brittonsBashContentFacade.getEventNames('2024');
 const eventNames2023 = await brittonsBashContentFacade.getEventNames('2023');
@@ -139,8 +135,8 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Event[
   };
 
   // const handleSelect = async (e: any) => {
-  //   const parsedText: string[] = e.currentTarget.value.split('-');
-  //   const fetchedEvent = await brittonsBashContentFacade.getEvent(parsedText[0], parsedText[1]);
+  //   const [year, event]: string[] = e.currentTarget.value.split('-');
+  //   const fetchedEvent = await brittonsBashContentFacade.getEvent(year, event);
 
   //   setEvent(fetchedEvent);
   //   setShowSearchList(!showSearchList);
