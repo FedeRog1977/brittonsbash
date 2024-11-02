@@ -10,6 +10,7 @@ export * from './hill';
 export * from './hills';
 export * from './img';
 export * from './landmass';
+export * from './mapped-event-project';
 export * from './mapped-event';
 export * from './mapped-miles';
 export * from './mapped-projects';

@@ -18,6 +18,7 @@ import { Regions } from '../utils/types/regions';
 import { Sport } from '../utils/types/sport';
 import { mapEventFeatures } from './utils/map-event-features';
 import { mapEventImages } from './utils/map-event-images';
+import { mapEventProject } from './utils/map-event-project';
 import { mapEventSports } from './utils/map-event-sports';
 import { mapEvents } from './utils/map-events';
 import { mapMiles } from './utils/map-miles';
@@ -146,7 +147,10 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
     }
   }
 
-  public async getEvent(year: string, event: string): Promise<Event> {
+  public async getEvent(
+    year: string,
+    event: string
+  ): Promise<Extract<Event, { type: 'unmappedSport' }> | Extract<Event, { type: 'mappedSport' }>> {
     const apiUrl = this.eventUrl.replace(':year', year).replace(':event', event);
 
     const response = await fetch(apiUrl);
@@ -155,20 +159,40 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
       throw new Error(response.statusText);
     }
 
-    const parsedResponse: Omit<Event, 'sport'> = await response.json();
-
     try {
       try {
+        const parsedMappableSportResponse: Extract<Event, { type: 'mappedSport' }> =
+          await response.json();
+
         const sport = (await this.getSport(
           'projects',
-          parsedResponse.id.split('').slice(1, 5).join(''),
-          `p${parsedResponse.id}`
+          parsedMappableSportResponse.id.split('').slice(1, 5).join(''),
+          `p${parsedMappableSportResponse.id}`
         )) as Project | Project[];
 
-        const mappedParsedResponse: Event = { ...parsedResponse, sport };
+        if (Array.isArray(sport)) {
+          const mappedSport = mapEventProject(sport);
 
-        return mappedParsedResponse;
+          const mappedParsedMappedSportResponse: Extract<Event, { type: 'mappedSport' }> = {
+            ...parsedMappableSportResponse,
+            sport: mappedSport,
+          };
+          return mappedParsedMappedSportResponse;
+        }
+        const parsedUnmappableSportResponse: Extract<Event, { type: 'unmappedSport' }> =
+          await response.json();
+
+        const mappedParsedUnmappedSportResponse: Extract<Event, { type: 'unmappedSport' }> = {
+          ...parsedUnmappableSportResponse,
+          sport,
+        };
+        return mappedParsedUnmappedSportResponse;
       } catch {
+        const parsedResponse: Omit<
+          Extract<Event, { type: 'unmappedSport' }>,
+          'sport'
+        > = await response.json();
+
         console.log(`No sport data found for ${parsedResponse.id}, event returned without sport`);
 
         return parsedResponse;
