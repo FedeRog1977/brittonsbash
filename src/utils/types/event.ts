@@ -14,8 +14,8 @@ type EventBasics = {
   images: Img[];
 };
 
-export type UnmappedEvent = EventBasics & {
-  // type: 'unmapped';
+type UnmappedEvent = EventBasics & {
+  type: 'unmapped';
   features?: Features;
   sport?: Project | Project[];
 };
