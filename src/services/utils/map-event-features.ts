@@ -34,7 +34,7 @@ export const mapEventFeatures = (events: Events): Features => {
   const uniqueElements: string[] = [];
   const nostalgiaEffect: string[] = [];
 
-  events[2024].forEach((event: Event) => {
+  events[2024].forEach((event) => {
     event.features?.countries?.forEach((country) => {
       countries.push(country);
     });
@@ -130,7 +130,7 @@ export const mapEventFeatures = (events: Events): Features => {
     });
   });
 
-  events[2023].forEach((event: Event) => {
+  events[2023].forEach((event) => {
     event.features?.countries?.forEach((country) => {
       countries.push(country);
     });
@@ -226,7 +226,7 @@ export const mapEventFeatures = (events: Events): Features => {
     });
   });
 
-  events[2022].forEach((event: Event) => {
+  events[2022].forEach((event) => {
     event.features?.countries?.forEach((country) => {
       countries.push(country);
     });
@@ -322,7 +322,7 @@ export const mapEventFeatures = (events: Events): Features => {
     });
   });
 
-  events[2021].forEach((event: Event) => {
+  events[2021].forEach((event) => {
     event.features?.countries?.forEach((country) => {
       countries.push(country);
     });
@@ -418,7 +418,7 @@ export const mapEventFeatures = (events: Events): Features => {
     });
   });
 
-  events[2020].forEach((event: Event) => {
+  events[2020].forEach((event) => {
     event.features?.countries?.forEach((country) => {
       countries.push(country);
     });

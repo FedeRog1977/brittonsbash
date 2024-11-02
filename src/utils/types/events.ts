@@ -1,9 +1,9 @@
 import { Event } from './event';
 
 export type Events = {
-  2020: Event[];
-  2021: Event[];
-  2022: Event[];
-  2023: Event[];
-  2024: Event[];
+  2020: Extract<Event, { type: 'unmapped' }>[];
+  2021: Extract<Event, { type: 'unmapped' }>[];
+  2022: Extract<Event, { type: 'unmapped' }>[];
+  2023: Extract<Event, { type: 'unmapped' }>[];
+  2024: Extract<Event, { type: 'unmapped' }>[];
 };

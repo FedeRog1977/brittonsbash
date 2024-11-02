@@ -2,7 +2,12 @@ import { toSum, toFeet, toMiles } from '../../../../utils';
 import { MappedEvent, Project, Event } from '../../../../utils/types';
 import { mapEventFeaturesReadable } from './map-event-features-readable';
 
-export const mapEvent = (event: Event, sport: Project[], showSport: boolean): MappedEvent => {
+// TODO: discontinue
+export const mapEvent = (
+  event: Extract<Event, { type: 'unmapped' }>,
+  sport: Project[],
+  showSport: boolean
+): MappedEvent => {
   const names: string[] = [];
   const distances: number[] = [];
   const elevations: number[] = [];

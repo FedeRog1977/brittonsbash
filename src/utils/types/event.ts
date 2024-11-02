@@ -2,6 +2,7 @@ import { Img } from './img';
 import { Features } from './features';
 import { Project } from './project';
 import { MappedEventProject } from './mapped-event-project';
+import { GenericDataContent } from './generic-data-content';
 
 type EventBasics = {
   id: string;
@@ -9,19 +10,26 @@ type EventBasics = {
   names: string[];
   startDate: string;
   endDate?: string;
-  features?: Features;
   description: string;
   images: Img[];
 };
 
-type MappedEvent = EventBasics & {
-  type: 'mappedSport';
-  sport: MappedEventProject;
-};
-
-type UnmappedEvent = EventBasics & {
-  type: 'unmappedSport';
+export type UnmappedEvent = EventBasics & {
+  // type: 'unmapped';
+  features?: Features;
   sport?: Project | Project[];
 };
 
-export type Event = MappedEvent | UnmappedEvent;
+type MappedSportEvent = EventBasics & {
+  type: 'mappedSport';
+  features?: GenericDataContent[];
+  sport: MappedEventProject;
+};
+
+type UnmappedSportEvent = EventBasics & {
+  type: 'unmappedSport';
+  features?: GenericDataContent[];
+  sport?: Project;
+};
+
+export type Event = UnmappedEvent | MappedSportEvent | UnmappedSportEvent;

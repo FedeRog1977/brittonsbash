@@ -17,6 +17,7 @@ import {
 import { Regions } from '../utils/types/regions';
 import { Sport } from '../utils/types/sport';
 import { mapEventFeatures } from './utils/map-event-features';
+import { mapEventFeaturesReadable } from './utils/map-event-features-readable';
 import { mapEventImages } from './utils/map-event-images';
 import { mapEventProject } from './utils/map-event-project';
 import { mapEventSports } from './utils/map-event-sports';
@@ -159,43 +160,52 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
       throw new Error(response.statusText);
     }
 
+    // TODO: make this type fix
+    // const parsedResponse: Extract<Event, { type: 'unmapped' }> = await response.json();
+    const parsedResponse: any = await response.json();
+
+    const mappedFeatures = parsedResponse.features
+      ? mapEventFeaturesReadable(parsedResponse.features as Features)
+      : undefined;
+
     try {
       try {
-        const parsedMappableSportResponse: Extract<Event, { type: 'mappedSport' }> =
-          await response.json();
-
         const sport = (await this.getSport(
           'projects',
-          parsedMappableSportResponse.id.split('').slice(1, 5).join(''),
-          `p${parsedMappableSportResponse.id}`
+          parsedResponse.id.split('').slice(1, 5).join(''),
+          `p${parsedResponse.id}`
         )) as Project | Project[];
 
         if (Array.isArray(sport)) {
           const mappedSport = mapEventProject(sport);
 
           const mappedParsedMappedSportResponse: Extract<Event, { type: 'mappedSport' }> = {
-            ...parsedMappableSportResponse,
+            ...parsedResponse,
+            // TODO: make features conditional
+            features: mappedFeatures,
+            // TODO: make keys of sports conditional based on whether or not the response contains them
             sport: mappedSport,
           };
+
           return mappedParsedMappedSportResponse;
         }
-        const parsedUnmappableSportResponse: Extract<Event, { type: 'unmappedSport' }> =
-          await response.json();
-
         const mappedParsedUnmappedSportResponse: Extract<Event, { type: 'unmappedSport' }> = {
-          ...parsedUnmappableSportResponse,
+          ...parsedResponse,
+          // TODO: make features conditional
+          features: mappedFeatures,
+          // TODO: make keys of sports conditional based on whether or not the response contains them
           sport,
         };
+
         return mappedParsedUnmappedSportResponse;
       } catch {
-        const parsedResponse: Omit<
-          Extract<Event, { type: 'unmappedSport' }>,
-          'sport'
-        > = await response.json();
+        const unmappedParsedResponse: Extract<Event, { type: 'unmappedSport' }> = {
+          ...parsedResponse,
+          // TODO: make keys of sports conditional based on whether or not the response contains them
+          features: mappedFeatures,
+        };
 
-        console.log(`No sport data found for ${parsedResponse.id}, event returned without sport`);
-
-        return parsedResponse;
+        return unmappedParsedResponse;
       }
     } catch (error: unknown) {
       console.log(error);

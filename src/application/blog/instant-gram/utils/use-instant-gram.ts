@@ -208,7 +208,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Event[
     // Modal cannot be handled here
   };
 
-  const mappedEvent = mapEvent(event, sport, showSport);
+  const mappedEvent = mapEvent(event as Extract<Event, { type: 'unmapped' }>, sport, showSport);
 
   // Note to self
   const pathname = location.pathname;

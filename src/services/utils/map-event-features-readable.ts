@@ -1,6 +1,5 @@
-import { Features, GenericDataContent } from '../../../../utils/types';
+import { Features, GenericDataContent } from '../../utils/types';
 
-// TODO: discontinue
 export const mapEventFeaturesReadable = (features: Features): GenericDataContent[] => [
   {
     title: 'Countries',
