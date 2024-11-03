@@ -24,7 +24,6 @@ export const InstantGram = () => {
     handleSelect,
     mappedEvent,
     handleToggleElements,
-    showDescription,
     showMatrix,
   } = useInstantGram(mappedEventSports, mappedEvents);
 
@@ -45,7 +44,6 @@ export const InstantGram = () => {
     <ResultTile
       mappedEvent={mappedEvent}
       funcToggleElements={handleToggleElements}
-      showDescription={showDescription}
       showMatrix={showMatrix}
     />,
     <FootnoteTile {...instantGramContent.tileOne} />,

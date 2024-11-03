@@ -161,7 +161,7 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
     }
 
     // TODO: make this type fix
-    // const parsedResponse: Extract<Event, { type: 'unmapped' }> = await response.json();
+    // const parsedResponse: Omit<Extract<Event, { type: 'unmapped' }>, 'sport' | 'type'> = await response.json();
     const parsedResponse: any = await response.json();
 
     const mappedFeatures = parsedResponse.features

@@ -6,7 +6,7 @@ export type MappedEvent = {
   names: string[];
   startDate: Event['startDate'];
   endDate?: Event['endDate'];
-  features?: GenericDataContent[];
+  features?: (Omit<GenericDataContent, 'content'> & { content: string[] })[];
   description: Event['description'];
   images: Event['images'];
   distance?: string;

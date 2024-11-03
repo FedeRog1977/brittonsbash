@@ -191,7 +191,6 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Event[
     }
   };
 
-  const { showElement: showDescription, setShowElement: setShowDescription } = useShowElement();
   const { showElement: showMatrix, setShowElement: setShowMatrix } = useShowElement();
 
   useEffect(() => {
@@ -199,9 +198,6 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Event[
   }, []);
 
   const handleToggleElements = (value: string) => {
-    if (value === 'description') {
-      setShowDescription(!showDescription);
-    }
     if (value === 'matrix') {
       setShowMatrix(!showMatrix);
     }
@@ -245,7 +241,6 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Event[
     handleSelect,
     mappedEvent,
     handleToggleElements,
-    showDescription,
     showMatrix,
   };
 };

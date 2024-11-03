@@ -1,5 +1,4 @@
 import {
-  ArticlePreface,
   Button,
   ImageMatrix,
   ImageSlider,
@@ -13,21 +12,17 @@ import {
 } from '../../../../components';
 import { useShowElement, generateUniqueKey, isMobile } from '../../../../utils';
 import { FC } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { MappedEvent } from '../../../../utils/types';
 
 type ResultTileProps = {
   mappedEvent: MappedEvent;
   funcToggleElements: (value: string) => void;
-  showDescription: boolean;
   showMatrix: boolean;
 };
 
 export const ResultTile: FC<ResultTileProps> = ({
   mappedEvent,
   funcToggleElements,
-  showDescription,
   showMatrix,
 }) => {
   const { showElement: showModal, setShowElement: setShowModal } = useShowElement();
@@ -71,8 +66,10 @@ export const ResultTile: FC<ResultTileProps> = ({
           <Spacing marginX={isMobile() ? 'none' : '4xl'}>
             <RowTable
               titleRow={{
-                leftItem: 'Statistics',
-                rightItem: `${mappedEvent.distance} | ${mappedEvent.elevation} | ${mappedEvent.times}`,
+                leftItem: 'Sport',
+                rightItem: [mappedEvent.distance, mappedEvent.elevation, mappedEvent.times].join(
+                  ', '
+                ),
               }}
               rows={[
                 {
@@ -112,30 +109,21 @@ export const ResultTile: FC<ResultTileProps> = ({
           </Spacing>
         ) : null}
 
-        {/* <Spacing marginX={isMobile() ? 'none' : '4xl'}>
-          <Button
-            variant="clear"
-            typeColor={showDescription ? 'lightBlue' : undefined}
-            content={showDescription ? 'Read less' : 'Read more'}
-            icon={
-              showDescription ? (
-                <FontAwesomeIcon icon={faChevronUp} />
-              ) : (
-                <FontAwesomeIcon icon={faChevronDown} />
-              )
-            }
-            func={() => funcToggleElements('description')}
-            width="full"
-            transition
-          />
-        </Spacing> */}
+        {mappedEvent.features ? (
+          <Spacing marginX="4xl">
+            <RowTable
+              titleRow={{
+                leftItem: 'Features',
+              }}
+              rows={mappedEvent.features.map(({ title, content }) => ({
+                leftItem: title,
+                rightItem: content?.join(', '),
+              }))}
+            />
+          </Spacing>
+        ) : null}
 
-        {/* {showDescription ? ( */}
-        <Spacing marginX="4xl">
-          {mappedEvent.features ? <ArticlePreface entries={mappedEvent.features} /> : null}
-        </Spacing>
-
-        <Spacing marginX="4xl">
+        <Spacing marginX={isMobile() ? 'none' : '4xl'}>
           <Typography variant="body" textAlign="justify" markdown>
             {mappedEvent.description}
           </Typography>

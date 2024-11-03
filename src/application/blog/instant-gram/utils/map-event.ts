@@ -1,5 +1,5 @@
 import { toSum, toFeet, toMiles } from '../../../../utils';
-import { MappedEvent, Project, Event } from '../../../../utils/types';
+import { MappedEvent, Project, Event, GenericDataContent } from '../../../../utils/types';
 import { mapEventFeaturesReadable } from './map-event-features-readable';
 
 // TODO: discontinue
@@ -38,7 +38,11 @@ export const mapEvent = (
     names.push(name);
   });
 
-  const features = event.features ? mapEventFeaturesReadable(event.features) : undefined;
+  const features = event.features
+    ? (mapEventFeaturesReadable(event.features) as (Omit<GenericDataContent, 'content'> & {
+        content: string[];
+      })[])
+    : undefined;
 
   if (sport.length === 0) {
     sport.push({
