@@ -33,7 +33,7 @@ export const Article: FC<ArticleProps> = ({
             shadow,
           }) => (
             <Typography
-              key={variant}
+              key={children as string}
               variant={variant}
               fontFamily={fontFamily}
               color={color}

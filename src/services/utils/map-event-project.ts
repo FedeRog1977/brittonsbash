@@ -15,7 +15,17 @@ export const mapEventProject = (projects: Project[]): MappedEventProject => {
   const subTwos: string[] = [];
   const donalds: string[] = [];
 
-  projects.forEach((project: Project) => {
+  // TODO: fix 0 length array issue
+  console.log(
+    'ARRAY_LENGTH::::\n',
+    projects.length,
+    '\nARRAY_TYPE::::\n',
+    typeof projects,
+    '\nARRAY::::\n',
+    projects
+  );
+
+  projects.forEach((project) => {
     distances.push(project.distance);
     elevations.push(project.elevation);
     times.push(project.time);
@@ -46,7 +56,7 @@ export const mapEventProject = (projects: Project[]): MappedEventProject => {
     });
   });
 
-  return {
+  const parsedProjects = {
     name: projects.map(({ name }) => `${name}`).join(', '),
     distance: toMiles(distances.reduce(toSum)),
     elevation: toFeet(elevations.reduce(toSum)),
@@ -61,4 +71,6 @@ export const mapEventProject = (projects: Project[]): MappedEventProject => {
     subTwos: subTwos.sort().join(', '),
     donalds: donalds.sort().join(', '),
   };
+
+  return parsedProjects;
 };

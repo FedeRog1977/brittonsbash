@@ -41,11 +41,7 @@ type BrittonsBashContent = {
   getMappedProjects: () => Promise<MappedProjects>;
   getMappedRoadies: () => Promise<MappedRoadies>;
   getRegions: () => Promise<Regions>;
-  getSport: (
-    group: SportOptions,
-    year: string,
-    sport: string
-  ) => Promise<Miles | Project | Project[] | Roadie>;
+  getSport: (group: SportOptions, year: string, sport: string) => Promise<Miles | Project | Roadie>;
 };
 
 export class BrittonsBashContentClient implements BrittonsBashContent {
@@ -170,13 +166,21 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
 
     try {
       try {
-        const sport = (await this.getSport(
-          'projects',
-          parsedResponse.id.split('').slice(1, 5).join(''),
-          `p${parsedResponse.id}`
-        )) as Project | Project[];
+        if (Array.isArray(parsedResponse.projectId)) {
+          const sport: Project[] = [];
 
-        if (Array.isArray(sport)) {
+          parsedResponse.projectId.forEach(async (id: string) => {
+            const sportIteration = (await this.getSport(
+              'projects',
+              parsedResponse.id.split('').slice(1, 5).join(''),
+              id.toLowerCase()
+            )) as Project;
+
+            sport.push(sportIteration);
+          });
+
+          // TODO: fix 0 length array issue
+          console.log(sport);
           const mappedSport = mapEventProject(sport);
 
           const mappedParsedMappedSportResponse: Extract<Event, { type: 'mappedSport' }> = {
@@ -189,6 +193,13 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
 
           return mappedParsedMappedSportResponse;
         }
+
+        const sport = (await this.getSport(
+          'projects',
+          parsedResponse.id.split('').slice(1, 5).join(''),
+          parsedResponse.projectId.toLowerCase()
+        )) as Project;
+
         const mappedParsedUnmappedSportResponse: Extract<Event, { type: 'unmappedSport' }> = {
           ...parsedResponse,
           // TODO: make features conditional
@@ -432,7 +443,7 @@ export class BrittonsBashContentClient implements BrittonsBashContent {
     group: SportOptions,
     year: string,
     sport: string
-  ): Promise<Miles | Project | Project[] | Roadie> {
+  ): Promise<Miles | Project | Roadie> {
     const apiUrl = this.sportUrl
       .replace(':group', group)
       .replace(':year', year)

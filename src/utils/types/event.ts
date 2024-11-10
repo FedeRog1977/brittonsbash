@@ -6,6 +6,7 @@ import { GenericDataContent } from './generic-data-content';
 
 type EventBasics = {
   id: string;
+  projectId: string | string[];
   prefix?: string;
   names: string[];
   startDate: string;
