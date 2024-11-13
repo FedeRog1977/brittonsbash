@@ -1,16 +1,12 @@
 import { ReactNode } from 'react';
-import { PageLayout, Tile } from '../../../components';
+import { ArticleTile, PageLayout } from '../../../components';
+import { graphicDesignContent } from './content/graphic-design-content';
 
 export const GraphicDesign = () => {
   const content: ReactNode[] = [
-    <Tile type="solid">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </Tile>,
+    <ArticleTile {...graphicDesignContent.tileOne} />,
+    <ArticleTile {...graphicDesignContent.tileTwo} />,
   ];
 
-  return <PageLayout background={{ content: 'Graphic Design' }}>{content}</PageLayout>;
+  return <PageLayout background={graphicDesignContent.background}>{content}</PageLayout>;
 };
