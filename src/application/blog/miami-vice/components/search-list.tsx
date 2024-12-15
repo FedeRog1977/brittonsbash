@@ -17,7 +17,7 @@ export const SearchList: FC<SearchListProps> = ({ funcSelect, items }) => (
       <FlexItem basis={{ xs: 12, sm: 4 }} grow>
         <Button
           key={generateUniqueKey(index)}
-          variant="clear"
+          variant="inverse"
           typeVariant="h4"
           typeFontFamily="miami"
           value={heading}

@@ -30,14 +30,14 @@ export const SearchTile: FC<SearchTileProps> = ({
   funcButton,
   funcSelect,
 }) => (
-  <Tile type="solid">
+  <Tile type="clear">
     <Flex direction="vertical" gap="md">
       <BigSearch funcInput={funcInput} funcButton={funcButton} placeholder="Lookup Events" />
 
       <Flex direction="horizontal" wrap>
         <FlexItem grow>
           <Button
-            variant="clear"
+            variant="inverse"
             typeVariant="t2"
             typeColor={Boolean(showSearchList && is2024) ? 'lightBlue' : undefined}
             content="2024"
@@ -51,7 +51,7 @@ export const SearchTile: FC<SearchTileProps> = ({
 
         <FlexItem grow>
           <Button
-            variant="clear"
+            variant="inverse"
             typeVariant="t2"
             typeColor={Boolean(showSearchList && is2023) ? 'lightBlue' : undefined}
             content="2023"
@@ -65,7 +65,7 @@ export const SearchTile: FC<SearchTileProps> = ({
 
         <FlexItem grow>
           <Button
-            variant="clear"
+            variant="inverse"
             typeVariant="t2"
             typeColor={Boolean(showSearchList && is2022) ? 'lightBlue' : undefined}
             content="2022"
@@ -79,7 +79,7 @@ export const SearchTile: FC<SearchTileProps> = ({
 
         <FlexItem grow>
           <Button
-            variant="clear"
+            variant="inverse"
             typeVariant="t2"
             typeColor={Boolean(showSearchList && is2021) ? 'lightBlue' : undefined}
             content="2021"
@@ -93,7 +93,7 @@ export const SearchTile: FC<SearchTileProps> = ({
 
         <FlexItem grow>
           <Button
-            variant="clear"
+            variant="inverse"
             typeVariant="t2"
             typeColor={Boolean(showSearchList && is2020) ? 'lightBlue' : undefined}
             content="2020"

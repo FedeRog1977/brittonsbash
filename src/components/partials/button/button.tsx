@@ -9,7 +9,7 @@ import { GridItem } from '../../basics/grid/grid-item';
 import { Url } from '../../../utils/types';
 
 export type ButtonProps = {
-  variant?: 'default' | 'clear' | 'solid' | 'inverse';
+  variant?: 'default' | 'clear' | 'solid' | 'solidDark' | 'inverse';
   typeVariant?: TextStyle['variant'];
   typeColor?: TextStyle['color'];
   typeFontFamily?: TextStyle['fontFamily'];

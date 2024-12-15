@@ -28,107 +28,96 @@ export const ResultTile: FC<ResultTileProps> = ({
   const { showElement: showModal, setShowElement: setShowModal } = useShowElement();
 
   return (
-    <Tile type="solid">
+    <Tile type="clear">
       <Flex direction="vertical" gap={isMobile() ? 'xs' : 'md'}>
-        <Spacing marginX={isMobile() ? 'none' : '4xl'}>
-          {mappedEvent.prefix ? <Typography variant="t1">{mappedEvent.prefix}:</Typography> : null}
+        {mappedEvent.prefix ? <Typography variant="t1">{mappedEvent.prefix}:</Typography> : null}
 
-          <Flex direction="vertical" rowGap="3xs">
-            {mappedEvent.names.length > 1 ? (
-              mappedEvent.names.map((name, index) => (
-                <Flex key={generateUniqueKey(index)} direction="horizontal" gap="xs">
-                  <Typography variant="t2" color="mediumGrey" textAlign="right">
-                    Part&nbsp;
-                    {index + 1}
-                  </Typography>
+        <Flex direction="vertical" rowGap="3xs">
+          {mappedEvent.names.length > 1 ? (
+            mappedEvent.names.map((name, index) => (
+              <Flex key={generateUniqueKey(index)} direction="horizontal" gap="xs">
+                <Typography variant="t2" color="mediumGrey" textAlign="right">
+                  Part&nbsp;
+                  {index + 1}
+                </Typography>
 
-                  <Typography variant="t2" textAlign="left" markdown>
-                    {name}
-                  </Typography>
-                </Flex>
-              ))
-            ) : (
-              <Typography variant="t1" markdown>
-                {mappedEvent.names[0]}
-              </Typography>
-            )}
-          </Flex>
-        </Spacing>
+                <Typography variant="t2" textAlign="left" markdown>
+                  {name}
+                </Typography>
+              </Flex>
+            ))
+          ) : (
+            <Typography variant="t1" markdown>
+              {mappedEvent.names[0]}
+            </Typography>
+          )}
+        </Flex>
 
-        <Spacing marginX={isMobile() ? 'none' : '4xl'}>
-          <Typography variant="h4" color="mediumGrey">
-            {mappedEvent.startDate}
-            {mappedEvent.endDate ? <>&nbsp;&#8212;&nbsp;{mappedEvent.endDate}</> : null}
-          </Typography>
-        </Spacing>
+        <Typography variant="h4" color="mediumGrey">
+          {mappedEvent.startDate}
+          {mappedEvent.endDate ? <>&nbsp;&#8212;&nbsp;{mappedEvent.endDate}</> : null}
+        </Typography>
 
         {mappedEvent.showSport ? (
-          <Spacing marginX={isMobile() ? 'none' : '4xl'}>
-            <RowTable
-              titleRow={{
-                leftItem: 'Sport',
-                rightItem: [mappedEvent.distance, mappedEvent.elevation, mappedEvent.times].join(
-                  ', '
-                ),
-              }}
-              rows={[
-                {
-                  leftItem: 'Islands',
-                  rightItem: mappedEvent.islands,
-                },
-                {
-                  leftItem: 'Munros',
-                  rightItem: mappedEvent.munros,
-                },
-                {
-                  leftItem: 'Munro Tops',
-                  rightItem: mappedEvent.munroTops,
-                },
-                {
-                  leftItem: 'Corbetts',
-                  rightItem: mappedEvent.corbetts,
-                },
-                {
-                  leftItem: 'Corbett Tops',
-                  rightItem: mappedEvent.corbettTops,
-                },
-                {
-                  leftItem: 'Grahams',
-                  rightItem: mappedEvent.grahams,
-                },
-                {
-                  leftItem: 'SubTwos',
-                  rightItem: mappedEvent.subTwos,
-                },
-                {
-                  leftItem: 'Donalds',
-                  rightItem: mappedEvent.donalds,
-                },
-              ]}
-            />
-          </Spacing>
+          <RowTable
+            titleRow={{
+              leftItem: 'Sport',
+              rightItem: [mappedEvent.distance, mappedEvent.elevation, mappedEvent.times].join(
+                ', '
+              ),
+            }}
+            rows={[
+              {
+                leftItem: 'Islands',
+                rightItem: mappedEvent.islands,
+              },
+              {
+                leftItem: 'Munros',
+                rightItem: mappedEvent.munros,
+              },
+              {
+                leftItem: 'Munro Tops',
+                rightItem: mappedEvent.munroTops,
+              },
+              {
+                leftItem: 'Corbetts',
+                rightItem: mappedEvent.corbetts,
+              },
+              {
+                leftItem: 'Corbett Tops',
+                rightItem: mappedEvent.corbettTops,
+              },
+              {
+                leftItem: 'Grahams',
+                rightItem: mappedEvent.grahams,
+              },
+              {
+                leftItem: 'SubTwos',
+                rightItem: mappedEvent.subTwos,
+              },
+              {
+                leftItem: 'Donalds',
+                rightItem: mappedEvent.donalds,
+              },
+            ]}
+          />
         ) : null}
 
         {mappedEvent.features ? (
-          <Spacing marginX="4xl">
-            <RowTable
-              titleRow={{
-                leftItem: 'Features',
-              }}
-              rows={mappedEvent.features.map(({ title, content }) => ({
-                leftItem: title,
-                rightItem: content?.join(', '),
-              }))}
-            />
-          </Spacing>
+          <RowTable
+            titleRow={{
+              leftItem: 'Features',
+            }}
+            rows={mappedEvent.features.map(({ title, content }) => ({
+              leftItem: title,
+              rightItem: content?.join(', '),
+            }))}
+          />
         ) : null}
 
-        <Spacing marginX={isMobile() ? 'none' : '4xl'}>
-          <Typography variant="body" textAlign="justify" markdown>
-            {mappedEvent.description}
-          </Typography>
-        </Spacing>
-        {/* ) : null} */}
+        <Typography variant="body" textAlign="justify" markdown>
+          {mappedEvent.description}
+        </Typography>
 
         {isMobile() ? (
           <ImageSlider slides={mappedEvent.images} />

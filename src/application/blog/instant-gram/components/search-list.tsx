@@ -14,7 +14,7 @@ export const SearchList: FC<SearchListProps> = ({ funcSelect, items }) => (
       <FlexItem basis={{ xs: 12, sm: 4 }} grow>
         <Button
           key={generateUniqueKey(index)}
-          variant="clear"
+          variant="inverse"
           typeVariant="h4"
           value={names?.join(' - ')}
           // value={`${id?.split('').slice(1, 5).join('')}-${id?.toLocaleLowerCase()}`}

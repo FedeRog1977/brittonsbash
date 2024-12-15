@@ -48,6 +48,17 @@ button {
     }
   }
 
+  &SolidDark {
+    background-color: styles.$darker-grey-60;
+    border-radius: styles.$corners-lg;
+    transition: background-color styles.$transition-long;
+
+    &:hover {
+      background-color: styles.$darker-grey;
+      transition: background-color styles.$transition-long;
+    }
+  }
+
   &Inverse {
     background-color: styles.$transparent;
     border-radius: styles.$corners-lg;

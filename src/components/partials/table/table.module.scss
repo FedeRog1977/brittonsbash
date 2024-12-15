@@ -3,7 +3,7 @@
 // TODO: segment these to separate stylesheets
 .containerColumns {
   border-radius: styles.$corners-md;
-  background-color: styles.$dark-grey;
+  background-color: styles.$darker-grey-60;
   max-height: 300px;
   overflow-y: auto;
 
@@ -17,7 +17,7 @@
 // TODO: segment these to separate stylesheets
 .containerRows {
   border-radius: styles.$corners-md;
-  background-color: styles.$dark-grey;
+  background-color: styles.$darker-grey-60;
   max-height: 300px;
   overflow-y: auto;
 
