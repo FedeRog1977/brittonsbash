@@ -8,7 +8,6 @@ import {
   RowTable,
   Flex,
   Grid,
-  Spacing,
 } from '../../../../components';
 import { useShowElement, generateUniqueKey, isMobile } from '../../../../utils';
 import { FC } from 'react';
