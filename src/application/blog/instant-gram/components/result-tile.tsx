@@ -47,7 +47,7 @@ export const ResultTile: FC<ResultTileProps> = ({
               </Flex>
             ))
           ) : (
-            <Typography variant="t2" markdown>
+            <Typography variant={mappedEvent.prefix ? 't2' : 't1'} markdown>
               {mappedEvent.names[0]}
             </Typography>
           )}
