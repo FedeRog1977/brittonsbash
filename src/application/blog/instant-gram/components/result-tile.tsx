@@ -53,7 +53,7 @@ export const ResultTile: FC<ResultTileProps> = ({
           )}
         </Flex>
 
-        <Typography variant="h4" color="mediumGrey">
+        <Typography variant="h4" color="lightGrey">
           {mappedEvent.startDate}
           {mappedEvent.endDate ? <>&nbsp;&#8212;&nbsp;{mappedEvent.endDate}</> : null}
         </Typography>
