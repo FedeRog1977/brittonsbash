@@ -28,32 +28,31 @@ reportWebVitals();
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
-root
-  .render
-  // <HashRouter>
-  //   <Routes>
-  //     <Route path="/" element={<Home />} />
-  //     <Route path="/academia" element={<Academia />} />
-  //     <Route path="/employment" element={<Employment />} />
-  //     <Route path="/library" element={<Library />} />
-  //     <Route path="/blog">
-  //       <Route path="instant-gram" element={<InstantGram />} />
-  //       <Route path="sport" element={<Sport />} />
-  //       <Route path="brittons-foodrc" element={<BrittonsFoodRC />} />
-  //       <Route path="allroad" element={<Allroad />} />
-  //       <Route path="gentlemen-who-cafe" element={<GentlemenWhoCafe />} />
-  //       <Route path="ricing" element={<Ricing />} />
-  //       <Route path="think-flow" element={<ThinkFlow />} />
-  //       <Route path="founding-fathers" element={<FoundingFathers />} />
-  //       <Route path="media" element={<Media />} />
-  //       <Route path="miami-vice" element={<MiamiVice />} />
-  //       <Route path="graphic-design" element={<GraphicDesign />} />
-  //     </Route>
-  //     <Route path="/utilities">
-  //       <Route path="weather" element={<Weather />} />
-  //       <Route path="conquest" element={<Conquest />} />
-  //     </Route>
-  //     <Route path="*" element={<Error />} />
-  //   </Routes>
-  // </HashRouter>
-  ();
+root.render(
+  <HashRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      {/* <Route path="/academia" element={<Academia />} />
+      <Route path="/employment" element={<Employment />} />
+      <Route path="/library" element={<Library />} />
+      <Route path="/blog">
+        <Route path="instant-gram" element={<InstantGram />} />
+        <Route path="sport" element={<Sport />} />
+        <Route path="brittons-foodrc" element={<BrittonsFoodRC />} />
+        <Route path="allroad" element={<Allroad />} />
+        <Route path="gentlemen-who-cafe" element={<GentlemenWhoCafe />} />
+        <Route path="ricing" element={<Ricing />} />
+        <Route path="think-flow" element={<ThinkFlow />} />
+        <Route path="founding-fathers" element={<FoundingFathers />} />
+        <Route path="media" element={<Media />} />
+        <Route path="miami-vice" element={<MiamiVice />} />
+        <Route path="graphic-design" element={<GraphicDesign />} />
+      </Route>
+      <Route path="/utilities">
+        <Route path="weather" element={<Weather />} />
+        <Route path="conquest" element={<Conquest />} />
+      </Route>
+      <Route path="*" element={<Error />} /> */}
+    </Routes>
+  </HashRouter>
+);
