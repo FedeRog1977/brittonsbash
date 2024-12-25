@@ -32,7 +32,7 @@ root.render(
   <HashRouter>
     <Routes>
       <Route path="/" element={<Home />} />
-      {/* <Route path="/academia" element={<Academia />} />
+      <Route path="/academia" element={<Academia />} />
       <Route path="/employment" element={<Employment />} />
       <Route path="/library" element={<Library />} />
       <Route path="/blog">
@@ -52,7 +52,7 @@ root.render(
         <Route path="weather" element={<Weather />} />
         <Route path="conquest" element={<Conquest />} />
       </Route>
-      <Route path="*" element={<Error />} /> */}
+      <Route path="*" element={<Error />} />
     </Routes>
   </HashRouter>
 );
