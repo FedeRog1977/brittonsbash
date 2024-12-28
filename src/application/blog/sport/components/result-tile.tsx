@@ -38,7 +38,7 @@ export const ResultTile: FC<ResultTileProps> = ({
   is2021,
   is2020,
 }) => (
-  <Tile type="solid">
+  <Tile type="clear">
     <Flex direction="vertical" gap={isMobile() ? 'xs' : 'md'}>
       <Typography variant="t1" fontFamily="sport" textAlign="center">
         {title}

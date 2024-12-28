@@ -1,7 +1,8 @@
 import './components/reference/styles/_global.scss';
 import './components/reference/styles/_fonts.scss';
 import ReactDOM from 'react-dom/client';
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
+import { Route, Routes } from 'react-router';
 import { reportWebVitals } from './utils';
 import {
   Academia,

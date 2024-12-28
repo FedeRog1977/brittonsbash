@@ -17,11 +17,11 @@ export const SearchTile: FC<SearchTileProps> = ({
   isProjects,
   isMiles,
 }) => (
-  <Tile type="solid">
+  <Tile type="clear">
     <Flex direction="horizontal" alignHorizontal="apart" wrap>
       <FlexItem grow>
         <Button
-          variant="clear"
+          variant="inverse"
           typeVariant="t2"
           typeColor={isRoadies ? 'lightBlue' : undefined}
           value="roadies"
@@ -35,7 +35,7 @@ export const SearchTile: FC<SearchTileProps> = ({
 
       <FlexItem grow>
         <Button
-          variant="clear"
+          variant="inverse"
           typeVariant="t2"
           typeColor={isProjects ? 'lightBlue' : undefined}
           value="projects"
@@ -49,7 +49,7 @@ export const SearchTile: FC<SearchTileProps> = ({
 
       <FlexItem grow>
         <Button
-          variant="clear"
+          variant="inverse"
           typeVariant="t2"
           typeColor={isMiles ? 'lightBlue' : undefined}
           value="miles"
@@ -63,7 +63,7 @@ export const SearchTile: FC<SearchTileProps> = ({
 
       <FlexItem grow>
         <Button
-          variant="clear"
+          variant="inverse"
           typeVariant="t2"
           value="tennis"
           content={<FontAwesomeIcon icon={faTrophy} />}
