@@ -18,7 +18,7 @@ export const employmentContent: EmploymentProps = {
     ],
   },
   tileTwo: {
-    type: 'solid',
+    type: 'clear',
     heading: 'Overview',
     sections: [
       {
@@ -28,7 +28,7 @@ export const employmentContent: EmploymentProps = {
     ],
   },
   tileThree: {
-    type: 'solid',
+    type: 'clear',
     heading: 'Employment',
     subHeading: 'All the wage’ing',
     sections: [

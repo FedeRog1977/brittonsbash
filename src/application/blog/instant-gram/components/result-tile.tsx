@@ -35,7 +35,7 @@ export const ResultTile: FC<ResultTileProps> = ({
           {mappedEvent.names.length > 1 ? (
             mappedEvent.names.map((name, index) => (
               <Flex key={generateUniqueKey(index)} direction="horizontal" gap="xs">
-                <Typography variant="t2" color="mediumGrey" textAlign="right">
+                <Typography variant="t2" color="lightGrey" textAlign="right">
                   Part&nbsp;
                   {index + 1}
                 </Typography>
@@ -123,14 +123,14 @@ export const ResultTile: FC<ResultTileProps> = ({
         ) : (
           <Grid justifyContent="even">
             <Button
-              variant="clear"
+              variant="inverse"
               typeColor={showMatrix ? 'lightBlue' : undefined}
               content="Image matrix"
               func={() => funcToggleElements('matrix')}
             />
 
             <Button
-              variant="clear"
+              variant="inverse"
               typeColor={showModal ? 'lightBlue' : undefined}
               content="Image slideshow"
               func={() => setShowModal(!showModal)}

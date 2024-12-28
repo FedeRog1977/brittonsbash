@@ -720,7 +720,7 @@ export const brittonsFoodRCContent: BrittonsFoodRCProps = {
     ],
   },
   tileTwo: {
-    type: 'solid',
+    type: 'clear',
     heading: 'Introduction',
     subHeading: 'A Short Rant',
     sections: [
@@ -733,7 +733,7 @@ export const brittonsFoodRCContent: BrittonsFoodRCProps = {
     ],
   },
   tileThree: {
-    type: 'solid',
+    type: 'clear',
     heading: 'Chefs And Cooks',
     subHeading: 'Public Figures',
     sections: [
@@ -751,7 +751,7 @@ export const brittonsFoodRCContent: BrittonsFoodRCProps = {
     ],
   },
   tileFour: {
-    type: 'solid',
+    type: 'clear',
     heading: 'Kitchen Equipment',
     subHeading: 'Tools And Equipment',
     sections: [
@@ -769,7 +769,7 @@ export const brittonsFoodRCContent: BrittonsFoodRCProps = {
     ],
   },
   tileFive: {
-    type: 'solid',
+    type: 'clear',
     heading: 'Food',
     subHeading: 'Consumables',
     sections: [
@@ -787,7 +787,7 @@ export const brittonsFoodRCContent: BrittonsFoodRCProps = {
     ],
   },
   tileSix: {
-    type: 'solid',
+    type: 'clear',
     heading: 'Drink',
     subHeading: 'Consumables',
     sections: [

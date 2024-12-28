@@ -9,10 +9,10 @@ export type ResultTileProps = {
 };
 
 export const ResultTile: FC<ResultTileProps> = ({ heading, subHeading, video }) => (
-  <Tile type="solid">
+  <Tile type="clear">
     <Flex direction="vertical" gap={isMobile() ? 'xs' : 'md'}>
       {subHeading ? (
-        <Typography variant="h4" fontFamily="miami" color="mediumGrey" textAlign="center">
+        <Typography variant="h4" fontFamily="miami" color="lightGrey" textAlign="center">
           {subHeading.toLocaleUpperCase()}
         </Typography>
       ) : null}

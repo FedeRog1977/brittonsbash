@@ -26,7 +26,7 @@ export const SearchTile: FC<SearchTileProps> = ({
   isOne,
   funcSelect,
 }) => (
-  <Tile type="solid">
+  <Tile type="clear">
     <Flex direction="vertical" gap="md">
       <Flex direction="horizontal" alignHorizontal="apart" wrap>
         {/* TODO: change data to:
@@ -39,7 +39,7 @@ export const SearchTile: FC<SearchTileProps> = ({
         */}
         <FlexItem grow>
           <Button
-            variant="clear"
+            variant="inverse"
             typeVariant="t2"
             typeColor={Boolean(showSearchList && isOne) ? 'lightBlue' : undefined}
             typeFontFamily="miami"
@@ -53,7 +53,7 @@ export const SearchTile: FC<SearchTileProps> = ({
 
         <FlexItem grow>
           <Button
-            variant="clear"
+            variant="inverse"
             typeVariant="t2"
             typeColor={Boolean(showSearchList && isTwo) ? 'lightBlue' : undefined}
             typeFontFamily="miami"
@@ -67,7 +67,7 @@ export const SearchTile: FC<SearchTileProps> = ({
 
         <FlexItem grow>
           <Button
-            variant="clear"
+            variant="inverse"
             typeVariant="t2"
             typeColor={Boolean(showSearchList && isThree) ? 'lightBlue' : undefined}
             typeFontFamily="miami"
@@ -81,7 +81,7 @@ export const SearchTile: FC<SearchTileProps> = ({
 
         <FlexItem grow>
           <Button
-            variant="clear"
+            variant="inverse"
             typeVariant="t2"
             typeColor={Boolean(showSearchList && isFour) ? 'lightBlue' : undefined}
             typeFontFamily="miami"
@@ -95,7 +95,7 @@ export const SearchTile: FC<SearchTileProps> = ({
 
         <FlexItem grow>
           <Button
-            variant="clear"
+            variant="inverse"
             typeVariant="t2"
             typeColor={Boolean(showSearchList && isFive) ? 'lightBlue' : undefined}
             typeFontFamily="miami"

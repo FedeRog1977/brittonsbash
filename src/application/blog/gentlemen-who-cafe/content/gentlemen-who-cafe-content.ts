@@ -8,7 +8,7 @@ type GentlemenWhoCafeProps = {
 export const gentlemenWhoCafeContent: GentlemenWhoCafeProps = {
   background: { content: 'Gentlemen Who Café' },
   tileOne: {
-    type: 'solid',
+    type: 'clear',
     heading: 'The Café Tour',
     sections: [
       {

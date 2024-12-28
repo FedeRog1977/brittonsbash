@@ -14,7 +14,7 @@ const links = await brittonsBashContentFacade.getLinks();
 export const libraryContent: LibraryProps = {
   background: { content: 'Library' },
   tileOne: {
-    type: 'solid',
+    type: 'clear',
     heading: 'Computer Science and Mathematics',
     subHeading: 'Writings',
     sections: [
@@ -45,7 +45,7 @@ export const libraryContent: LibraryProps = {
     ],
   },
   tileTwo: {
-    type: 'solid',
+    type: 'clear',
     heading: 'M.Sc. Software Development',
     subHeading: 'Writings',
     sections: [
@@ -95,7 +95,7 @@ export const libraryContent: LibraryProps = {
     ],
   },
   tileThree: {
-    type: 'solid',
+    type: 'clear',
     heading: 'B.A. Finance',
     subHeading: 'Writings',
     sections: [
@@ -157,7 +157,7 @@ export const libraryContent: LibraryProps = {
     ],
   },
   tileFour: {
-    type: 'solid',
+    type: 'clear',
     heading: 'Web URLs',
     subHeading: 'Links',
     sections: [

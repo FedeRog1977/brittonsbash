@@ -30,12 +30,12 @@ export const SearchTile: FC<SearchTileProps> = ({
   isMisc,
   funcSelect,
 }) => (
-  <Tile type="solid">
+  <Tile type="clear">
     <Flex direction="vertical" gap="md">
       <Flex direction="horizontal" alignHorizontal="apart" wrap>
         <FlexItem grow>
           <Button
-            variant="clear"
+            variant="inverse"
             typeVariant="t2"
             typeColor={Boolean(showSearchList && isMeat) ? 'lightBlue' : undefined}
             content="Meat"
@@ -46,7 +46,7 @@ export const SearchTile: FC<SearchTileProps> = ({
 
         <FlexItem grow>
           <Button
-            variant="clear"
+            variant="inverse"
             typeVariant="t2"
             typeColor={Boolean(showSearchList && isPoultry) ? 'lightBlue' : undefined}
             content="Poultry"
@@ -57,7 +57,7 @@ export const SearchTile: FC<SearchTileProps> = ({
 
         <FlexItem grow>
           <Button
-            variant="clear"
+            variant="inverse"
             typeVariant="t2"
             typeColor={Boolean(showSearchList && isFish) ? 'lightBlue' : undefined}
             content="Fish"
@@ -68,7 +68,7 @@ export const SearchTile: FC<SearchTileProps> = ({
 
         <FlexItem grow>
           <Button
-            variant="clear"
+            variant="inverse"
             typeVariant="t2"
             typeColor={Boolean(showSearchList && isPasta) ? 'lightBlue' : undefined}
             content="Pasta"
@@ -79,7 +79,7 @@ export const SearchTile: FC<SearchTileProps> = ({
 
         <FlexItem grow>
           <Button
-            variant="clear"
+            variant="inverse"
             typeVariant="t2"
             typeColor={Boolean(showSearchList && isBread) ? 'lightBlue' : undefined}
             content="Bread"
@@ -90,7 +90,7 @@ export const SearchTile: FC<SearchTileProps> = ({
 
         <FlexItem grow>
           <Button
-            variant="clear"
+            variant="inverse"
             typeVariant="t2"
             typeColor={Boolean(showSearchList && isSweet) ? 'lightBlue' : undefined}
             content="Sweet"
@@ -101,7 +101,7 @@ export const SearchTile: FC<SearchTileProps> = ({
 
         <FlexItem grow>
           <Button
-            variant="clear"
+            variant="inverse"
             typeVariant="t2"
             typeColor={Boolean(showSearchList && isMisc) ? 'lightBlue' : undefined}
             content="Misc"

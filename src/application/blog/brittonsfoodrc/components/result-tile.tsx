@@ -31,12 +31,12 @@ export const ResultTile: FC<ResultTileProps> = ({
   const { showElement: showModal, setShowElement: setShowModal } = useShowElement();
 
   return (
-    <Tile type="solid">
+    <Tile type="clear">
       <Flex direction="vertical" gap={isMobile() ? 'xs' : 'md'}>
         <Typography variant="t1">{food.name}</Typography>
 
-        <Button
-          variant="clear"
+        {/* <Button
+          variant="inverse"
           typeColor={showDescription ? 'lightBlue' : undefined}
           content={showDescription ? 'Read less' : 'Read more'}
           icon={
@@ -49,17 +49,17 @@ export const ResultTile: FC<ResultTileProps> = ({
           func={() => funcToggleElements('description')}
           width="full"
           transition
-        />
+        /> */}
 
-        {showDescription ? (
-          <>
-            <ArticlePreface entries={food.ingredients} listStyle="itemize" />
+        {/* {showDescription ? (
+          <> */}
+        <ArticlePreface entries={food.ingredients} listStyle="itemize" />
 
-            <Typography variant="body" textAlign="justify">
-              {food.description}
-            </Typography>
-          </>
-        ) : null}
+        <Typography variant="body" textAlign="justify">
+          {food.description}
+        </Typography>
+        {/* </>
+        ) : null} */}
 
         {/* TODO: hidden component */}
         {isMobile() ? (
@@ -67,14 +67,14 @@ export const ResultTile: FC<ResultTileProps> = ({
         ) : (
           <Grid justifyContent="even">
             <Button
-              variant="clear"
+              variant="inverse"
               typeColor={showMatrix ? 'lightBlue' : undefined}
               content="Image matrix"
               func={() => funcToggleElements('matrix')}
             />
 
             <Button
-              variant="clear"
+              variant="inverse"
               typeColor={showModal ? 'lightBlue' : undefined}
               content="Image slideshow"
               func={() => setShowModal(!showModal)}

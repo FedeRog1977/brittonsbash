@@ -14,7 +14,7 @@ export const Bookshelf: FC<BookshelfProps> = ({ heading, items }) => {
   return (
     <>
       <Button
-        variant="clear"
+        variant="inverse"
         typeVariant="h3"
         typeColor={showElement ? 'lightBlue' : undefined}
         transition
@@ -24,7 +24,7 @@ export const Bookshelf: FC<BookshelfProps> = ({ heading, items }) => {
       />
 
       {showElement ? (
-        <Background color="darkGrey">
+        <Background color="transparent">
           <Spacing paddingY="sm">
             <Flex direction="vertical" gap="sm">
               {items.map((item, index) => (

@@ -8,7 +8,7 @@ type ThinkFlowProps = {
 export const thinkFlowContent: ThinkFlowProps = {
   background: { type: 'ibm', content: 'ThinkFlow' },
   tileOne: {
-    type: 'solid',
+    type: 'clear',
     heading: 'ThinkFlow (Patent Pending)',
     subHeading: 'My ThinkPads',
     sections: [
