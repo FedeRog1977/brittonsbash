@@ -2,6 +2,8 @@ import { toUpperCase } from '../../../utils';
 import styles from './page-background.module.scss';
 import cx from 'classnames';
 import { FC } from 'react';
+// TEMP
+import { Header } from '../../partials';
 
 export type PageBackgroundProps = {
   // TODO: clean up the order and naming of these
@@ -15,6 +17,7 @@ export const PageBackground: FC<PageBackgroundProps> = ({ type = 'logo', content
 
   return (
     <div className={styles.background}>
+      <Header />
       <div className={classNamesText}>
         <div className={styles.textContent}>{content}</div>
       </div>
