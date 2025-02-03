@@ -7,6 +7,7 @@ type SearchTileProps = {
   funcCategory: (value: string) => void;
   showSearchList: boolean;
   eventData: Partial<Event>[];
+  is2025: boolean;
   is2024: boolean;
   is2023: boolean;
   is2022: boolean;
@@ -21,6 +22,7 @@ export const SearchTile: FC<SearchTileProps> = ({
   funcCategory,
   showSearchList,
   eventData,
+  is2025,
   is2024,
   is2023,
   is2022,
@@ -35,6 +37,20 @@ export const SearchTile: FC<SearchTileProps> = ({
       <BigSearch funcInput={funcInput} funcButton={funcButton} placeholder="Lookup Events" />
 
       <Flex direction="horizontal" wrap>
+        <FlexItem grow>
+          <Button
+            variant="inverse"
+            typeVariant="t2"
+            typeColor={Boolean(showSearchList && is2025) ? 'lightBlue' : undefined}
+            content="2025"
+            value="2025"
+            func={() => {
+              funcCategory('2025');
+            }}
+            width="full"
+          />
+        </FlexItem>
+
         <FlexItem grow>
           <Button
             variant="inverse"

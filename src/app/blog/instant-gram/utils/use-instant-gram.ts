@@ -7,6 +7,7 @@ import { brittonsBashContentFacade } from '../../../../implementations';
 
 console.log(await brittonsBashContentFacade.getEvent('2024', 'e2024035'));
 
+const eventNames2025 = await brittonsBashContentFacade.getEventNames('2025');
 const eventNames2024 = await brittonsBashContentFacade.getEventNames('2024');
 const eventNames2023 = await brittonsBashContentFacade.getEventNames('2023');
 const eventNames2022 = await brittonsBashContentFacade.getEventNames('2022');
@@ -31,6 +32,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Event[
   const [sportHandler, setSportHandler] = useState(sport);
   const [showSportHandler, setShowSportHandler] = useState(showSport);
 
+  const [is2025, setIs2025] = useState(false);
   const [is2024, setIs2024] = useState(false);
   const [is2023, setIs2023] = useState(false);
   const [is2022, setIs2022] = useState(false);
@@ -38,7 +40,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Event[
   const [is2020, setIs2020] = useState(false);
 
   const { showElement: showSearchList, setShowElement: setShowSearchList } = useShowElement();
-  const [eventData, setEventData] = useState(eventNames2024);
+  const [eventData, setEventData] = useState(eventNames2025);
 
   useEffect(() => {
     if (location.search === '') {
@@ -144,6 +146,17 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Event[
 
   // TODO: move year to e.target.value to feed that into facade
   const handleCategory = (value: string) => {
+    if (value === '2025') {
+      setIs2025(true);
+      setIs2024(false);
+      setIs2023(false);
+      setIs2022(false);
+      setIs2021(false);
+      setIs2020(false);
+      setShowSearchList(!showSearchList);
+      setEventData(eventNames2025);
+    }
+
     if (value === '2024') {
       setIs2024(true);
       setIs2023(false);
@@ -153,6 +166,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Event[
       setShowSearchList(!showSearchList);
       setEventData(eventNames2024);
     }
+
     if (value === '2023') {
       setIs2024(false);
       setIs2023(true);
@@ -162,6 +176,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Event[
       setShowSearchList(!showSearchList);
       setEventData(eventNames2023);
     }
+
     if (value === '2022') {
       setIs2024(false);
       setIs2023(false);
@@ -171,6 +186,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Event[
       setShowSearchList(!showSearchList);
       setEventData(eventNames2022);
     }
+
     if (value === '2021') {
       setIs2024(false);
       setIs2023(false);
@@ -180,6 +196,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Event[
       setShowSearchList(!showSearchList);
       setEventData(eventNames2021);
     }
+
     if (value === '2020') {
       setIs2024(false);
       setIs2023(false);
@@ -231,6 +248,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Event[
     handleCategory,
     showSearchList,
     eventData,
+    is2025,
     is2024,
     is2023,
     is2022,

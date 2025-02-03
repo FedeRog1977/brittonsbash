@@ -14,6 +14,7 @@ export const InstantGram = () => {
     handleCategory,
     showSearchList,
     eventData,
+    is2025,
     is2024,
     is2023,
     is2022,
@@ -32,6 +33,7 @@ export const InstantGram = () => {
       funcCategory={handleCategory}
       showSearchList={showSearchList}
       eventData={eventData}
+      is2025={is2025}
       is2024={is2024}
       is2023={is2023}
       is2022={is2022}

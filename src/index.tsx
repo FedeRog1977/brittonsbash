@@ -23,7 +23,7 @@ import {
   Sport,
   ThinkFlow,
   Weather,
-} from './application';
+} from './app';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
