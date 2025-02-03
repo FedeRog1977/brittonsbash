@@ -6,4 +6,5 @@ export type Events = {
   2022: Extract<Event, { type: 'unmapped' }>[];
   2023: Extract<Event, { type: 'unmapped' }>[];
   2024: Extract<Event, { type: 'unmapped' }>[];
+  2025: Extract<Event, { type: 'unmapped' }>[];
 };
