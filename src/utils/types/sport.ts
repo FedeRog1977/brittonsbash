@@ -14,4 +14,5 @@ export type Sport = {
   2022: AggregateSport;
   2023: AggregateSport;
   2024: AggregateSport;
+  2025: AggregateSport;
 };
