@@ -1,10 +1,9 @@
 import { FC, ReactNode } from 'react';
-import {
-  Footer,
-  // Header
-} from '../../partials';
+import { Footer, Header } from '../../partials';
 import { PageBackground, PageBackgroundProps } from '../page-background';
 import { Spacing } from '../../basics';
+// TEMP
+import { Link } from 'react-router-dom';
 
 export type PageLayoutProps = {
   background?: PageBackgroundProps;
@@ -13,8 +12,11 @@ export type PageLayoutProps = {
 
 export const PageLayout: FC<PageLayoutProps> = ({ background, children }) => (
   <>
-    {/* TEMP */}
     {/* <Header /> */}
+    <Link to="/">Home</Link>
+    <Link to="/academia">Academia</Link>
+    <Link to="/employment">Employment</Link>
+    <Link to="/library">Library</Link>
     {background ? <PageBackground {...background} /> : null}
     <Spacing marginTop="md" marginBottom="md">
       {children[0]}
