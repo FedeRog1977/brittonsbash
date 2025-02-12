@@ -158,6 +158,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Event[
     }
 
     if (value === '2024') {
+      setIs2025(false);
       setIs2024(true);
       setIs2023(false);
       setIs2022(false);
@@ -168,6 +169,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Event[
     }
 
     if (value === '2023') {
+      setIs2025(false);
       setIs2024(false);
       setIs2023(true);
       setIs2022(false);
@@ -178,6 +180,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Event[
     }
 
     if (value === '2022') {
+      setIs2025(false);
       setIs2024(false);
       setIs2023(false);
       setIs2022(true);
@@ -188,6 +191,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Event[
     }
 
     if (value === '2021') {
+      setIs2025(false);
       setIs2024(false);
       setIs2023(false);
       setIs2022(false);
@@ -198,6 +202,7 @@ export const useInstantGram = (mappedEventSport: Project[], mappedEvents: Event[
     }
 
     if (value === '2020') {
+      setIs2025(false);
       setIs2024(false);
       setIs2023(false);
       setIs2022(false);
