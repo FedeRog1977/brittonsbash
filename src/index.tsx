@@ -3,7 +3,6 @@ import './components/reference/styles/_fonts.scss';
 import ReactDOM from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
 import { Route, Routes } from 'react-router';
-import { reportWebVitals } from './utils';
 import {
   Academia,
   Allroad,
@@ -55,5 +54,3 @@ root.render(
     </Routes>
   </HashRouter>
 );
-
-reportWebVitals();
