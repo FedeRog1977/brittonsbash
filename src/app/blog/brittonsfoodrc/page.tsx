@@ -46,10 +46,10 @@ export const BrittonsFoodRC = () => {
       showMatrix={showMatrix}
     />,
     <ArticleTile {...brittonsFoodRCContent.tileTwo} />,
-    <ArticleTile {...brittonsFoodRCContent.tileThree} />,
-    <ArticleTile {...brittonsFoodRCContent.tileFour} />,
-    <ArticleTile {...brittonsFoodRCContent.tileFive} />,
-    <ArticleTile {...brittonsFoodRCContent.tileSix} />,
+    // <ArticleTile {...brittonsFoodRCContent.tileThree} />,
+    // <ArticleTile {...brittonsFoodRCContent.tileFour} />,
+    // <ArticleTile {...brittonsFoodRCContent.tileFive} />,
+    // <ArticleTile {...brittonsFoodRCContent.tileSix} />,
     <FootnoteTile {...brittonsFoodRCContent.tileSeven} />,
   ];
 

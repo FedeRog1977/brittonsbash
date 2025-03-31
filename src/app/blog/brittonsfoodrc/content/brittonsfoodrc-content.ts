@@ -3,9 +3,9 @@ import {
   PageBackgroundProps,
   FootnoteTileProps,
   ArticleTileProps,
-  BookshelfProps,
+  // BookshelfProps,
 } from '../../../../components';
-import { brittonsBashContentFacade } from '../../../../implementations';
+// import { brittonsBashContentFacade } from '../../../../implementations';
 
 type BrittonsFoodRCProps = {
   background: PageBackgroundProps;
@@ -19,14 +19,14 @@ type BrittonsFoodRCProps = {
     misc: Food[];
   };
   tileTwo: ArticleTileProps;
-  tileThree: ArticleTileProps;
-  tileFour: ArticleTileProps;
-  tileFive: ArticleTileProps;
-  tileSix: ArticleTileProps;
+  // tileThree: ArticleTileProps;
+  // tileFour: ArticleTileProps;
+  // tileFive: ArticleTileProps;
+  // tileSix: ArticleTileProps;
   tileSeven: FootnoteTileProps;
 };
 
-const culinary = await brittonsBashContentFacade.getCulinary();
+// const culinary = await brittonsBashContentFacade.getCulinary();
 
 export const brittonsFoodRCContent: BrittonsFoodRCProps = {
   background: { content: 'BrittonsFoodRC' },
@@ -732,78 +732,78 @@ export const brittonsFoodRCContent: BrittonsFoodRCProps = {
       },
     ],
   },
-  tileThree: {
-    type: 'clear',
-    heading: 'Chefs And Cooks',
-    subHeading: 'Public Figures',
-    sections: [
-      {
-        component: 'books',
-        content: {
-          items: [
-            ...culinary.figures.map((figure) => ({
-              heading: figure.title,
-              items: figure.content as BookshelfProps['items'],
-            })),
-          ],
-        },
-      },
-    ],
-  },
-  tileFour: {
-    type: 'clear',
-    heading: 'Kitchen Equipment',
-    subHeading: 'Tools And Equipment',
-    sections: [
-      {
-        component: 'books',
-        content: {
-          items: [
-            ...culinary.kitchen.map((appliance) => ({
-              heading: appliance.title,
-              items: appliance.content as BookshelfProps['items'],
-            })),
-          ],
-        },
-      },
-    ],
-  },
-  tileFive: {
-    type: 'clear',
-    heading: 'Food',
-    subHeading: 'Consumables',
-    sections: [
-      {
-        component: 'books',
-        content: {
-          items: [
-            ...culinary.food.map((foodItem) => ({
-              heading: foodItem.title,
-              items: foodItem.content as BookshelfProps['items'],
-            })),
-          ],
-        },
-      },
-    ],
-  },
-  tileSix: {
-    type: 'clear',
-    heading: 'Drink',
-    subHeading: 'Consumables',
-    sections: [
-      {
-        component: 'books',
-        content: {
-          items: [
-            ...culinary.drink.map((drinkItem) => ({
-              heading: drinkItem.title,
-              items: drinkItem.content as BookshelfProps['items'],
-            })),
-          ],
-        },
-      },
-    ],
-  },
+  // tileThree: {
+  //   type: 'clear',
+  //   heading: 'Chefs And Cooks',
+  //   subHeading: 'Public Figures',
+  //   sections: [
+  //     {
+  //       component: 'books',
+  //       content: {
+  //         items: [
+  //           ...culinary.figures.map((figure) => ({
+  //             heading: figure.title,
+  //             items: figure.content as BookshelfProps['items'],
+  //           })),
+  //         ],
+  //       },
+  //     },
+  //   ],
+  // },
+  // tileFour: {
+  //   type: 'clear',
+  //   heading: 'Kitchen Equipment',
+  //   subHeading: 'Tools And Equipment',
+  //   sections: [
+  //     {
+  //       component: 'books',
+  //       content: {
+  //         items: [
+  //           ...culinary.kitchen.map((appliance) => ({
+  //             heading: appliance.title,
+  //             items: appliance.content as BookshelfProps['items'],
+  //           })),
+  //         ],
+  //       },
+  //     },
+  //   ],
+  // },
+  // tileFive: {
+  //   type: 'clear',
+  //   heading: 'Food',
+  //   subHeading: 'Consumables',
+  //   sections: [
+  //     {
+  //       component: 'books',
+  //       content: {
+  //         items: [
+  //           ...culinary.food.map((foodItem) => ({
+  //             heading: foodItem.title,
+  //             items: foodItem.content as BookshelfProps['items'],
+  //           })),
+  //         ],
+  //       },
+  //     },
+  //   ],
+  // },
+  // tileSix: {
+  //   type: 'clear',
+  //   heading: 'Drink',
+  //   subHeading: 'Consumables',
+  //   sections: [
+  //     {
+  //       component: 'books',
+  //       content: {
+  //         items: [
+  //           ...culinary.drink.map((drinkItem) => ({
+  //             heading: drinkItem.title,
+  //             items: drinkItem.content as BookshelfProps['items'],
+  //           })),
+  //         ],
+  //       },
+  //     },
+  //   ],
+  // },
   tileSeven: {
     content:
       'All recipes are either abstracts, partials, redevelopments of various readings and / or watching; or original',

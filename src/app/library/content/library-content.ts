@@ -1,15 +1,15 @@
 import { PageBackgroundProps, ArticleTileProps } from '../../../components';
-import { brittonsBashContentFacade } from '../../../implementations';
+// import { brittonsBashContentFacade } from '../../../implementations';
 
 type LibraryProps = {
   background: PageBackgroundProps;
   tileOne: ArticleTileProps;
   tileTwo: ArticleTileProps;
   tileThree: ArticleTileProps;
-  tileFour: ArticleTileProps;
+  // tileFour: ArticleTileProps;
 };
 
-const links = await brittonsBashContentFacade.getLinks();
+// const links = await brittonsBashContentFacade.getLinks();
 
 export const libraryContent: LibraryProps = {
   background: { content: 'Library' },
@@ -156,22 +156,22 @@ export const libraryContent: LibraryProps = {
       },
     ],
   },
-  tileFour: {
-    type: 'clear',
-    heading: 'Web URLs',
-    subHeading: 'Links',
-    sections: [
-      {
-        component: 'books',
-        content: {
-          items: [
-            ...links.map((linkGroup) => ({
-              heading: linkGroup.title,
-              items: [...linkGroup.content.map(({ content, href }) => `[${content}](${href})`)],
-            })),
-          ],
-        },
-      },
-    ],
-  },
+  // tileFour: {
+  //   type: 'clear',
+  //   heading: 'Web URLs',
+  //   subHeading: 'Links',
+  //   sections: [
+  //     {
+  //       component: 'books',
+  //       content: {
+  //         items: [
+  //           ...links.map((linkGroup) => ({
+  //             heading: linkGroup.title,
+  //             items: [...linkGroup.content.map(({ content, href }) => `[${content}](${href})`)],
+  //           })),
+  //         ],
+  //       },
+  //     },
+  //   ],
+  // },
 };

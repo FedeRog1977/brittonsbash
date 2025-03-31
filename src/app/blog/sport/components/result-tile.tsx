@@ -13,7 +13,6 @@ export type ResultTileProps = {
   funcActivities: (e: any) => void;
   title: string;
   subTitle: string;
-  description: string;
   summary: ColumnTableProps;
   routes: ColumnTableProps;
   activities: ColumnTableProps;
@@ -28,7 +27,6 @@ export const ResultTile: FC<ResultTileProps> = ({
   funcActivities,
   title,
   subTitle,
-  description,
   summary,
   routes,
   activities,
@@ -46,10 +44,6 @@ export const ResultTile: FC<ResultTileProps> = ({
 
       <Typography variant="h4" fontFamily="sport" color="mediumGrey" textAlign="center">
         {subTitle}
-      </Typography>
-
-      <Typography variant="body" textAlign="left">
-        {description}
       </Typography>
 
       <Typography variant="h2" fontFamily="sport">
