@@ -7,13 +7,9 @@ import {
   Features,
   Hills,
   Img,
-  MappedMiles,
   MappedProjects,
-  MappedRoadies,
-  Miles,
   Project,
   Regions,
-  Roadie,
   SportOptions,
   UrlGroup,
 } from '../utils/types';
@@ -29,15 +25,9 @@ type BrittonsBashContentFacade = {
   getMappedEventImages: () => Promise<Img[]>;
   getMappedEventSports: () => Promise<Project[]>;
   getMappedEvents: () => Promise<Event[]>;
-  getMappedMiles: () => Promise<MappedMiles>;
   getMappedProjects: () => Promise<MappedProjects>;
-  getMappedRoadies: () => Promise<MappedRoadies>;
   getRegions: () => Promise<Regions>;
-  getSport: (
-    group: SportOptions,
-    year: string,
-    sport: string
-  ) => Promise<Miles | Project | Project[] | Roadie>;
+  getSport: (group: SportOptions, year: string, sport: string) => Promise<Project | Project[]>;
 };
 
 const getBrittonsBashContentFacade = (): BrittonsBashContentFacade => {

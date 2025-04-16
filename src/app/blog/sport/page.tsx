@@ -14,6 +14,7 @@ export const Sport = () => {
     summary,
     routes,
     activities,
+    is2025,
     is2024,
     is2023,
     is2022,
@@ -29,6 +30,7 @@ export const Sport = () => {
       summary={summary}
       routes={routes}
       activities={activities}
+      is2025={is2025}
       is2024={is2024}
       is2023={is2023}
       is2022={is2022}

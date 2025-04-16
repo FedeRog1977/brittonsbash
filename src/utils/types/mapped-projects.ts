@@ -9,6 +9,7 @@ export type MappedProjects = {
     2022: Project[];
     2023: Project[];
     2024: Project[];
+    2025: Project[];
   };
   number: AggregationNumerical;
   distance: AggregationAlphabetical;

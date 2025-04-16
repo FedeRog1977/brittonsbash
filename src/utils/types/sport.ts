@@ -1,11 +1,7 @@
-import { Miles } from './miles';
 import { Project } from './project';
-import { Roadie } from './roadie';
 
 type AggregateSport = {
-  roadies: Roadie[];
   projects: Project[];
-  miles: Miles[];
 };
 
 export type Sport = {

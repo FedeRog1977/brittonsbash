@@ -16,6 +16,7 @@ export type ResultTileProps = {
   summary: ColumnTableProps;
   routes: ColumnTableProps;
   activities: ColumnTableProps;
+  is2025: boolean;
   is2024: boolean;
   is2023: boolean;
   is2022: boolean;
@@ -30,6 +31,7 @@ export const ResultTile: FC<ResultTileProps> = ({
   summary,
   routes,
   activities,
+  is2025,
   is2024,
   is2023,
   is2022,
@@ -59,6 +61,16 @@ export const ResultTile: FC<ResultTileProps> = ({
       <ColumnTable leftColumn={routes.leftColumn} rightColumns={routes.rightColumns} />
 
       <Flex direction="horizontal" alignHorizontal="apart" wrap>
+        <Button
+          variant="clear"
+          typeVariant="h2"
+          typeColor={is2025 ? 'lightBlue' : undefined}
+          typeFontFamily="sport"
+          value="2025"
+          func={funcActivities}
+          content="2025"
+        />
+
         <Button
           variant="clear"
           typeVariant="h2"
